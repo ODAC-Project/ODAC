@@ -1,0 +1,29 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://ifi-audio.com/products/zen-dac-3",
+    "quote": "iFi audio's own product page for the ZEN DAC 3, read 2026-11-24: « PCM data to 32-bit/768kHz, DSD up to DSD512 and single and double speed DXD. Thanks to the Burr-Brown DAC chip's four-channel True Native design, PCM and DSD take separate pathways - this enables DSD, as well as PCM, to remain 'bit-perfect' in its native form right through to analogue conversion. »",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ti_burr_brown",
+    "chip": "A « Burr-Brown DAC chip » with a « four-channel True Native design ». The maker names the vendor and the design and not a part number, so none is invented.",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dsd_direct": true,
+    "dsd_reconverted_to_pcm": false
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "native_dsd_possible": true
+    }
+  },
+  "_the_first_level_3_fact_a_maker_gave_this_catalogue": "dsd_direct AND dsd_reconverted_to_pcm, both from one sentence, and it is explicit where Weiss's was not: « PCM and DSD take separate pathways - this enables DSD, as well as PCM, to remain 'bit-perfect' in its native form RIGHT THROUGH TO ANALOGUE CONVERSION ». That is exactly what dsd_direct asks - does the stream reach conversion unfiltered - and « separate pathways » answers dsd_reconverted_to_pcm in the same breath. Compare weiss/dac204, where « can also convert DSD audio to PCM and offers a digital output in AES/EBU format » was refused because it could be read two ways. This one cannot. The difference is that iFi names the destination: analogue conversion. Note what it does NOT establish: `correctable`. That is computed from dsd_direct on every record here, so it is not asserted - see the registry's note that a stored derivation is a second place to get one fact wrong.",
+  "_only_usb": "The page read gives no second digital input and no per-input split, so only usb is recorded, with the device-level figures it states."
+}

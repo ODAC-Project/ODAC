@@ -28,7 +28,7 @@
     "chip": {
       "type": "text",
       "description": "What the conversion stage is, in words. Evidence for `family`, not a substitute.",
-      "used_on_records": 28,
+      "used_on_records": 30,
       "level": 3,
       "probe_can_establish": false
     },
@@ -56,42 +56,42 @@
     "dop": {
       "type": "boolean",
       "description": "Accepts DSD packed into PCM frames (DoP).",
-      "used_on_records": 26,
+      "used_on_records": 27,
       "level": 2,
       "probe_can_establish": true
     },
     "dsd_direct": {
       "type": "boolean_or_reason",
       "description": "Does DSD reach the analogue stage without internal processing? true, false, or the NAME of the reason nobody knows yet: to_be_measured, firmware_dependent.",
-      "used_on_records": 25,
+      "used_on_records": 26,
       "level": 3,
       "probe_can_establish": false
     },
     "dsd_max": {
       "type": "enum_or_unknown",
       "description": "Highest DSD rate accepted, named: DSD64 … DSD1024.",
-      "used_on_records": 30,
+      "used_on_records": 32,
       "level": 2,
       "probe_can_establish": true
     },
     "dsd_reconverted_to_pcm": {
       "type": "boolean_or_unknown",
       "description": "Does the device bring DSD back to PCM internally? Decisive: sending DSD is then work thrown away.",
-      "used_on_records": 1,
+      "used_on_records": 2,
       "level": 3,
       "probe_can_establish": false
     },
     "family": {
       "type": "enum_or_unknown",
       "description": "Chip family, a key into chip-families/. Inheritable.",
-      "used_on_records": 33,
+      "used_on_records": 35,
       "level": 3,
       "probe_can_establish": false
     },
     "inputs.bits": {
       "type": "integer_or_unknown",
       "description": "Word width THROUGH this input. Flat across rates; see inputs.bits_above_hz.",
-      "used_on_records": 17,
+      "used_on_records": 19,
       "level": 2,
       "probe_can_establish": true,
       "_in_use_since": "2026-11-24, with the first record of the population pass: eversolo/dmp-a8, from the maker's own specification table."
@@ -107,7 +107,7 @@
     "inputs.dop_possible": {
       "type": "boolean",
       "description": "Whether this input carries DSD over DoP.",
-      "used_on_records": 6,
+      "used_on_records": 9,
       "level": 2,
       "probe_can_establish": true,
       "_in_use_since": "2026-11-24, with the first record of the population pass: eversolo/dmp-a8, from the maker's own specification table."
@@ -115,7 +115,7 @@
     "inputs.native_dsd_possible": {
       "type": "boolean",
       "description": "Whether this input carries native DSD at all. A property of the transport.",
-      "used_on_records": 5,
+      "used_on_records": 7,
       "level": 2,
       "probe_can_establish": true,
       "_in_use_since": "2026-11-24, with the first record of the population pass: eversolo/dmp-a8, from the maker's own specification table."
@@ -123,7 +123,7 @@
     "inputs.pcm_max_hz": {
       "type": "integer_or_unknown",
       "description": "Highest PCM rate THROUGH this input.",
-      "used_on_records": 89,
+      "used_on_records": 91,
       "level": 2,
       "probe_can_establish": true
     },
@@ -144,7 +144,7 @@
     "native_dsd": {
       "type": "boolean",
       "description": "Accepts DSD over a native path, as opposed to DoP.",
-      "used_on_records": 28,
+      "used_on_records": 30,
       "level": 2,
       "probe_can_establish": true
     },
@@ -158,7 +158,7 @@
     "pcm_max_hz": {
       "type": "integer_or_unknown",
       "description": "Highest PCM rate the device accepts, in hertz.",
-      "used_on_records": 31,
+      "used_on_records": 33,
       "level": 2,
       "probe_can_establish": true
     },
