@@ -11,6 +11,12 @@ everybody's hardware and should belong to everybody who uses it — see
 [OPRA](https://github.com/opra-project/OPRA), which solved the same problem for
 headphones first.
 
+**Not the Objective DAC.** ODAC here stands for *open DAC database*. It has
+nothing to do with the *Objective DAC*, also called ODAC — the converter design
+published by NwAvGuy and built by JDS Labs. That one is a device — and its
+maker is already one of the brands in here, so it may well end up with a record
+like any other. The name was kept deliberately, with the collision known.
+
 ## Why it exists
 
 Software that chooses a playback setting for you has to know things about your
