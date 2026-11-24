@@ -1,4 +1,10 @@
 {
   "raised_on": "2026-11-20",
-  "text": "The Hapi is MODULAR and its ceilings follow the card fitted, not the model name: on the MkIII the standard I/O cards stop at 192 kHz while the premium card reaches 352.8 and 384 kHz with DSD256. The figure recorded here is the MkII's. Third device in this catalogue whose model name does not determine its capability, after MSB's plug-in USB modules and the variants of the RME ADI-2 and the Schiit Yggdrasil."
+  "text": "The Hapi is MODULAR and its ceilings follow the card fitted, not the model name: on the MkIII the standard I/O cards stop at 192 kHz while the premium card reaches 352.8 and 384 kHz with DSD256. The figure recorded here is the MkII's. Third device in this catalogue whose model name does not determine its capability, after MSB's plug-in USB modules and the variants of the RME ADI-2 and the Schiit Yggdrasil.",
+  "resolved_on": "2026-11-24",
+  "resolution": "The per-input ceiling was WITHDRAWN on 2026-11-24. The Hapi is MODULAR: its ceilings follow the card fitted, not the model name, so a single figure under the model is a claim the hardware does not support. The claim's own source named the generation it came from - the MkII specifications - while this doubt records that the MkIII's standard cards stop at 192 kHz.",
+  "evidence_kept": [
+    "Merging Hapi MkII specifications, read 2026-11-20: 44.1 to 384 kHz PCM plus DSD64, DSD128 and DSD256 over the network."
+  ],
+  "what_would_resolve_it": "Records keyed by generation and fitted card, not by model name. Same shape as MSB's plug-in USB modules and the Schiit Yggdrasil variants, which this doubt already lists."
 }

@@ -1,4 +1,11 @@
 {
   "raised_on": "2026-11-20",
-  "text": "This is the brand's catch-all, and its per-input ceilings and its internal_bypass threshold are the QUTEST's, read from that model's manual. They are asserted here for the Hugo, the Dave and the Mojo as well, on evidence that names only one of them - the same over-reach the iFi record writes down. The rate at which the WTA1 stage steps aside is the figure to check first, since it is the one that changes an answer."
+  "text": "This is the brand's catch-all, and its per-input ceilings and its internal_bypass threshold are the QUTEST's, read from that model's manual. They are asserted here for the Hugo, the Dave and the Mojo as well, on evidence that names only one of them - the same over-reach the iFi record writes down. The rate at which the WTA1 stage steps aside is the figure to check first, since it is the one that changes an answer.",
+  "resolved_on": "2026-11-24",
+  "resolution": "The per-input ceilings were WITHDRAWN on 2026-11-24. This record's `model` is \"unknown\" - it is the brand's catch-all, standing for the Qutest, the Hugo, the Dave and the Mojo at once - and per-input ceilings cannot be true of all of them. The claim's own source said whose they were: the Qutest user manual. Keeping them meant asserting one model's inputs for four devices, which is the over-reach this doubt already named.",
+  "evidence_kept": [
+    "Chord Qutest user manual, read 2026-11-20: USB type B 32-bit/768 kHz PCM and up to DSD512; two BNC coaxial at 24-bit/384 kHz, reaching 768 kHz only in the dual-data mode that pairs with the maker's own upscaler; optical 24-bit/192 kHz, DSD64.",
+    "SENTENCE WORTH KEEPING, and the reason this is written down rather than deleted: several retailer listings give the Qutest's optical input as 96 kHz, where the manual says 192. Whoever opens a per-model Qutest record will meet that contradiction again, and this is where the answer already is - the manual was the figure taken."
+  ],
+  "what_would_resolve_it": "A per-model record (chord/qutest) carrying these ceilings with this same manual as its source. The figures are not wrong; the subject they were attached to was."
 }

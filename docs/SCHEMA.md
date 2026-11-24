@@ -87,7 +87,7 @@ The registry also carries what is **not** used:
 - `deprecated: true` — the field exists in the data and should go.
 
 That is the difference between *not yet filled in* and *nobody remembers it
-exists*. **24 fields registered today: 17 in use, 6 planned, 0 deprecated — and one in no
+exists*. **25 fields registered today: 17 in use, 7 planned, 0 deprecated — and one in no
 bucket at all.** `device_correction_profile` carries no record and is not marked
 planned, so the three counts did not add up to the total, and said 23 for 22. The
 registry is meant to expose exactly that; the sentence describing it was hiding it.
@@ -162,9 +162,20 @@ fact came through — the device probed, the maker in writing, a listener, an ag
 and no record carries it. Today a claim says *who submitted* and *what the source
 is*, which is close but not the same question.
 
-**Only one field is ever asserted per input.** `inputs.pcm_max_hz`, on 68
-records. The word width, the depth steps above a rate, and whether the input
-carries native DSD or DoP are registered as planned and never filled.
+**Only one field is ever asserted per input.** `inputs.pcm_max_hz`, on 61
+records. The word width, the depth steps above a rate, the channel count, and
+whether the input carries native DSD or DoP are registered as planned and never
+filled.
+
+`inputs.channels` is the newest of them, and it carries a warning rather than a
+hole: **what a device accepts is not what a consumer will send.** A player's own
+channel setting is the boundary of its cost model, so a consumer may refuse a
+six-channel source while this field reads 8. Reading the 8 as permission to
+answer for eight channels is the error already paid when `dsd_direct` and
+`dsd_reconverted_to_pcm` were one field — two questions that look like one, about
+two different objects. It is registered as planned and deliberately left out of
+level 2's criterion, which names `inputs` as a whole: no decision served here
+needs the count, and the 17 of 27 complete at level 2 did not move because of it.
 
 **Level 3 is empty: no record is complete on what the device does inside.**
 Seven know the real ladder depth, one an internal bypass rate, sixteen the
@@ -177,7 +188,7 @@ amount of scraping closes it.
 on four others. The registry says list; the four others are wrong and should be
 converted.
 
-**All 48 claims have source kind `import`.** The evidence rule is formally
+**All 45 claims have source kind `import`.** The evidence rule is formally
 satisfied — every claim quotes something — but no claim yet carries a real kind
 (`measurement`, `manual`, `maker_reply`…). Splitting the imported batches into
 per-field claims with their real source is the first real curation work.

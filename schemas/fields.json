@@ -123,7 +123,7 @@
     "inputs.pcm_max_hz": {
       "type": "integer_or_unknown",
       "description": "Highest PCM rate THROUGH this input.",
-      "used_on_records": 68,
+      "used_on_records": 61,
       "level": 2,
       "probe_can_establish": true
     },
@@ -185,6 +185,17 @@
       "_what": "An assertion that something another system reports corresponds to a subject here: the announced brand and model, the OUI where there is one, the subject it resolves to, and at which level (brand, range or device).",
       "_why_not_probe": "The announced string itself is free - any client already has it. The RESOLUTION is not: the string names the renderer software, not the converter, and one string covers many devices. A probe therefore establishes the question, never the answer.",
       "_never_the_key": "What a system reports is never the identity. It is matched TO the identity, and a wrong match is withdrawn without touching a single fact. See database/vocabulary/matching.json."
+    },
+    "inputs.channels": {
+      "type": "integer_or_unknown",
+      "description": "How many channels this input accepts. Per input, like every ceiling here: a part taking eight channels over USB commonly takes two over optical.",
+      "used_on_records": 0,
+      "planned": true,
+      "level": 2,
+      "probe_can_establish": true,
+      "_why_it_is_here": "Multichannel is not a corner case. A public listing of 600 DSD-capable converters and players carries a column for 4, 5 and 5.1 multichannel, and 24 of them fill it - four percent, concentrated at the expensive end, which is the hardware of people who look for playback settings at all. Without this field a contributor who owns one has nowhere to put the fact.",
+      "_never_confuse_it_with_a_consumer_SETTING": "THIS FIELD SAYS WHAT THE DEVICE ACCEPTS. It does NOT say what a consumer will send, and the two must never be merged. A player's own channel setting is the boundary of ITS cost model - the point past which its margins were never derived - so a consumer may well refuse a six-channel source while this field reads 8. Reading an 8 here as permission to answer for 8 channels would be the exact error already paid on 2026-11-20, when dsd_direct and dsd_reconverted_to_pcm were one field: two questions that look like one, about two different objects.",
+      "_not_in_the_level_2_criterion": "Registered as planned and deliberately NOT added to level 2's field list, which names `inputs` as a whole. No decision this database serves needs the channel count, and a level is which decision becomes possible - not how many fields are filled. Adding it to the criterion would have made 27 records incomplete overnight for a field nobody asked for."
     }
   }
 }
