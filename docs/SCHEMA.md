@@ -161,6 +161,21 @@ single-board computer is not the audio brand. Corroboration, never evidence on i
 own. And only the first three bytes are ever stored, truncated on receipt — the
 other three identify one person's machine and are not ours.
 
+## The figures are checked, not trusted
+
+A count written beside the data it describes drifts. On 24 November 2026 a single
+afternoon moved these figures five times, four files each time, and one wrong
+number reached a commit message before anyone caught it. The verifier already
+computed every one of them, so now it also **compares**: a count stated in
+`README.md` or in these docs, and every `used_on_records` in the registry, must
+equal what the data holds, or CI fails.
+
+The dated `_state_YYYY_MM_DD` narratives in `completeness.json` are deliberately
+**not** checked. They are history — they say what was true on a day, and they
+keep the trail of a number that has been wrong twice and had its denominator
+move once. A dated statement is allowed to be out of date; that is what the date
+is for. An undated count is not.
+
 ## What CI refuses
 
 - a claim with no quoted evidence — a source that does not quote is an address;

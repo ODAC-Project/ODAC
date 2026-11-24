@@ -103,6 +103,26 @@ def untyped_alias(root):
     json.dump(i, open(p, "w", encoding="utf-8"), indent=2, ensure_ascii=False)
 
 
+def count_drifts(root):
+    """Remove one asserted fact, so the registry's used_on_records no longer matches.
+
+    This one CAN be a mutant because schemas/fields.json is not copied: the
+    verifier reads the registry from its own path and the data from `root`.
+    The documentation check next to it cannot be mutant-tested for the same
+    reason in reverse - the mutants run against a COPY, and the docs describe the
+    real database, so that guard is deliberately skipped there. It was proven by
+    hand instead: a README saying 26 devices against 25 in the data fails with
+    "README.md:124: says 26 devices, the data says 25".
+    """
+    p = claim_path(root)
+    c = json.load(open(p, encoding="utf-8"))
+    for k in list(c.get("facts") or {}):
+        if not k.startswith("_"):
+            c["facts"].pop(k)
+            break
+    json.dump(c, open(p, "w", encoding="utf-8"), indent=2, ensure_ascii=False)
+
+
 def unregistered_field(root):
     p = claim_path(root)
     c = json.load(open(p, encoding="utf-8"))
@@ -112,6 +132,7 @@ def unregistered_field(root):
 
 MUTANTS = [
     ("a field nobody registered", unregistered_field, "not in schemas/fields.json"),
+    ("a registry count that drifted", count_drifts, "used_on_records"),
     ("an id that is not its path", id_not_the_path, "The id IS the path"),
     ("an alias that does not say how it relates", untyped_alias, "must be {text, relation}"),
     ("an unreleased product name", forbidden_text, "must not be published"),

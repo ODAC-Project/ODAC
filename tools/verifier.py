@@ -216,6 +216,89 @@ for root, _, files in os.walk(DB):
                               % (rel(p), text.count("\n", 0, m.start()) + 1,
                                  m.group(0), why))
 
+# --- the figures must match the data --------------------------------------
+# Hand-written counts beside the data they describe WILL drift. On 2026-11-24 a
+# single afternoon moved them five times, in four files each time, and one wrong
+# figure reached a commit message before being caught. The verifier already
+# computes every one of them, so from here it also CHECKS them: a count stated
+# in the documentation, or a used_on_records in the registry, that disagrees with
+# the data is an error and not a stale comment.
+#
+# What is NOT checked, deliberately: the dated `_state_YYYY_MM_DD` narratives in
+# completeness.json. Those are history - they say what was true on a day and keep
+# the trail of a number that has been wrong twice. A dated statement is allowed
+# to be out of date; that is what the date is for. An UNDATED count is not.
+n_doubt_open = n_doubt_resolved = 0
+for brand_dir in sorted(os.listdir(devices)) if os.path.isdir(devices) else []:
+    bpath = os.path.join(devices, brand_dir)
+    if not os.path.isdir(bpath):
+        continue
+    for dev_dir in sorted(os.listdir(bpath)):
+        dpath = os.path.join(bpath, dev_dir, "open-doubt.json")
+        if os.path.exists(dpath):
+            d = load(dpath) or {}
+            if isinstance(d, dict) and d.get("resolved_on"):
+                n_doubt_resolved += 1
+            else:
+                n_doubt_open += 1
+
+# used_on_records is a figure living INSIDE the data, and the one I corrected by
+# hand three times in a day.
+compte_reel = {}
+for brand_dir in sorted(os.listdir(devices)) if os.path.isdir(devices) else []:
+    bpath = os.path.join(devices, brand_dir)
+    if not os.path.isdir(bpath):
+        continue
+    for dev_dir in sorted(os.listdir(bpath)):
+        cdir = os.path.join(bpath, dev_dir, "claims")
+        if not os.path.isdir(cdir):
+            continue
+        for cf in sorted(os.listdir(cdir)):
+            c = load(os.path.join(cdir, cf)) or {}
+            for k in (c.get("facts") or {}):
+                if not k.startswith("_"):
+                    compte_reel[k] = compte_reel.get(k, 0) + 1
+            for blk in (c.get("inputs") or {}).values():
+                for k in blk:
+                    if not k.startswith("_"):
+                        kk = "inputs." + k
+                        compte_reel[kk] = compte_reel.get(kk, 0) + 1
+for champ, e in sorted(registry.items()):
+    declare = e.get("used_on_records")
+    if declare is not None and declare != compte_reel.get(champ, 0):
+        errors.append("schemas/fields.json: %s says used_on_records %d, the data says %d"
+                      % (champ, declare, compte_reel.get(champ, 0)))
+
+ATTENDU = [
+    (r"(\d+) devices", n_dev, "devices"),
+    (r"(\d+) claims", n_claim, "claims"),
+    (r"(\d+) brands", len(brands), "brands"),
+    (r"(\d+) chip families", len(families), "chip families"),
+    (r"(\d+) interfaces", len(ifaces), "interfaces"),
+    (r"(\d+) open doubts", n_doubt_open, "open doubts"),
+    (r"(\d+) resolved", n_doubt_resolved, "resolved doubts"),
+    (r"of the (\d+) records", n_dev, "records"),
+]
+# ONLY against this repository's own database. The mutants run the verifier over a
+# COPY with one thing broken, and the documentation describes the real data - so
+# checking the docs there would make a mutant fail on this guard instead of the one
+# it was written for, and every mutant would then pass for the wrong reason.
+RACINE = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+SA_PROPRE_BASE = os.path.abspath(DB) == os.path.abspath(os.path.join(RACINE, "database"))
+for doc in (("README.md", os.path.join("docs", "SCHEMA.md"),
+             os.path.join("docs", "CONTRIBUTING.md"), os.path.join("docs", "CONSUMING.md"))
+            if SA_PROPRE_BASE else ()):
+    chemin = os.path.join(RACINE, doc)
+    if not os.path.exists(chemin):
+        continue
+    texte = open(chemin, encoding="utf-8").read()
+    for pattern, vrai, quoi in ATTENDU:
+        for m in re.finditer(pattern, texte):
+            if int(m.group(1)) != vrai:
+                errors.append("%s:%d: says %s %s, the data says %d"
+                              % (doc, texte.count("\n", 0, m.start()) + 1,
+                                 m.group(1), quoi, vrai))
+
 print("devices    : %d" % n_dev)
 print("claims     : %d" % n_claim)
 print("brands     : %d, chip families: %d, interfaces: %d"
