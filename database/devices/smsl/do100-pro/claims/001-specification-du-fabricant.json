@@ -1,0 +1,34 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.smsl-audio.com/portal/product/detail/id/866.html",
+    "quote": "SMSL's own page for the DO100 Pro, read 2026-11-24: « ES9039Q2M*2 Supports MQA decoding and MQA-CD »; « The brand-new third-generation XMOS XU-316, supports up to PCM 32bit/768kHz and DSD512 »; « Input ports (except Bluetooth) support MQA and DSD, coaxial and optical support DoP64 ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "chip": "TWO ES9039Q2M (ESS) - « ES9039Q2M*2 » - against the single one of smsl/d-6s, which is the same part in one and two copies on two models of one maker.",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "native_dsd_possible": true
+    },
+    "spdif_coax": {
+      "dop_possible": true,
+      "native_dsd_possible": false
+    },
+    "spdif_optical": {
+      "dop_possible": true,
+      "native_dsd_possible": false
+    }
+  }
+}

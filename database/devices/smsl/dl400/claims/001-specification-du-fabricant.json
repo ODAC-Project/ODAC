@@ -1,0 +1,39 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.smsl-audio.com/portal/product/detail/id/897.html",
+    "quote": "SMSL's own page for the DL400, read 2026-11-24: « ES9039MSPRO of American ESS, built-in MQA hard decoding »; « New 3rd generation XMOS XU-316, PCM support up to 32bit/768kHz,DSD support to DSD512 »; « All inputs except Bluetooth support DSD transmission, coaxial, optical, AES/EBU support DoP64 »; « Qualcomm Bluetooth 5.1 chip supports LDAC 24bit/96kHz , APTX/HD , SBC , AAC ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "chip": "ES9039MSPRO (ESS) converting, third-generation XMOS XU-316 as the USB interface, Qualcomm Bluetooth 5.1.",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "native_dsd_possible": true
+    },
+    "spdif_coax": {
+      "dop_possible": true,
+      "native_dsd_possible": false
+    },
+    "spdif_optical": {
+      "dop_possible": true,
+      "native_dsd_possible": false
+    },
+    "aes_ebu": {
+      "dop_possible": true,
+      "native_dsd_possible": false
+    }
+  },
+  "_aes_is_dop_here": "« coaxial, optical, AES/EBU support DoP64 » puts AES among the DoP-only inputs, where smsl/d400-mk2 and smsl/do300ex leave it native. Third variant of the same maker's AES behaviour across four models."
+}

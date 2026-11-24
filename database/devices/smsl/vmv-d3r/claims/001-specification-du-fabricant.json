@@ -1,0 +1,35 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.smsl-audio.com/portal/product/detail/id/942.html",
+    "quote": "SMSL's own page for the VMV D3R, read 2026-11-24: « ROHM BD34302EKV decoding chip,THD+N as low as 0.00013% (-117 dB) »; « XMOS xU-316,32-bit USB solution, supports DoPand native DSD,PCM supports up to 768kHz, and DSD supports DSD512 »; « uSB and PS support Native DSD input, and coaxial and optical support DOP64 ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "rohm",
+    "chip": "ROHM BD34302EKV - the same part as smsl/vmv-d2r-mk2 - with an XMOS XU-316 as the USB interface.",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "native_dsd_possible": true
+    },
+    "spdif_coax": {
+      "dop_possible": true,
+      "native_dsd_possible": false
+    },
+    "spdif_optical": {
+      "dop_possible": true,
+      "native_dsd_possible": false
+    }
+  },
+  "_an_input_this_catalogue_cannot_name": "« uSB and PS support Native DSD input » - « PS » is an input this catalogue has no interface for, and the page does not expand the abbreviation. Nothing is recorded for it rather than guessing which socket it is. Third kind of unnameable input after Chord's dual-data mode and Naim's BNC-versus-RCA coaxial pair."
+}

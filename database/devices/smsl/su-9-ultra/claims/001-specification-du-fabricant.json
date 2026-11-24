@@ -1,0 +1,35 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.smsl-audio.com/portal/product/detail/id/894.html",
+    "quote": "SMSL's own page for the SU-9 ULTRA, read 2026-11-24: « AK4191+AK4499EX to play the full performance of Chips, the distortion is as low as 0.00006%(-124dB) »; « XMOS XU-316, true 32bit USB processing, supports DoP and Native DSD, and PCM reach up to 768kHz and DSD512 »; « USB, Optical and Coaxial support DSD transmission, Coaxial, Optical support DOP64 ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "akm",
+    "chip": "« AK4191+AK4499EX » - modulator plus converter - with an XMOS XU-316 as the USB interface.",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "native_dsd_possible": true
+    },
+    "spdif_coax": {
+      "dop_possible": true,
+      "native_dsd_possible": false
+    },
+    "spdif_optical": {
+      "dop_possible": true,
+      "native_dsd_possible": false
+    }
+  },
+  "_sixth_on_this_pairing": "Sixth record in this catalogue carrying AK4191 + AK4499, after gustard/a26, eversolo/dmp-a8, eversolo/dac-z10, smsl/d400-mk2 and smsl/do300ex. Three makers, six devices, one architecture that `family: akm` cannot express."
+}

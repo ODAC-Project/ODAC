@@ -1,0 +1,23 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.smsl-audio.com/portal/product/detail/id/946.html",
+    "quote": "SMSL's own page for the D100, read 2026-11-24: « ES9081 DAC, utilizing 8-channel parallel summing to achieve an elite 127dB dynamic range with full MQA, PCM 768kHz, and DSD512 suppor[t] ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "chip": "ES9081 (ESS) « utilizing 8-channel parallel summing » - the maker stating that it parallels all of the chip's channels, which classes.json flags as arguably multi-element where the ess_sabre family assumes single.",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512"
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000
+    }
+  },
+  "_one_sentence_only": "A single sentence carries the whole record. No input is rated separately and no transport is split."
+}

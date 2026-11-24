@@ -1,0 +1,41 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.smsl-audio.com/portal/product/detail/id/844.html",
+    "quote": "SMSL's own page for the DO300EX, read 2026-11-24: « AK4191+ AK4499EX, taps all the potential of the chip, with distortion as low as a staggering 0.00006% (-124dB) »; « New 3rd generation XMOS XU-316, PCM support up to 32bit/768kHz, DSD support to DSD512 »; « USB, optical fiber, coaxial , AES, I2S support DSD transmission, coaxial and optical fiber support DOP64 ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "akm",
+    "chip": "« AK4191+ AK4499EX » - modulator plus converter - with a third-generation XMOS XU-316 as the USB interface.",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "native_dsd_possible": true
+    },
+    "i2s": {
+      "native_dsd_possible": true
+    },
+    "aes_ebu": {
+      "native_dsd_possible": true
+    },
+    "spdif_coax": {
+      "dop_possible": true,
+      "native_dsd_possible": false
+    },
+    "spdif_optical": {
+      "dop_possible": true,
+      "native_dsd_possible": false
+    }
+  },
+  "_aes_native_here_too": "Like smsl/d400-mk2 and unlike smsl/su-10 and smsl/su-x, AES is in the DSD list and NOT in the DoP list, so it carries native DSD on this model."
+}

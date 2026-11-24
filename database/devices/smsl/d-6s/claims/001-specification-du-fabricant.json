@@ -1,0 +1,35 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.smsl-audio.com/portal/product/detail/id/863.html",
+    "quote": "SMSL's own page for the D-6S, read 2026-11-24: « ES9039Q2M Support MQA and MQA-CD »; « The brand-new third-generation XMOS XU-316, supports PCM 32bit/768kHz and DSD512 »; « Input ports (except Bluetooth) support MQA and DSD, coaxial and optical support DoP64 »; « Adapts the latest Bluetooth chip of Qualcomm, supports LDAC 24bit/96kHz, APTX/HD, SBC and AAC ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "chip": "ES9039Q2M (ESS) converting, third-generation XMOS XU-316 as the USB interface, a Qualcomm part for Bluetooth.",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "native_dsd_possible": true
+    },
+    "spdif_coax": {
+      "dop_possible": true,
+      "native_dsd_possible": false
+    },
+    "spdif_optical": {
+      "dop_possible": true,
+      "native_dsd_possible": false
+    }
+  },
+  "_except_bluetooth": "« Input ports (except Bluetooth) support MQA and DSD » - the maker excludes one input by name, which is a per-input statement even though it carries no rate."
+}

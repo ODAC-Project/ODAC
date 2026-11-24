@@ -1,0 +1,32 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.smsl-audio.com/portal/product/detail/id/912.html",
+    "quote": "SMSL's own page for the D1, read 2026-11-24: « Adopt a piece of ROHM new BD34352EKV,and carefullytuned to make its THD + N reached 0.00038% »; « Using the latest XMOS XU-316 program support to32bit768kHz and DSD512 »; « Support optical, coaxial input, maximum support to24bit/192kHz ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "rohm",
+    "chip": "ROHM BD34352EKV, « a piece » of it - the same part as smsl/d200 - with an XMOS XU-316 as the USB interface.",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512"
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_first_smsl_page_to_rate_its_spdif": "« Support optical, coaxial input, maximum support to24bit/192kHz » is the FIRST per-input PCM ceiling any SMSL page in this pass has given. Twelve SMSL records so far rate only USB, because the maker's house sentence attributes its figures to the XMOS solution. Here the S/PDIF inputs get their own line, and the gap between them and USB is the usual factor of four."
+}
