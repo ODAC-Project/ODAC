@@ -205,7 +205,32 @@ is*, which is close but not the same question.
 `inputs.dop_possible` on 2 — all on one device, because one maker's specification
 table distinguished its inputs and nothing had ever asked the question before.
 The depth steps above a rate and the channel count are still registered as planned
-and carried by nobody.
+and carried by nobody, and `inputs.dsd_reconverted_to_pcm` joined them on
+2026-11-24.
+
+**That last one is a deliberate asymmetry, not an oversight.** Whether DSD is
+brought back to PCM can differ by input, because the input receiver is where it
+differs: a device may take native DSD over USB and only DoP over S/PDIF, and
+unwrapping DoP is the moment a receiver may hand PCM to the converter. The
+transport already varies that way here — `native_dsd_possible` is false on
+eversolo/dmp-a8's S/PDIF and true on its USB — so the field deciding whether to
+send DSD at all can vary with it. A per-input value overrides the device-level
+one for that input, which overrides the chip family's: the same three steps as
+every other field.
+
+**`dsd_direct` is NOT following it**, and the reason is the whole point. That
+field asks whether the converter is reached unfiltered, which is a property of
+the conversion stage and the same whichever socket the signal arrived by —
+`classes.json` puts it plainly: *a converter with a direct DSD path still has one
+when it is reached over AirPlay; the transport is what cannot carry DSD*.
+Splitting both would re-merge the two fields that were painfully separated on
+2026-11-20.
+
+It starts empty on purpose. A sweep of thirteen manufacturers' own pages found no
+device whose maker says it re-converts on one input and not another. The case is
+real and this catalogue has not met it; registering it as planned means the first
+person who meets it knows they have found something, instead of contradicting the
+device-level value in silence.
 
 `inputs.channels` is the newest of them, and it carries a warning rather than a
 hole: **what a device accepts is not what a consumer will send.** A player's own
