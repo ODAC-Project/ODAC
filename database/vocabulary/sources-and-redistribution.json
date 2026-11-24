@@ -1,0 +1,65 @@
+{
+  "_status": "WHAT HAS BEEN TAKEN FROM THESE SOURCES: nothing. Not one field in this catalogue comes from any of them. They are candidates, listed 2026-11-20, each with the column it could actually fill - because breadth is not the question. The question is which column a source can fill, and on what terms we may pass it on.",
+  "_three_cases_not_two": "LOOKING SOMETHING UP IS NOT THE SAME ACT AS REPUBLISHING A LIST, and there is a third case that the first two hide. ONE: a fact. Reading a public page and recording that a given converter uses a given chip is using a fact, and facts are not protectable. This is what every record here does, one device at a time, with the source named. It needs nobody's permission. TWO: a compilation, taken wholesale. Copying a compiled list into this catalogue and then passing that catalogue on is a different act. A compiled database can be protected in its own right - the European sui generis database right - independently of whether any single fact in it is. Not done, and not to be done. THREE: a compilation we are ALLOWED to take. This is the only door to bulk import, and it is the case worth working on rather than working around. It is also why 'licence to be settled first' on a source below is an invitation to ASK, not a verdict.",
+  "_permission_alone_is_not_enough": "A yes is not a licence. ODAC republishes its data under CC BY-SA 4.0, so anything taken in bulk must be redistributable UNDER THAT, by whoever we got it from. Which rules out more than people expect: CC0, CC BY and CC BY-SA are compatible and carry attribution forward. CC BY-NC is NOT - this catalogue allows commercial use, that is the point of the licence choice. CC BY-ND is NOT, since the data is reshaped on the way in. ODbL is not straightforwardly compatible with an outgoing CC BY-SA and needs advice before it is assumed to be. And an informal permission - an email saying go ahead - usually grants USE and says nothing about onward redistribution under a share-alike licence, which is the only thing we actually need. So the thing to obtain, and to record with the data, is permission to redistribute under CC BY-SA 4.0 with attribution. Anything less is a fact-by-fact source, like all the others.",
+  "_the_field_none_of_them_has": "None of these carries dsd_reconverted_to_pcm or dsd_direct - the two fields that decide whether a consumer sends DSD at all. They come from measurement or from a documented statement about that device, and nothing else. So these sources can carry the catalogue from level 0 to level 1 at scale, and to a PARTIAL level 2. Never to a complete one.",
+  "_the_gap_in_this_file": "Measured 2026-11-24: this file lists five candidate sources and records the licence of NONE of them. It reasons about redistribution in the abstract while never stating, per source, what the terms are - which is the one thing that decides whether case TWO or case THREE applies. Every candidate below now carries a `licence` field set to \"not established\", because that is what is true. It is not filled in with a guess: a licence invented from memory is exactly the kind of fact this catalogue refuses everywhere else, and it would be invented about somebody else's legal position.",
+  "candidates": [
+    {
+      "name": "DutchAudioClassics, complete D/A converter list",
+      "url": "https://www.dutchaudioclassics.nl/the_complete_d_a_dac_converter_list/",
+      "fills": [
+        "family"
+      ],
+      "_value": "Highest of the four. The converter chip per model is the field that carries the whole cascade, and with it per model we barely need brand-level inference.",
+      "_caveat": "Skewed to CD players and vintage converters, many with no USB input at all, so they can never be identified automatically and most cannot receive upsampled PCM over USB.",
+      "licence": "not established",
+      "_licence_next_step": "Read the site's own terms, record them here with the date read. If they do not permit redistribution under CC BY-SA 4.0, this source stays a fact-by-fact source and nothing is taken in bulk from it."
+    },
+    {
+      "name": "CD-Player-DAC-Transport list",
+      "url": "https://vasiltech.narod.ru/CD-Player-DAC-Transport.htm",
+      "fills": [
+        "family"
+      ],
+      "_value": "Same column as above, useful as a cross-check: two independent lists agreeing on a chip is worth more than either alone.",
+      "licence": "not established",
+      "_licence_next_step": "Read the site's own terms, record them here with the date read. If they do not permit redistribution under CC BY-SA 4.0, this source stays a fact-by-fact source and nothing is taken in bulk from it."
+    },
+    {
+      "name": "NativeDSD device database",
+      "url": "https://www.nativedsd.com/pages/dsd-database",
+      "fills": [
+        "dsd_max",
+        "native_dsd",
+        "dop"
+      ],
+      "_value": "600+ converters, players and portables, filterable by DSD rate. Three fields on modern hardware, which is the hardware our listeners own.",
+      "_caveat": "A commercial shop's own compilation. Licence to be settled first.",
+      "licence": "not established",
+      "_licence_next_step": "Read the site's own terms, record them here with the date read. If they do not permit redistribution under CC BY-SA 4.0, this source stays a fact-by-fact source and nothing is taken in bulk from it."
+    },
+    {
+      "name": "Audio Science Review, measurement index",
+      "url": "https://www.audiosciencereview.com/forum/index.php?forums/dacs-streamers-servers-players-audio-interface.8/",
+      "fills": [
+        "analog_filter",
+        "bits"
+      ],
+      "_value": "A different axis from the others: measured behaviour rather than parts. The only listed source that could ever support correctable, and the one that could tell us a ladder's real depth rather than its interface's.",
+      "_caveat": "Per-thread prose, not a table. Reading it is work per device, not a harvest.",
+      "licence": "not established",
+      "_licence_next_step": "Read the site's own terms, record them here with the date read. If they do not permit redistribution under CC BY-SA 4.0, this source stays a fact-by-fact source and nothing is taken in bulk from it."
+    },
+    {
+      "name": "Gearspace, audio interfaces and their AD/DA chips",
+      "url": "https://gearspace.com/threads/audio-interfaces-and-their-ad-da-chips-listed.542009/",
+      "fills": [
+        "family"
+      ],
+      "_value": "Narrow: studio interfaces. Relevant because several of them are what a listener actually has on the end of a zone.",
+      "licence": "not established",
+      "_licence_next_step": "Read the site's own terms, record them here with the date read. If they do not permit redistribution under CC BY-SA 4.0, this source stays a fact-by-fact source and nothing is taken in bulk from it."
+    }
+  ]
+}
