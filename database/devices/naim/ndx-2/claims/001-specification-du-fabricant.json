@@ -1,0 +1,32 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.naimaudio.com/products/ndx-2",
+    "quote": "Naim Audio's own product page for the NDX 2, read 2026-11-24. Digital inputs: « 2 x optical TOSLink (up to 24bit/96kHz) », « 1 x coaxial RCA (up to 24bit/192kHz, DoP 64Fs) », « 1 x coaxial BNC (up to 24bit 192kHz, DoP 64Fs) ». Digital outputs: « 1 x coaxial BNC (up to 24bit/192kHz) ». Audio Formats: « DSD - 64 and 128Fs ». Technology: « It can decode all HD audio formats up to 32 bits/384 kHz or DSD128 », « The Burr-Brown® digital-to-analogue converter, working alongside our new streaming platform, is one of the best available. », « The data is then over-sampled in a SHARC DSP to a 40-bit accuracy before being fed to the Burr-Brown DAC. », « implementing our own digital filters and adding a discrete current-to-voltage converter immediately after the DAC ». Product type: « Streamer ». Status: « This product is no longer available ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ti_burr_brown",
+    "chip": "« The Burr-Brown® digital-to-analogue converter » - the maker names the vendor and NO part number, unlike its own ND5 XS 2 page which says « the PCM1791A Burr-Brown digital-to-analogue converter ». Two pages of one maker, one precise and one not, and the imprecise one is not filled in from the other.",
+    "pcm_max_hz": 384000,
+    "dsd_max": "DSD128"
+  },
+  "inputs": {
+    "spdif_optical": {
+      "pcm_max_hz": 96000,
+      "bits": 24
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dop_possible": true
+    }
+  },
+  "_the_bnc_input_has_no_interface": "Naim lists FOUR digital inputs: two TOSLink, one coaxial RCA and one coaxial BNC. This catalogue has one `spdif_coax` interface and no way to distinguish an RCA socket from a BNC one, so both coaxial inputs collapse into it. They share identical figures here, so nothing is lost today - but chord/dave has four BNC coax inputs and an AES input rated differently, and chord/qutest has a dual-data mode that uses two BNC sockets at once. A socket is not an interface, and the model currently assumes it is.",
+  "_the_digital_output_is_not_recorded": "« 1 x coaxial BNC (up to 24bit/192kHz) » is an OUTPUT. It has nowhere to go: this catalogue has `inputs` and no `outputs`, the gap the FiiO SR11 made unmissable. For a device that feeds another converter this is exactly the figure a consumer needs.",
+  "_filters_stated_and_not_assertable": "« implementing our own digital filters » and « The data is then over-sampled in a SHARC DSP to a 40-bit accuracy before being fed to the Burr-Brown DAC » say there IS processing in the path and say nothing about switching it off. dsd_direct and internal_bypass are not inferred from them.",
+  "_discontinued": "« This product is no longer available » - the fourth device in this pass whose installed base outlives its catalogue entry."
+}

@@ -1,0 +1,19 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.smsl-audio.com/portal/product/detail/id/889.html",
+    "quote": "SMSL's own product page for the SU-1, read 2026-11-24: « One pieces of AKM's new AK4493S chip »; « The latest XMOS XU-316 solution supports sampling rate up to 32bit/768KHz and DSD512 »; « The new self-developed CK-03 clock processing circuit greatly reduces clock jitter »; « All interfaces support MQA,Supports MQA-CD ». Category label: « Audio DAC ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "akm",
+    "chip": "AK4493S (AKM) as the converter - « One pieces of AKM's new AK4493S chip », so a single part and not a pair - with an XMOS XU-316 as the USB solution and a « self-developed CK-03 clock processing circuit ». Three roles again. Note the AK4493S here against the AK4493SEQ of fiio/k7 and the AK4493EQ of topping/e30: three suffixes of one family, which is exactly why a chip model needs the part number and not just the vendor.",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512"
+  },
+  "_no_input_block": "THE PAGE RATES NOTHING PER INPUT. Its one rate sentence attributes 768 kHz and DSD512 to « The latest XMOS XU-316 solution » - the USB interface - and the page never says which socket that describes, nor rates optical or coaxial. It does say « All interfaces support MQA », so interfaces in the plural exist and are rated nowhere. Figures are recorded at device level where the source puts them. Fifth record in this pass where a maker names inputs and rates none of them.",
+  "_mqa_has_no_field": "« All interfaces support MQA,Supports MQA-CD » is a real capability this catalogue cannot record: there is no MQA field, and MQA is a form of folded encoding that an upsampler has to know about before it resamples anything. Not asserted, noted."
+}

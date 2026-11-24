@@ -1,0 +1,28 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.naimaudio.com/products/uniti-atom",
+    "quote": "Naim Audio's own product page for the Uniti Atom, read 2026-11-24. Inputs: « 2 x optical TOSLink (up to 24bit/96kHz) », « 1 x coaxial RCA (up to 24bit/192kHz, DoP 64Fs) ». Supported sampling rates: « USB : 44.1kHz - 384kHz (16 to 24bit) » and « S/PDIF : 32kHz - 192kHz (up to 24bit) ». Audio Formats: « DSD - 64 and 128Fs ». Storage: « Store up to 20,000 tracks to a local USB connected storage device ». Heading « Streaming Amplifier »; Product type: « all in one player ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "dsd_max": "DSD128"
+  },
+  "inputs": {
+    "spdif_optical": {
+      "pcm_max_hz": 96000,
+      "bits": 24
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dop_possible": true
+    }
+  },
+  "_the_usb_row_i_refused": "« Supported sampling rates : USB : 44.1kHz - 384kHz (16 to 24bit) » LOOKS like a USB audio input rated at 384 kHz, and it is not recorded as one. The same page describes USB only as storage - « Store up to 20,000 tracks to a local USB connected storage device » - and lists no USB row in its Inputs/Outputs section. So that figure may describe files played FROM a USB stick rather than audio received over USB, which are different facts about different things. Same refusal as weiss/dac204: a sentence with two readings is not evidence.",
+  "_the_page_contradicts_its_own_sockets": "« S/PDIF : 32kHz - 192kHz (up to 24bit) » is listed as a supported sampling rate, while the socket rows rate optical - which IS S/PDIF - at 96 kHz. The specific rows are recorded. Second Naim page in this catalogue to disagree with itself, after the ND5 XS 2's prose saying « two digital inputs and two optical inputs » against spec rows listing two coaxial plus two optical.",
+  "_no_chip": "The page names no converter and has no Technology section, unlike the ND5 XS 2 and NDX 2 pages. `family` is absent rather than borrowed from its siblings."
+}
