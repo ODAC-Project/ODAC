@@ -12,11 +12,14 @@
         "model",
         "source",
         "usb.vid",
-        "usb.pid"
+        "usb.pid",
+        "device_match"
       ],
       "unlocks": "The converter is recognised by name instead of being an unknown device, and resolves to its brand. Nothing else changes: it behaves exactly as the brand's catch-all.",
-      "obtained_from": "The driver, through the contribution form. No reading required.",
-      "_gate": "A record at this level is admissible ONLY WITH a USB identity. Without one it resolves identically to the brand catch-all that already exists, so it is a duplicate row carrying no fact - and a row that looks like knowledge without being any is worse than an honest gap. With the identity it earns its place, because it is what turns an unidentified device into a named one."
+      "obtained_from": "A USB descriptor, where the chain is USB: free, and exact. Otherwise a PERSON. What a network player announces of itself over UPnP names the RENDERER - the software serving the stream - and not the converter behind it, so turning an announcement into a device is a human act and is recorded as one.",
+      "_gate": "A record at this level is admissible with EITHER an exact USB identity OR a resolved match (`device_match`) carrying its own evidence. With neither it resolves identically to the brand catch-all that already exists, so it is a duplicate row carrying no fact - and a row that looks like knowledge without being any is worse than an honest gap. With one of the two it earns its place, because it is what turns an unidentified device into a named one.",
+      "_relaxed_2026_11_24": "The gate first asked for a USB identity and nothing else. That excluded every device the field can actually report: a player asks the network, and a UPnP announcement carries no USB descriptor at all. Worse, the announcement does not identify the hardware - it names the renderer software. One announced string routinely covers many different converters (upmpdcli, a Diretta bridge, or any player that announces itself all do this), and the brand announced is very often not the brand of the device. Both are verifiable by anyone on any UPnP network; the proportions were measured on a production export on 2026-11-24 and are recorded OUTSIDE this repository, with the editor's data. So the resolution is a claim like any other: it carries evidence, it can be contested, and it is NEVER inferred from the announced string alone.",
+      "_an_identity_can_be_generic": "An identity does not always name a model, and a match must therefore say what it resolves TO. In this database `ta-dac200` carries one USB identity (0x1852/0x5034) across four products - DAC 200, HA 200, SDV 3100 HV, DAC8 DSD - and `mola-mola-generique` carries a VID/PID with `model: unknown`. A VID/PID can thus establish a range, or only a brand. That is why `device_match` names the subject it resolves to and the level it establishes, instead of assuming a device."
     },
     {
       "level": 2,

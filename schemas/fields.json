@@ -6,7 +6,8 @@
     "number_or_unknown": "A number, or \"unknown\".",
     "boolean_or_unknown": "true, false, or \"unknown\".",
     "boolean_or_reason": "true, false, or the NAME of the reason nobody knows yet — to_be_measured, firmware_dependent. Not the same as \"unknown\", which says the question was asked and closed.",
-    "enum_or_unknown": "One of a closed set, or \"unknown\"."
+    "enum_or_unknown": "One of a closed set, or \"unknown\".",
+    "match": "A structured correspondence between what another system reports and a subject here, with its own evidence and the level it establishes. Its shape is in database/vocabulary/matching.json. It is the one field type that asserts nothing about the hardware: it asserts which record a report belongs to."
   },
   "_three_states": "Absent means nobody filled it in. \"unknown\" means the question was asked and nobody knows; a consumer then takes the conservative branch. null is forbidden: it carried both meanings and erased a chip family's bit depth.",
   "fields": {
@@ -174,6 +175,16 @@
       "used_on_records": 1,
       "level": 3,
       "probe_can_establish": false
+    },
+    "device_match": {
+      "type": "match",
+      "level": 1,
+      "probe_can_establish": false,
+      "used_on_records": 0,
+      "planned": true,
+      "_what": "An assertion that something another system reports corresponds to a subject here: the announced brand and model, the OUI where there is one, the subject it resolves to, and at which level (brand, range or device).",
+      "_why_not_probe": "The announced string itself is free - any client already has it. The RESOLUTION is not: the string names the renderer software, not the converter, and one string covers many devices. A probe therefore establishes the question, never the answer.",
+      "_never_the_key": "What a system reports is never the identity. It is matched TO the identity, and a wrong match is withdrawn without touching a single fact. See database/vocabulary/matching.json."
     }
   }
 }

@@ -87,13 +87,16 @@ The registry also carries what is **not** used:
 - `deprecated: true` — the field exists in the data and should go.
 
 That is the difference between *not yet filled in* and *nobody remembers it
-exists*. **23 fields registered today: 17 in use, 5 planned, 0 deprecated.**
+exists*. **24 fields registered today: 17 in use, 6 planned, 0 deprecated — and one in no
+bucket at all.** `device_correction_profile` carries no record and is not marked
+planned, so the three counts did not add up to the total, and said 23 for 22. The
+registry is meant to expose exactly that; the sentence describing it was hiding it.
 
 ## What a record must carry: four levels
 
 | level | what it establishes | who can |
 |---|---|---|
-| **1** identified | brand, model, evidence, USB identity | the driver, free |
+| **1** identified | brand, model, evidence, and a USB identity **or a resolved match** | a USB descriptor, else a person |
 | **2** what it accepts | the ceilings, per input | **a probe, free** |
 | **3** what it does inside | family, DSD behaviour, level offset, real depth, bypass | **a person** |
 | **4** measured | a correction profile | an instrument |
@@ -101,6 +104,40 @@ exists*. **23 fields registered today: 17 in use, 5 planned, 0 deprecated.**
 **A probe gives the whole of level 2 and nothing of level 3.** Asking a device
 what it accepts never reveals what it does with it. That rule is data —
 `probe_can_establish` in the registry — not something the code remembers.
+
+## Level 1 does not come from the announcement
+
+A record enters at level 1 with a USB identity **or** a resolved match. The first
+gate asked for a USB identity alone, and that excluded every device the field can
+actually report: a network player asks the network, and a UPnP announcement carries
+no USB descriptor.
+
+It is worse than a missing field. **The announcement names the renderer — the
+software serving the stream — and not the converter behind it.** A bridge or daemon
+sitting in front of a DAC announces itself, so one announced string covers many
+different devices, and the brand announced is frequently not the brand of the
+hardware. Anyone can verify this on any UPnP network.
+
+So the correspondence is a claim like any other, with evidence, contestable, and
+never inferred from the string: `device_match`, whose shape is in
+`database/vocabulary/matching.json`. Three things follow.
+
+- **It is a row, not a column**, because it is many-to-many in both directions: one
+  string covers many devices, and one device announces many strings as firmware and
+  protocol vary.
+- **It says what it resolves TO** — brand, range or device. An identity is often
+  generic: `ta-dac200` carries one USB identity across four products, and
+  `mola-mola-generique` carries a VID/PID whose model is `unknown`. A match claiming
+  a device where the evidence establishes a range would assert a chip, a modulator
+  order and a level offset for the wrong product.
+- **Withdrawing a wrong match moves no fact.** Delete the row; the device keeps
+  every assertion it had. That is the whole reason it is not a field on the device.
+
+A MAC prefix is far more reliable than a name and still not a brand: an OUI gives
+the maker of the network card, which for a shelf of streamers built on the same
+single-board computer is not the audio brand. Corroboration, never evidence on its
+own. And only the first three bytes are ever stored, truncated on receipt — the
+other three identify one person's machine and are not ours.
 
 ## What CI refuses
 

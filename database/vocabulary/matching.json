@@ -1,0 +1,19 @@
+{
+  "_what": "How something reported by another system is attached to a subject of this database. A match is an ASSERTION, not a key: it carries evidence, it can be contested, and withdrawing a wrong one touches no fact about any device.",
+  "_the_rule": "WHAT A SYSTEM REPORTS IS NEVER THE IDENTITY. The identity is this database's own frozen slug. Everything a driver, a player or a network announces is matched TO it, from the outside.",
+  "_why_this_exists": "Because the announcement does not name the device. Over UPnP a player announces the RENDERER - the software serving the stream - so a bridge or daemon running in front of a converter announces itself, not the converter. One announced string therefore covers many different devices, and the brand announced is frequently not the brand of the hardware. Anyone can verify this on any UPnP network; it was measured on a production export on 2026-11-24, and the proportions are held outside this repository with that editor's data.",
+  "_one_to_many_in_both_directions": "One announced string resolves to many devices (the bridge case above). One device also announces many strings, because spelling varies by firmware and by protocol. So a match is never a column on either side: it is a row, like every other assertion here.",
+  "fields": {
+    "system": "Which outside system reported it - a player, a driver, a catalogue. Named, because a string means different things in different systems.",
+    "announced_brand": "The manufacturer string as reported, kept verbatim. Never cleaned: the raw form is the evidence.",
+    "announced_model": "The model string as reported, verbatim.",
+    "oui": "The first three bytes of the MAC, upper case, AA:BB:CC - and never more. Three bytes name the maker; the other three name one person's machine and are not ours. Truncate on RECEIPT, not on display: a value never written cannot leak.",
+    "resolves_to": "The subject's slug in this database.",
+    "resolves_at": "brand | range | device. What the match actually establishes, which is often less than a model.",
+    "confidence": "How the match was established, not a score: exact_usb_identity | human_resolved | announced_string | oui_only. The weakest two never stand alone.",
+    "source": "The evidence, quoted, as for any assertion."
+  },
+  "_resolves_at_is_not_a_detail": "An identity is frequently generic. In this database `ta-dac200` carries one USB identity (0x1852/0x5034) across four products - DAC 200, HA 200, SDV 3100 HV, DAC8 DSD - and `mola-mola-generique` carries a VID/PID whose `model` is \"unknown\". A match that claimed a device where the evidence establishes a range would assert a chip, a modulator order and a level offset for the wrong product. Hence the field, and hence `unknown` rather than a guess.",
+  "_the_oui_names_the_board": "An OUI is far more reliable than a name, and still not a brand. The Raspberry Pi Foundation's ranges answer for a whole shelf of streamers built on that board, so the OUI gives the maker of the NETWORK CARD, which for those products is not the audio brand. Useful as corroboration, never alone - which is what `confidence: oui_only` says.",
+  "_withdrawing_one": "Delete the row. No fact moves, no record changes, and the device keeps every assertion it had. That is the whole reason a match is not a field on the device."
+}
