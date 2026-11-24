@@ -14,7 +14,7 @@
     "analog_filter": {
       "type": "enum_or_unknown",
       "description": "Quality of the analogue stage: switchable, good, simple, weak.",
-      "used_on_records": 27,
+      "used_on_records": 25,
       "level": 3,
       "probe_can_establish": false
     },
@@ -35,7 +35,7 @@
     "correctable": {
       "type": "boolean_or_unknown",
       "description": "Whether a per-device correction profile could ever apply.",
-      "used_on_records": 27,
+      "used_on_records": 25,
       "level": 4,
       "probe_can_establish": false
     },
@@ -63,7 +63,7 @@
     "dsd_direct": {
       "type": "boolean_or_reason",
       "description": "Does DSD reach the analogue stage without internal processing? true, false, or the NAME of the reason nobody knows yet: to_be_measured, firmware_dependent.",
-      "used_on_records": 27,
+      "used_on_records": 25,
       "level": 3,
       "probe_can_establish": false
     },
@@ -84,7 +84,7 @@
     "family": {
       "type": "enum_or_unknown",
       "description": "Chip family, a key into chip-families/. Inheritable.",
-      "used_on_records": 25,
+      "used_on_records": 23,
       "level": 3,
       "probe_can_establish": false
     },

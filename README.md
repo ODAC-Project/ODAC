@@ -25,7 +25,7 @@ re-converts DSD to PCM internally, the real depth of its ladder, the level
 offset between its PCM and DSD paths. **A probe can tell you what a device
 accepts. It can never tell you what the device does with it.**
 
-Of the 27 records this database starts with, **none is complete on what the
+Of the 25 records this database starts with, **none is complete on what the
 device does inside** — seven know the real ladder depth, one knows an internal
 bypass rate. That gap does not close by scraping. It closes with people who own
 the hardware.
@@ -121,9 +121,9 @@ database — not only Tune.
 
 ## Where it stands
 
-27 devices — all converters so far — 298 brands, 9 chip families,
-13 interfaces, 45 claims, 5 open doubts and 3 resolved. Every device record
+25 devices — all converters so far — 298 brands, 9 chip families,
+13 interfaces, 43 claims, 4 open doubts and 3 resolved. Every device record
 carries a `kind`, so the first network player enters without reopening the other
-twenty-seven. Seventeen records are complete on what the device accepts;
+twenty-five. Seventeen records are complete on what the device accepts;
 **none** on what it does inside. The database is seeded from the Tune Smart Upsampler
 catalogue, and the projection is checked: no field lost, no value changed.

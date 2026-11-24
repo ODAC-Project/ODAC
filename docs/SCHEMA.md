@@ -49,7 +49,7 @@ converter as though they were one device — they share a USB identity, which is
 why they were listed together at all.
 
 There is no range level between brand and model, and that is measured rather than
-forgotten: of the 27 records, one brand has two or more models on the same
+forgotten: of the 25 records, one brand has two or more models on the same
 silicon, and its maker does not name them as a range. A level with no occupant is
 a mechanism that cannot be wrong because nothing exercises it. The rule for
 creating one — same silicon **and** the maker names the grouping — is decided and
@@ -197,7 +197,7 @@ answer for eight channels is the error already paid when `dsd_direct` and
 `dsd_reconverted_to_pcm` were one field — two questions that look like one, about
 two different objects. It is registered as planned and deliberately left out of
 level 2's criterion, which names `inputs` as a whole: no decision served here
-needs the count, and the 17 of 27 complete at level 2 did not move because of it.
+needs the count, and the 17 of 25 complete at level 2 did not move because of it.
 
 **Level 3 is empty: no record is complete on what the device does inside.**
 Seven know the real ladder depth, one an internal bypass rate, sixteen the
@@ -210,7 +210,7 @@ amount of scraping closes it.
 on four others. The registry says list; the four others are wrong and should be
 converted.
 
-**All 45 claims have source kind `import`.** The evidence rule is formally
+**All 43 claims have source kind `import`.** The evidence rule is formally
 satisfied — every claim quotes something — but no claim yet carries a real kind
 (`measurement`, `manual`, `maker_reply`…). Splitting the imported batches into
 per-field claims with their real source is the first real curation work.

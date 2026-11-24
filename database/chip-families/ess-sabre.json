@@ -18,5 +18,6 @@
     "ES903",
     "ES9039"
   ],
-  "id": "ess_sabre"
+  "id": "ess_sabre",
+  "_replaced_a_device_record": "Until 2026-11-24 a DEVICE record stood beside this family - devices/unknown/ess-generique - whose own source called it « Fallback entry, not a measured device. Chip-level facts only. » Its identity was brand \"unknown\", model \"unknown\", shared with two other records, and it asserted for every converter on this silicon the four fields _what_the_implementation_fixes says the silicon does NOT fix. It is gone, and nothing moved here: `family` was self-referential, `analog_filter` cannot live on a chip by this catalogue's own rule, and `correctable` is computed from dsd_direct on all 27 records. A chip's defaults belong in a chip family; they do not need a device to carry them."
 }
