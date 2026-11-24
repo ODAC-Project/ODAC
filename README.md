@@ -3,8 +3,12 @@
 An open, community-maintained database of **digital-to-analogue converters**:
 what each one accepts, what it does inside, and the evidence for every claim.
 
-Built and maintained by [MozAIk Labs](https://github.com/renesenses), in the
-spirit of [OPRA](https://github.com/opra-project/OPRA).
+Started at [MozAIk Labs](https://mozaiklabs.fr), who maintain the repository
+and the mirror. The project lives under its own name because the data is about
+everybody's hardware and should belong to everybody who uses it — see
+[Who runs this](#who-runs-this) below. Built in the spirit of
+[OPRA](https://github.com/opra-project/OPRA), which solved the same problem for
+headphones first.
 
 ## Why it exists
 
@@ -74,6 +78,32 @@ Following OPRA's split, and for the same reason:
   derivative databases stay available to the community. A code licence does not
   cover the *sui generis* database right in Europe, which is why the data needs
   its own.
+
+## Who runs this
+
+**MozAIk Labs started ODAC and keeps it running.** They set up the repository,
+defined the file format, wrote the tooling and the CI, seeded the first records
+from their own catalogue, and they host the mirror that serves the built
+database so that nobody has to hammer GitHub.
+
+**Why they bother.** MozAIk Labs make [Tune](https://mozaiklabs.fr), a music
+server that has to choose a playback setting for your converter. It cannot do
+that well without knowing things no driver reports. They could have kept that
+knowledge private; a catalogue of twenty-seven devices kept private is worth
+very little, and the same catalogue open has a chance of covering the hardware
+people actually own.
+
+**What they do not intend.** They do not intend to decide what this database
+becomes. The data is under a licence that lets anyone use it, including
+competitors, and the format is plain files in git precisely so that nobody
+depends on MozAIk Labs' goodwill to keep using it. If this project outgrows
+them, that is a success and not a problem.
+
+**Manufacturers are welcome, and have the most to gain.** Most of what is
+missing here is what a device does inside, and the people who know that for
+certain are the ones who built it. A manufacturer who fills in their own records
+gets their hardware set up correctly by every piece of software that reads this
+database — not only Tune.
 
 ## Where it stands
 

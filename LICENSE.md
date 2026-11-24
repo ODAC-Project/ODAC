@@ -41,6 +41,8 @@ protected by a *sui generis* right, distinct from copyright, covering the
 investment made in assembling it. A software licence such as MIT says nothing
 about that right. A database therefore needs a licence written for databases.
 
-**Attribution.** Credit "ODAC — MozAIk Labs" with a link to this repository. If
-you present a browser or a picker built on this data, the attribution belongs
-where a user can see it, not only in a licence file.
+**Attribution.** Credit "ODAC" with a link to this repository. If you present a
+browser or a picker built on this data, the attribution belongs where a user can
+see it, not only in a licence file. Individual claims carry their own source;
+where you show a figure, showing where it came from costs you nothing and is the
+whole point of the database.
