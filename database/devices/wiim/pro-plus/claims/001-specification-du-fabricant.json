@@ -1,0 +1,17 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.wiimhome.com/products/wiim-pro-plus/",
+    "quote": "WiiM's own page for the WiiM Pro Plus, read 2026-11-24. Verbatim from its FAQ: « AKM AK4493SEQ DAC with 121 dB SNR and −113 dB THD+N, plus TI Burr-Brown PCM1861 ADC. »; « Optical (SPDIF) Out or Coax Out → external DAC/AVR (up to 192 kHz/24-bit) »; « SPDIF-In is PCM-only (no Dolby/DTS) »; on USB-C: « Power only (5V). It does not support USB storage or USB audio. » Page heading, verbatim: « Music Streamer Redefined. »",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "akm",
+    "chip": "AK4493SEQ (AKM) converting, with a TI Burr-Brown PCM1861 as the ANALOGUE-TO-DIGITAL converter for the line input - « plus TI Burr-Brown PCM1861 ADC ». Two parts from two vendors going opposite ways, which no single `family` field can express: this record's family is AKM because that is what converts digital to analogue, and the ADC is recorded here in prose."
+  },
+  "_usb_is_not_an_audio_input": "Stated outright by the maker: « Power only (5V). It does not support USB storage or USB audio. » Worth recording as a NEGATIVE - most pages leave it to be guessed, and three records in this pass needed care to avoid reading a USB socket as an audio input.",
+  "_only_verbatim": "ONLY VERBATIM TEXT IS QUOTED HERE, AND THAT COST THIS RECORD ITS INPUT CEILINGS. The reading pass that produced this returned some rows as a model-extracted SUMMARY of the page rather than as page text, and flagged which were which. A summary is not a quotation: recording one as evidence would fabricate the thing this catalogue's whole rule rests on. So the SPDIF input's rate - which the summary gives as 192 kHz/24-bit - is NOT recorded, while the figures that appear verbatim in the maker's own FAQ are. The evidence rule turns out to bite on the READING METHOD and not only on the source."
+}

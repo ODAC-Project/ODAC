@@ -28,7 +28,7 @@
     "chip": {
       "type": "text",
       "description": "What the conversion stage is, in words. Evidence for `family`, not a substitute.",
-      "used_on_records": 32,
+      "used_on_records": 34,
       "level": 3,
       "probe_can_establish": false
     },
@@ -84,7 +84,7 @@
     "family": {
       "type": "enum_or_unknown",
       "description": "Chip family, a key into chip-families/. Inheritable.",
-      "used_on_records": 37,
+      "used_on_records": 39,
       "level": 3,
       "probe_can_establish": false
     },
@@ -158,7 +158,7 @@
     "pcm_max_hz": {
       "type": "integer_or_unknown",
       "description": "Highest PCM rate the device accepts, in hertz.",
-      "used_on_records": 38,
+      "used_on_records": 39,
       "level": 2,
       "probe_can_establish": true
     },

@@ -1,0 +1,19 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.wiimhome.com/wiimpro/overview",
+    "quote": "WiiM's own page for the WiiM Pro, read 2026-11-24, verbatim: « with a built-in TI DAC »; « Up to 24-bit/192 kHz from supported sources »; « WiiM Pro is a streamer, not an amplifier. Connect it to powered speakers or to an amplifier/receiver for passive speakers. »",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ti_burr_brown",
+    "pcm_max_hz": 192000,
+    "chip": "« a built-in TI DAC » - the maker names the vendor and no part number at all. Nothing more is claimed."
+  },
+  "_the_part_number_i_refused": "The WiiM Pro PLUS's comparison table is reported to give this device's converter as « TI PCM 5121 ». It is not recorded, for two reasons at once: it came through a summary and not verbatim, and it is a statement about THIS device made on ANOTHER device's page. Either would be enough to refuse it.",
+  "_the_192_is_about_sources": "« Up to 24-bit/192 kHz from supported sources » is not tied to a socket, so it is recorded at device level and no input block is created. The page says the device has digital inputs and digital outputs and rates neither.",
+  "_only_verbatim": "ONLY VERBATIM TEXT IS QUOTED HERE, AND THAT COST THIS RECORD ITS INPUT CEILINGS. The reading pass that produced this returned some rows as a model-extracted SUMMARY of the page rather than as page text, and flagged which were which. A summary is not a quotation: recording one as evidence would fabricate the thing this catalogue's whole rule rests on. So the SPDIF input's rate - which the summary gives as 192 kHz/24-bit - is NOT recorded, while the figures that appear verbatim in the maker's own FAQ are. The evidence rule turns out to bite on the READING METHOD and not only on the source."
+}
