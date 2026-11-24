@@ -1,0 +1,22 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.bluesound.com/collections/stereo-components/products/node-nano",
+    "quote": "Bluesound's own page for the NODE NANO, read 2026-11-25 in a browser (the host returns 429 to automated fetchers), from the page's « Specifications » tabs: « Native Sampling Rates up to 192 kHz »; « Bit Depth 16-24 »; « DSD Support DSD256 »; « DAC ESS ES9039Q2M »; « Signal-to-Noise Ratio -118 dB »; « Distortion THD+N, 0.0007% »; « Optical/Analog Input »; « USB IN Type A (Fat32 Formatted) - External Storage only; Local Server Mode »; « Coaxial Output RCA »; « Optical Output TOSLINK digital optical »; « Ethernet/LAN Ethernet RJ45, Gigabit 1000 Mbps »; « Wi-Fi Built In Wi-Fi 5 (802.11ac), dual-band »; « Bluetooth Quality Bluetooth 5.2 aptX Adaptive »; « Bluetooth Connectivity Two-Way (transmit & receive) »; « Audio Output Analog RCA Stereo with Fixed option; USB Audio 2.0 (Type A) »; « Power Supply USB-C (5V-2A) »; « Processor ARM Cortex -A53, Quad-Core, 1.8GHz per core »; « IR Input 3.5mm Jack »; « Trigger Out 12 Volt ». The footer links a « Terms of Use » page, which was NOT opened, so no prohibition check was made for this site.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 192000,
+    "bits": 24,
+    "dsd_max": "DSD256",
+    "chip": "« DAC ESS ES9039Q2M »."
+  },
+  "_bluesound_nomme_ses_prises_et_ne_les_note_jamais": "The specification table lists the sockets - « Optical/Analog Input », « USB IN Type A », « Coaxial Output », « Optical Output », « Ethernet/LAN » - and attaches a rate to NONE of them. The three figures that exist, « Native Sampling Rates up to 192 kHz », « Bit Depth 16-24 » and « DSD Support DSD256 », sit in a general block and describe what the device will PLAY. So no inputs block is written: spreading a playback figure onto an optical socket would be the Berkeley mistake, and this maker's own wording - « Native Sampling Rates », « Supported High-Quality Audio File Formats » - says plainly that it is talking about files.",
+  "_lusb_de_ces_appareils_nest_PAS_une_entree_audio": "« USB IN Type A (Fat32 Formatted) - External Storage only; Local Server Mode ». Said outright: the USB port takes a memory stick and nothing else. No usb block is written, and that is a positive fact rather than a gap - a consumer looking for a computer input on these devices will not find one, whatever « USB IN » suggests. Hegel writes the same thing as « 1x USB A 2.0 - USB Drives (10,000 songs) ».",
+  "_une_seule_prise_pour_loptique_ET_lanalogique": "« Optical/Analog Input » - one row, one socket, two signal kinds. A 3.5mm jack that takes either a TOSLINK mini-plug or a line-level analogue cable, which is common on small devices and which this catalogue cannot express: spdif_optical would say the socket is an optical input, and it is only sometimes. No block is written, and the row has no rate anyway.",
+  "_trois_appareils_une_puce_et_le_meme_plafond": "The NODE ICON, the NODE and the NODE NANO all publish 192 kHz, 16-24 bit, DSD256 and the ES9039Q2M. Three price points, one set of digital capabilities, and the differences are entirely in the analogue half - chip count, output sockets, SNR, headphone power. The same lesson as Matrix's three ESS generations with identical ceilings, from the other direction: here one chip appears in three products at one ceiling, there three chips appeared at one ceiling. What a device accepts is set by its firmware and its receivers, not by its converter."
+}

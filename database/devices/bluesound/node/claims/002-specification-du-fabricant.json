@@ -1,0 +1,21 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.bluesound.com/collections/stereo-components/products/node",
+    "quote": "Bluesound's own page for the NODE, read 2026-11-25 in a browser (the host returns 429 to automated fetchers), from the page's « Specifications » tabs: « Native Sampling Rates up to 192 kHz »; « Bit Depth 16-24 »; « DSD Support DSD256 »; « DAC ESS ES9039Q2M »; « Signal-to-Noise Ratio -118 dB »; « Distortion THD+N, 0.0007% »; « Supported High-Quality Audio File Formats FLAC, MQA, WAV, AIFF, MPEG-4 SLS »; « Output Support Analog: RCA Stereo Digital: Optical, Coaxial »; « The USB Output does not support Dirac Live »; « 3rd-Party Integrations AirPlay 2, Spotify Connect (also support for Spotify Lossless), Tidal Connect, Qobuz Connect, Roon Ready, Dirac Live Ready ». The footer links a « Terms of Use » page, which was NOT opened, so no prohibition check was made for this site.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 192000,
+    "bits": 24,
+    "dsd_max": "DSD256",
+    "chip": "« DAC ESS ES9039Q2M » - ONE, where the NODE ICON has two of the same part."
+  },
+  "_bluesound_nomme_ses_prises_et_ne_les_note_jamais": "The specification table lists the sockets - « Optical/Analog Input », « USB IN Type A », « Coaxial Output », « Optical Output », « Ethernet/LAN » - and attaches a rate to NONE of them. The three figures that exist, « Native Sampling Rates up to 192 kHz », « Bit Depth 16-24 » and « DSD Support DSD256 », sit in a general block and describe what the device will PLAY. So no inputs block is written: spreading a playback figure onto an optical socket would be the Berkeley mistake, and this maker's own wording - « Native Sampling Rates », « Supported High-Quality Audio File Formats » - says plainly that it is talking about files.",
+  "_ce_que_cette_revendication_ajoute": "The record already carried a claim from an earlier read. This one is the current page and adds the converter by part number, the bit depth, the DSD ceiling and the measured SNR. The two claims are left side by side rather than merged: if they disagree anywhere, the build will say so and resolve by weight, which is the point of the architecture.",
+  "_la_difference_avec_le_NODE_ICON_tient_a_un_chiffre": "Identical published ceilings - 192 kHz, 16-24 bit, DSD256 - and the same converter part. What separates them is the COUNT (one chip against two, dual-mono), the output set (RCA alone against balanced XLR plus RCA) and the measurement: « -118 dB » against « -129dB (XLR) ». Eleven decibels, and nothing in this catalogue's fields can hold it. Fourth time in two days that two models differ only in things the schema does not model - after Rockna's Edition and Signature, Cambridge's CXN100 pair and Lumin's P2 and P1 Mini."
+}

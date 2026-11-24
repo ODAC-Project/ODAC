@@ -1,0 +1,20 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.bluesound.com/collections/stereo-components/products/node-icon",
+    "quote": "Bluesound's own page for the NODE ICON, read 2026-11-25 in a browser (the host returns 429 to automated fetchers), from the page's « Specifications » tabs: « Native Sampling Rates up to 192 kHz »; « Bit Depth 16-24 »; « DSD Support DSD256 »; « DAC ESS ES9039Q2M x2 »; « Signal-to-Noise Ratio -129dB (XLR) -121dB (RCA) »; « Distortion THD+N, 0.0004% »; « Supported High-Quality Audio File Formats FLAC, MQA, ALAC, WAV, AIFF, MPEG-4 SLS »; « Supported Audio File Formats MP3, AAC, WMA, WMA-L, OGG, ALAC, OPUS »; « Supported Multi-Channel Audio Formats Dolby Digital® »; « Output Support Analog: Balanced XLR, RCA Stereo Digital: Optical, Coaxial »; « The USB Output does not support Dirac Live »; « Operating System BluOS »; « 3rd-Party Integrations AirPlay 2, Spotify Connect (also support for Spotify Lossless), Tidal Connect, Qobuz Connect, Roon Ready, Dirac Live Ready ». The product description adds « Dual-mono DAC design with 2 x ESS Sabre ES9039Q2M DAC »; « HDMI eARC, optical, analog and USB-C inputs »; « RCA, coax, optical, USB outputs »; « THX AAA headphone amplifier technology ». Self-description: « The NODE ICON is a flagship wireless music streamer, designed for the audio obsessed. » The footer links a « Terms of Use » page, which was NOT opened, so no prohibition check was made for this site.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 192000,
+    "bits": 24,
+    "dsd_max": "DSD256",
+    "chip": "« DAC ESS ES9039Q2M x2 », and in the description « Dual-mono DAC design with 2 x ESS Sabre ES9039Q2M DAC ». The « THX AAA » stage is the headphone amplifier, not the converter."
+  },
+  "_bluesound_nomme_ses_prises_et_ne_les_note_jamais": "The specification table lists the sockets - « Optical/Analog Input », « USB IN Type A », « Coaxial Output », « Optical Output », « Ethernet/LAN » - and attaches a rate to NONE of them. The three figures that exist, « Native Sampling Rates up to 192 kHz », « Bit Depth 16-24 » and « DSD Support DSD256 », sit in a general block and describe what the device will PLAY. So no inputs block is written: spreading a playback figure onto an optical socket would be the Berkeley mistake, and this maker's own wording - « Native Sampling Rates », « Supported High-Quality Audio File Formats » - says plainly that it is talking about files.",
+  "_quatre_entrees_annoncees_dans_la_prose_et_aucune_dans_le_tableau": "« HDMI eARC, optical, analog and USB-C inputs » - in the product description, not in the specification table, and with no rate for any of them. So the device has an HDMI eARC input and a USB-C input, neither of which appears in the block that would rate them. Nothing is written. The USB-C is also not necessarily an audio input: on the NODE NANO, the same maker's USB port is « External Storage only »."
+}
