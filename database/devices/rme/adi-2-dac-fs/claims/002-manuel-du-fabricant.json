@@ -1,0 +1,28 @@
+{
+  "source": {
+    "kind": "manual",
+    "url": "https://rme-audio.de/downloads/adi2dac_e.pdf",
+    "quote": "RME, User's Guide ADI-2 DAC v1.8, read 2026-11-24. Section « 31.4 Filter Curves 44.1 kHz » plots the device's DA filters and its legend names all five: « NOS 44.1 kHz », « Sharp 44.1 kHz », « SD Sharp 44.1 kHz », « Slow 44.1 kHz », « SD Slow 44.1 kHz ». The chart is titled « ADI-2 DAC: Frequency Response DA Filters ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "device_settings": [
+      {
+        "name": "DA Filter",
+        "values": [
+          "NOS",
+          "Sharp",
+          "SD Sharp",
+          "Slow",
+          "SD Slow"
+        ],
+        "why_it_matters": "NOS is non-oversampling: the setting in which the device's own interpolation is not applied."
+      }
+    ]
+  },
+  "_a_non_oversampling_mode_confirmed_by_its_maker": "THIS IS THE LEVEL-3 FACT THE PAGE DID NOT CARRY. RME's product page says nothing about filters; its manual plots five DA filter curves and names them, NOS among them. A maker publishing a measurement chart whose legend IS the specification - which is why the manual had to be read and why the page alone was not enough.",
+  "_why_this_is_not_internal_bypass": "`internal_bypass` WOULD BE THE OBVIOUS FIELD AND IT DOES NOT FIT. Its shape in this catalogue is {format, at_or_above_hz, bypasses, strength}: a RATE at or above which the device's own stage steps aside, which is how Chord's WTA1 behaves and how the one record carrying the field describes it. RME's NOS is not a rate threshold - it is a SETTING the listener chooses, at any rate. Recording it as internal_bypass would mean inventing an at_or_above_hz that nobody stated. And it is not a rarity: Chord's Qutest page lists « 4x Selectable Filters », Denafrips headlines « True NOS », RME has five. The field is modelled for the shape one device has, while the common shape is a user setting - which is worth knowing before the population pass meets twenty more of them."
+}

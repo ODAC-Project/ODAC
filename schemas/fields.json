@@ -49,7 +49,7 @@
     "device_settings": {
       "type": "list",
       "description": "Settings to make ON THE DEVICE, with why and a source.",
-      "used_on_records": 5,
+      "used_on_records": 6,
       "level": 3,
       "probe_can_establish": false
     },
