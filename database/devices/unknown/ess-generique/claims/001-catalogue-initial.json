@@ -8,10 +8,6 @@
   "submitted_on": "2026-11-24",
   "facts": {
     "family": "ess_sabre",
-    "pcm_max_hz": 768000,
-    "dsd_max": "DSD512",
-    "native_dsd": true,
-    "dop": true,
     "dsd_direct": false,
     "analog_filter": "simple",
     "correctable": false

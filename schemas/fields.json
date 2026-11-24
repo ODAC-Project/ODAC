@@ -56,7 +56,7 @@
     "dop": {
       "type": "boolean",
       "description": "Accepts DSD packed into PCM frames (DoP).",
-      "used_on_records": 25,
+      "used_on_records": 23,
       "level": 2,
       "probe_can_establish": true
     },
@@ -70,7 +70,7 @@
     "dsd_max": {
       "type": "enum_or_unknown",
       "description": "Highest DSD rate accepted, named: DSD64 … DSD1024.",
-      "used_on_records": 25,
+      "used_on_records": 23,
       "level": 2,
       "probe_can_establish": true
     },
@@ -144,7 +144,7 @@
     "native_dsd": {
       "type": "boolean",
       "description": "Accepts DSD over a native path, as opposed to DoP.",
-      "used_on_records": 25,
+      "used_on_records": 23,
       "level": 2,
       "probe_can_establish": true
     },
@@ -158,7 +158,7 @@
     "pcm_max_hz": {
       "type": "integer_or_unknown",
       "description": "Highest PCM rate the device accepts, in hertz.",
-      "used_on_records": 25,
+      "used_on_records": 23,
       "level": 2,
       "probe_can_establish": true
     },

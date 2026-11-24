@@ -1,0 +1,13 @@
+{
+  "raised_on": "2026-11-24",
+  "text": "This record's own source calls it what it is: « Fallback entry, not a measured device. Chip-level facts only. » Its identity says the same - brand \"unknown\", model \"unknown\" - and it shares that identity exactly with ess-generique/akm-generique and with the `unknown` catch-all. Three device records, one identity, coexisting only because the real key is the slug. THE DOUBT IS WHETHER IT SHOULD BE A DEVICE AT ALL: what it carries are ESS Sabre's chip-level defaults, and database/chip-families/ess-sabre.json is where those live.",
+  "withdrawn_on": "2026-11-24",
+  "withdrawn": [
+    "pcm_max_hz: 768000",
+    "dsd_max: 'DSD512'",
+    "native_dsd: True",
+    "dop: True"
+  ],
+  "why_withdrawn": "These four fields are the ones this catalogue's own vocabulary says a chip does NOT fix. `_what_the_implementation_fixes` reads: « Everything else belongs to the device, not to the chip: pcm_max_hz, dsd_max, native_dsd, dop, analog_filter. These are decided by the USB receiver, the firmware and the output stage. » A record that declares itself not a measured device was therefore asserting, for every converter built on this silicon, precisely the four values the silicon does not determine. The chip family deliberately carries none of them, so nothing is lost by removing them: they were not a duplicate of the family, they were an invention on top of it. Same defect withdrawn from ifi-generique and msb-diamond earlier today; leaving it standing on the two WIDEST subjects in the database would have made that pass inconsistent.",
+  "what_would_resolve_it": "Move what is left to database/chip-families/ess-sabre.json, which already holds this silicon's real properties, and delete the device record. Deferred to the identity pass, because it is the same question as the brand catch-alls, the typed aliases and the missing range level - and that pass should happen once."
+}
