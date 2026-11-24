@@ -1,0 +1,53 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://ferrum.audio/wandla/",
+    "quote": "Ferrum Audio's own page for the WANDLA, read 2026-11-24, specification block: « USB (up to PCM 768 kHz/32-bit, DSD 512, DoP 256) »; « I2S (up to PCM 768 kHz/32-bit, DSD 512, DoP 256), PS Audio® compatible »; « ARC (up to PCM 192 kHz/24-bit), TV input with CEC »; « AES/EBU (up to PCM 192 kHz/24-bit, DoP 64) »; « Optical S/PDIF (up to PCM 96 kHz/24-bit guaranteed; should work up to PCM 192 kHz/24-bit and DoP 64 - depends of user's optical cable and transmitter) »; « Coaxial S/PDIF (up to PCM 192 kHz/24-bit, DoP 64) »; « DAC resolution: 768 kHz/32-bit, DSD 512 »; « DAC chip: ESS Sabre ES9038PRO »; « Fully balanced modified IC pre-amplifier, fine tuned for WANDLA »; « Volume control: analogue with bypass option / digital for DAC operation only ». Self-description: « WANDLA fully balanced DAC/PREAMP ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512",
+    "chip": "ES9038PRO (ESS), named as « DAC chip: ESS Sabre ES9038PRO ». The analogue stage is « Fully balanced modified IC pre-amplifier » - not a tube stage and not the converter."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dop_possible": true
+    },
+    "i2s": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dop_possible": true
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dop_possible": true
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dop_possible": true
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000,
+      "bits": 24,
+      "dop_possible": true
+    },
+    "hdmi": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_the_most_complete_per_input_statement_here": "SIX inputs, each rated separately for PCM rate, bit depth AND DSD transport, by the maker, in one block. No other page in this pass comes close. It is also the first to show the bit depth splitting with the rate: 32-bit on USB and I2S, 24-bit on everything else.",
+  "_dop_has_a_RATE_and_this_catalogue_stores_a_boolean": "« DoP 256 » on USB and I2S against « DoP 64 » on AES/EBU, coaxial and optical. The maker gives DoP as a RATE PER INPUT, and inputs.dop_possible is a BOOLEAN. So four distinct figures collapse into true/true/true/true and the difference - DSD256 over DoP versus DSD64 - is lost. A consumer deciding what to send over AES needs the 64, and this catalogue cannot hold it. First clear case.",
+  "_a_ceiling_that_depends_on_the_cable": "« Optical S/PDIF (up to PCM 96 kHz/24-bit GUARANTEED; should work up to PCM 192 kHz/24-bit and DoP 64 - depends of user's optical cable and transmitter) ». THE MAKER SAYS WHY OPTICAL IS RATED LOW, and it is not the device: it is the cable and the transmitter at the other end. This catalogue stores ONE pcm_max_hz per input and has no way to say « 96 guaranteed, 192 likely, depends on your cable ». 96000 is recorded because it is the guaranteed figure and the conservative branch is the one this catalogue takes everywhere else. It also answers a question the catalogue has carried all day: five makers rate optical at 96 and vocabulary/why-the-optical-default-stays-low explains the consequence of getting it wrong. This is the first maker to state the CAUSE.",
+  "_filters_the_page_contradicts_itself": "The filter count cannot be recorded because the maker gives three different ones. The product page says « Proprietary Signalyst filters (two included at launch) » and « EES Sabre ES9038PRO with three filter settings » and « four digital filters created for Ferrum by renowned filter-maker Signalyst ». The companion page says « One is a part of the ESS DAC, and four were designed especially for WANDLA by filter specialist Jussi Laako of Signalyst ». Two, three, four, or one plus four. No device_settings entry is written: a list of filters whose COUNT the maker states four ways would be a guess dressed as a fact. What IS certain and worth having: this device offers selectable digital filters, and they are the third such case here after RME's five and Totaldac's compensation filter - while internal_bypass, modelled for a rate threshold, still stands on one record of 63.",
+  "_the_only_bypass_is_not_the_one_we_want": "« Volume control: analogue with bypass option / digital for DAC operation only » - that bypass is the volume stage, not the digital filtering. Recorded here so nobody later mistakes it for internal_bypass."
+}
