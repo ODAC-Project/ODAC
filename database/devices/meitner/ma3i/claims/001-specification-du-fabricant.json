@@ -1,0 +1,45 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://emmlabs-meitner.com/products/meitner-ma3i",
+    "quote": "Meitner Audio's own page for the MA3i, read 2026-11-24 in a browser (the page returns 429 to automated fetchers), Key Features block, read from the accordion's own list items: « Next generation 16xDSD proprietary discrete dual differential D-to-A converters (MDAC2) with the updated - Meitner Digital Audio Translator signal processing technology (MDAT2) »; « Latest generation VControl high resolution volume control »; « Latest generation MFAST for ultra-low jitter performance with proprietary asynchronous clocking system (MCLK3) »; « USB audio and network interfaces with custom power and hardware galvanic isolation »; « Up to 24bit/192kHz & DSD support over all inputs: USB Audio, AES, COAX, TOSLINK and Network(RJ45) »; « 2xDSD (via DoP), DXD (352/384kHz) over USB Audio and Network(RJ45) »; « Full MQA unfolding via USB Audio and Network(RJ45) »; « Integrated network streamer with support for Roon, Spotify Connect, Tidal Connect, Qobuz, Deezer, V-Tuner, and DLNA/UPnP »; « IR remote and serial port for wired remote control ». Title: « Meitner Audio MA3i Integrated D/A Converter ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "discrete_dsd",
+    "technology": "discrete_dsd",
+    "pcm_max_hz": 384000,
+    "bits": 24,
+    "dsd_max": "DSD128",
+    "dop": true,
+    "chip": "No part number, and none exists: « Next generation 16xDSD proprietary discrete dual differential D-to-A converters (MDAC2) », built in-house. MDAT2 is the signal processing ahead of them, MFAST the frequency acquisition, MCLK3 the clock, VControl the volume - four named blocks and not one bought part."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 24,
+      "dsd_max": "DSD128",
+      "dop_possible": true
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_the_clearest_statement_of_a_per_input_split_in_the_catalogue": "Two bullets, read together, say the whole thing: « Up to 24bit/192kHz & DSD support over all inputs: USB Audio, AES, COAX, TOSLINK and Network(RJ45) » then « 2xDSD (via DoP), DXD (352/384kHz) over USB Audio and Network(RJ45) ». So a floor that holds everywhere - 24 bits, 192 kHz, DSD of some unstated rate - and TWO inputs, USB and network, that go further: DSD128 wrapped in DoP, and PCM to 384 kHz under the name DXD. No other maker in the pass states both halves this cleanly, and it is how the DA2i's identically worded page should be read too.",
+  "_dsd1024_INSIDE_and_dsd128_AT_THE_DOOR": "The single most instructive pair of figures in 74 records. The converters are « 16xDSD » - sixteen times 44.1 kHz times 64, which is DSD1024 - and the highest DSD this device will ACCEPT is 2xDSD, DSD128, and only over DoP. A factor of EIGHT between what the stage runs at and what the input takes. dsd_max is recorded as DSD128, because this field means what the device accepts; writing DSD1024 would be the easiest and worst mistake available on this page, and it is the one an automated read of the words « 16xDSD converter » would make. The 16x belongs in `chip`, as a description of the stage, and nowhere else.",
+  "_dxd_is_pcm_and_it_is_why_pcm_max_hz_is_384_and_not_192": "« DXD (352/384kHz) over USB Audio and Network(RJ45) », listed separately from « Up to 24bit/192kHz ». DXD is not a transport or a wrapper: it is ordinary 24-bit PCM at 352.8 or 384 kHz, a studio convention from DSD production, and McIntosh's spec table spells it out that way. So the USB input does accept 384 kHz PCM, and pcm_max_hz is 384000 there while the device's other three inputs stop at 192000. The maker's two-tier wording - a general ceiling, then a format named above it - is the shape to expect from anyone who grew up in SACD production.",
+  "_dsd_support_with_no_rate_on_three_inputs": "« DSD support over all inputs » covers AES, COAX and TOSLINK, and gives them no rate. inputs.dsd_max is left ABSENT on those three rather than filled with the device-level DSD128, which is stated only « over USB Audio and Network(RJ45) ». Three inputs that certainly take DSD and whose ceiling nobody has published: exactly the condition the new field was registered to be able to leave empty honestly.",
+  "_the_network_input_again_has_no_key": "« Network(RJ45) » is rated identically to USB - 24/192, 2xDSD via DoP, DXD, full MQA unfolding - and is not written, for the fourth time today after Soulution, MSB and McIntosh. Here the maker even names the protocols it speaks: « Roon, Spotify Connect, Tidal Connect, Qobuz, Deezer, V-Tuner, and DLNA/UPnP ». The interface vocabulary has net-dlna among its thirteen, so ONE of those could be written - and writing one protocol when the maker lists seven would misstate the input rather than record it. The vocabulary needs a generic network interface with the protocols as an attribute, not thirteen keys of which one happens to match."
+}

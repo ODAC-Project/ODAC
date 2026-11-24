@@ -1,0 +1,54 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.aplhifi.com/products/dsd-wr/",
+    "quote": "APL HiFi's own page for the DSD-WR, read 2026-11-24, Specifications and Features blocks. On the signal path: « All PCM rates from the digital sources are converted to DSD, prior to D/A conversion. » and « Proprietary 48 bit PCM to DSD converter module with DSD128 and DSD256 capabilities, user selectable from the remote. » On the converter: « Paralleled Flagship DAC devices working in Mono DSD-only mode and special Class-A operation we have developed. » On the inputs: « USB input accepting up to 384kHz/32bit PCM, up to DSD128 in DoP format and up to DSD256 in NativeDSD format. »; « Proprietary asynchronous USB input module accepting PCM rates up to 384kHz/32bit and up to DSD256 in NativeDSD mode. »; « Two S/PDIF Coaxial digital inputs. »; « S/PDIF digital input module accepting up to 192kHz/24bit PCM. »; « AES/EBU professional standard balanced digital input. »; « Note! S/PDIF, AES/EBU and Optical accepting up to 192kHz/24bit PCM. »; « Two Proprietary DTR inputs allowing connection to DTR-MR and DNP-SR. »; « Proprietary DTR balanced I2S inputs for connecting our digital sources. »; « Note! Both 44.1kHz and 48kHz base frequencies are accepted for DSD. » Also: « Attenuator offering a non-decimating volume control with a 0.5dB step. »; « Ultra-low-phase noise, Femto -jitter Master Clocks. » Self-description: « Pure DSD all-solid-state Digital to Analog converter with a transformer-coupled Class-A output stage. »; « The DSD-WR is our current Reference all-solid-state Digital to Analog converter. »; « The DSD-WR is the final Special Edition for this model. » The page's description also says « From the quadruple DSD processing rate, to the transformer-coupled Class A output stage ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "unknown",
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD256",
+    "native_dsd": true,
+    "dop": true,
+    "pcm_reconverted_to_dsd": true,
+    "dsd_reconverted_to_pcm": false,
+    "chip": "No part number. « Paralleled Flagship DAC devices working in Mono DSD-only mode and special Class-A operation we have developed » - bought silicon, unnamed, several per channel, run in a DSD-only mode. The « transformer-coupled Class-A output stage » is the analogue stage, not the converter, and the maker is explicit that the device is « all-solid-state »: there is no tube here.",
+    "device_settings": [
+      {
+        "setting": "PCM to DSD conversion rate",
+        "set_to": "DSD256",
+        "why": "« Proprietary 48 bit PCM to DSD converter module with DSD128 and DSD256 capabilities, user selectable from the remote. » Every PCM input is converted to DSD before conversion, and the owner chooses the rate it is converted TO. DSD256 is the higher of the two the maker offers. This is the first setting in the catalogue that chooses the TARGET of a mandatory internal conversion rather than a filter or a mode - and the only one an engine must read before deciding what to send, because it fixes what the conversion stage will actually see."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "dsd_max": "DSD256",
+      "native_dsd_possible": true,
+      "dop_possible": true
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_the_second_maker_to_state_pcm_reconverted_to_dsd_and_the_plainer_of_the_two": "« All PCM rates from the digital sources are converted to DSD, prior to D/A conversion. » No exception, no threshold. The field was registered hours earlier on Nagra's one sentence about the HD DAC X, and it now stands on two independent makers who have nothing in common but the idea - a Swiss FPGA machine and a Bulgarian solid-state one. Both say it of EVERY input. And this one adds what Nagra's does not: the target rate is the owner's choice, from the remote. So on this device an engine must know not only that PCM will be remade as DSD but at which of two rates, and the answer is in a setting no probe can read.",
+  "_the_new_per_input_field_already_cannot_hold_this": "« USB input accepting up to 384kHz/32bit PCM, up to DSD128 in DoP format and up to DSD256 in NativeDSD format. » ONE input, TWO DSD ceilings, and what separates them is the TRANSPORT: DSD256 arriving as native DSD, DSD128 arriving wrapped in PCM frames. inputs.dsd_max is a single value, so DSD256 is recorded and the DoP half of the sentence survives only as inputs.dop_possible: true - a boolean that now means « DoP works » while saying nothing of the fact that it works to half the rate. inputs.dsd_max was registered this afternoon to close exactly this kind of wound on Ferrum's page, and here is the next turn of it: the ceiling is not a property of the input alone but of the pair (input, transport). Ferrum needed a rate where there was a boolean; this needs two rates where there is one.",
+  "_dsd_on_a_48_khz_base_has_no_name_in_the_enum": "« Note! Both 44.1kHz and 48kHz base frequencies are accepted for DSD. » Every DSD name this catalogue uses - DSD64, DSD128, DSD256, DSD512 - is a multiple of 44.1 kHz. A 1-bit stream at 128 x 48 kHz is real, it is what this device accepts, and dsd_max cannot say it. Recorded rather than fixed: no other source in 74 records has raised it, and a vocabulary change on one sentence would be the opposite of how the other fields were added today.",
+  "_an_input_rated_but_not_listed": "« Note! S/PDIF, AES/EBU and Optical accepting up to 192kHz/24bit PCM » names an optical input. The Digital Inputs list does not contain one: two S/PDIF coaxial, one AES/EBU, two proprietary DTR, one USB. So the maker rates an input the same page does not say the device has. No spdif_optical block is written. The likeliest reading is a shared note reused across the range, which is precisely why it is not evidence about THIS model.",
+  "_dtr_is_i2s_wearing_a_proprietary_name": "« Two Proprietary DTR inputs allowing connection to DTR-MR and DNP-SR » and « Proprietary DTR balanced I2S inputs for connecting our digital sources ». The maker says in its own words that its proprietary input IS I2S, balanced - so unlike MSB's Pro ISL, Nagra's NAGRA-LINK or Wadax's triple-AES link, this one has a key here. It still gets no block: the page gives it no rate and no bit depth, and the only inputs it accepts are two of the maker's own transports.",
+  "_a_volume_control_that_does_not_throw_bits_away": "« Attenuator offering a non-decimating volume control with a 0.5dB step. » Volume is where bit depth usually dies, and a maker saying its attenuator does not decimate is saying the 32-bit input survives it. There is no field for it. Noted because the catalogue's whole purpose is to know what reaches the conversion stage, and a decimating volume control defeats everything upstream of it - this is the first page in the pass to address it at all.",
+  "_what_was_refused_a_customer_review": "A customer review on the same page mentions « DF-Zero » and another says the DAC « always converts to DSD ». Reviews are not the maker. The second happens to agree with the maker's own sentence, which is exactly why it must not be used: a source that confirms what is already evidenced adds nothing and teaches the harvest to read comment threads as specification. Neither is recorded.",
+  "_quadruple_is_not_recorded": "« From the quadruple DSD processing rate » - quadruple of what the page never says. DSD256 is four times DSD64, so the reading is probably that, and probably is not a fact. The figures that ARE stated, DSD128 and DSD256, are recorded instead."
+}

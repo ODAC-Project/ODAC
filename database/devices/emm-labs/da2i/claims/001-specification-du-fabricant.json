@@ -1,0 +1,45 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://emmlabs-meitner.com/products/da2i",
+    "quote": "EMM Labs' own page for the DA2i, read 2026-11-24 in a browser (the page returns 429 to automated fetchers), Key Features and Specifications accordions read from their own list items. Key Features: « Next generation 16xDSD proprietary discrete dual differential D-to-A converters (MDAC2) »; « Latest generation Meitner Digital Audio Translator signal processing technology (MDAT2) »; « MFAST for ultra-low jitter performance »; « Latest MCLK3 asynchronous clocking system »; « Integrated network streamer with support for Roon, Spotify Connect, Tidal Connect, Qobuz, Deezer, V-Tuner, and DLNA/UPnP »; « USB audio and network interfaces with custom power and hardware galvanic isolation »; « 2xDSD, DXD and MQA via USB audio and network »; « Up to 24bit/192kHz & DSD support over all inputs »; « High/Low output gain control and signal polarity »; « Exclusive aerospace-grade ceramic circuit boards »; « EMM Optilink for CD/SACD transport connection ». Specifications: « Digital inputs: EMM Optilink (CD/SACD), AES/EBU, COAX, TOSLINK, USB audio & Network »; « Stereo analog outputs: XLR & RCA »; « Output impedance: 300 ohms balanced (XLR) 150 ohms unbalanced (RCA) ». Body text: « As our flagship 16xDSD (DSD1024) converter »; « At the core of the DA2i lies EMM Labs' proprietary Dual Differential DACs, complemented by a newly designed Class A analog output stage. These meticulously engineered, in-house DACs »; « Supporting high-resolution formats such as DSD, 2xDSD, DXD, and MQA », in the network streaming section; « Our next-generation MDAT2 DSP works in harmony with the 16xDSD DACs, processing audio in real-time »; « The DA2i's digital input system features enhanced isolation for USB and network interfaces ». Self-description: « EMM Labs DA2i Stereo D/A Integrated Converter » and « The DA2i is more than just a digital-to-analog converter; it's a statement of audio excellence. »",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "discrete_dsd",
+    "technology": "discrete_dsd",
+    "pcm_max_hz": 384000,
+    "bits": 24,
+    "dsd_max": "DSD128",
+    "chip": "No part number, and none exists: « Next generation 16xDSD proprietary discrete dual differential D-to-A converters (MDAC2) », « in-house DACs », « proprietary Dual Differential DACs ». The maker states the stage's own rate - « our flagship 16xDSD (DSD1024) converter » - and that is the rate it RUNS AT, not the rate it accepts. « a newly designed Class A analog output stage » is the analogue stage. MDAT2 is the DSP ahead of the converters, MFAST the frequency acquisition, MCLK3 the clock."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 24,
+      "dsd_max": "DSD128"
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_discrete_dsd_is_warranted_here_and_was_not_for_playback_designs": "Worth setting side by side, because the two pages are three hours apart and got different answers. Playback Designs says « double Differential discrete DAC » - discrete, and nothing about the modulation - so technology was left absent and a fifth enum value proposed. EMM Labs says « 16xDSD proprietary discrete dual differential D-to-A converters » and « our flagship 16xDSD (DSD1024) converter »: discrete AND the rate it runs at, which is a DSD multiple. A discrete stage clocked at a DSD rate IS what discrete_dsd means, so the value is recorded. The difference between the two records is one clause on one page, and that is the whole method.",
+  "_dsd1024_INSIDE_and_dsd128_AT_THE_DOOR": "« our flagship 16xDSD (DSD1024) converter » against « 2xDSD, DXD and MQA via USB audio and network ». The stage runs at DSD1024; the highest DSD the device will take is DSD128. A factor of eight. dsd_max is DSD128 because the field means what the device accepts, and DSD1024 lives in `chip` as a description of the stage. This is the trap of the whole pass: every automated read of « 16xDSD converter » gives a ceiling eight times too high, and a consumer told this device takes DSD1024 would send it a stream it cannot receive.",
+  "_what_was_taken_from_the_SISTER_product_and_what_was_not": "The Meitner MA3i page, read minutes later, carries the same bullets with two clauses more: « 2xDSD (via DoP) » and « DXD (352/384kHz) ». From those the MA3i record gets dop: true and a 384 kHz USB ceiling with the reason stated. THIS record gets the 384 kHz - because « DXD » is on this page too, and DXD is 24-bit PCM at 352.8 or 384 kHz by definition, not by analogy - and it does NOT get dop. The MA3i's « (via DoP) » is a fact about the MA3i. These are sister products from one firm with one feature list, which is exactly what makes the temptation strong and the inference worthless: a shared marketing bullet is not shared evidence. dop is absent here and stated there.",
+  "_dsd_over_all_inputs_but_2xdsd_only_over_two": "« Up to 24bit/192kHz & DSD support over all inputs », then « 2xDSD, DXD and MQA via USB audio and network ». So AES/EBU, COAX and TOSLINK take 24/192 PCM and DSD at a rate the page never gives; USB and network take 2xDSD and DXD on top. inputs.dsd_max is written on USB alone and left absent on the other three - the honest shape, and the one the field was registered this afternoon to make possible.",
+  "_emm_optilink_is_mcintoshs_mct_by_another_name": "« EMM Optilink for CD/SACD transport connection », in the Specifications list of digital inputs. A proprietary optical link whose job is to carry a CD or an SACD from the maker's own transport - the same idea as McIntosh's MCT input, read the same day, which the spec table rates at « 16-bit/44.1kHz (CD) » and « DSD64 (SACD) ». EMM Labs gives no figure at all, so nothing is written. Two makers, two proprietary CD/SACD links, neither with a key in the interface vocabulary.",
+  "_the_network_input_is_rated_and_unrecordable_a_fifth_time": "« USB audio & Network » in the digital inputs list, and « 2xDSD, DXD and MQA via USB audio and network » rating it exactly as USB. Fifth occurrence today after Soulution, MSB, McIntosh and Meitner. The count is no longer anecdote: on five of the eleven makers' pages read this afternoon, a fully rated network input could not be written down.",
+  "_mdat2_is_named_and_never_described": "« Our next-generation MDAT2 DSP works in harmony with the 16xDSD DACs, processing audio in real-time to deliver unmatched quality. » A trademark, a position in the chain, and no statement of what it does to the signal - no filter name, no rate, no selectable alternative, no bypass. The sixth named processing scheme in the pass to arrive without a single actionable fact, after RME's five filters, Totaldac's compensation filter, Ferrum's Signalyst filters, Soulution's Anagram algorithm and CH Precision's PEtER Spline."
+}

@@ -1,0 +1,13 @@
+{
+  "id": "emm-labs/da2i",
+  "kind": "dac",
+  "brand": "emm_labs",
+  "model": "DA2i",
+  "aliases": [
+    {
+      "text": "DA2",
+      "relation": "neighbour"
+    }
+  ],
+  "_why_the_da2_is_a_neighbour_and_not_an_edition": "The page is explicit that they are different products: « The DA2i builds on the DA2's strengths with noticeable improvements in resolution, timing, and control. » A customer testimonial on the same page writes « The DA2i / DA2 V3 », which suggests the DA2 reached a third revision. Facts DO distinguish them - the maker says so - and the DA2 has no record here, so the name resolves to this one for want of its own. That is `neighbour`, the relation that says « a DIFFERENT product, resolved here ». No figure on this record may be read as the DA2's."
+}

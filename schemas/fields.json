@@ -21,14 +21,14 @@
     "bits": {
       "type": "integer_or_unknown",
       "description": "Real depth of the conversion ladder, not of its input.",
-      "used_on_records": 11,
+      "used_on_records": 14,
       "level": 3,
       "probe_can_establish": false
     },
     "chip": {
       "type": "text",
       "description": "What the conversion stage is, in words. Evidence for `family`, not a substitute.",
-      "used_on_records": 58,
+      "used_on_records": 61,
       "level": 3,
       "probe_can_establish": false
     },
@@ -49,14 +49,14 @@
     "device_settings": {
       "type": "list",
       "description": "Settings to make ON THE DEVICE, with why and a source.",
-      "used_on_records": 7,
+      "used_on_records": 8,
       "level": 3,
       "probe_can_establish": false
     },
     "dop": {
       "type": "boolean",
       "description": "Accepts DSD packed into PCM frames (DoP).",
-      "used_on_records": 38,
+      "used_on_records": 40,
       "level": 2,
       "probe_can_establish": true
     },
@@ -70,28 +70,28 @@
     "dsd_max": {
       "type": "enum_or_unknown",
       "description": "Highest DSD rate accepted, named: DSD64 … DSD1024.",
-      "used_on_records": 60,
+      "used_on_records": 63,
       "level": 2,
       "probe_can_establish": true
     },
     "dsd_reconverted_to_pcm": {
       "type": "boolean_or_unknown",
       "description": "Does the device bring DSD back to PCM internally? Decisive: sending DSD is then work thrown away.",
-      "used_on_records": 3,
+      "used_on_records": 4,
       "level": 3,
       "probe_can_establish": false
     },
     "family": {
       "type": "enum_or_unknown",
       "description": "Chip family, a key into chip-families/. Inheritable.",
-      "used_on_records": 64,
+      "used_on_records": 67,
       "level": 3,
       "probe_can_establish": false
     },
     "inputs.bits": {
       "type": "integer_or_unknown",
       "description": "Word width THROUGH this input. Flat across rates; see inputs.bits_above_hz.",
-      "used_on_records": 63,
+      "used_on_records": 74,
       "level": 2,
       "probe_can_establish": true,
       "_in_use_since": "2026-11-24, with the first record of the population pass: eversolo/dmp-a8, from the maker's own specification table."
@@ -107,7 +107,7 @@
     "inputs.dop_possible": {
       "type": "boolean",
       "description": "Whether this input carries DSD over DoP.",
-      "used_on_records": 50,
+      "used_on_records": 52,
       "level": 2,
       "probe_can_establish": true,
       "_in_use_since": "2026-11-24, with the first record of the population pass: eversolo/dmp-a8, from the maker's own specification table."
@@ -115,7 +115,7 @@
     "inputs.native_dsd_possible": {
       "type": "boolean",
       "description": "Whether this input carries native DSD at all. A property of the transport.",
-      "used_on_records": 53,
+      "used_on_records": 54,
       "level": 2,
       "probe_can_establish": true,
       "_in_use_since": "2026-11-24, with the first record of the population pass: eversolo/dmp-a8, from the maker's own specification table."
@@ -123,7 +123,7 @@
     "inputs.pcm_max_hz": {
       "type": "integer_or_unknown",
       "description": "Highest PCM rate THROUGH this input.",
-      "used_on_records": 139,
+      "used_on_records": 150,
       "level": 2,
       "probe_can_establish": true
     },
@@ -144,7 +144,7 @@
     "native_dsd": {
       "type": "boolean",
       "description": "Accepts DSD over a native path, as opposed to DoP.",
-      "used_on_records": 45,
+      "used_on_records": 46,
       "level": 2,
       "probe_can_establish": true
     },
@@ -158,7 +158,7 @@
     "pcm_max_hz": {
       "type": "integer_or_unknown",
       "description": "Highest PCM rate the device accepts, in hertz.",
-      "used_on_records": 62,
+      "used_on_records": 65,
       "level": 2,
       "probe_can_establish": true
     },
@@ -172,7 +172,7 @@
     "technology": {
       "type": "enum",
       "description": "What the conversion stage IS: delta_sigma, r2r, discrete_dsd, fpga.",
-      "used_on_records": 6,
+      "used_on_records": 8,
       "level": 3,
       "probe_can_establish": false
     },
@@ -212,14 +212,14 @@
     "inputs.dsd_max": {
       "type": "enum_or_unknown",
       "description": "Highest DSD rate THROUGH this input. Registered 2026-11-24 on three makers who state it per input and whom the schema could not hold: Soulution gives \"1 bit/5.64 MHz\" on USB and Network and NOTHING on AES, coaxial and optical; MSB gives 8xDSD on Pro USB, 4xDSD on the Renderer, \"1xDSD via DoP\" on S/PDIF and AES; Ferrum gives DoP 256 on USB and I2S against DoP 64 on the other four. Before this field the whole of that collapsed into one device-level dsd_max plus a boolean dop_possible, which says an input carries DSD but not how much - and the figure a consumer needs is exactly how much.",
-      "used_on_records": 8,
+      "used_on_records": 11,
       "level": 2,
       "probe_can_establish": true
     },
     "pcm_reconverted_to_dsd": {
       "type": "boolean_or_unknown",
       "description": "Does the device turn PCM into DSD internally before converting? The exact mirror of dsd_reconverted_to_pcm, registered 2026-11-24 on Nagra's own sentence about the HD DAC X: « Every input signal is converted into DSD 256 format (11.2 MHz sample rate). » Every input, unconditionally. For an engine this is as decisive as the field it mirrors and in the other direction: on such a device PCM has nothing to gain from being prepared carefully, because the device will remake it as DSD256 anyway, and DSD256 is the one format that arrives without a conversion. The catalogue carried the PCM-ward field for weeks and never once asked the question this way round.",
-      "used_on_records": 1,
+      "used_on_records": 2,
       "level": 3,
       "probe_can_establish": false
     }
