@@ -78,6 +78,15 @@ def forbidden_text(root):
     json.dump(c, open(p, "w", encoding="utf-8"), indent=2, ensure_ascii=False)
 
 
+def two_leaks_in_one_file(root):
+    """Two occurrences of the SAME pattern, on two different lines."""
+    p = claim_path(root)
+    c = json.load(open(p, encoding="utf-8"))
+    c["source"]["quote"] = c["source"]["quote"] + " Works with Sendspin."
+    c.setdefault("notes", {})["_also"] = "And Sendspin again, on another line."
+    json.dump(c, open(p, "w", encoding="utf-8"), indent=2, ensure_ascii=False)
+
+
 def unregistered_field(root):
     p = claim_path(root)
     c = json.load(open(p, encoding="utf-8"))
@@ -88,6 +97,8 @@ def unregistered_field(root):
 MUTANTS = [
     ("a field nobody registered", unregistered_field, "not in schemas/fields.json"),
     ("an unreleased product name", forbidden_text, "must not be published"),
+    ("two leaks in one file, both named", two_leaks_in_one_file,
+     lambda out: out.count("must not be published") >= 2),
     ("a claim with no quoted evidence", drop_quote, "not evidence"),
     ("a null value", put_null, "null at"),
     ("a fact smuggled into identity", fact_in_identity, "which are facts"),
@@ -106,7 +117,10 @@ for label, mutate, expect in MUTANTS:
     r = subprocess.run([sys.executable, os.path.join(HERE, "verifier.py"), root],
                        capture_output=True, text=True)
     out = r.stdout + r.stderr
-    caught = r.returncode != 0 and expect in out
+    # `expect` is a substring, or a callable when the point is HOW MANY times
+    # the guard spoke - a guard that reports one leak out of three is wired up
+    # and still unusable.
+    caught = r.returncode != 0 and (expect(out) if callable(expect) else expect in out)
     print("  %-4s %s" % ("ok" if caught else "LIVE", label))
     if not caught:
         bad += 1

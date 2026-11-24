@@ -189,11 +189,16 @@ for root, _, files in os.walk(DB):
             text = open(p, encoding="utf-8").read()
         except Exception:
             continue
+        # EVERY occurrence, with its line. re.search reported the first match
+        # per pattern per file, so a file holding three leaks showed one: you
+        # fixed it, ran again, and found the next. Measured on a file with three
+        # occurrences, it named two. Fixing a leak should not be a guessing game
+        # played one round at a time.
         for pattern, why in FORBIDDEN:
-            m = re.search(pattern, text)
-            if m:
-                errors.append("%s: %r must not be published — %s"
-                              % (rel(p), m.group(0), why))
+            for m in re.finditer(pattern, text):
+                errors.append("%s:%d: %r must not be published — %s"
+                              % (rel(p), text.count("\n", 0, m.start()) + 1,
+                                 m.group(0), why))
 
 print("devices    : %d" % n_dev)
 print("claims     : %d" % n_claim)
