@@ -86,8 +86,8 @@ defined the file format, wrote the tooling and the CI, seeded the first records
 from their own catalogue, and they host the mirror that serves the built
 database so that nobody has to hammer GitHub.
 
-**Why they bother.** MozAIk Labs make [Tune](https://mozaiklabs.fr), a music
-server that has to choose a playback setting for your converter. It cannot do
+**Why they bother.** MozAIk Labs make Tune, a music server that has to choose a
+playback setting for your converter. It cannot do
 that well without knowing things no driver reports. They could have kept that
 knowledge private; a catalogue of twenty-seven devices kept private is worth
 very little, and the same catalogue open has a chance of covering the hardware
