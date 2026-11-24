@@ -1,0 +1,16 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.eversolo.com/en/products/play",
+    "quote": "Eversolo's own page for the Play, read 2026-11-24: « DAC AK4493SEQ ». « PCM 768KHz 32Bit » with « Hardware decoding of high-resolution PCM audio sources ». « Play series supports a wide range of high-fidelity music formats, including DSD, FLAC, APE, and WAV. USB audio output supports up to DSD512 and PCM 768kHz. » and a footnote « *Only supported via USB audio output. » Title: « Eversolo Play Streaming Amplifier All in One Player ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "akm",
+    "chip": "AK4493SEQ (AKM), named by the maker as « DAC AK4493SEQ ». The same converter as fiio/k7, which uses two of them, one per channel; here the page names one."
+  },
+  "_why_no_dsd_and_no_rate_per_input": "THE MAKER QUALIFIES ITS OWN HEADLINE FIGURE. « USB audio output supports up to DSD512 and PCM 768kHz » is followed by « *Only supported via USB audio output » - so DSD512 and 768 kHz describe what this device SENDS to another converter, not what its own AK4493SEQ accepts. Recording them as this device's ceilings would be reading an output as an input, which is the mistake the FiiO SR11 made unmissable. Nothing is asserted. The « PCM 768KHz 32Bit » hardware-decoding line is not tied to a named input either, so it stays out too: a figure with no subject is not a fact about an input."
+}

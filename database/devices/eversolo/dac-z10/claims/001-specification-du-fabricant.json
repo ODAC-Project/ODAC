@@ -1,0 +1,38 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.eversolo.com/en/products/dac-z10",
+    "quote": "Eversolo's own specification table for the DAC-Z10, read 2026-11-24. DAC: « Left Channel: AK4191+AK4499 », « Right Channel: AK4191+AK4499 ». « Native Support » « DSD 512 » « PCM 768kHz/32Bit ». « USB Audio In » « DSD512 Native » « PCM 768KHz/32Bit ». « Optical / Coaxial » « PCM 192KHz/24Bit » « DSD64 Dop ». « 8-Mode IIS Digital Audio Input ». Bluetooth Audio Input: « Qualcomm QCC5125 Bluetooth module, Bluetooth version: BT5.0; supports SBC/AAC Bluetooth audio protocols ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "akm",
+    "chip": "DUAL MONO: an AK4191 modulator with an AK4499 converter PER CHANNEL, as the maker's table says twice - « Left Channel: AK4191+AK4499 », « Right Channel: AK4191+AK4499 ». Four AKM parts in two roles. The third record in this catalogue on the AK4191+AK4499 pairing, after gustard/a26 and eversolo/dmp-a8, and the clearest argument yet that a chip model needs a role AND a count per part: « AKM » says nothing about whether a modulator is shared or doubled.",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "native_dsd_possible": true
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dop_possible": true
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dop_possible": true
+    }
+  },
+  "_i2s_and_bluetooth_named_without_figures": "The table lists « 8-Mode IIS Digital Audio Input » and a Bluetooth input with its codecs, and gives a rate for neither. Same gap as fiio/k7: an input this catalogue cannot record as existing without also inventing a ceiling for it. Nothing is asserted for i2s or bluetooth.",
+  "_one_row_for_two_inputs": "« Optical / Coaxial » is a single row covering both, so both are recorded from it. The source does name both, which is what source_names_subject is about."
+}
