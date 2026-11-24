@@ -1,0 +1,34 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.fiio.com/k5proESS_parameters",
+    "quote": "FiiO's own parameters page, read 2026-11-24. « Hardware solution »: « DAC: ES9038Q2M，USB: XMOS XU208 ». Rate rows: « 768kHz-32bit/DSD512（USB DAC） »; « 192kHz-24bit（COAX） »; « 96KHz-24bit（OPT） ». The page's own name is « K5Pro ». No Bluetooth hardware row, no filter row, nothing about R2R, ladder or delta-sigma.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "chip": "ES9038Q2M (ESS), XMOS XU208 as USB receiver."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000,
+      "bits": 24
+    }
+  },
+  "_le_nom_de_la_page_nest_pas_le_nom_du_modele": "The URL says k5proESS and the page calls itself « K5Pro ». FiiO sells a K5 Pro and a K5 Pro ESS, which are different products on different converters, and this page's own title does not distinguish them. The record is named for the URL, which is the only thing on the page that does. An alias is NOT written: asserting that « K5 Pro » resolves here would claim the two are one device, and nothing read says so."
+}

@@ -1,0 +1,28 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.schiit.com/products/gunnr",
+    "quote": "Schiit Audio's own page for the Gunnr, read 2026-11-24. No row labelled « Inputs »; instead « USB Playback: 16/44.1 to 32/384 supported without drivers on Windows 10/11, Mac, Linux, Android (any UAC 2 device) », « Optical Input: 16/44.1 to 24/192 » and « Mic Input: 48kHz ». Conversion: « DAC: ESS ES9018 with LM4562-based I/V and OPA1654 filter/processing stage ». No user-selectable filter or DSD row. Self-description: « Mission-Critical Gaming with Soundstage Control ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "chip": "« ESS ES9018 with LM4562-based I/V and OPA1654 filter/processing stage » - the I/V conversion and the filter stage are op-amps, so they are analogue and the ES9018 is the converter."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_le_micro_nest_pas_une_entree_de_lecture": "« Mic Input: 48kHz » sits in the same list as the playback rows. It is a capture input and this catalogue models playback only, so nothing is written from it. Worth naming because the row looks exactly like an input ceiling of 48 kHz, which would be the lowest in the base after McIntosh's MCT."
+}

@@ -1,0 +1,38 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.fiio.com/k15_parameters",
+    "quote": "FiiO's own parameters page, read 2026-11-24. « Hardware solution »: « Main control: X2000; MCU: ESP32-S3; DAC: AK4497S*2; USB decoding: XU316; Bluetooth decoding: QCC5125; AMP: MJE243G/253G discrete transistor current amplification ». « Max. supported sampling rate » rows: « USB decoding: Up to 768kHz/32bit; DSD512 (Native) »; « Coaxial input decoding: Up to 192kHz/24bit; DSD64 »; « Optical input decoding: Up to 96kHz/24bit »; « Streaming decoding: Up to 384kHz/32bit; DSD256 (DOP) »; « Local playback: Up to 384kHz/32bit; DSD256 ». The rate block is headed « Max. supported sampling rate (PEQ=OFF) ». Another row reads « Supports 10-band PEQ (No PEQ processing in line input and balanced input) ». No digital filter, oversampling or NOS row; nothing about R2R, ladder or delta-sigma.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "akm",
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "chip": "Two AK4497S (AKM), XMOS XU316 as USB receiver, QCC5125 for Bluetooth."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64"
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000,
+      "bits": 24
+    }
+  },
+  "_les_plafonds_sont_donnes_PEQ_eteint": "The rate rows are headed « Max. supported sampling rate (PEQ=OFF) ». The ceilings are therefore stated for a device whose parametric equaliser is OFF, and the maker says elsewhere on its own pages that PEQ is not applied to every path. This catalogue has no way to attach a CONDITION to a ceiling: pcm_max_hz is one number. Recorded because a user running PEQ may not get these figures, and the page is honest enough to say so in its own heading.",
+  "_deux_lignes_notees_et_sans_cle": "« Streaming decoding » and « Local playback » are rated as precisely as USB and are not written. The first is a network input the protocol-level interface vocabulary has no name for - seventh occurrence in this harvest - and the second is not an input at all but the device reading its own storage, which this catalogue does not model."
+}

@@ -1,0 +1,52 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.matrix-digi.com/product/99/MS-1",
+    "quote": "Matrix Audio's own page for the MS-1, read 2026-11-24, « Specifications » block. Digital Input - « Coaxial & Optical: PCM 16-24Bit /44.1kHz, 48kHz, 88.2kHz, 96kHz, 176.4kHz, 192kHz MQA or MQA Studio stream » and « DSD 2.82MHz, 3.07MHz(DoP) »; « IIS LVDS: PCM 16-32Bit /...768kHz », « DSD 2.82MHz ... 12.29MHz (DoP) » and « DSD 2.82MHz, 3.07MHz, 5.64MHz, 6.14MHz, 11.29MHz, 12.29MHz, 22.58MHz, 24.58MHz, 45.16MHz，49.15MHz (Native) »; « USB Audio: PCM 16-24Bit /...768kHz », « MQA 16-24Bit /...384kHz MQA or MQA Studio stream », « DSD 2.82MHz, 5.64MHz, 11.29MHz (DoP) » and « DSD ... 22.58MHz, 24.58MHz (Native) ». Converter: no spec row; the body names « dual AK4191 and AK4499 flagship D/A chipsets ». The body carries a « PCM Resampling & DSD Conversion » section - « The processing engine features adjustable PCM or DSD conversion configurations » - mentions « applied PCM filters » for the analogue input, and says the software offers « configurations such as filters, operating modes and display brightness ». Self-description: « MS-1 is Matrix Audio's brand-new flagship music streamer. »",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "akm",
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD1024",
+    "native_dsd": true,
+    "dop": true,
+    "chip": "« dual AK4191 and AK4499 flagship D/A chipsets » (AKM), named in the body text only. Note that the ND-1's body says AK4499EX and this one says AK4499 - a family, not a part."
+  },
+  "inputs": {
+    "i2s": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD1024",
+      "native_dsd_possible": true,
+      "dop_possible": true
+    },
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 24,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true,
+      "dop_possible": true
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true
+    }
+  },
+  "_la_profondeur_change_selon_lentree_et_ce_nest_pas_une_coquille": "Matrix prints « PCM 16-24Bit » on the USB row and « PCM 16-32Bit » on the IIS-LVDS row, on every model that has both, with the SAME rate list up to 768 kHz. So the proprietary I2S link takes 32 bits where USB takes 24, at identical rates. Ten pages written to one template all say it, which is what rules out a typo. inputs.bits exists precisely for this and this is the clearest set of evidence for it in the catalogue.",
+  "_les_debits_dsd_sont_donnes_en_megahertz_et_sur_DEUX_bases": "Matrix lists DSD as frequencies, not names: « 2.82MHz, 3.07MHz, 5.64MHz, 6.14MHz, 11.29MHz, 12.29MHz, 22.58MHz, 24.58MHz ». The first of each pair is a multiple of 44.1 kHz and the second of 48 kHz - 2.82/3.07, 5.64/6.14, and so on. So this maker publishes the 48 kHz-base DSD rates explicitly, which APL HiFi had only mentioned (« Both 44.1kHz and 48kHz base frequencies are accepted for DSD ») and which dsd_max cannot express at all: its values are DSD64 through DSD1024, all 44.1-based. Second maker, and the first to enumerate them. The name recorded is the 44.1-based equivalent and the megahertz stay in the quote.",
+  "_le_plafond_dsd_depend_du_transport_sur_la_meme_entree": "The USB row gives two DSD lists: one marked « (DoP) » stopping at 11.29 MHz, one marked « (Native) » going higher. So DSD arriving wrapped in PCM frames tops out two steps below DSD arriving native, THROUGH THE SAME SOCKET. inputs.dsd_max is a single value, so the native ceiling is recorded and inputs.dop_possible is left as the boolean it is. Same wound APL HiFi opened the same evening with « up to DSD128 in DoP format and up to DSD256 in NativeDSD format »: the ceiling belongs to the pair (input, transport), and the schema models the input alone.",
+  "_des_filtres_annonces_sans_un_seul_nom": "Three separate mentions and not one filter named: « adjustable PCM or DSD conversion configurations », « applied PCM filters », and a software list that includes « filters ». No device_settings entry is written. Third maker in the harvest to state that filters exist and withhold the list, after Berkeley's « multiple digital filter options » and FiiO's « Supports 8 filter settings »."
+}

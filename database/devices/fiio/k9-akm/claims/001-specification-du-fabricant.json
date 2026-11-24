@@ -1,0 +1,34 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.fiio.com/K9AKM_parameters",
+    "quote": "FiiO's own parameters page, read 2026-11-24. « Hardware Scheme »: « DAC: AK4499EX+AK4191EQ, USB decoding: XUF208, Bluetooth: QCC5124, LPF: OPA1612*2, Volume IC: NJU72315*2, AMP: THX AAA788+*2, transformer: linear transformer ». Rate rows: « 768kHz-32bit/DSD512(USB DAC) »; « 192 kHz-24bit (coaxial) »; « 96 KHz-24bit (fiber) ». No filter, oversampling or NOS row. Nothing about R2R, ladder or delta-sigma.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "akm",
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "chip": "AK4499EX + AK4191EQ (AKM), XMOS XUF208 as USB receiver, QCC5124 for Bluetooth."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000,
+      "bits": 24
+    }
+  },
+  "_la_meme_machine_en_deux_silicium": "The K9 Pro ESS and this one are the same chassis, the same amplifier, the same volume IC and the same USB receiver, differing in the converter - two ES9038PRO against an AK4499EX+AK4191EQ - and in their ceilings: 384 kHz/DSD256 against 768 kHz/DSD512. A rare natural experiment in this catalogue: everything held constant but the chip, by the maker, on two pages written to the same template. Whether the difference is the silicon or the firmware the pages do not say."
+}

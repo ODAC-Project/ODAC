@@ -1,0 +1,46 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.schiit.com/products/mimir",
+    "quote": "Schiit Audio's own page for the Mimir, read 2026-11-24. No row labelled « Inputs »; instead « USB input: Unison 384™, up to 32 bits/384kHz supported, full UAC2 compliance » and « Other inputs: Optical SPDIF, Coaxial SPDIF, AES, all up to 24/192 ». Conversion: row labelled « D/A Conversion: » reading « Schiit Mesh™, a unique combination of our time- and frequency-domain optimized digital filter and a standard delta-sigma modulator, in this case an ES9028 ». A « Forkbeard Capabilities » list includes « Mesh or NOS filter mode switching ». Self-description: « Balanced Mesh™ DAC, EQ, and Preamp ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "unknown",
+    "technology": "delta_sigma",
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "correctable": true,
+    "chip": "« a standard delta-sigma modulator, in this case an ES9028 » (ESS), with Schiit's own time- and frequency-domain optimised filter ahead of it.",
+    "device_settings": [
+      {
+        "setting": "Mesh or NOS filter mode switching",
+        "set_to": "NOS",
+        "why": "The maker offers the choice in its « Forkbeard Capabilities » list. In Mesh mode Schiit's own filter runs; in NOS it does not. Auto exists to do that work with a filter we designed and can account for, so the device's stage belongs out of the path - and NOS is the precondition `correctable` requires."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_pourquoi_family_nest_PAS_ess_sabre_ici": "The page names an ESS part and the family is deliberately left `unknown`. « Schiit Mesh™, a unique combination of our time- and frequency-domain optimized digital filter and a standard delta-sigma modulator » - the ESS chip is used AS THE MODULATOR ONLY, with Schiit's own filter on a separate DSP ahead of it. Resolving ess_sabre would import that family's defaults, which describe what an ESS chip's own interpolation and filtering do, and the maker has replaced exactly that stage. Same reasoning as the Soulution 560, whose page says « Burr-Brown devices perform D/A conversion only. Their internal upsampling and filter stages are not used. » technology is stated instead, which is the field the engine dispatches on, and the part number lives in `chip` where it informs without deciding.",
+  "_unison_384_est_un_recepteur_usb_pas_un_debit_global": "Schiit rates its own USB receiver separately from everything else: « Up to 32/384 for Unison 384 » then « Up to 24/192 for other inputs ». Unison is Schiit's in-house USB interface, and the split is the cleanest statement of the per-input principle in the catalogue - one sentence, two ceilings, named by the part responsible. It also means the device-level figure is true of one socket."
+}

@@ -1,0 +1,46 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.fiio.com/k13r2r_parameters",
+    "quote": "FiiO's own parameters page, read 2026-11-24. « Hardware solution »: « SoC: ESP32-S3, DAC: FIIO-developed R2R DAC, USB decoding: XU316, AMP: OPA1642*2+TPA6120A *2 ». « Max. supported sampling rate » rows: « USB decoding: 384kHz/32bit; DSD256 »; « Coaxial decoding: 192kHz/24bit; DSD64 »; « Optical decoding: 192kHz/24bit ». The rate block is headed « Max. supported sampling rate (PEQ=OFF) ». An « Oversampling setting » row reads « OS/NOS ». Bluetooth row: « Bluetooth receiving (5.4) », codecs « SBC/AAC/LDAC ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "r2r_ladder",
+    "technology": "r2r",
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD256",
+    "correctable": true,
+    "chip": "« FIIO-developed R2R DAC » - the maker's own ladder, no part number, with an XMOS XU316 as USB receiver.",
+    "device_settings": [
+      {
+        "setting": "Oversampling setting",
+        "set_to": "NOS",
+        "why": "« Oversampling setting: OS/NOS ». A two-position switch, stated as a specification row rather than buried in copy. In OS the device applies its own oversampling; in NOS it runs at the rate it is given. Auto exists to do that work with a filter we designed and can account for, so the device's stage belongs out of the path. This is also what makes correctable true: the field applies « only for devices doing direct DSD or NOS PCM »."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "dsd_max": "DSD256"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64"
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_les_plafonds_sont_donnes_PEQ_eteint": "The rate rows are headed « Max. supported sampling rate (PEQ=OFF) ». The ceilings are therefore stated for a device whose parametric equaliser is OFF, and the maker says elsewhere on its own pages that PEQ is not applied to every path. This catalogue has no way to attach a CONDITION to a ceiling: pcm_max_hz is one number. Recorded because a user running PEQ may not get these figures, and the page is honest enough to say so in its own heading.",
+  "_un_ladder_a_moins_cher_que_tout_ce_que_la_base_connait": "« FIIO-developed R2R DAC » in a desktop unit beside the ES9039Q2M-based K13, same chassis, same amplifier, same price class. Every other ladder in this catalogue is a high-end product - Rockna, MSB, Holo, Denafrips, Totaldac, Yggdrasil. This one and the K11 R2R are the first mass-market ladders here, and they arrive with the NOS switch that makes a correction profile possible. If per-device correction is ever going to reach a real number of listeners, it is through parts like these and not through a 20,000 EUR converter.",
+  "_loptique_a_192_et_non_96": "« Optical decoding: 192kHz/24bit », against 96 kHz on the K13, the K11 R2R, the K11 and the K17 - the same maker, the same chassis family. vocabulary/why-the-optical-default-stays-low exists because five makers rate optical at 96; here the SAME maker rates it at 192 on one model and 96 on its sibling. The default is a convention, not a property of TOSLINK, and this pair is the cleanest evidence of it in the catalogue."
+}

@@ -1,0 +1,42 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.fiio.com/k13_parameters",
+    "quote": "FiiO's own parameters page, read 2026-11-24. « Hardware solution »: « SoC: ESP32-S3, DAC: ES9039Q2M*2, USB decoding: XU316, AMP: OPA1642*2 + TPA6120A*2 ». « Max. supported sampling rate » rows: « USB decoding: 768kHz/32bit; DSD512 »; « Coaxial decoding: 192kHz/24bit; DSD64 »; « Optical decoding: 96kHz/24bit »; « Coaxial output: 96kHz/24bit (USB decoding only) ». The rate block is headed « Max. supported sampling rate (PEQ=OFF) ». A « Filter settings » row reads « Supports 8 filter settings ». Bluetooth row: « Bluetooth receiving (5.4) », codecs « SBC/LDAC ». Nothing about R2R, ladder or delta-sigma.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "chip": "Two ES9039Q2M (ESS), XMOS XU316 as USB receiver.",
+    "device_settings": [
+      {
+        "setting": "Filter settings",
+        "set_to": "unknown",
+        "why": "« Supports 8 filter settings » - a count and not one name. No value can be recorded: the setting exists, the eight options are not published, and the ES9039Q2M's own filter menu is a chip feature the maker has not described. It is the second maker in this catalogue to state a filter COUNT and withhold the list, after Berkeley's « multiple digital filter options »."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64"
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000,
+      "bits": 24
+    }
+  },
+  "_les_plafonds_sont_donnes_PEQ_eteint": "The rate rows are headed « Max. supported sampling rate (PEQ=OFF) ». The ceilings are therefore stated for a device whose parametric equaliser is OFF, and the maker says elsewhere on its own pages that PEQ is not applied to every path. This catalogue has no way to attach a CONDITION to a ceiling: pcm_max_hz is one number. Recorded because a user running PEQ may not get these figures, and the page is honest enough to say so in its own heading."
+}

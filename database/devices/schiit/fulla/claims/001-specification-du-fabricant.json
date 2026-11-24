@@ -1,0 +1,25 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.schiit.com/products/fulla",
+    "quote": "Schiit Audio's own page for the Fulla, read 2026-11-24. No row labelled « Inputs »; instead « USB Receiver: C-Media CM6635 » and « Sample Rates and Bit Depths: 16/44.1 to 24/192 supported without drivers on Windows 10, Mac, Linux, Android (UAC 2 device) ». Conversion: « DAC: ESS ES9018 with TI OPA1654-based filter stage ». No user-selectable filter or DSD row. Self-description: « DAC/AMP for Gaming (and Communications!) ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 192000,
+    "bits": 24,
+    "chip": "« ESS ES9018 with TI OPA1654-based filter stage ». The OPA1654 is an op-amp, so that filter stage is ANALOGUE - this is not the Mesh arrangement."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_ici_family_ess_sabre_EST_juste": "Unlike the Mesh models, this page does not say the ESS chip's own processing has been replaced: « ESS ES9018 with TI OPA1654-based filter stage » names the chip as the converter and an op-amp stage after it. So the family's defaults apply and ess_sabre is resolved. The contrast with the Bifrost 3, the Mimir, the Modi 5 and the Vestri - same maker, same chip on three of them, family left unknown - is the whole reason that field is decided per record and not per brand.",
+  "_un_recepteur_usb_achete_et_non_unison": "« USB Receiver: C-Media CM6635 », where the rest of the range says Unison. The ceiling follows: 24/192 against 32/384. The receiver sets what a USB input accepts, and this maker publishes both halves of that fact across its range."
+}

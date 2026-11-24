@@ -1,0 +1,36 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.schiit.com/products/bifrost-3",
+    "quote": "Schiit Audio's own page for the Bifrost 3, read 2026-11-24. « Inputs: Coaxial SPDIF, Optical SPDIF, USB ». « Input Capability »: « Up to 32/384 for Unison 384 » and « Up to 24/192 for other inputs ». Conversion: « Schiit Mesh™, with unique time- and frequency-domain optimized digital filter implemented on a SHARC DSP; ESS ES9039 used as delta-sigma modulator ». Upgradability row: « Slide-in replaceable DAC and input cards ». Self-description: « Modular Forkbeard™ Mesh™ DAC ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "unknown",
+    "technology": "delta_sigma",
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "chip": "« ESS ES9039 used as delta-sigma modulator », preceded by Schiit's own filter « implemented on a SHARC DSP » (Analog Devices). The ESS part does the modulation and nothing else: the filtering is the maker's."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_pourquoi_family_nest_PAS_ess_sabre_ici": "The page names an ESS part and the family is deliberately left `unknown`. « Schiit Mesh™, a unique combination of our time- and frequency-domain optimized digital filter and a standard delta-sigma modulator » - the ESS chip is used AS THE MODULATOR ONLY, with Schiit's own filter on a separate DSP ahead of it. Resolving ess_sabre would import that family's defaults, which describe what an ESS chip's own interpolation and filtering do, and the maker has replaced exactly that stage. Same reasoning as the Soulution 560, whose page says « Burr-Brown devices perform D/A conversion only. Their internal upsampling and filter stages are not used. » technology is stated instead, which is the field the engine dispatches on, and the part number lives in `chip` where it informs without deciding.",
+  "_unison_384_est_un_recepteur_usb_pas_un_debit_global": "Schiit rates its own USB receiver separately from everything else: « Up to 32/384 for Unison 384 » then « Up to 24/192 for other inputs ». Unison is Schiit's in-house USB interface, and the split is the cleanest statement of the per-input principle in the catalogue - one sentence, two ceilings, named by the part responsible. It also means the device-level figure is true of one socket.",
+  "_des_cartes_de_conversion_qui_se_remplacent": "« Slide-in replaceable DAC and input cards ». Fifth maker in this harvest whose inputs - and here the CONVERTER itself - are modules bought and fitted separately, after MSB, CH Precision, Wadax and Mola Mola. See vocabulary/inputs-can-be-separate-objects.json. Schiit adds a case that file does not cover: a replaceable DAC card means the conversion stage, and therefore `technology`, `chip` and `family`, are properties of a card and not of the chassis.",
+  "_aucun_debit_dsd_nulle_part": "The spec block gives PCM ceilings and says nothing about DSD, for any input. dsd_max is absent rather than « unknown »: the page does not raise the question at all, unlike the Yggdrasil page, where the maker answers it."
+}

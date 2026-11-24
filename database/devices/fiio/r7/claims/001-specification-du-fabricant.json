@@ -1,0 +1,44 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.fiio.com/r7_parameters",
+    "quote": "FiiO's own parameters page, read 2026-11-24. « Hardware solution »: « Soc: Snapdragon 660, DAC: ES9068AS, AMP: THX AAA-788+ * 2, USB: Snapdragon 660 ». Rate rows: « USB DAC: 384kHz/32bit; DSD256 (Native) »; « Local decoding: 384kHz/32bit; DSD256 (Native) »; « USB Audio：768kHz/32bit；DSD512（DoP/D2P/Native） »; « COAX IN: 192kHz/24bit »; « OPT IN: 96kHz/24bit »; « COAX OUT: 384kHz/24bit; DSD128 (DOP) »; « OPT OUT: 192kHz/24bit ». The rate row is labelled « Max sampling rates », not « Max. supported sampling rate ». A separate row reads « All to DSD » = « √ ». A « Working mode » row lists « Android mode/Pure music mode/USB DAC mode/... » and names no filter.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD256",
+    "native_dsd": true,
+    "chip": "ES9068AS (ESS). The USB interface is the Snapdragon 660 itself, which is also the SoC - the page lists the same part twice, for two jobs.",
+    "device_settings": [
+      {
+        "setting": "All to DSD",
+        "set_to": "off",
+        "why": "The row « All to DSD » is supported and optional. Left OFF: Auto's whole purpose is to choose the format and rate reaching the conversion stage, and a device-side conversion to DSD would redo that work with a resampler we did not design and cannot account for. Turn it on only for a listener who prefers it and is not using Auto."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "dsd_max": "DSD256",
+      "native_dsd_possible": true
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000,
+      "bits": 24
+    }
+  },
+  "_pcm_reconverted_to_dsd_est_un_booleen_et_ici_cest_un_REGLAGE": "A row reads « All to DSD » and the device supports it. That is pcm_reconverted_to_dsd - the field registered this afternoon on Nagra's « Every input signal is converted into DSD 256 format » - except that here it is OPTIONAL, chosen by the owner. The field is a boolean: true would say the device always does it, which is false, and false would say it never does, which is also false. So the field is ABSENT and the behaviour lives in device_settings. Third shape in one day for one question: Nagra and APL HiFi convert unconditionally (APL letting you pick the target rate), Mola Mola converts to PWM instead, and these two convert only if asked. A boolean cannot hold four devices.",
+  "_usb_dac_et_usb_audio_sont_deux_sens_opposes": "« USB DAC: 384kHz/32bit; DSD256 (Native) » is this device RECEIVING over USB. « USB Audio：768kHz/32bit；DSD512（DoP/D2P/Native） » is this device SENDING to another DAC - it is a streamer with a USB host port. The second figure is twice the first and sits two lines away in one list. Only the first is written. Any automated read that takes the larger number would give this device a USB ceiling of 768 kHz, which it does not have as an input, and the error would look like diligence."
+}

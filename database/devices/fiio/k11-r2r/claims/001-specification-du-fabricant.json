@@ -1,0 +1,42 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.fiio.com/k11r2r_parameters",
+    "quote": "FiiO's own parameters page, read 2026-11-24. « Hardware solution »: « SoC: GD32F303RE, DAC: FIIO-developed R2R DAC, USB decoding: SA9312L, AMP: SGM8262-2*2 ». « Max supported sampling rate » rows: « 384kHz-32bit/DSD256 (USB DAC) »; « 192kHz-24bit (Coaxial) »; « 96kHz-24bit (Optical) ». An « Oversampling setting » row reads « OS/NOS ». No Bluetooth row.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "r2r_ladder",
+    "technology": "r2r",
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD256",
+    "correctable": true,
+    "chip": "« FIIO-developed R2R DAC » - the maker's own ladder, no part number, with an SA9312L as USB receiver.",
+    "device_settings": [
+      {
+        "setting": "Oversampling setting",
+        "set_to": "NOS",
+        "why": "« Oversampling setting: OS/NOS », same two-position switch as the K13 R2R. In NOS the device applies no oversampling of its own, which is the precondition `correctable` requires and the reason it is true here."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "dsd_max": "DSD256"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000,
+      "bits": 24
+    }
+  }
+}

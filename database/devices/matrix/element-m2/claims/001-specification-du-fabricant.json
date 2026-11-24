@@ -1,0 +1,55 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.matrix-digi.com/product/10/element_M2",
+    "quote": "Matrix Audio's own page for the element M2, read 2026-11-24, « Specifications » block. Digital Input - « Coaxial & Optical: PCM 16-24Bit /44.1kHz ... 192kHz » and « DSD 2.8MHz (DoP) »; « IIS LVDS: PCM 16-32Bit /...768kHz », « DSD 2.8MHz, 5.6MHz, 11.2MHz (DoP) » and « DSD 2.8MHz, 5.6 MHz, 11.2 MHz, 22.4MHz (Native) »; « USB Audio: PCM 16-24Bit /...768kHz », « MQA 16-24Bit /...384kHz MQA or MQA Studio stream », « DSD 2.8MHz, 5.6MHz, 11.2MHz (DoP) » and « DSD 2.8MHz, 5.6MHz, 11.2MHz, 22.4MHz (Native) »; « HDMI ARC: PCM 16-24Bit /44.1kHz ... 192kHz ». Converter: spec row « D/A Chip » reads « ES9028PRO ». The body says « There are async mode and sync mode available on element M2. » Self-description: « element M2 music streamer is a multi-functional audio source that can play local music files or online streaming audio. »",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true,
+    "chip": "ES9028PRO (ESS), from the page's « D/A Chip » row."
+  },
+  "inputs": {
+    "i2s": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true,
+      "dop_possible": true
+    },
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 24,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true,
+      "dop_possible": true
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true
+    },
+    "hdmi": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_la_profondeur_change_selon_lentree_et_ce_nest_pas_une_coquille": "Matrix prints « PCM 16-24Bit » on the USB row and « PCM 16-32Bit » on the IIS-LVDS row, on every model that has both, with the SAME rate list up to 768 kHz. So the proprietary I2S link takes 32 bits where USB takes 24, at identical rates. Ten pages written to one template all say it, which is what rules out a typo. inputs.bits exists precisely for this and this is the clearest set of evidence for it in the catalogue.",
+  "_le_plafond_dsd_depend_du_transport_sur_la_meme_entree": "The USB row gives two DSD lists: one marked « (DoP) » stopping at 11.29 MHz, one marked « (Native) » going higher. So DSD arriving wrapped in PCM frames tops out two steps below DSD arriving native, THROUGH THE SAME SOCKET. inputs.dsd_max is a single value, so the native ceiling is recorded and inputs.dop_possible is left as the boolean it is. Same wound APL HiFi opened the same evening with « up to DSD128 in DoP format and up to DSD256 in NativeDSD format »: the ceiling belongs to the pair (input, transport), and the schema models the input alone.",
+  "_le_meme_plafond_sur_trois_puces_differentes": "The element M2 (ES9028PRO), the element X2 (ES9038PRO) and the element X2 Pure (two ES9039PRO) publish IDENTICAL ceilings on every input, to the megahertz. Three generations of ESS silicon, one set of figures. What a device accepts is set by its USB receiver, its S/PDIF receiver and its firmware - not by the converter - and this range says so three times over. Worth remembering whenever a family's defaults are taken for a device's capability."
+}

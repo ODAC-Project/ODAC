@@ -1,0 +1,37 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.fiio.com/k19_parameters",
+    "quote": "FiiO's own parameters page, read 2026-11-24. « Hardware solution »: « DAC: ES9039SPRO*2; USB: XMOS XU316; Bluetooth decoding: QCC5125; AMP: 8-way THX788+ ». Rate rows: « USB decoding: supports up to 768kHz/32bit; DSD512 (Native)；MQA »; « Coaxial input decoding: supports up to 192kHz/24bit; DSD64 »; « Optical input decoding: supports up to 96kHz/24bit ». The same block also contains « Coaxial output: supports up to 192kHz/24bit; DSD64 », « Optical fiber output: supports up to 192kHz/24bit », « HDMI decoding: supports up to 192kHz/24bit », « HDMI output: supports up to 192kHz/24bit » and « HDMI ARC decoding: supports 44.1/48kHz ». No filter, oversampling, NOS or DSD-mode row. Nothing about R2R, ladder or delta-sigma; only the chip name.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "chip": "Two ES9039SPRO (ESS), XMOS XU316 as USB receiver, QCC5125 for Bluetooth, « 8-way THX788+ » amplifier."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64"
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000,
+      "bits": 24
+    }
+  },
+  "_lhdmi_nest_PAS_ecrit_et_la_raison_est_la_lecture_elle_meme": "« HDMI decoding: supports up to 192kHz/24bit » and « HDMI ARC decoding: supports 44.1/48kHz » both appear, and the reader who collected these rows said the grouping of this part of the block « is not fully certain because the indicator legend is interleaved » - that is, it could not establish which rows are inputs and which are outputs. Only the three rows the page labels « input decoding » are written. An HDMI ceiling at 44.1/48 kHz would be the lowest in the catalogue after McIntosh's MCT and is exactly the kind of figure worth having; it is left out because a doubt about which column a number belongs to is a doubt about the number."
+}

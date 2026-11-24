@@ -1,0 +1,58 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.matrix-digi.com/product/129/ND-1",
+    "quote": "Matrix Audio's own page for the ND-1, read 2026-11-24, « Specifications » block. Digital Input - « Coaxial, optical, AES/EBU: PCM 16-24Bit /44.1kHz, 48kHz, 88.2kHz, 96kHz, 176.4kHz, 192kHz » and « DSD 2.82MHz(DoP) »; « IIS-LVDS: PCM 16-32Bit /44.1kHz, 48kHz, 88.2kHz, 96kHz, 176.4kHz, 192kHz, 352.8kHz, 384kHz, 705.6kHz, 768kHz » and « DSD 2.82MHz, 3.07MHz, 5.64MHz, 6.14MHz, 11.29MHz, 12.29MHz, 22.58MHz, 24.58MHz, 45.16MHz，49.15MHz (Native) »; « USB Audio (USB Type B & USB Type C): PCM 16-24Bit /44.1kHz、48kHz、88.2kHz、96kHz、176.4kHz、192kHz、352.8kHz、384kHz、705.6kHz、768kHz », « DSD 2.82MHz、5.64MHz、11.29MHz (DoP) » and « DSD 2.82MHz, 3.07MHz, 5.64MHz, 6.14MHz, 11.29MHz, 12.29MHz, 22.58MHz, 24.58MHz (Native) ». Converter: no spec row names it; the body text names « AK4191EQ » and a dual « AK4499EX ». The body carries a « PCM Resampling & DSD Conversion » section saying « The processing engine features adjustable PCM or DSD conversion configurations ». Self-description: « The ND-1 is the brand-new audio DAC meticulously crafted by Matrix Audio for separates Hi-Fi systems. »",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "akm",
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD1024",
+    "native_dsd": true,
+    "dop": true,
+    "chip": "AK4191EQ plus a dual AK4499EX (AKM), named in the body text and not in the specification block."
+  },
+  "inputs": {
+    "i2s": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD1024",
+      "native_dsd_possible": true
+    },
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 24,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true,
+      "dop_possible": true
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true
+    }
+  },
+  "_la_profondeur_change_selon_lentree_et_ce_nest_pas_une_coquille": "Matrix prints « PCM 16-24Bit » on the USB row and « PCM 16-32Bit » on the IIS-LVDS row, on every model that has both, with the SAME rate list up to 768 kHz. So the proprietary I2S link takes 32 bits where USB takes 24, at identical rates. Ten pages written to one template all say it, which is what rules out a typo. inputs.bits exists precisely for this and this is the clearest set of evidence for it in the catalogue.",
+  "_les_debits_dsd_sont_donnes_en_megahertz_et_sur_DEUX_bases": "Matrix lists DSD as frequencies, not names: « 2.82MHz, 3.07MHz, 5.64MHz, 6.14MHz, 11.29MHz, 12.29MHz, 22.58MHz, 24.58MHz ». The first of each pair is a multiple of 44.1 kHz and the second of 48 kHz - 2.82/3.07, 5.64/6.14, and so on. So this maker publishes the 48 kHz-base DSD rates explicitly, which APL HiFi had only mentioned (« Both 44.1kHz and 48kHz base frequencies are accepted for DSD ») and which dsd_max cannot express at all: its values are DSD64 through DSD1024, all 44.1-based. Second maker, and the first to enumerate them. The name recorded is the 44.1-based equivalent and the megahertz stay in the quote.",
+  "_le_plafond_dsd_depend_du_transport_sur_la_meme_entree": "The USB row gives two DSD lists: one marked « (DoP) » stopping at 11.29 MHz, one marked « (Native) » going higher. So DSD arriving wrapped in PCM frames tops out two steps below DSD arriving native, THROUGH THE SAME SOCKET. inputs.dsd_max is a single value, so the native ceiling is recorded and inputs.dop_possible is left as the boolean it is. Same wound APL HiFi opened the same evening with « up to DSD128 in DoP format and up to DSD256 in NativeDSD format »: the ceiling belongs to the pair (input, transport), and the schema models the input alone.",
+  "_le_plus_haut_dsd_de_toute_la_base_et_il_passe_par_une_entree_proprietaire": "« 45.16MHz，49.15MHz (Native) » on the IIS-LVDS input is DSD1024, the highest DSD ceiling in the catalogue, and it is reachable on this device ONLY through the proprietary link. USB stops at 24.58 MHz, DSD512. So the device-level dsd_max of DSD1024 is true of one input out of five, and a consumer connecting over USB cannot reach it. The strongest argument yet for reading dsd_max per input rather than per device.",
+  "_une_entree_optique_a_192_et_non_96": "Matrix rates coaxial, optical AND AES/EBU together at 192 kHz. Five makers in this catalogue rate optical at 96, which is why vocabulary/why-the-optical-default-stays-low exists; Matrix is the second today, after FiiO's own K13 R2R, to give optical the same ceiling as coaxial."
+}

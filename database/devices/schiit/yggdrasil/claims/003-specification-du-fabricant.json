@@ -1,0 +1,46 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.schiit.com/products/yggdrasil-plus",
+    "quote": "Schiit Audio's own page for the Yggdrasil +, read 2026-11-24. The page carries a separate spec block per variant. For the Yggdrasil LIM: « Inputs: Unison USB, AES/EBU XLR, RCA SPDIF, BNC SPDIF, Optical SPDIF » and « Input Capability: up to 24/192 for all inputs ». Conversion: « D/A Conversion IC: Texas Instruments DAC8812 x 4 (2 per channel, dual hardware balanced configuration) », with « proprietary Schiit time- and frequency-domain optimized digital filter implemented on Analog Devices SHARC DSP processor ». The description says « all Yggdrasils also offer non-oversampling, or NOS, mode. » An FAQ entry reads « Yggdrasil plays DSD just fine, as long as it's converted to PCM by your software player. » Modularity: « Fully modular architecture. Separate digital input board, USB input board, DSP engine board, and DAC/analog output boards. » Self-description: « The Forever DAC ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 192000,
+    "bits": 24,
+    "dsd_max": "unknown",
+    "correctable": true,
+    "device_settings": [
+      {
+        "setting": "Oversampling mode",
+        "set_to": "NOS",
+        "why": "« all Yggdrasils also offer non-oversampling, or NOS, mode. » Stated of the whole line by the maker. In NOS the SHARC filter is out of the path, which is what makes correctable true."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_ce_que_cette_revendication_ajoute": "The record already carried an import claim and a per-input claim. This is the maker's own current page, and it adds the NOS mode, the modular architecture, the DSD answer and - the point - « Input Capability: up to 24/192 for ALL inputs », including Unison USB. Every other Schiit in this batch rates Unison higher than the rest; this variant does not, and that is a fact about it rather than about the receiver.",
+  "_dsd_max_unknown_est_un_PIS_ALLER_et_il_faut_le_dire": "« Yggdrasil plays DSD just fine, as long as it's converted to PCM by your software player. » Read plainly: this device ACCEPTS NO DSD. The question was asked and answered, and the answer is « none » - which dsd_max cannot express. Its values are DSD64 through DSD1024; absent means nobody asked; « unknown » means asked and not settled. « unknown » is recorded because it makes the engine take the conservative branch and not send DSD, which is the right BEHAVIOUR, while saying something false about the evidence. The vocabulary is one word short, and the word is « none ». First device in 100 records to need it.",
+  "_un_chassis_modulaire_de_bout_en_bout": "« Separate digital input board, USB input board, DSP engine board, and DAC/analog output boards. » Not just the inputs: the DSP and the conversion stage are boards too. Sixth maker in the harvest on this pattern and the most thorough - on this device every field this catalogue holds belongs to a board rather than to the box.",
+  "_les_deux_contestations_que_cette_revendication_ouvre": "This claim disagrees with the record's import claim on two fields, and the two disagreements are of different kinds. BITS, 24 against 16: not a disagreement about the device at all. The import's 16 is the DAC8812's structure; « Input Capability: up to 24/192 for all inputs » is what the socket takes. The field had NO definition until tonight, which is how both got written; it is now defined as what the device accepts, which makes 24 the value this field wants and leaves the 16 as a true fact about the converter with nowhere to live but `chip`. CORRECTABLE, true against false: a real disagreement, and this claim is right. The import had no way to know that « all Yggdrasils also offer non-oversampling, or NOS, mode », and NOS is the precondition the field states. Both are left standing. The build lists them as contested and resolves by weight - datasheet 70 over import 15 - which is the architecture working as designed rather than an error to clean up."
+}

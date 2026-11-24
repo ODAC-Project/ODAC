@@ -1,0 +1,49 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.schiit.com/products/yggdrasil-plus",
+    "quote": "Schiit Audio's own page for the Yggdrasil +, read 2026-11-24. The page carries a separate spec block per variant. For the Yggdrasil Singular: « Inputs: 2x Unison 384™ USB, AES/EBU XLR, RCA SPDIF, BNC SPDIF, Optical SPDIF » and « Input Capability: up to 32/384 for Unison 384, up to 24/192 for other inputs ». Conversion: « D/A Conversion: Schiit Singular™ 7/6 delta-sigma modulation, Xilinx FPGA+ and high-precision discrete resistor ladder, hardware balanced configuration », with « proprietary Schiit time- and frequency-domain optimized digital filter implemented on Analog Devices SHARC DSP processor ». The description says « all Yggdrasils also offer non-oversampling, or NOS, mode. » An FAQ entry reads « Yggdrasil plays DSD just fine, as long as it's converted to PCM by your software player. » Modularity: « Fully modular architecture. Separate digital input board, USB input board, DSP engine board, and DAC/analog output boards. » Self-description: « The Forever DAC ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "r2r_ladder",
+    "technology": "r2r",
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "unknown",
+    "correctable": true,
+    "chip": "« Schiit Singular™ 7/6 delta-sigma modulation, Xilinx FPGA+ and high-precision discrete resistor ladder, hardware balanced configuration ». Three things in one row: a modulator the maker designed, an FPGA running it, and a discrete ladder doing the conversion.",
+    "device_settings": [
+      {
+        "setting": "Oversampling mode",
+        "set_to": "NOS",
+        "why": "« all Yggdrasils also offer non-oversampling, or NOS, mode. » In NOS the SHARC filter is out of the path, which makes correctable true."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_unison_384_est_un_recepteur_usb_pas_un_debit_global": "Schiit rates its own USB receiver separately from everything else: « Up to 32/384 for Unison 384 » then « Up to 24/192 for other inputs ». Unison is Schiit's in-house USB interface, and the split is the cleanest statement of the per-input principle in the catalogue - one sentence, two ceilings, named by the part responsible. It also means the device-level figure is true of one socket.",
+  "_un_modulateur_un_fpga_et_une_echelle_dans_une_seule_ligne": "« Schiit Singular™ 7/6 delta-sigma modulation, Xilinx FPGA+ and high-precision discrete resistor ladder ». technology is r2r because the CONVERSION is the discrete ladder; the delta-sigma modulation and the FPGA are what drive it. Exactly the shape Rockna made visible earlier tonight, and the reason the Nagra record's « fpga » was withdrawn: an FPGA in the signal path is not the conversion stage unless the maker says it converts.",
+  "_sept_sur_six_nest_pas_un_ordre_de_modulateur": "« 7/6 delta-sigma modulation ». Tempting to read as a 7th-order modulator, and it is two numbers separated by a slash whose meaning the page never gives. modulator_order is NOT written. Mola Mola's « 7-th order noise shaper », read tonight, is what an unambiguous statement of that field looks like.",
+  "_pourquoi_une_fiche_a_part_et_pas_une_edition": "The Yggdrasil LIM and this one share a page, a chassis, a filter and a name, and they differ in fields this catalogue HOLDS: the converter is four DAC8812 against a discrete ladder, technology is absent against r2r, and the ceilings are 24/192 everywhere against 32/384 on Unison. Rockna's Wavedream Edition and Signature became one record because what separated them - THD, SNR, a module's bit structure - is out of scope. Here the difference is in scope, so they are two records. That is the test, and it is the first time tonight it has come out the other way."
+}

@@ -1,0 +1,42 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.schiit.com/products/gungnir-2",
+    "quote": "Schiit Audio's own page for the Gungnir 2, read 2026-11-24. « Inputs: Coaxial SPDIF, Optical SPDIF, USB ». « Input Capability »: « Up to 32/384 for Unison 384 Up to 32/192 for other inputs ». Conversion: the « Conversion Type » row reads « Schiit Multiform™ », with companion rows « D/A Conversion IC: Texas Instruments DAC8812C x 4 » and « Digital Filter: proprietary Schiit time- and frequency-domain optimized digital filter implemented on Analog Devices SHARC DSP processor, running 8X oversampling ». The page's description, outside the spec rows, says the owner may « choose a true non-oversampling mode (NOS) to bypass our digital filter entirely ». Upgradability row: « Autonomy 2™ architecture with externally replaceable DAC/Analog Card and replaceable input card, plus over the air updates via Forkbeard™ ». Self-description: « Balanced Multiform™ DAC ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "unknown",
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "correctable": true,
+    "chip": "« Texas Instruments DAC8812C x 4 » with « proprietary Schiit time- and frequency-domain optimized digital filter implemented on Analog Devices SHARC DSP processor, running 8X oversampling ». The maker calls the whole arrangement « Schiit Multiform™ ».",
+    "device_settings": [
+      {
+        "setting": "Oversampling mode",
+        "set_to": "NOS",
+        "why": "« choose a true non-oversampling mode (NOS) to bypass our digital filter entirely ». The maker's own words, and the word « entirely » is what makes correctable true: in NOS the 8X oversampling stage is out of the path, which is the precondition the field requires."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 32
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 32
+    }
+  },
+  "_unison_384_est_un_recepteur_usb_pas_un_debit_global": "Schiit rates its own USB receiver separately from everything else: « Up to 32/384 for Unison 384 » then « Up to 24/192 for other inputs ». Unison is Schiit's in-house USB interface, and the split is the cleanest statement of the per-input principle in the catalogue - one sentence, two ceilings, named by the part responsible. It also means the device-level figure is true of one socket.",
+  "_trente_deux_bits_sur_du_spdif": "« Up to 32/192 for other inputs » - thirty-two bits on coaxial and optical S/PDIF, where every other record in the catalogue has 24. The Bifrost 3, the Mimir and the Modi 5, same maker, all say « up to 24/192 » for the same sockets. So this is not a house convention but a statement about this model, and it is written as given.",
+  "_technology_absente_car_DAC8812_nest_pas_nomme_pour_ce_quil_est": "« Texas Instruments DAC8812C x 4 » is a multiplying converter, which in this kind of design means a multibit ladder rather than a delta-sigma - and the page never says ladder, multibit, R2R or delta-sigma anywhere. technology is therefore ABSENT, and the consequence is stated: the cascade falls back to delta_sigma, which for a DAC8812-based stage is probably wrong. The part number is in `chip` so that a contributor who can cite TI's datasheet can settle it with evidence instead of inference."
+}

@@ -1,0 +1,39 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.fiio.com/k17_parameters",
+    "quote": "FiiO's own parameters page, read 2026-11-24. « Hardware solution »: « SoC: X2000; MCU: ESP32-S3; DAC: AK4191EX+AK4499EQ*2; USB decoding: XU316; Bluetooth decoding: QCC5125; AMP: MJE243G/253G discrete transistor current amplification headphone amplifier ». « Max. supported sampling rate » rows: « USB decoding: Up to 768kHz/32bit; DSD512 (Native) »; « Coaxial input decoding: Up to192kHz/24bit; DSD64 »; « Optical input decoding: Up to96kHz/24bit »; « Coaxial output: Up to192kHz/24bit »; « Optical output: Up to192kHz/24bit »; « Streaming decoding: Up to384kHz/32bit; DSD256 (DOP) »; « Local playback: Up to384kHz/32bit; DSD256 ». The page names no digital filter, no oversampling mode and no NOS, and says nothing about R2R, ladder or delta-sigma.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "akm",
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "chip": "AK4191EX + two AK4499EQ (AKM), with an XMOS XU316 as USB receiver and a QCC5125 for Bluetooth. The amplifier is « MJE243G/253G discrete transistor » - discrete, and it is the AMPLIFIER, not the converter."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64"
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000,
+      "bits": 24
+    }
+  },
+  "_deux_lignes_notees_et_sans_cle": "« Streaming decoding » and « Local playback » are rated as precisely as USB and are not written. The first is a network input the protocol-level interface vocabulary has no name for - seventh occurrence in this harvest - and the second is not an input at all but the device reading its own storage, which this catalogue does not model.",
+  "_les_lignes_de_SORTIE_ne_sont_pas_des_entrees": "The same block carries « Coaxial output » and « Optical output » rows with their own figures. They are outputs. Nothing from them is written: reading an output row as an input ceiling would be the easiest mistake on a FiiO parameters page, because the rows sit in one list with the input rows and are worded identically.",
+  "_le_chip_est_nomme_differemment_sur_les_deux_pages_fiio": "The parameters page says « AK4191EX+AK4499EQ*2 »; the K17's main product page says « AK4191+AK4499EX*2 ». Same two families, different suffixes, and the suffixes matter - EX and EQ are different parts. The parameters page is recorded because it is the one that exists to carry specifications. Flagged so nobody later treats the difference as a measurement."
+}

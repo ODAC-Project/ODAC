@@ -1,0 +1,33 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.fiio.com/k9proess_parameters",
+    "quote": "FiiO's own parameters page, read 2026-11-24. « Maximum supported sampling rate / Hardware solution »: « DAC: ES9038PRO*2, USB: XMOS XUF208, Bluetooth: QCC5124, LPF: OPA1612 * 2, volume IC: NJU72315 * 2, AMP: THX AAA 788+ * 2, linear transformer：THAILIN/BingZi ». Rate rows: « 384kHz-32bit/DSD256（USB DAC） »; « 192kHz-24bit (coaxial) »; « 96KHz-24bit (optical) ». No digital-filter row: the « LPF: OPA1612 * 2 » entry is a hardware list item and the page never calls it a digital filter. Nothing about R2R, ladder or delta-sigma.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD256",
+    "chip": "Two ES9038PRO (ESS), XMOS XUF208 as USB receiver, QCC5124 for Bluetooth. « LPF: OPA1612 * 2 » is the ANALOGUE low-pass stage and « volume IC: NJU72315 * 2 » the attenuator - neither is the converter."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "dsd_max": "DSD256"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000,
+      "bits": 24
+    }
+  }
+}

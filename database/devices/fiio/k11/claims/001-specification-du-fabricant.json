@@ -1,0 +1,35 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.fiio.com/k11_parameters",
+    "quote": "FiiO's own parameters page, read 2026-11-24. « Hardware solution », as four printed lines: « SoC: GD32F303RE, DAC:CS43198 », « USB decoding: SA9312L », « SPDIF decoding: MS8422N », « AMP: SGM8262-2*2 ». « Max supported sampling rate » rows (the page prints no period after « supported »): « 384kHz-32bit/DSD256  Native 16/24/32bit (USB DAC) »; « 192kHz-24bit (Coaxial) »; « 96KHz-24bit (Optical) ». No filter, oversampling or NOS row; no Bluetooth row; nothing about R2R, ladder or delta-sigma.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "cirrus",
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD256",
+    "native_dsd": true,
+    "chip": "CS43198 (Cirrus Logic), with an SA9312L as USB receiver and an MS8422N for S/PDIF - this page is unusual in naming the S/PDIF receiver separately from the USB one."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "dsd_max": "DSD256",
+      "native_dsd_possible": true
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000,
+      "bits": 24
+    }
+  }
+}

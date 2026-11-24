@@ -1,0 +1,48 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.matrix-digi.com/product/94/mini-i_Pro_4",
+    "quote": "Matrix Audio's own page for the mini-i Pro 4, read 2026-11-24, « Specifications » block. Digital Input - « Coaxial & Optical: PCM 16-24Bit /44.1kHz ... 192kHz » and « DSD 2.8MHz (DoP) »; « HDMI ARC: PCM 16-24Bit /44.1kHz ... 192kHz »; « USB Audio: PCM 16-24Bit /...768kHz », « MQA 16-24Bit /...384kHz MQA or MQA Studio stream », « DSD 2.8MHz, 5.6MHz, 11.2MHz (DoP) » and « DSD 2.8MHz, 5.6MHz, 11.2MHz, 22.4MHz (Native) ». No IIS-LVDS row. Converter: spec row « D/A Chip » reads « ES9039Q2M ». The body's USB DAC section says the device « supports various audio formats and sampling rate specs up to 768kHz PCM, DSD512 and MQA audio ». Self-description: « The all-new music streamer mini-i Pro 4 ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 768000,
+    "bits": 24,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true,
+    "chip": "ES9039Q2M (ESS), from the page's « D/A Chip » row."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 24,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true,
+      "dop_possible": true
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true
+    },
+    "hdmi": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_les_debits_dsd_sont_donnes_en_megahertz_et_sur_DEUX_bases": "Matrix lists DSD as frequencies, not names: « 2.82MHz, 3.07MHz, 5.64MHz, 6.14MHz, 11.29MHz, 12.29MHz, 22.58MHz, 24.58MHz ». The first of each pair is a multiple of 44.1 kHz and the second of 48 kHz - 2.82/3.07, 5.64/6.14, and so on. So this maker publishes the 48 kHz-base DSD rates explicitly, which APL HiFi had only mentioned (« Both 44.1kHz and 48kHz base frequencies are accepted for DSD ») and which dsd_max cannot express at all: its values are DSD64 through DSD1024, all 44.1-based. Second maker, and the first to enumerate them. The name recorded is the 44.1-based equivalent and the megahertz stay in the quote.",
+  "_le_plafond_dsd_depend_du_transport_sur_la_meme_entree": "The USB row gives two DSD lists: one marked « (DoP) » stopping at 11.29 MHz, one marked « (Native) » going higher. So DSD arriving wrapped in PCM frames tops out two steps below DSD arriving native, THROUGH THE SAME SOCKET. inputs.dsd_max is a single value, so the native ceiling is recorded and inputs.dop_possible is left as the boolean it is. Same wound APL HiFi opened the same evening with « up to DSD128 in DoP format and up to DSD256 in NativeDSD format »: the ceiling belongs to the pair (input, transport), and the schema models the input alone.",
+  "_une_contradiction_annoncee_qui_nen_est_pas_une": "The reader who collected these rows flagged the body sentence « up to 768kHz PCM, DSD512 » as conflicting with the spec block's « DSD 2.8MHz, 5.6MHz, 11.2MHz, 22.4MHz (Native) ». Checked: 22.4 MHz is 512 x 44.1 kHz, so the two statements are the SAME figure in different units and there is no conflict. Recorded because the report of a contradiction is itself worth auditing - and because reading these pages at all requires converting megahertz to DSD names, which is where an apparent disagreement comes from."
+}

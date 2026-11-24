@@ -1,0 +1,33 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.fiio.com/k7_parameters",
+    "quote": "FiiO's own parameters page, read 2026-11-24. « Hardware solution »: « DAC: AK4493S*2 , USB: XMOS XUF208 , Voume IC：NJU72315 * 2, AMP：THX AAA 788 + * 2 ». Rate rows: « PCM 384kHz-32bit/DSD256（USB DAC） »; « PCM 192kHz-24bit（COAX） »; « PCM 96KHz-24bit（OPT） ». The typo « Voume » is the page's. No filter, oversampling or NOS row.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD256"
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "dsd_max": "DSD256"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000,
+      "bits": 24
+    }
+  },
+  "_ce_que_cette_revendication_ajoute": "The record already carried a claim from the K7's main product page, which established the family and the chip and gave NO rate and NO input at all. This one is the parameters page and adds only what was missing: the device ceiling and the three inputs. family and chip are deliberately not restated - a second unsourced assertion of a fact the first claim already proves would add nothing and would make the record look twice-evidenced.",
+  "_le_meme_chip_ecrit_de_deux_facons": "The first claim quotes « AK4493SEQ » from the product page; this one quotes « AK4493S*2 » from the parameters page. Same part, two spellings by one maker, and the existing `chip` field keeps the fuller one. Same pattern as the K17, whose two pages disagree on EX against EQ - there the suffixes name different parts and the difference matters; here SEQ against S is a package or grade suffix. Neither is treated as a contradiction."
+}

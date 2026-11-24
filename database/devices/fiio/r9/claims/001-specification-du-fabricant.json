@@ -1,0 +1,48 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.fiio.com/r9_parameters",
+    "quote": "FiiO's own parameters page, read 2026-11-24. « Hardware solution »: « SoC: Qualcomm Snapdragon 660; DAC: ES9038Pro*2; Amp: 8-channel THX AAA 788+; USB decoding: XU316; Bluetooth: WCN3980 (transmission), QCC5125 (reception) ». Rate rows: « USB DAC: Supports up to 768kHz/32bit; DSD512 (Native) »; « Local decoding: Supports up to 384kHz/32bit; DSD256 (Native) »; « USB Audio: 768kHz/32bit; DSD512 (DoP/D2P/Native) »; « Coaxial IN: Supports up to 192kHz/24bit »; « Optical IN: Supports up to 96kHz/24bit »; « Coaxial out: Supports up to 384kHz/24bit; DSD128 (D2P/DOP) »; « Optical out: Supports up to 192kHz/24bit »; « HDMI IN: Supports up to 192kHz/24bit »; « HDMI OUT: Supports up to 192kHz/24bit ». A separate row reads « All to DSD » = « Supported ». No filter row.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "chip": "Two ES9038Pro (ESS), XMOS XU316 as USB receiver, WCN3980 and QCC5125 for Bluetooth out and in, on a Snapdragon 660.",
+    "device_settings": [
+      {
+        "setting": "All to DSD",
+        "set_to": "off",
+        "why": "Optional device-side conversion of everything to DSD, same row and same reasoning as the R7: left off so that the format reaching the conversion stage is the one Auto chose."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000,
+      "bits": 24
+    },
+    "hdmi": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_pcm_reconverted_to_dsd_est_un_booleen_et_ici_cest_un_REGLAGE": "A row reads « All to DSD » and the device supports it. That is pcm_reconverted_to_dsd - the field registered this afternoon on Nagra's « Every input signal is converted into DSD 256 format » - except that here it is OPTIONAL, chosen by the owner. The field is a boolean: true would say the device always does it, which is false, and false would say it never does, which is also false. So the field is ABSENT and the behaviour lives in device_settings. Third shape in one day for one question: Nagra and APL HiFi convert unconditionally (APL letting you pick the target rate), Mola Mola converts to PWM instead, and these two convert only if asked. A boolean cannot hold four devices.",
+  "_lhdmi_est_ecrit_ici_et_pas_sur_le_k19": "« HDMI IN » and « HDMI OUT » are labelled IN and OUT on this page, so the input is written. On the K19, read the same evening, the equivalent rows read « HDMI decoding » and « HDMI output » and the reader could not establish the grouping, so nothing was written there. Same maker, same template, one word of difference, and it decides whether a figure enters this database."
+}

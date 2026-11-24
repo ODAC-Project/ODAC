@@ -1,0 +1,34 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.schiit.com/products/vestri",
+    "quote": "Schiit Audio's own page for the Vestri, read 2026-11-24. No row labelled « Inputs »; instead « USB Receiver: Schiit Unison USB™ » and « Sample Rates and Bit Depths: 16/44.1 to 32/192 ». Conversion: row labelled « D/A Conversion: » reading « Schiit Mesh™, a unique combination of our time- and frequency-domain optimized digital filter and a standard delta-sigma modulator, in this case an ES9018 ». « Controls: volume, NOS, invert, and Loudness, all accessible via capacitive touch buttons under glass ». Self-description: « The Only Mesh™ Portable ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "unknown",
+    "technology": "delta_sigma",
+    "pcm_max_hz": 192000,
+    "bits": 32,
+    "correctable": true,
+    "chip": "« a standard delta-sigma modulator, in this case an ES9018 » (ESS), with Schiit's own filter ahead of it.",
+    "device_settings": [
+      {
+        "setting": "NOS",
+        "set_to": "on",
+        "why": "NOS is one of four front-panel controls - « volume, NOS, invert, and Loudness » - so the filter can be taken out of the path by touching the glass. That is the precondition `correctable` requires, and the easiest NOS switch to reach in the whole catalogue."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 192000,
+      "bits": 32
+    }
+  },
+  "_pourquoi_family_nest_PAS_ess_sabre_ici": "The page names an ESS part and the family is deliberately left `unknown`. « Schiit Mesh™, a unique combination of our time- and frequency-domain optimized digital filter and a standard delta-sigma modulator » - the ESS chip is used AS THE MODULATOR ONLY, with Schiit's own filter on a separate DSP ahead of it. Resolving ess_sabre would import that family's defaults, which describe what an ESS chip's own interpolation and filtering do, and the maker has replaced exactly that stage. Same reasoning as the Soulution 560, whose page says « Burr-Brown devices perform D/A conversion only. Their internal upsampling and filter stages are not used. » technology is stated instead, which is the field the engine dispatches on, and the part number lives in `chip` where it informs without deciding.",
+  "_un_seul_debit_pour_un_seul_recepteur": "« Sample Rates and Bit Depths: 16/44.1 to 32/192 » and one named receiver, Unison USB. No other input exists, so the device figure and the input figure are the same number for once - and the ceiling is 192 kHz, lower than every other Unison 384 device in this batch. The receiver is named Unison USB here, not Unison 384."
+}
