@@ -14,7 +14,6 @@
     "dop": true,
     "dsd_direct": false,
     "analog_filter": "simple",
-    "source": "Roon forum: « looks like no bit-perfect / native DSD… Just like Mola-Mola, or Cayin RU7 »; USB identity: Linux kernel sound/usb/quirks.c (d2636407bf8c, 2026-11-12) and sound/usb/quirks-table.h (e7c66b3e249e, 2026-11-04) - quirks.c snd_usb_interface_dsd_format_quirks(), USB_ID(0x20b1, 0x3089) /* Mola-Mola DAC */",
     "correctable": false
   },
   "notes": {},

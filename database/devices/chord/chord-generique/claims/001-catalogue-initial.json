@@ -14,7 +14,6 @@
     "dop": true,
     "dsd_direct": false,
     "analog_filter": "good",
-    "source": "Roon forum: « With Chord it is better to keep fixed 705.6k output rate » ; « passing 705.6/768k PCM to a Chord DAC bypasses the built-in WTA1 stage »",
     "correctable": false,
     "internal_bypass": {
       "format": "pcm",

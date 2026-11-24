@@ -13,7 +13,6 @@
     "dsd_max": "DSD1024",
     "native_dsd": true,
     "dop": true,
-    "source": "forum, as for Spring",
     "dsd_direct": true,
     "analog_filter": "good",
     "correctable": true,

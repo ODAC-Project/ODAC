@@ -68,7 +68,10 @@ spend effort, and one symbol cannot carry both.
 model, is admissible — but it has to say so. It is the most common error in this
 data.
 
-See [docs/CONTRIBUTING.md](docs/CONTRIBUTING.md).
+The data model — the five subjects, the field registry, the four levels, and a
+measured list of what is knowingly missing — is in
+[docs/SCHEMA.md](docs/SCHEMA.md). How to contribute is in
+[docs/CONTRIBUTING.md](docs/CONTRIBUTING.md).
 
 ## Licence
 

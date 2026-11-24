@@ -14,7 +14,6 @@
     "dop": true,
     "dsd_direct": false,
     "analog_filter": "simple",
-    "source": "Audiophile Style, thread \"HQPlayer settings for specific DACs\", the author's replies : « I recommend DSD512 output from ASDM5EC-super » for an ES9038Pro chip",
     "correctable": false,
     "chip": "ES9038Pro (ESS), with an XMOS XU208 USB interface."
   },

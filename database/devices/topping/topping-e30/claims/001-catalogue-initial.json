@@ -14,7 +14,6 @@
     "dop": true,
     "dsd_direct": true,
     "analog_filter": "simple",
-    "source": "Roon forum: mesures a DSD256 avec ASDM5ECv2 ; chip: a single AKM AK4493 (AK4493EQ) with an XMOS USB interface, per Linsoul, Apos and Headfonia listings read 2026-11-20.",
     "correctable": true,
     "chip": "A single AK4493, the AK4493EQ variant (AKM), with an XMOS USB interface."
   },

@@ -15,7 +15,6 @@
     "dsd_direct": true,
     "analog_filter": "switchable",
     "device_settings": "Filtre analogique sur 60 kHz pour la bande la plus large.",
-    "source": "Roon forum: « T+A DAC 200 doesn't even have anything else than DSD Direct, since it's DSD side is discrete implementation without any DSP » ; « with it's analog filter set to 60 kHz and also running at DSD512 » ; AS, the author's own settings : « DAC has the analog filter set to 60 kHz. And I'm using 1x=poly-sinc-gauss-long Nx=poly-sinc-gauss-hires-lp » avec ASDM7EC-super; USB identity: Linux kernel sound/usb/quirks.c (d2636407bf8c, 2026-11-12) and sound/usb/quirks-table.h (e7c66b3e249e, 2026-11-04) - quirks.c USB_ID(0x1852, 0x5034) /* T+A Dac8 */ - matches the DAC8 DSD alias of this record",
     "correctable": true,
     "chip": "The maker's own discrete DSD stage, with no DSP in the DSD path. Not a commercial converter chip, and a case where an architecture family fits without inventing anything."
   },

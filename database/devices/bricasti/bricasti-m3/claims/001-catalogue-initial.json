@@ -14,7 +14,6 @@
     "dop": true,
     "dsd_direct": true,
     "analog_filter": "good",
-    "source": "Audiophile Style, thread \"HQPlayer settings for specific DACs\", the author's replies : « It is one of the dual-DAC designs, similar to T+A, where the PCM side is based on COTS DAC chip (AD1955) and separate DSD implementation »",
     "correctable": true,
     "chip": "A dual-converter design: a commercial AD1955 on the PCM side and a separate discrete implementation for DSD, which is why its family is the discrete DSD architecture rather than a chip vendor."
   },

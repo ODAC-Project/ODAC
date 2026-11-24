@@ -14,7 +14,6 @@
     "dop": true,
     "dsd_direct": "firmware_dependent",
     "analog_filter": "simple",
-    "source": "Roon forum: « SMSL D-6 with updated firmware also works, up to DSD512 » ; reserve de l'auteur sur le mode DSD Direct des SMSL a puce 4499EX",
     "correctable": false,
     "chip": "Two AK4493 (AKM), balanced output."
   },

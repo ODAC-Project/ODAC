@@ -13,7 +13,6 @@
     "dsd_max": "DSD256",
     "native_dsd": true,
     "dop": true,
-    "source": "manual 4.2 ; Roon forum: « one Merging Hapi, so up to 384/24 and DSD256 at 8 channels »",
     "dsd_direct": true,
     "analog_filter": "simple",
     "correctable": true

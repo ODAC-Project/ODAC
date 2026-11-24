@@ -14,7 +14,6 @@
     "dsd_max": "DSD1024",
     "native_dsd": true,
     "dop": true,
-    "source": "manual 4.2 and 4.4 ; Roon forum: « it doesn't do bit-perfect DSD conversion, but instead runs some kind of PCM conversion where the digital filter is not so great » et « practically lacks analog reconstruction filter »",
     "dsd_direct": false,
     "analog_filter": "weak",
     "correctable": false,

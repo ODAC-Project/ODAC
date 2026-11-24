@@ -15,7 +15,6 @@
     "dsd_direct": true,
     "analog_filter": "simple",
     "device_settings": "Filtre de conversion sur le reglage de frequence le plus bas.",
-    "source": "Roon forum: « D300 is based on the RoHM chip… it is always direct mode, there's nothing else than direct mode… For best performance, set the conversion filter to lowest frequency setting. And use DSD256 from ASDM7ECv2 modulator if possible » ; Audiophile Style, the author: « Run it at DSD256 » for the SMSL D300. Chip: ROHM BD34301EKV, per SMSL's own manual and Linsoul, Apos, Bloom Audio and Shenzhen Audio listings read 2026-11-20.",
     "correctable": true,
     "chip": "ROHM BD34301EKV, with an XMOS XU-208 USB interface."
   },

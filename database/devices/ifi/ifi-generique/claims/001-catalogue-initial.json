@@ -14,7 +14,6 @@
     "dop": true,
     "dsd_direct": true,
     "analog_filter": "simple",
-    "source": "Roon forum: « All iFi DACs that support DSD and are using TI/BB chipset » ; « TI/BB DAC chips only support bit-perfect DSD playback »",
     "correctable": true
   },
   "notes": {},

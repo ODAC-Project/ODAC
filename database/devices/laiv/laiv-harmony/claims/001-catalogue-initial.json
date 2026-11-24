@@ -13,7 +13,6 @@
     "dsd_max": "DSD256",
     "native_dsd": true,
     "dop": true,
-    "source": "manual 4.4",
     "dsd_direct": "to_be_measured",
     "analog_filter": "simple",
     "correctable": false,

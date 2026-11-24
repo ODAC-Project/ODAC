@@ -14,7 +14,6 @@
     "dop": true,
     "dsd_direct": "to_be_measured",
     "analog_filter": "good",
-    "source": "Audiophile Style, thread \"HQPlayer settings for specific DACs\", the author's replies : « it is an R2R DAC (and thus native PCM) »",
     "correctable": false,
     "chip": "A discrete resistor ladder built by the maker, in a modular chassis."
   },

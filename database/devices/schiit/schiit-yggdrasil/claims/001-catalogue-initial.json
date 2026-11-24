@@ -15,7 +15,6 @@
     "dop": false,
     "dsd_direct": false,
     "analog_filter": "simple",
-    "source": "Audiophile Style, thread \"HQPlayer settings for specific DACs\", the author's replies : « Less is More (its a 16-bit TI DAC) » ; PCM only, 192 kHz. Chip: four TI DAC8812 16-bit converters, per 6moons and Schiit's own product page read 2026-11-20.",
     "correctable": false,
     "chip": "Four TI DAC8812, 16-bit. The maker's multibit line uses ladder parts rather than delta-sigma; the other two Yggdrasil variants use Analog Devices AD5791 and TI DAC11001, both 20-bit."
   },

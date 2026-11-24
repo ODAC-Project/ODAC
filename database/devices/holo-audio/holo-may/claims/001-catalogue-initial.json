@@ -14,7 +14,6 @@
     "dsd_max": "DSD1024",
     "native_dsd": true,
     "dop": true,
-    "source": "manual 4.2 and 4.4 ; Roon forum: « If your DAC is Holo Audio, set the PCM gain compensation to -6 dB » ; Audiophile Style: « For Holo Audio DACs, 20 bit is correct setting »",
     "dsd_direct": true,
     "analog_filter": "good",
     "correctable": true,

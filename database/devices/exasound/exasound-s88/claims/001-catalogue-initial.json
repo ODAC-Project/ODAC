@@ -14,7 +14,6 @@
     "dop": true,
     "dsd_direct": false,
     "analog_filter": "simple",
-    "source": "Roon forum: « exaSound s88… Can do 8 channels of DSD256 or stereo DSD512 » ; « Exasound can do 8 channels of DSD256 through ES9038PRO »",
     "correctable": false,
     "chip": "ES9038PRO (ESS)."
   },

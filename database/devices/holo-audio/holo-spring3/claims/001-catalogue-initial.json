@@ -13,7 +13,6 @@
     "dsd_max": "DSD1024",
     "native_dsd": true,
     "dop": true,
-    "source": "Roon forum: « works up to DSD1024 with Holo Cyan 2 / Spring 2/3 » ; measurements at DSD256 with an extended-compensation 7th-order modulator",
     "dsd_direct": true,
     "analog_filter": "good",
     "correctable": true,

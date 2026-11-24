@@ -14,7 +14,6 @@
     "dop": true,
     "dsd_direct": true,
     "analog_filter": "simple",
-    "source": "Roon forum: « Marantz HD-DAC1 used the CS4398 in DSD Direct mode »; USB identity: Linux kernel sound/usb/quirks.c (d2636407bf8c, 2026-11-12) and sound/usb/quirks-table.h (e7c66b3e249e, 2026-11-04) - quirks.c DEVICE_FLG(0x154e, 0x3005, /* Marantz HD-DAC1 */)",
     "correctable": true,
     "chip": "Cirrus Logic CS4398."
   },

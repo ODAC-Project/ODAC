@@ -15,7 +15,6 @@
     "dsd_direct": true,
     "analog_filter": "simple",
     "device_settings": "Activer le mode DSD Direct et regler le filtre DSD sur 50 kHz.",
-    "source": "Roon forum: « RME ADI-2 supports only DoP » ; « your ADI-2 running at DSD256 in DSD Direct mode and DSD filter set to 50 kHz is good choice » ; Audiophile Style: « ADI-2 always uses DoP for DSD output and can do DSD256 through DoP, since it supports 705.6/768k PCM »",
     "correctable": true,
     "modulator_order": 7,
     "technology": "delta_sigma"

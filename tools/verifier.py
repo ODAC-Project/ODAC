@@ -44,6 +44,34 @@ def find_nulls(obj, path=""):
     return out
 
 
+# --- the field registry ------------------------------------------------------
+# Every field a claim asserts must be registered in schemas/fields.json. Without
+# this, a typo invents a field, nobody notices, and the value is silently never
+# read: it is exactly how five fields came to exist that the catalogue's own list
+# did not name.
+REGISTRY = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..",
+                        "schemas", "fields.json")
+registry = {}
+if os.path.exists(REGISTRY):
+    registry = (load(REGISTRY) or {}).get("fields", {})
+else:
+    errors.append("schemas/fields.json is missing. Nothing can check that a claim "
+                  "asserts a field that exists")
+
+
+def check_field(where, name, scope):
+    key = name if scope == "device" else "inputs." + name
+    entry = registry.get(key)
+    if entry is None:
+        errors.append("%s: field %r is not in schemas/fields.json. Register it — with "
+                      "its type and what it means — or correct the spelling"
+                      % (where, key))
+        return
+    if entry.get("deprecated"):
+        warnings.append("%s: field %r is deprecated — %s"
+                        % (where, key, entry.get("description", "")[:80]))
+
+
 brands, families, ifaces = set(), set(), set()
 for name, bucket in (("brands", brands), ("chip-families", families),
                      ("interfaces", ifaces)):
@@ -126,10 +154,16 @@ for brand_dir in sorted(os.listdir(devices)) if os.path.isdir(devices) else []:
                 errors.append("%s: no submitted_by" % rel(cpath))
             if not (c.get("facts") or c.get("inputs")):
                 errors.append("%s: a claim that asserts nothing" % rel(cpath))
-            for iface in (c.get("inputs") or {}):
+            for f in (c.get("facts") or {}):
+                if not f.startswith("_"):
+                    check_field(rel(cpath), f, "device")
+            for iface, blk in (c.get("inputs") or {}).items():
                 if iface not in ifaces:
                     errors.append("%s: input %r is not in database/interfaces"
                                   % (rel(cpath), iface))
+                for f in blk:
+                    if not f.startswith("_"):
+                        check_field(rel(cpath), f, "device_input")
             fam = (c.get("facts") or {}).get("family")
             if fam and fam != "unknown" and fam not in families:
                 errors.append("%s: chip family %r is not in database/chip-families"
@@ -165,6 +199,11 @@ print("devices    : %d" % n_dev)
 print("claims     : %d" % n_claim)
 print("brands     : %d, chip families: %d, interfaces: %d"
       % (len(brands), len(families), len(ifaces)))
+used = sum(1 for e in registry.values() if e.get("used_on_records"))
+print("fields     : %d registered, %d in use, %d planned, %d deprecated"
+      % (len(registry), used,
+         sum(1 for e in registry.values() if e.get("planned")),
+         sum(1 for e in registry.values() if e.get("deprecated"))))
 for w in warnings:
     print("warning    :", w)
 for e in errors:

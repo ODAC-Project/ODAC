@@ -1,0 +1,179 @@
+{
+  "_purpose": "The registry of fields a claim may assert. Built from what the data ACTUALLY contains, then annotated — not written from memory, because a list written from memory knows only the fields its author remembers, and this catalogue has already lost five that way.",
+  "_the_rule": "EVERY FIELD A CLAIM ASSERTS MUST BE REGISTERED HERE, and tools/verifier.py refuses a claim that asserts anything else. A field registered and never used is listed with used_on_records 0 and must say why: planned, or deprecated.",
+  "_types": {
+    "integer_or_unknown": "An integer, or the string \"unknown\".",
+    "number_or_unknown": "A number, or \"unknown\".",
+    "boolean_or_unknown": "true, false, or \"unknown\".",
+    "boolean_or_reason": "true, false, or the NAME of the reason nobody knows yet — to_be_measured, firmware_dependent. Not the same as \"unknown\", which says the question was asked and closed.",
+    "enum_or_unknown": "One of a closed set, or \"unknown\"."
+  },
+  "_three_states": "Absent means nobody filled it in. \"unknown\" means the question was asked and nobody knows; a consumer then takes the conservative branch. null is forbidden: it carried both meanings and erased a chip family's bit depth.",
+  "fields": {
+    "analog_filter": {
+      "type": "enum_or_unknown",
+      "description": "Quality of the analogue stage: switchable, good, simple, weak.",
+      "used_on_records": 27,
+      "level": 3,
+      "probe_can_establish": false
+    },
+    "bits": {
+      "type": "integer_or_unknown",
+      "description": "Real depth of the conversion ladder, not of its input.",
+      "used_on_records": 6,
+      "level": 3,
+      "probe_can_establish": false
+    },
+    "chip": {
+      "type": "text",
+      "description": "What the conversion stage is, in words. Evidence for `family`, not a substitute.",
+      "used_on_records": 18,
+      "level": 3,
+      "probe_can_establish": false
+    },
+    "correctable": {
+      "type": "boolean_or_unknown",
+      "description": "Whether a per-device correction profile could ever apply.",
+      "used_on_records": 27,
+      "level": 4,
+      "probe_can_establish": false
+    },
+    "device_correction_profile": {
+      "type": "object",
+      "description": "The measured profile itself. No record has one.",
+      "used_on_records": 0,
+      "level": 4,
+      "probe_can_establish": false
+    },
+    "device_settings": {
+      "type": "list",
+      "description": "Settings to make ON THE DEVICE, with why and a source.",
+      "used_on_records": 5,
+      "level": 3,
+      "probe_can_establish": false
+    },
+    "dop": {
+      "type": "boolean",
+      "description": "Accepts DSD packed into PCM frames (DoP).",
+      "used_on_records": 27,
+      "level": 2,
+      "probe_can_establish": true
+    },
+    "dsd_direct": {
+      "type": "boolean_or_reason",
+      "description": "Does DSD reach the analogue stage without internal processing? true, false, or the NAME of the reason nobody knows yet: to_be_measured, firmware_dependent.",
+      "used_on_records": 27,
+      "level": 3,
+      "probe_can_establish": false
+    },
+    "dsd_max": {
+      "type": "enum_or_unknown",
+      "description": "Highest DSD rate accepted, named: DSD64 … DSD1024.",
+      "used_on_records": 27,
+      "level": 2,
+      "probe_can_establish": true
+    },
+    "dsd_reconverted_to_pcm": {
+      "type": "boolean_or_unknown",
+      "description": "Does the device bring DSD back to PCM internally? Decisive: sending DSD is then work thrown away.",
+      "used_on_records": 1,
+      "level": 3,
+      "probe_can_establish": false
+    },
+    "family": {
+      "type": "enum_or_unknown",
+      "description": "Chip family, a key into chip-families/. Inheritable.",
+      "used_on_records": 25,
+      "level": 3,
+      "probe_can_establish": false
+    },
+    "inputs.bits": {
+      "type": "integer_or_unknown",
+      "description": "Word width THROUGH this input. Flat across rates; see inputs.bits_above_hz.",
+      "used_on_records": 0,
+      "planned": true,
+      "level": 2,
+      "probe_can_establish": true
+    },
+    "inputs.bits_above_hz": {
+      "type": "list",
+      "description": "Depth steps above a rate, where the ceiling is not flat: a path carrying 24 bits at 44.1 kHz may carry 16 at 1.4112 MHz, and it truncates in silence.",
+      "used_on_records": 0,
+      "planned": true,
+      "level": 2,
+      "probe_can_establish": true
+    },
+    "inputs.dop_possible": {
+      "type": "boolean",
+      "description": "Whether this input carries DSD over DoP.",
+      "used_on_records": 0,
+      "planned": true,
+      "level": 2,
+      "probe_can_establish": true
+    },
+    "inputs.native_dsd_possible": {
+      "type": "boolean",
+      "description": "Whether this input carries native DSD at all. A property of the transport.",
+      "used_on_records": 0,
+      "planned": true,
+      "level": 2,
+      "probe_can_establish": true
+    },
+    "inputs.pcm_max_hz": {
+      "type": "integer_or_unknown",
+      "description": "Highest PCM rate THROUGH this input.",
+      "used_on_records": 68,
+      "level": 2,
+      "probe_can_establish": true
+    },
+    "internal_bypass": {
+      "type": "object",
+      "description": "A rate at or above which the device steps its own processing aside.",
+      "used_on_records": 1,
+      "level": 3,
+      "probe_can_establish": false
+    },
+    "modulator_order": {
+      "type": "integer",
+      "description": "Order of the device's own modulator. Usually inherited from the family.",
+      "used_on_records": 2,
+      "level": 3,
+      "probe_can_establish": false
+    },
+    "native_dsd": {
+      "type": "boolean",
+      "description": "Accepts DSD over a native path, as opposed to DoP.",
+      "used_on_records": 27,
+      "level": 2,
+      "probe_can_establish": true
+    },
+    "pcm_dsd_level_offset_db": {
+      "type": "number_or_unknown",
+      "description": "Level difference between the PCM and DSD paths. Without it, any PCM/DSD comparison is invalid.",
+      "used_on_records": 5,
+      "level": 3,
+      "probe_can_establish": false
+    },
+    "pcm_max_hz": {
+      "type": "integer_or_unknown",
+      "description": "Highest PCM rate the device accepts, in hertz.",
+      "used_on_records": 27,
+      "level": 2,
+      "probe_can_establish": true
+    },
+    "provenance": {
+      "type": "enum",
+      "description": "PLANNED, not implemented. Which inlet a fact came through — probe, maker, listener, agent — as distinct from the citation. governance.json treats it as central and no record carries it.",
+      "used_on_records": 0,
+      "planned": true,
+      "probe_can_establish": false
+    },
+    "technology": {
+      "type": "enum",
+      "description": "What the conversion stage IS: delta_sigma, r2r, discrete_dsd, fpga.",
+      "used_on_records": 1,
+      "level": 3,
+      "probe_can_establish": false
+    }
+  }
+}
