@@ -1,0 +1,26 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.luminmusic.com/lumin-d3.html",
+    "quote": "LUMIN's own page for the D3, read 2026-11-24. « Up to DSD256, 1-bit, Stereo »; « Up to 384kHz, 16-32-bit, Stereo ». The specification lists NO digital input. Digital output: BNC SPDIF « PCM 44.1kHz-192kHz, 16-24-bit » / « DSD (DoP, DSD over PCM) 2.8MHz, 1-bit » - and no USB output row. Converter: « ESS SABRE32 ES9028Pro DAC chip » (single). Processing: « DSD256 upsampling option for all files »; « PCM 384kHz upsampling option for all files »; « Upsampling and downsampling to every supported format up to DSD256/PCM384 ». NO MQA QRONO row appears on this page. Footer and legal as on the X2 page; no prohibition.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD256",
+    "chip": "« ESS SABRE32 ES9028Pro DAC chip » - one, where the T3X has two of the same part.",
+    "device_settings": [
+      {
+        "setting": "Upsampling",
+        "set_to": "off",
+        "why": "The page offers « DSD256 upsampling option for all files » and « PCM 384kHz upsampling option for all files », and « Upsampling and downsampling to every supported format up to DSD256/PCM384 ». Left OFF: Auto's whole purpose is to choose the format and rate reaching the conversion stage, and a device-side resampler would redo that work with a filter we did not design and cannot account for. Turn it on only for a listener who prefers it and is not using Auto. Same reasoning as FiiO's « All to DSD »."
+      }
+    ]
+  },
+  "_le_seul_de_la_gamme_sans_la_ligne_MQA_QRONO": "Five of the six LUMIN converters carry « MQA QRONO d2a filters available for all PCM music »; this one does not. On a range written to one template, an absent row is worth noting - and it is NOT read as « the filter is unavailable here », because an omission is not a statement. It is read as: this page does not say."
+}

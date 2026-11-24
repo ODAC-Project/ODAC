@@ -1,0 +1,57 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.luminmusic.com/lumin-p2.html",
+    "quote": "LUMIN's own page for the P2, read 2026-11-24. Network playback: « Up to DSD512 »; « Up to 384 kHz, 16-32-bit, Stereo ». Digital INPUTS: « USB » « DoP 128 support » / « PCM 44.1-384 kHz, 16 / 32-bit, Stereo »; « AES/OPTICAL/SPDIF: » « PCM 44.1 kHz-192 kHz, 16-24-bit » / « DSD64 (DoP64, DSD over PCM) »; « HDMI x3: » « PCM 2.0 Audio support ». Digital outputs: USB « Native DSD512 support » / « PCM 44.1-384 kHz, 16-32-bit, Stereo »; BNC SPDIF « PCM 44.1 kHz-192 kHz, 16-24-bit » / « DSD64 (DoP64, DSD over PCM) »; HDMI x1 (passthrough/ARC) « PCM 2.0 Audio support ». Converter: « Dual ESS SABRE32 ES9038Pro DAC chips ». Processing: « DSD256 upsampling option for all files »; « PCM 384kHz upsampling option for all files »; « more flexible upsampling options for every supported format »; « MQA QRONO d2a filters available for all PCM music (excluding via AirPlay) ». Footer and legal as on the X2 page; no prohibition.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "dop": true,
+    "chip": "« Dual ESS SABRE32 ES9038Pro DAC chips ».",
+    "device_settings": [
+      {
+        "setting": "Upsampling",
+        "set_to": "off",
+        "why": "The page offers « DSD256 upsampling option for all files » and « PCM 384kHz upsampling option for all files », and « more flexible upsampling options for every supported format ». Left OFF: Auto's whole purpose is to choose the format and rate reaching the conversion stage, and a device-side resampler would redo that work with a filter we did not design and cannot account for. Turn it on only for a listener who prefers it and is not using Auto. Same reasoning as FiiO's « All to DSD »."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "dsd_max": "DSD128",
+      "dop_possible": true
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true
+    },
+    "hdmi": {}
+  },
+  "_les_filtres_MQA_QRONO_sont_nommes_et_conditionnels": "« MQA QRONO d2a filters available for all PCM music (excluding via AirPlay) ». A NAMED filter - QRONO d2a - offered for all PCM, not only for MQA material, and withdrawn on one transport. No device_settings entry is written: the page never says how to select it or what it does to the signal, and a filter whose effect is undocumented cannot be recommended. It is the sixteenth filter name collected in two days and the first whose availability depends on which protocol the music arrived over.",
+  "_lusb_entre_en_DoP128_et_sort_en_native_DSD512": "« USB » input: « DoP 128 support ». « USB » output: « Native DSD512 support ». The same connector type, opposite directions, a factor of four and a different transport. inputs.dsd_max is DSD128 and inputs.dop_possible is true, with no native option stated for the input at all - so a listener may send this device DSD128 wrapped in PCM frames while the device itself can send DSD512 natively onward. The device-level dsd_max of DSD512 is the NETWORK figure and is true of no input.",
+  "_un_bloc_hdmi_vide_et_pourquoi_il_est_quand_meme_ecrit": "« HDMI x3: PCM 2.0 Audio support » - three fitted HDMI inputs, and the only thing said about them is that they carry two-channel PCM. No rate, no depth. The hdmi block is written EMPTY rather than omitted, which is the one place in this catalogue where an empty block earns its keep: it records that the socket exists and is rated nowhere, which an absent block cannot distinguish from a device that has no HDMI at all. Three of the five input types on this device have a figure and two do not.",
+  "_seize_bits_OU_trente_deux_et_rien_entre": "« PCM 44.1-384 kHz, 16 / 32-bit, Stereo » on the USB input - a slash, not a range, where the Chord Hugo 2 writes « 16bit to 32bit ». Read literally it says 16 or 32 and not 24, which would be unusual. 32 is recorded as the ceiling and the oddity is kept in the quote; inputs.bits cannot hold a set of permitted values any more than it could hold Chord's range."
+}

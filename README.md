@@ -121,8 +121,8 @@ database — not only Tune.
 
 ## Where it stands
 
-128 devices — 25 converters and the first network player — 307 brands,
-9 chip families, 13 interfaces, 151 claims, 14 open doubts and 3 resolved. Every device record
+134 devices — 25 converters and the first network player — 308 brands,
+9 chip families, 13 interfaces, 157 claims, 14 open doubts and 3 resolved. Every device record
 carries a `kind`, so the first network player enters without reopening the other
 twenty-five. Seventeen records are complete on what the device accepts;
 **none** on what it does inside. The database is seeded from the Tune Smart Upsampler

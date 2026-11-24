@@ -1,0 +1,28 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.luminmusic.com/lumin-x2.html",
+    "quote": "LUMIN's own page for the X2, read 2026-11-24. « Up to DSD512 22.6MHz, 1-bit »; « Up to 768kHz, 16-32-bit, Stereo ». The specification lists NO digital input: only « Ethernet RJ45 network 1000Base-T » and « USB storage, flash drive, USB hard disk ». Digital OUTPUTS: USB « Native DSD512 support » / « PCM 44.1-768kHz, 16-32-bit, Stereo »; BNC SPDIF « PCM 44.1kHz-192kHz, 16-24-bit » / « DSD (DoP, DSD over PCM) 2.8MHz, 1-bit ». Converter: « LUMIN Discrete DAC » and « Custom new dual LUMIN Discrete DAC ». Processing: « DSD256 upsampling option for all files »; « PCM 384kHz upsampling option for all files »; « Every calculation and filter tailored specifically for X2 »; « MQA QRONO d2a filters available for all PCM music (excluding via AirPlay) ». The footer reads « (c) 2026 Pixel Magic Systems Ltd. All Rights Reserved. » and « Specifications subject to change without notice. »; the only legal link is a privacy policy, which was not read, and no page read carries a prohibition.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "unknown",
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "chip": "No part number: « Custom new dual LUMIN Discrete DAC ». Discrete and the maker's own, with no statement of the modulation - the same wording problem as Playback Designs, and `technology` has no value for it.",
+    "device_settings": [
+      {
+        "setting": "Upsampling",
+        "set_to": "off",
+        "why": "The page offers « DSD256 upsampling option for all files » and « PCM 384kHz upsampling option for all files », and « Every calculation and filter tailored specifically for X2 ». Left OFF: Auto's whole purpose is to choose the format and rate reaching the conversion stage, and a device-side resampler would redo that work with a filter we did not design and cannot account for. Turn it on only for a listener who prefers it and is not using Auto. Same reasoning as FiiO's « All to DSD »."
+      }
+    ]
+  },
+  "_les_filtres_MQA_QRONO_sont_nommes_et_conditionnels": "« MQA QRONO d2a filters available for all PCM music (excluding via AirPlay) ». A NAMED filter - QRONO d2a - offered for all PCM, not only for MQA material, and withdrawn on one transport. No device_settings entry is written: the page never says how to select it or what it does to the signal, and a filter whose effect is undocumented cannot be recommended. It is the sixteenth filter name collected in two days and the first whose availability depends on which protocol the music arrived over.",
+  "_un_convertisseur_SANS_entree_numerique": "The X2 converts - it has a discrete DAC and analogue outputs - and its specification lists no digital input at all: music reaches it over Ethernet or from USB storage. So no inputs block, and the 768 kHz figure describes what the device will PLAY, not what a cable may deliver. Three of the six LUMIN converters are built this way (X2, T3X, D3) and three are not (S2, P2, P1 Mini). A catalogue organised around input ceilings has nothing to say about half this maker's range, and the devices are not the poorer for it - they are simply not fed that way.",
+  "_ses_sorties_numeriques_sont_mieux_notees_que_la_plupart_des_entrees_de_la_base": "« USB: Native DSD512 / PCM 44.1-768kHz, 16-32-bit » and « BNC SPDIF: PCM 44.1kHz-192kHz, 16-24-bit / DSD 2.8MHz ». Rated per socket, with transport named - better documented than many records' inputs. The schema has no `outputs`, so none of it is written. Worth marking: this device's job in a chain may be to FEED another converter in this catalogue, and the figures that would say what it can send are exactly the ones there is no field for."
+}

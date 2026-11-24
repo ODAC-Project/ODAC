@@ -21,14 +21,14 @@
     "bits": {
       "type": "integer_or_unknown",
       "description": "Real depth of the conversion ladder, not of its input.",
-      "used_on_records": 60,
+      "used_on_records": 66,
       "level": 3,
       "probe_can_establish": false
     },
     "chip": {
       "type": "text",
       "description": "What the conversion stage is, in words. Evidence for `family`, not a substitute.",
-      "used_on_records": 115,
+      "used_on_records": 121,
       "level": 3,
       "probe_can_establish": false
     },
@@ -49,14 +49,14 @@
     "device_settings": {
       "type": "list",
       "description": "Settings to make ON THE DEVICE, with why and a source.",
-      "used_on_records": 25,
+      "used_on_records": 31,
       "level": 3,
       "probe_can_establish": false
     },
     "dop": {
       "type": "boolean",
       "description": "Accepts DSD packed into PCM frames (DoP).",
-      "used_on_records": 59,
+      "used_on_records": 62,
       "level": 2,
       "probe_can_establish": true
     },
@@ -70,7 +70,7 @@
     "dsd_max": {
       "type": "enum_or_unknown",
       "description": "Highest DSD rate accepted, named: DSD64 … DSD1024.",
-      "used_on_records": 106,
+      "used_on_records": 112,
       "level": 2,
       "probe_can_establish": true
     },
@@ -84,14 +84,14 @@
     "family": {
       "type": "enum_or_unknown",
       "description": "Chip family, a key into chip-families/. Inheritable.",
-      "used_on_records": 117,
+      "used_on_records": 123,
       "level": 3,
       "probe_can_establish": false
     },
     "inputs.bits": {
       "type": "integer_or_unknown",
       "description": "Word width THROUGH this input. Flat across rates; see inputs.bits_above_hz.",
-      "used_on_records": 232,
+      "used_on_records": 241,
       "level": 2,
       "probe_can_establish": true,
       "_in_use_since": "2026-11-24, with the first record of the population pass: eversolo/dmp-a8, from the maker's own specification table."
@@ -107,7 +107,7 @@
     "inputs.dop_possible": {
       "type": "boolean",
       "description": "Whether this input carries DSD over DoP.",
-      "used_on_records": 103,
+      "used_on_records": 112,
       "level": 2,
       "probe_can_establish": true,
       "_in_use_since": "2026-11-24, with the first record of the population pass: eversolo/dmp-a8, from the maker's own specification table."
@@ -123,7 +123,7 @@
     "inputs.pcm_max_hz": {
       "type": "integer_or_unknown",
       "description": "Highest PCM rate THROUGH this input.",
-      "used_on_records": 313,
+      "used_on_records": 322,
       "level": 2,
       "probe_can_establish": true
     },
@@ -158,7 +158,7 @@
     "pcm_max_hz": {
       "type": "integer_or_unknown",
       "description": "Highest PCM rate the device accepts, in hertz.",
-      "used_on_records": 118,
+      "used_on_records": 124,
       "level": 2,
       "probe_can_establish": true
     },
@@ -212,7 +212,7 @@
     "inputs.dsd_max": {
       "type": "enum_or_unknown",
       "description": "Highest DSD rate THROUGH this input. Registered 2026-11-24 on three makers who state it per input and whom the schema could not hold: Soulution gives \"1 bit/5.64 MHz\" on USB and Network and NOTHING on AES, coaxial and optical; MSB gives 8xDSD on Pro USB, 4xDSD on the Renderer, \"1xDSD via DoP\" on S/PDIF and AES; Ferrum gives DoP 256 on USB and I2S against DoP 64 on the other four. Before this field the whole of that collapsed into one device-level dsd_max plus a boolean dop_possible, which says an input carries DSD but not how much - and the figure a consumer needs is exactly how much.",
-      "used_on_records": 88,
+      "used_on_records": 97,
       "level": 2,
       "probe_can_establish": true
     },

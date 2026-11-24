@@ -1,0 +1,27 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.luminmusic.com/lumin-t3x.html",
+    "quote": "LUMIN's own page for the T3X, read 2026-11-24. « Up to DSD512 22.6MHz, 1-bit »; « Up to 384kHz, 16-32-bit, Stereo ». The specification lists NO digital input. Digital outputs: USB « Native DSD512 support » / « PCM 44.1-384kHz, 16-32-bit, Stereo »; BNC SPDIF « PCM 44.1kHz-192kHz, 16-24-bit » / « DSD (DoP, DSD over PCM) 2.8MHz, 1-bit ». Converter: « Dual ESS SABRE32 ES9028Pro DAC chips ». Processing: « DSD256 upsampling option for all files »; « PCM 384kHz upsampling option for all files »; « Upsampling and downsampling to every supported format up to DSD256/PCM384 »; « MQA QRONO d2a filters available for all PCM music (excluding via AirPlay) ». Footer and legal as on the X2 page; no prohibition.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "chip": "« Dual ESS SABRE32 ES9028Pro DAC chips ».",
+    "device_settings": [
+      {
+        "setting": "Upsampling",
+        "set_to": "off",
+        "why": "The page offers « DSD256 upsampling option for all files » and « PCM 384kHz upsampling option for all files », and « Upsampling and downsampling to every supported format up to DSD256/PCM384 ». Left OFF: Auto's whole purpose is to choose the format and rate reaching the conversion stage, and a device-side resampler would redo that work with a filter we did not design and cannot account for. Turn it on only for a listener who prefers it and is not using Auto. Same reasoning as FiiO's « All to DSD »."
+      }
+    ]
+  },
+  "_les_filtres_MQA_QRONO_sont_nommes_et_conditionnels": "« MQA QRONO d2a filters available for all PCM music (excluding via AirPlay) ». A NAMED filter - QRONO d2a - offered for all PCM, not only for MQA material, and withdrawn on one transport. No device_settings entry is written: the page never says how to select it or what it does to the signal, and a filter whose effect is undocumented cannot be recommended. It is the sixteenth filter name collected in two days and the first whose availability depends on which protocol the music arrived over.",
+  "_un_reechantillonneur_qui_descend_aussi": "« Upsampling AND DOWNSAMPLING to every supported format up to DSD256/PCM384 ». The only device in 134 records whose published processing includes going DOWN. For an engine that matters: a device able to downsample will accept a rate it cannot convert natively and quietly reduce it, so a successful connection at 384 kHz is not proof that 384 kHz reached the conversion stage. No field can express it."
+}
