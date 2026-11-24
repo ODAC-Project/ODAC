@@ -1,0 +1,52 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.totaldac.com/D1-sublime-en.htm",
+    "quote": "Totaldac's own page for the d1-sublime, read 2026-11-24: « -192KHz asynchronous Xmos USB, 192KHz coax RCA, 192KHz AES-EBU, 96KHz optical, selected from a remote control. »; « -44.1KHz, 48KHz, 88.2KHz, 96KHz, 176.4KHz and 192KHz, 16 to 24 bit formats supported. »; « -as an option, DSD (DoP standard) supported on coax, AES-EBU and USB inputs. »; « -R2R DAC technology using 600 pieces of 0.01% VAR Bulk Metal Foil resistors Vishay Foil Resistors. »; « The R2R ladder resistors are still the famous naked Vishay foil. »; « -non-oversampling DAC compensation filter activated or disactivated by remote control. »; « -class A discrete transistor output stage. »; « -embedded custom clock with anti-jitter FIFO memory. »",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "r2r_ladder",
+    "technology": "r2r",
+    "pcm_max_hz": 192000,
+    "chip": "No converter chip: « R2R DAC technology using 600 pieces of 0.01% VAR Bulk Metal Foil resistors Vishay Foil Resistors », « the famous naked Vishay foil ». The maker counts its resistors and names their tolerance and their supplier, which is more than any chip datasheet in this catalogue says about its own silicon - and still gives no ladder bit depth, the field that is known for 7 records of 61.",
+    "device_settings": [
+      {
+        "name": "Non-oversampling DAC compensation filter",
+        "values": [
+          "activated",
+          "disactivated"
+        ],
+        "control": "remote control",
+        "why_it_matters": "A filter the listener can switch off. Second such setting in this catalogue after RME's five DA filters, and the second argument that internal_bypass - which assumes a RATE threshold - is modelled for the rarer shape."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dop_possible": true
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dop_possible": true
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dop_possible": true
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000,
+      "bits": 24
+    }
+  },
+  "_a_ceiling_that_runs_the_other_way": "192 kHz on USB, where every other high-rate record here reaches 384, 768 or 1536. A non-oversampling ladder has no reason to chase rates, and this maker stops at 192 on all four inputs but optical. The catalogue's conservative optical default holds again - FIFTH maker to rate optical at 96 - but the interesting number is the one that does NOT rise.",
+  "_dsd_is_an_option_not_a_capability": "« as an option, DSD (DoP standard) supported on coax, AES-EBU and USB inputs » - so DSD support is a FACTORY OPTION, and two units of this model may differ. dsd_max is not asserted: the page gives no DSD rate at all, and dop_possible is recorded on the three named inputs because that is what the sentence says, with the option caveat written here. Third device in this catalogue whose capability depends on how the unit was built, after msb/diamond's plug-in cards and merging/hapi's fitted card.",
+  "_the_filter_sentence_read_carefully": "« non-oversampling DAC compensation filter » is NOT the same as a switchable NOS mode. It reads as a compensation filter FOR a non-oversampling DAC - correcting the droop a NOS ladder produces - which can be turned off. So the device is presumably non-oversampling always, and what switches is the correction. The page never says « NOS mode » and never says what the filter does to the signal. dsd_direct and internal_bypass are not inferred from it."
+}
