@@ -1,0 +1,33 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://weiss.ch/products/highend-hifi/dac204-mk2/",
+    "quote": "Weiss Engineering's own page for the DAC204-MK2, read 2026-11-24. « Digital Inputs The DAC204 has a total of three digital stereo inputs: USB Two AES/EBU or S/PDIF on Toslink or RCA connectors. Accepted formats: PCM 44.1kHz up to 384 kHz, DSD 64x / 128x. » « The MK2 version features a newly upgraded DAC board with an ES9028PRO chip and a near-zero-ohm output stage ». « The unit can also convert DSD audio to PCM and offers a digital output in AES/EBU format. » « An Input Selector switch, to select the active input (USB, Toslink, or RCA). »",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "chip": "ES9028PRO (ESS) - but SCOPED TO AN EDITION, in the maker's own words: « The MK2 version features a newly upgraded DAC board with an ES9028PRO chip ». The page says nothing about what the pre-MK2 DAC204 used, so this chip is a fact about the MK2 and not about every unit sold under the name.",
+    "pcm_max_hz": 384000,
+    "dsd_max": "DSD128"
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 384000
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 384000
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 384000
+    }
+  },
+  "_one_accepted_formats_line_for_all_inputs": "« Accepted formats: PCM 44.1kHz up to 384 kHz, DSD 64x / 128x » is stated once, for the three digital inputs as a group, so each gets the same ceiling. Unusual: most makers rate optical far lower than USB, and Weiss does not. Recorded as the source states it rather than adjusted to what other devices do. The two switchable inputs are « Two AES/EBU or S/PDIF on Toslink or RCA », so the same sockets serve as AES/EBU or S/PDIF - which is why aes_ebu, spdif_optical and spdif_coax all appear.",
+  "_the_sentence_i_did_not_turn_into_a_fact": "« The unit can also convert DSD audio to PCM and offers a digital output in AES/EBU format. » THIS ALMOST BECAME dsd_reconverted_to_pcm: true, which would have been the first time a maker handed this catalogue its most decisive level-3 field directly. It is not asserted, because the sentence does not say what the field asks. dsd_reconverted_to_pcm means « does the device undo our work before converting to analogue ». That sentence pairs the DSD-to-PCM conversion with « offers a digital output in AES/EBU format », which reads at least as plausibly as a transcoding feature FOR THAT OUTPUT. The product-comparison line « the DAC204-MK2 has a USB input and can convert DSD to PCM audio » is equally ambiguous. A field that decides whether a consumer sends DSD at all cannot rest on a sentence that can be read two ways."
+}

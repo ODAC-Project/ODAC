@@ -49,7 +49,7 @@ converter as though they were one device — they share a USB identity, which is
 why they were listed together at all.
 
 There is no range level between brand and model, and that is measured rather than
-forgotten: of the 34 records, one brand has two or more models on the same
+forgotten: of the 36 records, one brand has two or more models on the same
 silicon, and its maker does not name them as a range. A level with no occupant is
 a mechanism that cannot be wrong because nothing exercises it. The rule for
 creating one — same silicon **and** the maker names the grouping — is decided and

@@ -28,7 +28,7 @@
     "chip": {
       "type": "text",
       "description": "What the conversion stage is, in words. Evidence for `family`, not a substitute.",
-      "used_on_records": 27,
+      "used_on_records": 28,
       "level": 3,
       "probe_can_establish": false
     },
@@ -70,7 +70,7 @@
     "dsd_max": {
       "type": "enum_or_unknown",
       "description": "Highest DSD rate accepted, named: DSD64 … DSD1024.",
-      "used_on_records": 29,
+      "used_on_records": 30,
       "level": 2,
       "probe_can_establish": true
     },
@@ -84,7 +84,7 @@
     "family": {
       "type": "enum_or_unknown",
       "description": "Chip family, a key into chip-families/. Inheritable.",
-      "used_on_records": 32,
+      "used_on_records": 33,
       "level": 3,
       "probe_can_establish": false
     },
@@ -123,7 +123,7 @@
     "inputs.pcm_max_hz": {
       "type": "integer_or_unknown",
       "description": "Highest PCM rate THROUGH this input.",
-      "used_on_records": 82,
+      "used_on_records": 89,
       "level": 2,
       "probe_can_establish": true
     },
@@ -158,7 +158,7 @@
     "pcm_max_hz": {
       "type": "integer_or_unknown",
       "description": "Highest PCM rate the device accepts, in hertz.",
-      "used_on_records": 29,
+      "used_on_records": 31,
       "level": 2,
       "probe_can_establish": true
     },

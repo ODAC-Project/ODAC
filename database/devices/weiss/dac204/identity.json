@@ -1,0 +1,12 @@
+{
+  "id": "weiss/dac204",
+  "kind": "dac",
+  "brand": "weiss",
+  "model": "DAC204",
+  "aliases": [
+    {
+      "text": "DAC204-MK2",
+      "relation": "edition"
+    }
+  ]
+}

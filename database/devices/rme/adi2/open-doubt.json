@@ -1,0 +1,5 @@
+{
+  "raised_on": "2026-11-24",
+  "_superseded_in_part_on": "2026-11-24",
+  "_superseded_in_part": "A per-model record now exists for the device this one was mostly about: rme/adi-2-dac-fs, from RME's own page. This record keeps « ADI-2 Pro » as a `neighbour` alias - a different product with no record of its own - so it is not simply redundant. What it should become is the question: either a record for the Pro, or `superseded_by` pointing at the FS. Not decided by measurement alone, so not decided here."
+}

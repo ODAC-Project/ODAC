@@ -1,0 +1,16 @@
+{
+  "id": "rme/adi-2-dac-fs",
+  "kind": "dac",
+  "brand": "rme",
+  "model": "ADI-2 DAC FS",
+  "aliases": [
+    {
+      "text": "ADI-2 DAC",
+      "relation": "spelling"
+    },
+    {
+      "text": "ADI-2-DAC FS",
+      "relation": "spelling"
+    }
+  ]
+}

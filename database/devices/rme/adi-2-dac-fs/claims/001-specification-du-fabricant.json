@@ -1,0 +1,28 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.rme-audio.de/adi-2-dac.html",
+    "quote": "RME's own page for the ADI-2 DAC FS, read 2026-11-24. Header: « Ultra-fidelity PCM/DSD 768 kHz DA Converter ». Specs: « Internally supported sample rates: 44.1 kHz up to 768 kHz » and « Supported sample rates for external clocks: 28 kHz up to 200 kHz ». Digital Inputs: « Lock Range: 28 kHz - 200 kHz », « SPDIF coaxial 1 x RCA, according to IEC 60958 », « AES/EBU compatible (AES3-1992) », « SPDIF optical 1 x optical, according to IEC 60958 », « ADAT compatible ». Ports: « USB 2.0 », « Class Compliant Mode », « 2 x SPDIF Input ». Frequency response rows are given at 44.1, 96, 192, 384 and 768 kHz.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 768000
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000
+    }
+  },
+  "_the_192_is_derived_and_says_so": "RME DOES NOT PRINT 192 kHz FOR ITS SPDIF INPUTS. It prints « Lock Range: 28 kHz - 200 kHz » for the digital inputs, and 200 kHz is not a sample rate any source produces. The highest real rate inside that range is 192 kHz in the 48 kHz family and 176.4 in the 44.1 family, so 192000 is the ceiling - an inference from a stated range, not a figure read off the page. It is written here so that it can be contested, which is the whole point of putting evidence beside a value. Both SPDIF inputs get the same figure because the lock range is stated once, for the inputs as a group.",
+  "_no_chip_asserted": "The page names no converter chip anywhere in what was read, so `family` is absent rather than guessed. This is the device whose chip is widely discussed in reviews; none of that is the maker, and a chip filled from memory is the error this catalogue refuses most explicitly.",
+  "_filters_not_asserted": "RME's DA filter choice - including a non-oversampling setting - is the kind of level-3 fact this database exists for, and the page section read here does not state it. Not asserted. It is in the manual, which is the next thing to read for this device."
+}
