@@ -8,10 +8,6 @@
   "submitted_on": "2026-11-24",
   "facts": {
     "family": "r2r_ladder",
-    "pcm_max_hz": 768000,
-    "dsd_max": "DSD256",
-    "native_dsd": true,
-    "dop": true,
     "dsd_direct": "to_be_measured",
     "analog_filter": "good",
     "correctable": false,

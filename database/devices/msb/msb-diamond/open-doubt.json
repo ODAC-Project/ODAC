@@ -1,4 +1,13 @@
 {
   "raised_on": "2026-11-20",
-  "text": "MSB converters are MODULAR: the USB input is a plug-in card, so a given unit's ceiling depends on which module is fitted rather than on the model name. A review of the Discrete describes one with 768 kHz and DSD512 over USB while the fixed coaxial, optical and XLR inputs sit far lower. No per-input figure is recorded here because none would be true of every unit sold under this name - a third shape of the same problem, after a model that spans chips and a model that is a part."
+  "text": "MSB converters are MODULAR: the USB input is a plug-in card, so a given unit's ceiling depends on which module is fitted rather than on the model name. A review of the Discrete describes one with 768 kHz and DSD512 over USB while the fixed coaxial, optical and XLR inputs sit far lower. No per-input figure is recorded here because none would be true of every unit sold under this name - a third shape of the same problem, after a model that spans chips and a model that is a part.",
+  "device_level_withdrawn_on": "2026-11-24",
+  "device_level_resolution": "The whole of this record's evidence is one sentence - « it is an R2R DAC (and thus native PCM) » - and it names no rate, no DSD format and no transport. It carried 768 kHz and DSD256 anyway. This doubt already said no per-input figure would be true of every unit sold under this name, because the USB input is a plug-in card; the same is true of a device-level figure, which is why none is left. Nothing here needed a judgement about over-reach: the evidence rule alone disposes of it.",
+  "device_level_withdrawn": [
+    "pcm_max_hz: 768000",
+    "dsd_max: DSD256",
+    "native_dsd: true",
+    "dop: true"
+  ],
+  "device_level_kept": "family and the ladder description stay - that is what the sentence actually says. dsd_direct was already `to_be_measured`."
 }

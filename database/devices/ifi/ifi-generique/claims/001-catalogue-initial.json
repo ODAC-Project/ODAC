@@ -8,10 +8,6 @@
   "submitted_on": "2026-11-24",
   "facts": {
     "family": "ti_burr_brown",
-    "pcm_max_hz": 768000,
-    "dsd_max": "DSD512",
-    "native_dsd": true,
-    "dop": true,
     "dsd_direct": true,
     "analog_filter": "simple",
     "correctable": true
