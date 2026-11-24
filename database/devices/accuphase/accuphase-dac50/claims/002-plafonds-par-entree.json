@@ -1,0 +1,17 @@
+{
+  "source": {
+    "kind": "import",
+    "quote": "Accuphase DAC-50 specification sheet, read 2026-11-20: coaxial PCM 32 to 192 kHz, 16-24 bit; optical PCM 32 to 96 kHz, 24-bit. No USB figure and no DSD support are listed for the board itself.",
+    "read_on": "2026-11-20"
+  },
+  "submitted_by": "import",
+  "submitted_on": "2026-11-24",
+  "inputs": {
+    "spdif_coax": {
+      "pcm_max_hz": 192000
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000
+    }
+  }
+}

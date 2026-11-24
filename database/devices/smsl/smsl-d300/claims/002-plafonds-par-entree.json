@@ -1,0 +1,20 @@
+{
+  "source": {
+    "kind": "import",
+    "quote": "SMSL D300 manual and retailer tables, read 2026-11-20: USB via XMOS XU-208 at 32-bit/768 kHz; optical and coaxial at PCM 192 kHz with DoP DSD64.",
+    "read_on": "2026-11-20"
+  },
+  "submitted_by": "import",
+  "submitted_on": "2026-11-24",
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000
+    }
+  }
+}

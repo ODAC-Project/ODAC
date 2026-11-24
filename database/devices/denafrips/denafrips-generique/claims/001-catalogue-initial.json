@@ -1,0 +1,26 @@
+{
+  "source": {
+    "kind": "import",
+    "quote": "manual 4.2 and 4.4 ; Roon forum: « it doesn't do bit-perfect DSD conversion, but instead runs some kind of PCM conversion where the digital filter is not so great » et « practically lacks analog reconstruction filter »",
+    "read_on": "2026-11-20"
+  },
+  "submitted_by": "import",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "r2r_ladder",
+    "bits": 19,
+    "pcm_dsd_level_offset_db": -3.2,
+    "pcm_max_hz": 1536000,
+    "dsd_max": "DSD1024",
+    "native_dsd": true,
+    "dop": true,
+    "source": "manual 4.2 and 4.4 ; Roon forum: « it doesn't do bit-perfect DSD conversion, but instead runs some kind of PCM conversion where the digital filter is not so great » et « practically lacks analog reconstruction filter »",
+    "dsd_direct": false,
+    "analog_filter": "weak",
+    "correctable": false,
+    "dsd_reconverted_to_pcm": true,
+    "chip": "A discrete resistor ladder built by the maker, across the whole range."
+  },
+  "notes": {},
+  "_note": "Lot repris du catalogue JSON d'origine. Sa preuve est la chaîne `source` de la fiche : à éclater en preuves par champ au fur et à mesure, car une seule citation pour dix faits est le défaut connu de ce lot. `notes` porte les gloses que la fiche d'origine attachait à tel ou tel champ."
+}

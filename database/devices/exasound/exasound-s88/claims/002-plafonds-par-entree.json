@@ -1,0 +1,20 @@
+{
+  "source": {
+    "kind": "import",
+    "quote": "exaSound s88 owner's manual and Stereophile's specification sidebar, read 2026-11-20: PCM to 384 kHz / 32-bit and native DSD512 in stereo, over network and USB 2.0 audio. The coaxial and optical ceilings are NOT documented per input in those sources; the figures here are the catalogue's conservative interface defaults, carried explicitly rather than left to fall through, and they are the weakest values in this record.",
+    "read_on": "2026-11-20"
+  },
+  "submitted_by": "import",
+  "submitted_on": "2026-11-24",
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000
+    }
+  }
+}

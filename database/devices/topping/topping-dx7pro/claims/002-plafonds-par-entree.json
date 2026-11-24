@@ -1,0 +1,26 @@
+{
+  "source": {
+    "kind": "import",
+    "quote": "Topping DX7 Pro+ specifications, read 2026-11-20: USB and I2S LVDS over HDMI at 32-bit/768 kHz with native DSD to DSD512; coaxial, optical and AES/EBU at 24-bit/192 kHz with DoP to DSD64.",
+    "read_on": "2026-11-20"
+  },
+  "submitted_by": "import",
+  "submitted_on": "2026-11-24",
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000
+    },
+    "i2s": {
+      "pcm_max_hz": 768000
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000
+    }
+  }
+}

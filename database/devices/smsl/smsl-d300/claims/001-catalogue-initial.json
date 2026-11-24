@@ -1,0 +1,24 @@
+{
+  "source": {
+    "kind": "import",
+    "quote": "Roon forum: « D300 is based on the RoHM chip… it is always direct mode, there's nothing else than direct mode… For best performance, set the conversion filter to lowest frequency setting. And use DSD256 from ASDM7ECv2 modulator if possible » ; Audiophile Style, the author: « Run it at DSD256 » for the SMSL D300. Chip: ROHM BD34301EKV, per SMSL's own manual and Linsoul, Apos, Bloom Audio and Shenzhen Audio listings read 2026-11-20.",
+    "read_on": "2026-11-20"
+  },
+  "submitted_by": "import",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "rohm",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true,
+    "dsd_direct": true,
+    "analog_filter": "simple",
+    "device_settings": "Filtre de conversion sur le reglage de frequence le plus bas.",
+    "source": "Roon forum: « D300 is based on the RoHM chip… it is always direct mode, there's nothing else than direct mode… For best performance, set the conversion filter to lowest frequency setting. And use DSD256 from ASDM7ECv2 modulator if possible » ; Audiophile Style, the author: « Run it at DSD256 » for the SMSL D300. Chip: ROHM BD34301EKV, per SMSL's own manual and Linsoul, Apos, Bloom Audio and Shenzhen Audio listings read 2026-11-20.",
+    "correctable": true,
+    "chip": "ROHM BD34301EKV, with an XMOS XU-208 USB interface."
+  },
+  "notes": {},
+  "_note": "Lot repris du catalogue JSON d'origine. Sa preuve est la chaîne `source` de la fiche : à éclater en preuves par champ au fur et à mesure, car une seule citation pour dix faits est le défaut connu de ce lot. `notes` porte les gloses que la fiche d'origine attachait à tel ou tel champ."
+}

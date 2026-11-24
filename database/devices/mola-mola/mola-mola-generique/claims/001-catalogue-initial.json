@@ -1,0 +1,22 @@
+{
+  "source": {
+    "kind": "import",
+    "quote": "Roon forum: « looks like no bit-perfect / native DSD… Just like Mola-Mola, or Cayin RU7 »; USB identity: Linux kernel sound/usb/quirks.c (d2636407bf8c, 2026-11-12) and sound/usb/quirks-table.h (e7c66b3e249e, 2026-11-04) - quirks.c snd_usb_interface_dsd_format_quirks(), USB_ID(0x20b1, 0x3089) /* Mola-Mola DAC */",
+    "read_on": "2026-11-20"
+  },
+  "submitted_by": "import",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "delta_sigma_generic",
+    "pcm_max_hz": 384000,
+    "dsd_max": "DSD256",
+    "native_dsd": false,
+    "dop": true,
+    "dsd_direct": false,
+    "analog_filter": "simple",
+    "source": "Roon forum: « looks like no bit-perfect / native DSD… Just like Mola-Mola, or Cayin RU7 »; USB identity: Linux kernel sound/usb/quirks.c (d2636407bf8c, 2026-11-12) and sound/usb/quirks-table.h (e7c66b3e249e, 2026-11-04) - quirks.c snd_usb_interface_dsd_format_quirks(), USB_ID(0x20b1, 0x3089) /* Mola-Mola DAC */",
+    "correctable": false
+  },
+  "notes": {},
+  "_note": "Lot repris du catalogue JSON d'origine. Sa preuve est la chaîne `source` de la fiche : à éclater en preuves par champ au fur et à mesure, car une seule citation pour dix faits est le défaut connu de ce lot. `notes` porte les gloses que la fiche d'origine attachait à tel ou tel champ."
+}

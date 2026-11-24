@@ -1,0 +1,23 @@
+{
+  "source": {
+    "kind": "import",
+    "quote": "T+A specification sheet for the DAC 200, read 2026-11-20: USB device mode 44.1 to 768 kSps and up to DSD1024; AES/EBU 32 to 192 kHz, 16-24 bit; two coaxial and two optical S/PDIF at 32 to 192 kHz, 16-24 bit, DoP DSD64; BNC 32 to 192 kHz.",
+    "read_on": "2026-11-20"
+  },
+  "submitted_by": "import",
+  "submitted_on": "2026-11-24",
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000
+    }
+  }
+}

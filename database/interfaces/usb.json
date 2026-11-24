@@ -1,0 +1,15 @@
+{
+  "id": "usb",
+  "name": "USB",
+  "native_dsd_possible": true,
+  "dop_possible": true,
+  "reports_buffer_occupancy": "not_applicable",
+  "policy": {
+    "pcm_max_hz": "unknown",
+    "bits": "unknown",
+    "bits_above_hz": "unknown",
+    "_this_is_a_policy": "Ce qu'il faut supposer quand l'appareil n'a rien dit, pas une mesure. Une fiche qui connaît son vrai chiffre l'emporte.",
+    "_bits_above_hz": "\"unknown\" rather than absent, and the difference is deliberate. PGGB's DAC-settings guide, read 2026-11-23, states that at 32fS a USB driver may limit playback to 16 bits. That is somebody else's claim about hardware this catalogue has not identified, so it is not recorded as a figure - recording it would make the engine assert a truncation at a rate nobody here has checked, and a wrong record is worse than no record. What it does earn is this field being a live question instead of silence. The bench item is one sweep per driver: ask for 24 bits at 1.4112 MHz and read back the word width the device actually receives."
+  },
+  "note": "USB Audio Class 2 imposes no ceiling the devices here would meet; what limits a USB input is the device and its firmware, so this interface asserts nothing and the device record decides. This is the input Tune will meet almost always, a server being a computer."
+}

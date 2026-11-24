@@ -1,0 +1,23 @@
+{
+  "name": "Texas Instruments / Burr-Brown",
+  "technology": "delta_sigma",
+  "switching_elements": "multi",
+  "modulator_order": 7,
+  "pcm_dsd_level_offset_db": "unknown",
+  "offset_uncertain": true,
+  "bits": "unknown",
+  "shaper_linearization": false,
+  "dsd_direct": true,
+  "dsd_reconverted_to_pcm": false,
+  "_note": "The manual defers to the datasheet: depends on the selected AFIR. Do not guess. \"TI/BB DAC chips only support bit-perfect DSD playback.\"",
+  "_dsd_reconverted_to_pcm": "\"TI/BB DAC chips only support bit-perfect DSD playback.\"",
+  "evidence_markers": [
+    "TI/BB",
+    "Burr-Brown",
+    "Burr Brown",
+    "Texas Instruments",
+    "PCM17",
+    "PCM 17"
+  ],
+  "id": "ti_burr_brown"
+}

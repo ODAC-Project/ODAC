@@ -1,0 +1,22 @@
+{
+  "source": {
+    "kind": "import",
+    "quote": "Fallback entry, not a measured device. Chip-level facts only, from manual 4.5 and the Roon forum: ESS output stages are never bit-exact, in PCM or DSD, and the author recommends fifth-order modulation before the ES9039.",
+    "read_on": "2026-11-20"
+  },
+  "submitted_by": "import",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true,
+    "dsd_direct": false,
+    "analog_filter": "simple",
+    "correctable": false,
+    "source": "Fallback entry, not a measured device. Chip-level facts only, from manual 4.5 and the Roon forum: ESS output stages are never bit-exact, in PCM or DSD, and the author recommends fifth-order modulation before the ES9039."
+  },
+  "notes": {},
+  "_note": "Lot repris du catalogue JSON d'origine. Sa preuve est la chaîne `source` de la fiche : à éclater en preuves par champ au fur et à mesure, car une seule citation pour dix faits est le défaut connu de ce lot. `notes` porte les gloses que la fiche d'origine attachait à tel ou tel champ."
+}

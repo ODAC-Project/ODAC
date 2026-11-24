@@ -1,0 +1,103 @@
+{
+  "_purpose": "A single label for what a converter will DO to what it is sent, and by which format it can be got round. It exists for one job: to ask a listener who does not know their model a question they can answer. Today they are offered the chip families, and whether a converter is AKM or ROHM is not something a manual makes obvious; whether it is a ladder, a delta-sigma, a pure-DSD path or a PCM-only box is.",
+  "_not_an_architecture": "READ THIS BEFORE THE NAMES MISLEAD YOU. These are not four architectures. The labels are architecture words and the definitions are PATH words: \"NOS / R2R\" means there is no oversampling to fight, or a filter that can be switched off - which is why an FPGA converter with a switchable stage belongs there and a resistor ladder with a DSD path does not. The axis is: how much of the device's own processing can be avoided, and with what. That is the only axis an upsampler needs.",
+  "_derived_never_stored": "NO RECORD CARRIES THIS FIELD, and none should. It is computed from fields already here - dsd_direct, dsd_reconverted_to_pcm, native_dsd, dop, internal_bypass, technology - so it cannot disagree with them and cannot be filled in by hand with a guess. A stored class would be a fifth place to get the same fact wrong. The engine writes it onto the resolved device and reads it nowhere: it is a label for a panel, not an input to a decision, and nothing in the cascade branches on it.",
+  "_before_the_input": "The class is resolved from the DEVICE, before the input narrows anything, because it answers a question about the listener's hardware and not about their cable. A converter with a direct DSD path still has one when it is reached over AirPlay; the transport is what cannot carry DSD, and the engine refuses the format for that reason, separately. So a resolved device may read dac_class direct_dsd_path beside native_dsd false: the first is the part, the second is the part through that input, and they are not in conflict.",
+  "_order_is_data": "The rules below are ORDERED and the order is the whole content of the classification, so it lives here rather than in code. The first rule that matches wins. The second rule - a direct DSD path outranks the architecture - is the one that decides the overlapping cases, and it is the source's own: \"Some NOS / R2R DACs also provide a separate DSD conversion path, including models from Gustard, Holo Audio and the Denafrips Terminator range. If your DAC provides a dedicated DSD path, DSD is our recommended starting point.\" Without that line the ladders with a DSD path would match two classes and nothing would say which.",
+  "_the_state_they_have_no_word_for": "The last rule is not a default, it is an answer: a device that takes DSD whose path has NOT been established is path_unknown, not quietly sorted into one of the four. The source's four types assume the listener knows; this catalogue records dsd_direct as \"to_be_measured\" or \"firmware_dependent\" where nobody has checked, and that state has to survive the label rather than be rounded away. It is also why the class cannot replace the fields: it would erase the one distinction that makes the engine refuse to send DSD.",
+  "_no_probe_establishes_it": "A PROBE CAN NEVER SETTLE THIS. The class turns on dsd_direct, dsd_reconverted_to_pcm and internal_bypass, which are level-3 fields: no amount of asking a device what it accepts reveals what it does with it. So a zone whose device is known only from the driver resolves to undeclared however complete the probe is, and that is correct rather than a shortcoming. It is also the clearest statement of why the listener's answer is worth asking for.",
+  "classes": {
+    "undeclared": {
+      "name": "Nothing established about the hardware",
+      "label": "Not identified",
+      "means": "No model record matched: the engine is working from the fallback, or from a maker and a chip family the listener declared. The conservative assumptions it then uses are NOT facts about a converter and must not be read back out as one — a fallback whose native_dsd is false because that is the careful branch would otherwise be announced as a PCM-only device, which nobody established.",
+      "source": "This catalogue's own fallback record. The source's picker shows the same state as \"I'm not sure yet\", beside its four types rather than among them."
+    },
+    "bypassable": {
+      "name": "No oversampling, or a filter that can be turned off",
+      "label": "NOS / R2R",
+      "means": "Nothing of the device's own stands between the stream and the analogue stage, or what does can be switched off. The output rate is then worth more than anything else, because reaching the rate at which the stage steps aside is the whole point.",
+      "source": "PGGB setup page, \"Choose the closest type\", read 2026-11-23, and its four cards. The vocabulary is theirs; the predicates below are ours, written against this catalogue's own fields. Their card: \"NOS means non-oversampling; R2R refers to a resistor-ladder design. Choose this type if your DAC can play without oversampling or lets you turn its oversampling filter off.\""
+    },
+    "pcm_path": {
+      "name": "PCM in, whatever is sent",
+      "label": "PCM DAC",
+      "means": "Either the device takes no DSD at all, or it takes it and brings it back to PCM through its own filter. Sending DSD is work thrown away in the second case and impossible in the first.",
+      "source": "PGGB setup page, \"Choose the closest type\", read 2026-11-23, and its four cards. The vocabulary is theirs; the predicates below are ours, written against this catalogue's own fields. Their card: \"These DACs work best with PCM input. This group also includes DACs that accept DSD but convert it to PCM internally.\""
+    },
+    "processed_path": {
+      "name": "Always processed, whatever is sent",
+      "label": "Delta-sigma",
+      "means": "The device takes DSD and PCM and upsamples both internally. Some of that may be skipped at high rates, but there is no path without it. Nothing we send escapes the device's own stage.",
+      "source": "PGGB setup page, \"Choose the closest type\", read 2026-11-23, and its four cards. The vocabulary is theirs; the predicates below are ours, written against this catalogue's own fields. Their card: \"Delta-sigma DACs internally upsample both PCM and DSD input signals. Some processing may be skipped for high-rate PCM and DSD, but they do not provide a path without internal processing. ESS DACs are an example.\""
+    },
+    "direct_dsd_path": {
+      "name": "A direct DSD path to the analogue stage",
+      "label": "Pure 1-bit DSD",
+      "means": "DSD sent here goes past the device's own upsampling and modulation and reaches the analogue stage as it was computed. This is the one class where the modulator we choose is the modulator that converts.",
+      "source": "PGGB setup page, \"Choose the closest type\", read 2026-11-23, and its four cards. The vocabulary is theirs; the predicates below are ours, written against this catalogue's own fields. Their card: \"These DACs have a direct 1-bit DSD conversion path. DSD input bypasses internal upsampling and modulation and goes directly to the analog conversion stage.\""
+    },
+    "path_unknown": {
+      "name": "Takes DSD, path not established",
+      "label": "Not established",
+      "means": "The device accepts DSD and nobody here has checked whether that path is direct. Not a default and not an absence of opinion: it is the answer, and it is why the engine does not send DSD on these.",
+      "source": "This catalogue. The source's own picker offers \"I'm not sure yet\" to the listener and has no type for a device whose path is unknown; this is that gap, named."
+    }
+  },
+  "rules": [
+    {
+      "if": {
+        "identified": false
+      },
+      "then": "undeclared",
+      "why": "no model record matched: either the fallback, or a maker and a family the listener declared with no record behind them. In both the DSD fields are policy or absent, so no class may be derived from them"
+    },
+    {
+      "if": {
+        "dsd_reconverted_to_pcm": true
+      },
+      "then": "pcm_path",
+      "why": "re-conversion is settled and decisive: whatever the architecture, DSD sent here comes back as PCM through a filter that is not ours"
+    },
+    {
+      "if": {
+        "dsd_direct": "offered"
+      },
+      "then": "direct_dsd_path",
+      "why": "the source's own precedence: a dedicated DSD path outranks the architecture, which is what sorts a ladder that also converts DSD"
+    },
+    {
+      "if": {
+        "takes_dsd": false
+      },
+      "then": "pcm_path",
+      "why": "no DSD by any path, native or DoP, so there is nothing to decide"
+    },
+    {
+      "if": {
+        "internal_bypass": "present"
+      },
+      "then": "bypassable",
+      "why": "a stated bypass rate is the strongest form of \"its own stage can be stepped out of the path\", and it is stronger than a chip family"
+    },
+    {
+      "if": {
+        "technology": "r2r"
+      },
+      "then": "bypassable",
+      "why": "a ladder, whatever it does with DSD. Calling it delta-sigma would be false about the hardware, and high-rate PCM is the right starting point either way. Any doubt about its DSD path stays in dsd_direct, where it belongs"
+    },
+    {
+      "if": {
+        "dsd_direct": false
+      },
+      "then": "processed_path",
+      "why": "it takes DSD, it is not a ladder, and the path is stated NOT to be direct — which is exactly \"no path without internal processing\""
+    },
+    {
+      "if": {},
+      "then": "path_unknown",
+      "why": "takes DSD, path not established, and no architecture settles it"
+    }
+  ]
+}

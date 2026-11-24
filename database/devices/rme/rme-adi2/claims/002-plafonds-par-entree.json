@@ -1,0 +1,14 @@
+{
+  "source": {
+    "kind": "import",
+    "quote": "RME ADI-2 DAC FS product page and user's guide, read 2026-11-20: USB class compliant to 768 kHz with DSD playback. The two S/PDIF inputs are NOT recorded: the guide describes the device as a 768 kHz converter without stating a per-input ceiling, and asserting 768 kHz on an optical input on that basis would be extraordinary. They fall through to the catalogue's conservative defaults, which is the honest answer here.",
+    "read_on": "2026-11-20"
+  },
+  "submitted_by": "import",
+  "submitted_on": "2026-11-24",
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000
+    }
+  }
+}

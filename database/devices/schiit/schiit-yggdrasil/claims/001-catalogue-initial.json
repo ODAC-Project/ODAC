@@ -1,0 +1,24 @@
+{
+  "source": {
+    "kind": "import",
+    "quote": "Audiophile Style, thread \"HQPlayer settings for specific DACs\", the author's replies : « Less is More (its a 16-bit TI DAC) » ; PCM only, 192 kHz. Chip: four TI DAC8812 16-bit converters, per 6moons and Schiit's own product page read 2026-11-20.",
+    "read_on": "2026-11-20"
+  },
+  "submitted_by": "import",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "r2r_ladder",
+    "bits": 16,
+    "pcm_max_hz": 192000,
+    "dsd_max": "unknown",
+    "native_dsd": false,
+    "dop": false,
+    "dsd_direct": false,
+    "analog_filter": "simple",
+    "source": "Audiophile Style, thread \"HQPlayer settings for specific DACs\", the author's replies : « Less is More (its a 16-bit TI DAC) » ; PCM only, 192 kHz. Chip: four TI DAC8812 16-bit converters, per 6moons and Schiit's own product page read 2026-11-20.",
+    "correctable": false,
+    "chip": "Four TI DAC8812, 16-bit. The maker's multibit line uses ladder parts rather than delta-sigma; the other two Yggdrasil variants use Analog Devices AD5791 and TI DAC11001, both 20-bit."
+  },
+  "notes": {},
+  "_note": "Lot repris du catalogue JSON d'origine. Sa preuve est la chaîne `source` de la fiche : à éclater en preuves par champ au fur et à mesure, car une seule citation pour dix faits est le défaut connu de ce lot. `notes` porte les gloses que la fiche d'origine attachait à tel ou tel champ."
+}

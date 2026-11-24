@@ -1,0 +1,14 @@
+{
+  "source": {
+    "kind": "import",
+    "quote": "Topping E30 specifications, read 2026-11-20: USB via XMOS to 768 kHz, native DSD to DSD512 and DoP to DSD256. The coaxial and optical ceilings were not found in an official sheet and are deliberately absent.",
+    "read_on": "2026-11-20"
+  },
+  "submitted_by": "import",
+  "submitted_on": "2026-11-24",
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000
+    }
+  }
+}

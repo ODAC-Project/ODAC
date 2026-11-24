@@ -1,0 +1,10 @@
+{
+  "id": "schiit_yggdrasil",
+  "brand": "schiit",
+  "model": "Yggdrasil Less is More",
+  "aliases": [
+    "Yggdrasil LiM",
+    "Yggdrasil"
+  ],
+  "_corrected": "This record was called \"Yggdrasil\" and carried a quote about ONE of its three variants. Schiit sells the Yggdrasil in three flavours on three different converters: the OG on Analog Devices AD5791 at 20 bits, Less is More on four TI DAC8812 at 16 bits, and More is Less on TI DAC11001 at 20 bits. Only the second is described here, and only the second is 16-bit - so the record's bits, its chip and its family were right for a device its own name did not identify. Renamed rather than generalised. The apparent contradiction between \"16-bit TI DAC\" and the ladder family was never one: all three are multibit ladder parts rather than delta-sigma, which is the whole point of Schiit's multibit line."
+}

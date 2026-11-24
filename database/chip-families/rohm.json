@@ -1,0 +1,20 @@
+{
+  "name": "ROHM",
+  "technology": "delta_sigma",
+  "switching_elements": "multi",
+  "modulator_order": 7,
+  "pcm_dsd_level_offset_db": -5.25,
+  "bits": "unknown",
+  "shaper_linearization": false,
+  "dsd_direct": true,
+  "dsd_reconverted_to_pcm": false,
+  "_note": "Offset given for the BD34352. \"It is always direct mode, there's nothing else.\"",
+  "_dsd_reconverted_to_pcm": "\"It is always direct mode, there's nothing else.\"",
+  "evidence_markers": [
+    "ROHM",
+    "RoHM",
+    "BD34",
+    "BD 34"
+  ],
+  "id": "rohm"
+}

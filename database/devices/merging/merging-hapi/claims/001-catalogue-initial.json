@@ -1,0 +1,23 @@
+{
+  "source": {
+    "kind": "import",
+    "quote": "manual 4.2 ; Roon forum: « one Merging Hapi, so up to 384/24 and DSD256 at 8 channels »",
+    "read_on": "2026-11-20"
+  },
+  "submitted_by": "import",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "delta_sigma_generic",
+    "pcm_dsd_level_offset_db": -0.6,
+    "pcm_max_hz": 384000,
+    "dsd_max": "DSD256",
+    "native_dsd": true,
+    "dop": true,
+    "source": "manual 4.2 ; Roon forum: « one Merging Hapi, so up to 384/24 and DSD256 at 8 channels »",
+    "dsd_direct": true,
+    "analog_filter": "simple",
+    "correctable": true
+  },
+  "notes": {},
+  "_note": "Lot repris du catalogue JSON d'origine. Sa preuve est la chaîne `source` de la fiche : à éclater en preuves par champ au fur et à mesure, car une seule citation pour dix faits est le défaut connu de ce lot. `notes` porte les gloses que la fiche d'origine attachait à tel ou tel champ."
+}

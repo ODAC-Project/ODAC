@@ -1,0 +1,23 @@
+{
+  "source": {
+    "kind": "import",
+    "quote": "Bricasti M3 datasheet and manual, read 2026-11-20: USB 44.1 to 384 kHz with DSD64 and DSD128 over DoP, some listings adding native DSD256; AES/EBU and coaxial S/PDIF to 192 kHz with DSD64 over DoP; OPTICAL 44.1 TO 96 kHz. The optional Ethernet input reaches 384 kHz and DSD128 DoP.",
+    "read_on": "2026-11-20"
+  },
+  "submitted_by": "import",
+  "submitted_on": "2026-11-24",
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000
+    }
+  }
+}

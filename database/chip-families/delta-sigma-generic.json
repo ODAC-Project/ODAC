@@ -1,0 +1,14 @@
+{
+  "name": "Delta-sigma, chip unknown",
+  "technology": "delta_sigma",
+  "switching_elements": "multi",
+  "modulator_order": 7,
+  "pcm_dsd_level_offset_db": "unknown",
+  "bits": "unknown",
+  "shaper_linearization": false,
+  "dsd_direct": "unknown",
+  "dsd_reconverted_to_pcm": "unknown",
+  "_dsd_reconverted_to_pcm": "Chip unknown: assert nothing.",
+  "evidence_markers": [],
+  "id": "delta_sigma_generic"
+}

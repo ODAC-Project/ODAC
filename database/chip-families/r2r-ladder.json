@@ -1,0 +1,26 @@
+{
+  "name": "R2R / discrete ladder",
+  "technology": "r2r",
+  "switching_elements": "multi",
+  "modulator_order": 7,
+  "pcm_dsd_level_offset_db": "unknown",
+  "bits": 20,
+  "shaper_linearization": true,
+  "dsd_direct": "unknown",
+  "dsd_reconverted_to_pcm": "unknown",
+  "_linearization": "Manual 4.4: a suitable shaper (LNS15, NS9, NS5) at a high output rate corrects the linearity errors inherent to any R2R ladder, lowering low-level and zero-crossing distortion. A second use of the shaper, distinct from masking noise.",
+  "_bits": "Author: \"it is truly impossible to make one that is linear to 24 bits\". Declare the ladder's real depth, 18 to 20 bits, not the interface's.",
+  "_dsd_reconverted_to_pcm": "Not a family property: Holo converts DSD directly, Denafrips re-converts it to PCM. The record must say.",
+  "evidence_markers": [
+    "R2R",
+    "R-2R",
+    "ladder",
+    "resistor",
+    " 4.4",
+    "DAC8812",
+    "AD5791",
+    "DAC11001",
+    "multibit"
+  ],
+  "id": "r2r_ladder"
+}

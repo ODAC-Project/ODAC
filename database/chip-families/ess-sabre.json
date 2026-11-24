@@ -1,0 +1,22 @@
+{
+  "name": "ESS Sabre",
+  "technology": "delta_sigma",
+  "switching_elements": "single",
+  "modulator_order": 5,
+  "pcm_dsd_level_offset_db": 0.0,
+  "bits": "unknown",
+  "shaper_linearization": false,
+  "dsd_direct": false,
+  "dsd_reconverted_to_pcm": false,
+  "_note": "Never bit-exact, in PCM or DSD: everything goes through its internal DSP. Author: \"ESS is out since it's always through DSP\". Consequence: not correctable. That is the ONLY consequence - it does not follow that the part re-converts DSD to PCM, and the same author recommends DSD output to ESS parts. See dsd_reconverted_to_pcm.",
+  "_dsd_reconverted_to_pcm": "Not established by the family note, which concludes only that nothing is bit-exact. The reference software's author recommends DSD output to ESS parts by name - fifth-order modulation before the ES9039 - which he would not do for a converter that undoes the work. So: not re-converted, and not correctable.",
+  "evidence_markers": [
+    "ESS",
+    "Sabre",
+    "ES90",
+    "ES 90",
+    "ES903",
+    "ES9039"
+  ],
+  "id": "ess_sabre"
+}

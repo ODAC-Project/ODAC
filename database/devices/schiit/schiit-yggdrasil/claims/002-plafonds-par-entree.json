@@ -1,0 +1,23 @@
+{
+  "source": {
+    "kind": "import",
+    "quote": "Schiit specification sheets and Stereophile's sidebar, read 2026-11-20: Unison USB, AES/EBU XLR, RCA and BNC S/PDIF and optical, ALL limited to 24-bit/192 kHz. Unusual in this catalogue in that USB holds no advantage - the whole design stops at 192 kHz, which is consistent with a multibit ladder that is not asked to go higher.",
+    "read_on": "2026-11-20"
+  },
+  "submitted_by": "import",
+  "submitted_on": "2026-11-24",
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 192000
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000
+    }
+  }
+}

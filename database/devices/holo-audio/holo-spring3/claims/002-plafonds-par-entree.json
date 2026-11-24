@@ -1,0 +1,26 @@
+{
+  "source": {
+    "kind": "import",
+    "quote": "Holo Audio specification tables via retailers and 6moons, read 2026-11-20: USB and I2S over HDMI at PCM 44.1 kHz to 1.536 MHz, 32-bit, with native DSD to DSD1024 over USB and I2S and DoP to DSD512 over USB; coaxial, optical and AES/EBU at PCM 44.1-192 kHz, 24-bit, with DoP DSD64. Listings differ slightly on the DoP ceiling of the S/PDIF inputs.",
+    "read_on": "2026-11-20"
+  },
+  "submitted_by": "import",
+  "submitted_on": "2026-11-24",
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 1536000
+    },
+    "i2s": {
+      "pcm_max_hz": 1536000
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000
+    }
+  }
+}

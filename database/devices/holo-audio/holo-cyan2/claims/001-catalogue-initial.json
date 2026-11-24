@@ -1,0 +1,24 @@
+{
+  "source": {
+    "kind": "import",
+    "quote": "forum, as for Spring",
+    "read_on": "2026-11-20"
+  },
+  "submitted_by": "import",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "bits": 20,
+    "pcm_dsd_level_offset_db": -6.0,
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD1024",
+    "native_dsd": true,
+    "dop": true,
+    "source": "forum, as for Spring",
+    "dsd_direct": true,
+    "analog_filter": "good",
+    "correctable": true,
+    "chip": "A discrete resistor ladder built by the maker."
+  },
+  "notes": {},
+  "_note": "Lot repris du catalogue JSON d'origine. Sa preuve est la chaîne `source` de la fiche : à éclater en preuves par champ au fur et à mesure, car une seule citation pour dix faits est le défaut connu de ce lot. `notes` porte les gloses que la fiche d'origine attachait à tel ou tel champ."
+}

@@ -1,0 +1,14 @@
+{
+  "id": "spdif_optical",
+  "name": "S/PDIF optical (TOSLINK)",
+  "native_dsd_possible": false,
+  "dop_possible": true,
+  "reports_buffer_occupancy": "not_applicable",
+  "policy": {
+    "pcm_max_hz": 96000,
+    "bits": 24,
+    "bits_above_hz": [],
+    "_this_is_a_policy": "Ce qu'il faut supposer quand l'appareil n'a rien dit, pas une mesure. Une fiche qui connaît son vrai chiffre l'emporte."
+  },
+  "note": "The most restrictive input in common use, and the one that most often surprises a listener: the same converter that takes 768 kHz over USB may stop here at 96. Many modules reach 192; see _conservative_not_measured."
+}

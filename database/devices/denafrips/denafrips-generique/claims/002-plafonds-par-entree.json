@@ -1,0 +1,26 @@
+{
+  "source": {
+    "kind": "import",
+    "quote": "Denafrips manuals and reviews across the range, read 2026-11-20: USB and I2S decode to 24-bit/1536 kHz PCM and DSD1024; coaxial, optical and AES/EBU top out at 24-bit/192 kHz with DoP DSD64. Consistent for the Pontus II, Venus and Terminator; the figures for the first-generation Pontus were not found and are assumed to follow.",
+    "read_on": "2026-11-20"
+  },
+  "submitted_by": "import",
+  "submitted_on": "2026-11-24",
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 1536000
+    },
+    "i2s": {
+      "pcm_max_hz": 1536000
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000
+    }
+  }
+}

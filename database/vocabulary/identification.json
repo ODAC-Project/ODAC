@@ -1,0 +1,93 @@
+{
+  "_order": [
+    "exact match on usb.vid and usb.pid -> that device record",
+    "exact match on a normalised product_string -> that device record",
+    "match on usb.vid alone, against _identification.vendors.by_vid, and only where that entry carries a family -> that family, never a device record",
+    "no match: the device is named from its descriptor string and resolved as unknown"
+  ],
+  "_never": "No fuzzy or partial matching. Match with certainty or not at all. A vendor id never selects a device record, and the vendor ids under not_identifying never select anything.",
+  "_state": "Filled 2026-11-19 from the Linux kernel USB audio quirk tables. Three records carry an exact vid:pid; nine vendor identifiers are recorded, of which four carry a family; two vendor identifiers are recorded as non-identifying so that nobody later reads a brand into them. The remaining twenty-four records carry no USB identity: the kernel does not name them, because a device only enters those tables when it needs a workaround. Holo, Denafrips, Chord, Topping, exaSound, Bricasti, LAiV and Merging are absent for that reason, not because they are unidentifiable - their identities have to come from the devices themselves. No product_string is filled: the kernel tables carry comments written by patch authors, not the strings the devices declare.",
+  "vendors": {
+    "_purpose": "USB vendor identifiers the kernel names. A vendor id says which house built the device, never which model. It may only be used to pick a family, and only where family is filled below. It must never be used to select a device record: the same vendor ships devices whose bits, maxima and DSD behaviour differ.",
+    "_source": "Linux kernel sound/usb/quirks.c (d2636407bf8c, 2026-11-12) and sound/usb/quirks-table.h (e7c66b3e249e, 2026-11-04)",
+    "by_vid": [
+      {
+        "vid": 8685,
+        "vendor": "Accuphase Laboratory",
+        "family": "delta_sigma_generic",
+        "cite": "quirks.c VENDOR_FLG(0x21ed, /* Accuphase Laboratory */)",
+        "note": "Accuphase builds its own MDS converter across the range; the family holds."
+      },
+      {
+        "vid": 10934,
+        "vendor": "T+A elektroakustik",
+        "family": "discrete_dsd",
+        "cite": "quirks.c VENDOR_FLG(0x2ab6, /* T+A devices */)",
+        "note": "T+A's own discrete converter across the current range."
+      },
+      {
+        "vid": 13812,
+        "vendor": "MSB Technology",
+        "family": "r2r_ladder",
+        "cite": "quirks.c VENDOR_FLG(0x35f4, /* MSB Technology */)",
+        "note": "Every MSB converter is a ladder. The model, and therefore the bit depth and the maxima, is not knowable from the vendor id."
+      },
+      {
+        "vid": 27458,
+        "vendor": "MSB Technology",
+        "family": "r2r_ladder",
+        "cite": "quirks.c USB_ID(0x6b42, 0x0042) /* MSB Technology */",
+        "note": "Second MSB identifier, on the older USB module. The comment names no model."
+      },
+      {
+        "vid": 10539,
+        "vendor": "Gustard",
+        "family": "unknown",
+        "cite": "quirks.c VENDOR_FLG(0x292b, /* Gustard/Ess based devices */)",
+        "note": "No family: Gustard ships ESS and AKM in the same range. The kernel comment says \"Ess based\" but the A26 and the X30 are AKM."
+      },
+      {
+        "vid": 12478,
+        "vendor": "Schiit Audio",
+        "family": "unknown",
+        "cite": "quirks.c DEVICE_FLG(0x30be, 0x0101, /* Schiit Hel */)",
+        "note": "No family: the Yggdrasil is a ladder, the small Schiit devices are delta-sigma. The only Schiit the kernel names is the Hel, which is not in this file."
+      },
+      {
+        "vid": 10809,
+        "vendor": "RME / Audio AG",
+        "family": "unknown",
+        "cite": "quirks.c USB_ID(0x2a39, 0x3f8c) and 0x3fa0 /* RME Digiface USB */",
+        "note": "No family: the only RME the kernel names is the Digiface, an interface and not a converter. The ADI-2 carries no entry."
+      },
+      {
+        "vid": 5454,
+        "vendor": "D&M Holdings (Denon and Marantz)",
+        "family": "unknown",
+        "cite": "quirks.c DEVICE_FLG entries 0x154e:0x1002, 0x1003, 0x3005, 0x3006, 0x300b, 0x500e",
+        "note": "No family: one vendor id for two brands and for devices ranging from a CD player to a headphone amplifier."
+      },
+      {
+        "vid": 6226,
+        "vendor": "shared OEM identifier",
+        "family": "unknown",
+        "cite": "quirks.c 0x1852:0x5034 (T+A Dac8), 0x5062 (Luxman D-08u), 0x5065 (Luxman DA-06)",
+        "note": "No family and no brand: this identifier is shared between makers. Only the full vid:pid pair means anything here."
+      }
+    ],
+    "not_identifying": [
+      {
+        "vid": 5418,
+        "vendor": "Thesycon Systemsoftware & Consulting",
+        "cite": "quirks.c VENDOR_FLG(0x152a, /* Thesycon devices */) and DEVICE_FLG(0x152a, 0x85dd, /* SMSL USB DAC */)",
+        "note": "A USB audio driver house, not a converter maker. SMSL, Topping, Gustard and many others ship under it. Even 0x152a:0x85dd, which the kernel labels \"SMSL USB DAC\", names no model. Never infer a brand, a family or a record from this vendor id."
+      },
+      {
+        "vid": 8369,
+        "vendor": "XMOS Ltd",
+        "cite": "quirks.c VENDOR_FLG(0x20b1, /* XMOS based devices */) and DEVICE_FLG(0x20b1, 0x2009, /* XMOS Ltd DIYINHK USB Audio 2.0 */)",
+        "note": "The USB receiver chip's vendor id, carried by a large part of the market, Chord and iFi among them. A single pid under it can mean a model - 0x3089 is the Mola Mola - but the vendor id alone means nothing. Never infer a brand, a family or a record from it."
+      }
+    ]
+  }
+}

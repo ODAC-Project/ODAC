@@ -1,0 +1,17 @@
+{
+  "source": {
+    "kind": "import",
+    "quote": "LAiV Harmony specifications via Stereophile's sidebar and HiFi News, read 2026-11-20: USB, S/PDIF over RCA, TosLink and I2S over HDMI. Only the USB and I2S ceilings are recorded; no per-input figure was found for the S/PDIF inputs.",
+    "read_on": "2026-11-20"
+  },
+  "submitted_by": "import",
+  "submitted_on": "2026-11-24",
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000
+    },
+    "i2s": {
+      "pcm_max_hz": 768000
+    }
+  }
+}

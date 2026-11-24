@@ -1,0 +1,8 @@
+{
+  "id": "nagra",
+  "name": "Nagra",
+  "usb_vendor_ids": [
+    "0x139f"
+  ],
+  "usb_vendor_ids_source": "Linux kernel USB audio quirk tables, sound/usb/quirks.c (d2636407bf8c, 2026-11-12) and sound/usb/quirks-table.h (e7c66b3e249e, 2026-11-04)"
+}

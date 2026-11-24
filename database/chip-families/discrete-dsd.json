@@ -1,0 +1,18 @@
+{
+  "name": "Discrete DSD stage",
+  "technology": "discrete_dsd",
+  "switching_elements": "single",
+  "modulator_order": 7,
+  "pcm_dsd_level_offset_db": "unknown",
+  "bits": "unknown",
+  "shaper_linearization": false,
+  "dsd_direct": true,
+  "dsd_reconverted_to_pcm": false,
+  "_dsd_reconverted_to_pcm": "A separate discrete DSD stage is the definition of not re-converting.",
+  "evidence_markers": [
+    "discrete",
+    "DSD implementation",
+    "dual-DAC"
+  ],
+  "id": "discrete_dsd"
+}

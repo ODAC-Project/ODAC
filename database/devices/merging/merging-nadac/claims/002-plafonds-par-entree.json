@@ -1,0 +1,17 @@
+{
+  "source": {
+    "kind": "import",
+    "quote": "Merging Technologies NADAC specifications and Stereophile, read 2026-11-20: the network input over Ravenna carries 44.1 to 384 kHz plus DSD64, DSD128 and DSD256; the AES input is limited to 44.1-96 kHz. The network is the high-capability input here and AES the compromise, which inverts the pattern every desktop converter in this catalogue follows.",
+    "read_on": "2026-11-20"
+  },
+  "submitted_by": "import",
+  "submitted_on": "2026-11-24",
+  "inputs": {
+    "aes_ebu": {
+      "pcm_max_hz": 96000
+    },
+    "net_transparent": {
+      "pcm_max_hz": 384000
+    }
+  }
+}

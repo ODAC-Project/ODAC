@@ -1,0 +1,29 @@
+{
+  "source": {
+    "kind": "import",
+    "quote": "Roon forum: « RME ADI-2 supports only DoP » ; « your ADI-2 running at DSD256 in DSD Direct mode and DSD filter set to 50 kHz is good choice » ; Audiophile Style: « ADI-2 always uses DoP for DSD output and can do DSD256 through DoP, since it supports 705.6/768k PCM »",
+    "read_on": "2026-11-20"
+  },
+  "submitted_by": "import",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "unknown",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD256",
+    "native_dsd": false,
+    "dop": true,
+    "dsd_direct": true,
+    "analog_filter": "simple",
+    "device_settings": "Activer le mode DSD Direct et regler le filtre DSD sur 50 kHz.",
+    "source": "Roon forum: « RME ADI-2 supports only DoP » ; « your ADI-2 running at DSD256 in DSD Direct mode and DSD filter set to 50 kHz is good choice » ; Audiophile Style: « ADI-2 always uses DoP for DSD output and can do DSD256 through DoP, since it supports 705.6/768k PCM »",
+    "correctable": true,
+    "modulator_order": 7,
+    "technology": "delta_sigma"
+  },
+  "notes": {
+    "_family": "NOT KNOWABLE from the model name, and the reference's author says so plainly: « there are ADI-2's out there with three different DAC chips [...] whether ADI-2 Pro is always AKM chip or if ESS is also to be found there. It's a bit of a mess, since one needs to understand to check the serial number label ». Filed under AKM here until 2026-11-20 on no evidence at all. A model that spans chip families is a real case, not a gap: the honest value is unknown, and a USB identity will not fix it either, since the variants share one.",
+    "_modulator_order": "Stated explicitly because the family no longer supplies one. Seven is the catalogue's default for multi-element switching arrays and the safe assumption here.",
+    "_technology": "Stated here because this record has no chip family and the engine would otherwise assume it. It is safe to state: the reference's author says the ADI-2 exists with three different converter chips and names AKM and ESS among them, and every candidate is a delta-sigma part. So the TECHNOLOGY is known even though the FAMILY is not - which is exactly the case the family being optional exists for."
+  },
+  "_note": "Lot repris du catalogue JSON d'origine. Sa preuve est la chaîne `source` de la fiche : à éclater en preuves par champ au fur et à mesure, car une seule citation pour dix faits est le défaut connu de ce lot. `notes` porte les gloses que la fiche d'origine attachait à tel ou tel champ."
+}

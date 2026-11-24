@@ -1,0 +1,20 @@
+{
+  "source": {
+    "kind": "import",
+    "quote": "Marantz HD-DAC1 specification sheet and owner's manual, read 2026-11-20: USB type B, two optical and one coaxial, all at 192 kHz / 24-bit, with native DSD2.8 and DSD5.6 over USB. Unusual in this catalogue in that the device itself stops at 192 kHz, so USB holds no advantage over its S/PDIF inputs.",
+    "read_on": "2026-11-20"
+  },
+  "submitted_by": "import",
+  "submitted_on": "2026-11-24",
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 192000
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000
+    }
+  }
+}

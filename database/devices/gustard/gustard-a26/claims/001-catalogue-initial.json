@@ -1,0 +1,24 @@
+{
+  "source": {
+    "kind": "import",
+    "quote": "Roon forum: « Gustard has made updated firmware for their A26 DAC and now the DSD Direct mode works as expected » ; « I especially liked ASDM7EC-light (512+fs) at DSD512 » ; Audiophile Style: Gustard X30 « DSD512 with default filters and ASDM7EC-fast » ; chip: the reference's author, « Gustard figured out how to configure AK4191+AK4499EX to work correctly in DSD Direct mode » ; two AK4499EX converters with one AK4191 modulator, per Linsoul, Apos, HiFiGo and Head-Fi listings read 2026-11-20. AKM.",
+    "read_on": "2026-11-20"
+  },
+  "submitted_by": "import",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "akm",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true,
+    "dsd_direct": "firmware_dependent",
+    "analog_filter": "simple",
+    "device_settings": "Firmware de controle a jour, mode DSD Direct actif, filtre DSD sur « Wild Bandwidth ».",
+    "source": "Roon forum: « Gustard has made updated firmware for their A26 DAC and now the DSD Direct mode works as expected » ; « I especially liked ASDM7EC-light (512+fs) at DSD512 » ; Audiophile Style: Gustard X30 « DSD512 with default filters and ASDM7EC-fast » ; chip: the reference's author, « Gustard figured out how to configure AK4191+AK4499EX to work correctly in DSD Direct mode » ; two AK4499EX converters with one AK4191 modulator, per Linsoul, Apos, HiFiGo and Head-Fi listings read 2026-11-20. AKM.",
+    "correctable": false,
+    "chip": "Two AK4499EX converters with one AK4191 modulator (AKM)."
+  },
+  "notes": {},
+  "_note": "Lot repris du catalogue JSON d'origine. Sa preuve est la chaîne `source` de la fiche : à éclater en preuves par champ au fur et à mesure, car une seule citation pour dix faits est le défaut connu de ce lot. `notes` porte les gloses que la fiche d'origine attachait à tel ou tel champ."
+}

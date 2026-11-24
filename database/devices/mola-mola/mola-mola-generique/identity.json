@@ -1,0 +1,12 @@
+{
+  "id": "mola_mola_generique",
+  "brand": "mola_mola",
+  "model": "unknown",
+  "usb": [
+    {
+      "vid": "0x20b1",
+      "pid": "0x3089"
+    }
+  ],
+  "_corrected": "Renommee le 23/11/2026, de 'mola_mola' a 'mola_mola_generique'. La cle nommait un modele que la fiche ne revendique pas : son `model` est \"unknown\", donc c'est le fourre-tout de la marque. Rien ne lisait la cle - le moteur lit le champ - mais quiconque ouvrait ce fichier y lisait une precision qui n'existe pas. Le suffixe _generique est celui que portaient deja les autres fourre-tout."
+}

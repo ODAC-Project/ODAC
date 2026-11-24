@@ -1,0 +1,23 @@
+name: database
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify the database
+        run: python3 tools/verifier.py
+      # Every rule the verifier enforces is proved by a mutant that must make it
+      # fail. A guard nobody has seen fire is a guard nobody knows is wired up.
+      - name: Prove the guards fire
+        run: python3 tools/mutants.py
+      - name: Build the published artefact
+        run: python3 tools/build.py

@@ -1,0 +1,11 @@
+{
+  "id": "marantz_hddac1",
+  "brand": "marantz",
+  "model": "HD-DAC1",
+  "usb": [
+    {
+      "vid": "0x154e",
+      "pid": "0x3005"
+    }
+  ]
+}

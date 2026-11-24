@@ -1,0 +1,13 @@
+{
+  "_what": "Correction of the errors introduced by the DAC's mixed-domain conversion stage and by its analog stages - I/V, reconstruction filter, line driver. Not the digital stage.",
+  "_why_not_in_the_dac": "Requires heavy DSP at the output rate, in the MHz range, and the DAC chip has no knowledge of the analog sections that follow it.",
+  "_preconditions": [
+    "The device must be close to bit-perfect (direct DSD or NOS PCM).",
+    "A separate profile is needed per output rate, and per device setting that affects the output.",
+    "Built from a large number of analog-output measurements, iteratively. Time-consuming per DAC."
+  ],
+  "_who_benefits": "\"Better ones usually benefit more. So it is really more about improving DACs further, rather than fixing a bad one.\"",
+  "_cost": "Author: \"DAC correction can increase the load to 1.3x - 2x\".",
+  "_for_us": "We cannot build correction profiles - that needs lab measurement of each device. But the architecture should leave room for one, applied last, at the output rate. And the precondition is a field we already carry: a device that is not bit-exact cannot be corrected, which is one more reason to know that property.",
+  "_source": "Interview with the author, Audiophile Style, 2026-11-11."
+}

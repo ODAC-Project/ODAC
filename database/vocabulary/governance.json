@@ -1,0 +1,38 @@
+{
+  "_one_base": "One catalogue, not two. Tune already maintains a tested-devices list, and what is described here is not a second database beside it but a second FACET of the same device: that list says whether a device works with Tune, this one says what the device does. Same entity, same key, two sets of fields, one administration. Keeping them apart would mean two places to look up one converter and two chances for them to disagree about its name.",
+  "_four_inlets": "Facts arrive by four different doors and the doors are not equally reliable, so the record stores WHICH DOOR a fact came through - the provenance - as well as the citation itself. Today a record says where a value was read; it does not say how it got in, and after a year of automated collection that is the difference between a catalogue and a pile.",
+  "inlets": [
+    {
+      "id": "probe",
+      "name": "The device itself, probed",
+      "writes": "Levels 1 and 2 only: the USB identity, and what the device accepts per input.",
+      "trust": "Highest for what it covers, and SILENT beyond it. It reports what the device DID, not what a sheet claims, which is why it outranks the maker's own specification for these fields. It can say nothing at all about level 3.",
+      "_carried_by": "The contribution form, filled automatically before the listener sees it."
+    },
+    {
+      "id": "maker",
+      "name": "The manufacturer, in writing and identified",
+      "writes": "Level 3 above all: the chip, the internal behaviour, the level offset, any bypass rate. Exactly what no probe can reach.",
+      "trust": "High for level 3, and WEAKER THAN THE PROBE for level 2 - a published sheet often states the chip's capability rather than the implementation's. The inversion is the point: ask the device what it accepts, ask the maker what it does.",
+      "_the_incentive": "A maker who fills their own records gets their devices set up correctly by every Tune installation, named properly in the panel, and reachable by automatic identification. That is a real return for an afternoon's work, and it should be how they are approached: not a favour asked, but a listing improved. It also gives the one thing no scrape can: an attributable answer from the party that knows.",
+      "_no_answer_is_a_state": "A maker asked and silent must be recorded as asked-and-silent, with the date. Otherwise the same question is sent every quarter and the absence of an answer never becomes information."
+    },
+    {
+      "id": "listener",
+      "name": "A listener, through the panel",
+      "writes": "A new device, a correction to an existing one, or a model name for an identity the catalogue sees but cannot name.",
+      "trust": "Variable, and it does not matter much, because what the listener supplies that nobody else can is the MODEL NAME for a USB identity. The probe attached to their submission carries the facts.",
+      "_never_overwritten": "A listener's correction of their own device is never re-asserted over by a record. It is the one case where the person in the room knows more than the catalogue."
+    },
+    {
+      "id": "agent",
+      "name": "An automated agent reading forums, sheets and measurement indexes",
+      "writes": "NOTHING, ever, directly. It proposes.",
+      "trust": "Lowest, and the restriction is not about accuracy - today's pass over five manufacturer sites was accurate. It is that this catalogue's whole value is that every field is attributable, and an unattended writer destroys that faster than it fills anything. An agent's finding enters as a proposal carrying its URL, its date and the exact sentence it read, and a human accepts it.",
+      "_what_it_is_good_at": "Watching: a firmware release that changes a device's behaviour, a new model from a brand already in the catalogue, a measurement index growing, a maker's sheet changing under a URL already cited. Noticing change is worth more than first collection, because nobody re-reads a page they already read."
+    }
+  ],
+  "_precedence": "When two inlets disagree about one field, in order: a laboratory measurement; the device itself for what it accepts; the maker in writing for what it does; a documented answer from a recognised expert; the maker's published sheet; a review or retailer listing; a forum post; an agent's inference, which never wins anything because it never writes. Where the order does not settle it, NEITHER value is written: the conflict goes into _verify with both sides named, and the field stays unknown. That is what the Gustard X30 should have had for months - an unsourced AKM filing against the kernel's own ESS comment - and silence let the wrong one stand.",
+  "_who_administers": "One maintainer owns the schema, arbitrates conflicts and publishes; this is Tune's role, alongside the tested-devices list it already runs. Makers write their own devices' level-3 fields under their own name. Listeners submit. Agents propose. NOBODY writes anonymously: every field carries who asserted it and through which inlet, because a catalogue whose value is evidence cannot have a row nobody is accountable for.",
+  "_facts_expire": "A fact can be true and then stop being true, and this catalogue already holds the proof: a Gustard record says DSD Direct works 'now' because the maker shipped new firmware. So a level-3 fact may be bound to a firmware version, and the field value firmware_dependent already exists for the case where it varies. Any automated watching should treat a firmware release on a device in the catalogue as a reason to re-ask, not as noise."
+}

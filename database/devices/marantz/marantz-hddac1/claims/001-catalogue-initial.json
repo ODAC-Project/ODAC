@@ -1,0 +1,23 @@
+{
+  "source": {
+    "kind": "import",
+    "quote": "Roon forum: « Marantz HD-DAC1 used the CS4398 in DSD Direct mode »; USB identity: Linux kernel sound/usb/quirks.c (d2636407bf8c, 2026-11-12) and sound/usb/quirks-table.h (e7c66b3e249e, 2026-11-04) - quirks.c DEVICE_FLG(0x154e, 0x3005, /* Marantz HD-DAC1 */)",
+    "read_on": "2026-11-20"
+  },
+  "submitted_by": "import",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "cirrus",
+    "pcm_max_hz": 192000,
+    "dsd_max": "DSD128",
+    "native_dsd": true,
+    "dop": true,
+    "dsd_direct": true,
+    "analog_filter": "simple",
+    "source": "Roon forum: « Marantz HD-DAC1 used the CS4398 in DSD Direct mode »; USB identity: Linux kernel sound/usb/quirks.c (d2636407bf8c, 2026-11-12) and sound/usb/quirks-table.h (e7c66b3e249e, 2026-11-04) - quirks.c DEVICE_FLG(0x154e, 0x3005, /* Marantz HD-DAC1 */)",
+    "correctable": true,
+    "chip": "Cirrus Logic CS4398."
+  },
+  "notes": {},
+  "_note": "Lot repris du catalogue JSON d'origine. Sa preuve est la chaîne `source` de la fiche : à éclater en preuves par champ au fur et à mesure, car une seule citation pour dix faits est le défaut connu de ce lot. `notes` porte les gloses que la fiche d'origine attachait à tel ou tel champ."
+}

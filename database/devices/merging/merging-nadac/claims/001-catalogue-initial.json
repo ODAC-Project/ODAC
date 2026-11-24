@@ -1,0 +1,22 @@
+{
+  "source": {
+    "kind": "import",
+    "quote": "Audiophile Style, thread \"HQPlayer settings for specific DACs\", the author's replies : « I believe it uses the 8-channel ES9008S chip »",
+    "read_on": "2026-11-20"
+  },
+  "submitted_by": "import",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 384000,
+    "dsd_max": "DSD256",
+    "native_dsd": true,
+    "dop": true,
+    "dsd_direct": false,
+    "analog_filter": "good",
+    "source": "Audiophile Style, thread \"HQPlayer settings for specific DACs\", the author's replies : « I believe it uses the 8-channel ES9008S chip »",
+    "correctable": false
+  },
+  "notes": {},
+  "_note": "Lot repris du catalogue JSON d'origine. Sa preuve est la chaîne `source` de la fiche : à éclater en preuves par champ au fur et à mesure, car une seule citation pour dix faits est le défaut connu de ce lot. `notes` porte les gloses que la fiche d'origine attachait à tel ou tel champ."
+}

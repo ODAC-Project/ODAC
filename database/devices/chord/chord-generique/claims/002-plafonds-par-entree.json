@@ -1,0 +1,20 @@
+{
+  "source": {
+    "kind": "import",
+    "quote": "Chord Qutest user manual, read 2026-11-20: USB type B 32-bit/768 kHz PCM and up to DSD512; two BNC coaxial at 24-bit/384 kHz, reaching 768 kHz only in the dual-data mode that pairs with the maker's own upscaler; optical 24-bit/192 kHz, DSD64. Note that several retailer listings give the optical input as 96 kHz; the manual is the figure taken here.",
+    "read_on": "2026-11-20"
+  },
+  "submitted_by": "import",
+  "submitted_on": "2026-11-24",
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 384000
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000
+    }
+  }
+}

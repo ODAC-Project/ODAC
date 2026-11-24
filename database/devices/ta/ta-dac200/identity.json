@@ -1,0 +1,17 @@
+{
+  "id": "ta_dac200",
+  "brand": "ta",
+  "model": "DAC 200",
+  "aliases": [
+    "T+A DAC200",
+    "HA 200",
+    "SDV 3100 HV",
+    "T+A DAC8 DSD"
+  ],
+  "usb": [
+    {
+      "vid": "0x1852",
+      "pid": "0x5034"
+    }
+  ]
+}

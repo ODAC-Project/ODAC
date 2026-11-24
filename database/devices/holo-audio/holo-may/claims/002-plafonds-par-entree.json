@@ -1,0 +1,17 @@
+{
+  "source": {
+    "kind": "import",
+    "quote": "Holo Audio retailer specifications, read 2026-11-20: USB and I2S to PCM 1.536 MHz and DSD1024. The optical, coaxial and AES inputs were NOT found documented and are deliberately absent here rather than assumed from the pattern the other makers show.",
+    "read_on": "2026-11-20"
+  },
+  "submitted_by": "import",
+  "submitted_on": "2026-11-24",
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 1536000
+    },
+    "i2s": {
+      "pcm_max_hz": 1536000
+    }
+  }
+}

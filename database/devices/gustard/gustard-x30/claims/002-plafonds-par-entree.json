@@ -1,0 +1,26 @@
+{
+  "source": {
+    "kind": "import",
+    "quote": "Gustard X30 user manual (v1.05) and retailer specification tables, read 2026-11-20: USB at PCM 16-32 bit 44.1-768 kHz, native DSD to DSD512, DoP to DSD256; coaxial, AES and optical at PCM 16-24 bit 44.1-192 kHz with DoP64. Two I2S inputs, one on the maker's own pinout and one adjustable.",
+    "read_on": "2026-11-20"
+  },
+  "submitted_by": "import",
+  "submitted_on": "2026-11-24",
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000
+    },
+    "i2s": {
+      "pcm_max_hz": 768000
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000
+    }
+  }
+}

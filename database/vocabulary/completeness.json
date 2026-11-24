@@ -1,0 +1,64 @@
+{
+  "_purpose": "What a model record must carry to be worth adding, and what each further step buys. Written 2026-11-20, because the catalogue had no entry criterion at all and so could grow without anyone being able to say whether it was improving.",
+  "_not_a_field_count": "A level here is NOT how many fields are filled. It is which decision the engine can make because of them. Counting fields produces a number nobody can act on; naming the decision tells a contributor exactly what their five minutes would unlock. The levels also differ by HOW the facts are obtained, which is what makes them a plan rather than a label: one level the machine discovers by itself, the next a person has to read, the last an instrument has to measure.",
+  "_orthogonal_to_evidence": "The level is completeness. It is NOT quality, and it never substitutes for the evidence rule: every field present, at every level, must have a source naming THAT device. A level-2 record with solid evidence is worth more than a level-3 record carrying a guessed chip family - the Gustard X30 was level 3 and simply wrong. Tune's own documented/measured status answers a different question (how a fact was established) and the two compose: show both, conflate neither.",
+  "_why_partial_records_are_safe": "An incomplete record can never make Auto worse than no record, because of how the cascade resolves: a field the record omits is inherited from the brand or the chip family, and a field nobody knows is \"unknown\", which makes the engine take the conservative branch. The danger is never missing data. It is data that is present and wrong, which is why the entry gate below is about evidence and identity rather than about filling boxes.",
+  "levels": [
+    {
+      "level": 1,
+      "name": "Identified",
+      "fields": [
+        "brand",
+        "model",
+        "source",
+        "usb.vid",
+        "usb.pid"
+      ],
+      "unlocks": "The converter is recognised by name instead of being an unknown device, and resolves to its brand. Nothing else changes: it behaves exactly as the brand's catch-all.",
+      "obtained_from": "The driver, through the contribution form. No reading required.",
+      "_gate": "A record at this level is admissible ONLY WITH a USB identity. Without one it resolves identically to the brand catch-all that already exists, so it is a duplicate row carrying no fact - and a row that looks like knowledge without being any is worse than an honest gap. With the identity it earns its place, because it is what turns an unidentified device into a named one."
+    },
+    {
+      "level": 2,
+      "name": "Basic - what the device accepts",
+      "fields": [
+        "pcm_max_hz",
+        "dsd_max",
+        "native_dsd",
+        "dop",
+        "inputs"
+      ],
+      "unlocks": "The whole PCM path, correctly: the rate ladder stops falling back to a conservative 192 kHz, the right ceiling applies per input, and DSD transport is known. This is the level the PCM-only Auto mode needs, and it needs nothing beyond it.",
+      "obtained_from": "THE PROBE GIVES THIS FOR FREE. Tune already asks a device what rates and formats it accepts; the contribution form carries the answer. Per-input ceilings are also the one thing makers reliably publish.",
+      "_this_is_the_target": "Level 2 is where a record should normally enter, because it costs a contributor nothing and it is where the engine stops guessing."
+    },
+    {
+      "level": 3,
+      "name": "Advanced - what the device does inside",
+      "fields": [
+        "family",
+        "dsd_reconverted_to_pcm",
+        "dsd_direct",
+        "pcm_dsd_level_offset_db",
+        "bits",
+        "analog_filter",
+        "internal_bypass"
+      ],
+      "unlocks": "The DSD path: whether to send DSD at all, which modulator order, the level compensation so switching format does not change the volume, the real ladder depth to quantise to, and any rate at which the device steps its own processing aside.",
+      "obtained_from": "A datasheet, a maker's answer, or the reference implementation author's replies. NEVER a probe: no amount of asking a device what it accepts reveals what it does with it. This is the level that needs a person.",
+      "_the_hard_part": "Makers publish the chip and the accepted formats. They do not publish the PCM/DSD level offset, whether DSD is re-converted internally, or a ladder's real depth as opposed to its interface's. Those four fields are why this level is slow, and browsing maker sites will not supply them."
+    },
+    {
+      "level": 4,
+      "name": "Measured",
+      "fields": [
+        "correctable",
+        "device_correction_profile"
+      ],
+      "unlocks": "A per-device correction profile, and confirmation of the level-3 fields that were taken from documentation.",
+      "obtained_from": "Laboratory measurement of that device. This is the same thing Tune's own catalogue means by \"measured\", so the two statuses are the same axis and should be one field, not two.",
+      "_state": "No record in this catalogue is at this level, and none will be without hardware."
+    }
+  ],
+  "_state_2026_11_23": "Measured across the 27 records on 2026-11-23 by replaying the engine over each one, with the cascade taken into account: 19 are complete at level 2 and 3 carry a USB identity, so the catalogue is essentially a level-2 catalogue. ZERO are complete at level 3, and the shortfall is concentrated exactly where documentation runs out - the real ladder depth is known for 7 records, an internal bypass for 1, the PCM/DSD offset for 16, and whether DSD is re-converted for 15. That distribution is the argument for the levels: the cheap half is nearly done and the expensive half has barely started, and a single completeness percentage would have hidden both facts. CORRECTED: the 2026-11-20 figure read 24 at level 2, because that count did not apply this file's own field list - it left out `inputs`, which 6 records do not carry. The four field counts were right. A self-description that does not run its own criterion is the one number nobody re-checks."
+}

@@ -1,0 +1,6 @@
+__pycache__/
+.DS_Store
+
+# dist/ n'est PAS ignoré : l'artefact construit est commité, comme chez OPRA.
+# C'est ce qui permet à un consommateur de le récupérer sans que nous ayons
+# encore de miroir, et c'est ce que le miroir ira chercher quand il existera.

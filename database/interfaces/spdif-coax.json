@@ -1,0 +1,14 @@
+{
+  "id": "spdif_coax",
+  "name": "S/PDIF coaxial",
+  "native_dsd_possible": false,
+  "dop_possible": true,
+  "reports_buffer_occupancy": "not_applicable",
+  "policy": {
+    "pcm_max_hz": 192000,
+    "bits": 24,
+    "bits_above_hz": [],
+    "_this_is_a_policy": "Ce qu'il faut supposer quand l'appareil n'a rien dit, pas une mesure. Une fiche qui connaît son vrai chiffre l'emporte."
+  },
+  "note": "Conservative. The electrical link is the least restrictive of the S/PDIF family."
+}

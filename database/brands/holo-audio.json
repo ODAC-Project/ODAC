@@ -1,0 +1,8 @@
+{
+  "id": "holo_audio",
+  "name": "Holo Audio",
+  "family_claim": {
+    "family": "r2r_ladder",
+    "evidence": "The May, Spring and Cyan lines are all discrete resistor ladders; three records in this catalogue agree and none contradicts."
+  }
+}

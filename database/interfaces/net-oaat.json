@@ -1,0 +1,14 @@
+{
+  "id": "net_oaat",
+  "name": "OAAT (Tune)",
+  "native_dsd_possible": true,
+  "dop_possible": true,
+  "reports_buffer_occupancy": "after_instrumentation",
+  "policy": {
+    "pcm_max_hz": "unknown",
+    "bits": "unknown",
+    "bits_above_hz": [],
+    "_this_is_a_policy": "Ce qu'il faut supposer quand l'appareil n'a rien dit, pas une mesure. Une fiche qui connaît son vrai chiffre l'emporte."
+  },
+  "note": "Tune's own transport. Its ceiling is NOT recorded here because this catalogue does not know it - it is a question for the people who wrote it, not something to infer. What makes it worth its own entry rather than folding into the transparent group is the second measurement: a receiver that can be instrumented can report how full its buffer is, and buffer occupancy is the indicator that moves BEFORE a drop-out, where a throughput figure only confirms one afterwards."
+}

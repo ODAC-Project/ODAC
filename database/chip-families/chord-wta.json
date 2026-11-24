@@ -1,0 +1,18 @@
+{
+  "name": "Chord, proprietary WTA stage",
+  "technology": "fpga",
+  "switching_elements": "multi",
+  "modulator_order": 7,
+  "pcm_dsd_level_offset_db": "unknown",
+  "bits": "unknown",
+  "shaper_linearization": false,
+  "dsd_direct": false,
+  "dsd_reconverted_to_pcm": "unknown",
+  "_dsd_reconverted_to_pcm": "No evidence either way; the catalogue's Chord record takes no DSD.",
+  "evidence_markers": [
+    "Chord",
+    "WTA",
+    "FPGA"
+  ],
+  "id": "chord_wta"
+}

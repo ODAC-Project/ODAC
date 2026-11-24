@@ -1,0 +1,26 @@
+{
+  "source": {
+    "kind": "import",
+    "quote": "Gustard A26 manual and retailer specification tables, read 2026-11-20: USB, I2S over HDMI and LAN at PCM 44.1-768 kHz with native DSD to DSD512; coaxial, AES and optical at PCM 16-24 bit 44.1-192 kHz with DoP DSD64. Native DSD is available on USB, I2S and LAN only.",
+    "read_on": "2026-11-20"
+  },
+  "submitted_by": "import",
+  "submitted_on": "2026-11-24",
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000
+    },
+    "i2s": {
+      "pcm_max_hz": 768000
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000
+    }
+  }
+}

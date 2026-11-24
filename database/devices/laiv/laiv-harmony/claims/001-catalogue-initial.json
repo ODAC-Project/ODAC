@@ -1,0 +1,32 @@
+{
+  "source": {
+    "kind": "import",
+    "quote": "manual 4.4",
+    "read_on": "2026-11-20"
+  },
+  "submitted_by": "import",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "r2r_ladder",
+    "bits": 18,
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD256",
+    "native_dsd": true,
+    "dop": true,
+    "source": "manual 4.4",
+    "dsd_direct": "to_be_measured",
+    "analog_filter": "simple",
+    "correctable": false,
+    "device_settings": [
+      {
+        "setting": "Oversampling mode",
+        "set_to": "NOS",
+        "why": "In OS mode this converter oversamples EVERYTHING by sixteen to 705.6 or 768 kHz with its own filter. In NOS mode it runs at the rate it is given and applies none. Auto exists to do that work with a filter we designed and can account for, so the device's own stage should be out of the path - the same reasoning as the rate threshold that bypasses Chord's interpolation stage, reached here by a front-panel setting instead of by a rate.",
+        "source": "6moons and Stereophile reviews of the Harmony, read 2026-11-20."
+      }
+    ],
+    "chip": "A discrete resistor ladder built by the maker."
+  },
+  "notes": {},
+  "_note": "Lot repris du catalogue JSON d'origine. Sa preuve est la chaîne `source` de la fiche : à éclater en preuves par champ au fur et à mesure, car une seule citation pour dix faits est le défaut connu de ce lot. `notes` porte les gloses que la fiche d'origine attachait à tel ou tel champ."
+}

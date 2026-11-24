@@ -1,0 +1,23 @@
+{
+  "source": {
+    "kind": "import",
+    "quote": "Roon forum: « SMSL D-6 with updated firmware also works, up to DSD512 » ; reserve de l'auteur sur le mode DSD Direct des SMSL a puce 4499EX",
+    "read_on": "2026-11-20"
+  },
+  "submitted_by": "import",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "akm",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true,
+    "dsd_direct": "firmware_dependent",
+    "analog_filter": "simple",
+    "source": "Roon forum: « SMSL D-6 with updated firmware also works, up to DSD512 » ; reserve de l'auteur sur le mode DSD Direct des SMSL a puce 4499EX",
+    "correctable": false,
+    "chip": "Two AK4493 (AKM), balanced output."
+  },
+  "notes": {},
+  "_note": "Lot repris du catalogue JSON d'origine. Sa preuve est la chaîne `source` de la fiche : à éclater en preuves par champ au fur et à mesure, car une seule citation pour dix faits est le défaut connu de ce lot. `notes` porte les gloses que la fiche d'origine attachait à tel ou tel champ."
+}
