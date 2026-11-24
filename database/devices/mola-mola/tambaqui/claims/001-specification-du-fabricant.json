@@ -1,0 +1,55 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.mola-mola.nl/tambaqui.php",
+    "quote": "Mola Mola's own page for the Tambaqui, read 2026-11-24. OPERATING PRINCIPLE: « PWM DAC with 32-stage discrete analogue FIR output stage. Avoids 'sigma delta' tones and 'R2R' glitch and low-level linearity errors. » and « Asynchronous upsampling to 3.125MHz/32 bit. 7-th order noise shaper clearing 80kHz band. Each input rate has an optimized upsampling filter chain. » SUPPORTED FORMATS: « PCM up to 384kHz/32 bits (>192kHz and >24 bits via USB and Roon only) » and « DoP and Native DSD up to quad speed (USB and Roon only) ». I/O: « Optical (Toslink) », « S/PDIF (Cinch) », « AES/EBU (XLR) », « USB type B », « Ethernet (Roon Ready) », « Bluetooth (SBC, AAC, APTX, LDAC) », « IBIS over HDMI », « Balanced output (XLR) », « Headphone output (6.3mm Jack, Balanced XLR 4pin) ». PERFORMANCE: « Signal to Noise Ratio: 130dB »; « THD, IMD: not measurable (estimated -140dB) »; « Bandwidth: Up to 80kHz (apodizing response) »; « Integrated jitter: <1ps from 10Hz upwards, <300fs from 1kHz upwards ». Body text: « The converter is a two board stack. On the first board, all incoming digital audio is upsampled to 3.125MHz/32 bits and converted to noise shaped PWM. On the other board are two mono DACs, in which a discrete 32-stage FIR DAC and a single-stage 4th order filtering I/V converter, convert the PWM into analogue with a breathtaking 130dB SNR. This is near the theoretical limit for 24-bit files and far beyond that of even quad-speed DSD. »; « With the addition of a lossless digital volume control and headphone outputs »; « The Mola Mola Tambaqui is Roon Ready certified! »; « Responding to popular demand, Mola Mola launched the famous discrete DAC from the Makua as a separate unit. » The companion page https://www.mola-mola.nl/dac.php adds: « We decided to design, from the ground up, a discrete DAC »; « circuits and digital algorithms that were entirely developed in house »; and that the same two-board converter « fits into one of the option slots in the preamp ». Self-description: « Tambaqui - the DAC that Stands Alone ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "unknown",
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD256",
+    "native_dsd": true,
+    "dop": true,
+    "modulator_order": 7,
+    "analog_filter": "good",
+    "correctable": false,
+    "chip": "No part number, and the maker says why: « We decided to design, from the ground up, a discrete DAC » with « circuits and digital algorithms that were entirely developed in house ». The stage is « a discrete 32-stage FIR DAC and a single-stage 4th order filtering I/V converter », fed noise-shaped PWM at 3.125 MHz/32 bits."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "dsd_max": "DSD256",
+      "native_dsd_possible": true,
+      "dop_possible": true
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_the_most_economical_per_input_statement_in_the_catalogue": "Two lines do the work of a table. « PCM up to 384kHz/32 bits (>192kHz and >24 bits via USB and Roon only) » and « DoP and Native DSD up to quad speed (USB and Roon only) ». Read them and every input is settled: USB and the network input take 384 kHz, 32 bits, DSD256 both native and over DoP; AES/EBU, coaxial and optical take 192 kHz, 24 bits, and NO DSD AT ALL. The maker states the exception rather than repeating the rule, which is the opposite of Ferrum's six-line block and just as complete. It also gives this catalogue something it had not yet seen stated: three inputs that explicitly do not carry DSD, rather than three inputs whose DSD nobody has published.",
+  "_THE_MAKER_DENIES_BOTH_ENUM_VALUES_THAT_COULD_APPLY": "« PWM DAC with 32-stage discrete analogue FIR output stage. Avoids 'sigma delta' tones and 'R2R' glitch and low-level linearity errors. » technology takes delta_sigma, r2r, discrete_dsd or fpga, and the maker rules out the first two IN ITS OWN SENTENCE, by name, as the point of the design. discrete_dsd does not fit either: DSD is pulse-DENSITY modulation and this is pulse-WIDTH, which is why the noise shaper feeds 3.125 MHz PWM and not a 1-bit PDM stream. So technology is left ABSENT and the consequence must be said plainly: a consumer resolving the cascade falls back to delta_sigma on a converter whose maker advertises not being one. Third device in a single day that the enum cannot hold - Playback Designs says only « discrete », EMM Labs says « discrete » plus a DSD rate and so resolves, this one denies both options outright. Three cases is enough: the enum needs a fifth value.",
+  "_a_THIRD_target_format_and_the_schema_knows_two": "« all incoming digital audio is upsampled to 3.125MHz/32 bits and converted to noise shaped PWM. » Unconditional, every input, no setting. The catalogue now has dsd_reconverted_to_pcm and, since this afternoon, pcm_reconverted_to_dsd - two fields built on the assumption that there are two formats a device might convert to. Here the target is neither. Nagra remakes everything as DSD256 and APL HiFi as DSD128 or DSD256; this one remakes everything as 3.125 MHz PWM, and NEITHER FIELD IS WRITTEN because neither is true. The consequence for an engine is harsher than for the other two: on Nagra and APL there is at least one format that arrives without conversion, their own DSD rate. Here there is none. Nothing a source can send is noise-shaped PWM at 3.125 MHz, so every input is resampled whatever you do, and the only honest instruction is to send the cleanest thing the input accepts and stop optimising.",
+  "_apodizing_said_by_a_maker_for_the_first_time": "« Bandwidth: Up to 80kHz (apodizing response) ». The word appears in this catalogue's own vocabulary and in CH Precision's design intent (« minimizing pre- and post-ringing artifacts », without the word), and this is the first maker to name an apodising response as a measured property of its own output. There is no field for it. Recorded here because it is the kind of fact the catalogue exists to hold and currently cannot.",
+  "_modulator_order_7_is_stated_not_inherited": "« 7-th order noise shaper clearing 80kHz band ». Every other modulator_order in the base comes from a chip family's defaults; this one is on the maker's own spec line. Worth marking: it is the field most likely to be wrong by inheritance, since the family's value is derived from what a chip does and says nothing about a discrete stage built around it.",
+  "_analog_filter_good_rests_on_a_stated_order_this_time": "« a single-stage 4th order filtering I/V converter », with « Bandwidth: Up to 80kHz (apodizing response) ». A 4th-order analogue reconstruction stage reaching 80 kHz is a serious filter, so « good » is recorded. Unlike Soulution's 3rd-order Bessel, where the same judgement had to be made from an order and a cut-off alone, here the field's own documentation agrees independently: it says order 7 demands a good filter, and this device ships a 7th-order noise shaper. The two readings are kept separate on purpose - deriving the filter quality FROM the modulator order would be circular, so the value rests on the 4th-order I/V stage and the order merely fails to contradict it.",
+  "_correctable_false_for_the_same_reason_as_soulution": "The field applies « only for devices doing direct DSD or NOS PCM ». This device does neither: « Each input rate has an optimized upsampling filter chain », and everything becomes PWM. false is a derivation from the field's definition plus the maker's sentence, written rather than left absent so that nobody later attaches a profile the maker has ruled out.",
+  "_the_network_input_is_lost_for_the_sixth_time": "« Ethernet (Roon Ready) », rated identically to USB in both format lines, and not written. Sixth occurrence today after Soulution, MSB, McIntosh, Meitner and EMM Labs. Here the maker names exactly one protocol - Roon - and the interface vocabulary's thirteen keys do not include it. Two further inputs have no key either: « Bluetooth (SBC, AAC, APTX, LDAC) », where bluetooth DOES exist as a key but the page gives it no rate, and « IBIS over HDMI », a proprietary I2S-over-HDMI link with no rate stated.",
+  "_a_volume_control_that_loses_nothing_a_second_time": "« a lossless digital volume control ». APL HiFi said « non-decimating » this afternoon, and these are the only two pages in the pass to address what volume does to bit depth. Still no field. Two makers is where a pattern usually starts being worth one.",
+  "_this_converter_is_also_a_module_in_the_preamp": "The companion page says the same two-board stack « fits into one of the option slots in the preamp », and the Tambaqui page that Mola Mola « launched the famous discrete DAC from the Makua as a separate unit ». So one converter, two products: a card inside the Makua preamplifier and a box of its own. Fourth maker today whose converter or inputs travel between chassis, after MSB, CH Precision and Wadax - and the first where it is the CONVERTER that moves rather than the input. vocabulary/inputs-can-be-separate-objects.json covers the input case; this is its mirror and the file does not mention it.",
+  "_what_was_refused_a_comparison_with_dsd": "« near the theoretical limit for 24-bit files and far beyond that of even quad-speed DSD ». A claim about what DSD256 can achieve, used to situate this device's SNR. Nothing is recorded from it: it is an argument, not a measurement of this converter, and the measurement it would support - 130 dB SNR - is already stated on its own line."
+}

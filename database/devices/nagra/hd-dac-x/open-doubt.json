@@ -1,0 +1,5 @@
+{
+  "raised_on": "2026-11-24",
+  "text": "What performs the conversion. The page names « A high-performance FPGA » for « all internal calculations » and « two NOS military JAN5963 tubes » for the output, and nothing in between. Every input becomes DSD256, so something turns a 1-bit stream at 11.2 MHz into analogue, and the page does not say what. technology was briefly recorded as fpga and withdrawn (see the claim's own note): Rockna demonstrates on one device that an FPGA can do all the digital work while a discrete ladder converts.",
+  "what_would_resolve_it": "The Nagra HD DAC X user manual, linked from the product page and not read. Do NOT resolve it from « performs all internal calculations »: that sentence has now been shown, on another maker's page, to be compatible with a separate conversion stage."
+}

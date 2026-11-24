@@ -1,0 +1,17 @@
+{
+  "id": "rockna/wavedream-dac",
+  "kind": "dac",
+  "brand": "rockna",
+  "model": "Wavedream DAC",
+  "aliases": [
+    {
+      "text": "Wavedream Edition",
+      "relation": "edition"
+    },
+    {
+      "text": "Wavedream Signature",
+      "relation": "edition"
+    }
+  ],
+  "_two_editions_the_schema_cannot_tell_apart": "One page, two products: « RD-0 (used in Signature - 27 bit structure) and RD-1 (used in Edition - 26 bit structure) », with two output blocks measuring 132 dB and 122 dB SNR. Facts DO distinguish them, so `edition` is a stretch - and every field this catalogue HOLDS is identical for both: same inputs, same rates, same filters, same NOS switch, same ladder topology. What separates them is the module's bit structure, THD, SNR and output voltage, none of which the schema has. So the two names resolve here, as editions, and the reason is recorded: not missing evidence, but evidence about things the catalogue does not model."
+}

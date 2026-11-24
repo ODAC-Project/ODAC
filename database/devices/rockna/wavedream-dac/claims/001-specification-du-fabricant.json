@@ -1,0 +1,59 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.rockna-audio.com/products/wavedream-dac",
+    "quote": "Rockna Audio's own page for the Wavedream DAC, read 2026-11-24 in a browser (the Technical Specs panel is a hidden tab, invisible to a plain text extraction). DIGITAL INPUTS: « S/PDIF 24bit 44.1-192k PCM , DoP DSD64 »; « AES/EBU 24bit 44.1-192k PCM, DoP DSD64 »; « USB 32bit 44.1-384k PCM, DSD64-512 »; « HD-Link1 (LVDS) 32bit 44.1-384k PCM, DSD64-512 »; « HD-Link2 (LVDS) 32bit 44.1-384k PCM, DSD64-512 ». D/A CONVERSION: « For the effective D/A conversion stage we developed dedicated dac modules called RD-0 (used in Signature - 27 bit structure) and RD-1 (used in Edition - 26 bit structure). Modules themselves are complex pieces of technology, sharing a discrete sign-magnitude hybrid ladder topology, driven by a complex algorythm which is embedded into their own FPGA. »; « Currently RD-0/1 can sustain a maximum sample rate of 6 MHz, which is the industry's maximum sample rate specified for a audio dac. »; « The output of the dac modules is un-buffered ». SOFTWARE DEFINED ARCHITECTURE: « All building blocks of the Wavedream DAC concernig digital processing are built entirely on a single piece of programmable silicon - a FPGA. » CUSTOM DIGITAL FILTERS: « The Wavedream upsamples any material with a fixed rate of 16x. The dac modules will decode the digital stream with a rate of 768Khz, or 705.6Khz, respectively, according to input sample rate. »; « we have created a custom Parks-McClellan upsampling filter. There are three variations avaialble on current firmware: linear, minimumand hybrid phase. They are highly optimized filters, offering stunning performance with a large number of taps (5k), and they are different in regard of impulse response. »; « For the linear phase, the ringing energy (Gibb's overshoot) is equally split before and after impulse. Minimum phase type shows all this energy after impulse, while our special hyrid phase filter has a combined response between linear and minimum, exhibing very low overshoot before the impulse. » EXTRA MENU FEATURES: « The filter select feature - discussed above. The filters can be switched off for NOS operation. »; « The clock setting - there are 2 modes of the digital PLL response, stream and local. »; « Dither - to improve R2R ladder linearity, ultrasonic dither is applied on the last 4 bits from the digital 24-bit word. »; « The Wavedream has a 256 steps volume control which allows direct connection of a power amplifier. The volume control has 0.5 dB steps ». OUTPUT STAGE: « the output stage is totally discrete and acts as a high-speed buffer », « we combined j-fet & bipolar devices into a class A design ». OUTPUTS (Wavedream Signature): « S/N ratio (0 dB): 132 dB ». OUTPUTS (Wavedream Edition): « S/N ratio (0 dB): 122 dB ». Self-description: « We are proud to present our current flagship in digital audio reproduction. »",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "r2r_ladder",
+    "technology": "r2r",
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true,
+    "correctable": true,
+    "chip": "No part number, because the modules are the maker's own: « dedicated dac modules called RD-0 (used in Signature - 27 bit structure) and RD-1 (used in Edition - 26 bit structure) ... sharing a discrete sign-magnitude hybrid ladder topology, driven by a complex algorythm which is embedded into their own FPGA ». TWO FPGAs, doing two different jobs: one on the main board for « all building blocks ... concernig digital processing », one inside each module driving the ladder. The conversion itself is the discrete ladder, not either FPGA.",
+    "device_settings": [
+      {
+        "setting": "Filter select",
+        "set_to": "off (NOS operation)",
+        "why": "« The filters can be switched off for NOS operation. » Said by the maker, in a menu, with no condition. Without it the device « upsamples any material with a fixed rate of 16x » and decodes at 768 or 705.6 kHz through a 5k-tap Parks-McClellan filter of its own. Auto exists to do that work with a filter we designed and can account for, so the device's stage belongs out of the path. This is also what makes correctable true: the field applies « only for devices doing direct DSD or NOS PCM », and this is the first device in the catalogue whose maker offers NOS in so many words."
+      },
+      {
+        "setting": "Filter phase (when filters are on)",
+        "set_to": "hybrid phase",
+        "why": "Three named variations: « linear, minimum and hybrid phase ». The maker describes each by its impulse response - linear splits « the ringing energy (Gibb's overshoot) ... equally split before and after impulse », minimum « shows all this energy after impulse », and the hybrid « exhibing very low overshoot before the impulse ». Hybrid is recorded as the setting because pre-ringing is the artefact apodising filters exist to remove. It applies only if NOS is NOT selected, which is the first ordered pair of settings in the catalogue."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true
+    }
+  },
+  "_the_first_maker_stated_NOS_switch_in_the_catalogue": "« The filters can be switched off for NOS operation. » Eight words that do more for this database than any other sentence read today. They make correctable true on evidence rather than by elimination; they put a defeatable conversion stage beside the four read this afternoon that cannot be defeated - Soulution upsamples everything to 384 kHz, Nagra to DSD256, APL HiFi to DSD, Mola Mola to 3.125 MHz PWM, all unconditionally - and they are the fourth case proving internal_bypass is modelled wrong. That field assumes a RATE THRESHOLD above which a converter steps aside. Four devices now offer the same thing as a SETTING: RME's five filters, Totaldac's compensation filter, Ferrum's Signalyst filters and this. internal_bypass still stands on one record of 75.",
+  "_an_FPGA_that_is_not_the_converter": "The page says « a FPGA » twice and it is NOT the conversion stage either time. Once for the main board - « All building blocks of the Wavedream DAC concernig digital processing are built entirely on a single piece of programmable silicon » - and once inside each module, « driven by a complex algorythm which is embedded into their own FPGA ». The conversion is « a discrete sign-magnitude hybrid ladder topology », so technology is r2r. This page is the reason the nagra/hd-dac-x record was corrected the same day: there, « A high-performance FPGA performs all internal calculations » had been read as the conversion stage, and Rockna demonstrates on one device that an FPGA doing all the calculations is perfectly compatible with a ladder doing the conversion.",
+  "_two_proprietary_inputs_rated_as_high_as_usb_and_no_key_for_either": "« HD-Link1 (LVDS) 32bit 44.1-384k PCM, DSD64-512 » and « HD-Link2 (LVDS) », identical to USB. LVDS is the electrical layer and the maker never says I2S, so neither is mapped to i2s - unlike APL HiFi, whose page says « DTR balanced I2S inputs » in its own words and therefore earns the key. Even with a key the catalogue could not hold these two: there are TWO of them, and the inputs block has one slot per interface.",
+  "_dither_on_the_last_four_bits": "« to improve R2R ladder linearity, ultrasonic dither is applied on the last 4 bits from the digital 24-bit word. » A maker stating that it deliberately dithers the bottom of the word. The catalogue records bit depth as a ceiling and has nothing to say about what the device does with the quietest bits. Third thing today in that family, after APL HiFi's « non-decimating volume control » and Mola Mola's « lossless digital volume control »: makers at this level publish what happens to the low bits, and the schema only counts them.",
+  "_six_megahertz_is_the_module_not_the_input": "« Currently RD-0/1 can sustain a maximum sample rate of 6 MHz ». The same trap as EMM Labs' « 16xDSD converter » in another unit: that is what the MODULE can run at, and the highest thing the device ACCEPTS is 384 kHz PCM or DSD512. 6 MHz is recorded nowhere but in the quote."
+}
