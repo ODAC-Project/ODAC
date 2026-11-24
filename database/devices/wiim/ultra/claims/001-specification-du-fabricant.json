@@ -1,0 +1,27 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.wiimhome.com/wiimultra/overview",
+    "quote": "WiiM's own product page for the WiiM Ultra, read 2026-11-24. Internal DAC IC: « ESS ES9038Q2M », described in prose as « Premium 32-bit/384kHz ES9038 Q2M SABRE DAC ». Audio Input list: « 1 x Optical In: » « Up to 192 kHz/24-bit » and « 1 x HDMI ARC: » « Up to 192 kHz/24-bit », both « Supports Stereo PCM and Dolby Digital (DTS is not supported) ». Product comparison table category: « Music Streamer »; Main Purpose: « Connected to amplifier or powered speaker for streaming ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "chip": "ES9038Q2M (ESS), named by the maker as « Internal DAC IC: ESS ES9038Q2M ». No separate USB interface chip or clock is stated."
+  },
+  "inputs": {
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "hdmi": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_no_usb_audio_input": "USB on this device is an OUTPUT, not an input: the page lists « 1 x USB Out (up to 192 kHz/24-bit; UAC 2.0 compliant) » and its comparison row reads « USB Port (Storage/Audio Out) ». So unlike eversolo/dmp-a8 this record is a network player and nothing else, and `kind` is not strained.",
+  "_what_is_not_asserted": "NO DSD FIELD AT ALL. The maker's page does not mention DSD, DoP or a DSD rate anywhere, so dsd_max, native_dsd and dop are ABSENT - nobody filled them in - rather than \"unknown\", which would claim the question was asked and closed. No coaxial INPUT is listed either (coax is output only), and no network streaming rate is stated: the page gives a codec list and no rate limit. Nothing of level 3: the page mentions room correction and EQ and never says whether they can be bypassed."
+}

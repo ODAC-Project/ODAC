@@ -1,0 +1,17 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.fiio.com/k7",
+    "quote": "FiiO's own product page for the K7, read 2026-11-24. Basic specs: « DAC: AK4493SEQ*2 » and « Decoder: XMOS XUF 208 » and « Amplifier: Dual THX AAA 788+ ». Prose: « Dual AK4493SEQ DACs », « The left and right channels are each equipped with an efficient high-performance AK4493SEQ », « The XMOS XUF208 decoder chip uses dual clock management to handle various music formats with ease ». Inputs: « The K7 contains USB, optical, coaxial, and RCA inputs. » Self-description: « Truly balanced DAC/Amp ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "akm",
+    "chip": "Three parts, each with the role its maker gives it: TWO AK4493SEQ converters (AKM), one per channel - « The left and right channels are each equipped with an efficient high-performance AK4493SEQ » - an XMOS XUF208 as the USB interface, called « Decoder » by FiiO, and a « Dual THX AAA 788+ » amplifier stage. Exactly the case for a chip model that carries a ROLE per part: the converter, the interface and the amplifier are three different things and only the first is the conversion stage."
+  },
+  "_a_record_with_a_chip_and_no_ceilings": "THE PAGE GIVES NO RATE AT ALL. It names the inputs - « USB/OPT/COAX/RCA » - and states no maximum PCM rate, no bit depth, no DSD rate, for any of them. So this record carries a level-3 fact (the conversion stage) and NOTHING of level 2, which is the reverse of every other record here and of what the levels expect: level 2 is supposed to be the cheap part a probe gives for free. A maker can publish what is inside and stay silent on what it accepts.",
+  "_what_is_not_asserted": "No input block: the page names four inputs and rates none of them, so there is nothing to put in one. Naming an input with no field would assert that the input exists, which is true, and this catalogue has no way to say only that - see the open doubt."
+}

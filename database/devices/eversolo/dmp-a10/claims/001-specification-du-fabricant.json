@@ -1,0 +1,31 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.eversolo.com/en/products/dmp-a10",
+    "quote": "Eversolo's own specification table for the DMP-A10, read 2026-11-24. DAC: « ES9039 PRO ». Playback and DAC Decoding: « Support up to stereo DSD512, PCM 768KHz 32Bit ». Isolation USB-B Audio Input: « Supports Windows (10, 11), Android, IOS. Support up to stereo DSD512, PCM 768KHz 32Bit. » HDMI ARC: « Support up to stereo PCM 192KHz 24Bit ». Bluetooth Audio Input: « BT5.0, support SBC/AAC ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "chip": "ES9039PRO (ESS), named by the maker's table as « ES9039 PRO ». A Qualcomm QCC5125 handles Bluetooth; the page names no USB interface chip.",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512",
+    "native_dsd": true
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "native_dsd_possible": true
+    },
+    "hdmi": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "bluetooth": {}
+  },
+  "_what_is_not_asserted": "The page lists no optical or coaxial INPUT row, so none is claimed - absent, not zero. `dop` is absent too: the table says « DSD512 » for USB without naming a transport, and the DMP-A8's table distinguished « DSD512 Native » from « DSD64 DoP » explicitly, so silence here is not evidence. Bluetooth is listed as an input (« BT5.0, support SBC/AAC ») with no PCM ceiling stated, so the input exists with no field - which is what an empty input block means."
+}

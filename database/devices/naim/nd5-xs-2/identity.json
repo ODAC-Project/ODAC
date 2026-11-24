@@ -1,0 +1,16 @@
+{
+  "id": "naim/nd5-xs-2",
+  "kind": "network_player",
+  "brand": "naim",
+  "model": "ND5 XS 2",
+  "aliases": [
+    {
+      "text": "ND5XS",
+      "relation": "spelling"
+    },
+    {
+      "text": "ND5 XS2",
+      "relation": "spelling"
+    }
+  ]
+}

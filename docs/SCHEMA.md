@@ -49,7 +49,7 @@ converter as though they were one device — they share a USB identity, which is
 why they were listed together at all.
 
 There is no range level between brand and model, and that is measured rather than
-forgotten: of the 26 records, one brand has two or more models on the same
+forgotten: of the 30 records, one brand has two or more models on the same
 silicon, and its maker does not name them as a range. A level with no occupant is
 a mechanism that cannot be wrong because nothing exercises it. The rule for
 creating one — same silicon **and** the maker names the grouping — is decided and
@@ -228,10 +228,13 @@ amount of scraping closes it.
 on four others. The registry says list; the four others are wrong and should be
 converted.
 
-**43 of the 44 claims have source kind `import`.** The forty-fourth is the first
-record of the population pass, whose source is a maker's published specification
-and says so: `datasheet`. It is also the first claim ever to set
-`source_names_subject`, which CONTRIBUTING has asked for from the beginning. The evidence rule is formally
+**Almost every claim still has source kind `import`.** The exceptions are the
+records of the population pass, whose source is a maker's published specification
+and says so: `datasheet`, weight 70 against import's 15. They are also the first
+claims ever to set `source_names_subject`, which CONTRIBUTING has asked for from
+the beginning. The exact split is in the verifier's output rather than written
+here, because a figure in prose beside the data drifts and this one moves with
+every batch. The evidence rule is formally
 satisfied — every claim quotes something — but no claim yet carries a real kind
 (`measurement`, `manual`, `maker_reply`…). Splitting the imported batches into
 per-field claims with their real source is the first real curation work.

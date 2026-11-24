@@ -1,0 +1,12 @@
+{
+  "id": "fiio/k7",
+  "kind": "dac",
+  "brand": "fiio",
+  "model": "K7",
+  "aliases": [
+    {
+      "text": "K7 BT",
+      "relation": "edition"
+    }
+  ]
+}
