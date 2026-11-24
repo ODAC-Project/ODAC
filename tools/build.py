@@ -101,6 +101,7 @@ json.dump({"version": version, "fingerprint": fingerprint, "url": name,
            "entries": len(lines)},
           open(os.path.join(DIST, "latest.json"), "w", encoding="utf-8"),
           indent=2, ensure_ascii=False)
-print("dist/%s  %d entries, %d bytes" % (name, len(lines), len(body)))
+print("dist/%s  %d entries, %d bytes"
+      % (name, len(lines), len(body.encode("utf-8"))))
 print("fingerprint %s" % fingerprint)
 print("contested fields: %d" % contested_total)

@@ -200,10 +200,16 @@ print("claims     : %d" % n_claim)
 print("brands     : %d, chip families: %d, interfaces: %d"
       % (len(brands), len(families), len(ifaces)))
 used = sum(1 for e in registry.values() if e.get("used_on_records"))
-print("fields     : %d registered, %d in use, %d planned, %d deprecated"
-      % (len(registry), used,
-         sum(1 for e in registry.values() if e.get("planned")),
-         sum(1 for e in registry.values() if e.get("deprecated"))))
+planned = sum(1 for e in registry.values() if e.get("planned"))
+deprecated = sum(1 for e in registry.values() if e.get("deprecated"))
+# The three buckets must ACCOUNT FOR the total, or the line is a figure nobody
+# re-checks: it read "23 registered, 17 in use, 5 planned, 0 deprecated" while
+# 17 + 5 + 0 is 22, and the field it dropped was the one the registry exists to
+# surface - carried by no record and not marked planned either.
+unaccounted = len(registry) - used - planned - deprecated
+print("fields     : %d registered, %d in use, %d planned, %d deprecated%s"
+      % (len(registry), used, planned, deprecated,
+         (", %d IN NO BUCKET" % unaccounted) if unaccounted else ""))
 for w in warnings:
     print("warning    :", w)
 for e in errors:
