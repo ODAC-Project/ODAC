@@ -1,5 +1,6 @@
 {
   "id": "marantz_hddac1",
+  "kind": "dac",
   "brand": "marantz",
   "model": "HD-DAC1",
   "usb": [

@@ -10,5 +10,5 @@
     "bits_above_hz": [],
     "_this_is_a_policy": "Ce qu'il faut supposer quand l'appareil n'a rien dit, pas une mesure. Une fiche qui connaît son vrai chiffre l'emporte."
   },
-  "note": "Third-party protocols that impose no ceiling of their own and pass whatever the endpoint accepts: Roon RAAT, the reference implementation's network audio adapter, Ravenna and AES67. The limit is the device and the link, not the protocol. For studio-derived designs this is the HIGH-capability input: Merging's NADAC takes 384 kHz and DSD256 here while its AES input stops at 96 kHz. Tune's own receivers have their own entries, because they can be instrumented and these cannot."
+  "note": "Third-party protocols that impose no ceiling of their own and pass whatever the endpoint accepts: Roon RAAT, Ravenna and AES67. The limit is the device and the link, not the protocol. For studio-derived designs this is the HIGH-capability input: Merging's NADAC takes 384 kHz and DSD256 here while its AES input stops at 96 kHz."
 }

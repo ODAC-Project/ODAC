@@ -8,12 +8,13 @@ on what needs judgement: is this source serious, is this figure plausible for
 this device. A rule a human has to remember is a rule that stops being applied
 around the thirtieth contribution.
 """
-import json, os, sys
+import json, os, re, sys
 
 DB = sys.argv[1] if len(sys.argv) > 1 else os.path.join(
     os.path.dirname(os.path.abspath(__file__)), "..", "database")
 errors, warnings = [], []
-IDENTITY_KEYS = {"id", "brand", "model", "aliases", "usb"}
+IDENTITY_KEYS = {"id", "kind", "brand", "model", "aliases", "usb"}
+KINDS = {"dac", "network_player"}
 
 
 def load(path):
@@ -80,9 +81,13 @@ for brand_dir in sorted(os.listdir(devices)) if os.path.isdir(devices) else []:
             continue
         for where in find_nulls(ident, rel(ident_path)):
             errors.append("null at %s. Leave the key out, or write \"unknown\"" % where)
-        for f in ("id", "brand", "model"):
+        for f in ("id", "kind", "brand", "model"):
             if not ident.get(f):
                 errors.append("%s: identity has no %s" % (rel(ident_path), f))
+        if ident.get("kind") and ident["kind"] not in KINDS:
+            errors.append("%s: kind %r is not one of %s. The registry covers "
+                          "converters and network players"
+                          % (rel(ident_path), ident["kind"], ", ".join(sorted(KINDS))))
         if ident.get("brand") not in brands:
             errors.append("%s: brand %r is not in database/brands"
                           % (rel(ident_path), ident.get("brand")))
@@ -129,6 +134,32 @@ for brand_dir in sorted(os.listdir(devices)) if os.path.isdir(devices) else []:
             if fam and fam != "unknown" and fam not in families:
                 errors.append("%s: chip family %r is not in database/chip-families"
                               % (rel(cpath), fam))
+
+# --- what must not be published ----------------------------------------------
+# The seed came from a private catalogue, and a private catalogue carries things
+# a public registry must not: a sponsor's unreleased product names, internal
+# roadmap, reasoning about one vendor's software. The migration filtered those
+# out; this check is what keeps them out once contributions arrive directly and
+# the migration is no longer in the path.
+FORBIDDEN = [
+    (r"\bSendspin\b", "an unreleased product name"),
+    (r"\bTune bridge\b", "an unreleased product name"),
+    (r"after_instrumentation", "a sponsor's internal roadmap"),
+    (r"\bnot yet used\b", "a sponsor's internal roadmap"),
+    (r"\d{3,} (?:threads|posts)", "a harvested corpus; cite entries one by one"),
+]
+for root, _, files in os.walk(DB):
+    for f in sorted(files):
+        p = os.path.join(root, f)
+        try:
+            text = open(p, encoding="utf-8").read()
+        except Exception:
+            continue
+        for pattern, why in FORBIDDEN:
+            m = re.search(pattern, text)
+            if m:
+                errors.append("%s: %r must not be published — %s"
+                              % (rel(p), m.group(0), why))
 
 print("devices    : %d" % n_dev)
 print("claims     : %d" % n_claim)

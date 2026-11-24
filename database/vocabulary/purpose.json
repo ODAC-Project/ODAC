@@ -1,1 +1,1 @@
-"Device database. Any missing field is inherited from the chip family. Rates are indicative: Tune's own probing of the device always wins."
+"Device database. Any missing field is inherited from the chip family. Rates are indicative: a probe of the device itself always wins."

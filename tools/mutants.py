@@ -71,7 +71,15 @@ def broken_json(root):
     open(claim_path(root), "w", encoding="utf-8").write("{ not json")
 
 
+def forbidden_text(root):
+    p = claim_path(root)
+    c = json.load(open(p, encoding="utf-8"))
+    c["source"]["quote"] = c["source"]["quote"] + " Works with Sendspin."
+    json.dump(c, open(p, "w", encoding="utf-8"), indent=2, ensure_ascii=False)
+
+
 MUTANTS = [
+    ("an unreleased product name", forbidden_text, "must not be published"),
     ("a claim with no quoted evidence", drop_quote, "not evidence"),
     ("a null value", put_null, "null at"),
     ("a fact smuggled into identity", fact_in_identity, "which are facts"),

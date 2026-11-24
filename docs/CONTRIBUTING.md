@@ -21,6 +21,21 @@ Create `database/devices/<brand>/<device>/claims/NNN-short-name.json`:
 }
 ```
 
+## Signing off
+
+Every commit in a pull request carries a sign-off line:
+
+```
+Signed-off-by: Your Name <your@email>
+```
+
+`git commit -s` adds it. It is the [Developer Certificate of
+Origin](https://developercertificate.org/): you state that you have the right to
+submit this work and that it may be published under this repository's licences —
+CC BY-SA 4.0 for the data, MIT for the code. **There is no contributor licence
+agreement to sign.** Contributions made through the website's form record the
+same agreement with a checkbox, and the pull request it opens repeats it.
+
 ## What CI will refuse
 
 - **A claim with no `quote`.** A source that does not quote the words carrying

@@ -10,5 +10,5 @@
     "bits_above_hz": [],
     "_this_is_a_policy": "Ce qu'il faut supposer quand l'appareil n'a rien dit, pas une mesure. Une fiche qui connaît son vrai chiffre l'emporte."
   },
-  "note": "Already reports buffer occupancy today, as STAT fullness - read by Tune and not yet used. The cheapest of the per-zone measurements to obtain, because nothing has to be written for it."
+  "note": "Reports buffer occupancy today, as STAT fullness. The cheapest of the per-zone measurements to obtain, because the protocol already carries it."
 }

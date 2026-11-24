@@ -1,7 +1,7 @@
 {
   "_purpose": "What a model record must carry to be worth adding, and what each further step buys. Written 2026-11-20, because the catalogue had no entry criterion at all and so could grow without anyone being able to say whether it was improving.",
   "_not_a_field_count": "A level here is NOT how many fields are filled. It is which decision the engine can make because of them. Counting fields produces a number nobody can act on; naming the decision tells a contributor exactly what their five minutes would unlock. The levels also differ by HOW the facts are obtained, which is what makes them a plan rather than a label: one level the machine discovers by itself, the next a person has to read, the last an instrument has to measure.",
-  "_orthogonal_to_evidence": "The level is completeness. It is NOT quality, and it never substitutes for the evidence rule: every field present, at every level, must have a source naming THAT device. A level-2 record with solid evidence is worth more than a level-3 record carrying a guessed chip family - the Gustard X30 was level 3 and simply wrong. Tune's own documented/measured status answers a different question (how a fact was established) and the two compose: show both, conflate neither.",
+  "_orthogonal_to_evidence": "The level is completeness. It is NOT quality, and it never substitutes for the evidence rule: every field present, at every level, must have a source naming THAT device. A level-2 record with solid evidence is worth more than a level-3 record carrying a guessed chip family - the Gustard X30 was level 3 and simply wrong. A consumer's own documented/measured status answers a different question (how a fact was established) and the two compose: show both, conflate neither.",
   "_why_partial_records_are_safe": "An incomplete record can never make Auto worse than no record, because of how the cascade resolves: a field the record omits is inherited from the brand or the chip family, and a field nobody knows is \"unknown\", which makes the engine take the conservative branch. The danger is never missing data. It is data that is present and wrong, which is why the entry gate below is about evidence and identity rather than about filling boxes.",
   "levels": [
     {
@@ -29,7 +29,7 @@
         "inputs"
       ],
       "unlocks": "The whole PCM path, correctly: the rate ladder stops falling back to a conservative 192 kHz, the right ceiling applies per input, and DSD transport is known. This is the level the PCM-only Auto mode needs, and it needs nothing beyond it.",
-      "obtained_from": "THE PROBE GIVES THIS FOR FREE. Tune already asks a device what rates and formats it accepts; the contribution form carries the answer. Per-input ceilings are also the one thing makers reliably publish.",
+      "obtained_from": "THE PROBE GIVES THIS FOR FREE. Any player already asks a device what rates and formats it accepts; the contribution form carries the answer. Per-input ceilings are also the one thing makers reliably publish.",
       "_this_is_the_target": "Level 2 is where a record should normally enter, because it costs a contributor nothing and it is where the engine stops guessing."
     },
     {
@@ -56,7 +56,7 @@
         "device_correction_profile"
       ],
       "unlocks": "A per-device correction profile, and confirmation of the level-3 fields that were taken from documentation.",
-      "obtained_from": "Laboratory measurement of that device. This is the same thing Tune's own catalogue means by \"measured\", so the two statuses are the same axis and should be one field, not two.",
+      "obtained_from": "Laboratory measurement of that device. This is the same thing a vendor catalogue means by \"measured\", so the two statuses are the same axis and should be one field, not two.",
       "_state": "No record in this catalogue is at this level, and none will be without hardware."
     }
   ],

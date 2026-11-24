@@ -1,7 +1,8 @@
 # ODAC — Open DAC database
 
-An open, community-maintained database of **digital-to-analogue converters**:
-what each one accepts, what it does inside, and the evidence for every claim.
+An open, community-maintained registry of what **digital-to-analogue converters
+and network players** actually do with the signal: what each one accepts, what it
+does inside, and a cited source for every field.
 
 Started at [MozAIk Labs](https://mozaiklabs.fr), who maintain the repository
 and the mirror. The project lives under its own name because the data is about
@@ -79,6 +80,10 @@ Following OPRA's split, and for the same reason:
   cover the *sui generis* database right in Europe, which is why the data needs
   its own.
 
+Decided 24 November 2026. Contributions are published under those terms: the
+contribution form records your agreement, and a direct pull request carries a
+`Signed-off-by` line. There is no contributor licence agreement to sign.
+
 ## Who runs this
 
 **MozAIk Labs started ODAC and keeps it running.** They set up the repository,
@@ -107,7 +112,8 @@ database — not only Tune.
 
 ## Where it stands
 
-27 devices, 298 brands, 9 chip families, 15 interfaces, 48 claims, 6 open
-doubts. Nineteen records are complete on what the device accepts; **none** on
+27 devices — all converters so far — 298 brands, 9 chip families,
+13 interfaces, 48 claims, 6 open doubts. Every device record carries a `kind`,
+so the first network player enters without reopening the other twenty-seven. Nineteen records are complete on what the device accepts; **none** on
 what it does inside. The database is seeded from the Tune Smart Upsampler
 catalogue, and the projection is checked: no field lost, no value changed.

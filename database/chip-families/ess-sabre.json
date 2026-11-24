@@ -9,7 +9,7 @@
   "dsd_direct": false,
   "dsd_reconverted_to_pcm": false,
   "_note": "Never bit-exact, in PCM or DSD: everything goes through its internal DSP. Author: \"ESS is out since it's always through DSP\". Consequence: not correctable. That is the ONLY consequence - it does not follow that the part re-converts DSD to PCM, and the same author recommends DSD output to ESS parts. See dsd_reconverted_to_pcm.",
-  "_dsd_reconverted_to_pcm": "Not established by the family note, which concludes only that nothing is bit-exact. The reference software's author recommends DSD output to ESS parts by name - fifth-order modulation before the ES9039 - which he would not do for a converter that undoes the work. So: not re-converted, and not correctable.",
+  "_dsd_reconverted_to_pcm": "Not established by the family note, which concludes only that nothing is bit-exact. A recognised expert recommends DSD output to ESS parts by name — fifth-order modulation before the ES9039 — which he would not do for a converter that undoes the work. So: not re-converted, and not correctable. The citation is in the record's source field and should be checkable; where it is not yet, that is a gap to close rather than a claim to keep.",
   "evidence_markers": [
     "ESS",
     "Sabre",
