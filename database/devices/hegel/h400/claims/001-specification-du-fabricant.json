@@ -1,0 +1,40 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://hegel.com/en/products/integrated/h400",
+    "quote": "Hegel's own page for the H400, read 2026-11-24. « Digital inputs »: « 1 x coaxial (BNC, S/PDIF 24/192, DSD64 (DoP), MQA 8x), 1 x coaxial (RCA, S/PDIF 24/192, DSD64 (DoP), MQA 8x), 3 x optical (S/PDIF 24/96, MQA 8x), 1 x USB (32/384, DSD256 (DoP), MQA 8x, 1 x Network (24/192, DSD64 (DoP), MQA 8x) » - the unbalanced parentheses are the page's. « Digital outputs »: « 1 x coaxial (BNC) S/PDIF 24/192 ». A feature bullet reads « Bit-Perfect DAC » and the prose « a high-quality bit-perfect DAC based on the one in the H600 ». No DAC chip is named anywhere on the page, and no digital filter, oversampling or NOS row exists.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "unknown",
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD256",
+    "dop": true,
+    "chip": "Not named. Described only by reference to another product: « a high-quality bit-perfect DAC based on the one in the H600 »."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "dsd_max": "DSD256",
+      "dop_possible": true
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000,
+      "bits": 24
+    }
+  },
+  "_hegel_ecrit_DoP_partout_et_native_nulle_part": "Every DSD figure on every Hegel page carries « (DoP) »: « DSD64(DoP) » on the S/PDIF inputs, « DSD256(DoP) » on USB. Not one page says native. So dop is true and native_dsd is ABSENT - not false, because the maker never addresses it. Among 110 records this is the only brand that states the transport on every DSD figure it publishes and never once states the alternative.",
+  "_mqa_8x_sur_chaque_entree_et_aucun_champ_pour_le_dire": "« MQA 8x » appears beside the rate on every input of every Hegel that has figures. Fifth brand in the harvest to publish MQA support - after Berkeley, CH Precision, MSB and Wadax - and still no field: MQA's bearing on a conversion engine is not established, and a field nobody can act on is worse than a gap.",
+  "_un_convertisseur_decrit_par_renvoi_a_un_autre_produit": "« a high-quality bit-perfect DAC BASED ON the one in the H600 ». Nothing about the H600's converter may be copied here on that basis: « based on » is the maker declining to say what the difference is. The two records therefore carry identical published figures and no shared chip claim, which is the correct outcome and not a gap to fill."
+}

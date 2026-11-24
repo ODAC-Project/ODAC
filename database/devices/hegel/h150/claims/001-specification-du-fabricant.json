@@ -1,0 +1,31 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://hegel.com/en/products/integrated/h150",
+    "quote": "Hegel's own page for the H150, read 2026-11-24. « Digital inputs »: « 1x Coaxial (RCA) S/PDIF - 24/192, 2x Optical S/PDIF - 24/96, 1x USB B- 24/192, 1x USB A 2.0 - USB Drives (10,000 songs), 1x Network - 24/192 ». « Digital outputs »: « 1x Coaxial S/PDIF - 24/192 ». No DSD figure anywhere. The prose says « a competent, custom-designed, four-layered digital-to-analog converter (DAC) ». No DAC chip is named anywhere on the page, and no digital filter, oversampling or NOS row exists.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "unknown",
+    "pcm_max_hz": 192000,
+    "bits": 24,
+    "chip": "Not named. « a competent, custom-designed, four-layered digital-to-analog converter » - « four-layered » describes the circuit board, not the conversion."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000,
+      "bits": 24
+    }
+  }
+}

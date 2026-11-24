@@ -1,0 +1,41 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://hegel.com/en/products/integrated/h600",
+    "quote": "Hegel's own page for the H600, read 2026-11-24. « Digital inputs »: « 1 x Coaxial (BNC) S/PDIF - 24/192, DSD64 (DoP), MQA 8x, 1 x Coaxial (RCA) S/PDIF - 24/192, DSD64 (DoP), MQA 8x, 3 x Optical S/PDIF - 24/96, MQA 8x, 1 x USB -32/384, DSD256 (DoP), MQA 8x, 1 x Network - 24/192, DSD64, MQA 8x ». « Digital outputs »: « 1 x Coaxial (BNC) S/PDIF - 24/192 ». The prose says « The H600's D/A Converter is a bit-perfect design, offering pure audio fidelity without any resampling or upsampling. » No DAC chip is named anywhere on the page, and no digital filter, oversampling or NOS row exists.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "unknown",
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD256",
+    "dop": true,
+    "chip": "Not named. The prose calls it « a bit-perfect design »."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "dsd_max": "DSD256",
+      "dop_possible": true
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000,
+      "bits": 24
+    }
+  },
+  "_hegel_ecrit_DoP_partout_et_native_nulle_part": "Every DSD figure on every Hegel page carries « (DoP) »: « DSD64(DoP) » on the S/PDIF inputs, « DSD256(DoP) » on USB. Not one page says native. So dop is true and native_dsd is ABSENT - not false, because the maker never addresses it. Among 110 records this is the only brand that states the transport on every DSD figure it publishes and never once states the alternative.",
+  "_mqa_8x_sur_chaque_entree_et_aucun_champ_pour_le_dire": "« MQA 8x » appears beside the rate on every input of every Hegel that has figures. Fifth brand in the harvest to publish MQA support - after Berkeley, CH Precision, MSB and Wadax - and still no field: MQA's bearing on a conversion engine is not established, and a field nobody can act on is worse than a gap.",
+  "_lentree_reseau_est_la_SEULE_sans_le_mot_DoP": "« 1 x Network - 24/192, DSD64, MQA 8x ». Every other DSD figure on this page and on the D50, the H400 and the H200 reads « DSD64 (DoP) »; this one reads « DSD64 » bare. Either the network path carries DSD natively, or the qualifier was dropped. One word of difference on one line is not enough to assert native DSD over a network input, so nothing is written - and the network input has no key here anyway, for the seventh time in this harvest. Flagged because it is exactly the kind of single-word variation that an automated read would either ignore or over-interpret.",
+  "_sans_reechantillonnage_nest_pas_encore_un_fait": "« a bit-perfect design, offering pure audio fidelity without any resampling or upsampling ». If true as stated, this device runs non-oversampling, which is one of the two preconditions `correctable` requires - and correctable is NOT written. Two reasons. It is prose in a product description, not a specification row, and « bit-perfect » is a phrase this maker uses as a selling point across its range (the H400 page calls its converter « a high-quality bit-perfect DAC based on the one in the H600 »). A claim that would turn on a correction profile needs better than marketing copy. See the record's open doubt."
+}

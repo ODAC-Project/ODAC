@@ -1,0 +1,53 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.cambridgeaudio.com/gbr/en/products/hi-fi/dacmagic/dacmagic-200m",
+    "quote": "Cambridge Audio's own page for the DacMagic 200M, read 2026-11-24. Row « DIGITAL INPUT SAMPLING FREQUENCIES SUPPORTED »: « 44.1kHz to 96kHz PCM, DoP64 (Optical), 44.1kHz to 192kHz PCM, DoP64 (Coaxial), 44.1kHz to 768kHz PCM, Native DSD 64x to 512x, DoP 64x to 256x (USB) ». Word-width row: « 16bit (Bluetooth), 16-24bit (Optical, Coaxial), 16-24bit (USB) ». Row « DIGITAL TO ANALOGUE CONVERTERS »: « Dual ESS ES9028Q2M DACs ». Row « DIGITAL FILTER »: « Selectable, Fast - Slow - Short delay ». Bluetooth row: « v4.2, A2DP profile, SBC and AptX codecs ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 768000,
+    "bits": 24,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true,
+    "chip": "« Dual ESS ES9028Q2M DACs », from the page's own « DIGITAL TO ANALOGUE CONVERTERS » row.",
+    "device_settings": [
+      {
+        "setting": "Digital filter",
+        "set_to": "Short delay",
+        "why": "« Selectable, Fast - Slow - Short delay » - three filters, NAMED, in a specification row. The third is the one to prefer: a short-delay (minimum-phase) response puts the filter's ringing energy after the impulse rather than before it, and pre-ringing is the artefact apodising filters exist to remove - the same reasoning as Rockna's « hybrid phase ». The names are the ES9028Q2M's own filter menu exposed to the user, which is the first time in this catalogue a maker has done that instead of hiding it."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 24,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true,
+      "dop_possible": true
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true
+    },
+    "bluetooth": {
+      "bits": 16
+    }
+  },
+  "_native_et_DoP_avec_DEUX_plafonds_differents_sur_la_meme_prise": "« Native DSD 64x to 512x, DoP 64x to 256x (USB) ». DSD512 native, DSD256 over DoP, one socket. Third maker to publish this split after APL HiFi and Matrix Audio, and the third time inputs.dsd_max - a single value - has had to take the native figure and let the DoP half live in a boolean. The pattern is now evidenced enough to act on: the ceiling belongs to the pair (input, transport).",
+  "_un_plafond_de_profondeur_pour_le_bluetooth": "« 16bit (Bluetooth) » in the word-width row, while optical, coaxial and USB get 16-24. The bluetooth interface exists in the vocabulary and this is the first record to use it for a stated figure. No rate is given, so only the depth is written - and 16 bits is a real ceiling a consumer can act on."
+}

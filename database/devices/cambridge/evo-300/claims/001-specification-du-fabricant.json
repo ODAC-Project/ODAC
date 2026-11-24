@@ -1,0 +1,43 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.cambridgeaudio.com/gbr/en/products/hi-fi/evo/evo-300",
+    "quote": "Cambridge Audio's own page for the Evo 300, read 2026-11-24. Row « Sampling Rates »: « Optical: 16/24-bit, 32-192kHz PCM, Coaxial: 16/24-bit, 32-192kHz PCM, USB Class 1: Up to 24-bit/96kHz, USB Class 2: Up to 32bit 768kHz PCM, DSD512, ARC: 16/24-bit, 32-192kHz PCM, Bluetooth: Up to aptX HD (24-bit/48kHz) ». DAC row: « ESS9038Q2M ». No filter or oversampling row. The page's « This Model » / « Not This Model » block compares it with the Evo 150 SE and reads « Higher-grade ESS Sabre ES9038Q2M DAC » against « ESS Sabre DAC ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "chip": "« ESS9038Q2M » (ESS), from the page's DAC row - written without the Sabre name there and with it in the comparison block."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "hdmi": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "bluetooth": {
+      "pcm_max_hz": 48000,
+      "bits": 24
+    }
+  },
+  "_une_prise_usb_avec_DEUX_plafonds_selon_la_CLASSE_usb": "« USB Class 1: Up to 24-bit/96kHz » and « USB Class 2: Up to 32bit 768kHz PCM, DSD512 ». One socket, two ceilings, and what chooses between them is the USB Audio Class the device is operating in - a factor of EIGHT on the rate. New shape in this catalogue: MSB had two ceilings because it sells two USB MODULES, APL and Matrix because native DSD and DoP differ, and here it is one piece of hardware in two protocol modes. The Class 2 figure is recorded, because Class 2 is what the specification row leads with and what the whole « DSD512 » claim rests on; which mode a given system negotiates the page does not say, and no device_settings entry is written because the page names no setting. A consumer on Class 1 gets 96 kHz and this record cannot warn them.",
+  "_loptique_a_192_chez_ce_modele_et_96_chez_son_voisin": "« Optical: 16/24-bit, 32-192kHz PCM » here, against « TOSLINK optical: 16/24bit 32-96kHz PCM only » on the Evo 150 SE and on both CXN100s - same maker, same season. Third maker tonight to rate optical differently across its own range, after FiiO and Matrix. vocabulary/why-the-optical-default-stays-low treats 96 kHz as a convention, and this is more evidence that it is one."
+}

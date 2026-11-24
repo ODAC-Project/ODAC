@@ -1,0 +1,39 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.cambridgeaudio.com/gbr/en/products/hi-fi/cx/cxn100",
+    "quote": "Cambridge Audio's own page for the CXN100, read 2026-11-24, where it is shown as archived. Row « COMPATIBILITY », identical in wording to the CXN100 SE's: « TOSLINK optical: 16/24bit 32-96kHz PCM, DoP64 S/PDIF coaxial: 16/24bit 32-192kHz PCM, DoP64 », « UPnP: up to 32bit, 768kHz Local USB media: PCM up to 32-bit 768kHz, DSD up to x512 », « USB audio: PCM up to 32-bit 768kHz, DSD up to x512 ». Digital-inputs row: « USB Drive, Bluetooth (5.1), S/PDIF Coaxial, TOSLINK Optical » - with no HDMI eARC. DAC row: « ESS ES9028Q2M ». No filter row.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "dop": true,
+    "chip": "« ESS ES9028Q2M », from the page's DAC row."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true
+    }
+  },
+  "_un_modele_archive_qui_merite_sa_fiche": "The page marks it archived and the figures are identical to the SE's, the HDMI socket apart. It gets its own record rather than an alias, because a device people still own is a device the engine will meet - and because the SE differs from it by a fitted input, which is a fact and therefore disqualifies `edition`. The two records' figures agreeing is not a reason to merge them; it is what you would expect of one platform in two revisions."
+}

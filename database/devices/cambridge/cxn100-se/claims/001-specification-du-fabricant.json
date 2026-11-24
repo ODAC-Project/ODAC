@@ -1,0 +1,40 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.cambridgeaudio.com/gbr/en/products/hi-fi/cx/cxn100-se",
+    "quote": "Cambridge Audio's own page for the CXN100 SE, read 2026-11-24. Row « Compatibility »: « TOSLINK optical: 16/24bit 32-96kHz PCM, DoP64 S/PDIF coaxial: 16/24bit 32-192kHz PCM, DoP64 », « UPnP: up to 32bit, 768kHz Local USB media: PCM up to 32-bit 768kHz, DSD up to x512 », « USB audio: PCM up to 32-bit 768kHz, DSD up to x512 Bluetooth: SBC, AAC AirPlay 2, Chromecast built-in ». Digital-inputs row: « HDMI eARC, USB Drive, Bluetooth (5.1), S/PDIF Coaxial, TOSLINK Optical ». DAC row: « ESS ES9028Q2M ». No filter or oversampling row. The page's marketing text elsewhere says « up to 32-bit/384kHz and DSD256 ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "dop": true,
+    "chip": "« ESS ES9028Q2M », from the page's DAC row."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true
+    }
+  },
+  "_la_page_se_contredit_elle_meme_dun_facteur_deux": "The specification row says « PCM up to 32-bit 768kHz, DSD up to x512 »; the marketing text on the SAME page says « up to 32-bit/384kHz and DSD256 ». A factor of two on the rate and one step on DSD, one page, one maker. The SPECIFICATION row is recorded, because that is the part of a page written to be a specification - the same rule applied to Chord, where a product page said 96 kHz twice and the maker's own manual said 192. There the two sources had different weights and the build resolved it; here they are the same page and the same weight, so the choice is editorial and is stated rather than hidden. The marketing figure is kept in the quote so a contributor can disagree.",
+  "_hdmi_earc_nomme_et_jamais_chiffre": "« HDMI eARC » is in the list of digital inputs and appears in no rate row. The CXN100 - the archived model on the same template - lists the same inputs WITHOUT HDMI eARC, so the socket is what the SE adds, and the page does not say what it accepts. No hdmi block is written."
+}

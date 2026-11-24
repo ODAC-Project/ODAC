@@ -1,0 +1,43 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.cambridgeaudio.com/gbr/en/products/hi-fi/evo/evo-150-se",
+    "quote": "Cambridge Audio's own page for the Evo 150 SE, read 2026-11-24. Row « COMPATIBILITY »: « TOSLINK optical: 16/24bit 32-96kHz PCM only S/PDIF coaxial: 16/24bit 32-192kHz PCM only », « USB Audio Class 1: Up to 24-bit 96kHz (asynchronous) USB Audio Class 2: Up to 24-bit 384kHz (asynchronous) and up to DSD 256 », « Bluetooth: 4.2 A2DP/ AVRCP supporting up to aptX HD (24bit 48kHz) », « ARC: 16/24bit 32-192kHz PCM only ». DAC row: « ESS Sabre ES9018K2M ». No filter or oversampling row.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 384000,
+    "bits": 24,
+    "dsd_max": "DSD256",
+    "chip": "« ESS Sabre ES9018K2M » (ESS), from the page's DAC row."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 24,
+      "dsd_max": "DSD256"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000,
+      "bits": 24
+    },
+    "hdmi": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "bluetooth": {
+      "pcm_max_hz": 48000,
+      "bits": 24
+    }
+  },
+  "_PCM_only_dit_explicitement_quil_ny_a_pas_de_dsd": "« 16/24bit 32-96kHz PCM only » on optical, « 32-192kHz PCM only » on coaxial and on ARC. The word « only » is the maker closing the DSD question for three inputs - and inputs.dsd_max has no value for « none », exactly the gap the Schiit Yggdrasil opened an hour earlier. Three more inputs that need the word, on a second maker. The field is left absent on them, which reads as « nobody asked » when the page answers.",
+  "_les_deux_classes_usb_encore_et_un_ecart_de_quatre": "« USB Audio Class 1: Up to 24-bit 96kHz » against « USB Audio Class 2: Up to 24-bit 384kHz and up to DSD 256 ». Same shape as the Evo 300, factor of four instead of eight, and DSD available in Class 2 only. Two models of one maker publishing it makes the USB-class split a documented pattern rather than a curiosity."
+}

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "kind": "retailer",
+    "url": "https://lampizator.com/pacific-5",
+    "quote": "LampizatOr North America's page for the Pacific 5, read 2026-11-24. « Four digital inputs: AES/EBU, S/PDIF, Toslink, USB » - no per-input rate or bit depth is given. « DSD 512 native support ». Under « Design Principles »: « Discrete Resistor Ladder »; « Directly Heated Triodes in single-ended topology »; « Tube power supply with active tube anode loading »; « Native Zero Upsampling, Zero Oversampling Processing »; « Zero feedback design ». Self-description: « The Invisible DAC - Designed to Get Out of the Way » and « Pacific has no sonic signature - it simply disappears between you and the recording. » Homepage: « At LampizatOr we build everything by hand. » and « Nothing we make is mass-produced and no product is off-the-shelf. » Price shown « from $31,995.00 ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "r2r_ladder",
+    "technology": "r2r",
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "correctable": true,
+    "chip": "No part number and none to expect: « Discrete Resistor Ladder ». The « Directly Heated Triodes in single-ended topology » and the « Tube power supply » are the OUTPUT and supply stages, not the converter.",
+    "device_settings": [
+      {
+        "setting": "Oversampling",
+        "set_to": "none (by design)",
+        "why": "« Native Zero Upsampling, Zero Oversampling Processing » is a design principle here, not a switch: there is nothing to turn off. That is the precondition `correctable` requires, met by construction rather than by a menu - the first such case in the catalogue, where the other six NOS devices all offer it as a setting."
+      }
+    ]
+  },
+  "_la_source_nest_PAS_le_fabricant_et_le_poids_le_dit": "Recorded as `retailer` (weight 35) and not `datasheet` (70), deliberately. The maker's own site, lampizator.eu, fails with a certificate that belongs to a hosting wildcard - « Host: lampizator.eu. is not in the cert's altnames: DNS:*.home.pl, DNS:home.pl » - which is a hosting misconfiguration and therefore permanent until they fix it. What was read instead is lampizator.com, titled « LampizatOr North America », whose contact block is unfilled Squarespace boilerplate (« 123 Street Avenue, City Town, 99999 », « email@address.com », « You can set your address, phone number, email and site description in the settings tab. ») and whose footer email is on a THIRD domain, lampizatorna.com. It carries the brand's name and its product range, and nothing read establishes that it is the maker's own publication rather than an importer's. So the facts are taken and the weight says what they are worth: any claim from lampizator.eu, should it ever load, outranks this one and should.",
+  "_aucun_plafond_PCM_du_tout": "« Four digital inputs: AES/EBU, S/PDIF, Toslink, USB » and not one sample rate, for any input, on a 31,995 dollar converter. pcm_max_hz is absent and so is every inputs block. The DSD figure is the only number about what the device accepts. Fourth record in the catalogue to know what a device does inside while knowing nothing of what it takes - after CH Precision, Nagra and Hegel's H95.",
+  "_ici_NOS_ne_veut_pas_dire_New_Old_Stock_et_cest_une_chance": "vocabulary/nos-means-two-things.json names LampizatOr as one of the makers where the ambiguity would bite hardest, because valves and non-oversampling converters meet in the same catalogue. This page settles it by never using the three letters: it writes « Native Zero Upsampling, Zero Oversampling Processing » in full. Had it said « NOS », beside « Directly Heated Triodes », nothing on the page would have told us which meaning was meant - and correctable, the field that turns on it, would have been unwritable."
+}

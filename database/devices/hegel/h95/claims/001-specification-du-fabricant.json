@@ -1,0 +1,16 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://hegel.com/en/products/integrated/h95",
+    "quote": "Hegel's own page for the H95, read 2026-11-24. The digital-input row names the sockets and gives NO figures: « 1 x coaxial (RCA), 3 x optical, 1 x USB, 1 x Network ». A feature bullet reads « 6 Digital Inputs ». The prose says « a top-tier Digital-to-Analog Converter designed entirely in-house ». No bit depth, no sample rate, no DSD, no chip, no filter anywhere on the page.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "unknown",
+    "chip": "Not named. « a top-tier Digital-to-Analog Converter designed entirely in-house » is the whole of what the page says about it."
+  },
+  "_une_fiche_de_niveau_1_chez_un_fabricant_qui_chiffre_tout_le_reste": "Six of Hegel's seven current pages give a rate and a bit depth per input; this one names the sockets and stops. So the gap is not the brand's practice but this page's, which is worth recording: a reader comparing Hegel models would reasonably assume the H95 matches its siblings, and nothing published supports that. Nothing is inherited - the H400's figures are not the H95's, any more than the H600's converter is the H400's."
+}

@@ -1,0 +1,32 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://hegel.com/en/products/integrated/h190v",
+    "quote": "Hegel's own page for the H190v, read 2026-11-24. « Digital inputs »: « 1*Coaxial S/PDIF, 24/192, 3*Optical S/PDIF, 24/96, 1*USB, 24/96, 1*Network, 24/192 ». No DSD or MQA figure anywhere on the page, and no digital-output row. No DAC chip is named anywhere on the page, and no digital filter, oversampling or NOS row exists.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "unknown",
+    "pcm_max_hz": 192000,
+    "bits": 24,
+    "chip": "Not named. The prose mentions only « A dedicated and improved power supply for the preamp and DAC section »."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 96000,
+      "bits": 24
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000,
+      "bits": 24
+    }
+  },
+  "_lusb_est_lentree_la_plus_FAIBLE_de_cet_appareil": "« 1*USB, 24/96 » against « 1*Coaxial S/PDIF, 24/192 » and « 1*Network, 24/192 ». USB, which on every other record in this catalogue is the best input, is here the worst - half the coaxial rate and level with optical. A consumer told the device does 192 kHz and connecting a computer by USB would get 96. The clearest single argument in 110 records for reading the input and not the device."
+}
