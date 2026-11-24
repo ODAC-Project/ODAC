@@ -1,0 +1,22 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.smsl-audio.com/portal/product/detail/id/795.html",
+    "quote": "SMSL's own page for the D-6, read 2026-11-24: « The second-generation XMOS solution supports sampling rate up to 32bit/768KHz and DSD512 »; « AK4493 chip, and carefully adjusted it to an unprecedented 0.00011% ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512"
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32
+    }
+  },
+  "_enriches_a_seed_record": "This record existed from the seed import with family akm and a chip line reading « Two AK4493 (AKM), balanced output ». The maker's page says « AK4493 chip » in the singular and does not state a count. The seed's count is not contradicted here and not confirmed either; this claim adds the rates the seed lacked and leaves the count alone. It is also the record whose doubt notes no written reason for having no input block - it has one now."
+}

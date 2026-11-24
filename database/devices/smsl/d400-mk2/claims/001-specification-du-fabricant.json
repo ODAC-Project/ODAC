@@ -1,0 +1,41 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.smsl-audio.com/portal/product/detail/id/956.html",
+    "quote": "SMSL's own page for the D400 MK2, read 2026-11-24: « AK4191+ 1AK4499EX, tap all the potential of thechip »; « AK4499EX per channel, distortion as low as astaggering 0.00006%(-124dB) »; « New 3rd generation XMOS XU-316, PCM support up to 32bit/768kHz,DSD support to DSD512 »; « USB, optical fiber, coaxial , AES,I2S support DSD transmission, coaxialand optical fiber support DOP64 »; « Qualcomm high-end Bluetooth chip, support LDAC(24bit/96kHz),APTX/HD, sBC,AAC ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "akm",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true,
+    "chip": "« AK4191+ 1AK4499EX » with « AK4499EX per channel » - a modulator plus one converter per channel. FOURTH record in this catalogue on the AK4191+AK4499 pairing, after gustard/a26, eversolo/dmp-a8 and eversolo/dac-z10. The pairing is a house architecture across makers, and `family: akm` says none of it."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "native_dsd_possible": true
+    },
+    "i2s": {
+      "native_dsd_possible": true
+    },
+    "aes_ebu": {
+      "native_dsd_possible": true
+    },
+    "spdif_coax": {
+      "dop_possible": true,
+      "native_dsd_possible": false
+    },
+    "spdif_optical": {
+      "dop_possible": true,
+      "native_dsd_possible": false
+    }
+  },
+  "_aes_differs_from_its_sibling": "Read the maker's sentence closely: « USB, optical fiber, coaxial , AES,I2S support DSD transmission, coaxialand optical fiber support DOP64 ». AES is in the first list and NOT in the DoP list, so on this device AES carries native DSD - where smsl/su-10 and smsl/su-x both put AES among the DoP-only inputs. Two models of one maker differing on one input's transport, which is exactly the kind of thing a per-input field exists to hold."
+}

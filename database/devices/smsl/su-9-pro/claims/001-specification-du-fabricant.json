@@ -1,0 +1,36 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.smsl-audio.com/portal/product/detail/id/805.html",
+    "quote": "SMSL's own page for the SU-9 Pro, read 2026-11-24: « Used the latest high-end ES9039MSPRO D/A chip of ESS company »; « XMOS XU-316, true 32bit USB processing, supports DoP and Native DSD, and PCM reaches up to 768kHz and DSD512. The newly self-developed CK-03 clock processing circuit greatly reduces the c[lock jitter] »; « USB, Optical and Coaxial support DSD transmission, Coaxial, Optical support DOP64 »; « Both USB and SPDIF support MQA and MQA-CD ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true,
+    "chip": "ES9039MSPRO (ESS) converting, XMOS XU-316 as the USB interface, and a « self-developed CK-03 clock processing circuit »."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "native_dsd_possible": true,
+      "dop_possible": true
+    },
+    "spdif_coax": {
+      "dop_possible": true,
+      "native_dsd_possible": false
+    },
+    "spdif_optical": {
+      "dop_possible": true,
+      "native_dsd_possible": false
+    }
+  },
+  "_mqa_again": "« Both USB and SPDIF support MQA and MQA-CD » - second SMSL record stating MQA, which this catalogue still has no field for."
+}

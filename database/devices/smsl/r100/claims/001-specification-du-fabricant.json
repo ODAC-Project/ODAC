@@ -1,0 +1,17 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.smsl-audio.com/portal/product/detail/id/957.html",
+    "quote": "SMSL's own page for the R100, read 2026-11-24: « R2R Soul R100 is a desktop R2R DAC that bridges the gap between classic analog warmth and modern digital performance. Powered by dual[...] » - the sentence continues past what was captured.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "r2r_ladder",
+    "technology": "r2r",
+    "chip": "A discrete R-2R ladder, in the maker's own words « a desktop R2R DAC ». No part number: the ladder is the design."
+  },
+  "_deliberately_thin": "ONE FACT AND NO RATES. My extraction of this page caught a single sentence and cut it mid-clause at « Powered by dual »; the rest of the page was not read. What IS here - that the conversion stage is a resistor ladder - is a LEVEL 3 fact and worth a record on its own, because it changes the class and no probe would ever reveal it. The rates are a level-2 gap to fill on a second pass, not a reason to withhold the record. Recorded as thin rather than guessed at."
+}

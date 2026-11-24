@@ -1,0 +1,43 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.smsl-audio.com/portal/product/detail/id/800.html",
+    "quote": "SMSL's own page for the SU-10, read 2026-11-24: « ES9038PRO D/A chips from ESS, and using all 16 channels, up to 21 OPA1612A operational amplifiers in total »; « Use USB XMOS XU-316, a 32-bit USB scheme, which supports DoP and native DSD, with PCM up to 768kHz and DSD up to DSD512 »; « USB, Optical, Coaxial, I2S, AES support DSD, Coaxial , Optical and AES support DOP64 ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true,
+    "chip": "ES9038PRO (ESS) « using all 16 channels », with an XMOS XU-316 as the USB interface. The channel count is the maker's own and is exactly the case classes.json flags: a device paralleling all of a chip's channels is arguably multi-element, where the ess_sabre family assumes single."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "native_dsd_possible": true,
+      "dop_possible": true
+    },
+    "i2s": {
+      "native_dsd_possible": true
+    },
+    "spdif_coax": {
+      "dop_possible": true,
+      "native_dsd_possible": false
+    },
+    "spdif_optical": {
+      "dop_possible": true,
+      "native_dsd_possible": false
+    },
+    "aes_ebu": {
+      "dop_possible": true,
+      "native_dsd_possible": false
+    }
+  },
+  "_five_inputs_split_by_transport": "« USB, Optical, Coaxial, I2S, AES support DSD, Coaxial , Optical and AES support DOP64 » splits five inputs in one sentence: all five take DSD, three take it as DoP64, so USB and I2S are the native ones. Richest per-input DSD statement in this catalogue. No PCM ceiling is recorded for the four non-USB inputs: the 768 kHz figure belongs to the XMOS sentence, which is about USB."
+}

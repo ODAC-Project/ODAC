@@ -1,0 +1,42 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.smsl-audio.com/portal/product/detail/id/859.html",
+    "quote": "SMSL's own page for the SU-X, read 2026-11-24: « ES9039MS PRO ×2 Support MQA decoding and MQA-CD »; « ES9039MSPRO from American ESS, built-in MQA decoding »; « The brand-new third-generation XMOS XU-316, PCM supports to 32bit/768kHz, and DSD supports to DSD512 »; « USB, optical, coaxial, AES and I2S support DSD, while coaxial, optical and AES support DOP64 »; « Qualcomm's high-end Bluetooth chip, supports LDAC(24bit/96kHz),APTX/HD, SBC, AAC ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true,
+    "chip": "TWO ES9039MSPRO (ESS) - « ES9039MS PRO ×2 » - with a third-generation XMOS XU-316 as the USB interface and a Qualcomm part for Bluetooth."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "native_dsd_possible": true
+    },
+    "i2s": {
+      "native_dsd_possible": true
+    },
+    "spdif_coax": {
+      "dop_possible": true,
+      "native_dsd_possible": false
+    },
+    "spdif_optical": {
+      "dop_possible": true,
+      "native_dsd_possible": false
+    },
+    "aes_ebu": {
+      "dop_possible": true,
+      "native_dsd_possible": false
+    }
+  },
+  "_five_inputs_again": "Same five-input split as smsl/su-10, and the same maker's wording: all five carry DSD, the three S/PDIF-family ones carry it as DoP64, so USB and I2S are the native pair."
+}

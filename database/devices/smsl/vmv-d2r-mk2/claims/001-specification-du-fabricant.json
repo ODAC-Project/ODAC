@@ -1,0 +1,25 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.smsl-audio.com/portal/product/detail/id/745.html",
+    "quote": "SMSL's own page for the VMV D2R MK2, read 2026-11-24: « ROHM BD34302EKV decoding chip and the cutting-edge XMOS XU-316 solution, unlocking native DSD512, PCM up to 768kHz, and full MQA/MQA-C[D] ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "rohm",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "chip": "ROHM BD34302EKV converting, XMOS XU-316 as the USB interface. Note the part number against smsl/d200's BD34352EKV: two ROHM parts, one family, two models."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "native_dsd_possible": true
+    }
+  },
+  "_only_usb_rated": "The sentence read ties its figures to the XMOS solution, which is USB. No other input is rated, so none is recorded."
+}

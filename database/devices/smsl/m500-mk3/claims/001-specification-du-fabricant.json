@@ -1,0 +1,35 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.smsl-audio.com/portal/product/detail/id/797.html",
+    "quote": "SMSL's own page for the M500 MKIII, read 2026-11-24: « ES9038PRO from ESS Technology »; « ES9311, the noise of ES9311 is as low as 1uVrms »; « XMOS XU-316, true 32bit audio processing, supports DoP and Native DSD, and reaches 32bit/768kHz and DSD512 »; « USB, optical, coaxial support DSD , coaxial and optical support DOP64 »; « Qualcomm's latest Bluetooth chip supports LDAC 24bit/96kHz, APTX/HD, SBC, AAC ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true,
+    "chip": "ES9038PRO (ESS) converting, an ES9311 - which is a low-noise REGULATOR and not a converter - an XMOS XU-316 as the USB interface and a Qualcomm part for Bluetooth. Four ESS/other parts in four roles, and the ES9311 is the exact case that made the chip model need a role per part: it was filed as gustard/x30's converter in the seed data."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "native_dsd_possible": true,
+      "dop_possible": true
+    },
+    "spdif_coax": {
+      "dop_possible": true,
+      "native_dsd_possible": false
+    },
+    "spdif_optical": {
+      "dop_possible": true,
+      "native_dsd_possible": false
+    }
+  }
+}
