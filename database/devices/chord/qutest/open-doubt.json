@@ -1,0 +1,4 @@
+{
+  "raised_on": "2026-11-24",
+  "text": "Chord publishes TWO different ceilings for this device's optical input: 96 kHz on the product page (stated twice, in the spec table and in the Key Features list) and 192 kHz in the Qutest User manual 2.1. Both claims are recorded. The build resolves by source weight, which puts the page (datasheet, 70) above the manual (65) and therefore lands on the conservative 96 - defensible, and not the same as knowing. WHAT WOULD SETTLE IT: the device itself. An optical input is the one ceiling a probe establishes for free, and this is a clean example of why level 2 is worth collecting even where a maker has published something."
+}

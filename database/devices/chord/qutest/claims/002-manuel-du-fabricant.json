@@ -1,0 +1,18 @@
+{
+  "source": {
+    "kind": "manual",
+    "url": "https://chordelectronics.co.uk/wp-content/uploads/2018/01/Qutest-User-manual-2.1.pdf",
+    "quote": "Chord Electronics, Qutest User manual 2.1, text extracted from the maker's own PDF and read 2026-11-24: « Optical input - Up to 192kHz and DSD64 (via DoP) ». The coaxial row in the same table reads « Up to 384kHz and up to DSD128 (via DoP). Dual-data capable ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "inputs": {
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "dop_possible": true
+    }
+  },
+  "_why_this_second_claim_exists": "IT CONTRADICTS THE FIRST, ON PURPOSE. The maker's product page rates the optical input 96 kHz, twice; the maker's own manual rates it 192 kHz. Both are Chord's publications. This catalogue is built so that two claims which disagree COEXIST and are resolved when the artefact is built, rather than one overwriting the other - and until now nothing had ever exercised it: `contested fields` has read 0 all along. So the disagreement is recorded as a disagreement. Note what this corrects: the seed record said « several retailer listings give the optical input as 96 kHz; the manual is the figure taken here », framing it as the maker against retailers. The manual does say 192 - that part was right - but the 96 comes from the MAKER'S OWN PAGE. The retailers were copying Chord."
+}

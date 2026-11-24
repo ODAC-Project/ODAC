@@ -1,0 +1,36 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://chordelectronics.co.uk/product/dave",
+    "quote": "Chord Electronics' own product page for DAVE, read 2026-11-24, Technical Spec: « 4x 75Ω S/PDIF BNC Coax - 44.1kHz to 384kHz », « 1x AES XLR - 44.1kHz to 96kHz », « 2x Fibre Optic TOSLINK - 44.1kHz to 96kHz », « 1x USB Type B - 44.1kHz to 768kHz (16 - 32bit) - PCM and DSD ». « Sample frequencies: 44.1Khz - 768Khz (16 - 32bit) and DSD64 to DSD512 native DSD + DoP (input dependant) ». « At its heart lies the advanced Spartan 6 Field Programmable Gate Array (FPGA) », « Tap length filter: 164,000 ». Title: « Reference-level Digital to Analogue Converter, Headphone Amplifier and Preamplifier ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "chord_wta",
+    "chip": "No commercial converter: « the advanced Spartan 6 Field Programmable Gate Array (FPGA) », with « Tap length filter: 164,000 » - more than three times the Qutest's 49,152 on the same maker's own scale.",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 384000
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 96000
+    }
+  },
+  "_two_contradictions_inside_the_maker": "THE PAGE DISAGREES WITH ITSELF: its spec row reads « 4x 75Ω S/PDIF BNC Coax - 44.1kHz to 384kHz » while its own Key Features icon reads « 4x 768kHz BNC Coax Inputs ». The specific row is recorded. AND THE MANUAL DISAGREES WITH THE PAGE on AES: the page says « 1x AES XLR - 44.1kHz to 96kHz » and the DAVE User manual V1.4 says « AES input 44. 1 kHz t o 19 2kHz (under AES s tandard... » - the same shape of disagreement as the Qutest's optical input, on a different input of a different device. Two devices, two page-against-manual contradictions, one maker. That is a pattern and not an accident.",
+  "_what_is_not_asserted": "Bit depth for coax, AES and optical: the page states it only for USB. The « DXO » expandable input is listed with no rate, so nothing is claimed for it. « input dependant » on the DSD line is not explained by the maker, so native_dsd and dop are recorded at device level where the source puts them and NOT pushed down into the inputs."
+}

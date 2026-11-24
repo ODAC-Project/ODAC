@@ -1,0 +1,33 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://chordelectronics.co.uk/product/qutest",
+    "quote": "Chord Electronics' own product page for the Qutest, read 2026-11-24, Technical Spec: « USB Type B (White): 44.1kHz to 768kHz - 16bit to 32bit », « 2x BNC Coax (Red): 44.1kHz - 384kHz - 16bit to 32bit », « Optical (Green): 44.1kHz to 96kHz - 16bit to 24bit », « 1x Dual data mode input (using both BNC coax inputs together): 44.1kHz to 768kHz - 16bit to 32bit ». Key Features: « 96kHz Optical Input ». « DSD support: Native playback supported. DSD64 (Single) to DSD512 (Octa-DSD) ». « Chipset: Chord Electronics custom coded Xilinx Artix 7 (XC7A15T) FPGA », « Tap-length: 49,152 », « Pulse array: 10 element pulse array design ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "chord_wta",
+    "chip": "No commercial converter: « Chord Electronics custom coded Xilinx Artix 7 (XC7A15T) FPGA », with « Tap-length: 49,152 » and a « 10 element pulse array design ». The maker's own design, which is why chord_wta exists as a family - and the case the chip model calls « no commercial chip »: a technology stated, no part number to give.",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512",
+    "native_dsd": true
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 384000,
+      "bits": 32
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000,
+      "bits": 24
+    }
+  },
+  "_dual_data_not_recorded": "The page lists « 1x Dual data mode input (using both BNC coax inputs together): 44.1kHz to 768kHz ». That is not a fourth socket but the two BNC inputs used as a pair, and this catalogue has no interface for a mode that consumes two. Recorded here rather than invented as an interface."
+}
