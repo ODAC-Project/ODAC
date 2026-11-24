@@ -49,7 +49,7 @@ converter as though they were one device — they share a USB identity, which is
 why they were listed together at all.
 
 There is no range level between brand and model, and that is measured rather than
-forgotten: of the 25 records, one brand has two or more models on the same
+forgotten: of the 26 records, one brand has two or more models on the same
 silicon, and its maker does not name them as a range. A level with no occupant is
 a mechanism that cannot be wrong because nothing exercises it. The rule for
 creating one — same silicon **and** the maker names the grouping — is decided and
@@ -199,10 +199,13 @@ fact came through — the device probed, the maker in writing, a listener, an ag
 and no record carries it. Today a claim says *who submitted* and *what the source
 is*, which is close but not the same question.
 
-**Only one field is ever asserted per input.** `inputs.pcm_max_hz`, on 61
-records. The word width, the depth steps above a rate, the channel count, and
-whether the input carries native DSD or DoP are registered as planned and never
-filled.
+**Four fields are now asserted per input**, and three of them arrived together on
+2026-11-24 with the first record of the population pass. `inputs.pcm_max_hz` is on
+65 records; `inputs.bits` on 4, `inputs.native_dsd_possible` on 3 and
+`inputs.dop_possible` on 2 — all on one device, because one maker's specification
+table distinguished its inputs and nothing had ever asked the question before.
+The depth steps above a rate and the channel count are still registered as planned
+and carried by nobody.
 
 `inputs.channels` is the newest of them, and it carries a warning rather than a
 hole: **what a device accepts is not what a consumer will send.** A player's own
@@ -225,7 +228,10 @@ amount of scraping closes it.
 on four others. The registry says list; the four others are wrong and should be
 converted.
 
-**All 43 claims have source kind `import`.** The evidence rule is formally
+**43 of the 44 claims have source kind `import`.** The forty-fourth is the first
+record of the population pass, whose source is a maker's published specification
+and says so: `datasheet`. It is also the first claim ever to set
+`source_names_subject`, which CONTRIBUTING has asked for from the beginning. The evidence rule is formally
 satisfied — every claim quotes something — but no claim yet carries a real kind
 (`measurement`, `manual`, `maker_reply`…). Splitting the imported batches into
 per-field claims with their real source is the first real curation work.

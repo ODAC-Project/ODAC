@@ -1,0 +1,4 @@
+{
+  "raised_on": "2026-11-24",
+  "text": "`kind` CANNOT SAY WHAT THIS DEVICE IS. It is filed as network_player, in the maker's own words - the page heads it « DMP Streamer Series - DMP-A8 » - and it is equally a USB DAC: the same table lists a USB-B Audio INPUT taking DSD512 and 768 kHz 32-bit from a computer. The field holds one value out of dac and network_player, and this device is both. This is the FIRST record of the population pass and it broke the field immediately, which is worth more than the record: the installed base is full of streamers with a DAC inside and a USB input on the back, and they will all land on this. Picking one value quietly would hide it. Either `kind` becomes a list, or it is renamed to say what it actually answers - how the device is REACHED - and a separate field says whether it converts."
+}

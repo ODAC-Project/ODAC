@@ -1,0 +1,44 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.eversolo.com/en/products/dmp-a8",
+    "quote": "Eversolo's own specification table for the DMP-A8, read 2026-11-24. DAC: « AK4191EQ + AK4499EX ». DAC Decoding: « Supports up to stereo DSD512 Native and PCM 768kHz 32-bit. » USB-B Audio Input: « USB Compatibility: Windows (10,11), Mac, Android, iOS. Supports up to stereo DSD512 and PCM 768kHz 32-bit. » Optical/Coaxial Input: « Supports up to stereo PCM 192kHz 24-bit and DSD64 DoP. » ARC Input: « Supports up to stereo PCM 192kHz 24-bit. »",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "akm",
+    "chip": "Two AKM parts named by the maker's own table as « AK4191EQ + AK4499EX »: the AK4191 is the modulator and the AK4499EX the converter. The same pairing as gustard/a26, and the reason a chip model needs a ROLE per part - a modulator's order is a property of the modulator, not of a vendor.",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "native_dsd_possible": true
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dop_possible": true,
+      "native_dsd_possible": false
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dop_possible": true,
+      "native_dsd_possible": false
+    },
+    "hdmi": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_firsts": "FIRST RECORD OF THE POPULATION PASS, and it is the template. Seven things in this catalogue are exercised here for the first time: kind network_player; a source.kind that is not `import` (datasheet, the maker's own published specification); source_names_subject, which CONTRIBUTING has asked for from the start and no claim had ever set; inputs.bits, inputs.dop_possible and inputs.native_dsd_possible, three fields registered as planned and carried by nobody; and the hdmi interface, defined and never used. A read_on that is the day THIS page was read, not a batch date shared by 43 other claims.",
+  "_what_is_not_asserted": "The page does not say whether USB carries DoP as well as native DSD, so inputs.usb.dop_possible is ABSENT rather than false - nobody filled it in, which is not the same as a no. No level-3 field is claimed: the maker publishes what the device accepts and says nothing about what it does with it, which is this catalogue's whole premise."
+}
