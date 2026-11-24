@@ -1,0 +1,22 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://playbackdesigns.com/",
+    "quote": "Playback Designs' own site, read 2026-11-24, MPD-8 product block in the Dream Series section: « MPD-8 Playback Designs Digital Analog Converter »; « DAC with integrated volume control »; « Up to 384kHz PCM and up to 11.2MHz DSD »; « USB I/O, AES, Coax, TosLink, PLink I/O »; « double Differential discrete DAC ». The block links docs/productsheets/PlaybackDesigns_Dream_MPD-8_ProductBrief.pdf and docs/manuals/PlaybackDesigns_MPD-8_Manual1v1.pdf, neither of which was read. Merlot and Syrah carry « *discontinued » on the same page; the MPD-8 does not.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "unknown",
+    "pcm_max_hz": 384000,
+    "dsd_max": "DSD256",
+    "chip": "No part number. The maker calls the conversion stage « double Differential discrete DAC » and titles a Technology entry « Discrete and programmable DAC » with no description. Nothing names a chip, a maker or a modulator."
+  },
+  "_dsd256_is_arithmetic_not_a_guess": "« up to 11.2MHz DSD ». 11.2896 MHz is 256 x 44.1 kHz, so DSD256 is the same figure in the other unit, not an inference about the device. `dsd_max` takes a DSD name and not a megahertz, which is why the conversion is done here and the megahertz kept in the quote.",
+  "_discrete_is_not_one_of_the_four_technology_values": "This is the gap. `technology` takes delta_sigma, r2r, discrete_dsd or fpga. The maker says « discrete » and stops. `discrete_dsd` would assert the modulation - that the discrete stage is driven by a 1-bit or few-bit noise-shaped stream - and the page asserts nothing of the kind; `r2r` would assert resistors. So technology is left ABSENT, and the consequence is stated plainly: a consumer resolving the cascade falls back to delta_sigma on a converter the maker calls discrete, which is exactly the silent wrong answer the family rule was written to stop. The catalogue needs a fifth value - discrete, modulation not stated - or `technology` has to become two fields. First case in this catalogue; it turns up at the 65th record.",
+  "_the_inputs_are_named_and_rated_nowhere": "« USB I/O, AES, Coax, TosLink, PLink I/O » - five digital interfaces including the maker's proprietary PLink, and a single device-level line « Up to 384kHz PCM and up to 11.2MHz DSD » above them. Same shape as Berkeley, same decision: no per-input block. PLink is also an interface this catalogue's input vocabulary has no name for, and the « I/O » on both USB and PLink says they carry signal in BOTH directions - the schema has inputs and no outputs, so half of what the maker states about those two sockets cannot be written down at all.",
+  "_read_from_the_homepage_and_the_page_was_truncated": "The MPD-8 has no page of its own that was reached: the product block sits on the homepage, which returned 85,899 characters truncated at 39,963. Everything quoted above is inside the verbatim part. The tail was summarised rather than returned, and nothing from that summary is used here - a summary is not a quotation. Two consequences: a prohibition notice in the tail cannot be ruled out, and the product brief PDF and the manual, both linked and both unread, are where this record's level 3 almost certainly lives.",
+  "_what_was_refused": "The MPS-X page on the same site rates AES and Coax at « PCM up to 192kHz » and credits « Newest generation PDFAS clocking technology for ultra low jitter performance ». Both are about the MPS-X. Neither is written here. The per-input figures are the most tempting thing on the whole site and they belong to a different product."
+}

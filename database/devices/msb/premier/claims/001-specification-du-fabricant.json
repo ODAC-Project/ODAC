@@ -1,0 +1,55 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://msbtechnology.com/dacs/premier-dac-features/",
+    "quote": "MSB Technology's own pages, read 2026-11-24. Premier page (https://msbtechnology.com/dacs/premier-dac-features/): « Our bestselling DAC, the Premier offers incredible value and technology in two beautiful CNC billet chassis. With twice the DAC modules over the Discrete, an improved FemtoClock, plus the addition of our ultra-low noise transformers and high-performing power architecture, the Premier represents the ideal digital system. »; section The Prime DAC Module: « With four prime DACs, the Premier DAC produces an unmatched level of detail. » and « A fully balanced, ultra-high precision, discrete ladder DAC architecture ensures that each note tells a story. »; « Completely modular. »; on the output: « The Premier DAC comes equipped with a high-performance XLR or optimized RCA output module that's fully shielded. This user-replaceable module provides a bufferless 150 ohm output impedance suitable for driving any amplification. »; general: « MSB's robust in-house design enables the finest quality playback of PCM and native DSD »; Pro USB rows « Up to 24 bit - 768kHz » and « Up to 8X DSD ». Digital Input Module Options page (https://msbtechnology.com/dacs/digital-inputs/): « For this reason, we've made our inputs standardized modules that are user replaceable. »; « MSB input modules are a standardized, swappable design that supports all of our DACs. This allows any module to be moved from one DAC to another for seemless upgradeability. »; « Each module uses a toolless lever lock system for modules that allows simple, quick upgrades and replacements. »; MSB USB Inputs: « The USB interface is limited to 384kHz and 4xDSD. » and « Works at rates up to 24/768kHz* and 8xDSD* » with the footnote « *Version 2 USB »; Network Renderer V2: « Our Renderer V2 interface is MQA and Roon Ready and has a maximum sample rate of 32/768kHz and 4xDSD. »; Pro USB: « Works at rates up to 24/768kHz and 8xDSD (with a PC) »; S/PDIF (optical and coaxial) and Balanced XLR (AES/EBU): « Limited to 24/192kHz and 1xDSD via DoP »; Universal I2S: « Sample Rates to DSD 8X and 768Khz PCM (depending on source) »; Pro ISL: « The Pro ISL is capable of multi-channel audio and extremely high sample rates (much higher than any current standard). »",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "r2r_ladder",
+    "technology": "r2r",
+    "pcm_max_hz": 768000,
+    "bits": 24,
+    "dsd_max": "DSD512",
+    "chip": "No part number. « A fully balanced, ultra-high precision, discrete ladder DAC architecture », built of « four prime DACs » - MSB's own modules, not bought silicon. « MSB's robust in-house design »."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "dsd_max": "DSD256"
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true
+    },
+    "i2s": {
+      "pcm_max_hz": 768000,
+      "dsd_max": "DSD512"
+    }
+  },
+  "_THE_INPUTS_ARE_NOT_PROPERTIES_OF_THIS_DEVICE": "The deepest schema finding of the whole pass, and the maker states it outright: « MSB input modules are a standardized, swappable design that supports all of our DACs. This allows any module to be moved from one DAC to another for seemless upgradeability. » Every figure in the inputs block above is a property of a MODULE - an object with its own identity, bought separately, shared across the Discrete, the Premier, the Cascade and the Sentinel, and physically moved between them with « a toolless lever lock system ». This catalogue nests inputs INSIDE the device, so those figures are now written here as if the Premier had them. Two consequences, both wrong: a Premier with no USB module fitted reads as a Premier that does 384 kHz over USB, and the same module's figures must be copied into every MSB record rather than stated once. See vocabulary/inputs-can-be-separate-objects.json, written from this record.",
+  "_the_same_input_NAME_with_two_ceilings_on_one_device": "MSB sells « MSB USB Inputs » AND « Pro USB », two different modules, both USB, both fittable. The first is « limited to 384kHz and 4xDSD »; the second « works at rates up to 24/768kHz and 8xDSD ». This catalogue has ONE key named usb. The conservative figure is recorded - 384 kHz, DSD256 - and Pro USB's 768 kHz / DSD512 cannot be written at all. Nor can the third figure on the same page: the USB Inputs module itself reaches « 24/768kHz* and 8xDSD* » with the footnote « *Version 2 USB », so one module name covers two hardware versions with a factor of two between them. Three USB ceilings on one device, one field.",
+  "_the_renderer_is_32_bit_and_has_no_key": "« Our Renderer V2 interface is MQA and Roon Ready and has a maximum sample rate of 32/768kHz and 4xDSD. » THIRTY-TWO bit, which no other input on this device reaches, and 768 kHz. It is not written into the inputs block because the interface vocabulary is protocol-level and the maker names no protocol - « MQA and Roon Ready » is a certification, not an interface. Second time today, after Soulution's « Network ». The two cases together say the vocabulary is finer than the makers who publish, and the cost is measured: two makers, two inputs, SIX figures lost - Soulution's Network gives a bit depth, a PCM rate and a DSD rate, and so does this Renderer.",
+  "_pro_isl_states_a_superlative_instead_of_a_number": "« The Pro ISL is capable of multi-channel audio and extremely high sample rates (much higher than any current standard). » No figure, so nothing is written. Worth keeping because it is the honest shape of a proprietary link's documentation: the maker has no reason to publish a ceiling for a cable only its own transports drive.",
+  "_the_x_notation_is_the_makers_own": "« 1xDSD », « 4xDSD », « 8xDSD » are MSB's words. 1x is DSD64, 4x is DSD256, 8x is DSD512 - multiples of 44.1 kHz, the standard notation. The translation carries no assertion.",
+  "_dop_is_stated_on_exactly_three_inputs_and_nowhere_else": "« Limited to 24/192kHz and 1xDSD via DoP » on S/PDIF and on the balanced XLR. Those are the ONLY inputs where the page names a DSD transport. USB, Pro USB, the Renderer and I2S get a DSD rate with no word about how it travels, so dop_possible is left absent on them rather than guessed - and MSB elsewhere claims « native DSD » for the device as a whole, which is a statement about the converter, not about what any cable carries.",
+  "_the_filtering_belongs_TO_ANOTHER_PRODUCT": "The only filter sentences on the Premier page are in its « Digital Director » section: « increased processing power ensures our digital filtering algorithms achieve a new level of realistic and accurate analog reproduction » and « The Digital Director enhances essential DAC functions, externally manages digital audio sources, provides unmatched noise isolation and digital filtering. » The Digital Director is a SEPARATE BOX the customer may or may not own. Nothing is recorded: a filter claim read off an optional companion product would be exactly the Berkeley mistake - a sentence about something else that happens to name this device.",
+  "_what_was_not_read_and_where_level_3_lives": "The Premier page links « technical specifications » at /dacs/premier-dac-support/ and the module page at /dacs/dac-modules/; neither was read. The per-input bit depths this record lacks - USB, I2S, Pro ISL - are most likely in the first, and whatever MSB says about the ladder in the second."
+}

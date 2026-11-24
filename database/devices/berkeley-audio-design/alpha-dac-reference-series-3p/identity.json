@@ -1,0 +1,13 @@
+{
+  "id": "berkeley-audio-design/alpha-dac-reference-series-3p",
+  "kind": "dac",
+  "brand": "berkeley_audio_design",
+  "model": "Alpha DAC Reference Series 3P",
+  "aliases": [
+    {
+      "text": "Alpha DAC Reference Series 3",
+      "relation": "edition"
+    }
+  ],
+  "_why_the_series_3_is_an_edition_and_not_a_neighbour": "The maker's own page carries the Series 3 text inside the 3P page and says the Series 3 « can be fully upgraded to an Alpha DAC Reference Series 3P ». Two names, one upgradable object, and no fact on the page distinguishes them: that is the definition of `edition` here, not of `neighbour`. If a fact ever separates them - a rate, a filter, a converter - the edition becomes a record of its own."
+}

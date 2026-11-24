@@ -1,0 +1,48 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://soulution-audio.com/series5/soulution-560-dac/",
+    "quote": "Soulution's own page for the 560, read 2026-11-24. Table headed « Bit depth/sampling rage max » (the misspelling is the page's): « AES/EBU: 24 bit/192 kHz »; « SPDIF: 24 bit/192 kHz »; « Optical: 24 bit/96 kHz »; « USB: 24 bit/384 kHz, 1 bit/5.64 MHz »; « Network: 24 bit/384 kHz, 1 bit/5.64 MHz ». Digital inputs listed as « AES/EBU, SPDIF-RCA, Optical, USB, Network ». On the conversion stage: « Burr-Brown devices perform D/A conversion only. Their internal upsampling and filter stages are not used. » and « Our players and D/A converters use an algorithm from the highly regarded Anagram Technologies followed by Burr Brown D/A converters in a digital symmetric configuration. » On the signal path: « Audio data is buffered then upsampled to 24Bit/384kHz. » On the analogue stage: « The 560's 3rd order bessel filter, with a cut-off frequency of 120kHz, does show a phase shift of up to 15 degrees in the audio band. » and « Due to the Zero-Phase-Technology the phase error of the analog music signal remains below 1 degree, 20Hz - 100kHz! ». Self-description: « soulution 560 D/A converter » and « The 560 D/A-Converter does excell at exactly this task. It captures all digital music data and transports it in the analog domain. »",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ti_burr_brown",
+    "pcm_max_hz": 384000,
+    "bits": 24,
+    "dsd_max": "DSD128",
+    "chip": "No part number. « Burr Brown D/A converters in a digital symmetric configuration », preceded by « an algorithm from the highly regarded Anagram Technologies ». The count of converters is not stated.",
+    "analog_filter": "good",
+    "correctable": false
+  },
+  "inputs": {
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000,
+      "bits": 24
+    },
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 24,
+      "dsd_max": "DSD128"
+    }
+  },
+  "_the_best_per_input_table_of_the_high_end_pass": "Five inputs, each with ITS OWN bit depth and rate, in a table the maker headed « Bit depth/sampling rage max ». Second only to Ferrum's six, and better in one respect: it states the DSD ceiling ONLY on the two inputs that have one. USB and Network get « 1 bit/5.64 MHz »; AES/EBU, SPDIF and optical get a PCM figure and NOTHING for DSD. That is a maker drawing the line for us, input by input, instead of leaving us to guess from a device-level figure.",
+  "_this_record_is_why_inputs_dsd_max_now_exists": "Before today the schema had no per-input DSD ceiling. « 1 bit/5.64 MHz » on two of five inputs would have become a single device-level dsd_max, which a consumer would then have read as true of the AES input too - and it is not stated there at all. inputs.dsd_max was registered on this record, Ferrum's and MSB's together.",
+  "_dsd128_is_the_same_figure_in_another_unit": "« 1 bit/5.64 MHz ». 5.6448 MHz is 128 x 44.1 kHz and a 1-bit stream at that rate is what DSD128 means, so the conversion carries no assertion about the device. The maker never writes « DSD » anywhere in the table, which is why the megahertz is kept in the quote.",
+  "_the_network_input_has_no_name_in_this_catalogue": "The maker writes « Network » and names no protocol. The interface vocabulary is protocol-level - net-dlna, net-airplay, net-chromecast, net-squeezelite, net-oaat, net-transparent - so there is no key for what this page states, and the Network input is NOT written into the inputs block although the maker rates it exactly as it rates USB: « 24 bit/384 kHz, 1 bit/5.64 MHz ». A real figure is lost to a vocabulary that is finer than the makers who publish. Second occurrence, after MSB's « Network Renderer ».",
+  "_the_family_defaults_are_WRONG_HERE_and_the_maker_says_so": "This is the sharpest cascade finding of the pass. family is ti_burr_brown, which bundles defaults derived from what those chips DO - including their interpolation and filtering. And the maker writes, in so many words: « Burr-Brown devices perform D/A conversion only. Their internal upsampling and filter stages are not used. » The silicon is in the signal path only as a converter; the filtering is an Anagram Technologies algorithm ahead of it. So every default this family carries ABOUT THE FILTER is false for this device, and the record cannot say that: the cascade is field by field, and there is no field for « the chip is here but its DSP is bypassed ». A consumer resolving ti_burr_brown on this record inherits a description of a stage the maker has switched off.",
+  "_there_is_no_bypass_here_there_is_the_opposite": "« Audio data is buffered then upsampled to 24Bit/384kHz. » Unconditional, with no rate threshold and no setting. internal_bypass is modelled for a converter that STEPS ASIDE above a rate; this one always runs its own resampler, whatever arrives. So internal_bypass is absent, correctly, and the consequence for an engine is the reverse of a bypass: sending more than 384 kHz buys nothing, and sending less does not avoid the resampler. The catalogue can record the absence of a bypass but not the presence of a mandatory upsample, which is the stronger statement.",
+  "_correctable_false_is_derived_from_the_stated_precondition": "The field's own definition says a correction profile can apply only where the device is close to bit-perfect, « in practice corrections exist only for devices doing direct DSD or NOS PCM ». This device does neither: it upsamples everything to 24/384 through an algorithm whose behaviour is not published. false is therefore a derivation from the field's definition plus the maker's sentence, not a measurement, and it is written here rather than left absent because absent would let a profile be attached later to a device whose own maker has ruled out the precondition.",
+  "_analog_filter_good_is_MY_reading_not_the_makers": "The one judgement in this record. The maker gives an order and a cut-off - « 3rd order bessel filter, with a cut-off frequency of 120kHz » - and the field takes switchable / good / simple / weak. Nothing anywhere states how an order and a frequency map onto those four words. A 3rd-order Bessel at 120 kHz is a deliberately engineered reconstruction stage rather than a minimal one, so « good » is recorded, and the figures are kept in the quote so a reader can disagree with me without re-reading the page. The gap is the field's, not this record's: analog_filter is an enum of quality judgements feeding the modulator-order decision, with no published rule for turning a measured filter into one of its values.",
+  "_the_page_may_be_eight_years_old": "Its images sit under « wp-content/uploads/2018/02 » and the footer reads « (c) 2026 ». The page states no product date. Recorded because a 2018 spec table for a product still on sale is the normal condition of this catalogue, not an anomaly."
+}

@@ -1,0 +1,5 @@
+{
+  "raised_on": "2026-11-24",
+  "text": "Whether this device reconverts DSD to PCM. The temptation is strong and the page does not close it. « Audio data is buffered then upsampled to 24Bit/384kHz » describes the signal path with no exception; the inputs accept « 1 bit/5.64 MHz »; the output of that stage is stated as 24-bit PCM. Read together they say DSD arrives, meets a PCM upsampler and leaves as 24/384 - which would make dsd_reconverted_to_pcm true. But « Audio data » is the maker's word for everything it had been talking about, which was PCM, and the sentence never says the 1-bit stream takes that path. No fact is written. Getting this field wrong is expensive: it is what tells an engine whether sending DSD to this device is worth anything at all, and 23 of 27 records take it from their family rather than from their own evidence.",
+  "what_would_resolve_it": "One sentence from Soulution about what happens to a 1-bit input, or a manual. Failing that, a measurement: feed DSD128 and look for the PCM signature. Do NOT resolve it by reading the upsampling sentence harder."
+}
