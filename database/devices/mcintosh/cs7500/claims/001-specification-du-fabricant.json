@@ -1,0 +1,40 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.mcintoshlabs.com/products/preamplifiers/CS7500",
+    "quote": "McIntosh's own page for the CS7500, read 2026-11-24. Spec table, Digital Audio Specifications: « Digital Coaxial Input Sample Rate » = « 24-bit/44.1kHz to 192kHz »; « Digital Optical Input Sample Rate » = « 24-bit/44.1kHz to 192kHz »; « Digital MCT Input Sample Rate » = « 16-bit/44.1kHz (CD) » and « DSD64 (SACD) »; « Digital USB Input Sample Rate » = « 32-bit/44.1kHz to 384kHz (PCM) » and « DSD64, DSD128, DSD256, DSD512, DXD352.8kHz, DXD384kHz »; « Digital Network/Wi-Fi Input Sample Rate » = « 24-bit/44.1kHz to 192kHz ». Connectivity: « Digital Coaxial Input » = « 2 »; « Digital Optical Input » = « 2 »; « Digital MCT Input » = « 1 »; « Digital USB Input » = « 1 »; « HDMI (ARC) Input » = « 1 ». Body: « The CS7500 features 6 analog inputs consisting of 2 balanced, 3 unbalanced, 1 dedicated phono input for turntables, plus 7 digital audio inputs. »; « the USB input supports native DSD512 and DXD up to 384kHz »; « the coaxial and optical inputs handle up to 24-bit / 192kHz »; « The HDMI (ARC) input will only play audio from a compatible TV. » Converter: « Quad Balanced 8-channel, 32-bit DAC » and the spec row « Digital-to-Analog Converter (DAC) Type » = « 8-channel, 32-bit/384kHz PCM/DSD, Quad Balanced », with « This next-generation, Quad Balanced, 8-channel, 32-bit architecture ». Self-description: « a streaming preamplifier that unites analog with digital while elevating both » and « State-of-the-art streaming and expert preamplification in one uncompromising component ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "unknown",
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "chip": "No part number and no maker. « 8-channel, 32-bit/384kHz PCM/DSD, Quad Balanced » - eight converter channels serving two output channels, four per side in a balanced arrangement. The page never says whose silicon it is, nor whether it is bought, discrete or an FPGA."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_the_widest_spread_between_two_inputs_in_the_catalogue": "USB takes 32-bit/384 kHz and DSD512. The MCT input takes « 16-bit/44.1kHz (CD) » and « DSD64 (SACD) ». On the SAME DEVICE: a factor of 8.7 in PCM rate, 2 in bit depth and 8 in DSD. Chord's DAVE held the record at optical 96 against USB 768, a factor of 8 in PCM and nothing in DSD. And the MCT ceiling is not a limitation but a definition: MCT is McIntosh's proprietary link to its own transport, so the input accepts exactly what a CD and an SACD carry and nothing else. The best argument this catalogue has that a device input is its own subject, and it comes with the worst gap: MCT has no key in the interface vocabulary, so a 16-bit/44.1 kHz PCM ceiling sitting beside DSD64 - a shape no other input in the catalogue has - cannot be written down at all.",
+  "_two_more_inputs_lost_to_the_vocabulary": "« Digital Network/Wi-Fi Input Sample Rate » = « 24-bit/44.1kHz to 192kHz », rated as precisely as the others, and not written: the interface vocabulary is protocol-level and the maker names no protocol. That is now THREE makers in one afternoon whose network input is rated and unrecordable - Soulution, MSB, McIntosh - which stops being a vocabulary detail and becomes a measured hole. And « HDMI (ARC) Input » = « 1 » with no rate anywhere, only « will only play audio from a compatible TV »: a fitted input the maker rates nowhere.",
+  "_seven_digital_inputs_and_the_record_holds_three": "« plus 7 digital audio inputs »: 2 coaxial, 2 optical, 1 MCT, 1 USB, 1 HDMI ARC, and the network input on top. This record writes three keys. The two coaxial sockets collapse into one spdif_coax and the two optical into one spdif_optical - no loss, their ceilings agree - but MCT, network and HDMI are simply absent. A reader counting inputs here gets three where the maker counts seven.",
+  "_dxd_is_PCM_and_the_table_proves_it": "« DXD352.8kHz, DXD384kHz » listed among the DSD rates in the same row. DXD is a PCM format at 352.8 and 384 kHz used in DSD production, and this table is the clearest statement of it the harvest has found - Nagra's page names DXD with no definition at all. No separate field is written: 384000 already covers it, and the name is a studio convention rather than a capability.",
+  "_native_is_stated_once_and_dop_never": "« the USB input supports native DSD512 ». Native, said plainly, about one named input - so native_dsd is a fact here and not an inference. DoP appears nowhere on the page, for any input, and dop_possible is left absent rather than guessed from the absence."
+}

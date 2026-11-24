@@ -1,0 +1,7 @@
+{
+  "id": "mcintosh/cs7500",
+  "kind": "dac",
+  "brand": "mcintosh",
+  "model": "CS7500",
+  "_kind_is_wrong_here_and_there_is_no_right_value": "The maker calls it « a streaming preamplifier that unites analog with digital ». It streams over network and Wi-Fi, converts, preamplifies, and carries « 6 analog inputs ... plus 1 dedicated phono input for turntables ». kind takes one value and this catalogue knows two: dac and network_player. `dac` is recorded because the conversion stage is what this database is FOR, and the record therefore says nothing about the streaming half, the analogue half or the phono stage. Sharpest case yet of a gap already noted: kind is a single value where makers build one box that is three things."
+}

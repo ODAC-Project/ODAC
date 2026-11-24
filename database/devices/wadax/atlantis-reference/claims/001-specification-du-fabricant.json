@@ -1,0 +1,38 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://wadax.eu/reference/",
+    "quote": "Wadax's own page for the Atlantis Reference DAC, read 2026-11-24. Specification block, « Inputs: »: « USB (32-384KHz, 16-24-32 bits, DSD64, DSD128, DSD256, MQA) »; « 2xSPDIF RCA (32KHz-192KHz, 16-24 bits) »; « 2xSPDIF BNC (32KHz-192KHz, 16-24 bits) »; « 2xAES-EBU (32KHz-192KHz, 16-24 bits) »; « Native Reference Wadax Link (native PCM, DSD), 3xAES-EBU, 1 RJ45 »; « Optional: WADAX Akasa Optical Module ». On the processing: « By mapping the error mechanisms of a chosen DAC chip under load using Adaptive Delta Hilbert Mapping »; « Dual-differential musIC 3 128-bit-feed-forward error correction process »; « Processing is done at 128 bit internal resolution »; « Zepto Reference clock: doubled the master clock frequency with only 12fs total jitter. »; « including native DSD replay over our proprietary triple AES-EBU connection ». Self-description: « The Atlantis REFERENCE DAC is our response to these findings, with lower levels of clock noise and significant improvements in PSU and mechanical isolation. » and « The result is the most accurate and most musically satisfying DAC ever designed. » The page also carries spec images at images/dacConnectivity.png and images/dacInNumbers.png, not opened: the text above is the page's own.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "unknown",
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD256",
+    "chip": "No part number, and the maker goes out of its way not to give one: « a chosen DAC chip », corrected from outside by a « Dual-differential musIC 3 128-bit-feed-forward error correction process », with « Processing is done at 128 bit internal resolution ». So bought silicon, deliberately unnamed, with the maker's own correction ahead of it."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "dsd_max": "DSD256"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_a_maker_that_corrects_its_own_converter": "« By mapping the error mechanisms of a chosen DAC chip under load using Adaptive Delta Hilbert Mapping » and « Dual-differential musIC 3 128-bit-feed-forward error correction process ». That is, in the maker's own words, a per-device correction applied INSIDE the box, upstream of the silicon - the same idea as device_correction_profile, which this catalogue models as something a consumer applies from outside. Nothing is recorded: the page gives no transfer function, no measurement and no setting. But it is worth naming, because the field assumes the correction is ours to make, and here the maker has already made one we cannot see, cannot measure and must not duplicate. The chip being unnamed is not an oversight in that light: naming it would name what is being corrected.",
+  "_an_optional_input_module_a_third_time": "« Optional: WADAX Akasa Optical Module », with no specification of any kind. Third maker in one afternoon whose inputs are partly bought separately, after MSB - where every input is a module - and CH Precision, where some are boards. The pattern is now evidenced three times at this end of the market and vocabulary/inputs-can-be-separate-objects.json records it.",
+  "_four_coaxial_sockets_two_shapes_one_key": "« 2xSPDIF RCA » and « 2xSPDIF BNC », each rated « 32KHz-192KHz, 16-24 bits ». Four sockets, two connector types, one interface, one key, and nothing lost because the ceilings agree. Recorded as the clean case of a problem that has cost figures elsewhere: Naim's BNC against RCA and Chord's dual-data were the same shape with different numbers.",
+  "_the_wadax_link_is_three_aes_cables_and_an_ethernet_socket": "« Native Reference Wadax Link (native PCM, DSD), 3xAES-EBU, 1 RJ45 », and in the body « including native DSD replay over our proprietary triple AES-EBU connection ». A proprietary link built out of three standard AES-EBU cables plus an RJ45, carrying « native PCM, DSD » with no rate given. Not written: it has no key, no figure, and - the interesting part - its sockets are AES-EBU sockets that are NOT an AES-EBU input. An input is not its connector, stated by a maker about its own flagship.",
+  "_mqa_in_an_input_row": "« USB (32-384KHz, 16-24-32 bits, DSD64, DSD128, DSD256, MQA) ». MQA sits in the list of formats an input accepts, beside the DSD rates, and this catalogue has no field for it - Berkeley does MQA rendering, CH Precision receives MQA over CH-Link HD, MSB's Renderer is « MQA and Roon Ready ». Four makers in one pass. No field is proposed: MQA's bearing on a conversion engine is not established, and a field nobody can act on is worse than a gap."
+}

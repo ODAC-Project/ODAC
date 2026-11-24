@@ -1,0 +1,24 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.nagraaudio.com/product/hd-dac-x/",
+    "quote": "Nagra's own page for the HD DAC X, read 2026-11-24. On the signal path: « Every input signal is converted into DSD 256 format (11.2 MHz sample rate). » On the processing: « A high-performance FPGA performs all internal calculations. »; « Like the HD PREAMP, it uses a dual-mono topology. »; « Ultra-high precision and ultra-low jitter clocks are used in this new Nagra HD DAC X. » Technical specification, « Digital inputs: » « 1x AES/EBU, 2x S/PDIF, 2x NAGRA-LINK, 1x Optical, 1x Audio USB (UCA2) », and in the body « The HD DAC X features AES-EBU, S/P-DIF on both RCA and BNC and 2x Nagra Link single-mode ST-1 optical inputs to receive future Nagra high resolution sources. »; « The USB input uses a proprietary software designed around an 8-core X-Mos chip. » On the output stage: « two NOS military JAN5963 tubes (one per channel) » and « This stage makes use of a cathodyne output design. » Self-description: « The HD DAC X is a step forward from the world-acclaimed Nagra HD DAC. » The page also carries « Specifications may change without notice ». The companion HD line page (https://www.nagraaudio.com/the-high-end-collection/the-hd-line/) says « Capable of DSD 256 and DXD ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "unknown",
+    "technology": "fpga",
+    "dsd_max": "DSD256",
+    "pcm_reconverted_to_dsd": true,
+    "dsd_reconverted_to_pcm": false,
+    "chip": "No converter part number. « A high-performance FPGA performs all internal calculations », in a « dual-mono topology ». The « 8-core X-Mos chip » named on the page is the USB RECEIVER, not the converter, and the « two NOS military JAN5963 tubes » are the output stage."
+  },
+  "_one_sentence_that_the_schema_could_not_hold": "« Every input signal is converted into DSD 256 format (11.2 MHz sample rate). » Every input. No threshold, no setting, no exception. This catalogue has carried dsd_reconverted_to_pcm since the beginning and had NEVER asked the question the other way round: pcm_reconverted_to_dsd was registered today, on this sentence. It matters as much as its mirror and in the opposite direction. On this device a carefully prepared PCM stream is work the device will undo - it remakes everything as DSD256 - and DSD256 is the single format that arrives without being converted. An engine that did not know this would spend its effort choosing a PCM rate that cannot survive the input stage.",
+  "_and_the_mirror_follows_from_the_same_sentence": "dsd_reconverted_to_pcm is false, and not as a default: a device whose every input becomes DSD256 does not take DSD back to PCM. This is the rare case where one maker's sentence settles BOTH fields, which is worth saying because the field is nearly always inherited: re-measured 2026-11-24, 56 of the 59 records that resolve it take it from their family, and this is one of the 3 that do not.",
+  "_NOS_HERE_MEANS_NEW_OLD_STOCK_AND_NOT_NON_OVERSAMPLING": "« two NOS military JAN5963 tubes ». In this catalogue NOS is non-oversampling - a converter run without an interpolation filter, which is one of the two cases where a correction profile can apply at all. On this page it is New Old Stock: unused valves from old production, a term from the tube trade. A text search for NOS across sources would mark this device non-oversampling, and it is an FPGA machine that resamples everything to DSD256 - the exact opposite. Recorded as vocabulary/nos-means-two-things.json because the harvest will meet this again: NOS valves are a selling point at this end of the market.",
+  "_no_rate_per_input_and_the_inputs_are_worth_naming_anyway": "« 1x AES/EBU, 2x S/PDIF, 2x NAGRA-LINK, 1x Optical, 1x Audio USB (UCA2) » with not one sample rate attached, so no inputs block. Two things in it have no key here: NAGRA-LINK, a proprietary single-mode ST-1 OPTICAL link, which is neither spdif_optical nor anything else the vocabulary knows; and the fact that « S/P-DIF on both RCA and BNC » is ONE interface on two socket types. The per-input ceilings would not help much in any case - every input ends at DSD256 - which is itself the point: on this device the interesting number is not what an input accepts but what the device makes of it.",
+  "_dxd_named_without_a_definition": "The HD line page says « Capable of DSD 256 and DXD ». DXD is a PCM format, 352.8 kHz, used in DSD production, and the page defines it nowhere. No pcm_max_hz is written from it: the acronym is not a figure, and McIntosh's spec table, read the same day, spells it out as « DXD352.8kHz, DXD384kHz » - which is how we know what it means, and is a statement about a different device."
+}
