@@ -71,7 +71,7 @@
         "takes_dsd": false
       },
       "then": "pcm_path",
-      "why": "no DSD by any path, native or DoP, so there is nothing to decide"
+      "why": "no DSD by any path, native or DoP, so there is nothing to decide. REQUIRES A STATED NO on both transports - see predicates.takes_dsd. An absent field is not a no, and reading it as one classified a device whose DSD path was only unmeasured as PCM-only."
     },
     {
       "if": {
@@ -99,5 +99,24 @@
       "then": "path_unknown",
       "why": "takes DSD, path not established, and no architecture settles it"
     }
-  ]
+  ],
+  "predicates": {
+    "_why_this_block_exists": "Three of the rules below test a PREDICATE, not a stored field, and until 2026-11-24 none of the three was defined anywhere. Measured on this catalogue's 27 records: a plausible alternative reading of `offered` moves FOUR records to a different class and empties `path_unknown` completely - which is exactly what _the_state_they_have_no_word_for says must never happen. Two of the three readings a reader could reasonably pick destroy the state this file insists on preserving. The order is published because the order is the content; the predicates have to be published for the same reason.",
+    "takes_dsd": {
+      "true": "native_dsd is true, OR dop is true.",
+      "false": "native_dsd AND dop are BOTH present AND both false. A stated no, on both transports.",
+      "unknown": "either field is absent. Rule 4 then does NOT fire, and classification falls through to the rules below it.",
+      "_the_defect_this_fixes": "Rule 4 reads « no DSD by any path, so there is nothing to decide ». Until 2026-11-24 the predicate treated ABSENCE as a no, so the rule fired on records where nobody had said whether the device takes DSD at all. It fired twice on this catalogue and one of the two was wrong: schiit-yggdrasil carries native_dsd false and dop false, a stated no, and classified correctly; msb-diamond carried neither field and carried dsd_direct \"to_be_measured\", so the record said its DSD path was unmeasured while the class said there was none. This is the three-state rule the whole database rests on - no entry means nobody filled it in, \"unknown\" means the question was asked and closed - applied to a predicate that had quietly collapsed the first into the second."
+    },
+    "dsd_direct_offered": {
+      "true": "dsd_direct is exactly the boolean true.",
+      "false": "anything else, INCLUDING \"to_be_measured\" and \"firmware_dependent\".",
+      "_why_exactly_true": "dsd_direct is a boolean_or_reason: true, false, or the NAME of the reason nobody knows yet. Reading a reason as an offer asserts a dedicated DSD path on the strength of nobody having checked. Measured: 5 of 27 records carry to_be_measured or firmware_dependent, 19%, and they are exactly the records whose class this predicate decides. Admitting them here is reading B, which empties path_unknown."
+    },
+    "internal_bypass_present": {
+      "true": "the internal_bypass key exists on the resolved device.",
+      "false": "it does not.",
+      "_note": "Presence is the whole test: a stated bypass rate is the claim. One record in 27 carries it."
+    }
+  }
 }
