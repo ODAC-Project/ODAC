@@ -1,0 +1,27 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://ifi-audio.com/products/zen-dac-signature-v2/",
+    "quote": "iFi audio's own page for the ZEN DAC Signature V2, read 2026-11-24 in a browser, from the page's « Specifications » block: « DAC Bit-Perfect DSD & DXD DAC by Burr Brown »; « FORMATS SUPPORTED PCM (384/352.8/192/176.4/96/88.2/48/44.1kHz) DSD (256/128/64), DXD(384/352.8kHz), MQA (Decoder) »; « INPUT USB3.0 B Socket (USB2.0 compatible) ». No digital filter row and no bit depth in the block.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ti_burr_brown",
+    "pcm_max_hz": 384000,
+    "dsd_max": "DSD256",
+    "dsd_direct": true,
+    "chip": "« Bit-Perfect DSD & DXD DAC by Burr Brown » - the family named, the part not. The « Bit-Perfect DSD » wording is iFi's standing claim about the TI/Burr-Brown parts it uses, and here it is made about this model rather than about the range."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "dsd_max": "DSD256"
+    }
+  },
+  "_le_seul_ifi_de_la_recolte_dont_le_chiffre_global_EST_un_chiffre_dentree": "« INPUT USB3.0 B Socket » - one input, and only one. So « FORMATS SUPPORTED PCM (384/...) DSD (256/128/64) » is unambiguously the USB figure and an inputs block can be written without inferring anything. The contrast with its siblings is the whole argument: a global ceiling is safe to place on an input exactly when there is one input.",
+  "_dsd_direct_sur_la_parole_du_fabricant_pour_CE_modele": "« Bit-Perfect DSD ... DAC by Burr Brown ». dsd_direct is recorded true. The field decides one thing - whether a per-device correction could ever apply - and iFi says of this model that its DSD path is bit-perfect. Note what is NOT written: dsd_reconverted_to_pcm, which is a different question (does the device turn DSD into PCM), and correctable, which also needs the device not to be doing undocumented DSP. The catalogue conflated those two until 2026-11-20.",
+  "_DXD_une_troisieme_fois": "« DXD(384/352.8kHz) », listed beside the DSD rates as if it were a different kind of thing. It is 24-bit PCM at those rates - McIntosh's spec table spells it out - and it is already covered by pcm_max_hz 384000. Third maker to name it after McIntosh and Nagra, and the second to list it among DSD formats rather than PCM ones."
+}

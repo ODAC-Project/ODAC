@@ -1,0 +1,45 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://chordelectronics.co.uk/product/hugott2",
+    "quote": "Chord Electronics' own page for the Hugo TT 2, read 2026-11-24. « Connectivity (input): 1x USB Type-B, 2x Coax BNC & 2x Optical ». One block for all inputs: « PCM support: 44.1kHz, 48kHz, 88.2kHz, 96kHz, 176.4kHz, 192kHz, 352.8kHz, 384kHz, 717.6kHz, and 768kHz. 16 - 32bit ». DSD: « DoP DSD 64 to DSD 512 - native via Windows ». Conversion: « Xilinx Artix 7 FPGA, custom-coded by Chord Electronics' Rob Watts » with « 86x 208MHz cores running in parallel »; « advanced 16FS WTA 1 filter with 98,304-taps »; « Tap length filter: 98,304-tap 16FS WTA 1 - 10 element design »; « a 10-element design ». Filters: « four-stage user-selectable filter controls » and « three-stage user-selectable digital crossfeed », with no filter named. Digital output: « 2x DX BNC (expansion outputs) ». Self-description: « DAC, preamplifier & headphone amplifier ». A terms-of-use page was not opened and none of the pages read carries a prohibition.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "chord_wta",
+    "technology": "fpga",
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true,
+    "chip": "No converter chip: « Xilinx Artix 7 FPGA, custom-coded by Chord Electronics' Rob Watts » with « 86x 208MHz cores running in parallel », running « advanced 16FS WTA 1 filter with 98,304-taps » into « a 10-element design » pulse array. Twice the tap length of the Hugo 2's 49,152.",
+    "device_settings": [
+      {
+        "setting": "Filter controls",
+        "set_to": "unknown",
+        "why": "« four-stage user-selectable filter controls » - a count and no names, on a page that gives the tap length to five significant figures. The Hugo 2's page names its four; this one does not. No value can be recorded, and the Hugo 2's names must NOT be copied across: two models of one maker with the same filter COUNT is not evidence that the filters are the same."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 768000,
+      "bits": 32
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 768000,
+      "bits": 32
+    }
+  },
+  "_un_seul_bloc_pour_toutes_les_entrees_et_ce_quil_coute": "« PCM support: 44.1kHz ... 768kHz. 16 - 32bit » is ONE statement covering USB, two BNC coaxials and two opticals. So 768 kHz is written on all three keys, including OPTICAL - where the Hugo 2, the same maker's page, rates optical at 96 kHz and where five other makers in this catalogue also say 96. TOSLINK at 768 kHz is not physically typical. The figure is recorded because the maker states it of all its inputs and nothing on the page distinguishes them, and this note exists so nobody mistakes it for a per-input measurement. It is the exact inverse of the Berkeley decision, where a global line was NOT spread across the inputs - the difference being that Berkeley's spec list enumerated its inputs separately just below, and this one does not.",
+  "_dop_et_native_dans_la_meme_phrase": "« DoP DSD 64 to DSD 512 - native via Windows ». DoP by default, native only on one operating system - a statement about the HOST, not about the device's socket. Both fields are set true because the maker claims both paths, and the condition is kept in the quote: on macOS or Linux this device may be DoP-only, and nothing here can express « native, if your driver ».",
+  "_deux_BNC_coaxiaux_et_pas_un_mot_sur_le_dual_data": "« 2x Coax BNC ». The Hugo 2 has an explicit dual-data mode doubling its coaxial ceiling; this page mentions none, although two BNC sockets is exactly the hardware that mode needs. Nothing is written. A reader who knows the Hugo 2 would infer it, which is the reason to say here that the page does not."
+}

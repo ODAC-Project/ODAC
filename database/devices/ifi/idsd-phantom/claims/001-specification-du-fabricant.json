@@ -1,0 +1,19 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://ifi-audio.com/products/idsd-phantom/",
+    "quote": "iFi audio's own page for the iDSD Phantom, read 2026-11-24 in a browser, from the page's « Specifications » block: « DIGITAL INPUTS 1x USB-B 3.0; 2x USB-A (Host); 1x USB-C (Host); 1x S/PDIF (coaxial) 1x AES3 (XLR); 1x RJ45; 1x M12; 1x Optical (SC); 1x BNC (Sync in) »; « HI-RES SUPPORT PCM 768kHz; DSD512 (DSD2048 with Remastering) ». No DAC chip, no digital filter and no bit depth in the block.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512",
+    "chip": "Not named on this page."
+  },
+  "_un_seul_chiffre_pour_toutes_les_entrees_et_la_lecon_deja_payee": "iFi publishes ONE « HI-RES SUPPORT » or « FILE SUPPORT » line for the whole device and never breaks it down by input. No inputs block is written here, and that is a decision the catalogue has already paid for: on 2026-11-20 the ifi/generique record carried per-input ceilings spread from exactly this kind of global line, and they were WITHDRAWN on the maker's own manual, which says « Inputs other than USB are currently limited to maximum sample rates of 192kHz PCM and DSD64 via DoP ». A global figure on an iFi page is therefore known to be the USB figure, and spreading it across coaxial and optical would overstate them by a factor of four.",
+  "_DSD2048_est_INTERNE_et_pas_un_plafond_dentree": "« DSD512 (DSD2048 with Remastering) ». Remastering is iFi's own upsampling, so DSD2048 is what the device REACHES INSIDE and DSD512 is what it ACCEPTS. dsd_max is DSD512. Exactly the trap EMM Labs and Meitner set with « 16xDSD converter » - there the stage runs at DSD1024 and the input takes DSD128 - and the second time in two days that a maker's largest DSD number is not an input ceiling. The parenthesis is the only thing separating them, and an automated read of « DSD2048 » would be four steps too high.",
+  "_neuf_prises_numeriques_dont_quatre_sans_nom_dans_le_vocabulaire": "« 1x RJ45; 1x M12; 1x Optical (SC); 1x BNC (Sync in) » - an industrial M12 Ethernet connector, an SC fibre socket, a BNC for clock sync, and RJ45. The interface vocabulary has none of them: M12 and SC are physical connectors for Ethernet, the BNC carries no audio at all, and the catalogue's thirteen interfaces are protocol-level. Richest input list in 125 records and the one the schema can describe least."
+}

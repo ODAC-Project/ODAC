@@ -1,0 +1,19 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://ifi-audio.com/products/neo-stream-3/",
+    "quote": "iFi audio's own page for the NEO Stream 3, read 2026-11-24 in a browser, from the page's « Specifications » block: « DIGITAL INPUTS Wi-Fi; Ethernet (RJ45, M12-X, Optical); 2x USB-A; USB-C (front) »; « DIGITAL OUTPUT 2x USB-A; S/PDIF Optical; S/PDIF Coaxial; AES/EBU; I2S »; « HI-RES SUPPORT 768kHz PCM; DSD512 (22.6MHz) »; « ANALOGUE OUTPUTS 4.4mm Balanced, SE RCA »; « ANALOGUE OUTPUT VOLTAGE Balanced 4V RMS; SE 2V RMS »; « OUTPUT IMPEDANCE Balanced <=74Ohm; SE <=37Ohm ». No DAC chip and no digital filter row.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512",
+    "chip": "Not named on this page."
+  },
+  "_un_seul_chiffre_pour_toutes_les_entrees_et_la_lecon_deja_payee": "iFi publishes ONE « HI-RES SUPPORT » or « FILE SUPPORT » line for the whole device and never breaks it down by input. No inputs block is written here, and that is a decision the catalogue has already paid for: on 2026-11-20 the ifi/generique record carried per-input ceilings spread from exactly this kind of global line, and they were WITHDRAWN on the maker's own manual, which says « Inputs other than USB are currently limited to maximum sample rates of 192kHz PCM and DSD64 via DoP ». A global figure on an iFi page is therefore known to be the USB figure, and spreading it across coaxial and optical would overstate them by a factor of four.",
+  "_ses_entrees_numeriques_ne_sont_QUE_du_reseau_et_du_stockage": "« DIGITAL INPUTS Wi-Fi; Ethernet (RJ45, M12-X, Optical); 2x USB-A; USB-C (front) ». Not one of them is an interface this catalogue can key: Wi-Fi and Ethernet are network transports whose protocol the page does not name, and the USB-A and USB-C ports are for storage and for a phone, not for a computer sending audio. So a device with ANALOGUE OUTPUTS - it converts - and no writable input at all. The S/PDIF, AES/EBU and I2S sockets on it are OUTPUTS, feeding another converter.",
+  "_un_appareil_qui_est_a_la_fois_source_et_convertisseur": "It streams, it converts (« ANALOGUE OUTPUTS 4.4mm Balanced, SE RCA » with stated voltages and impedances), and it also feeds an external DAC over five digital outputs. `kind` takes one value; network_player is recorded because that is how the maker sells it and how a system will see it. The conversion half of the device is therefore invisible in this record's kind, which is the gap the McIntosh CS7500 opened - there a streaming preamplifier had to be filed as `dac`, here a converting streamer is filed as `network_player`. The field is wrong in both directions."
+}

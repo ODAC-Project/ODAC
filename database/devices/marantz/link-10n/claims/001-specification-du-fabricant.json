@@ -1,0 +1,33 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.marantz.com/fr-fr/product/network-audio-players/link-10n/LINK10N.html",
+    "quote": "Marantz's own page for the LINK 10n, read 2026-11-24 (the site served its fr-fr locale). Input rows: « Optical input / output (Maximum Support) 2 / 1 (on/off switchable)  44.1 kHz - 192 kHz »; « Coaxial input / output (Maximum Support) 1 / 1 (on/off switchable)   44.1 kHz - 192 kHz » - no bit depth on either. USB-B: « DAC Master Clock Design (USB-DAC) Yes » and « Asynchronous mode (for USB-B input) Yes », with NO rate stated. Network: « Prise en charge de l'audio haute resolution » and « Hi-Res Audio », with no rate. Conversion: « DAC Circuit New MMM-Conversion ». Filters: « Digital Filter MMM-Stream   Filter 1, 2 Selectable »; « Dither MMM-Stream   (Dither 1, 2, Off) »; « Noise Shaper MMM-Stream  Balanced, Natural, Dynamic Music, Dymanic Voice) » - the typo and the unbalanced parenthesis are the page's. No DSD figure anywhere. No prohibition on the page; the terms page was not opened.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "unknown",
+    "pcm_max_hz": 192000,
+    "chip": "No part number: « DAC Circuit New MMM-Conversion », Marantz's own name for its conversion stage, with « MMM-Stream » as the processing ahead of it.",
+    "device_settings": [
+      {
+        "setting": "Noise Shaper (MMM-Stream)",
+        "set_to": "Balanced",
+        "why": "Four options, named: « Balanced, Natural, Dynamic Music, Dymanic Voice ». « Balanced » is the one to prefer - the other three are voicings aimed at material types, and Auto's job is to deliver the signal rather than to characterise it. The page also offers « Filter 1, 2 Selectable » and « Dither 1, 2, Off », whose effects it never describes, so no value is recorded for those two."
+      }
+    ]
+  },
+  "inputs": {
+    "spdif_coax": {
+      "pcm_max_hz": 192000
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000
+    }
+  },
+  "_lusb_est_la_seule_entree_sans_chiffre_et_cest_la_plus_importante": "Optical and coaxial get « 44.1 kHz - 192 kHz »; the USB-B input gets two yes/no rows - « DAC Master Clock Design (USB-DAC) Yes » and « Asynchronous mode (for USB-B input) Yes » - and no figure at all. So the one input a computer uses is the one this page does not rate, and no usb block is written. The device-level 192000 comes from the two inputs that ARE rated and must not be read as the USB ceiling.",
+  "_trois_reglages_nommes_dont_deux_indescriptibles": "« Filter 1, 2 Selectable », « Dither 1, 2, Off », « Noise Shaper: Balanced, Natural, Dynamic Music, Dymanic Voice ». Three independent settings in the signal path - that is more user control over the conversion than any other mass-market record in this catalogue - and the filters and dither are numbered rather than described. Only the noise shaper, whose options have meaningful names, gets a recorded value. A catalogue that says « set Filter to 1 » without knowing what Filter 1 does would be inventing advice."
+}

@@ -1,0 +1,33 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://chordelectronics.co.uk/product/mojo-2",
+    "quote": "Chord Electronics' own page for the Mojo 2, read 2026-11-24. Inputs: « Five digital inputs: coaxial, dual-data coax, optical, Micro-USB and USB-C » - with no rate or bit depth printed per input. Feature list: « 768kHz Micro USB Input »; « 768kHz Coax Input via Jack »; « 96kHz Optical Input ». DSD: « Up to DSD 256 (4x) Capable » and « DSD via DoP ». Conversion: « entirely engineered around a powerful, custom-coded FPGA processor »; « Improved WTA filtering: 40 DSP cores for better transparency and lower noise »; the marketing page adds « Unique FPGA technology » and « Improved FPGA: more resolution, power and efficiency ». « UHD DSP » is described as « advanced 'digital tone control' ». Menu options: « mute, crossfeed, button-lock, switchable USB-C charging and tone control adjustment ». Self-description: « Class-leading portable DAC/headphone amplifier. » A terms-of-use page was not opened and none of the pages read carries a prohibition.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "chord_wta",
+    "technology": "fpga",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD256",
+    "dop": true,
+    "chip": "No converter chip and no part number for the FPGA either: « entirely engineered around a powerful, custom-coded FPGA processor », with « Improved WTA filtering: 40 DSP cores ». Neither the Xilinx part nor a tap length is given, unlike the Hugo 2 and the Hugo TT 2."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 768000
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000
+    }
+  },
+  "_le_coaxial_a_768_est_peut_etre_le_chiffre_du_mode_dual_data": "« 768kHz Coax Input via Jack », and the input list says « coaxial, dual-data coax » - two entries for what the Hugo 2's page calls one socket in two modes. This page gives ONE coaxial figure and does not say which mode it belongs to. 768000 is recorded because that is what the page states; the doubt is that on the Hugo 2 the single-data coaxial stops at 384 kHz and only dual-data reaches 768. The Hugo 2's split is NOT imported here - a sibling's page is not this device's evidence - but a reader should know the figure may be the dual-data one.",
+  "_aucune_profondeur_de_bits_nulle_part": "The tech-spec page gives three rates and no bit depth, for any input, where the Hugo 2 gives a range for every one. `bits` is absent at device level and in every input block. Same maker, same season, two pages, and one of them simply does not say.",
+  "_le_tone_control_nest_pas_un_filtre_de_reconstruction": "« UHD DSP » described as « advanced 'digital tone control' », and the menu offers « tone control adjustment ». That is deliberate colouration the listener dials in, not the reconstruction filter this catalogue records in device_settings. No setting is written: putting a tone control in that field would make an engine think it had found a filter it should choose."
+}

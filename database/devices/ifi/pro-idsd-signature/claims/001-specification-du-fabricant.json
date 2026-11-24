@@ -1,0 +1,25 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://ifi-audio.com/products/pro-idsd-signature/",
+    "quote": "iFi audio's own page for the Pro iDSD Signature, read 2026-11-24 in a browser, from the page's « Specifications » block: « DIGITAL FILTERS Bit-Perfect/Bit-Perfect+/Gibbs Transient Optimised/Apodising/Transient Aligned »; « INPUT USB/AES3 (XLR)/S/PDIF (coaxial/optical combo)/BNC »; « INPUT VOLTAGE Pro iDSD - DC 9V/6.7A - 18V/3.35A iPower Elite - AC 85 - 265V, 50/60Hz ». The block states no sample rate, no bit depth and no DSD figure, and names no DAC chip.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ti_burr_brown",
+    "chip": "Not named on this page. family comes from iFi's brand-level statement about its TI/Burr-Brown parts, which the catalogue already holds; no part number is published for this model.",
+    "device_settings": [
+      {
+        "setting": "Digital filters",
+        "set_to": "Bit-Perfect",
+        "why": "FIVE filters, all NAMED, in a specification row: « Bit-Perfect/Bit-Perfect+/Gibbs Transient Optimised/Apodising/Transient Aligned ». Bit-Perfect is the one to prefer and the name says why - it is the setting that applies no interpolation of the device's own, which is what Auto needs when it has already chosen the rate and the filter. The other four are real choices and worth knowing: « Gibbs Transient Optimised » targets the overshoot a brick-wall filter produces, « Apodising » is the designed-to-discard-the-source's-own-ringing family, and « Transient Aligned » is the same idea as Chord's WTA. This is the most filter choice any record in the catalogue offers."
+      }
+    ]
+  },
+  "_le_mot_apodising_une_deuxieme_fois_et_la_premiere_comme_REGLAGE": "Mola Mola publishes « Bandwidth: Up to 80kHz (apodizing response) » as a measured property; this maker offers « Apodising » as one of five positions the owner can select. Second occurrence of the word in 126 records and the first where it is a choice rather than a description. vocabulary has the term and no field: a filter NAME is recordable only inside device_settings prose, so five named filters here, four on the Chord Hugo 2, three on the Rockna and three on the Cambridge DacMagic 200M all live as text and none of them can be queried.",
+  "_la_preuve_par_entree_de_ce_modele_existe_AILLEURS_et_nest_pas_reportee_ici": "The iFi Pro iDSD manual, quoted in ifi/generique's open doubt, says « Inputs other than USB are currently limited to maximum sample rates of 192kHz PCM and DSD64 via DoP » - the cleanest per-input statement iFi has ever made, and the reason that record's spread-out ceilings were withdrawn. That doubt asks for a per-model record to carry it. This record is NOT that home: the manual is the PRO IDSD's and this page is the PRO IDSD SIGNATURE's, two products this page itself distinguishes (its own power row reads « Pro iDSD - DC 9V/6.7A »). Transferring the quote would be the mistake the withdrawal was made to correct, one generation sideways. The doubt stays open and wants an ifi/pro-idsd record.",
+  "_aucun_debit_sur_la_page_du_modele_le_plus_capable_de_la_gamme": "Not one sample rate, bit depth or DSD figure on the page of iFi's flagship - while the ZEN Air DAC 2, four hundred euros below it, publishes « PCM 384kHz; DSD256 ». pcm_max_hz and dsd_max are absent and will resolve through the brand, which holds no figure either since those were withdrawn. So the catalogue's entry for this device says what filters it offers and not what it accepts."
+}

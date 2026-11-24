@@ -1,0 +1,51 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://chordelectronics.co.uk/product/hugo-2",
+    "quote": "Chord Electronics' own page for the Hugo 2, read 2026-11-24. « Connectivity (input) » block: « Micro USB (White): 44.1kHz to 768kHz - 16bit to 32bit »; « Coax via 3.5mm jack (Red): 44.1kHz to 384kHz - 16bit to 32bit »; « Coax via (same) 3.5mm jack (Dual data mode: Yellow): 44.1kHz to 768kHz - 16bit to 32bit »; « Optical (Green): 44.1kHz to 96kHz - 16bit to 24bit »; « Bluetooth (APTX) (Blue): 44.1kHz to 48kHz - 16bit ». DSD: « Native playback supported. DSD64 (Single) to DSD512 (Octa-DSD) », and the intro « up to DSD512 (Octa DSD), via its HD USB input ». Conversion: « Chord Electronics custom coded Xilinx Artix 7 (XC7A15T) FPGA »; « Tap-length: 49,152 »; « Pulse array: 10 element pulse array design »; « Tap length filter: 49,152 - 10 element Pulse Array design »; « the latest FPGAs and WTA (Watts Transient Aligned) filters ». « User Configurable Options / Filters (Digital) »: « Incisive neutral (Ultimate reference) (White) »; « Incisive neutral HF roll-off (High Frequency roll off) (Green) »; « Warm ('Smooth') (Orange) »; « Warmer HF roll-off (High Frequency roll off) (Red) ». « Crossfeed (Digital IIR) »: « Off - No Crossfeed »; « Level 1 - Light »; « Level 2 - Medium »; « Level 3 - Heavy ». Self-description: « Hugo 2 is a powerful DAC and headphone amp that builds on the ground-breaking original. » and « Transportable DAC/Headphone Amplifier ». A terms-of-use page was not opened; the footer links are Privacy, Cookies, Warranty, Safety and a Modern Slavery Act statement, and none of the pages read carries a prohibition.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "chord_wta",
+    "technology": "fpga",
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "chip": "No converter chip, by design: « Chord Electronics custom coded Xilinx Artix 7 (XC7A15T) FPGA » driving a « 10 element pulse array design ». The FPGA runs the filter - « Tap-length: 49,152 » - and the pulse array does the conversion.",
+    "device_settings": [
+      {
+        "setting": "Filters (Digital)",
+        "set_to": "Incisive neutral (Ultimate reference)",
+        "why": "Four filters, NAMED, in a user-options block: « Incisive neutral (Ultimate reference) (White) », « Incisive neutral HF roll-off (Green) », « Warm ('Smooth') (Orange) », « Warmer HF roll-off (Red) ». The first is the one to prefer and the maker says why in its own label - « Ultimate reference ». The other three are deliberate departures: two roll off the high frequencies, two are voiced « warm ». Auto's job is to deliver the signal intact and let nothing colour it, so the reference filter is the setting."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 384000,
+      "bits": 32
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000,
+      "bits": 24
+    },
+    "bluetooth": {
+      "pcm_max_hz": 48000,
+      "bits": 16
+    }
+  },
+  "_la_meilleure_page_de_toute_la_recolte": "Five inputs, each with its own rate AND its own bit-depth RANGE, plus the FPGA part number, the tap count, the pulse-array element count, four named filters and three crossfeed levels. No other page read in two days gives all of that. Worth saying plainly: it is possible to publish everything this catalogue wants, and one maker does.",
+  "_une_prise_jack_avec_deux_plafonds_selon_le_MODE": "« Coax via 3.5mm jack (Red): 44.1kHz to 384kHz » and « Coax via (same) 3.5mm jack (Dual data mode: Yellow): 44.1kHz to 768kHz ». The maker writes « (same) » itself: ONE socket, two modes, a factor of two. 384000 is recorded - the single-data figure, which is what a normal source produces - and the dual-data 768 is reachable only from another Chord device driving both data lines. Fifth shape of a ceiling that depends on something other than the input: MSB's modules, the (input, transport) pair at APL and Matrix, Cambridge's USB class, and now a signalling mode. inputs.pcm_max_hz is one number and every one of these needs two.",
+  "_les_profondeurs_sont_des_INTERVALLES_et_non_des_plafonds": "« 16bit to 32bit », « 16bit to 24bit », « 16bit » - Chord states a RANGE per input, which is more informative than a ceiling: it says the input will also accept 16 bits, which a ceiling leaves open. inputs.bits takes one integer, so the top of each range is recorded and the bottom is lost. No consumer is harmed by that today, since 16 bits is universally accepted; it is noted because a field that can only say « at most » cannot express « from, to ».",
+  "_native_dit_une_fois_pour_lappareil_et_jamais_par_entree": "« Native playback supported. DSD64 (Single) to DSD512 (Octa-DSD) » with « via its HD USB input » in the intro. So DSD512 native is a USB fact; the coaxial and optical inputs get no DSD figure at all and none is written for them. The device-level native_dsd is true on the maker's own word."
+}

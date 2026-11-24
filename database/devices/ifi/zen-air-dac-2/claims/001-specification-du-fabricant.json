@@ -1,0 +1,17 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://ifi-audio.com/products/zen-air-dac-2/",
+    "quote": "iFi audio's own page for the ZEN Air DAC 2, read 2026-11-24 in a browser. The entire « Specifications » block's digital content is one row: « HI-RES SUPPORT PCM 384kHz; DSD256 ». No input list, no DAC chip, no digital filter, no bit depth.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 384000,
+    "dsd_max": "DSD256",
+    "chip": "Not named on this page."
+  },
+  "_une_fiche_dune_seule_ligne_et_elle_vaut_mieux_que_rien": "One row of digital specification on the whole page - not even a list of inputs. The record reaches level 2 on the two figures that matter most to an engine (what PCM rate and what DSD rate the device will take) and says nothing else. Written rather than skipped because a device people own is a device the engine will meet, and because the alternative - resolving it through the brand's catch-all - would hand it the Pro iDSD's figures, which are twice these."
+}
