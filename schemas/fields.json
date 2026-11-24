@@ -70,7 +70,7 @@
     "dsd_max": {
       "type": "enum_or_unknown",
       "description": "Highest DSD rate accepted, named: DSD64 … DSD1024.",
-      "used_on_records": 32,
+      "used_on_records": 34,
       "level": 2,
       "probe_can_establish": true
     },
@@ -91,7 +91,7 @@
     "inputs.bits": {
       "type": "integer_or_unknown",
       "description": "Word width THROUGH this input. Flat across rates; see inputs.bits_above_hz.",
-      "used_on_records": 19,
+      "used_on_records": 21,
       "level": 2,
       "probe_can_establish": true,
       "_in_use_since": "2026-11-24, with the first record of the population pass: eversolo/dmp-a8, from the maker's own specification table."
@@ -115,7 +115,7 @@
     "inputs.native_dsd_possible": {
       "type": "boolean",
       "description": "Whether this input carries native DSD at all. A property of the transport.",
-      "used_on_records": 7,
+      "used_on_records": 9,
       "level": 2,
       "probe_can_establish": true,
       "_in_use_since": "2026-11-24, with the first record of the population pass: eversolo/dmp-a8, from the maker's own specification table."
@@ -123,7 +123,7 @@
     "inputs.pcm_max_hz": {
       "type": "integer_or_unknown",
       "description": "Highest PCM rate THROUGH this input.",
-      "used_on_records": 91,
+      "used_on_records": 93,
       "level": 2,
       "probe_can_establish": true
     },
@@ -144,7 +144,7 @@
     "native_dsd": {
       "type": "boolean",
       "description": "Accepts DSD over a native path, as opposed to DoP.",
-      "used_on_records": 30,
+      "used_on_records": 32,
       "level": 2,
       "probe_can_establish": true
     },
@@ -158,7 +158,7 @@
     "pcm_max_hz": {
       "type": "integer_or_unknown",
       "description": "Highest PCM rate the device accepts, in hertz.",
-      "used_on_records": 33,
+      "used_on_records": 35,
       "level": 2,
       "probe_can_establish": true
     },

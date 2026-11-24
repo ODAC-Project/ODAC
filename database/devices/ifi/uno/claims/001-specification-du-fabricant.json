@@ -1,0 +1,24 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://ifi-audio.com/products/uno",
+    "quote": "iFi audio's own product page for the uno, read 2026-11-24: « True Native® playback. It handles PCM data to 32-bit/384kHz, DSD up to DSD256 and single and double speed DXD. »",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 384000,
+    "dsd_max": "DSD256",
+    "native_dsd": true
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "native_dsd_possible": true
+    }
+  },
+  "_true_native_not_carried_over": "« True Native® » IS USED HERE AND NOT EXPLAINED. iFi applies the trademark across its range; only the ZEN DAC 3's page spells out what it means - « PCM and DSD take separate pathways - this enables DSD... to remain 'bit-perfect' in its native form right through to analogue conversion ». So dsd_direct is NOT asserted on this record: carrying a meaning from one page to another because the same trade mark appears is the range-cited-for-one-model error, and this catalogue calls that its most common. What the term licenses at brand level is asserted once, on database/brands/ifi.json, with that sentence as its evidence."
+}

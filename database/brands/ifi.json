@@ -1,4 +1,10 @@
 {
   "id": "ifi",
-  "name": "iFi Audio"
+  "name": "iFi Audio",
+  "family_claim": {
+    "family": "ti_burr_brown",
+    "evidence": "iFi's own pages name a « Burr-Brown DAC chip » on the ZEN DAC 3 and use « True Native® » across the range - uno, ZEN One Signature and ZEN DAC 3 all read « True Native® playback », and the ZEN DAC 3's page defines it: « Thanks to the Burr-Brown DAC chip's four-channel True Native design, PCM and DSD take separate pathways - this enables DSD, as well as PCM, to remain 'bit-perfect' in its native form right through to analogue conversion. » Three models of one maker, read 2026-11-24, the vendor named on one and the term shared by all three.",
+    "_what_this_replaces": "The seed record ifi/generique carried family ti_burr_brown on a forum sentence - « All iFi DACs that support DSD and are using TI/BB chipset » - which its own open doubt called out as a conditional describing SOME iFi DACs rather than claiming the range. This claim rests on the maker instead, and sits at brand level where a range-wide assertion belongs.",
+    "_what_it_does_NOT_license": "It does not carry dsd_direct to every iFi device. The sentence that establishes dsd_direct is on the ZEN DAC 3's page and names that chip's design; the other two pages use the trade mark without explaining it. A brand-level family is a statement about silicon, not a licence to copy a behaviour."
+  }
 }
