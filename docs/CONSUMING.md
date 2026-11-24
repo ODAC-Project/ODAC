@@ -19,8 +19,8 @@ traffic off GitHub.
 Alongside the artefact, CI publishes a small pointer:
 
 ```json
-{ "version": "2026.11.24", "fingerprint": "d25a23b98e33b87b",
-  "url": "odac-2026.11.24.jsonl" }
+{ "version": "2026.11.24", "fingerprint": "353823dc6d5dde50",
+  "url": "odac-2026.11.24-353823dc6d5dde50.jsonl", "entries": 359 }
 ```
 
 Poll the pointer — a few hundred bytes, short cache — and download the artefact
@@ -28,8 +28,30 @@ Poll the pointer — a few hundred bytes, short cache — and download the artef
 staleness and almost zero bandwidth, which is better than a mirror that
 republishes on a timer and hopes.
 
-The artefact URL is **versioned**, never overwritten. A cache header only ever
-cures the future: a client that already holds the old URL keeps the old file.
+**The artefact URL carries the fingerprint, so it is addressed by its content**
+and never changes meaning. Cache it for as long as you like; a different build is
+a different URL. This paragraph used to promise that and the filename could not
+keep it — the version was the date alone, and on 24 November 2026 one URL carried
+ten different builds, from 349 entries to 347 to 359. A cache header only ever
+cures the future: a client that already holds a URL keeps the file behind it, so
+the URL has to mean one thing for ever.
+
+The repository keeps only the current artefact. Old URLs stay reachable on the
+mirror, which is what the mirror is for; GitHub serves the tier that wants the
+newest minute.
+
+## Ask for it compressed
+
+```
+261 228 bytes raw   →   43 762 bytes gzipped   (83% off)
+```
+
+It is JSON Lines: highly repetitive, and it compresses by a factor of six. Send
+`Accept-Encoding: gzip` and make sure your mirror is configured to honour it —
+a server that omits JSON from its compressible types serves this in the clear
+and nothing breaks, so nobody notices paying six times the bandwidth. This is
+the single largest lever on the cost of consuming the database, larger than
+anything in the schema.
 
 ## Format
 

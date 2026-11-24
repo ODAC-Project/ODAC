@@ -12,7 +12,7 @@ highest-weighted source wins, ties broken by the later submission. Every resolve
 value travels with the source that carries it, and a field claimed with two
 different values is listed in `contested` rather than silently flattened.
 """
-import datetime, hashlib, json, os, sys
+import datetime, gzip, hashlib, json, os, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.join(HERE, "..")
@@ -110,15 +110,37 @@ os.makedirs(DIST, exist_ok=True)
 body = "\n".join(lines) + "\n"
 fingerprint = hashlib.sha256(body.encode("utf-8")).hexdigest()[:16]
 version = datetime.date.today().strftime("%Y.%m.%d")
-name = "odac-%s.jsonl" % version
+# THE NAME CARRIES THE FINGERPRINT, so the URL is addressed by its content and is
+# genuinely immutable. The comment that stood here claimed the URL was "versioned
+# and never overwritten" while the version was only the DATE - and on 2026-11-24
+# that one URL carried TEN different builds, from 349 entries to 347 to 359. A
+# consumer who cached it in the morning held content the afternoon no longer
+# matched, at an address the documentation called permanent. One build, one URL,
+# cacheable for ever.
+name = "odac-%s-%s.jsonl" % (version, fingerprint)
 open(os.path.join(DIST, name), "w", encoding="utf-8").write(body)
-# The URL is versioned and never overwritten: a cache header only ever cures the
-# future, and a client holding the old URL keeps the old file.
+
+# The repository keeps ONE artefact: the current one. Superseded builds are the
+# mirror's business, where an old URL must stay reachable; git serves the tier
+# that wants the newest minute, so intermediate builds here would be weight with
+# no reader.
+for stale in sorted(os.listdir(DIST)):
+    if stale.startswith("odac-") and stale.endswith(".jsonl") and stale != name:
+        os.remove(os.path.join(DIST, stale))
+
+# latest.json is the only mutable thing, 118 bytes of it: fetch this, compare the
+# fingerprint, and download the artefact only when it changed.
 json.dump({"version": version, "fingerprint": fingerprint, "url": name,
            "entries": len(lines)},
           open(os.path.join(DIST, "latest.json"), "w", encoding="utf-8"),
           indent=2, ensure_ascii=False)
-print("dist/%s  %d entries, %d bytes"
-      % (name, len(lines), len(body.encode("utf-8"))))
+
+raw = body.encode("utf-8")
+packed = gzip.compress(raw, 9)
+# Print the compressed size as well: the whole point of a single artefact is
+# bandwidth, and the number that travels is the compressed one.
+print("dist/%s\n  %d entries, %d bytes, %d gzipped (%.0f%% off)"
+      % (name, len(lines), len(raw), len(packed),
+         100 - 100.0 * len(packed) / len(raw)))
 print("fingerprint %s" % fingerprint)
 print("contested fields: %d" % contested_total)
