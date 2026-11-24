@@ -42,6 +42,23 @@ for folder, kind in (("brands", "brand"), ("chip-families", "chip_family"),
             e = read(os.path.join(d, f))
             emit(kind, e.get("id") or f[:-5], e)
 
+# The vocabulary ships too, and it is not optional. These files carry the ORDERED
+# rules that derive dac_class, the completeness levels and the shape of a match -
+# things a consumer has to implement and cannot infer. Leaving them out while
+# README says "do not clone this repository" meant the published channel did not
+# carry what it told people to read: on 2026-11-24 two rule corrections in a row,
+# one of them changing a device's class, left the artefact byte-identical. Worse
+# than missing - the fingerprint is how a consumer decides whether to download
+# again, so an unchanged fingerprint actively said "nothing changed".
+#
+# FOUR of these files are a bare JSON string, not an object, so `e.get("id")`
+# would die on them. The filename stem is the id for all of them: a vocabulary
+# file is addressed by its name, and nothing inside it is a better key.
+vocab = os.path.join(DB, "vocabulary")
+for f in sorted(os.listdir(vocab)):
+    if f.endswith(".json"):
+        emit("vocabulary", f[:-5], read(os.path.join(vocab, f)))
+
 devices = os.path.join(DB, "devices")
 for brand in sorted(os.listdir(devices)):
     bpath = os.path.join(devices, brand)

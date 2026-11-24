@@ -39,7 +39,18 @@ One JSON object per line:
 {"type":"brand","id":"holo_audio","data":{...}}
 {"type":"device","id":"holo_may","data":{...}}
 {"type":"interface","id":"usb","data":{...}}
+{"type":"chip_family","id":"r2r_ladder","data":{...}}
+{"type":"vocabulary","id":"classes","data":{...}}
 ```
+
+The `vocabulary` entries are the part you have to read rather than index.
+`classes` carries the ORDERED rules that derive a device's class and the
+predicates they test - the order is the whole content of the classification, so
+it is data and not our code. `completeness` defines the four levels, `matching`
+the shape of a correspondence between what your own system reports and a record
+here, `fields` what a claim may assert. A vocabulary entry's `data` is usually an
+object and is **sometimes a bare string**: four of them are a single paragraph,
+and a consumer that assumes an object will break on those.
 
 Each device's `data` is the **resolved** record: the winning claim for each
 field, with the source that carries it. Competing claims are resolved at build
