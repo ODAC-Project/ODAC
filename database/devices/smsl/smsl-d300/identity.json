@@ -1,7 +1,0 @@
-{
-  "id": "smsl_d300",
-  "kind": "dac",
-  "brand": "smsl",
-  "model": "D300",
-  "_corrected": "Keyed and filed under Topping until 2026-11-20. There is no Topping D300: every search for one returns SMSL's, on the ROHM BD34301EKV - which is the very chip family this record already carried. The record's own evidence named SMSL twice and the brand field said Topping, and the contradiction sat in _verify from the moment brand and model were split apart. Splitting them is what made it visible at all; while the name was one string, \"Topping D300\" read as a single fact nobody could check."
-}

@@ -1,0 +1,31 @@
+{
+  "id": "ta/dac200",
+  "kind": "dac",
+  "brand": "ta",
+  "model": "DAC 200",
+  "aliases": [
+    {
+      "text": "T+A DAC200",
+      "relation": "spelling"
+    },
+    {
+      "text": "HA 200",
+      "relation": "neighbour"
+    },
+    {
+      "text": "SDV 3100 HV",
+      "relation": "neighbour"
+    },
+    {
+      "text": "T+A DAC8 DSD",
+      "relation": "neighbour"
+    }
+  ],
+  "usb": [
+    {
+      "vid": "0x1852",
+      "pid": "0x5034"
+    }
+  ],
+  "_aliases_typed": "Typed 2026-11-24. An untyped alias list merged three different things and one of them is dangerous: a SPELLING is the same object written differently, an EDITION is a variant of this model that no fact yet distinguishes, and a NEIGHBOUR is a DIFFERENT PRODUCT resolved here only because it has no record of its own. Before typing, a match on \"Spring 2\" would have asserted the Spring 3's facts for another generation, and \"HA 200\" - a headphone amplifier - sat beside the DAC 200 as if it were the same device. They are listed together because they share one USB identity. THE RELATIONS WERE ASSIGNED FROM PRODUCT KNOWLEDGE, NOT FROM A CITED SOURCE: a neighbour is the claim that two things are different devices, which deserves evidence like any other, and aliases live in identity where the evidence rule does not reach. Contest them."
+}

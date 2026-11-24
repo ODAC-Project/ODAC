@@ -13,7 +13,8 @@ import json, os, re, sys
 DB = sys.argv[1] if len(sys.argv) > 1 else os.path.join(
     os.path.dirname(os.path.abspath(__file__)), "..", "database")
 errors, warnings = [], []
-IDENTITY_KEYS = {"id", "kind", "brand", "model", "aliases", "usb"}
+IDENTITY_KEYS = {"id", "kind", "brand", "model", "aliases", "usb", "superseded_by"}
+ALIAS_RELATIONS = {"spelling", "edition", "neighbour"}
 KINDS = {"dac", "network_player"}
 
 
@@ -109,6 +110,21 @@ for brand_dir in sorted(os.listdir(devices)) if os.path.isdir(devices) else []:
             continue
         for where in find_nulls(ident, rel(ident_path)):
             errors.append("null at %s. Leave the key out, or write \"unknown\"" % where)
+        # THE ID IS THE PATH. One identity, one spelling: the id used to be a flat
+        # `holo_may` beside a directory `holo-audio/holo-may`, which is two homes for
+        # one key and the exact drift this catalogue keeps paying for elsewhere. The
+        # slug is frozen - it is never renamed, a replacement record is created and
+        # the old one marked superseded_by - so it had better be derivable.
+        attendu = "%s/%s" % (brand_dir, dev_dir)
+        if ident.get("id") != attendu:
+            errors.append("%s: id is %r but its path says %r. The id IS the path"
+                          % (rel(ident_path), ident.get("id"), attendu))
+        # An alias says HOW a name relates to this record. Untyped, it silently
+        # merged a spelling, an edition and a different product.
+        for al in (ident.get("aliases") or []):
+            if not isinstance(al, dict) or "text" not in al or al.get("relation") not in ALIAS_RELATIONS:
+                errors.append("%s: alias %r must be {text, relation} with relation in %s"
+                              % (rel(ident_path), al, ", ".join(sorted(ALIAS_RELATIONS))))
         for f in ("id", "kind", "brand", "model"):
             if not ident.get(f):
                 errors.append("%s: identity has no %s" % (rel(ident_path), f))

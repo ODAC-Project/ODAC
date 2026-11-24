@@ -1,0 +1,18 @@
+{
+  "id": "schiit/yggdrasil",
+  "kind": "dac",
+  "brand": "schiit",
+  "model": "Yggdrasil Less is More",
+  "aliases": [
+    {
+      "text": "Yggdrasil",
+      "relation": "spelling"
+    },
+    {
+      "text": "Yggdrasil LiM",
+      "relation": "edition"
+    }
+  ],
+  "_corrected": "This record was called \"Yggdrasil\" and carried a quote about ONE of its three variants. Schiit sells the Yggdrasil in three flavours on three different converters: the OG on Analog Devices AD5791 at 20 bits, Less is More on four TI DAC8812 at 16 bits, and More is Less on TI DAC11001 at 20 bits. Only the second is described here, and only the second is 16-bit - so the record's bits, its chip and its family were right for a device its own name did not identify. Renamed rather than generalised. The apparent contradiction between \"16-bit TI DAC\" and the ladder family was never one: all three are multibit ladder parts rather than delta-sigma, which is the whole point of Schiit's multibit line.",
+  "_aliases_typed": "Typed 2026-11-24. An untyped alias list merged three different things and one of them is dangerous: a SPELLING is the same object written differently, an EDITION is a variant of this model that no fact yet distinguishes, and a NEIGHBOUR is a DIFFERENT PRODUCT resolved here only because it has no record of its own. Before typing, a match on \"Spring 2\" would have asserted the Spring 3's facts for another generation, and \"HA 200\" - a headphone amplifier - sat beside the DAC 200 as if it were the same device. They are listed together because they share one USB identity. THE RELATIONS WERE ASSIGNED FROM PRODUCT KNOWLEDGE, NOT FROM A CITED SOURCE: a neighbour is the claim that two things are different devices, which deserves evidence like any other, and aliases live in identity where the evidence rule does not reach. Contest them."
+}

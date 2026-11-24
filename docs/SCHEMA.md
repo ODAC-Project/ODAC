@@ -30,8 +30,30 @@ database/devices/holo-audio/holo-may/
 ```
 
 **`identity.json` carries no facts.** It holds `id`, `kind` (`dac` or
-`network_player`), `brand`, `model`, optional `aliases`, and the exact USB
-identities. Anything that could be contested belongs in a claim. The verifier
+`network_player`), `brand`, `model`, optional `aliases`, the exact USB
+identities, and `superseded_by` when a record has been replaced.
+
+**The `id` IS the path**: `holo-audio/may`, never a flat `holo_may` beside a
+directory that says something else. One identity, one spelling, and a guard that
+refuses the two drifting apart — because the slug is **frozen**: it is never
+renamed. If the structure turns out wrong, a new record is created and the old
+one marked `superseded_by`.
+
+**An alias says HOW a name relates to the record**, and this is not decoration.
+Untyped, the list merged three different things: a `spelling` is the same object
+written differently, an `edition` is a variant no fact yet distinguishes, and a
+`neighbour` is a **different product** resolved here only for want of its own
+record. Before they were typed, a match on "Spring 2" would have asserted the
+Spring 3's facts for another generation, and a headphone amplifier sat beside a
+converter as though they were one device — they share a USB identity, which is
+why they were listed together at all.
+
+There is no range level between brand and model, and that is measured rather than
+forgotten: of the 27 records, one brand has two or more models on the same
+silicon, and its maker does not name them as a range. A level with no occupant is
+a mechanism that cannot be wrong because nothing exercises it. The rule for
+creating one — same silicon **and** the maker names the grouping — is decided and
+waiting for its first real case. Anything that could be contested belongs in a claim. The verifier
 refuses a fact found in an identity, because two places to assert one thing is
 two places to get it wrong.
 

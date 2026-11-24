@@ -87,6 +87,22 @@ def two_leaks_in_one_file(root):
     json.dump(c, open(p, "w", encoding="utf-8"), indent=2, ensure_ascii=False)
 
 
+def id_not_the_path(root):
+    """The id and the directory say different things - two homes for one key."""
+    p = os.path.join(root, ANY_DEVICE, "identity.json")
+    i = json.load(open(p, encoding="utf-8"))
+    i["id"] = "something/else"
+    json.dump(i, open(p, "w", encoding="utf-8"), indent=2, ensure_ascii=False)
+
+
+def untyped_alias(root):
+    """A bare string where an alias must say HOW the name relates."""
+    p = os.path.join(root, ANY_DEVICE, "identity.json")
+    i = json.load(open(p, encoding="utf-8"))
+    i["aliases"] = ["Some Other Name"]
+    json.dump(i, open(p, "w", encoding="utf-8"), indent=2, ensure_ascii=False)
+
+
 def unregistered_field(root):
     p = claim_path(root)
     c = json.load(open(p, encoding="utf-8"))
@@ -96,6 +112,8 @@ def unregistered_field(root):
 
 MUTANTS = [
     ("a field nobody registered", unregistered_field, "not in schemas/fields.json"),
+    ("an id that is not its path", id_not_the_path, "The id IS the path"),
+    ("an alias that does not say how it relates", untyped_alias, "must be {text, relation}"),
     ("an unreleased product name", forbidden_text, "must not be published"),
     ("two leaks in one file, both named", two_leaks_in_one_file,
      lambda out: out.count("must not be published") >= 2),

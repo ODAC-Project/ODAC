@@ -59,7 +59,7 @@ One JSON object per line:
 
 ```
 {"type":"brand","id":"holo_audio","data":{...}}
-{"type":"device","id":"holo_may","data":{...}}
+{"type":"device","id":"holo-audio/may","data":{...}}
 {"type":"interface","id":"usb","data":{...}}
 {"type":"chip_family","id":"r2r_ladder","data":{...}}
 {"type":"vocabulary","id":"classes","data":{...}}

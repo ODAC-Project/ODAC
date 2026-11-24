@@ -1,0 +1,7 @@
+{
+  "id": "gustard/x30",
+  "kind": "dac",
+  "brand": "gustard",
+  "model": "X30",
+  "_corrected": "Filed under AKM until 2026-11-20 with no source naming any chip. It is ESS. The kernel's quirk table had said so all along - vendor 0x292b is commented \"Gustard/Ess based devices\" - and that comment was dismissed here as too vague to overturn a record. It was not vague; the record was unsourced. The two Gustard records now sit on two different families, which is why this brand carries none."
+}
