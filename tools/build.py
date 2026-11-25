@@ -84,10 +84,45 @@ for brand in sorted(os.listdir(devices)):
                     for k, v in blk.items():
                         key = "inputs.%s.%s" % (iface, k)
                         claimed.setdefault(key, []).append((w, v, c, cf))
-        contested = []
+        contested = {}
         for key, entries in claimed.items():
-            if len({json.dumps(e[1], sort_keys=True) for e in entries}) > 1:
-                contested.append(key)
+            distinctes = {json.dumps(e[1], sort_keys=True) for e in entries}
+            if len(distinctes) > 1:
+                # THE RIVAL VALUES TRAVEL WITH THE ARTEFACT, each with its own
+                # evidence. Until 2026-11-25 this field carried only the PATH of the
+                # contested field, which told a consumer that a disagreement existed
+                # and nothing about what it was - so the only way to see the losing
+                # value was to clone the repository and read the claims by hand.
+                # Disagreement is the centre of this model, not an error state: two
+                # sources may say different things and both be honestly reported, and
+                # a reader deciding whether to trust the winner needs to see what it
+                # beat and on what. The cost is a few kilobytes.
+                #
+                # One entry per DISTINCT VALUE, not per claim: several claims may
+                # support the same value and that is agreement, not rivalry. Each
+                # entry carries the strongest claim backing that value, and
+                # `claims` says how many back it in all. Sorted by weight, so the
+                # value the build chose is first and `chosen` marks it.
+                par_valeur = {}
+                for e in entries:
+                    cle = json.dumps(e[1], sort_keys=True)
+                    if cle not in par_valeur or (e[0], e[3]) > (par_valeur[cle][0], par_valeur[cle][3]):
+                        par_valeur[cle] = e
+                compte = {}
+                for e in entries:
+                    cle = json.dumps(e[1], sort_keys=True)
+                    compte[cle] = compte.get(cle, 0) + 1
+                rivales = []
+                for cle, (w2, v2, c2, cf2) in par_valeur.items():
+                    rivales.append({"value": v2, "weight": w2, "claims": compte[cle],
+                                    "claim": cf2, "source": c2.get("source"),
+                                    "submitted_by": c2.get("submitted_by"),
+                                    "names_subject": c2.get("source_names_subject", None)})
+                rivales.sort(key=lambda r: (-r["weight"], r["claim"]))
+                rivales[0]["chosen"] = True
+                for r in rivales[1:]:
+                    r["chosen"] = False
+                contested[key] = rivales
             w, v, c, cf = max(entries, key=lambda e: (e[0], e[3]))
             if key.startswith("inputs."):
                 _, iface, field = key.split(".", 2)
@@ -102,7 +137,7 @@ for brand in sorted(os.listdir(devices)):
             record["open_doubt"] = read(doubt)
         record["evidence"] = evidence
         if contested:
-            record["contested"] = sorted(contested)
+            record["contested"] = {k: contested[k] for k in sorted(contested)}
             contested_total += len(contested)
         emit("device", ident["id"], record)
 

@@ -75,6 +75,43 @@ object and is **sometimes a bare string**: four of them are a single paragraph,
 and a consumer that assumes an object will break on those.
 
 Each device's `data` is the **resolved** record: the winning claim for each
-field, with the source that carries it. Competing claims are resolved at build
-time; the resolution and its reason travel with the record, so you can always
-see why a value is the one you got.
+field, with the source that carries it in `evidence`. Competing claims are
+resolved at build time by source weight.
+
+## When two sources disagree
+
+A device whose claims disagree on a field carries a `contested` object. That
+paragraph above used to end "the resolution and its reason travel with the
+record, so you can always see why a value is the one you got", and until
+25 November 2026 that was **not true**: `contested` was a list of field PATHS.
+You could see that a disagreement existed and nothing about what it was, so the
+only way to read the losing value was to clone the repository.
+
+It now carries the rival values:
+
+```json
+"contested": {
+  "bits": [
+    {"value": 24, "weight": 70, "claims": 1, "chosen": true,
+     "claim": "003-specification-du-fabricant.json",
+     "submitted_by": "curator", "names_subject": true,
+     "source": {"kind": "datasheet", "url": "...", "quote": "...", "read_on": "..."}},
+    {"value": 16, "weight": 15, "claims": 1, "chosen": false,
+     "claim": "001-catalogue-initial.json", "submitted_by": "import",
+     "names_subject": null, "source": {"kind": "import", "quote": "...", "read_on": "..."}}
+  ]
+}
+```
+
+One entry per **distinct value**, not per claim: several claims supporting the
+same value is agreement, not rivalry, and `claims` says how many back each one.
+Entries are sorted by weight, so the value the build chose is first and `chosen`
+marks it. The key is the field path, `inputs.<interface>.<field>` for a per-input
+field.
+
+**Disagreement is the centre of this model, not an error state.** Two sources may
+say different things and both be honestly reported - one of the three live cases
+is a maker's product page saying an optical input takes 96 kHz against the same
+maker's own manual saying 192. A reader deciding whether to trust the winner needs
+to see what it beat and on what. The cost of carrying all of it was measured when
+it was added: 4,820 bytes across the whole artefact.
