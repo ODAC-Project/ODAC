@@ -1,0 +1,47 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://gracedesign.com/products/monitor-controllers/m905/",
+    "quote": "Grace Design's own page for the m905, read 2026-11-25. « USB Supported Sample Rates »: « 44.1, 48, 88.2, 96, 176.4, 192kHz, DSD64 2.8224MHz, DSD128 5.6448MHz ». Features: « Asynchronous Class 2 USB playback supports up to 24 bit/192kHz ». On DSD transport: « DSD128 5.6448MHz via DoP v1.1 » from the AES3, S/PDIF or USB inputs. « Input Lock Range » lists AES3 and S/PDIF up to « 192kHz +/-2000Hz » - a lock range, not a stated maximum. ADAT: « ADAT (selectable in 4 pairs, or 2 pairs in S/MUX) », with lock-range rows « 8 Channels at 44.1kHz and 48kHz » and « 4 Channels at 88.2kHz and 96kHz (s/mux) »; also « transfer up to 10 channels of digital audio (8-channels of ADAT and two of AES3, or S/PDIF or TOSLINK) over USB ». Under « Digital To Analog Converter Fixed Outputs »: « THD+N 1kHz, -1dBFS, (0dBFS = +20dBu), 20-22kHz bandwidth 0.0006% »; « 20-22kHz bandwidth, 0dBFS = +20dBu (AES17 filter) 117dB »; « 20-22kHz bandwidth, 0dBFS = +20dBu (A-weighted) 119dB ». The analogue I/O path is measured separately: « Dynamic Range 20-22kHz bandwidth 118 dB » and « 121 dB » A-weighted. No DAC chip is named. Features: « Mastering quality DAC circuitry with configurable de-emphasis filtering ». gracedesign.com has no terms-of-use page linked from its home page or from the m900, m905 or m908 pages; the only legal text is the footer « Copyright All Rights Reserved (c) 2022 Grace Design ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "unknown",
+    "pcm_max_hz": 192000,
+    "bits": 24,
+    "dsd_max": "DSD128",
+    "dop": true,
+    "chip": "Not named. Measured instead, and for the D/A path alone: « THD+N ... 0.0006% » and « 119dB » A-weighted, given separately from the analogue I/O figures."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD128",
+      "dop_possible": true,
+      "dop_max": "DSD128"
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "dsd_max": "DSD128",
+      "dop_possible": true,
+      "dop_max": "DSD128"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "dsd_max": "DSD128",
+      "dop_possible": true,
+      "dop_max": "DSD128"
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000,
+      "channels": 8
+    }
+  },
+  "_le_nombre_de_canaux_ADAT_par_debit_une_DEUXIEME_fois": "« 8 Channels at 44.1kHz and 48kHz » and « 4 Channels at 88.2kHz and 96kHz (s/mux) ». The MOTU 16A published the same relation this morning - « 16 channels of ADAT optical at 48 kHz, 8 channels of S/MUX optical I/O at 96 kHz » - and the Topping E50 II as a three-row table. Third maker, one shape, and inputs.channels is still a single integer: 8 is recorded with the 96 kHz optical ceiling, and the 44.1/48 kHz pairing is lost. The reader who collected these rows also flagged that the extracted layout left it « ambiguous about which rate row each channel line belongs to », which is itself a reason the figures are kept in the quote.",
+  "_le_DSD_arrive_en_DoP_sur_TROIS_entrees": "« DSD128 5.6448MHz via DoP v1.1 » from AES3, S/PDIF or USB. Rare: most makers name DoP on one input or on none, and this one names the standard and its version number. dop_max is DSD128 on all three, which equals dsd_max - so this is the first record where the two fields agree because the device offers no native path at all, rather than because nobody said.",
+  "_une_mesure_D_A_separee_de_la_mesure_ANALOGIQUE": "« Digital To Analog Converter Fixed Outputs » gives THD+N and two dynamic ranges; the « Analog I/O » block gives two more, three decibels higher. A maker measuring its converter apart from its analogue path, and labelling both. Third professional maker to do it after MOTU and Apogee, and the most explicit."
+}

@@ -1,0 +1,36 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://nuprimeaudio.com/product/dac-10h/",
+    "quote": "NuPrime's own page for the DAC-10H, read 2026-11-25: « USB Sampling Rates: 44.1KHz, 48KHz, 88.2KHz, 96KHz, 176.4KHz, 192KHz, 352.8KHz, 384KHz and DSD 2.8MHz (DSD64) , 5.6MHz (DSD128) 11.2MHz (DSD256) »; « S/PDIF Sampling Rates: 44.1KHz, 48KHz, 88.2KHz, 96, 176.4KHz, 192KHz » - the bare « 96 » is the page's; « Maximum Sampling Rate: 24-bits »; « Bit Resolution: 16-24-bits »; « Optical (up to 24 bit/192 kHz) », which is an OUTPUT; « Supports DSD native playback by ASIO2.1 (up to 11.2MHz) and DoP (up to 5.6MHz) method. » Converter: « SABRE32 Reference ES9018K2M from ESS Technology is one of the world's best-performing 32-bit audio DAC solution ». A volume row reads « Advanced, thin-film switched-resistor ladder network for controlling volume ». No digital filter, oversampling or NOS row.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 384000,
+    "bits": 24,
+    "dsd_max": "DSD256",
+    "native_dsd": true,
+    "dop": true,
+    "chip": "« SABRE32 Reference ES9018K2M from ESS Technology ». The « thin-film switched-resistor ladder network » is the VOLUME control, not the converter."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 24,
+      "dsd_max": "DSD256",
+      "native_dsd_possible": true,
+      "dop_possible": true,
+      "dop_max": "DSD128"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_verification_des_conditions_faite": "nuprimeaudio.com has no terms-of-use page: the footer offers Contact & Support, a Privacy Policy, Facebook and an email address. The privacy policy WAS READ and carries no clause on copying, reproducing or extracting site content. The footer reads « Copyright 2026 (c) Nuprime Audio, Inc. --- brand managed by Nuoem Pte. Ltd. », the ordinary notice.",
+  "_un_champ_mal_nomme_sur_la_page_elle_meme": "« Maximum Sampling Rate: 24-bits ». The row is labelled sampling RATE and gives a bit DEPTH. The figure is unambiguous and the label is wrong, which is worth recording because a reader extracting by label would file 24 as a frequency. The next row, « Bit Resolution: 16-24-bits », says the same thing correctly."
+}

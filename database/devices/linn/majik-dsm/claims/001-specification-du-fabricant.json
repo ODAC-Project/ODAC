@@ -1,0 +1,20 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.linn.co.uk/network-music-players/majik-dsm",
+    "quote": "Linn's own page for the Majik DSM, read 2026-11-25. Self-description: « All-in-one network music player with integrated stereo power amplifier ». Key features: « Supports formats up to high-resolution 24-bit/384kHz ». Specification: « Resolution » « Up to 24-bit/384kHz »; « Audio Formats » « FLAC, Apple Lossless, WAV, DSD (64/128/256), MP3, WMA (except lossless), AIFF, AAC, OGG »; « Inputs » listing HDMI eARC x1, Toslink x1, SPDIF x1 (configurable in or out), USB Type C x1, two RCA line pairs and MM and MC phono - WITH NO RATE ON ANY OF THEM; « Exakt Link » x1. On the converter, in prose and not in a specification row: « The critically important Digital-to-Analogue conversion stage in Majik DSM features our proprietary precision clocking and upsampling, to more accurately generate the music signal before it's sent on to the integrated amplifiers. » No converter is NAMED on this page, no upsampling rate is given and no filter is named.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "unknown",
+    "pcm_max_hz": 384000,
+    "bits": 24,
+    "dsd_max": "DSD256",
+    "chip": "Not named on this page. Linn's Organik technology page lists the models carrying Organik - « Selekt DSM (dual-mono or stereo), Klimax DS/DSM, Akubarik loudspeaker » - and the Majik DSM is NOT among them, so the Klimax's Organik description is deliberately not carried across."
+  },
+  "_ce_que_le_fabricant_ne_dit_PAS_ici_est_aussi_une_information": "This page names no converter, and Linn's own technology page lists which models carry Organik without listing this one. So the Majik's conversion stage is something else that Linn does not describe - and the absence is evidence of a kind, which is why the Klimax's « PWM Delta-Sigma » and « Discrete AFIR » are not copied here. On a maker that publishes a technology page naming its models, an omission from that list is close to a statement.",
+  "_le_suréchantillonnage_est_annonce_et_jamais_chiffre": "« our proprietary precision clocking and upsampling, to more accurately generate the music signal ». Upsampling, in prose, with no rate, no filter name and no way to turn it off. No device_settings entry: a resampler the owner cannot reach is not a setting, and one whose rate is unpublished cannot be planned around."
+}

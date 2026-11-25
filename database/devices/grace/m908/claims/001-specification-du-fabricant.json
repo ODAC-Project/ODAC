@@ -1,0 +1,19 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://gracedesign.com/products/monitor-controllers/m908/",
+    "quote": "Grace Design's own page for the m908, read 2026-11-25. « sample rates of up to 192kHz / 24bit are supported. » - stated once for the device, with no per-connection breakdown and no spec table. Digital inputs: « Standard features include a total of 68 digital input channels via AES3, TOSLINK, S/PDIF, ADAT Lightpipe, and USB2. » and « 16 channel ADAT Lightpipe » as an input. Converter: no part is named; the page says only « Our latest generation AD / DA converters provide incredible dynamic range and resolution », with no D/A dynamic range or THD+N figure. Filtering: « 64-bit fixed-point filters for room correction and bass management ». No DSD figure appears anywhere.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "unknown",
+    "pcm_max_hz": 192000,
+    "bits": 24,
+    "chip": "Not named, and unlike the m900 and m905 this page gives no measurement either - only « Our latest generation AD / DA converters provide incredible dynamic range and resolution »."
+  },
+  "_soixante_huit_canaux_dentree_numerique": "« a total of 68 digital input channels via AES3, TOSLINK, S/PDIF, ADAT Lightpipe, and USB2 », with « 16 channel ADAT Lightpipe ». Sixty-eight channels on one device, and this catalogue's inputs model is built around a stereo pair per socket. Nothing is written per input: the page gives one rate for the whole device and a channel total that belongs to no particular interface.",
+  "_les_filtres_de_cette_page_sont_de_la_CORRECTION_DE_PIECE": "« 64-bit fixed-point filters for room correction and bass management ». DSP the owner calibrates for a room, not the reconstruction filter device_settings records - the same distinction drawn on the Arcam SA45's « Dirac Live Room Correction ». No setting is written, and the arithmetic precision, 64-bit fixed point, is about the room filters and not about the conversion path."
+}

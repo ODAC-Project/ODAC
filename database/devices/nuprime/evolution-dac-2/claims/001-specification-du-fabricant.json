@@ -1,0 +1,52 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://nuprimeaudio.com/product/evolution-dac-2/",
+    "quote": "NuPrime's own page for the Evolution DAC-2, read 2026-11-25, input list: « USB: Type B 2.0 Hi-Speed, Windows / Supports PCM 44.1KHz ~ 768KHz / DSD 512 and MQA. »; « Type B 2.0 Hi-Speed, Mac / Supports PCM 44.1KHz ~ 768KHz/24Bit and DOP 256. »; « COAXIAL 1: Supports PCM 44.1KHz ~ 384KHz / DOP 64, 128 and MQA. »; « OPTICAL 1: Supports PCM 44.1KHz ~ 192KHz / DOP 64 and MQA. »; « AES / EBU: Supports PCM 44.1KHz ~ 384KHz / DOP 128 and MQA. »; « IIS/DSD 1 & 2: Supports PCM 44.1KHz ~ 384KHz and DSD 256 data streams. »; « COAXIAL 2 / OPTICAL 2: Supports PCM 44.1KHz ~ 192KHz / DOP 64 and MQA. »; « EXTENSION: Supports PCM 44.1KHz ~ 192KHz/24Bit. » On DSD: « USB Supports DSD native playback by ASIO and DoP method. DSD is decoded natively with the same sample rate as the input source. » Converter: « NuPrime Evolution DAC-2 utilizes dual ESS Technology 32-bit audio DAC ESS9038Q2M ». On resampling: « NuPrime PSRC IC chip provides sample rate up/down conversion processing, from PCM 44.1kHz to PCM 768kHz and DSD64 to DSD512 (including PCM to/from DSD). » No digital filter, filter mode or NOS row appears.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true,
+    "chip": "« dual ESS Technology 32-bit audio DAC ESS9038Q2M », with a « NuPrime PSRC IC chip » doing sample-rate conversion ahead of them."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true,
+      "dop_possible": true,
+      "dop_max": "DSD256"
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 384000,
+      "dop_possible": true,
+      "dop_max": "DSD128"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 384000,
+      "dop_possible": true,
+      "dop_max": "DSD128"
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "i2s": {
+      "pcm_max_hz": 384000,
+      "dsd_max": "DSD256"
+    }
+  },
+  "_verification_des_conditions_faite": "nuprimeaudio.com has no terms-of-use page: the footer offers Contact & Support, a Privacy Policy, Facebook and an email address. The privacy policy WAS READ and carries no clause on copying, reproducing or extracting site content. The footer reads « Copyright 2026 (c) Nuprime Audio, Inc. --- brand managed by Nuoem Pte. Ltd. », the ordinary notice.",
+  "_LE_PLAFOND_DEPEND_DU_SYSTEME_DEXPLOITATION": "« Type B 2.0 Hi-Speed, Windows / Supports PCM 44.1KHz ~ 768KHz / DSD 512 » against « Type B 2.0 Hi-Speed, Mac / Supports PCM 44.1KHz ~ 768KHz/24Bit and DOP 256 ». ONE socket, two rows, and what separates them is the HOST'S OPERATING SYSTEM: native DSD512 on Windows, DoP256 on macOS. Sixth kind of conditional ceiling in three days, after MSB's modules, the (input, transport) pair, Cambridge's and Topping's USB class, Chord's dual-data mode. And the first where the condition is not on the device at all - nothing about this DAC changes, the driver does. inputs.dsd_max takes DSD512, from the Windows row, and inputs.dop_max takes DSD256, from the Mac row. A listener on macOS gets exactly half the native ceiling, and this record can now say so - which it could not have done before inputs.dop_max was registered a few hours earlier.",
+  "_UN_PLAFOND_DoP_PAR_ENTREE_SUR_CINQ_ENTREES": "« COAXIAL 1: DOP 64, 128 »; « OPTICAL 1: DOP 64 »; « AES / EBU: DOP 128 »; « COAXIAL 2 / OPTICAL 2: DOP 64 ». Four different DoP ceilings on four inputs of one device, published in a single list. inputs.dop_max was registered this afternoon on six makers who gave ONE such figure; this page gives four, and it is the first record where the field carries a different value on every input that has one. The field has earned its place in a day.",
+  "_le_coaxial_monte_a_384_kHz": "« COAXIAL 1: Supports PCM 44.1KHz ~ 384KHz » against « OPTICAL 1: ... 192KHz ». Every other record in this catalogue rates coaxial at 192 or below, and vocabulary/why-the-optical-default-stays-low treats 96 and 192 as the conventions. NuPrime's coaxial takes 384 kHz, twice the usual, and its AES/EBU does too. Worth marking as the exception that shows the convention is a convention.",
+  "_un_convertisseur_de_frequence_qui_traverse_PCM_et_DSD": "« NuPrime PSRC IC chip provides sample rate up/down conversion processing, from PCM 44.1kHz to PCM 768kHz and DSD64 to DSD512 (including PCM to/from DSD). » A resampler that goes UP, DOWN, and ACROSS the PCM/DSD boundary in both directions. pcm_reconverted_to_dsd is NOT written: the page describes a capability, not a behaviour, and never says what happens by default or whether the owner chooses. Third shape of that question after the unconditional converters (Nagra, APL, Mola Mola) and the optional ones (FiiO's « All to DSD »): here it is a capability with no stated default. Raised as a doubt rather than guessed."
+}

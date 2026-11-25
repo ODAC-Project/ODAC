@@ -1,0 +1,21 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.linn.co.uk/network-music-players/klimax-dsm",
+    "quote": "Linn's own page for the Klimax DSM, read 2026-11-25. Self-description: « Network music player and integrated pre-amplifier with inputs for additional digital and analogue sources ». Key features: « Supports formats up to 24-bit 384kHz with the addition of DSD256 »; « Distortion-free digital volume control ». Specification: « Resolution » « Up to 24-bit/384kHz »; « Audio Formats » « FLAC, Apple Lossless, WAV, DSD (64/128/256), MP3, WMA (except lossless), AIFF, AAC, OGG »; « Inputs » listing HDMI x4 and HDMI eARC x1 on the AV variant, Toslink x1, SPDIF x2 (one configurable as an output), USB Type B x1, balanced XLR x1 and two pairs of RCA - WITH NO RATE ON ANY OF THEM; « Exakt Link » x2; « Ethernet » x1; « Optical Ethernet » « x1 (SFP socket) ». Converter: « Organik DAC: the beating heart of Klimax DSM » and « Designed without compromise and manufactured entirely in-house, the home-grown all-Linn Organik DAC combines FPGA processing with a discrete conversion stage ». Linn's Organik technology page (https://www.linn.co.uk/technology/organik) adds: « Our entirely homegrown, 5th-generation DAC technology - Organik »; « Modulation method - Pulse Width Modulation (PWM) Delta-Sigma »; « Conversion stage - Discrete Analog Finite Impulse Response (AFIR) »; « Implementation - Ultra-stable power, precision clocking, and expert PCB design ». No filter, upsampling or oversampling row appears. linn.co.uk's Terms & Conditions WERE READ and are terms of SALE; they carry no clause on using or reproducing site content, and the footer is a trademark and copyright notice.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "unknown",
+    "pcm_max_hz": 384000,
+    "bits": 24,
+    "dsd_max": "DSD256",
+    "chip": "No part number and none to expect: « the home-grown all-Linn Organik DAC combines FPGA processing with a discrete conversion stage », whose modulation Linn states as « Pulse Width Modulation (PWM) Delta-Sigma » and whose conversion stage is a « Discrete Analog Finite Impulse Response (AFIR) »."
+  },
+  "_LE_DEUXIEME_CONVERTISSEUR_A_PWM_DE_LA_BASE": "« Modulation method - Pulse Width Modulation (PWM) Delta-Sigma » and « Conversion stage - Discrete Analog Finite Impulse Response (AFIR) ». Mola Mola's Tambaqui was the first, with « all incoming digital audio is upsampled to 3.125MHz/32 bits and converted to noise shaped PWM » and a « 32-stage discrete analogue FIR output stage ». Two makers, independently, building a discrete analogue FIR fed by pulse-WIDTH modulation - and `technology` still has four values, none of which is it. delta_sigma would be half right, since Linn writes « PWM Delta-Sigma »; r2r and discrete_dsd are wrong; fpga names the processing and not the conversion, which is the error withdrawn from the Nagra record on 2026-11-24. The field is left ABSENT and the cascade falls back to delta_sigma. Two devices from two countries is no longer a curiosity: the enum needs a PWM value as much as it needs a plain « discrete ».",
+  "_aucun_debit_par_entree_sur_un_appareil_a_dix_entrees": "HDMI x4, HDMI eARC, Toslink, two SPDIF, USB-B, XLR and two RCA pairs - and « Resolution: Up to 24-bit/384kHz » stated once for the device. No inputs block. The resolution row describes what the player handles, and nothing on the page says what any socket accepts.",
+  "_Exakt_Link_est_une_sortie_vers_les_enceintes": "« Exakt Link » x2 sits in the connections list and is Linn's link to its own active loudspeakers - a digital OUTPUT carrying the signal past this device's converter entirely. Not an input, nothing written. Worth naming because on an Exakt system the Klimax's own conversion stage may be out of the path, which is a fact about the SYSTEM that no device record can hold."
+}

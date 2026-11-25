@@ -1,0 +1,21 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://nuprimeaudio.com/product/amg-dac/",
+    "quote": "NuPrime's own page for the AMG DAC, read 2026-11-25 in full. Description: « decoding capability of PCM 384K, DSD256 ». Inputs are named without figures: « C1: Coaxial input », « O2: Optical input », « U3: USB input », « HE: IIS/DSD Digital input ». DSD: « Supports DSD native playback by ASIO2.1 and DoP method. » Converter: « Dual ESS Technology 32-bit audio DAC ESS9038Q2M independently decode left and right channels »; also « Muses 8820 DAC IV Circuit » and « Muses 72320 highly linear volume control ». No digital filter, oversampling or NOS row.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 384000,
+    "dsd_max": "DSD256",
+    "native_dsd": true,
+    "dop": true,
+    "chip": "« Dual ESS Technology 32-bit audio DAC ESS9038Q2M independently decode left and right channels ». The « Muses 8820 » is the current-to-voltage stage after the converter and the « Muses 72320 » the volume control."
+  },
+  "_verification_des_conditions_faite": "nuprimeaudio.com has no terms-of-use page: the footer offers Contact & Support, a Privacy Policy, Facebook and an email address. The privacy policy WAS READ and carries no clause on copying, reproducing or extracting site content. The footer reads « Copyright 2026 (c) Nuprime Audio, Inc. --- brand managed by Nuoem Pte. Ltd. », the ordinary notice.",
+  "_quatre_entrees_nommees_sans_un_chiffre_chez_un_fabricant_qui_chiffre_tout_le_reste": "« C1: Coaxial input », « O2: Optical input », « U3: USB input », « HE: IIS/DSD Digital input » - four sockets, no rates, on a maker whose DAC-8, DAC-9X and Evolution DAC-2 all publish a full per-input table. So the gap is this page's, not the brand's practice, and nothing is carried across from the siblings: they are different products with different receivers."
+}

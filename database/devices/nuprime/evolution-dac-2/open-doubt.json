@@ -1,0 +1,5 @@
+{
+  "raised_on": "2026-11-25",
+  "text": "What the PSRC resampler does by default. « NuPrime PSRC IC chip provides sample rate up/down conversion processing, from PCM 44.1kHz to PCM 768kHz and DSD64 to DSD512 (including PCM to/from DSD). » A resampler that goes up, down, and across the PCM/DSD boundary in BOTH directions, sitting between the inputs and a pair of ESS9038Q2M. The page describes a CAPABILITY and never says what it does when the owner has chosen nothing, nor whether the owner can choose at all. So neither pcm_reconverted_to_dsd nor dsd_reconverted_to_pcm is written, and no device_settings entry either. Third shape of this question in two days: Nagra, APL HiFi and Mola Mola convert unconditionally and say so; FiiO's R7 and R9 offer « All to DSD » as a switch; this one states a capability with no default. The first two shapes are recordable and this one is not.",
+  "what_would_resolve_it": "One sentence from NuPrime about the default state of the PSRC, or a menu listing from the manual. Do NOT resolve it from the chip's capability list: a resampler that CAN convert PCM to DSD is not a device that DOES."
+}
