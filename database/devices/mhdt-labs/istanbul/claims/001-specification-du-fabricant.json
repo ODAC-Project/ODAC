@@ -1,0 +1,43 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.mhdtlab.com/Istanbul.htm",
+    "quote": "MHDT Labs' own page for the Istanbul, read 2026-11-25. « Istanbul DAC is a non over-sampling, no digital filter, no op-amp, no feedback structured DAC. » « Istanbul DAC is capable of up to 24bits/192kHz digital signal inputs yet remains driving legendary PCM61P-K R-2R digital to analog output. » « All inputs support 16/24 bits/ 32 kHz up to 192 kHz » « Total four independent digital inputs; BNC, USB, RCA and Toslink. » « Tube buffered output, tube in stalled is 5670 tube. » « Digital Receiver CS8416 » « D/A converter PCM61P-K ». No DSD figure. The family table gives « Output Format: 18bits » for this model.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "r2r_ladder",
+    "technology": "r2r",
+    "pcm_max_hz": 192000,
+    "bits": 24,
+    "correctable": true,
+    "chip": "« D/A converter PCM61P-K » (Burr-Brown), with a « Digital Receiver CS8416 » and a « 5670 tube » output buffer. The family table calls the construction « R/2R Multi Bits » and the output format 18 bits.",
+    "device_settings": [
+      {
+        "setting": "Oversampling",
+        "set_to": "none (by design)",
+        "why": "« a non over-sampling, no digital filter, no op-amp, no feedback structured DAC » - four things absent, stated as the design. Nothing to set."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_verification_des_conditions_tentee_et_non_concluante": "mhdtlab.com links no terms, legal or copyright page from its navigation, and the fetched pages carry no copyright footer at all - it is an old-style hand-built site. The reader was careful to say that this is « no terms page found, so no prohibition could be checked. This is not a finding of 'no prohibition.' » The facts are recorded, because the rule is to integrate unless explicitly forbidden and nothing forbidding was found; the quality of the check is recorded with them, as it was for Burson and Mytek.",
+  "_NOS_ici_veut_dire_NON_SUR_ECHANTILLONNE_et_cest_VERIFIE": "This is the maker vocabulary/nos-means-two-things.json was most afraid of: tube-output converters, where NOS valves and non-oversampling meet on one page. The reader checked every page read on both sites and reported: « No fetched page from either site contains 'NOS' or 'New Old Stock.' » MHDT writes « non over-sampling » IN FULL, every time, and names its valve by type. So the ambiguity the vocabulary note predicted does not arise here - not because it was resolved, but because this maker never uses the abbreviation.",
+  "_quatre_absences_revendiquees_dans_une_phrase": "« non over-sampling, no digital filter, no op-amp, no feedback ». Most pages in this catalogue say what a device HAS; this one sells what it has left out, and three of the four are things an engine would otherwise have to assume are present. Only the first has a field."
+}

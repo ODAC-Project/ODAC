@@ -1,0 +1,47 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.musicalfidelity.com/products/m3series/m3x-dac",
+    "quote": "Musical Fidelity's own page for the M3x DAC, read 2026-11-25. « 1x USB Audio Class 2.0, 'USB B'; up to 32 bit 192kHz (stereo PCM), DSD 256 (stereo DoP and native) »; « 2x Coax, up to 24bit 192kHz (stereo PCM) »; « 2x Optical, up to 24bit 192kHz (stereo PCM) »; « USB: DSD 256 (stereo DoP and native) »; « DAC Chip: PCM1795 »; « Sample rate converter: SRC4392 »; « 2 digital PCM filters & 2 analogue DSD filters »; « PCM inputs upsampled to 192kHz ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ti_burr_brown",
+    "pcm_max_hz": 192000,
+    "bits": 32,
+    "dsd_max": "DSD256",
+    "native_dsd": true,
+    "dop": true,
+    "chip": "« DAC Chip: PCM1795 » (Texas Instruments / Burr-Brown) with a « Sample rate converter: SRC4392 » ahead of it.",
+    "device_settings": [
+      {
+        "setting": "Digital PCM filter",
+        "set_to": "unknown",
+        "why": "« 2 digital PCM filters & 2 analogue DSD filters » - a count of each kind and no names. The analogue pair are reconstruction filters after the converter, not something an engine chooses between."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 192000,
+      "bits": 32,
+      "dsd_max": "DSD256",
+      "native_dsd_possible": true,
+      "dop_possible": true,
+      "dop_max": "DSD256"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_TOUT_est_sur_echantillonne_a_192_et_il_ny_a_pas_de_contournement": "« PCM inputs upsampled to 192kHz », with an « SRC4392 » named as the sample rate converter - and unlike its M8x and M6x siblings this page offers NO oversampling bypass. So on this model the resampler always runs, and `correctable` is NOT written where it is written on the other two. Three products of one maker, one range apart, and the field goes two ways. The absence of a bypass is read from the absence of the feature on a page that lists its siblings' features by name.",
+  "_le_DoP_atteint_le_meme_plafond_que_le_natif_ici": "« DSD 256 (stereo DoP and native) » - one figure covering both transports, where the M8x and M6x give DSD512 native against DSD256 over DoP. So dop_max equals dsd_max on this model, and it is stated rather than inferred from silence. Second record in the catalogue where the two agree on the maker's own word, after the Grace m905."
+}

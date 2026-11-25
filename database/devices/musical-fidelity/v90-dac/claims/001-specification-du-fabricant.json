@@ -1,0 +1,35 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.musicalfidelity.com/products/v90series/v90-dac",
+    "quote": "Musical Fidelity's own page for the V90-DAC, read 2026-11-25. « 1x RCA coaxial connector SPDIF 32-bit/192 kHz (16-24 bit stereo PCM) »; « 2x TOSLINK optical connector 32-bit/96 kHz (16-24 bit stereo PCM) »; « 1x USB type 'B' connector - Asynchronous data stream at up to 24-bit/96kHz (Determined by source file/computer settings) »; « 32bit DAC »; « 24bit 192kHz re-clocking and up-sampling on all inputs »; « The heart of the V90-DAC is its 32 bit DAC circuit. »; « Jitter: <12 picoseconds peak to peak »; « THD(+ noise): <0.004% 20Hz to 20 kHz »; « Signal / Noise ratio: -117dB, 20Hz to 20 kHz »; « Crosstalk: -104dB, 20Hz to 20 kHz ». DSD is not mentioned anywhere on the page. No converter part number is given.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 192000,
+    "bits": 24,
+    "chip": "No part number is published. The page says only « 32bit DAC » and « its 32 bit DAC circuit », which is the converter's internal width and not a part."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 96000,
+      "bits": 24
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000,
+      "bits": 24
+    }
+  },
+  "_les_conditions_de_Musical_Fidelity_ont_ete_lues": "musicalfidelity.com's terms page was READ and carries no prohibition on copying or reusing site content; its only restrictive clause names « unauthorised framing ». The footer reads « Copyright Musical Fidelity 2026 ». Same reading as the M8x, M6x and M3x records.",
+  "_le_32_nest_PAS_une_profondeur_de_bits": "« 1x RCA coaxial connector SPDIF 32-bit/192 kHz (16-24 bit stereo PCM) ». Read as written that is a 32-bit input - and the parenthesis on the same line says 16 to 24. The maker's own MX-DAC page settles it: the identical socket there reads « SPDIF 32-192kHz (16-24 bit stereo PCM) », a sample rate RANGE from 32 kHz to 192 kHz, and the word « bit » on the V90 page has been inserted into the low end of that range. `bits` is 24. vocabulary/a-rate-range-looks-like-a-bit-depth.json was written from this line, because the error is contradicted on the same line and would otherwise have been silent.",
+  "_trois_sockets_trois_plafonds_differents": "Coax 192 kHz, optical 96 kHz, USB 96 kHz, each stated on its own line. This is the shape `inputs` exists for, and it is the cleanest example in the catalogue so far: the device ceiling of 192 is reached by exactly ONE of its three sockets, and an engine that read the device figure alone would send 192 kHz down two inputs that stop at 96. Note also that the USB input is the SLOWEST here, which is the reverse of every other record in the base.",
+  "_pourquoi_dsd_max_reste_ABSENT_et_non_none": "DSD appears nowhere on this page, and the page is a complete specification with every socket itemised. The temptation is `dsd_max` set to none, as the Audient records carry. It is NOT written here, and the difference is worth stating: Audient's devices are ADAT and word-clock studio interfaces whose category excludes DSD outright, whereas the V90-DAC is a consumer DAC from a maker that names DSD explicitly on four of its other five pages - so silence on this one page from 2013 is more probably a product of its date than a statement about the device. Absent means nobody has established it. That is the truth here, and the reasoning is recorded so the next contributor does not have to guess which way the omission falls.",
+  "_les_chiffres_de_performance_restent_dans_la_citation": "« Jitter: <12 picoseconds peak to peak », « Signal / Noise ratio: -117dB, 20Hz to 20 kHz », « THD(+ noise): <0.004% », « Crosstalk: -104dB ». All the maker's own figures, all kept in the quoted source and in no field. Worth noting that the MX-DAC page gives « about 12pps » for a different product - the same jitter figure with no unit written out, which is the sort of number that looks like a measurement and is a marketing constant."
+}

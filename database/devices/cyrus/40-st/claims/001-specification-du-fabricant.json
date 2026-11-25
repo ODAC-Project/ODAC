@@ -1,0 +1,21 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.cyrusaudio.com/products/40-st",
+    "quote": "Cyrus Audio's own page for the 40 ST streamer, read 2026-11-25. « ESS Sabre ES9039Q2M 32 bit DAC »; « Up to 32bit/384kHz PCM »; « DSD256 »; « Digital inputs: 2x optical, 1x coaxial »; « USB-A for local storage ». The page gives no per-input ceiling and no separate figure for the optical and coaxial sockets.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD256",
+    "chip": "« ESS Sabre ES9039Q2M 32 bit DAC » - the same part the 80 PRE and 80 AMP carry, named identically on all three pages."
+  },
+  "_les_conditions_de_Cyrus_ont_ete_lues": "cyrusaudio.com's terms page and its separate copyright page were both READ. Neither forbids quoting or reusing specification text: the copyright page asserts ordinary copyright in the site's content and names no permitted or forbidden reuse. That is the fourteenth brand of this shape - plain copyright with no reuse clause - and it is recorded as read rather than as absent.",
+  "_un_plafond_dappareil_sans_aucun_plafond_dentree": "« Up to 32bit/384kHz PCM » and « DSD256 » are given once, for the device, beside « Digital inputs: 2x optical, 1x coaxial ». Optical almost never reaches 384 kHz - the physical link runs out around 192 - but the page does not say so, and inferring it would be writing a fact Cyrus has not published. So `inputs` stays absent on this record: not unknown, absent, which is the state that says nobody has filled it in. Twelfth record in this shape, and the reason vocabulary/inputs-can-be-separate-objects.json exists.",
+  "_le_USB_A_nest_pas_une_entree_audio": "« USB-A for local storage ». A USB-A socket on a streamer reads music off a stick; it does not accept a USB audio stream from a computer, which needs a USB-B or USB-C device port. It is NOT written as an input. Fourth time this trap has appeared - after the Eversolo, the Cocktail Audio and the HiFi Rose - and the first where the maker's own words make it unambiguous."
+}

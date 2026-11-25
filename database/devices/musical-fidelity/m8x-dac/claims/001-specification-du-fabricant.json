@@ -1,0 +1,64 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.musicalfidelity.com/products/m8series/m8x-dac",
+    "quote": "Musical Fidelity's own page for the M8x DAC, read 2026-11-25. « 1x Asynchronous USB: up to 768kHz »; « USB PCM sample rates: up to 768kHz »; « USB: DSD 256 (stereo DoP), DSD512 (stereo native) »; « USB DSD support: up to DSD256 via DoP and native DSD512 »; « 3x Optical input: up to 24bit / PCM 192kHz, MQA 384kHz, DoP DSD 64 »; « 1x Coaxial input: up to 24bit / PCM 192kHz, MQA 384kHz, DoP DSD 64 »; « 1x AES/EBU input: 1x up to 24bit / PCM 192kHz, MQA 384kHz, DoP DSD 64 »; « DAC chip: 2x ES9038Q2M (dual mono) with 8x digital filter »; « Selectable Digital Filters »; « For PCM signals, the M8x DAC has eight selectable digital filters. »; « Switchable Upsampling »; « Oversampling Bypass ». No bit depth is stated for the USB input. musicalfidelity.com's terms page was READ and carries no prohibition on copying or reusing site content - its only restrictive clause names « unauthorised framing » - and the footer reads « Copyright Musical Fidelity 2026 ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true,
+    "correctable": true,
+    "chip": "« 2x ES9038Q2M (dual mono) with 8x digital filter ».",
+    "device_settings": [
+      {
+        "setting": "Oversampling Bypass",
+        "set_to": "on",
+        "why": "« Oversampling Bypass » is a named feature beside « Switchable Upsampling » and « Selectable Digital Filters ». Switching the oversampling out puts the device's own interpolation stage out of the path, which is what Auto needs and what makes `correctable` true. The eight PCM filters only matter if the bypass is off."
+      },
+      {
+        "setting": "Digital filter (if oversampling is on)",
+        "set_to": "unknown",
+        "why": "« For PCM signals, the M8x DAC has eight selectable digital filters » and not one is named - the tenth maker in three days to publish a count and withhold the list. The Topping DX1 II's manual names eight of what is very probably the same ESS menu, and they are NOT copied here."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true,
+      "dop_possible": true,
+      "dop_max": "DSD256"
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    }
+  },
+  "_un_contournement_du_sur_echantillonnage_chez_un_fabricant_grand_public": "« Oversampling Bypass », as a named feature, on a mainstream British DAC. Eight NOS or bypass devices are now recorded - FiiO twice, Schiit four times, Rockna, LampizatOr, MHDT four times - and this is the first from a maker of this kind, which matters because `correctable` has been a high-end and specialist field until now. If per-device correction is ever to reach a real number of listeners it will be through devices like this one.",
+  "_MQA_a_384_kHz_sur_des_entrees_plafonnees_a_192": "« up to 24bit / PCM 192kHz, MQA 384kHz, DoP DSD 64 » on optical, coaxial and AES/EBU. The same socket is rated 192 kHz for PCM and 384 kHz for MQA, because MQA carries its higher rate folded inside a 192 kHz stream. inputs.pcm_max_hz takes 192000, which is what ordinary PCM reaches; the 384 is not a PCM ceiling and writing it would overstate every one of those three inputs by a factor of two. Fifth maker to publish MQA figures and the first where they sit in the same row as the PCM ones."
+}

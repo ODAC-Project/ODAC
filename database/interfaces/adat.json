@@ -1,0 +1,15 @@
+{
+  "id": "adat",
+  "name": "ADAT Lightpipe",
+  "native_dsd_possible": false,
+  "dop_possible": false,
+  "reports_buffer_occupancy": "not_applicable",
+  "policy": {
+    "pcm_max_hz": 48000,
+    "bits": 24,
+    "bits_above_hz": [],
+    "channels": 8,
+    "_this_is_a_policy": "Ce qu'il faut supposer quand l'appareil n'a rien dit, pas une mesure. Une fiche qui connaît son vrai chiffre l'emporte."
+  },
+  "note": "ADAT carries eight channels at 44.1 or 48 kHz on one optical fibre. Higher rates exist only by sample multiplexing (S/MUX), which trades channels for rate: four channels at 88.2/96 kHz, two at 176.4/192 kHz. So on this interface the rate and the channel count cannot both be read from the device's ceiling, and a record that states 192 kHz is stating a two-channel mode. DoP is not used over ADAT in practice and no maker in this catalogue claims it."
+}

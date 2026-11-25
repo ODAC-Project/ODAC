@@ -1,0 +1,18 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://audient.com/products/audio-interfaces/id4-mkii/",
+    "quote": "Audient's own page for the iD4 MkII, read 2026-11-25. « SAMPLE RATES: 44.1kHz - 96kHz »; « BIT DEPTH: 24-bit »; « 1 Audient Console Mic Preamp »; « JFET Instrument Input »; « Two Headphone Outputs ». The page gives no converter part number, no DSD figure, and no digital input at all - the only digital connection is the USB port to the computer.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 96000,
+    "bits": 24,
+    "dsd_max": "none"
+  },
+  "_Audient_ne_publie_que_des_conditions_de_vente": "audient.com's only terms page found governs SALES - delivery, returns, warranty - and says nothing about the website's content or its reuse. So the question of reuse was asked and the answer is that the maker has not addressed it. Same shape as Burson and Mytek: the facts are recorded because nothing forbids it, and the quality of the check is recorded with them.",
+  "_un_appareil_dont_la_seule_entree_numerique_est_lordinateur": "No ADAT, no S/PDIF, no word clock: the iD4 MkII's only digital path is its USB connection to a host. So there is no `inputs` object to write and its absence is not a gap - there is nothing in the catalogue's sense of the word to describe. Third record of this shape, with the Apple adapter and the Topping DX1 II, and all three are devices whose whole purpose is to hang off one computer."
+}

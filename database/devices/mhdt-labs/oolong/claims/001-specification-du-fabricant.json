@@ -1,0 +1,47 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.mhdtlab.com/Oolong.htm",
+    "quote": "MHDT Labs' own page for the Oolong, read 2026-11-25. The page's own heading reads « Pagoda DAC » above the « Oolong » title - an error on the maker's page, reported and not corrected. « Oolong DAC is a non over-sampling, no digital filter, structured DAC. » « Oolong DAC is capable of up to 24bits/192kHz digital signal inputs yet remains driving legendary PCM1704 R-2R digital to analog output. » « Oolong configured to be 24 bits output. » « All inputs support 16/24 bits/ 32 kHz up to 192 kHz » « Total five independent digital inputs; AES/EBU, BNC, USB, RCA and Toslink. » « Tube buffered output, tube installed is Sovtek 6922 tube. » « Digital Receiver CS8416 » « D/A converter PCM1704U-J (J grade) ». No DSD figure.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "r2r_ladder",
+    "technology": "r2r",
+    "pcm_max_hz": 192000,
+    "bits": 24,
+    "correctable": true,
+    "chip": "« D/A converter PCM1704U-J (J grade) » - the Burr-Brown 24-bit ladder, grade specified, with a « Digital Receiver CS8416 » and a « Sovtek 6922 » output tube.",
+    "device_settings": [
+      {
+        "setting": "Oversampling",
+        "set_to": "none (by design)",
+        "why": "« a non over-sampling, no digital filter, structured DAC ». Nothing to set."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_verification_des_conditions_tentee_et_non_concluante": "mhdtlab.com links no terms, legal or copyright page from its navigation, and the fetched pages carry no copyright footer at all - it is an old-style hand-built site. The reader was careful to say that this is « no terms page found, so no prohibition could be checked. This is not a finding of 'no prohibition.' » The facts are recorded, because the rule is to integrate unless explicitly forbidden and nothing forbidding was found; the quality of the check is recorded with them, as it was for Burson and Mytek.",
+  "_NOS_ici_veut_dire_NON_SUR_ECHANTILLONNE_et_cest_VERIFIE": "This is the maker vocabulary/nos-means-two-things.json was most afraid of: tube-output converters, where NOS valves and non-oversampling meet on one page. The reader checked every page read on both sites and reported: « No fetched page from either site contains 'NOS' or 'New Old Stock.' » MHDT writes « non over-sampling » IN FULL, every time, and names its valve by type. So the ambiguity the vocabulary note predicted does not arise here - not because it was resolved, but because this maker never uses the abbreviation.",
+  "_le_SEUL_de_la_gamme_dont_la_sortie_est_24_bits": "« Oolong configured to be 24 bits output », on a PCM1704U-J, against 16 bits on the Orchid's TDA1541A and 18 on the Istanbul's PCM61P-K. So on this one model the input depth and the conversion depth agree, and the eight bits the others discard are kept. The page's own heading calls it a Pagoda, which is a different model in the same family table - recorded because a reader checking this record against the page will see the wrong name at the top."
+}

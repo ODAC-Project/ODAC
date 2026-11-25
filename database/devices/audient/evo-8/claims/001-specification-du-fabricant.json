@@ -1,0 +1,19 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://evo.audio/products/audio-interfaces/evo-8/",
+    "quote": "Audient's EVO site page for the EVO 8, read 2026-11-25. « SAMPLE RATES: 44.1kHz - 96kHz »; « BIT DEPTH: 24-bit »; « 4 EVO Mic Preamps »; « DAC DYNAMIC RANGE: 110dB A-Weighted ». No converter part number and no DSD figure.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 96000,
+    "bits": 24,
+    "dsd_max": "none"
+  },
+  "_Audient_ne_publie_que_des_conditions_de_vente": "audient.com's only terms page found governs SALES - delivery, returns, warranty - and says nothing about the website's content or its reuse. So the question of reuse was asked and the answer is that the maker has not addressed it. Same shape as Burson and Mytek: the facts are recorded because nothing forbids it, and the quality of the check is recorded with them.",
+  "_96_kHz_est_un_vrai_plafond_pas_une_omission": "« SAMPLE RATES: 44.1kHz - 96kHz », stated as a range with both ends. The lowest device ceiling in the whole catalogue after the Apple USB-C adapter's 48 kHz, and it is the maker's specification rather than a gap in it. Recorded because a reader who expects every modern converter to reach 192 will read 96 as a missing digit.",
+  "_le_chiffre_de_dynamique_reste_dans_la_citation": "« DAC DYNAMIC RANGE: 110dB A-Weighted », 22 dB below the Horizon 8P's on the same maker's range. Kept in the quoted source and in no field, for the reason given on the Horizon 8P record."
+}

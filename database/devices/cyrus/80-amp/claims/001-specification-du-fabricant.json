@@ -1,0 +1,20 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.cyrusaudio.com/products/80-amp",
+    "quote": "Cyrus Audio's own page for the 80 AMP integrated amplifier, read 2026-11-25. « ESS Sabre ES9039Q2M 32 bit DAC »; « Up to 32bit/384kHz PCM »; « DSD256 »; « Digital inputs: 2x optical, 1x coaxial, 1x USB-B »; « Streaming: UPnP, Roon Ready, AirPlay 2, Spotify Connect, TIDAL Connect, Qobuz ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD256",
+    "chip": "« ESS Sabre ES9039Q2M 32 bit DAC »."
+  },
+  "_les_conditions_de_Cyrus_ont_ete_lues": "cyrusaudio.com's terms page and its separate copyright page were both READ. Neither forbids quoting or reusing specification text: the copyright page asserts ordinary copyright in the site's content and names no permitted or forbidden reuse. That is the fourteenth brand of this shape - plain copyright with no reuse clause - and it is recorded as read rather than as absent.",
+  "_trois_appareils_differents_une_seule_carte_numerique": "40 ST, 80 PRE and 80 AMP give the same converter, the same 32/384 and the same DSD256, in the same words. A streamer, a preamplifier and an integrated amplifier: three records whose digital half is one design. Worth recording because a consumer's engine dispatching on the converter alone would see no difference between them, and the difference is entirely in what comes after it."
+}

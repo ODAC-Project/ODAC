@@ -1,0 +1,28 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://audient.com/products/audio-interfaces/horizon-8p/",
+    "quote": "Audient's own page for the Horizon 8P, read 2026-11-25. « Features ES9823PRO and ES9039 converters »; D/A section: « DYNAMIC RANGE: 132dB A-Weighted »; « SAMPLE RATES: 44.1kHz - 192kHz »; « 8 Mic/Line Inputs »; « ADAT, S/PDIF and Word Clock I/O ». No DSD figure appears anywhere: this is a studio interface and DSD is not part of its remit.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 192000,
+    "dsd_max": "none",
+    "family": "ess_sabre",
+    "chip": "« Features ES9823PRO and ES9039 converters » - an ESS pair, the ES9823PRO on the way in and the ES9039 on the way out, which is why the page states a dynamic range for each direction."
+  },
+  "inputs": {
+    "spdif_coax": {
+      "pcm_max_hz": 192000
+    },
+    "adat": {
+      "pcm_max_hz": 192000
+    }
+  },
+  "_Audient_ne_publie_que_des_conditions_de_vente": "audient.com's only terms page found governs SALES - delivery, returns, warranty - and says nothing about the website's content or its reuse. So the question of reuse was asked and the answer is that the maker has not addressed it. Same shape as Burson and Mytek: the facts are recorded because nothing forbids it, and the quality of the check is recorded with them.",
+  "_dsd_max_none_parce_que_le_fabricant_na_pas_ce_metier": "`dsd_max` set to the string none on a professional interface whose page never mentions DSD. vocabulary/dsd-max-has-no-word-for-none.json was written for exactly this: absent would mean nobody asked, « unknown » would mean asked and unanswered, and neither is true. A studio interface with ADAT and word clock does not do DSD, and the complete absence of the word across a full specification page is the maker's answer. Fifth record to take this value, all five of them professional.",
+  "_le_chiffre_de_dynamique_na_pas_de_champ_et_cest_voulu": "« DYNAMIC RANGE: 132dB A-Weighted » in the page's D/A block, and it is NOT recorded as a fact. There is no measurement field in this catalogue, and registering one to hold a maker's own published dynamic range would create a field nothing downstream consumes - the base exists to say what a device ACCEPTS and what it DOES to a signal, which is what an upsampling decision needs. The figure stays in the quoted source, where a reader can find it, and goes into no field. Same choice on the EVO 8 and the V90-DAC."
+}

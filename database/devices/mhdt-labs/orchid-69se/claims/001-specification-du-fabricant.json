@@ -1,0 +1,47 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.mhdtlab.com/Orchid69se.htm",
+    "quote": "MHDT Labs' own page for the Orchid 69SE, read 2026-11-25. « Orchid 69SE DAC is a non over-sampling, no digital filter, structured DAC. » « Orchid 69SE DAC is capable of up to 24bits/192kHz digital signal inputs yet remains driving legendary TDA541A R-2R digital to analog output. » - « TDA541A » is the page's spelling and is almost certainly a typo for TDA1541A, reported and not corrected. « Orchid 69SE configured to be 16 bits output. » « All inputs support 16/24 bits/ 32 kHz up to 192 kHz » « Total five independent digital inputs; AES/EBU, BNC, USB, RCA and Toslink. » « Tube buffered output, tube installed is Sovtek 6922 tube. » « Digital Receiver CS8416 » « D/A converter TDA541A ». No DSD figure.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "r2r_ladder",
+    "technology": "r2r",
+    "pcm_max_hz": 192000,
+    "bits": 24,
+    "correctable": true,
+    "chip": "« D/A converter TDA541A » as the page spells it - almost certainly the TDA1541A, which is what the standard Orchid carries and what the family table lists. The missing digit is NOT corrected here: a part number is exactly the kind of value this catalogue must not tidy up, and the record says what the page says.",
+    "device_settings": [
+      {
+        "setting": "Oversampling",
+        "set_to": "none (by design)",
+        "why": "« a non over-sampling, no digital filter, structured DAC ». Nothing to set."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_verification_des_conditions_tentee_et_non_concluante": "mhdtlab.com links no terms, legal or copyright page from its navigation, and the fetched pages carry no copyright footer at all - it is an old-style hand-built site. The reader was careful to say that this is « no terms page found, so no prohibition could be checked. This is not a finding of 'no prohibition.' » The facts are recorded, because the rule is to integrate unless explicitly forbidden and nothing forbidding was found; the quality of the check is recorded with them, as it was for Burson and Mytek.",
+  "_NOS_ici_veut_dire_NON_SUR_ECHANTILLONNE_et_cest_VERIFIE": "This is the maker vocabulary/nos-means-two-things.json was most afraid of: tube-output converters, where NOS valves and non-oversampling meet on one page. The reader checked every page read on both sites and reported: « No fetched page from either site contains 'NOS' or 'New Old Stock.' » MHDT writes « non over-sampling » IN FULL, every time, and names its valve by type. So the ambiguity the vocabulary note predicted does not arise here - not because it was resolved, but because this maker never uses the abbreviation.",
+  "_un_numero_de_piece_quon_ne_corrige_PAS": "« TDA541A ». No such part exists; the TDA1541A does, it is what the standard Orchid carries, and the family table lists it. Correcting it here would be the single most tempting edit on this page and the one this catalogue must refuse: a part number is the value a consumer's engine dispatches on, and quietly repairing a maker's typo turns a record into an interpretation. It is quoted as printed and flagged as a probable typo, which gives a reader both the page and the doubt."
+}

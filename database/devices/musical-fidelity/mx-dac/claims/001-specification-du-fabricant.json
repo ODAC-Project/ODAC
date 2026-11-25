@@ -1,0 +1,38 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.musicalfidelity.com/products/mxseries/mx-dac",
+    "quote": "Musical Fidelity's own page for the MX-DAC, read 2026-11-25. Specifications tab: « Sample rate converter: SRC4392 up-sampling data to 192kHz »; « Digital to Analogue converter: PCM1795 32 bit / 192kHz Multi-bit Sigma-Delta type »; « Coaxial Inputs: S/PDIF up to 24 bit / 192kHz »; « Optical Inputs: S/PDIF up to 24 bit / 192kHz »; « 2x RCA coaxial connector SPDIF 32-192kHz (16-24 bit stereo PCM) »; « 2x TOSLINK optical connector 32-192kHz »; « 1x USB type 'B' connector / Asynchronous data stream at up to 24-bit/192kHz PCM as well as DSD64 and DSD128 (Determined by source file/computer settings) »; « PCM THD: <0.002% »; « DSD THD: <0.003% ». Overview tab: « The MX DAC has inputs for: 2 x coax (up to 24bit 192 kHz PCM), 2 x optical (up to 24bit 192kHz PCM) and asynchronous USB up to 24bit 192 kHz PCM as well as DSD 64 and DSD 128. »; « all inputs whether from coax, optical or USB, are processed in the DSD domain »; « All inputs processed and converted in DSD domain ». Design and Build tab: « The MX DAC has inputs for: 2 x optical (up to 24 bit 96 kHz), 2 x COAX (up to 24 bit 192 kHz) and USB up to 24 bit 192 kHz asynchronous. »",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ti_burr_brown",
+    "pcm_max_hz": 192000,
+    "bits": 24,
+    "dsd_max": "DSD128",
+    "pcm_reconverted_to_dsd": true,
+    "chip": "« Digital to Analogue converter: PCM1795 32 bit / 192kHz Multi-bit Sigma-Delta type » with « Sample rate converter: SRC4392 up-sampling data to 192kHz » ahead of it - the same pair the M3x DAC names, on a cheaper and much older product."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD128"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_les_conditions_de_Musical_Fidelity_ont_ete_lues": "musicalfidelity.com's terms page was READ and carries no prohibition on copying or reusing site content; its only restrictive clause names « unauthorised framing ». The footer reads « Copyright Musical Fidelity 2026 ». Same reading as the M8x, M6x and M3x records.",
+  "_TOUT_est_reconverti_en_DSD_et_le_fabricant_en_fait_un_argument": "« all inputs whether from coax, optical or USB, are processed in the DSD domain », repeated as a bullet: « All inputs processed and converted in DSD domain ». So PCM arriving at any socket is turned into DSD before conversion - which is what `pcm_reconverted_to_dsd` was registered for, and this is the first record to carry it true from a maker who advertises it rather than admits it. The consequence for a consumer engine is the same as for the Nagra HD DAC X: nothing sent to this device reaches the converter in the form it was sent, so `correctable` is NOT written and no per-device correction can be meaningful here.",
+  "_la_meme_page_se_contredit_sur_loptique": "Three tabs of one page give the optical ceiling three times. Overview: « 2 x optical (up to 24bit 192kHz PCM) ». Specifications: « Optical Inputs: S/PDIF up to 24 bit / 192kHz » and « 2x TOSLINK optical connector 32-192kHz ». Design and Build: « 2 x optical (up to 24 bit 96 kHz) ». Two tabs say 192 and one says 96, on the same product, from the same maker, on the same URL. 192000 is recorded because the formal specification table states it twice and the dissenting figure appears once in marketing prose - but that is a JUDGEMENT, not a measurement, and the 96 is quoted here so that a reader can overturn it. The catalogue's `contested` machinery cannot help: it resolves rival claims by SOURCE weight, and these three figures share one source.",
+  "_et_la_reponse_en_frequence_est_donnee_deux_fois_differemment": "« PCM Frequency Response: -3dB, 2Hz to 90kHz » immediately followed by « PCM Frequency Response: -3dB, 2Hz to 40kHz », in the same specification block, with nothing to say which sample rate each belongs to. Almost certainly 192 kHz and 96 kHz input respectively, but the page does not say it, so neither figure is recorded as a measurement. Second self-contradiction on one page, and the reason none of this device's performance figures are carried."
+}

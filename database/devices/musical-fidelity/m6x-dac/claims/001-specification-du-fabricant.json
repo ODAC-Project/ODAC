@@ -1,0 +1,51 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.musicalfidelity.com/products/m6series/m6x-dac",
+    "quote": "Musical Fidelity's own page for the M6x DAC, read 2026-11-25. « 1x USB Audio Class 2.0, 'USB B'; up to 32 bit 768kHz (stereo PCM + MQA), DSD 256 (stereo DoP), DSD512 (stereo native) »; « 1x Coax, up to 24bit 192kHz (stereo PCM + MQA) »; « 2x Optical, up to 24bit 192kHz (stereo PCM + MQA) »; « 1x AES/EBU, up to 24bit 192kHz (stereo PCM + MQA) ». Bullet list: « USB: up to 32bit/768kHz »; « USB: DSD 256 (stereo DoP), DSD512 (stereo native) »; « SPDIF: up to 24bit/192kHHz » - the doubled H is the page's. « DAC Chip: 2x ES9038Q2M (dual differential) »; « Switchable Upsampling with Oversampling Bypass »; « Choose between 7 different digital filters and a complete oversampling bypass, disabling those filters. »",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true,
+    "correctable": true,
+    "chip": "« 2x ES9038Q2M (dual differential) » - the same part as the M8x, which that page calls « dual mono ».",
+    "device_settings": [
+      {
+        "setting": "Oversampling Bypass",
+        "set_to": "on",
+        "why": "« a complete oversampling bypass, disabling those filters » - the maker's own words, and « disabling those filters » is what makes `correctable` true rather than merely plausible."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true,
+      "dop_possible": true,
+      "dop_max": "DSD256"
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_SEPT_filtres_ici_et_HUIT_sur_le_M8x_sur_la_meme_puce": "« Choose between 7 different digital filters » against the M8x's « eight selectable digital filters », on two ES9038Q2M pairs from the same maker. Either the firmware exposes a different number, or one of the two pages is wrong. Nothing is resolved: both are quoted on their own records and neither count is carried across. The Pro-Ject Pre Box S2 Digital contradicted ITSELF on this in the same way, 7 against 8, three days ago."
+}

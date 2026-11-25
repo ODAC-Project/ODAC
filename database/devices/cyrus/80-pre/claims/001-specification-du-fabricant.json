@@ -1,0 +1,20 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.cyrusaudio.com/products/80-pre",
+    "quote": "Cyrus Audio's own page for the 80 PRE preamplifier, read 2026-11-25. « ESS Sabre ES9039Q2M 32 bit DAC »; « Up to 32bit/384kHz PCM »; « DSD256 »; « Digital inputs: 2x optical, 1x coaxial, 1x USB-B »; « Streaming: UPnP, Roon Ready, AirPlay 2, Spotify Connect, TIDAL Connect, Qobuz ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD256",
+    "chip": "« ESS Sabre ES9039Q2M 32 bit DAC »."
+  },
+  "_les_conditions_de_Cyrus_ont_ete_lues": "cyrusaudio.com's terms page and its separate copyright page were both READ. Neither forbids quoting or reusing specification text: the copyright page asserts ordinary copyright in the site's content and names no permitted or forbidden reuse. That is the fourteenth brand of this shape - plain copyright with no reuse clause - and it is recorded as read rather than as absent.",
+  "_une_entree_USB_B_que_le_streamer_na_pas": "« 1x USB-B » here, against the 40 ST's « USB-A for local storage » alone. So the preamplifier takes a computer's audio stream and the streamer does not, on an otherwise identical digital board. The device ceilings are given once for the whole device with no per-socket figure, so `inputs` is absent as on the 40 ST - the USB-B is known to exist and its ceiling is not published."
+}
