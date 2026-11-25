@@ -1,0 +1,33 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.rotel.com/product/ra-1592mkii",
+    "quote": "Rotel's own page for the RA-1592MKII, read 2026-11-25. « Coax/Optical Digital Input Signals » / « LPCM (Up to 24-bit/192kHz) ». « PC-USB » / « USB Audio Class 1 (up to 24-bit/192kHz) » / « USB Audio Class 2 (up to 32-bit/384kHz) ». « MQA and MQA Studio (up to 24-bit/384kHz ) » - the stray space is the page's. DAC: « Texas Instruments premium DAC with precisely tuned output filter circuits » - the filter wording describes the analogue output. No DSD row anywhere.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ti_burr_brown",
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "chip": "« Texas Instruments premium DAC with precisely tuned output filter circuits » - no part number. The « output filter circuits » are analogue and are not a digital filter."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_verification_des_conditions_tentee": "No terms page is linked from rotel.com's home page, its product listing or the product pages read; the footer offers Contact Us, a Privacy Policy and « (c) Grand Green Limited ». The privacy policy WAS read and covers registrations, mailing lists and analytics, with no clause on using or reproducing site content. No URL was guessed, so a terms page elsewhere on the site is not ruled out.",
+  "_deux_classes_USB_et_deux_plafonds_une_quatrieme_fois": "Rotel tabulates « USB Audio Class 1 » and « USB Audio Class 2 » as separate rows with different ceilings on the same socket. Cambridge said it in prose, Topping made it two rows of an input table, and here it is two rows of a specification list. inputs.pcm_max_hz holds one number, so the Class 2 figure is recorded - it is what any current operating system negotiates - and the Class 1 fallback is lost. Fourth maker, and the pattern is now as well evidenced as the DoP split that earned inputs.dop_max."
+}

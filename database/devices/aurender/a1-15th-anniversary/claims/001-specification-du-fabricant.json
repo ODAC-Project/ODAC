@@ -1,0 +1,20 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://aurender.com/home/a1/",
+    "quote": "Aurender's own page for the A1 15th Anniversary, read 2026-11-25. Digital Inputs: « Coaxial/ Optical/ USB » = « 1x/ 1x/ 1x »; « AES-EBU IN » = « 1x »; « I2S IN » = « 1x »; « USB IN » = « 1x ». « DAC » = « AKM4499EX Quad (2x/CH) », and the prose « Features four AKM4499EX DAC chips ». Decoding spec: « PCM 768Khz/ DSD512 ». No digital filter, oversampling or NOS row appears unless quoted above, and the page attaches no sample rate to any digital input.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "akm",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512",
+    "chip": "« AKM4499EX Quad (2x/CH) » - four AKM4499EX, two per channel. The densest converter count stated by any maker in this catalogue after Rockna's modules and CH Precision's eight R-2R networks."
+  },
+  "_verification_des_conditions_faite": "aurender.com has no terms-of-use page: the only legal link is a privacy policy, which was READ and covers the Conductor app alone (« Aurender Conductor collects no personal data from users of the app. ») with no clause on copying or reusing site content. The footer carries « Copyright (c) Aurender » and a trademark line, which is the ordinary notice. Worth stating because Innuos - the other server maker read the same hour - forbids exactly this and got no record.",
+  "_les_debits_de_ces_pages_decrivent_la_SORTIE_pas_les_entrees": "Aurender's specification tables list the digital inputs by TYPE and COUNT and attach no rate to any of them. The figures on the page sit in two other rows: « Analog Outputs Supported Format », which is what the converter produces and is therefore the device's conversion ceiling, and « USB Output Supported Format », which is what the unit SENDS to an external DAC. pcm_max_hz and dsd_max are taken from the first; nothing is taken from the second, and no inputs block is written. The distinction matters because on several of these models the USB OUTPUT figure is higher than the analogue one - reading the largest number on the page would describe a converter the device does not have.",
+  "_six_types_dentree_et_pas_un_chiffre": "Coaxial, optical, USB, AES/EBU, I2S and a second USB, each with a count, and not one sample rate between them. A device with more input variety than most records in this catalogue and nothing recordable about any of them. The I2S input in particular is the sixth proprietary or semi-proprietary link met whose figures are unpublished."
+}

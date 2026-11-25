@@ -1,0 +1,17 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://motu.com/en-us/products/m-series/m2/",
+    "quote": "MOTU's own page for the M2, read 2026-11-25. « 44.1 to 192 kHz sample rates », stated once for the device with no bit depth. Converter: « Equipped with the same ESS Sabre32 Ultra(TM) DAC Technology found in audio interfaces costing thousands, the M2 delivers an astonishing 120 dB Dynamic Range on its main outputs. »; « 120 dB dynamic range on output ». No DSD figure, no digital filter row, no ADAT.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 192000,
+    "chip": "« ESS Sabre32 Ultra DAC Technology » with no part number, and « 120 dB Dynamic Range »."
+  },
+  "_la_meme_page_mot_pour_mot_que_le_M4": "The M2's converter sentence differs from the M4's by one character - the model name - and both give the same 120 dB and the same 44.1 to 192 kHz. The two records are identical in every field this catalogue holds, and the products differ in channel count, which the schema does not model for inputs and does not model at all for outputs. Kept as two records because they are two products and a reader will look for both."
+}

@@ -1,0 +1,34 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.rotel.com/product/a14mkii",
+    "quote": "Rotel's own page for the A14MKII, read 2026-11-25. « Coax/Optical Digital Input Signals » / « SPDIF LPCM (Up to 24-bit/192k Hz) » - the space in « 192k Hz » is the page's. « PC-USB » / « USB Audio Class 1 (up to 24-bit/96k Hz) » / « USB Audio Class 2 (up to 32-bit/384k Hz) ». DAC: « a Texas Instruments 32-bit/384kHz DAC ». No DSD row and no digital filter row.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ti_burr_brown",
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "chip": "« a Texas Instruments 32-bit/384kHz DAC » - no part number, and for once the chip's rating and the device's USB ceiling agree."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_verification_des_conditions_tentee": "No terms page is linked from rotel.com's home page, its product listing or the product pages read; the footer offers Contact Us, a Privacy Policy and « (c) Grand Green Limited ». The privacy policy WAS read and covers registrations, mailing lists and analytics, with no clause on using or reproducing site content. No URL was guessed, so a terms page elsewhere on the site is not ruled out.",
+  "_deux_classes_USB_et_deux_plafonds_une_quatrieme_fois": "Rotel tabulates « USB Audio Class 1 » and « USB Audio Class 2 » as separate rows with different ceilings on the same socket. Cambridge said it in prose, Topping made it two rows of an input table, and here it is two rows of a specification list. inputs.pcm_max_hz holds one number, so the Class 2 figure is recorded - it is what any current operating system negotiates - and the Class 1 fallback is lost. Fourth maker, and the pattern is now as well evidenced as the DoP split that earned inputs.dop_max.",
+  "_la_classe_1_tombe_a_96_ici_et_a_192_sur_le_RA_1592MKII": "« USB Audio Class 1 (up to 24-bit/96k Hz) » against the RA-1592MKII's « Class 1 (up to 24-bit/192kHz) », same maker, same template, same season. So the fallback ceiling is a property of the model and not of the protocol, and a listener on a host with no driver gets 96 kHz here and 192 there. Both figures are lost to the schema in the same way."
+}

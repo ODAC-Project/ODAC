@@ -1,0 +1,29 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.arcam.co.uk/product,radia,integrated-amplifiers,sa35.htm",
+    "quote": "Arcam's own page for the SA35, read 2026-11-25. « Digital Audio Inputs: 1x HDMI eARC, 2x Coaxial (RCA), 2x Optical (Toslink) ». « Supported Digital input Bit depth: 16, 24 »; « Supported Digital input sample rates (kHz): Up to 192 kHz ». « Supported Streaming sample rates (kHz): Up to 384 kHz »; « DSD (up to 256) ». Converter: the same « Hyperstream iV DAC topology from ESS » wording as the SA45. « USB Media (using USB-A mass storage input) ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD256",
+    "chip": "« the latest Hyperstream iV DAC topology from ESS » - the architecture named, the part not."
+  },
+  "inputs": {
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_une_page_de_conditions_qui_ne_dit_rien": "arcam.co.uk HAS a terms page, linked as « Terms » in the footer, and its entire body is: « Contact us for details of our terms and conditions ». So the page exists, says nothing, and points to a contact form that was not used. There is no readable prohibition, and the footer carries « (c) 2026 Harman International Industries Ltd. » - the ordinary notice. Recorded in this shape because it is a third kind of answer, beside « no terms page » and « a terms page that forbids »: a terms page that defers."
+}

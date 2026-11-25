@@ -1,0 +1,31 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://aurender.com/home/a30/",
+    "quote": "Aurender's own page for the A30, read 2026-11-25. Digital Inputs: « 1X Coax RCA, 1X Coax BNC, 2X Optical/Toslink ». « DAC Chipset »: « AKM 4497 - Dual-Mono ». « Audio Word Clock »: « OCXO ». « Analog Outputs Supported Format »: « Up to 768kHz/32bit PCM, DSD512 (Native) ». « USB Output Supported Format »: « Up to 768kHz/32bit PCM, DSD512 (Native), DSD256 (DoP) ». « SPDIF & AES/EBU Output »: « N/A ». « DSD-to-PCM Conversion »: « N/A ». Upsampling: « A30 is capable of upsampling non-DSD files up to 705.6/768kHz to the analog outputs. Or leave upsampling off (default setting) for an untouched bitstream. » No digital filter, oversampling or NOS row appears unless quoted above, and the page attaches no sample rate to any digital input.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "akm",
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dsd_reconverted_to_pcm": false,
+    "chip": "« AKM 4497 - Dual-Mono », with an OCXO word clock.",
+    "device_settings": [
+      {
+        "setting": "Upsampling",
+        "set_to": "off",
+        "why": "« Or leave upsampling off (default setting) for an untouched bitstream. » The maker's own words, and « untouched bitstream » is as close as a specification page comes to saying the device will add nothing. Off is both the factory default and what Auto needs: the rate and the filter have already been chosen upstream."
+      }
+    ]
+  },
+  "_verification_des_conditions_faite": "aurender.com has no terms-of-use page: the only legal link is a privacy policy, which was READ and covers the Conductor app alone (« Aurender Conductor collects no personal data from users of the app. ») with no clause on copying or reusing site content. The footer carries « Copyright (c) Aurender » and a trademark line, which is the ordinary notice. Worth stating because Innuos - the other server maker read the same hour - forbids exactly this and got no record.",
+  "_les_debits_de_ces_pages_decrivent_la_SORTIE_pas_les_entrees": "Aurender's specification tables list the digital inputs by TYPE and COUNT and attach no rate to any of them. The figures on the page sit in two other rows: « Analog Outputs Supported Format », which is what the converter produces and is therefore the device's conversion ceiling, and « USB Output Supported Format », which is what the unit SENDS to an external DAC. pcm_max_hz and dsd_max are taken from the first; nothing is taken from the second, and no inputs block is written. The distinction matters because on several of these models the USB OUTPUT figure is higher than the analogue one - reading the largest number on the page would describe a converter the device does not have.",
+  "_dsd_reconverted_to_pcm_DONNE_dans_une_ligne_de_specification": "« DSD-to-PCM Conversion »: « N/A ». A maker answering, in a spec row, the exact question this catalogue's most consequential field asks - and answering it in the negative. Four records in a hundred and fifty carry that field from their own evidence; this is the first where the evidence is a row whose label IS the field name. Aurender states it because its transports DO perform that conversion - the N20's row reads « DSD64/128/256/512 to 88.2/176.4kHz » - so the « N/A » here is a deliberate contrast, not an omission.",
+  "_le_suréchantillonnage_monte_a_705_6_ET_768": "« upsampling non-DSD files up to 705.6/768kHz » - the two figures are the 44.1-based and 48-based ceilings, so the device follows the source's base rate rather than converting between families. Stated by few makers and worth having: a resampler that crosses from 44.1 to 48 does arithmetic that one staying in family does not."
+}

@@ -1,0 +1,32 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.arcam.co.uk/product,radia,integrated-amplifiers,sa45.htm",
+    "quote": "Arcam's own page for the SA45, read 2026-11-25. « Digital Audio Inputs: 1x HDMI eARC, 2x Coaxial (RCA), 2x Optical (Toslink) ». « Supported Digital input Bit depth: 16, 24 »; « Supported Digital input sample rates (kHz): Up to 192 kHz ». Separately: « Supported Streaming Bit depth: 16, 24, 32 »; « Supported Streaming sample rates (kHz): Up to 384 kHz »; « DSD (up to 256) » among the supported streaming media. Converter, from the overview: « the latest Hyperstream iV DAC topology from ESS, in a balanced configuration with advanced Jitter elimination ». « USB Media (using USB-A mass storage input) ». Room correction: « Dirac Live Room Correction ». The only « filter » word on the page is the label « Frequency response (filter 1) ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD256",
+    "chip": "« the latest Hyperstream iV DAC topology from ESS, in a balanced configuration » - the architecture named, the part not."
+  },
+  "inputs": {
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_une_page_de_conditions_qui_ne_dit_rien": "arcam.co.uk HAS a terms page, linked as « Terms » in the footer, and its entire body is: « Contact us for details of our terms and conditions ». So the page exists, says nothing, and points to a contact form that was not used. There is no readable prohibition, and the footer carries « (c) 2026 Harman International Industries Ltd. » - the ordinary notice. Recorded in this shape because it is a third kind of answer, beside « no terms page » and « a terms page that forbids »: a terms page that defers.",
+  "_le_fabricant_separe_EXPLICITEMENT_le_plafond_des_ENTREES_de_celui_du_STREAMING": "Two labelled pairs of rows: « Supported Digital input Bit depth / sample rates » at 16-24 bits and 192 kHz, and « Supported Streaming Bit depth / sample rates » at 16-24-32 bits and 384 kHz with DSD256. The device converts up to 384/32/DSD256, and NOTHING YOU PLUG INTO IT can deliver more than 192/24. Soulution, LUMIN and Bluesound all have that gap and leave it to be inferred; Arcam labels both halves. It is the cleanest statement in a hundred and sixty records of why a device figure and an input figure are different questions - and it is why pcm_max_hz here is 384000 while every input block says 192000.",
+  "_le_DSD256_nexiste_que_par_le_reseau": "« DSD (up to 256) » appears under supported STREAMING media and nowhere under the digital inputs. So DSD reaches this device only over the network, and the two coaxial and two optical sockets carry none - which the maker implies by where it put the row rather than by saying so. inputs.dsd_max is left absent on them rather than set to « none »: the placement is strong evidence and not a statement.",
+  "_Dirac_nest_pas_un_filtre_de_reconstruction": "« Dirac Live Room Correction » is a room-correction system the owner calibrates for their loudspeakers and listening position. It is not the reconstruction filter device_settings records, and nothing is written from it. Worth naming because it is DSP in the signal path that this catalogue has no way to represent, and because a consumer running it is hearing something the schema cannot describe."
+}

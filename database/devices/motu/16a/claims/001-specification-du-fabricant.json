@@ -1,0 +1,24 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://motu.com/products/16a",
+    "quote": "MOTU's own page for the 16A, read 2026-11-25. Converter: « Renowned ESS Sabre32(TM) DAC technology delivers 125 dB dynamic range and extremely low harmonic distortion. » - no part number and no THD figure. Rates: « 256 channels of computer I/O (128 in and 128 out) at sample rates up to 96 kHz », stated for the Thunderbolt and USB4 connections, with no bit depth. ADAT: « Two optical banks provide 16 channels of ADAT optical at 48 kHz, 8 channels of S/MUX optical I/O at 96 kHz, with optional stereo TOSLink at rates up to 96kHz. »; « 2 x 8-channel ADAT optical ports ». Mixer: « 64-channel mixing with 32-bit floating point precision » - the mixer, not the converter. No DSD figure and no digital filter row.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 96000,
+    "chip": "« ESS Sabre32 DAC technology » with no part number, and the maker's measurement « 125 dB dynamic range »."
+  },
+  "inputs": {
+    "spdif_optical": {
+      "pcm_max_hz": 96000,
+      "channels": 8
+    }
+  },
+  "_le_nombre_de_canaux_est_une_FONCTION_du_debit_et_le_fabricant_la_publie": "« 16 channels of ADAT optical at 48 kHz, 8 channels of S/MUX optical I/O at 96 kHz ». Doubling the rate halves the channels - that is what S/MUX does - and this is the first page in the catalogue to state both ends of it. inputs.channels is a single integer, so 8 is recorded with the 96 kHz ceiling and the 48 kHz / 16-channel pairing is lost. The Topping E50 II published the same relation as a three-row table (AdA1, AdA2, AdA4) and it could not be held either. Two makers, one shape, no field.",
+  "_quatre_vingt_seize_kilohertz_est_un_plafond_de_CANAUX_pas_de_qualite": "« 256 channels of computer I/O (128 in and 128 out) at sample rates up to 96 kHz ». A consumer DAC stopping at 96 kHz would be a limitation; here it is the point at which 128 channels still fit down the link. The same number means something different in this segment, and a catalogue that ranks devices by pcm_max_hz would put this interface below a sixty-euro dongle."
+}

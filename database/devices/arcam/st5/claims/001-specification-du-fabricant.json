@@ -1,0 +1,20 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.arcam.co.uk/product,streamers,st5.htm",
+    "quote": "Arcam's own page for the ST5, read 2026-11-25. Overview: « Hi-Res Audio - up to 24 bit / 192 kHz ». « Supported Hi-res Bit depth: 16, 24 »; « Supported samples rates (kHz): 44.1, 48, 88.2, 96, 176.4, 192 » - the plural « samples » is the page's; « Supported Hi-res media: FLAC, WAS (LPCM), MQA, AAC, ALAC, AIFF, DSD (128) » - « WAS » is the page's, presumably WAV. « Digital Outputs: 1x Coaxial (RCA), 1x Optical (Toslink) » - OUTPUTS, and no digital input is listed. Converter: « an ESS ES9018 high resolution DAC with time domain jitter elimination ». The only filter word is the label « Frequency response (fi lter 1): 20Hz-20kHz +/- 0.05dB », where the broken word is the page's.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 192000,
+    "bits": 24,
+    "dsd_max": "DSD128",
+    "chip": "« an ESS ES9018 high resolution DAC with time domain jitter elimination » - a part number, which the newer ST25 and the SA pair do not give."
+  },
+  "_une_page_de_conditions_qui_ne_dit_rien": "arcam.co.uk HAS a terms page, linked as « Terms » in the footer, and its entire body is: « Contact us for details of our terms and conditions ». So the page exists, says nothing, and points to a contact form that was not used. There is no readable prohibition, and the footer carries « (c) 2026 Harman International Industries Ltd. » - the ordinary notice. Recorded in this shape because it is a third kind of answer, beside « no terms page » and « a terms page that forbids »: a terms page that defers.",
+  "_trois_coquilles_sur_une_page_de_specification": "« WAS (LPCM) » for WAV, « samples rates », and « Frequency response (fi lter 1) » with the word broken by the page's own typesetting. None of them touches a figure, so nothing is at risk here - and they are recorded because this is the kind of page where a transcription error would hide easily, and because « fi lter » is exactly the string a text search for filters would miss."
+}

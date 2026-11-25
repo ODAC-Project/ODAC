@@ -1,0 +1,33 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.rotel.com/product/s14",
+    "quote": "Rotel's own page for the S14, read 2026-11-25. « Coax/Optical Digital Input Signals » / « SPDIF LPCM (Up to 24-bit/192kHz) ». « PC-USB » / « USB Audio Class 2.0 (up to 24-bit/384kHz)* ». « MQA and MQA Studio (up to 24-bit/384kHz ) ». Flash drive: « plays MP3, WMA and AAC files from flash drives », with no rate. DAC: « ESS premium 32-bit Digital to Analog Converter » (feature icon) and « 32-bit ESS DAC » (description). No DSD row and no digital filter row.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 384000,
+    "bits": 24,
+    "chip": "« ESS premium 32-bit Digital to Analog Converter » - the family and a word length, no part number."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 24
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_verification_des_conditions_tentee": "No terms page is linked from rotel.com's home page, its product listing or the product pages read; the footer offers Contact Us, a Privacy Policy and « (c) Grand Green Limited ». The privacy policy WAS read and covers registrations, mailing lists and analytics, with no clause on using or reproducing site content. No URL was guessed, so a terms page elsewhere on the site is not ruled out.",
+  "_le_convertisseur_est_32_bits_et_lentree_24": "« ESS premium 32-bit Digital to Analog Converter » against « USB Audio Class 2.0 (up to 24-bit/384kHz) ». bits is 24, because the field means what the device accepts and the USB row is the statement about that; the 32 describes the silicon. The RA-1592MKII and the A14MKII, same maker, both accept 32 bits over Class 2 - so this is a property of this model's receiver, not a house convention."
+}

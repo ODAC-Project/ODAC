@@ -1,0 +1,17 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://motu.com/en-us/products/m-series/m4/",
+    "quote": "MOTU's own page for the M4, read 2026-11-25. « 44.1 to 192 kHz sample rates » (FEATURE HIGHLIGHTS), stated once for the device with no bit depth and no per-connection breakdown. Converter: « Equipped with the same ESS Sabre32 Ultra(TM) DAC Technology found in audio interfaces costing thousands, the M4 delivers an astonishing 120 dB Dynamic Range on its main outputs. »; « 120 dB dynamic range on output ». Also « -129 dBu EIN on mic inputs », which is the microphone preamplifier and not the D/A path. No DSD figure, no digital filter row, no ADAT.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 192000,
+    "chip": "« ESS Sabre32 Ultra DAC Technology » with no part number, and the measurement « 120 dB Dynamic Range on its main outputs »."
+  },
+  "_aucun_DSD_nulle_part_dans_ce_segment": "Not one page of MOTU's or Focusrite's, read the same hour, states a DSD figure of any kind. That is not an omission: the professional interface segment does not do DSD, because its customers record and mix in PCM. dsd_max is absent on all three MOTU records - and it is the honest absence, « nobody asked », rather than the « unknown » the Schiit Yggdrasil needed when a maker answered « none ». The distinction the catalogue drew on 2026-11-24 earns its keep here."
+}

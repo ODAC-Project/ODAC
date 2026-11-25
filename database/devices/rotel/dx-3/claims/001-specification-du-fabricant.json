@@ -1,0 +1,38 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.rotel.com/product/dx-3",
+    "quote": "Rotel's own page for the DX-3, read 2026-11-25. « PC-USB » / « USB Audio Class 2 (up to 32-bit/384kHz)* » with the footnote « *Driver Installation Required ». « Coax/Optical Digital Input Signals » / « SPDIF LPCM (Up to 24-bit/192kHz) ». DAC: « ESS ES9028PRO DAC (32-bit/768kHz) ». DSD: « Support DSD(up to 11.2 M) and DoP (up to 5.6 M) » - the page does not say which path is native. On filtering it says only « the analogue output filters are implemented externally », which is the analogue stage. The product is a headphone amplifier with a converter.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD256",
+    "dop": true,
+    "chip": "« ESS ES9028PRO DAC (32-bit/768kHz) » - the parenthesis is what the CHIP can do, and the device's own USB row stops at 384 kHz."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "dsd_max": "DSD256",
+      "dop_max": "DSD128"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_verification_des_conditions_tentee": "No terms page is linked from rotel.com's home page, its product listing or the product pages read; the footer offers Contact Us, a Privacy Policy and « (c) Grand Green Limited ». The privacy policy WAS read and covers registrations, mailing lists and analytics, with no clause on using or reproducing site content. No URL was guessed, so a terms page elsewhere on the site is not ruled out.",
+  "_onze_virgule_deux_contre_cinq_virgule_six_en_megahertz": "« Support DSD(up to 11.2 M) and DoP (up to 5.6 M) ». 11.2896 MHz is DSD256 and 5.6448 MHz is DSD128, so DoP stops one step below the other path - the seventh maker to publish both halves, and the first to do it in megahertz rather than by name. inputs.dop_max, registered an hour earlier on six makers, takes the second figure. What the page does NOT say is that the 11.2 M path is native; it only distinguishes it from DoP, which is enough for the two fields and not enough for native_dsd.",
+  "_la_puce_peut_768_et_lappareil_fait_384": "« ESS ES9028PRO DAC (32-bit/768kHz) » beside « USB Audio Class 2 (up to 32-bit/384kHz) ». A factor of two between what the silicon is rated for and what the device accepts, both printed on one page. pcm_max_hz is 384000. Same trap as EMM Labs' « 16xDSD » and iFi's « DSD2048 with Remastering », in its mildest form: the larger number is true of a component, not of the product."
+}

@@ -1,0 +1,7 @@
+{
+  "id": "motu",
+  "name": "MOTU",
+  "_legal_entity": "The footer of motu.com reads « Copyright (c) 2008-2026 MOTU, Inc. All rights reserved. » MOTU is Mark of the Unicorn, Inc., of Cambridge, Massachusetts.",
+  "_why_a_pro_interface_maker_is_here": "MOTU sells audio interfaces, not DACs, and every one of them contains a D/A converter - which is what this catalogue is about. The segment was absent until 2026-11-25 except for RME and Merging, both of which arrived as consumer-facing products. Pro interfaces behave differently in ways that matter: they publish MEASURED dynamic range and THD for the D/A path, which consumer makers rarely do, and they state ADAT channel counts per sample rate. They also, so far without exception, support no DSD at all.",
+  "_added_on": "2026-11-25"
+}
