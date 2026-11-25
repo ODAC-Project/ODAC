@@ -1,0 +1,38 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.prismsound.io/products/ada-8xr/modules/",
+    "quote": "Prism Sound's own pages for the Dream ADA-8XR, read 2026-11-25 - the overview, the tech-specs page and the modules page, where the per-module figures live. Overview: « the goals of ultimate sound quality, unbeatable performance and un-matched versatility have been realised in a modular multi-channel, 24-bit 192kHz-capable format. » Synchronization block: « Internal - 32, 44.1, 48, 88.2, 96, 176.4, 192 kHz +/-25ppm »; « Each path can be separately synchronized. » The AES3 module: « The module can accommodate extended sample rates (up to 192kHz) in Split96 (two-wire) or high-speed (one-wire) modes »; « Wordlength - 16, 20 or 24-bit »; « One-wire or two-wire (\"Split96\") input and output modes supported @ 88.2, 96, 176.4 and 192kHz »; « AES3 mode: I/O impedance - 110 Ohm »; « S/PDIF mode: I/O impedance - 75 Ohm ». The Pro Tools modules: « supporting sample rates up to 192kHz » for both HD and HDX. The legacy DSD application note at prismsound.com: « The DSD I/O Module type PREV039/9/1 provides eight channels of 'Direct Stream Digital' input and output for the ADA-8XR. »; « The DSD I/O Module can transact the DSD data in either SDIF 2 (sometimes known as DSD RAW) or SDIF 3 formats, using coaxial cables via a breakout squid, and optionally in the MAC DSD / SuperMAC format using a CAT5E cable. »; « When combined with the ADA-8XR's Analogue Line Input and Output modules, the DSD I/O Module provides eight channels of analogue-to-DSD and DSD-to-analogue conversion. »; « Whilst the DSD format uses a fixed sample rate of 2.8224MHz the ADA-8XR's DSD I/O Module allows the user to run DSD-connected Paths with any of the ADA-8XR's sample rate and sync options. » The tech-specs page's own DSP block names « Prism Sound Super Noise Shaping (SNS): TPDF dither, plus 4 curve shapes » and « Prism Sound 'MR-X' bit-mapping » - dither and bit-mapping, not reconstruction filters.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 192000,
+    "bits": 24,
+    "dsd_max": "DSD64",
+    "native_dsd": true,
+    "dop": false,
+    "chip": "No part number is published.",
+    "device_settings": [
+      {
+        "setting": "Digital I/O module fitted",
+        "set_to": "unknown",
+        "why": "This device's inputs ARE its modules: AES3/S-PDIF on DB25, Pro Tools HD, Pro Tools HDX, FireWire, and formerly DSD over SDIF. What a given chassis accepts depends on which cards are in its two digital slots, and no record can say which."
+      }
+    ]
+  },
+  "inputs": {
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_conditions_de_Prism_Sound_aucune_clause_de_reutilisation": "Measured 2026-11-25. prismsound.io has NO terms-of-use page: /terms/, /terms-of-use/, /terms-and-conditions/, /legal/, /copyright/ and /disclaimer/ all 404, and the full 74-page sitemap lists only a privacy policy and one PDF. That PDF, « Audio Squadron Limited Terms & Conditions of Sale », is a 7-page image-only scan that was READ page by page: all 19 clauses, none forbidding the copying or reuse of content. Its nearest clauses do not reach website material - clause 14 disclaims warranties as to third-party IPR « in respect of the goods », clause 7's confidentiality binds Seller and Purchaser only and « expressly excludes public-domain information ». The only assertion of rights is the footer « (c) 2026 Audio Squadron Ltd. All rights reserved. » robots.txt on both hosts permits every product and spec path. So the sale terms were genuinely read and permit this; the website-use question has no document to answer it.",
+  "_le_fabricant_decline_lexactitude_de_ses_propres_chiffres": "Clause 6(b) of the sale terms, worth recording because no other maker in this catalogue states it: « The Seller shall use reasonable endeavours to ensure the accuracy of technical data or literature relating to the goods, but the Seller accepts no liability [...] for any error or omission in such technical data or literature. » And every spec page carries « In keeping with our policy of continual development, specifications are subject to amendment without notice. E&OE. » The figures are still the maker's published figures and still the best source there is - but this is the only brand that says in a contract that they may be wrong.",
+  "_le_DSD_est_NATIF_par_SDIF_et_jamais_par_DoP": "« in either SDIF 2 (sometimes known as DSD RAW) or SDIF 3 formats, using coaxial cables via a breakout squid, and optionally in the MAC DSD / SuperMAC format using a CAT5E cable ». Three native DSD transports, none of them DoP, and `dop` is FALSE here - the first record in the catalogue to say so from evidence rather than silence. DSD64 only: « the DSD format uses a fixed sample rate of 2.8224MHz ». This is what DSD looked like before DoP existed, on a machine that did analogue-to-DSD as well as DSD-to-analogue, and it is the only record in the base whose DSD never touches a PCM frame.",
+  "_le_module_qui_porte_le_DSD_nest_plus_au_catalogue": "The DSD I/O Module is described only on a legacy application note at prismsound.com and is NOT among the modules listed on the current site. So `dsd_max` describes a capability that can no longer be bought, on a chassis that is still sold. The catalogue has no way to date a fact, which makes this the clearest case yet for one: a record that is true of a 2005 ADA-8XR and false of one ordered today, with nothing in the schema to mark the difference.",
+  "_le_32_du_tableau_de_synchronisation_est_un_DEBIT": "« Internal - 32, 44.1, 48, 88.2, 96, 176.4, 192 kHz +/-25ppm ». A rate list that starts at 32 kHz, the lowest rate S/PDIF receivers are specified for - not a bit depth, as Musical Fidelity's V90-DAC page made it look the same day. Third occurrence today, after the DA-2's identical list, and the reason vocabulary/a-rate-range-looks-like-a-bit-depth.json exists.",
+  "_le_mot_filtre_napparait_que_pour_du_dither": "The DSP block names « Super Noise Shaping (SNS): TPDF dither, plus 4 curve shapes » and « MR-X bit-mapping » - four curve SHAPES, which a filter-hunting grep would read as four digital filters. They are noise-shaping curves applied when REDUCING word length on the way out, not reconstruction filters on the way in. No reconstruction filter is named, counted or bypassable, and `device_settings` holds nothing about them."
+}

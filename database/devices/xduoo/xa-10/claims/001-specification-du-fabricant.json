@@ -1,0 +1,31 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.xduoo.net/product/xa-10",
+    "quote": "xDuoo's own page for the XA-10 on its English site, read 2026-11-25. Hero chip row: « Dual AK4493 PCM 768kHz DSD512 Class A ». Technical Data: « Input Interface  USB, optical, coaxial and Bluetooth inputs »; « Headphone Output  4.4mm balanced headphone output and analog output »; « Sampling Rate  PCM 768kHz / DSD512 ». The table has no Output Power and no Frequency Response row. Key Features: « Dual AKM DACs support the balanced digital path. » « USB decoding supports PCM up to 32-bit/768kHz. » « USB playback supports DSD512 and MQA. » « A Class A stage provides the confirmed headphone drive. ». No digital filter is NAMED, no oversampling bypass and no non-oversampling mode is mentioned, and DoP is not mentioned - across this maker's whole catalogue DoP appears on one page only, the LINK10.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "family": "akm",
+    "chip": "« Dual AK4493 »."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512"
+    },
+    "spdif_coax": {},
+    "spdif_optical": {},
+    "bluetooth": {}
+  },
+  "_la_source_est_le_site_ANGLAIS_dont_les_conditions_ont_ete_lues": "Every xDuoo record is sourced to xduoo.net, whose /terms page was read in full on 2026-11-25 and forbids nothing beyond misuse of the site itself: « Do not misuse the website, interfere with its operation or attempt unauthorized access to website or customer information. » The maker's Chinese site, xduoo.com, publishes no terms page at all AND publishes every specification as a JPEG image, so nothing is taken from it. See the brand file for both findings in full.",
+  "_pourquoi_native_dsd_nest_PAS_ecrit_ici": "The page carries a sentence of the form « DSD512 support enables native high-resolution music playback », and so do more than twenty other xduoo.net pages, word for word, including a passive R2R module and a portable player. It is generated template text. A claim made identically about twenty different products is a claim about none of them, so `native_dsd` is absent on every xDuoo record despite the word appearing on nearly all of them.",
+  "_deux_formes_sur_une_page_et_la_profondeur_nest_que_dans_lune": "The spec table's « Sampling Rate  PCM 768kHz / DSD512 » names no socket; the Key Features say « USB decoding supports PCM up to 32-bit/768kHz » and add the bit depth the table omits. So the 32 is established by the prose and the 768 by both, and neither mentions optical or coaxial. This is the commonest shape on this maker's site: a device figure in the table, a USB figure in the prose, and silence on every other socket."
+}

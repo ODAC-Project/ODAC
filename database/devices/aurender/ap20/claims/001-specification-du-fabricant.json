@@ -3,7 +3,7 @@
     "kind": "datasheet",
     "url": "https://aurender.com/home/ap20/",
     "quote": "Aurender's own page for the AP20, read 2026-11-25. Digital Inputs: « 1X Coax RCA, 1X Coax BNC, 2X Optical/Toslink ». « DAC Chipset »: « AKM 4497 - Dual-Mono ». « Audio Word Clock »: « OCXO ». « Analog Outputs Supported Format »: « PCM: Up to 32-bit / 768 kHz; DSD: Up to DSD512 ». « Digital Outputs »: « N/A ». The product is an all-in-one integrated amplifier. No digital filter, oversampling or NOS row appears unless quoted above, and the page attaches no sample rate to any digital input.",
-    "read_on": "2026-11-24"
+    "read_on": "2026-11-25"
   },
   "source_names_subject": true,
   "submitted_by": "curator",

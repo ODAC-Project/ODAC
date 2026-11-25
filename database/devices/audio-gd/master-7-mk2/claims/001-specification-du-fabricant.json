@@ -1,0 +1,50 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "http://www.audio-gd.com/Master/M7MK2/M7MK2EN.htm",
+    "quote": "Audio-gd's own pages for the Master-7 MK2, read 2026-11-25. « Master-7 MK2 (Limit) For who got love on PCM1704UK to order (Apply 8 pcs the most real like sound DA chip PCM1704UK) Fully discrete real balanced current transmition design. 2 pc ultra high frequency 90/98 MHz Accusilicon 318B femtosecond clocks »; « Please note: The PCM1704UK can not support DSD playback. User need conversion the DSD to PCM in the source device. »; « 3. Built in 2X, 4X and 8X oversampling and digital filters and on top of this 4 different true NOS (only analog 6dB filtering) modes. »; « There are no relays or other switches in the signal path after DA modules to perform the best and purest sound quality. » Spec row: « Support Sampling | USB / I2S mode: 44.1kHz - 384kHz /32Bit / Coaxial mode: 44.1kHz - 192kHz /24Bit / Optical mode: 44.1kHz - 192kHz /24Bit » - no DSD row, matching the note. Manual: « n (NOS) : to select the NOS mode. » Six inputs: AES, RCA coaxial, BNC coaxial, optical, HDMI-IIS, USB.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ti_burr_brown",
+    "technology": "r2r",
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "none",
+    "correctable": true,
+    "chip": "« Apply 8 pcs the most real like sound DA chip PCM1704UK ».",
+    "device_settings": [
+      {
+        "setting": "OS / NOS mode",
+        "set_to": "n (non-oversampling)",
+        "why": "« n (NOS) : to select the NOS mode. The second digit from the left: OS and NOS modes select ». And the boilerplate says what remains in the path: « 4 different true NOS (only analog 6dB filtering) modes »."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32
+    },
+    "i2s": {
+      "pcm_max_hz": 384000,
+      "bits": 32
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "aes_ebu": {},
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_conditions_NON_CONCLUANTES_chez_Audio_gd": "No terms page found on audio-gd.com, so no prohibition could be checked - which is NOT the same as finding no prohibition. See the R-1 MK3 record for the full measurement; the only assertion of rights anywhere is the footer « Copyright(C) 2004 www.audio-gd.com All Rights Reserved ».",
+  "_NOS_ici_veut_dire_NON_SUR_ECHANTILLONNE_et_cest_PROUVE": "109 pages of this site were searched for « New Old Stock » and « N.O.S. »: zero hits, and one page defines the term - « \"NOS\" stands for \"Non Oversampling\". » So the models carrying NOS in their name are non-oversampling designs, not valve stock.",
+  "_une_puce_en_echelle_nest_pas_une_echelle_discrete": "The PCM1704UK is a Burr-Brown R-2R ladder in a package - a ladder converter, but a CHIP, not the discrete resistor networks of this maker's R-series. `family` is ti_burr_brown and `technology` is r2r, which is the one combination in the catalogue where those two fields disagree in spirit and are both correct. Kept apart from the R-series deliberately: a consumer choosing on `technology` alone would see no difference between a PCM1704 and eight hand-matched resistor groups.",
+  "_aucun_relais_apres_les_modules_et_ce_nest_pas_un_detail": "« There are no relays or other switches in the signal path after DA modules ». On a maker whose volume controls ARE relay-switched resistor networks, saying a model has none after the converter distinguishes a fixed-output DAC from its own preamplifier models - and keeps this record clear of the volume-ladder trap at the maker's own insistence rather than mine."
+}

@@ -3,7 +3,7 @@
     "kind": "datasheet",
     "url": "https://www.audiolab.co.uk/products/d7",
     "quote": "Audiolab's own page for the D7, read 2026-11-25 in a browser (the host returns 429 to automated fetchers, on three separate attempts over several hours), from the page's « Specifications » block: « Inputs 2 x SPDIF (Coax), 2 x SPDIF (Optical), 1 x PC USB (USB B), 1 x USB HDD (USB A), 1 x Bluetooth (aptX / aptX HD) »; « Sampling Frequency Optical/Coaxial: 44.1kHz-192kHz USB HDD: 44.1kHz-96kHz PC USB: 44.1kHz-768kHz (PCM) / DSD64, DSD128, DSD256, DSD512 »; « Max. Sampling Frequency USB HDD: 96KHz Optical,Coaxial: 192KHz PC USB: PCM768kHz, DSD512 »; « DAC D to A Converter ES9038Q2M »; « Description DAC Design Philosophy and Core Technology ES9038Q2M 32-bit DAC OLED Display Bluetooth 5.1 (aptX / aptX HD) streaming Dedicated Current-Feedback Headphone Amp »; « Output Level (0dBFS, 1kHz) 2.05Vrms (RCA), 4.1Vrms (XLR) »; « Total Harmonic Distortion (THD) < 0.001% (1KHz @ 0dBFS) »; « Signal-to-noise Ratio (S/N) > 115dB ». audiolab.co.uk has no terms-of-use page: its footer links Contact, Support, Warranty, Ethical Standards, PSTI Compliance, a Cookie Policy and a Privacy Policy, with « All Rights Reserved (c) 2026 Audiolab » - the ordinary notice and no prohibition.",
-    "read_on": "2026-11-24"
+    "read_on": "2026-11-25"
   },
   "source_names_subject": true,
   "submitted_by": "curator",

@@ -1,0 +1,34 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://electrocompaniet.no/products/eci-6dx-mkii-integrert-forsterker-dac-streamer",
+    "quote": "Electrocompaniet's own page for the ECI 6DX MKII, read 2026-11-25, section « TEKNISKE SPESIFIKASJONER ECI 6 DX MKII », Digital section: « D/A converter - 24 bit/192 kHz »; « Sample rate converter - 24bit / 192kHz »; « Inputs - SPDIF, 2x Toslink, 1x USB »; « USB: - asynchronous up to 24bit/ 192kHz supported »; « SPDIF: - 24bit/ 192kHz »; « Toslink: - 24bit/ 96kHz ». Streamer section: « 1x Gigabit Ethernet (1000Mbps) »; « 1x USB for external storage »; « Advanced 802.11 AC WiFi with MIMO ». Supported formats: « All popular formats including: WAV/WAVE, MP3, AAC+, Vorbis, ALAC, FLAC, APE, WMA, up to 192kHZ/24bit, DSD, up to DSD 128 (5.6 MHz) ». Streaming: « AirPlay 2 (R) - Spotify (R) Connect - Qobuz (R) - Plays with Audirvana - TIDAL (R) Connect - Roon Ready - DLNA - Internet Radio - Bluetooth streaming from any Bluetooth enabled device ». No converter chip part number, no filter name or count, and no mention of DoP or native DSD appear anywhere on the page.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 192000,
+    "bits": 24,
+    "dsd_max": "DSD128"
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000,
+      "bits": 24
+    }
+  },
+  "_les_conditions_dElectrocompaniet_ont_ete_lues_et_une_correction": "electrocompaniet.no WAS read on 2026-11-25 and carries no clause on copying, reproducing or reusing site content. One correction to an earlier note: a page TITLED « Vilkar for bruk » (terms of use) does exist, at /policies/terms-of-service - but its body is the Norwegian Consumer Authority's standard distance-selling contract, as its own first line says: « Dette kjopet er regulert av de nedenstaende standard salgsbetingelser for forbrukerkjop av varer over Internett. » Its 14 sections were read end to end; none concerns content. The only assertion of rights is the footer « (c)2021 ELECTROCOMPANIET ». robots.txt is « User-agent: * / Allow: / ». So the earlier note's conclusion stands while its premise was wrong: there IS a page by that name, and it is not website terms.",
+  "_le_DSD128_est_ce_que_le_LECTEUR_joue_pas_ce_quune_entree_accepte": "« DSD, up to DSD 128 (5.6 MHz) » appears under « Supported formats » - the streamer's file-playback list - and NEVER in the D/A converter row. On this whole site that is the only DSD figure the maker ever prints, and it always sits there. So `dsd_max` is written on the DEVICE, because the device demonstrably converts DSD128 to analogue when it plays a file, and `inputs.dsd_max` is left absent on every socket, because no socket is given a DSD figure. The maker also states neither native DSD nor DoP anywhere on the site - the words do not appear - so both fields stay absent rather than guessed. This is the storage-versus-input distinction the iBasso report could not even attempt, answerable here only because the maker files the figure under a heading that names which one it means.",
+  "_loptique_plafonne_a_la_MOITIE_du_convertisseur": "« D/A converter - 24 bit/192 kHz » for the device, then « Toslink: - 24bit/ 96kHz » for one of its three sockets. An engine reading the device row alone would send 192 kHz down an input that stops at 96. This is the clearest statement of why `inputs` exists that the catalogue has, and Electrocompaniet prints both shapes on the same page under the same heading - the device figure and the three socket figures, four rows apart.",
+  "_un_port_USB_qui_est_une_entree_et_un_autre_qui_ne_lest_pas": "« 1x USB » under Inputs, rated « asynchronous up to 24bit/ 192kHz supported », and « 1x USB for external storage » under the streamer section. Two USB sockets on one device, one an audio input and one a memory-stick port, distinguished only by which section they appear in. Only the first is recorded. Fifth time this trap has appeared and the first where both kinds sit on the same chassis."
+}

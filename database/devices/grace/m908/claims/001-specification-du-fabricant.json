@@ -3,7 +3,7 @@
     "kind": "datasheet",
     "url": "https://gracedesign.com/products/monitor-controllers/m908/",
     "quote": "Grace Design's own page for the m908, read 2026-11-25. « sample rates of up to 192kHz / 24bit are supported. » - stated once for the device, with no per-connection breakdown and no spec table. Digital inputs: « Standard features include a total of 68 digital input channels via AES3, TOSLINK, S/PDIF, ADAT Lightpipe, and USB2. » and « 16 channel ADAT Lightpipe » as an input. Converter: no part is named; the page says only « Our latest generation AD / DA converters provide incredible dynamic range and resolution », with no D/A dynamic range or THD+N figure. Filtering: « 64-bit fixed-point filters for room correction and bass management ». No DSD figure appears anywhere.",
-    "read_on": "2026-11-24"
+    "read_on": "2026-11-25"
   },
   "source_names_subject": true,
   "submitted_by": "curator",

@@ -3,7 +3,7 @@
     "kind": "datasheet",
     "url": "https://motu.com/en-us/products/m-series/m4/",
     "quote": "MOTU's own page for the M4, read 2026-11-25. « 44.1 to 192 kHz sample rates » (FEATURE HIGHLIGHTS), stated once for the device with no bit depth and no per-connection breakdown. Converter: « Equipped with the same ESS Sabre32 Ultra(TM) DAC Technology found in audio interfaces costing thousands, the M4 delivers an astonishing 120 dB Dynamic Range on its main outputs. »; « 120 dB dynamic range on output ». Also « -129 dBu EIN on mic inputs », which is the microphone preamplifier and not the D/A path. No DSD figure, no digital filter row, no ADAT.",
-    "read_on": "2026-11-24"
+    "read_on": "2026-11-25"
   },
   "source_names_subject": true,
   "submitted_by": "curator",

@@ -1,0 +1,30 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.xduoo.net/product/xd05t",
+    "quote": "xDuoo's own page for the XD05T on its English site, read 2026-11-25. « Input Interface  USB, optical, coaxial and Bluetooth inputs »; « Sampling Rate  PCM 768kHz / DSD512 »; « Output Power  1500mW ». Key Features: « USB playback reaches PCM 32-bit/768kHz. » « USB playback includes DSD512 and MQA. » Chip: « Dual ES9039Q2M ». No digital filter is named or counted, no oversampling bypass or NOS mode is mentioned, and DoP is not mentioned.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "family": "ess_sabre",
+    "chip": "« Dual ES9039Q2M »."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512"
+    },
+    "spdif_coax": {},
+    "spdif_optical": {},
+    "bluetooth": {}
+  },
+  "_la_source_est_le_site_ANGLAIS_dont_les_conditions_ont_ete_lues": "Every xDuoo record is sourced to xduoo.net, whose /terms page was read in full on 2026-11-25 and forbids nothing beyond misuse of the site itself: « Do not misuse the website, interfere with its operation or attempt unauthorized access to website or customer information. » The maker's Chinese site, xduoo.com, publishes no terms page at all AND publishes every specification as a JPEG image, so nothing is taken from it. See the brand file for both findings in full.",
+  "_pourquoi_native_dsd_nest_PAS_ecrit_ici": "The page carries a sentence of the form « DSD512 support enables native high-resolution music playback », and so do more than twenty other xduoo.net pages, word for word, including a passive R2R module and a portable player. It is generated template text. A claim made identically about twenty different products is a claim about none of them, so `native_dsd` is absent on every xDuoo record despite the word appearing on nearly all of them."
+}

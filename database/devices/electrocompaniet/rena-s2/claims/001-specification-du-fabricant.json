@@ -1,0 +1,24 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://electrocompaniet.no/products/rena-s2-tradlos-streamer",
+    "quote": "Electrocompaniet's own page for the RENA S2, read 2026-11-25. « DAC - DAC 192kHz/24bit - 32-bit floating-point DSP »; « CONNECTIONS - 1 x USB for external storage - 2 x Optical input - 1 x COAX input - 1 x Gigabit Ethernet (1000Mbps) - 1 x Combined line out+optical out - 1 x DC input »; « WIRELESS CONNECTIONS - Advanced 802.11 AC WiFi with MIMO - WiSA 96 kHz/24bit wireless speaker connection ». « SUPPORTED FORMATS: - All popular formats including: WAV/WAVE, MP3, AAC+, Vorbis, ALAC, FLAC, APE, WMA, up to 192kHZ/24bit, DSD, up to DSD 128 (5.6 MHz) ». No per-input ceiling is given for any socket, no converter chip part number, no filter name or count, and neither DoP nor native DSD is mentioned.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 192000,
+    "bits": 24,
+    "dsd_max": "DSD128"
+  },
+  "inputs": {
+    "spdif_optical": {},
+    "spdif_coax": {}
+  },
+  "_les_conditions_dElectrocompaniet_ont_ete_lues_et_une_correction": "electrocompaniet.no WAS read on 2026-11-25 and carries no clause on copying, reproducing or reusing site content. One correction to an earlier note: a page TITLED « Vilkar for bruk » (terms of use) does exist, at /policies/terms-of-service - but its body is the Norwegian Consumer Authority's standard distance-selling contract, as its own first line says: « Dette kjopet er regulert av de nedenstaende standard salgsbetingelser for forbrukerkjop av varer over Internett. » Its 14 sections were read end to end; none concerns content. The only assertion of rights is the footer « (c)2021 ELECTROCOMPANIET ». robots.txt is « User-agent: * / Allow: / ». So the earlier note's conclusion stands while its premise was wrong: there IS a page by that name, and it is not website terms.",
+  "_le_DSD128_est_ce_que_le_LECTEUR_joue_pas_ce_quune_entree_accepte": "« DSD, up to DSD 128 (5.6 MHz) » appears under « Supported formats » - the streamer's file-playback list - and NEVER in the D/A converter row. On this whole site that is the only DSD figure the maker ever prints, and it always sits there. So `dsd_max` is written on the DEVICE, because the device demonstrably converts DSD128 to analogue when it plays a file, and `inputs.dsd_max` is left absent on every socket, because no socket is given a DSD figure. The maker also states neither native DSD nor DoP anywhere on the site - the words do not appear - so both fields stay absent rather than guessed. This is the storage-versus-input distinction the iBasso report could not even attempt, answerable here only because the maker files the figure under a heading that names which one it means.",
+  "_le_32_bits_est_la_LONGUEUR_DE_MOT_DU_DSP_pas_la_profondeur_du_convertisseur": "The page prints two adjacent bullets: « DAC 192kHz/24bit » and « 32-bit floating-point DSP ». Fusing them into 32-bit/192 kHz is the obvious error and it would be wrong: the 32 is the DSP's internal arithmetic width, the converter's stated depth is 24, and the maker put them on separate lines. `bits` is 24. Second shape of the same trap in one day, after Musical Fidelity's V90-DAC wrote a rate range as « 32-bit/192 kHz » - different mechanism, identical consequence, and both caught only because the true depth was printed beside the false one.",
+  "_un_chiffre_dappareil_et_aucun_par_entree": "« DAC 192kHz/24bit » is given once for the device and no socket carries a figure of its own. So every entry in `inputs` here records only that the socket EXISTS, with no ceiling - which is the honest state and not a gap to be filled from the device row. The ECI 6DX MKII, from the same maker, proves why it must not be: there the optical socket stops at half the device figure."
+}

@@ -1,0 +1,50 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "http://www.audio-gd.com/R2R/R1NOS/R1NOSEN.htm",
+    "quote": "Audio-gd's own pages for the R-1 NOS, read 2026-11-25. « What's new in R-1 NOS: Some people love the sound of the pure NOS mode , so we design the R-1 NOS that optimize the pure NOS mode , offer the pure musical sound . The NOS design don't need the main clock signal for working, that is the advantage of the NOS design to avoid the effect by the main clock's jitter . In the R-1 NOS digital processor , we apply the zero delay technology that guarantee the data and clock exact synchronization for much reduce the jitter . »; « Therefore if you want good specs, the NOS design definitely is not for you. »; « \"NOS\" stands for \"Non Oversampling\". »; « 8 group built-in 24bit R-2R decoders and 4 native DSD decoders work with balanced mode , we apply the DA 7 modules ». Manual: « Note that this product does not require the source MCLK signal but if present, it will simply be discarded. » and « Please not: The R-1 NOS had built in fully dedicated discrete R-2R resistor ladders DA modules. » The manual lists NO OS/NOS selector at all. Spec rows: « Support Sampling | USB & IIS : 44.1kHz - 384kHz /32Bit DSD64-512 / Coaxial mode: 44.1, 48, 88.2, 96,192kHz »; « S/N Ratio | >110DB »; « THD+N | <0.03% ». Inputs: « Input 1: USB input. » « Input 2: HDMI-IIS input. » « Input 3: RCA - coaxial input. »",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "r2r_ladder",
+    "technology": "r2r",
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "correctable": true,
+    "chip": "« 8 group built-in 24bit R-2R decoders and 4 native DSD decoders work with balanced mode », on DA-7 modules. Note the ladder's own depth: 24 bit, while the inputs accept 32.",
+    "device_settings": [
+      {
+        "setting": "Oversampling",
+        "set_to": "none (by construction)",
+        "why": "There is NO OS/NOS selector in this model's manual, and the maker says why: it « only built in the optimize NOS mode ». So non-oversampling is not a setting here, it is the device. Same state as the MHDT Labs range and the LampizatOr Pacific 5, reached a third way: not by having no filter to begin with, but by a maker deleting the oversampling its own sibling offers."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "dsd_max": "DSD512"
+    },
+    "i2s": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "dsd_max": "DSD512"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000
+    }
+  },
+  "_conditions_NON_CONCLUANTES_chez_Audio_gd": "No terms page found on audio-gd.com, so no prohibition could be checked - which is NOT the same as finding no prohibition. Measured 2026-11-25: the English navigation has seven items (Home, Products, Warranty, Shop, Contact Us, Shipment, Chinese) and no legal link; terms.htm, legal.htm, Copyright.htm and Privacy.htm all 404; Warranty-EN.htm was read in full and is a repair-and-shipping policy with no clause on content. There is no robots.txt (404). Every page carries the same footer, quoted as printed: « Copyright(C) 2004 www.audio-gd.com All Rights Reserved » - a bare reservation that states no prohibition on quoting. Same reading as Burson, Mytek and MHDT Labs: recorded because nothing forbidding was found, with the quality of the check recorded beside it.",
+  "_NOS_chez_Audio_gd_veut_dire_NON_SUR_ECHANTILLONNE_et_cest_PROUVE": "109 pages of this site were searched for « New Old Stock » and « N.O.S. »: ZERO hits. And one page defines the term outright: « In the 1970'S, the first generation of CDP were released , and they used an NOS design . \"NOS\" stands for \"Non Oversampling\". Using a NOS design, specs are ordinary because the limited signal bit depth affects THD and S/N. » The valve products are where the other meaning would have appeared and it does not - the Vacuum HE-1 MK3's pages contain no occurrence of NOS at all. So vocabulary/nos-means-two-things.json is settled for this maker in the direction the catalogue cares about, and the three models carrying NOS in their NAME - R-1 NOS, R-28 NOS, NOS-1704, plus the NOS 7 / 11 / 19 line - are non-oversampling designs, not valve-stock marketing.",
+  "_lechelle_de_VOLUME_nest_pas_le_convertisseur": "Audio-gd's volume controls are relay-switched resistor attenuators and the maker never calls them ladders: the wording is « a four channels digital control relays based volume control, through changing the tolerance 0.05% resistors to control the volume ». No page on this site conflates that with its R-2R converter, which is the trap that cost a withdrawn claim on another brand. ACSS is likewise not a digital input: it appears only under Output Level, as « 2+2MA (ACSS) », and as an ANALOGUE input on the amplifiers.",
+  "_les_chiffres_publies_sont_ceux_du_mode_8x_pas_du_mode_NOS": "Every spec table on this site is headed « Specifications tested by OS8 mode » - the published S/N and THD figures are measured with 8x oversampling running, not in the non-oversampling mode this record's `correctable` depends on. The maker is explicit about the cost: on the R-1 NOS page, « if you want good specs, the NOS design definitely is not for you. » So the numbers and the mode that matters to an upsampling engine describe two different states of the same device, and no measurement is carried into this record.",
+  "_le_NOS_na_pas_besoin_dhorloge_maitre_et_le_fabricant_lexplique": "« The NOS design don't need the main clock signal for working, that is the advantage of the NOS design to avoid the effect by the main clock's jitter » - and the manual adds « Note that this product does not require the source MCLK signal but if present, it will simply be discarded. » That is a mechanism, not a slogan: with no interpolation there is nothing to clock, so the source's jitter cannot reach the conversion. The best argument for `correctable` anywhere in this catalogue, written by a maker who also warns that the measured numbers get worse for it.",
+  "_le_prix_du_NOS_est_chiffre_par_le_fabricant_lui_meme": "« THD+N | <0.03% » here against « <0.01% » on the oversampling sibling, and the page says plainly « if you want good specs, the NOS design definitely is not for you. » A maker publishing the cost of its own design choice, in the same number, on two models that differ only in that choice. For a catalogue whose purpose is to tell an engine when NOT to resample, this pair is the clearest evidence that the trade-off is real and chosen.",
+  "_la_profondeur_de_lechelle_est_24_bits_et_lentree_en_prend_32": "« 8 group built-in 24bit R-2R decoders » while « USB & IIS : 44.1kHz - 384kHz /32Bit ». Eight bits are discarded between the socket and the ladder. `bits` is 32, what the device accepts, and the 24 lives in `chip` - the same split as the MHDT Orchid's 16-bit TDA1541A and the Soekris ladders. Fourth record in the catalogue where a maker publishes both numbers."
+}

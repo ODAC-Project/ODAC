@@ -3,7 +3,7 @@
     "kind": "datasheet",
     "url": "https://gracedesign.com/products/monitor-controllers/m905/",
     "quote": "Grace Design's own page for the m905, read 2026-11-25. « USB Supported Sample Rates »: « 44.1, 48, 88.2, 96, 176.4, 192kHz, DSD64 2.8224MHz, DSD128 5.6448MHz ». Features: « Asynchronous Class 2 USB playback supports up to 24 bit/192kHz ». On DSD transport: « DSD128 5.6448MHz via DoP v1.1 » from the AES3, S/PDIF or USB inputs. « Input Lock Range » lists AES3 and S/PDIF up to « 192kHz +/-2000Hz » - a lock range, not a stated maximum. ADAT: « ADAT (selectable in 4 pairs, or 2 pairs in S/MUX) », with lock-range rows « 8 Channels at 44.1kHz and 48kHz » and « 4 Channels at 88.2kHz and 96kHz (s/mux) »; also « transfer up to 10 channels of digital audio (8-channels of ADAT and two of AES3, or S/PDIF or TOSLINK) over USB ». Under « Digital To Analog Converter Fixed Outputs »: « THD+N 1kHz, -1dBFS, (0dBFS = +20dBu), 20-22kHz bandwidth 0.0006% »; « 20-22kHz bandwidth, 0dBFS = +20dBu (AES17 filter) 117dB »; « 20-22kHz bandwidth, 0dBFS = +20dBu (A-weighted) 119dB ». The analogue I/O path is measured separately: « Dynamic Range 20-22kHz bandwidth 118 dB » and « 121 dB » A-weighted. No DAC chip is named. Features: « Mastering quality DAC circuitry with configurable de-emphasis filtering ». gracedesign.com has no terms-of-use page linked from its home page or from the m900, m905 or m908 pages; the only legal text is the footer « Copyright All Rights Reserved (c) 2022 Grace Design ».",
-    "read_on": "2026-11-24"
+    "read_on": "2026-11-25"
   },
   "source_names_subject": true,
   "submitted_by": "curator",

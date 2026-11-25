@@ -1,0 +1,30 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.xduoo.net/product/xd05-pro",
+    "quote": "xDuoo's own page for the XD05 PRO on its English site, read 2026-11-25. Hero chip row: « modular DAC card ». Technical Data: « Input Interface  USB, optical, coaxial and Bluetooth inputs »; « Sampling Rate  PCM 768kHz / DSD512 »; « Output Power  2000mW ». FAQ gives the converter as « Modular DAC » with no part number. Key Features: « USB playback reaches PCM 32-bit/768kHz. » « USB playback includes DSD512 and MQA. ». No digital filter is NAMED, no oversampling bypass and no non-oversampling mode is mentioned, and DoP is not mentioned - across this maker's whole catalogue DoP appears on one page only, the LINK10.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "chip": "« Modular DAC » - the page names no part. This chassis takes the same four swappable cards as the TA-32 (ES9039SPRO, AK4499EX, BD34301, discrete R2R), so neither `chip` nor `family` can be stated for the device at all: both depend on what is fitted. Absent rather than unknown, because the question has an answer and it is per unit."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512"
+    },
+    "spdif_coax": {},
+    "spdif_optical": {},
+    "bluetooth": {}
+  },
+  "_la_source_est_le_site_ANGLAIS_dont_les_conditions_ont_ete_lues": "Every xDuoo record is sourced to xduoo.net, whose /terms page was read in full on 2026-11-25 and forbids nothing beyond misuse of the site itself: « Do not misuse the website, interfere with its operation or attempt unauthorized access to website or customer information. » The maker's Chinese site, xduoo.com, publishes no terms page at all AND publishes every specification as a JPEG image, so nothing is taken from it. See the brand file for both findings in full.",
+  "_pourquoi_native_dsd_nest_PAS_ecrit_ici": "The page carries a sentence of the form « DSD512 support enables native high-resolution music playback », and so do more than twenty other xduoo.net pages, word for word, including a passive R2R module and a portable player. It is generated template text. A claim made identically about twenty different products is a claim about none of them, so `native_dsd` is absent on every xDuoo record despite the word appearing on nearly all of them.",
+  "_un_appareil_dont_la_famille_de_puce_ne_peut_PAS_etre_remplie": "Four converter cards fit this chassis and the page names none as shipped. So `family` is left absent, which is the first record in the catalogue where that field is empty not through ignorance but because the device has no single answer. The TA-32 at least names the card it ships with."
+}

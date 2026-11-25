@@ -1,0 +1,39 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "http://www.audio-gd.com/HE/HE27/HE27EN_Specs.htm",
+    "quote": "Audio-gd's SPEC page for the HE-27, read 2026-11-25 - a separate file from the product page. « Support Sampling | USB & IIS : 44.1kHz - 384kHz /32Bit DSD64-512 / AES/EBU and Coaxial mode: 44.1kHz - 192kHz / Optical mode: 44.1kHz - 96kHz ». Six inputs: AES, BNC coaxial, RCA coaxial, optical, HDMI-IIS, USB.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD512"
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "dsd_max": "DSD512"
+    },
+    "i2s": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "dsd_max": "DSD512"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000
+    }
+  },
+  "_conditions_NON_CONCLUANTES_chez_Audio_gd": "No terms page found on audio-gd.com, so no prohibition could be checked - which is NOT the same as finding no prohibition. See the R-1 MK3 record for the full measurement; the only assertion of rights anywhere is the footer « Copyright(C) 2004 www.audio-gd.com All Rights Reserved ».",
+  "_lautre_moitie_du_desaccord": "« USB & IIS : 44.1kHz - 384kHz /32Bit DSD64-512 » - the spec table claims DSD up to DSD512 on a device whose own product page says the converter chip cannot do DSD at all. Claim 001 carries that other half. Both are the maker's words, published the same day on two files of the same site, at the same source weight, so nothing in the catalogue can choose between them - and that is the honest outcome. A reader asking whether to send DSD to an HE-27 will see two answers and know that the maker gave both."
+}

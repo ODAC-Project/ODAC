@@ -1,0 +1,33 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.xduoo.net/product/ta-32",
+    "quote": "xDuoo's own page for the TA-32 on its English site, read 2026-11-25. Hero chip row: « BD34301EKV XMOS XU316 3000mW PCM 768kHz ». Technical Data: « Input Interface  USB, coaxial, optical, AES, Bluetooth, RCA AUX IN, XLR balanced input »; « USB System  XMOS XU316 »; « Headphone Output  6.35mm single-ended, 4.4mm balanced, 4-pin XLR balanced »; « Sampling Rate  USB PCM up to 32-bit/768kHz, DSD512 and MQA »; « Output Power  Balanced 3000mW at 32ohm; single-ended 2300mW at 32ohm ». Key Features: « ROHM conversion arrives on a replaceable xDuoo DAC module, allowing the digital character of the system to evolve. » « XMOS XU316 processing supports PCM 768kHz, DSD512 and MQA from compatible USB sources. » FAQ: « What core audio architecture is confirmed? - Replaceable ROHM BD34301EKV xDuoo DAC module ». No digital filter is NAMED, no oversampling bypass and no non-oversampling mode is mentioned, and DoP is not mentioned - across this maker's whole catalogue DoP appears on one page only, the LINK10.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "family": "rohm",
+    "chip": "« Replaceable ROHM BD34301EKV xDuoo DAC module ». The converter is a SWAPPABLE CARD, and the maker sells four of them - ES9039SPRO, AK4499EX, BD34301 and a discrete R2R - so this `chip` value and this `family` describe the card the unit ships with, not the unit."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512"
+    },
+    "aes_ebu": {},
+    "spdif_coax": {},
+    "spdif_optical": {},
+    "bluetooth": {}
+  },
+  "_la_source_est_le_site_ANGLAIS_dont_les_conditions_ont_ete_lues": "Every xDuoo record is sourced to xduoo.net, whose /terms page was read in full on 2026-11-25 and forbids nothing beyond misuse of the site itself: « Do not misuse the website, interfere with its operation or attempt unauthorized access to website or customer information. » The maker's Chinese site, xduoo.com, publishes no terms page at all AND publishes every specification as a JPEG image, so nothing is taken from it. See the brand file for both findings in full.",
+  "_pourquoi_native_dsd_nest_PAS_ecrit_ici": "The page carries a sentence of the form « DSD512 support enables native high-resolution music playback », and so do more than twenty other xduoo.net pages, word for word, including a passive R2R module and a portable player. It is generated template text. A claim made identically about twenty different products is a claim about none of them, so `native_dsd` is absent on every xDuoo record despite the word appearing on nearly all of them.",
+  "_la_SEULE_entree_AES_de_tout_le_catalogue_xDuoo_et_son_plafond_manque": "« AES » appears in the Input Interface row of this model and of no other xDuoo product. It is the flagship, it has five digital inputs, and the only ceiling the page publishes is the USB one - so the AES socket's figure is the most conspicuous absence in this whole harvest. inputs.aes_ebu records that the socket exists and nothing more; the interface's own conservative policy will supply 192 kHz / 24 bit to a consumer, which may well understate a flagship.",
+  "_un_convertisseur_quon_change_rend_la_famille_provisoire": "A record whose `chip` and `family` can be altered by the owner with a screwdriver is a different kind of record. Four cards exist for this chassis and they are ESS, AKM, ROHM and discrete R2R - four families for one device. The catalogue has no way to say « this depends on a module », so the shipped card is recorded and this gloss is the only warning. Only the R2R card's own page states anything of its own behaviour: DSD512, and no PCM figure at all."
+}

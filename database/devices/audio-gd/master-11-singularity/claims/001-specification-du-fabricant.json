@@ -1,0 +1,51 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "http://www.audio-gd.com/Master/Master11Singularity/Singularity%2011EN.htm",
+    "quote": "Audio-gd's own pages for the Master 11 Singularity, read 2026-11-25. Per-input list, verbatim: « IN1 BNC coaxial input, support up to 24bit / 192KHz . IN2 RCA coaxial input, support up to 24bit / 192KHz . IN3 RCA coaxial input, support up to 24bit / 192KHz . IN4 Optical input, support up to 24bit / 192KHz .(note 1) IN5 IIS input, support up to 32bit / 384KHz .(note 2) IN6 USB input, support up to 32bit / 384KHz . IN7 : XLR analog input. IN8 : RCA analog input. IN9 : RCA analog input. » Summary: « The SPDIF inputs can support up to 24Bit / 192KHz ,and the USB, IIS inputs support up to 32Bit / 384KHz .Cause by the PCM1704 support up to 1536KHz sampling, so the 192KHz or lower sampling can working between NOS to 8x times oversampling, over 192KHz will working with 4x times oversampling auto, or by the users setting between NOS to 4x times oversampling . » Also: « User setting between NOS,2x,4x and 8x Oversampling Built in 4 PCs top grade R-2R PCM1704UK 32bit / 384K »; « Since 15th May, the Master 11 Singularity had update the firmware to include the NOS 11 firmware in one unit. Users can select the unit working as NOS 11 model or original Master 11 Singularity model . » Spec row: « Support Sampling | USB / I2S mode: 44.1kHz - 384kHz /32Bit / Coaxial mode: 44.1kHz - 192kHz /24Bit / Optical mode: 44.1kHz - 192kHz /24Bit » - no DSD row.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ti_burr_brown",
+    "technology": "r2r",
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "none",
+    "correctable": true,
+    "chip": "PCM1704UK, and the page gives three irreconcilable counts of them - see the gloss. « 2 top-notch Accusilicon » clocks at 90 and 98 MHz.",
+    "device_settings": [
+      {
+        "setting": "OS / NOS mode",
+        "set_to": "NOS, at 192 kHz or below ONLY",
+        "why": "« the 192KHz or lower sampling can working between NOS to 8x times oversampling, over 192KHz will working with 4x times oversampling auto, or by the users setting between NOS to 4x times oversampling ». Non-oversampling is reachable only at or under 192 kHz; above it the device forces at least 4x, whatever the user asks. So `correctable` is true with a rate condition no field can hold - the only record in the catalogue where the state depends on what you send."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32
+    },
+    "i2s": {
+      "pcm_max_hz": 384000,
+      "bits": 32
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_conditions_NON_CONCLUANTES_chez_Audio_gd": "No terms page found on audio-gd.com, so no prohibition could be checked - which is NOT the same as finding no prohibition. See the R-1 MK3 record for the full measurement; the only assertion of rights anywhere is the footer « Copyright(C) 2004 www.audio-gd.com All Rights Reserved ».",
+  "_NOS_ici_veut_dire_NON_SUR_ECHANTILLONNE_et_cest_PROUVE": "109 pages of this site were searched for « New Old Stock » and « N.O.S. »: zero hits, and one page defines the term - « \"NOS\" stands for \"Non Oversampling\". » So the models carrying NOS in their name are non-oversampling designs, not valve stock.",
+  "_une_puce_en_echelle_nest_pas_une_echelle_discrete": "The PCM1704UK is a Burr-Brown R-2R ladder in a package - a ladder converter, but a CHIP, not the discrete resistor networks of this maker's R-series. `family` is ti_burr_brown and `technology` is r2r, which is the one combination in the catalogue where those two fields disagree in spirit and are both correct. Kept apart from the R-series deliberately: a consumer choosing on `technology` alone would see no difference between a PCM1704 and eight hand-matched resistor groups.",
+  "_envoyer_384_kHz_ici_FORCE_le_sur_echantillonnage": "« over 192KHz will working with 4x times oversampling auto ». This is the single most actionable sentence Audio-gd publishes. An engine that upsamples to 384 kHz to be kind to this device destroys the very thing that makes it worth owning: at 384 it cannot run non-oversampled, at 192 it can. The right move is to send it LESS. No other maker in the catalogue states a rate above which its non-oversampling mode stops existing, and `correctable` being a plain boolean cannot express it - which is an argument for a field that can.",
+  "_trois_comptes_de_puces_inconciliables_sur_une_page": "« Built in 4 PCs top grade R-2R PCM1704UK » in the headline; « Applies the 4 Pieces Expensive high-end grade PCM1704UK, which is the top grade R-2R chips, every channel had built in 4 pcs , every 2 pcs in parallel » in the body; and, in the same paragraph, « In my particular design, all 8 pcs PCM1704 are working for outputs, even just connect the RCA outputs . » Four, four per channel, and eight in total cannot all be the count. None is picked: `chip` names the part and points here.",
+  "_un_appareil_qui_peut_se_transformer_en_un_autre_modele": "« Users can select the unit working as NOS 11 model or original Master 11 Singularity model . » A firmware setting that makes this device behave as a different product in the same catalogue, which the schema has no way to express: two records, one chassis, and no link between them but this sentence."
+}

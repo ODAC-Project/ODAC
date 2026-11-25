@@ -3,7 +3,7 @@
     "kind": "datasheet",
     "url": "https://nuprimeaudio.com/product/dac-10h/",
     "quote": "NuPrime's own page for the DAC-10H, read 2026-11-25: « USB Sampling Rates: 44.1KHz, 48KHz, 88.2KHz, 96KHz, 176.4KHz, 192KHz, 352.8KHz, 384KHz and DSD 2.8MHz (DSD64) , 5.6MHz (DSD128) 11.2MHz (DSD256) »; « S/PDIF Sampling Rates: 44.1KHz, 48KHz, 88.2KHz, 96, 176.4KHz, 192KHz » - the bare « 96 » is the page's; « Maximum Sampling Rate: 24-bits »; « Bit Resolution: 16-24-bits »; « Optical (up to 24 bit/192 kHz) », which is an OUTPUT; « Supports DSD native playback by ASIO2.1 (up to 11.2MHz) and DoP (up to 5.6MHz) method. » Converter: « SABRE32 Reference ES9018K2M from ESS Technology is one of the world's best-performing 32-bit audio DAC solution ». A volume row reads « Advanced, thin-film switched-resistor ladder network for controlling volume ». No digital filter, oversampling or NOS row.",
-    "read_on": "2026-11-24"
+    "read_on": "2026-11-25"
   },
   "source_names_subject": true,
   "submitted_by": "curator",

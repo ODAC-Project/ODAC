@@ -3,7 +3,7 @@
     "kind": "datasheet",
     "url": "https://www.musicalfidelity.com/products/mxseries/mx-dac",
     "quote": "Musical Fidelity's own page for the MX-DAC, read 2026-11-25. Specifications tab: « Sample rate converter: SRC4392 up-sampling data to 192kHz »; « Digital to Analogue converter: PCM1795 32 bit / 192kHz Multi-bit Sigma-Delta type »; « Coaxial Inputs: S/PDIF up to 24 bit / 192kHz »; « Optical Inputs: S/PDIF up to 24 bit / 192kHz »; « 2x RCA coaxial connector SPDIF 32-192kHz (16-24 bit stereo PCM) »; « 2x TOSLINK optical connector 32-192kHz »; « 1x USB type 'B' connector / Asynchronous data stream at up to 24-bit/192kHz PCM as well as DSD64 and DSD128 (Determined by source file/computer settings) »; « PCM THD: <0.002% »; « DSD THD: <0.003% ». Overview tab: « The MX DAC has inputs for: 2 x coax (up to 24bit 192 kHz PCM), 2 x optical (up to 24bit 192kHz PCM) and asynchronous USB up to 24bit 192 kHz PCM as well as DSD 64 and DSD 128. »; « all inputs whether from coax, optical or USB, are processed in the DSD domain »; « All inputs processed and converted in DSD domain ». Design and Build tab: « The MX DAC has inputs for: 2 x optical (up to 24 bit 96 kHz), 2 x COAX (up to 24 bit 192 kHz) and USB up to 24 bit 192 kHz asynchronous. »",
-    "read_on": "2026-11-24"
+    "read_on": "2026-11-25"
   },
   "source_names_subject": true,
   "submitted_by": "curator",

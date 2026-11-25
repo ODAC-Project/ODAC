@@ -1,0 +1,49 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "http://www.audio-gd.com/Pro/NOS/NOS11/NOS11EN.htm",
+    "quote": "Audio-gd's own pages for the NOS 11, read 2026-11-25 - the product page plus its sibling spec file. Per-input list, verbatim: « IN1: Optical input, up to 24bit / 96KHz support . IN2: coaxial input, up to 24bit / 192KHz support . IN3, Coaxial input, up to 24bit / 192KHz support . IN4, BNC input , up to 24bit / 96KHz support . IN5 , I2S input, ,up to 32bit / 384KHz support . IN6 , USB input, ,up to 32bit / 384KHz support . »; « 6 digital inputs: Optical / RCA coaxial / RCA coaxial / BNC coaxial / I2S / USB »; « Built in 4 Pieces Hi-grade PCM1704UK Chips »; « Applies the 4 Pieces Expensive high-end grade PCM1704UK which can support up to 32Bit/384KHz input . »; « Supports up to 768KHz 32bit / 384K Asynchronous Transfer Amanero combo384 ». Spec row: « Support sampling | USB / I2S mode: 44.1kHz, 48kHz, 88.2kHz, 96kHz, 176.4kHz , 192kHz,352kHz,384kHz / BNC mode: 44.1kHz, 48kHz, 88.2kHz, 96kHz / Coaxial mode: 44.1kHz, 48kHz, 88.2kHz, 96kHz ,192kHz / Optical mode: 44.1kHz, 48kHz, 88.2kHz, 96kHz » - no DSD row. The -6 dB/oct passive analogue filter and two-NOS-mode text is the same as the NOS 7's.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ti_burr_brown",
+    "technology": "r2r",
+    "dsd_max": "none",
+    "correctable": true,
+    "device_settings": [
+      {
+        "setting": "Oversampling",
+        "set_to": "NOS (non-oversampling)",
+        "why": "The whole NOS line is built around it: « applied -6db /oct passive analog filter , you can hear the wonderful sound of the NOS » - the maker names what is left in the path when the digital filter is gone, which is the precondition `correctable` requires."
+      }
+    ],
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "chip": "« Built in 4 Pieces Hi-grade PCM1704UK Chips »."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32
+    },
+    "i2s": {
+      "pcm_max_hz": 384000,
+      "bits": 32
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000,
+      "bits": 24
+    }
+  },
+  "_conditions_NON_CONCLUANTES_chez_Audio_gd": "No terms page found on audio-gd.com, so no prohibition could be checked - which is NOT the same as finding no prohibition. See the R-1 MK3 record for the full measurement; the only assertion of rights anywhere is the footer « Copyright(C) 2004 www.audio-gd.com All Rights Reserved ».",
+  "_NOS_ici_veut_dire_NON_SUR_ECHANTILLONNE_et_cest_PROUVE": "109 pages of this site were searched for « New Old Stock » and « N.O.S. »: zero hits, and one page defines the term - « \"NOS\" stands for \"Non Oversampling\". » So the models carrying NOS in their name are non-oversampling designs, not valve stock.",
+  "_une_puce_en_echelle_nest_pas_une_echelle_discrete": "The PCM1704UK is a Burr-Brown R-2R ladder in a package - a ladder converter, but a CHIP, not the discrete resistor networks of this maker's R-series. `family` is ti_burr_brown and `technology` is r2r, which is the one combination in the catalogue where those two fields disagree in spirit and are both correct. Kept apart from the R-series deliberately: a consumer choosing on `technology` alone would see no difference between a PCM1704 and eight hand-matched resistor groups.",
+  "_le_BNC_a_96_et_le_RCA_a_192_confirme_DEUX_fois": "« IN4, BNC input , up to 24bit / 96KHz support » against « IN2: coaxial input, up to 24bit / 192KHz support » - and the spec table says it again, « BNC mode: ... 96kHz / Coaxial mode: ... 192kHz ». Stated twice, in two formats, on one product. So the Master 7's odd BNC ceiling was not a typo: it is this maker's design, and a BNC socket here is HALF the rate of the RCA beside it. One S/PDIF key in the schema cannot hold two ceilings; 192000 is recorded and the BNC's 96 survives in this gloss alone. The strongest argument yet for splitting coaxial into its two connector forms."
+}

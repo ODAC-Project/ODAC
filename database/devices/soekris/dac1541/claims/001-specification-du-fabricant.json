@@ -3,7 +3,7 @@
     "kind": "datasheet",
     "url": "https://soekris.dk/dac1541.html",
     "quote": "Soekris Engineering's own page for the dac1541, read 2026-11-25. The page states « The dac1541 is now discontinued ». On the ladder: « It have the fantastic clean and natural sound of a 27 bit R-2R sign magnitude DAC, built with over four hundred tiny and ultra precise thin film resistors. » Inputs: « SPDIF / AES / Toslink Inputs Up to 24 bit / 192 Khz »; « USB Input PCM Up to 24 Bit / 384 Ksps »; « USB Input DSD Up to DoP-128 and DSD-256 ». Filters: « with a set of selectable advanced digital filters ». The word NOS appears nowhere on the page.",
-    "read_on": "2026-11-24"
+    "read_on": "2026-11-25"
   },
   "source_names_subject": true,
   "submitted_by": "curator",

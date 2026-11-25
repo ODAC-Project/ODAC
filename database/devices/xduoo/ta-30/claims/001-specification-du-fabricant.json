@@ -1,0 +1,39 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.xduoo.net/product/ta-30",
+    "quote": "xDuoo's own page for the TA-30 on its English site, read 2026-11-25. Hero chip row: « ES9038Q2M 5Z3P + ECC82 3000mW PCM 768kHz ». Technical Data: « Input Interface  USB, coaxial, optical, Bluetooth, RCA AUX IN »; « USB System  XMOS XU208 »; « Sampling Rate  USB PCM up to 32-bit/768kHz; DSD512 »; « Output Power  3000mW at 32ohm load »; « Frequency Response  Digital 20Hz-20kHz (+/-0.5dB); amplifier 10Hz-100kHz (+/-0.5dB) ». Key Features: « ESS conversion and selectable PCM/DSD filters provide a precise foundation for desktop listening. » « XMOS XU208 processing supports computer playback up to PCM 768kHz and DSD512. ». No digital filter is NAMED, no oversampling bypass and no non-oversampling mode is mentioned, and DoP is not mentioned - across this maker's whole catalogue DoP appears on one page only, the LINK10.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "family": "ess_sabre",
+    "chip": "« ES9038Q2M », with « XMOS XU208 » as the USB receiver, and a valve output stage named « 5Z3P + ECC82 ».",
+    "device_settings": [
+      {
+        "setting": "PCM/DSD filter",
+        "set_to": "unknown",
+        "why": "« selectable PCM/DSD filters » - the maker says they are selectable, names none and counts none. This is one of only TWO filter mentions in xDuoo's entire catalogue, the other being the Link2 Max's « five filters ». Eleventh maker in four days to publish the existence of a filter menu and withhold its contents."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512"
+    },
+    "spdif_coax": {},
+    "spdif_optical": {},
+    "bluetooth": {}
+  },
+  "_la_source_est_le_site_ANGLAIS_dont_les_conditions_ont_ete_lues": "Every xDuoo record is sourced to xduoo.net, whose /terms page was read in full on 2026-11-25 and forbids nothing beyond misuse of the site itself: « Do not misuse the website, interfere with its operation or attempt unauthorized access to website or customer information. » The maker's Chinese site, xduoo.com, publishes no terms page at all AND publishes every specification as a JPEG image, so nothing is taken from it. See the brand file for both findings in full.",
+  "_pourquoi_native_dsd_nest_PAS_ecrit_ici": "The page carries a sentence of the form « DSD512 support enables native high-resolution music playback », and so do more than twenty other xduoo.net pages, word for word, including a passive R2R module and a portable player. It is generated template text. A claim made identically about twenty different products is a claim about none of them, so `native_dsd` is absent on every xDuoo record despite the word appearing on nearly all of them.",
+  "_une_reponse_en_frequence_coupee_en_deux_par_le_fabricant": "« Frequency Response  Digital 20Hz-20kHz (+/-0.5dB); amplifier 10Hz-100kHz (+/-0.5dB) » - one row, two figures, each labelled with the stage it belongs to. Recorded because it is the opposite of the Musical Fidelity MX-DAC's defect the same day, where the same row appeared twice with two values and no label at all. Labelling costs nothing and makes the number usable.",
+  "_RCA_AUX_IN_est_dans_le_rang_des_entrees_et_nest_pas_numerique": "« Input Interface  USB, coaxial, optical, Bluetooth, RCA AUX IN » - four digital inputs and one analogue one, in a single row, with nothing to separate them. Only the four are recorded."
+}

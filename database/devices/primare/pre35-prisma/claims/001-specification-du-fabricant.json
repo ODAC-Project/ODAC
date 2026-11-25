@@ -3,7 +3,7 @@
     "kind": "datasheet",
     "url": "https://primare.net/products/pre35-prisma/",
     "quote": "Primare's own page for the PRE35 Prisma, read 2026-11-25. Specification rows: « DAC » / « ESS ES9068A »; « Toslink » / « 4 x digital input »; « RCA » / « 2 x digital input »; « RCA » / « 1 x digital output »; « USB-B » / « 1 x digital input »; « USB-A » / « 1 x digital input ». Section text: « The DM36 is a full-featured digital to analog converter stage enabling up to PCM 384kHz/32bit and DSD 256 conversion, with upsampling options and MQA processing. » The page states NO per-input sample rate, NO bit depth per input, and NO native-versus-DoP distinction, and names no filter. The per-input figures recorded here come from Primare's own DM36 module page (https://primare.net/products/dm36/): « Inputs include 4 Toslink optical and 2 RCA coaxial for resolution of up to 192kHz/24 bit, and 1 USB B input for computer connection with resolution of up to 384kHz/32 bit and DSD256 (11.2MHz). » and « A new feature found in the DM36 is the PCM up-sampling option, which when the setting is enabled allows 16/44.1 and 24/48 kHz signals to be up-sampled to 24/88.2 kHz and 24/96 kHz respectively ».",
-    "read_on": "2026-11-24"
+    "read_on": "2026-11-25"
   },
   "source_names_subject": true,
   "submitted_by": "curator",

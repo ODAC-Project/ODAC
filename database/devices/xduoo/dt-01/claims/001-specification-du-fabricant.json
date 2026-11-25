@@ -1,0 +1,28 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.xduoo.net/product/dt-01",
+    "quote": "xDuoo's own page for the DT-01 on its English site, read 2026-11-25. Hero chip row: « ES9038Q2M 1300mW PCM 384kHz DSD256 ». Technical Data: « Input Interface  Phone, tablet and USB audio »; « Headphone Output  Optical, coaxial, USB, AUX and headphone outputs »; « Sampling Rate  PCM 384kHz / DSD256 »; « Output Power  1300mW ». Key Features: « USB decoding supports PCM up to 32-bit/384kHz. » « USB playback supports DSD up to DSD256. ». No digital filter is NAMED, no oversampling bypass and no non-oversampling mode is mentioned, and DoP is not mentioned - across this maker's whole catalogue DoP appears on one page only, the LINK10.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD256",
+    "family": "ess_sabre",
+    "chip": "« ES9038Q2M »."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "dsd_max": "DSD256"
+    }
+  },
+  "_la_source_est_le_site_ANGLAIS_dont_les_conditions_ont_ete_lues": "Every xDuoo record is sourced to xduoo.net, whose /terms page was read in full on 2026-11-25 and forbids nothing beyond misuse of the site itself: « Do not misuse the website, interfere with its operation or attempt unauthorized access to website or customer information. » The maker's Chinese site, xduoo.com, publishes no terms page at all AND publishes every specification as a JPEG image, so nothing is taken from it. See the brand file for both findings in full.",
+  "_pourquoi_native_dsd_nest_PAS_ecrit_ici": "The page carries a sentence of the form « DSD512 support enables native high-resolution music playback », and so do more than twenty other xduoo.net pages, word for word, including a passive R2R module and a portable player. It is generated template text. A claim made identically about twenty different products is a claim about none of them, so `native_dsd` is absent on every xDuoo record despite the word appearing on nearly all of them.",
+  "_optique_coaxial_ET_USB_sont_tous_des_SORTIES_sur_cet_appareil": "« Headphone Output  Optical, coaxial, USB, AUX and headphone outputs ». Five outputs, three of them digital, one of them a USB OUT - and the input row says « Phone, tablet and USB audio ». So this device has a USB input and a USB output, and the page never says which socket is which, nor which is the charging port: two Technical Highlights chips read « 5 Outputs » and « Charge + Play » with boilerplate gloss only. inputs.usb carries the figure; nothing else is recorded, because nothing else can be."
+}

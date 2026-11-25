@@ -1,0 +1,32 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.prismsound.com/music_recording/products_subs/da2/da2_spec.php",
+    "quote": "Prism Sound's own specification page for the Dream DA-2, read 2026-11-25 on the legacy host - this product is not on the current prismsound.io site at all, and survives only here, where the navigation still lists « Dream DA-2 - Premium 2 channel D/A converter ». D/A CONVERTER SPECIFICATIONS: « Full Scale Output signal level - +5dBu to +28dBu in steps of 1dB and 0.05dB »; « Output impedance - Differential: 47ohm / Single-ended: 24ohm »; « Dynamic range - >111dB unweighted RMS »; « High-level THD+N - < -104dB unweighted RMS »; « Level dependent linearity - <<3dB at -144dBFS »; « Sample Rates - 32, 44.1, 48, 88.2, 96kHz +/-0.15% »; « Non-standard ranges: - 30-50kHz, 60-100kHz »; « Intrinsic - less than 18 picoseconds RMS ». DIGITAL INPUTS: « DI1 - AES/EBU 110ohm / supports higher-rate sampling (HRS: e.g. 96kHz) at double speed »; « DI2 & 3 - AES/EBU 110ohm / These inputs support HRS at double speed and in two-wire format »; « DI4 - TOSLINK Optical / S/PDIF high and low rates »; « DI5 - RCA/Phono / S/PDIF high and low rates »; « DI6 & 7 - BNC L & BNC R - AES3-id / 75ohm / Both support HRS double speed or two-wire and SDIF-2 at high and low rates. » No DSD figure appears anywhere, and no bit depth is stated in the D/A section. The page's own caveat: « Specifications subject to amendment. »",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 96000,
+    "dsd_max": "none",
+    "chip": "No part number is published."
+  },
+  "inputs": {
+    "aes_ebu": {
+      "pcm_max_hz": 96000
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 96000
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000
+    }
+  },
+  "_conditions_de_Prism_Sound_aucune_clause_de_reutilisation": "Measured 2026-11-25. prismsound.io has NO terms-of-use page: /terms/, /terms-of-use/, /terms-and-conditions/, /legal/, /copyright/ and /disclaimer/ all 404, and the full 74-page sitemap lists only a privacy policy and one PDF. That PDF, « Audio Squadron Limited Terms & Conditions of Sale », is a 7-page image-only scan that was READ page by page: all 19 clauses, none forbidding the copying or reuse of content. Its nearest clauses do not reach website material - clause 14 disclaims warranties as to third-party IPR « in respect of the goods », clause 7's confidentiality binds Seller and Purchaser only and « expressly excludes public-domain information ». The only assertion of rights is the footer « (c) 2026 Audio Squadron Ltd. All rights reserved. » robots.txt on both hosts permits every product and spec path. So the sale terms were genuinely read and permit this; the website-use question has no document to answer it.",
+  "_le_fabricant_decline_lexactitude_de_ses_propres_chiffres": "Clause 6(b) of the sale terms, worth recording because no other maker in this catalogue states it: « The Seller shall use reasonable endeavours to ensure the accuracy of technical data or literature relating to the goods, but the Seller accepts no liability [...] for any error or omission in such technical data or literature. » And every spec page carries « In keeping with our policy of continual development, specifications are subject to amendment without notice. E&OE. » The figures are still the maker's published figures and still the best source there is - but this is the only brand that says in a contract that they may be wrong.",
+  "_SEPT_entrees_numeriques_nommees_une_par_une": "DI1 through DI7: three AES/EBU on 110 ohms, one TOSLINK, one RCA S/PDIF, and two AES3-id BNC that also accept SDIF-2. Seven sockets, each described in its own row - more than any other record in the catalogue, and the schema can hold three of them, because its keys are interface TYPES and not sockets. A reader wanting to know that this device has three separate AES inputs, or that DI1 lacks the two-wire support DI2 and DI3 have, will find it only in the quoted source and here.",
+  "_un_plafond_a_96_kHz_sur_un_convertisseur_de_reference": "« Sample Rates - 32, 44.1, 48, 88.2, 96kHz +/-0.15% ». 96 kHz, where every other Prism Sound product reaches 192 - a generation behind its own range, and the lowest ceiling of any dedicated D/A converter in the base. The list starts at 32 kHz, which is a rate and not a depth. No bit depth is stated in the D/A section at all, so `bits` is absent: the only word-length figures on the page describe the carriers, not the conversion.",
+  "_une_plage_non_standard_que_le_catalogue_ne_peut_pas_dire": "« Non-standard ranges: - 30-50kHz, 60-100kHz ». This converter locks to any rate inside two continuous bands, not to a list of standard rates - so 100 kHz is reachable and 110 is not, while the nominal ceiling is 96. `pcm_max_hz` takes 96000, the highest STANDARD rate the maker lists, because that is what a consumer's engine can act on. The 100 kHz edge of the second band is quoted and goes in no field: a catalogue of ceilings cannot express a device that accepts bands."
+}

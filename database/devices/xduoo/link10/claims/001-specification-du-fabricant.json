@@ -1,0 +1,30 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.xduoo.net/product/link10",
+    "quote": "xDuoo's own page for the LINK10 on its English site, read 2026-11-25. « Input Interface  USB-C with UAC 1.0 and UAC 2.0 modes »; « Headphone Output  3.5mm single-ended and 4.4mm balanced headphone outputs »; « Sampling Rate  PCM 384kHz / DSD256 »; « Output Power  300mW »; « Frequency Response  20Hz-20kHz (+0.5dB) ». Key Features: « USB playback supports PCM up to 32-bit/384kHz. » and « Portable playback supports DSD256 Native and DoP. » The table carries no Dimensions and no Weight row; the FAQ answers « Dimensions and weight are pending confirmation. » Chip: « Dual CS43131 ».",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD256",
+    "dop": true,
+    "family": "cirrus",
+    "chip": "« Dual CS43131 »."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "dsd_max": "DSD256",
+      "dop_possible": true
+    }
+  },
+  "_la_source_est_le_site_ANGLAIS_dont_les_conditions_ont_ete_lues": "Every xDuoo record is sourced to xduoo.net, whose /terms page was read in full on 2026-11-25 and forbids nothing beyond misuse of the site itself: « Do not misuse the website, interfere with its operation or attempt unauthorized access to website or customer information. » The maker's Chinese site, xduoo.com, publishes no terms page at all AND publishes every specification as a JPEG image, so nothing is taken from it. See the brand file for both findings in full.",
+  "_la_SEULE_page_du_catalogue_xDuoo_qui_dit_DoP": "« Portable playback supports DSD256 Native and DoP. » One page out of roughly forty. `dop` is written true here and absent on every other xDuoo record, which is what the evidence supports and not a claim that the others lack it. Note the scope: « Portable playback », not a named socket - so inputs.usb.dop_possible is written because USB-C is the only digital input this device has, and there is nowhere else the statement could apply.",
+  "_le_mot_Native_est_ici_ET_dans_le_texte_type": "This page says « DSD256 Native and DoP » in its own sentence, distinct from the template line « DSD256 support enables native high-resolution music playback » that twenty other pages carry. The template is still refused; this sentence names two transports side by side, which the template never does. Even so `native_dsd` is NOT written: « Native and DoP » in a bullet about portable playback is thinner than a transport statement, and the catalogue has been strict about this field everywhere else. Only `dop` is taken, because DoP is what the maker distinguishes."
+}

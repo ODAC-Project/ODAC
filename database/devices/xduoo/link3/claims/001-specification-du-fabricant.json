@@ -1,0 +1,26 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.xduoo.net/product/link3",
+    "quote": "xDuoo's own page for the Link3 on its English site, read 2026-11-25. « Input Interface  Type-C »; « USB System  UAC1.0 / UAC2.0 »; « Headphone Output  3.5mm + 4.4mm »; « Sampling Rate  PCM 16-32bit/44.1k-768kHz; DSD 1bit/2.82m-22.57mHz »; « Frequency Response  20Hz-20kHz (+/-0.5dB) »; « Micro SD Expansion  Micro SD, maximum capacity 2TB ». The DSD row's units are quoted exactly as printed, lower-case m for mega and mHz for MHz. Chips named in prose: « dual ES9039Q2M » and USB processor « XMOS XU316 ».",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "family": "ess_sabre",
+    "chip": "« dual ES9039Q2M », with « XMOS XU316 » as the USB receiver."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32
+    }
+  },
+  "_la_source_est_le_site_ANGLAIS_dont_les_conditions_ont_ete_lues": "Every xDuoo record is sourced to xduoo.net, whose /terms page was read in full on 2026-11-25 and forbids nothing beyond misuse of the site itself: « Do not misuse the website, interfere with its operation or attempt unauthorized access to website or customer information. » The maker's Chinese site, xduoo.com, publishes no terms page at all AND publishes every specification as a JPEG image, so nothing is taken from it. See the brand file for both findings in full.",
+  "_un_plafond_DSD_donne_en_hertz_et_sans_etiquette": "« DSD 1bit/2.82m-22.57mHz ». No DSDxxx label anywhere on the page: the ceiling is expressed only as a bit rate range. 22.5792 MHz is eight times 2.8224, which is DSD512 - but that is MY arithmetic, not the maker's word, and `dsd_max` is an enumerated field whose values are labels. So it is left ABSENT rather than computed. A figure a reader can convert is not a figure the maker stated, and the catalogue's whole value is that the difference is visible.",
+  "_la_carte_Micro_SD_nest_pas_une_entree": "« Micro SD Expansion  Micro SD, maximum capacity 2TB » on a USB dongle. Storage, not an audio input. The only digital input is the Type-C port."
+}

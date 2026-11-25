@@ -1,0 +1,21 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.xduoo.net/product/r2r-card",
+    "quote": "xDuoo's own page for the R2R Card on its English site, read 2026-11-25. The spec table has ONE row: « Sampling Rate  DSD512 ». Prose: « Independent left and right channel networks, FPGA correction and unified timing are combined to pursue a natural, silky and warm presentation while retaining native support for high-resolution PCM and DSD playback. » and « The hardware architecture supports DSD playback up to DSD512. » The converter is described as a « 32-bit discrete R2R network ». The FAQ answers « Input information is pending confirmation. » No PCM sample rate, no bit depth, no filter and no oversampling mode appears anywhere on the page.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "dsd_max": "DSD512",
+    "family": "r2r_ladder",
+    "technology": "r2r",
+    "chip": "« 32-bit discrete R2R network » with « Independent left and right channel networks, FPGA correction and unified timing » - a discrete ladder per channel, corrected by an FPGA. No part number, because there is no part: the ladder IS the converter."
+  },
+  "_la_source_est_le_site_ANGLAIS_dont_les_conditions_ont_ete_lues": "Every xDuoo record is sourced to xduoo.net, whose /terms page was read in full on 2026-11-25 and forbids nothing beyond misuse of the site itself: « Do not misuse the website, interfere with its operation or attempt unauthorized access to website or customer information. » The maker's Chinese site, xduoo.com, publishes no terms page at all AND publishes every specification as a JPEG image, so nothing is taken from it. See the brand file for both findings in full.",
+  "_un_module_et_non_un_appareil": "This is a swappable converter card for the TA-32 and XD05 PRO chassis, not a device with sockets of its own - which is why its FAQ answers « Input information is pending confirmation » and why `inputs` is empty here. It is recorded because it changes what those two chassis ARE: fitted with this card they become discrete ladder converters, and the catalogue would otherwise hold them as ESS and ROHM devices with no way to say so.",
+  "_le_chiffre_quon_voudrait_le_plus_est_absent": "« The hardware architecture supports DSD playback up to DSD512 » and NO PCM figure of any kind - not a rate, not a depth. For a discrete R2R ladder the PCM behaviour is the whole point, and this is the one number the page withholds. `pcm_max_hz` absent, `bits` absent. The three sibling cards - ES9039SPRO, AK4499EX, BD34301 - have spec tables with no rows at all, so this one row makes the R2R card the best documented of the four.",
+  "_une_correction_par_FPGA_nest_pas_un_sur_echantillonnage": "« FPGA correction » on a discrete ladder means trimming the resistor network's own errors, which is not interpolation and says nothing about whether the card oversamples. So `correctable` is NOT written: a ladder corrected by an FPGA can still have a digital filter in front of it, as Rockna proved. The page never uses the word oversampling, in any direction."
+}

@@ -3,7 +3,7 @@
     "kind": "datasheet",
     "url": "https://geshelli.com/product/torc/",
     "quote": "Geshelli Labs' own page for the TORC, read 2026-11-25. The « DAC Module » is an OPTION the buyer chooses, and the page lists: « AD1862 R2R », « AKM AK4493S », « AKM AK4499EXEQ », « Burr Brown PCM1794 », « ESS Sabre ES9039Q2M », « ESS Sabre ES9026PRO », « ESS Sabre ES9039SPRO ». Inputs: « 2x Coaxial (192khz/24bit) PCM »; « 2x Toslink (192khz/24bit) PCM »; an optional USB board giving « 32Bit PCM (44.1Khz to 768Khz) » and « DSD64 - DSD512 (*Requires a DSD Compatible DAC Module - See: ...) »; an optional GIO board adding a « Digital AES Input ». On drivers: « Optional Windows Driver Available (Needed for High Speed DSD Interface) ». No filter, oversampling or NOS row, and no THD, SINAD or dynamic-range figure. geshelli.com links no terms page; the footer reads « Copyright (c) 2026 Geshelli Labs LLC. »",
-    "read_on": "2026-11-24"
+    "read_on": "2026-11-25"
   },
   "source_names_subject": true,
   "submitted_by": "curator",

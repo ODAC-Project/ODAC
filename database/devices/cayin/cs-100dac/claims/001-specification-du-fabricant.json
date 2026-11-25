@@ -3,7 +3,7 @@
     "kind": "datasheet",
     "url": "https://cayin.com/produkt/cayin-cs-100dac_r%c3%b6hren-d-a_wandler/",
     "quote": "Cayin's own page for the CS-100DAC, read 2026-11-25. The page is German. Specification rows: « DAC-Chipset: » « ES9038Pro (x2) »; « I2S: bis 32Bit/768kHz, DSD512 »; « USB: bis 32Bit/768kHz, DSD512 nativ, DoP256 »; « Roehrenbestueckung: » « 4 x 6922EH ». Description: « im nativen Modus bis zu 32 Bit / 768 kHz sowie DSD512 und DoP256 » and, listing the sockets, « USB-Audio, AES/EBU, BNC, Cinch, Toslink und I2S via Mini-HDMI » - with no rate given for AES/EBU, BNC, Cinch or Toslink. On filters: « Das gilt auch fuer die vielen unterschiedlichen Filter-Charakteristiken. » - many filter characteristics, no count and no names. The word NOS does not appear.",
-    "read_on": "2026-11-24"
+    "read_on": "2026-11-25"
   },
   "source_names_subject": true,
   "submitted_by": "curator",

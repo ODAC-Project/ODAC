@@ -1,0 +1,29 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "http://www.audio-gd.com/HE/HE27/HE27EN.htm",
+    "quote": "Audio-gd's PRODUCT page for the HE-27, read 2026-11-25. « Apply 4 pcs the most real like sound R-2R DA chip PCM1704UK truly balanced fully discrete headamp/preamp , ultimate all in one unit »; « Apply 4 pcs the most real like sound R-2R DA chip PCM1704UK. 2 top-notch Accusilicon TCXOs with frequencies of 90 and 98MHz provide synchronization for the whole ». And, in a « Please note » block above the price: « Please note: The PCM1704UK can not support DSD playback. User need conversion the DSD to PCM in the source device. »",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ti_burr_brown",
+    "technology": "r2r",
+    "dsd_max": "none",
+    "correctable": true,
+    "chip": "« 4 pcs the most real like sound R-2R DA chip PCM1704UK », with « 2 top-notch Accusilicon TCXOs with frequencies of 90 and 98MHz ».",
+    "device_settings": [
+      {
+        "setting": "OS / NOS mode",
+        "set_to": "N0 or N1 (non-oversampling)",
+        "why": "The N0 / N1 / O2 / O4 / O8 block is present in this model's manual."
+      }
+    ]
+  },
+  "_conditions_NON_CONCLUANTES_chez_Audio_gd": "No terms page found on audio-gd.com, so no prohibition could be checked - which is NOT the same as finding no prohibition. See the R-1 MK3 record for the full measurement; the only assertion of rights anywhere is the footer « Copyright(C) 2004 www.audio-gd.com All Rights Reserved ».",
+  "_NOS_ici_veut_dire_NON_SUR_ECHANTILLONNE_et_cest_PROUVE": "109 pages of this site were searched for « New Old Stock » and « N.O.S. »: zero hits, and one page defines the term - « \"NOS\" stands for \"Non Oversampling\". » So the models carrying NOS in their name are non-oversampling designs, not valve stock.",
+  "_une_puce_en_echelle_nest_pas_une_echelle_discrete": "The PCM1704UK is a Burr-Brown R-2R ladder in a package - a ladder converter, but a CHIP, not the discrete resistor networks of this maker's R-series. `family` is ti_burr_brown and `technology` is r2r, which is the one combination in the catalogue where those two fields disagree in spirit and are both correct. Kept apart from the R-series deliberately: a consumer choosing on `technology` alone would see no difference between a PCM1704 and eight hand-matched resistor groups.",
+  "_cette_revendication_est_la_MOITIE_dun_desaccord": "The maker contradicts itself about this device on two of its own pages, and this claim carries only what the PRODUCT page says: the converter cannot do DSD. Claim 002 carries what the SPEC page says: « DSD64-512 ». The two are deliberately filed as separate claims from separate URLs so that `contested` holds both rival values with their sources, which is the whole reason that machinery exists - and the first time in this catalogue it has been fed a genuine disagreement rather than two readings of one sentence. Neither is resolved here. Circumstantial support for THIS half: the HE-8, the sibling design with the same chip, has no DSD row at all in its spec table - but that is inference about another product, not this maker's word about this one."
+}

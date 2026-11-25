@@ -1,0 +1,45 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "http://www.audio-gd.com/Master/Master-7/M7EN.htm",
+    "quote": "Audio-gd's own pages for the Master 7, read 2026-11-25. « Master 7 (The PCM1704 Ultimate Design) ... Fully redesigned DSP software Built in 8 Pieces PCM1704UK Supports up to 192KHz at 8X times sampling 32bit / 384K Asynchronous Transfer »; « The Master 7 is the ultimate design of the PCM1704 chip . » Spec row: « Support Sampling | USB / I2S mode: 44.1kHz, 48kHz, 88.2kHz, 96kHz, 176.4kHz , 192kHz / BNC mode: 44.1kHz, 48kHz, 88.2kHz, 96kHz / Coaxial mode: 44.1kHz, 48kHz, 88.2kHz, 96kHz ,192kHz / Optical mode: 44.1kHz, 48kHz, 88.2kHz, 96kHz » - no DSD row. The NOS 7 page says of it: « The Master 7 had the 8X times oversampling and NOS mode can be selection . »",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ti_burr_brown",
+    "technology": "r2r",
+    "pcm_max_hz": 192000,
+    "dsd_max": "none",
+    "correctable": true,
+    "chip": "« Built in 8 Pieces PCM1704UK ».",
+    "device_settings": [
+      {
+        "setting": "Oversampling",
+        "set_to": "NOS (non-oversampling)",
+        "why": "Stated not on this model's own page but on the NOS 7 page, which compares them: « The Master 7 had the 8X times oversampling and NOS mode can be selection . » Recorded because it is the maker's word about its own product, on its own site - but noted as coming from a sibling's page, which is weaker than a line in this model's manual."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 192000
+    },
+    "i2s": {
+      "pcm_max_hz": 192000
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000
+    }
+  },
+  "_conditions_NON_CONCLUANTES_chez_Audio_gd": "No terms page found on audio-gd.com, so no prohibition could be checked - which is NOT the same as finding no prohibition. See the R-1 MK3 record for the full measurement; the only assertion of rights anywhere is the footer « Copyright(C) 2004 www.audio-gd.com All Rights Reserved ».",
+  "_NOS_ici_veut_dire_NON_SUR_ECHANTILLONNE_et_cest_PROUVE": "109 pages of this site were searched for « New Old Stock » and « N.O.S. »: zero hits, and one page defines the term - « \"NOS\" stands for \"Non Oversampling\". » So the models carrying NOS in their name are non-oversampling designs, not valve stock.",
+  "_une_puce_en_echelle_nest_pas_une_echelle_discrete": "The PCM1704UK is a Burr-Brown R-2R ladder in a package - a ladder converter, but a CHIP, not the discrete resistor networks of this maker's R-series. `family` is ti_burr_brown and `technology` is r2r, which is the one combination in the catalogue where those two fields disagree in spirit and are both correct. Kept apart from the R-series deliberately: a consumer choosing on `technology` alone would see no difference between a PCM1704 and eight hand-matched resistor groups.",
+  "_le_BNC_sarrete_a_96_la_ou_le_RCA_va_a_192_sur_la_MEME_boite": "« BNC mode: 44.1kHz, 48kHz, 88.2kHz, 96kHz » against « Coaxial mode: 44.1kHz, 48kHz, 88.2kHz, 96kHz ,192kHz ». Two S/PDIF sockets on one chassis, electrically the same standard, and the BNC one stops at half the RCA one's rate. The catalogue has one key for S/PDIF coaxial and cannot hold both, so spdif_coax takes 192000 - the higher, because it is reachable on this device - and the BNC's lower ceiling survives only here. Naim, Wadax and Hegel all raised the BNC-versus-RCA question; this is the first maker whose own figures make it matter.",
+  "_le_384_du_titre_est_le_recepteur_USB_pas_le_convertisseur": "« Supports up to 192KHz at 8X times sampling 32bit / 384K Asynchronous Transfer » in the headline, and « USB / I2S mode: ... 192kHz » in the spec table. The 384 describes the Amanero USB receiver's capability, the 192 what the converter accepts - and the headline puts both in one line with nothing to separate them. `pcm_max_hz` is 192000. Its own successor, the Master-7 MK2, does reach 384 kHz over USB, which is how one can tell these are two different numbers rather than one revised."
+}

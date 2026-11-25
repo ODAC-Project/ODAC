@@ -1,0 +1,48 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "http://www.audio-gd.com/Pro/NOS/NOS7/NOS7EN.htm",
+    "quote": "Audio-gd's own pages for the NOS 7, read 2026-11-25 - the product page plus its sibling spec file. « NOS 7 (The PCM1704 Ultimate Design) Dedicated Discrete Fully Balanced DAC Fully new DSP software Built in 8 Pieces PCM1704UK Supports up to 768KHz 32bit / 384K Asynchronous Transfer Amanero combo384 »; « A lot users feedback they like the NOS sound in the PCM1704 products, let me made the decision to design a new software offer the better performance of the NOS mode. »; « applied -6db /oct passive analog filter , you can hear the wonderful sound of the NOS but you can't hear the noise as other some NOS design . 100 people may had 99 type prefers . We had design two NOS modes in the software for users select. »; « And the new software had addition the 3rd Nos mode for users choice for their favorite taste. »; « The oversampling design and NOS design had different sound characteristic ,it is not which is better but depend on the customer's prefer. »; « The full new design concept had boost the PCM1704 support up to 768KHz even 1536KHz (test in emulation mode). » Spec row: « Support Sampling | USB / I2S mode: 44.1kHz, 48kHz, 88.2kHz, 96kHz, 176.4kHz , 192kHz,352kHz,384kHz / BNC mode: 44.1kHz, 48kHz, 88.2kHz, 96kHz / Coaxial mode: 44.1kHz, 48kHz, 88.2kHz, 96kHz ,192kHz / Optical mode: 44.1kHz, 48kHz, 88.2kHz, 96kHz » - no DSD row.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ti_burr_brown",
+    "technology": "r2r",
+    "dsd_max": "none",
+    "correctable": true,
+    "device_settings": [
+      {
+        "setting": "Oversampling",
+        "set_to": "NOS (non-oversampling)",
+        "why": "The whole NOS line is built around it: « applied -6db /oct passive analog filter , you can hear the wonderful sound of the NOS » - the maker names what is left in the path when the digital filter is gone, which is the precondition `correctable` requires."
+      }
+    ],
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "chip": "« Built in 8 Pieces PCM1704UK », USB receiver « Amanero combo384 »."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32
+    },
+    "i2s": {
+      "pcm_max_hz": 384000,
+      "bits": 32
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000
+    }
+  },
+  "_conditions_NON_CONCLUANTES_chez_Audio_gd": "No terms page found on audio-gd.com, so no prohibition could be checked - which is NOT the same as finding no prohibition. See the R-1 MK3 record for the full measurement; the only assertion of rights anywhere is the footer « Copyright(C) 2004 www.audio-gd.com All Rights Reserved ».",
+  "_NOS_ici_veut_dire_NON_SUR_ECHANTILLONNE_et_cest_PROUVE": "109 pages of this site were searched for « New Old Stock » and « N.O.S. »: zero hits, and one page defines the term - « \"NOS\" stands for \"Non Oversampling\". » So the models carrying NOS in their name are non-oversampling designs, not valve stock.",
+  "_une_puce_en_echelle_nest_pas_une_echelle_discrete": "The PCM1704UK is a Burr-Brown R-2R ladder in a package - a ladder converter, but a CHIP, not the discrete resistor networks of this maker's R-series. `family` is ti_burr_brown and `technology` is r2r, which is the one combination in the catalogue where those two fields disagree in spirit and are both correct. Kept apart from the R-series deliberately: a consumer choosing on `technology` alone would see no difference between a PCM1704 and eight hand-matched resistor groups.",
+  "_768_kHz_dans_le_titre_384_dans_le_tableau": "The headline says « Supports up to 768KHz » and the Support Sampling row stops at 384 kHz over USB and I2S. The body resolves it without saying so: « The full new design concept had boost the PCM1704 support up to 768KHz even 1536KHz (test in emulation mode) » - 768 is the rate the chip is DRIVEN at internally, 384 is what the socket accepts. `pcm_max_hz` is 384000, and the 768 is recorded nowhere, because an internal upsampling rate has no field. The same conflict appears on the NOS 11 and, three ways over, on the NOS 19.",
+  "_deux_modes_NOS_puis_trois_dans_le_meme_texte": "« We had design two NOS modes in the software for users select. » and, further down the same page, « the new software had addition the 3rd Nos mode ». Two then three, with no date on either. `correctable` does not depend on the count and no count is recorded."
+}

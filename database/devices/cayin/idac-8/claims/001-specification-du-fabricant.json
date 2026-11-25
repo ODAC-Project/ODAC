@@ -3,7 +3,7 @@
     "kind": "datasheet",
     "url": "https://cayin.com/produkt/cayin-idac-8-d-a-wandler/",
     "quote": "Cayin's own page for the iDAC-8, read 2026-11-25. The page is German. Specification rows: « DAC-Chipset » « AK4191 Digital, 2x AK4499EX (Mono) »; « Eingaenge » « i2S, USB, Coaxail (RCA & BNC), AES/EBU, Optical » - the misspelling « Coaxail » is the page's; « Roehrenbestueckung » « 6H6b-B 2x ». Description: « Der iDAC-8 steht mit einem Tandem aus AK4191EQ - AK4499EXEQ Wandler Chips und einer 6H6b-B Roehrenschaltung ». On filters: « Unabhaengig davon, wie gut die 64-Bit-Digitalfilter [...] des AK4191EQ funktionieren » - the chip's filters mentioned, with no mode list and no switch. NO sample rate and NO bit depth appear anywhere on the page, for the device or for any input. The word NOS does not appear.",
-    "read_on": "2026-11-24"
+    "read_on": "2026-11-25"
   },
   "source_names_subject": true,
   "submitted_by": "curator",

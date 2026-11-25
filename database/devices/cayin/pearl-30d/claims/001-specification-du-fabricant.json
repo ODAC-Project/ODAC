@@ -3,7 +3,7 @@
     "kind": "datasheet",
     "url": "https://cayin.com/produkt/pearl-30d-dac/",
     "quote": "Cayin's own page for the Pearl 30D, read 2026-11-25. The page is German and its formal specification sheet is an IMAGE (« technische-DATEN_pearl_30D.png »), not read. From the page's own text: « Eine Wandersektion ist mit einem TDA1307 und zwei TDA1547 Chips ausgestattet » - the typo « Wandersektion » for Wandlersektion is the page's - and « Die zweite Wandlersektion besteht aus 8 x ESS9039SPRO ». On rates: « Die Modern-Architektur unterstuetzt hochaufloesende PCM/DSD-Daten bis 768 kHz und DSD512. » On modes: two decoding architectures named « Classic » and « Modern », with an « Auto Mode » table mapping rates to architecture (for example « 96 / 192 / 384 / 768 kHz -> Modern »). On inputs: only « Jitter-Cleaner reduziert den Jitter von SPDIF- und IIS-Signalen » - no input table. The word NOS does not appear.",
-    "read_on": "2026-11-24"
+    "read_on": "2026-11-25"
   },
   "source_names_subject": true,
   "submitted_by": "curator",

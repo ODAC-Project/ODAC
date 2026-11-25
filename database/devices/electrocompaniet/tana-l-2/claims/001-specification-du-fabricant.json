@@ -1,0 +1,19 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://electrocompaniet.no/products/tana-l-2-tilleggshoyttaler",
+    "quote": "Electrocompaniet's own page for the TANA L-2, read 2026-11-25, section « TEKNISKE SPESIFIKASJONER TANA L2 »: « REQUIRMENTS - Any EC Living streamer such as TANA SL2 Speaker and Streamer. - PC, Mac, Linux , Apple iOS or Android device on the same network. »; « POWER AMPLIFIER - 150 Watt Class A-B amplifier - DAC 192kHz/24bit - 32-bit floating-point DSP »; « WIRELESS CONNECTIONS - 96 kHz/24bit wireless speaker connection ». « REQUIRMENTS » is the page's spelling. No DSD figure, no converter chip, no filter, and no digital input socket of any kind.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 192000,
+    "bits": 24
+  },
+  "_les_conditions_dElectrocompaniet_ont_ete_lues_et_une_correction": "electrocompaniet.no WAS read on 2026-11-25 and carries no clause on copying, reproducing or reusing site content. One correction to an earlier note: a page TITLED « Vilkar for bruk » (terms of use) does exist, at /policies/terms-of-service - but its body is the Norwegian Consumer Authority's standard distance-selling contract, as its own first line says: « Dette kjopet er regulert av de nedenstaende standard salgsbetingelser for forbrukerkjop av varer over Internett. » Its 14 sections were read end to end; none concerns content. The only assertion of rights is the footer « (c)2021 ELECTROCOMPANIET ». robots.txt is « User-agent: * / Allow: / ». So the earlier note's conclusion stands while its premise was wrong: there IS a page by that name, and it is not website terms.",
+  "_le_32_bits_est_la_LONGUEUR_DE_MOT_DU_DSP_pas_la_profondeur_du_convertisseur": "The page prints two adjacent bullets: « DAC 192kHz/24bit » and « 32-bit floating-point DSP ». Fusing them into 32-bit/192 kHz is the obvious error and it would be wrong: the 32 is the DSP's internal arithmetic width, the converter's stated depth is 24, and the maker put them on separate lines. `bits` is 24. Second shape of the same trap in one day, after Musical Fidelity's V90-DAC wrote a rate range as « 32-bit/192 kHz » - different mechanism, identical consequence, and both caught only because the true depth was printed beside the false one.",
+  "_un_convertisseur_a_192_nourri_par_un_lien_a_96": "« DAC 192kHz/24bit » and, four lines below, « 96 kHz/24bit wireless speaker connection » - the only path into this device. The maker prints both without comment. Nothing above 96 kHz can ever reach this converter, and the 192 is still the right value for `pcm_max_hz`, which records what the device accepts and not what its link delivers. The distinction has no field: a reader wanting to know what this speaker can actually be sent must read the wireless row, and only this gloss points at it.",
+  "_aucune_prise_numerique_et_ce_nest_pas_un_manque": "An add-on speaker that receives only over the maker's own wireless link. `inputs` is empty because there is nothing to describe, as on the EMC 1 MKV - and for the opposite reason: that one has sockets which are all outputs, this one has no sockets at all."
+}

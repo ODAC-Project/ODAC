@@ -1,0 +1,38 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "http://www.audio-gd.com/Pro/SA/NOS1704/NOS1704EN.htm",
+    "quote": "Audio-gd's own pages for the NOS-1704, read 2026-11-25 - the product page plus its sibling spec file. « NOS-1704 (Limit) Dedicated Discrete Diamond Difference design DAC NOS design applied up to 192 K support 4pcs PCM1704UK (two-two parallel connect) »; « (Default install DIR9001 for SPDIF input support up to 24bit / 96KHz, if customer want support up to 192KHz, while place the order inform free replace by CS8416 .) »; « 24Bit 192KHz USB-SPDIF convertor price USD40 . »; « The USB-SPDIF convertor place on outside, connect to computer, SPDIF connect to NOS-1704 input for implement USB playback. » Spec row: « Support sampling | Coaxial model: 44.1kHz, 48kHz, 88.2kHz, 96kHz, 176.4KHz, 192KHz / Optical model: 44.1kHz, 48kHz, 88.2kHz, 96kHz » - no DSD row and no USB row.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ti_burr_brown",
+    "technology": "r2r",
+    "dsd_max": "none",
+    "correctable": true,
+    "device_settings": [
+      {
+        "setting": "Oversampling",
+        "set_to": "NOS (non-oversampling)",
+        "why": "The whole NOS line is built around it: « applied -6db /oct passive analog filter , you can hear the wonderful sound of the NOS » - the maker names what is left in the path when the digital filter is gone, which is the precondition `correctable` requires."
+      }
+    ],
+    "pcm_max_hz": 192000,
+    "bits": 24,
+    "chip": "« 4pcs PCM1704UK (two-two parallel connect) », with the S/PDIF receiver fitted to order: « Default install DIR9001 ... if customer want support up to 192KHz ... free replace by CS8416 »."
+  },
+  "inputs": {
+    "spdif_optical": {
+      "pcm_max_hz": 96000,
+      "bits": 24
+    }
+  },
+  "_conditions_NON_CONCLUANTES_chez_Audio_gd": "No terms page found on audio-gd.com, so no prohibition could be checked - which is NOT the same as finding no prohibition. See the R-1 MK3 record for the full measurement; the only assertion of rights anywhere is the footer « Copyright(C) 2004 www.audio-gd.com All Rights Reserved ».",
+  "_NOS_ici_veut_dire_NON_SUR_ECHANTILLONNE_et_cest_PROUVE": "109 pages of this site were searched for « New Old Stock » and « N.O.S. »: zero hits, and one page defines the term - « \"NOS\" stands for \"Non Oversampling\". » So the models carrying NOS in their name are non-oversampling designs, not valve stock.",
+  "_une_puce_en_echelle_nest_pas_une_echelle_discrete": "The PCM1704UK is a Burr-Brown R-2R ladder in a package - a ladder converter, but a CHIP, not the discrete resistor networks of this maker's R-series. `family` is ti_burr_brown and `technology` is r2r, which is the one combination in the catalogue where those two fields disagree in spirit and are both correct. Kept apart from the R-series deliberately: a consumer choosing on `technology` alone would see no difference between a PCM1704 and eight hand-matched resistor groups.",
+  "_le_plafond_coaxial_depend_de_la_puce_commandee": "« Default install DIR9001 for SPDIF input support up to 24bit / 96KHz, if customer want support up to 192KHz, while place the order inform free replace by CS8416 . » Two different ceilings for the same socket on the same model, decided when the unit was ordered. So inputs.spdif_coax is ABSENT here: there is no single true value, and the spec table's « 192KHz » describes only the CS8416 build. The device-level 192000 is recorded as what the design can reach. First record whose input ceiling depends on a per-unit option, and the catalogue cannot express it - a reader must ask the owner which chip is inside.",
+  "_aucune_entree_USB_du_tout": "« The USB-SPDIF convertor place on outside, connect to computer, SPDIF connect to NOS-1704 input » - USB playback on this device requires a separate 40-dollar box. There is no USB input and no USB row in the spec table. inputs holds no usb entry, which is a fact about the device and not a gap."
+}

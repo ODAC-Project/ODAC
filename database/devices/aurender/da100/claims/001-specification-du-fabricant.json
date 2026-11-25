@@ -3,7 +3,7 @@
     "kind": "datasheet",
     "url": "https://aurender.com/home/da100/",
     "quote": "Aurender's own page for the DA100, read 2026-11-25. Digital Inputs: « Coaxial / Optical / USB » (the row is printed twice on the page); « AES-EBU IN » = « 1x »; « I2S IN » = « 1x »; « USB IN » = « 1x ». « DAC »: « AKM4499EX Dual (1x/ CH) ». Clock: « OCXO & FPGA High Precision ». Decoding spec: « PCM 32bit/768Khz, DSD512 (native) ». No digital filter, oversampling or NOS row appears unless quoted above, and the page attaches no sample rate to any digital input.",
-    "read_on": "2026-11-24"
+    "read_on": "2026-11-25"
   },
   "source_names_subject": true,
   "submitted_by": "curator",

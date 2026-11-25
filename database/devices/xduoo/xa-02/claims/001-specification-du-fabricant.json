@@ -1,0 +1,31 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.xduoo.net/product/xa-02",
+    "quote": "xDuoo's own page for the XA-02 on its English site, read 2026-11-25. Hero chip row: « ES9039Q2M XMOS XU316 2000mW PCM 384kHz ». Technical Data: « Input Interface  USB, coaxial, optical, Bluetooth »; « USB System  XMOS XU316 »; « Sampling Rate  USB PCM up to 32-bit/384kHz, DSD256 and MQA »; « Output Power  4.4mm balanced 2000mW at 32ohm; 6.35mm 910mW at 32ohm »; « Frequency Response  20Hz-60kHz (+/-0.5dB) ». Key Features: « ES9039Q2M conversion provides a precise digital foundation for desktop listening. » « XMOS XU316 processing supports PCM 384kHz, DSD256 and MQA from compatible USB sources. ». No digital filter is NAMED, no oversampling bypass and no non-oversampling mode is mentioned, and DoP is not mentioned - across this maker's whole catalogue DoP appears on one page only, the LINK10.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD256",
+    "family": "ess_sabre",
+    "chip": "« ES9039Q2M », with « XMOS XU316 » named as the USB receiver."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "dsd_max": "DSD256"
+    },
+    "spdif_coax": {},
+    "spdif_optical": {},
+    "bluetooth": {}
+  },
+  "_la_source_est_le_site_ANGLAIS_dont_les_conditions_ont_ete_lues": "Every xDuoo record is sourced to xduoo.net, whose /terms page was read in full on 2026-11-25 and forbids nothing beyond misuse of the site itself: « Do not misuse the website, interfere with its operation or attempt unauthorized access to website or customer information. » The maker's Chinese site, xduoo.com, publishes no terms page at all AND publishes every specification as a JPEG image, so nothing is taken from it. See the brand file for both findings in full.",
+  "_pourquoi_native_dsd_nest_PAS_ecrit_ici": "The page carries a sentence of the form « DSD512 support enables native high-resolution music playback », and so do more than twenty other xduoo.net pages, word for word, including a passive R2R module and a portable player. It is generated template text. A claim made identically about twenty different products is a claim about none of them, so `native_dsd` is absent on every xDuoo record despite the word appearing on nearly all of them.",
+  "_le_plafond_est_explicitement_borne_a_lUSB": "« Sampling Rate  USB PCM up to 32-bit/384kHz » - the row names the socket, and the Key Features say it again: « from compatible USB sources ». So this figure goes on inputs.usb as well as on the device, which is the only shape that lets a consumer's engine act on it. Coaxial and optical exist and carry NO figure: absent, not inherited from the USB row. On this maker's whole catalogue only one page ever states an optical or coaxial ceiling, the MU-602."
+}

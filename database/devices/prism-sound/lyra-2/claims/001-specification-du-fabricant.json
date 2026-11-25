@@ -1,0 +1,38 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.prismsound.io/products/lyra2/tech-specs/",
+    "quote": "Prism Sound's own specification page for the Lyra 2, read 2026-11-25. Digital Inputs: « Formats supported: Lyra 2 - S/PDIF (RCA or TOSLINK), ADAT, ADAT S/MUX (TOSLINK), AES3 (XLR via adapter cable) »; « Sample rates supported - 44.1, 48, 88.2, 96, 176.4 and 192kHz »; « Sample rates supported: ADAT (Lyra 2 only) - ADAT (8 channel): 44k1, 48k / ADAT SMUX (4 channel): 88k2, 96k »; « Word-length - 24 bit »; « AES3 Operation (Lyra 2) - Via S/PDIF RCA, using XLR-RCA adapter »; « Sample-rate converter (SRC) - Selectable at S/PDIF input; allowing input at any sample rate ». A separate « Sample-Rate Converter (SRC) » section claims « THD+N - <-137dB (0.000014%, -0.1dBFS) » and « Dynamic range - >138dB (0.000013%, -60dBFS) » - the dynamic-range row carries a percentage, which is a distortion unit, quoted exactly as published. Synchronization: « System sample rates - 44.1 / 48 / 88.2 / 96 / 176.4 / 192kHz ». Rear Panel: « Digital inputs - 1 x RCA / 1 x TOSLINK for S/PDIF or ADAT Optical input »; « USB port - 1 x USB type B receptacle ». DSD appears nowhere. No converter chip part number is named, no digital filter name or count is given, and no oversampling bypass is offered - a grep across every captured Prism Sound page for AK4, ES90, CS43, PCM17, WM87, Sabre, Burr-Brown, Asahi Kasei and Cirrus Logic returned zero matches.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 192000,
+    "bits": 24,
+    "dsd_max": "none",
+    "chip": "No part number is published anywhere on Prism Sound's site, for any product."
+  },
+  "inputs": {
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "adat": {
+      "pcm_max_hz": 96000,
+      "bits": 24
+    },
+    "usb": {}
+  },
+  "_conditions_de_Prism_Sound_aucune_clause_de_reutilisation": "Measured 2026-11-25. prismsound.io has NO terms-of-use page: /terms/, /terms-of-use/, /terms-and-conditions/, /legal/, /copyright/ and /disclaimer/ all 404, and the full 74-page sitemap lists only a privacy policy and one PDF. That PDF, « Audio Squadron Limited Terms & Conditions of Sale », is a 7-page image-only scan that was READ page by page: all 19 clauses, none forbidding the copying or reuse of content. Its nearest clauses do not reach website material - clause 14 disclaims warranties as to third-party IPR « in respect of the goods », clause 7's confidentiality binds Seller and Purchaser only and « expressly excludes public-domain information ». The only assertion of rights is the footer « (c) 2026 Audio Squadron Ltd. All rights reserved. » robots.txt on both hosts permits every product and spec path. So the sale terms were genuinely read and permit this; the website-use question has no document to answer it.",
+  "_le_fabricant_decline_lexactitude_de_ses_propres_chiffres": "Clause 6(b) of the sale terms, worth recording because no other maker in this catalogue states it: « The Seller shall use reasonable endeavours to ensure the accuracy of technical data or literature relating to the goods, but the Seller accepts no liability [...] for any error or omission in such technical data or literature. » And every spec page carries « In keeping with our policy of continual development, specifications are subject to amendment without notice. E&OE. » The figures are still the maker's published figures and still the best source there is - but this is the only brand that says in a contract that they may be wrong.",
+  "_les_debits_ADAT_sechangent_contre_des_canaux": "« ADAT (8 channel) 44.1 and 48kHz / ADAT S/MUX (4 channel): 88.2 and 96kHz ». On this interface the rate and the channel count cannot both be read from one figure: eight channels at 48 kHz, four at 96, and Prism offers no 176.4 or 192 kHz ADAT mode at all - its lists stop at S/MUX x2. inputs.adat records 96000, the highest rate the socket reaches, and the channel count it costs survives in this gloss. database/interfaces/adat.json holds the general rule.",
+  "_pourquoi_dsd_max_vaut_none_et_non_absent": "DSD, DoP and SACD appear NOWHERE on this product's pages - and these are full engineering specifications, itemised socket by socket, with word lengths and channel-status rows. A professional interface with ADAT and word clock does not do DSD, and the complete absence of the word across a specification of this density is the maker's answer. Same reading as the Audient records, and deliberately NOT the reading given to Musical Fidelity's V90-DAC, where silence on a consumer page from a maker that advertises DSD elsewhere was left as absent.",
+  "_AUCUN_plafond_nest_publie_pour_la_connexion_hote": "This is the central gap in Prism Sound's documentation and it is stated as an absence. The USB port appears ONLY as a connector count under Rear Panel - « USB port | 1 x USB 2 port » - with no audio format row anywhere on the page. The device figure recorded here comes from « System sample rates | 44.1 / 48 / 88.2 / 96 / 176.4 / 192kHz » in the Synchronization section, which is NOT labelled a USB ceiling and is not recorded as one: inputs.usb carries no figure. Titan, Atlas, Lyra 1, Lyra 2 and Orpheus are all like this. Callia is the only Prism product that states a USB audio-format row, and it is the only one whose USB ceiling turns out to exceed its S/PDIF ceiling.",
+  "_un_convertisseur_de_frequence_commutable_a_lentree": "« Sample-rate converter (SRC) - Selectable at S/PDIF input; allowing input at any sample rate ». A resampler the user can switch IN, not out - the mirror image of an oversampling bypass. When it is on, nothing arrives as it was sent; when it is off, the input is limited to rates the device can lock to. `correctable` is not written, because the page never says what runs between the socket and the converter with the SRC switched off."
+}

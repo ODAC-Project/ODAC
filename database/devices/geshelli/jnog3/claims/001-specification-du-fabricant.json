@@ -3,7 +3,7 @@
     "kind": "datasheet",
     "url": "https://geshelli.com/product/jnog3/",
     "quote": "Geshelli Labs' own page for the JNOG3 [J3], read 2026-11-25. Converter rows: « DAC Chip * AK4499 »; « AKM4499/AKM4191 Chipset »; « TI DIX9211 SPDIF DIR Chip ». Inputs: « 24bit SPDIF PCM Interface up to 216Khz »; « 4 Independently Selectable Ports Available (2xTOSLINK, 2xCOAX) Front and Rear ». Optional Amanero USB board: « 32Bit PCM (44.1Khz to 768Khz) »; « DSD64 - DSD512 Compatible ». Measurements under « Outputs »: « THD+N < .000300% »; « SINAD < 111dB »; « SNR < 121dB ». No filter, oversampling or NOS row. Native DSD versus DoP is not stated.",
-    "read_on": "2026-11-24"
+    "read_on": "2026-11-25"
   },
   "source_names_subject": true,
   "submitted_by": "curator",

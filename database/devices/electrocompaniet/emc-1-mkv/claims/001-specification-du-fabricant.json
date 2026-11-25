@@ -1,0 +1,18 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://electrocompaniet.no/products/emc-1-mkv-referanse-cd-spiller",
+    "quote": "Electrocompaniet's own page for the EMC 1 MKV, read 2026-11-25, section « TEKNISKE SPESIFIKASJONER EMC 1 MKV »: « Digital/analog conversion - 24 bit/192kHz »; « Compatible formats: CD, CD-R, CD-RW »; « Digital outputs: SPDIF COAX, SPDIF TOSLINK »; « Control inputs: RS232, 12V Trigger »; « Dynamic range - 120 dB ». No DSD figure, no converter chip, no filter name.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 192000,
+    "bits": 24
+  },
+  "_les_conditions_dElectrocompaniet_ont_ete_lues_et_une_correction": "electrocompaniet.no WAS read on 2026-11-25 and carries no clause on copying, reproducing or reusing site content. One correction to an earlier note: a page TITLED « Vilkar for bruk » (terms of use) does exist, at /policies/terms-of-service - but its body is the Norwegian Consumer Authority's standard distance-selling contract, as its own first line says: « Dette kjopet er regulert av de nedenstaende standard salgsbetingelser for forbrukerkjop av varer over Internett. » Its 14 sections were read end to end; none concerns content. The only assertion of rights is the footer « (c)2021 ELECTROCOMPANIET ». robots.txt is « User-agent: * / Allow: / ». So the earlier note's conclusion stands while its premise was wrong: there IS a page by that name, and it is not website terms.",
+  "_un_convertisseur_SANS_AUCUNE_entree_numerique": "« Digital outputs: SPDIF COAX, SPDIF TOSLINK » - outputs, under that word. « Control inputs: RS232, 12V Trigger » - control, not audio. This device converts digital to analogue and accepts no digital audio from outside: its only source is the disc in its tray. So `inputs` is not thin here, it is empty by design, and the absence is the specification. Two sockets on the back panel that a harvester keying on « SPDIF » would have recorded as inputs, and one row where the word « inputs » appears and means something else entirely.",
+  "_la_profondeur_depasse_de_loin_la_source": "24 bit / 192 kHz stated for a converter whose only input is a CD, which carries 16 bit / 44.1 kHz. The figure describes what the conversion stage is capable of, not what reaches it - the same shape as the TANA L-2's 192 kHz converter fed by a 96 kHz wireless link, and a reminder that a device ceiling is a property of the hardware and not a claim about any signal."
+}

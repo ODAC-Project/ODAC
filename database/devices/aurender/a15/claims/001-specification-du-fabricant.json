@@ -3,7 +3,7 @@
     "kind": "datasheet",
     "url": "https://aurender.com/home/a15/",
     "quote": "Aurender's own page for the A15, read 2026-11-25. Digital Inputs: « 1X Optical/Toslink, 2X Coax RCA ». « DAC Chipset »: « AKM 4490 - Dual-Mono ». « Audio Word Clock »: « TCXO ». « Analog Outputs Supported Format »: « Up to 768kHz/32bit PCM, DSD512 (Native) ». « USB Output Supported Format »: « Up to 768kHz/32bit PCM, DSD512 (Native), DSD256 (DoP) ». Prose: « decodes PCM up to 32-bit/768kHz, and DSD up to DSD512 ». No digital filter, oversampling or NOS row appears unless quoted above, and the page attaches no sample rate to any digital input.",
-    "read_on": "2026-11-24"
+    "read_on": "2026-11-25"
   },
   "source_names_subject": true,
   "submitted_by": "curator",

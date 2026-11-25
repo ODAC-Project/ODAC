@@ -3,7 +3,7 @@
     "kind": "datasheet",
     "url": "https://gracedesign.com/products/monitor-controllers/m900/",
     "quote": "Grace Design's own page for the m900, read 2026-11-25. « USB supported sample rates »: « 44.1, 48, 88.2, 96, 176.4, 192, 352.8, 384kHz ». Features: « Asynchronous USB interface for jitter free computer audio playback, supports up to 384kHz PCM and 256x DSD »; « USB, S/PDIF and Toslink digital inputs, supports up to 192kHz (Toslink up to 96kHz) »; « 4 different DAC filter settings to tailor playback performance to personal preference ». Converter: « The m900 DAC uses the latest generation AKM 4490 chip, which features 32-bit processing ». The spec table gives no bit depth. Measurements are taken at the analogue output rather than for the D/A path alone: « THD+N at Maximum Volume, 1kHz, 22Hz-22kHz BW » with « @1.0V out, no load <0.002% », and « Dynamic Range ... 20-22kHz bandwidth 112 dB » / « 115 dB » A-weighted. No DSD figure is given for S/PDIF or Toslink. No terms-of-use page exists on the site; the footer carries the ordinary copyright line.",
-    "read_on": "2026-11-24"
+    "read_on": "2026-11-25"
   },
   "source_names_subject": true,
   "submitted_by": "curator",

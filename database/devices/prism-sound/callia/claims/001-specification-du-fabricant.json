@@ -1,0 +1,49 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.prismsound.io/products/callia/tech-specs/",
+    "quote": "Prism Sound's own specification page for the Callia, read 2026-11-25, with its overview page. USB Inputs section: « Interface protocol - USB Audio Device Class 2.0 (UAC2) »; « Audio formats supported - PCM audio of up to 32 bit word length at sampling rates of 44k1, 48k, 88k2, 96k, 176k4, 192k, 352k8, 384k and DSD64, DSD128 in DoP frame (for fs>192k see note at foot of page). » S/PDIF Inputs section: « Interface formats - S/PDIF (RCA and TOSLINK); RCA also accepts AES3-ID »; « Audio formats - PCM audio of up to 24 bit word length at sampling rates of 44k1, 48k, 88k2, 96k, 176k4, 192k and DSD64 in DoP frame »; « Channel Status - ignored ». Note at the foot: « From its USB interface, CALLIA can play audio at sampling rates greater than 192kHz. At these higher rates a proprietary, high performance decimation filter is used to reduce the sampling rate by a factor of 2. For example, 384kHz will be converted down to 192kHz. » Overview page: « CALLIA supports linear PCM in 2's complement binary coding and, using the \"DSD over PCM\" (DOP) protocol, DSD at the original bit-rate (DSD64) and also at 2 x the original rate (DSD128). »; « On the S/P-DIF inputs, DOP can also be used, but only at the original DSD bit rate (DSD64) as these connections do not have enough bandwidth for DSD128. »; « The ASIO native DSD format is not currently supported. » Synchronization: « Clock recovery technology - Prism Sound CleverClox hybrid PLL »; « Synchronization sources: - Local or S/PDIF input (automatic selection) ». Rear panel: « S/PDIF inputs | RCA coaxial and TOSLINK optical formats »; « USB port | USB 2.0 B type device socket ». No converter chip part number, no filter name or count, and no oversampling bypass appears anywhere.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD128",
+    "dop": true,
+    "native_dsd": false,
+    "chip": "No part number is published anywhere on either page."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "dsd_max": "DSD128",
+      "dop_possible": true,
+      "dop_max": "DSD128",
+      "native_dsd_possible": false
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    }
+  },
+  "_conditions_de_Prism_Sound_aucune_clause_de_reutilisation": "Measured 2026-11-25. prismsound.io has NO terms-of-use page: /terms/, /terms-of-use/, /terms-and-conditions/, /legal/, /copyright/ and /disclaimer/ all 404, and the full 74-page sitemap lists only a privacy policy and one PDF. That PDF, « Audio Squadron Limited Terms & Conditions of Sale », is a 7-page image-only scan that was READ page by page: all 19 clauses, none forbidding the copying or reuse of content. Its nearest clauses do not reach website material - clause 14 disclaims warranties as to third-party IPR « in respect of the goods », clause 7's confidentiality binds Seller and Purchaser only and « expressly excludes public-domain information ». The only assertion of rights is the footer « (c) 2026 Audio Squadron Ltd. All rights reserved. » robots.txt on both hosts permits every product and spec path. So the sale terms were genuinely read and permit this; the website-use question has no document to answer it.",
+  "_le_fabricant_decline_lexactitude_de_ses_propres_chiffres": "Clause 6(b) of the sale terms, worth recording because no other maker in this catalogue states it: « The Seller shall use reasonable endeavours to ensure the accuracy of technical data or literature relating to the goods, but the Seller accepts no liability [...] for any error or omission in such technical data or literature. » And every spec page carries « In keeping with our policy of continual development, specifications are subject to amendment without notice. E&OE. » The figures are still the maker's published figures and still the best source there is - but this is the only brand that says in a contract that they may be wrong.",
+  "_ENVOYER_384_kHz_ICI_LE_FAIT_REDESCENDRE_A_192": "« At these higher rates a proprietary, high performance decimation filter is used to reduce the sampling rate by a factor of 2. For example, 384kHz will be converted down to 192kHz. » The device ACCEPTS 384 and converts at 192. So an engine that upsamples to 384 to please this DAC has added a resampling stage on the host AND bought a second one inside the device, where 192 would have passed straight through. `pcm_max_hz` is 384000 because that is what the socket takes, and this gloss is the whole value of the record: the highest number a device accepts is not the number to send it. Second device today to say so - the Master 11 Singularity forces 4x oversampling above 192 - and the two together are the best argument in the catalogue that a ceiling and a recommendation are different facts.",
+  "_le_PREMIER_fabricant_a_dire_NON_au_DSD_natif_en_toutes_lettres": "« The ASIO native DSD format is not currently supported. » `native_dsd` is FALSE here, written from a maker's explicit denial rather than inferred from silence - the first such statement in the catalogue, after a hundred records where the field was left absent because nobody said. Paired with « using the \"DSD over PCM\" (DOP) protocol », it makes Callia the one device whose DSD transport is fully documented in both directions: DoP yes, native no, said by the maker.",
+  "_un_plafond_DSD_par_prise_avec_la_RAISON": "« On the S/P-DIF inputs, DOP can also be used, but only at the original DSD bit rate (DSD64) as these connections do not have enough bandwidth for DSD128. » DSD128 over USB, DSD64 over S/PDIF, and the maker explains why rather than just stating it. inputs.dop_max was registered for exactly this and this is the clearest instance: the limit is physical, it belongs to the socket, and no device-level figure could express it.",
+  "_le_rang_Analogue_Line_Inputs_decrit_la_SORTIE": "The performance accordion on this page is headed « Analogue Line Inputs » and Callia has no analogue inputs at all - every row inside it describes the analogue OUTPUT (output amplitude, output impedance, HF roll-off). A harvester trusting the heading would have filed a DAC's D/A figures as A/D figures. Nothing from that block is recorded as a fact; the catalogue holds no measurement field. Two further accordions on the page, « Microphone Preamplifiers » and « Physical », render as headings with no rows."
+}

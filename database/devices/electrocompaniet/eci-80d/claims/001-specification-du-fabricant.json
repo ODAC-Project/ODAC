@@ -1,0 +1,29 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://electrocompaniet.no/products/eci-80d",
+    "quote": "Electrocompaniet's own page for the ECI 80D, read 2026-11-25, section « TEKNISKE SPESIFIKASJONER ECI 80D ». Under « DIGITAL & STREAMING: »: « Optical input: PCM: 44.1kHz/16bit up to 192kHz/24bit »; « Coaxial input: PCM: 44.1kHz/16bit up to 192kHz/24bit »; « Bluetooth support: BT5.0, A2DP, SBC, AAC, aptX-HD ». Under « CONNECTIVITY: »: « Digital inputs: 2 coaxial, 3 optical »; « Analog inputs: 2 RCA »; « Service port: 1 USB »; « 12V trigger: 1 input, 1 output »; « Phono MM: 1 RCA ». There is NO « D/A converter » row on this page, no DSD figure, no converter chip, no filter name, and - despite the heading - no Ethernet, no Wi-Fi and no network protocol anywhere on it.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 192000,
+    "bits": 24
+  },
+  "inputs": {
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_les_conditions_dElectrocompaniet_ont_ete_lues_et_une_correction": "electrocompaniet.no WAS read on 2026-11-25 and carries no clause on copying, reproducing or reusing site content. One correction to an earlier note: a page TITLED « Vilkar for bruk » (terms of use) does exist, at /policies/terms-of-service - but its body is the Norwegian Consumer Authority's standard distance-selling contract, as its own first line says: « Dette kjopet er regulert av de nedenstaende standard salgsbetingelser for forbrukerkjop av varer over Internett. » Its 14 sections were read end to end; none concerns content. The only assertion of rights is the footer « (c)2021 ELECTROCOMPANIET ». robots.txt is « User-agent: * / Allow: / ». So the earlier note's conclusion stands while its premise was wrong: there IS a page by that name, and it is not website terms.",
+  "_la_forme_appariee_leve_lambiguite_que_le_V90_avait_creee": "« PCM: 44.1kHz/16bit up to 192kHz/24bit ». Each end of the range carries its own depth, so the pair cannot be misread - which is exactly what Musical Fidelity's V90-DAC got wrong the same day by writing « SPDIF 32-bit/192 kHz » for a 32 kHz to 192 kHz range. Nothing on Electrocompaniet's whole site uses the bare range form. Recorded because it shows the trap is a house style, not a law of the trade: a maker who writes both ends in full is unambiguous for free.",
+  "_aucune_ligne_de_convertisseur_sur_un_appareil_qui_convertit": "This page gives per-input ceilings and NO device-level converter row, the exact opposite of the ECI 6DX MKII's shape. So `pcm_max_hz` here is not read from a converter specification - it is the highest figure any input states, which happens to be what both inputs state. That is a weaker basis than a D/A row and it is said so here, because the two records look identical in the built artifact and were not established the same way.",
+  "_le_titre_DIGITAL_AND_STREAMING_ne_decrit_pas_cet_appareil": "The heading reads « DIGITAL & STREAMING » and the section contains no streaming of any kind: no Ethernet, no Wi-Fi, no protocol, no service. The only wireless transport named on the whole page is Bluetooth. So `kind` stays dac rather than network_player, against the heading's own word, because the rows beneath it describe no network. A harvester keying on section titles would have filed this as a streamer."
+}

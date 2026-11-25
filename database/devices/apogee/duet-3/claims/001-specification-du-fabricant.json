@@ -3,7 +3,7 @@
     "kind": "datasheet",
     "url": "https://apogeedigital.com/product/apogee-duet-3/",
     "quote": "Apogee Digital's own page for the Duet 3, read 2026-11-25. « Up to 24 bit / 192kHz recording ». Under the heading « D/A CONVERSION »: « Rel. THD + N : -110dB »; « Dyn. Range: 125dB (A-weighted) ». The A/D path is given separately: « Rel. THD + N: -103dB »; « Dyn. Range: 119dB (A-weighted) ». No digital I/O beyond USB-C is listed - no ADAT, no S/PDIF. No DAC chip, no DSD figure, no digital filter row.",
-    "read_on": "2026-11-24"
+    "read_on": "2026-11-25"
   },
   "source_names_subject": true,
   "submitted_by": "curator",

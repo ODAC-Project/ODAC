@@ -1,0 +1,35 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.xduoo.net/product/link2-max",
+    "quote": "xDuoo's own page for the Link2 Max on its English site, read 2026-11-25. « Input Interface  USB Type-C »; « USB System  UAC1.0 / UAC2.0 »; « Headphone Output  3.5mm unbalanced + 4.4mm balanced »; « Sampling Rate  PCM up to 32bit/768kHz; DSD up to DSD256 / 11.2MHz »; « Output Power  Balanced: 550mW@32ohm; Unbalanced: 320mW@32ohm ». Prose: « An OLED display, five filters, gain control and 100-level digital volume keep everyday playback visible and adjustable. » FAQ: « Can it provide a coaxial digital output? - S/PDIF coaxial output shared with 3.5mm interface ». Chips: « dual CS43198 », amplifiers « dual SGM8262 ».",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD256",
+    "family": "cirrus",
+    "chip": "« dual CS43198 », with « dual SGM8262 » output amplifiers.",
+    "device_settings": [
+      {
+        "setting": "Digital filter",
+        "set_to": "unknown",
+        "why": "« five filters », counted and unnamed, in a sentence about an OLED display and a volume control. The second and last filter mention in xDuoo's catalogue. No non-oversampling option is stated, so `correctable` is not written."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD256"
+    }
+  },
+  "_la_source_est_le_site_ANGLAIS_dont_les_conditions_ont_ete_lues": "Every xDuoo record is sourced to xduoo.net, whose /terms page was read in full on 2026-11-25 and forbids nothing beyond misuse of the site itself: « Do not misuse the website, interfere with its operation or attempt unauthorized access to website or customer information. » The maker's Chinese site, xduoo.com, publishes no terms page at all AND publishes every specification as a JPEG image, so nothing is taken from it. See the brand file for both findings in full.",
+  "_pourquoi_native_dsd_nest_PAS_ecrit_ici": "The page carries a sentence of the form « DSD512 support enables native high-resolution music playback », and so do more than twenty other xduoo.net pages, word for word, including a passive R2R module and a portable player. It is generated template text. A claim made identically about twenty different products is a claim about none of them, so `native_dsd` is absent on every xDuoo record despite the word appearing on nearly all of them.",
+  "_le_coaxial_sort_par_la_prise_casque": "« S/PDIF coaxial output shared with 3.5mm interface ». A digital output on the headphone jack - so the word coaxial appears on this page and the device has no coaxial INPUT. Third xDuoo record where that word belongs to an output, after the MU-601 and the DT-01."
+}

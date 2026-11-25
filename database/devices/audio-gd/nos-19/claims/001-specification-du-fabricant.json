@@ -1,0 +1,40 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "http://www.audio-gd.com/Pro/NOS/NOS19/NOS19EN.htm",
+    "quote": "Audio-gd's own pages for the NOS 19, read 2026-11-25 - the product page plus its sibling spec file. « NOS 19 PCM1704UK & DSP built in 32bit / 768K support 32bit / 384K Asynchronous Transfer XMOS U208 Chip »; « The NOS 19 is a fully discrete design. Applies the 2 Pieces Expensive high-end grade PCM1704UK which can support up to 32 Bit / 192KHz through USB / I2S input . The SPDIF input support up to 96K / 24 BIT »; « 4 digital inputs: USB / Optical / Coaxial /HDMI Support up to 384K / 32 BIT through USB Best sound SPDIF interface chip DIR9001 built in . » Spec row: « Support Sampling | USB and I2S modes: 44.1kHz, 48kHz, 88.2kHz, 96kHz, 176.4kHz , 192kHz, 352kHz, 384kHz / Coaxial and Optical mode: 44.1kHz, 48kHz, 88.2kHz, 96kHz » - no DSD row.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ti_burr_brown",
+    "technology": "r2r",
+    "dsd_max": "none",
+    "correctable": true,
+    "device_settings": [
+      {
+        "setting": "Oversampling",
+        "set_to": "NOS (non-oversampling)",
+        "why": "The whole NOS line is built around it: « applied -6db /oct passive analog filter , you can hear the wonderful sound of the NOS » - the maker names what is left in the path when the digital filter is gone, which is the precondition `correctable` requires."
+      }
+    ],
+    "chip": "« Applies the 2 Pieces Expensive high-end grade PCM1704UK », S/PDIF receiver « DIR9001 », USB interface « XMOS U208 »."
+  },
+  "inputs": {
+    "spdif_coax": {
+      "pcm_max_hz": 96000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000,
+      "bits": 24
+    }
+  },
+  "_conditions_NON_CONCLUANTES_chez_Audio_gd": "No terms page found on audio-gd.com, so no prohibition could be checked - which is NOT the same as finding no prohibition. See the R-1 MK3 record for the full measurement; the only assertion of rights anywhere is the footer « Copyright(C) 2004 www.audio-gd.com All Rights Reserved ».",
+  "_NOS_ici_veut_dire_NON_SUR_ECHANTILLONNE_et_cest_PROUVE": "109 pages of this site were searched for « New Old Stock » and « N.O.S. »: zero hits, and one page defines the term - « \"NOS\" stands for \"Non Oversampling\". » So the models carrying NOS in their name are non-oversampling designs, not valve stock.",
+  "_une_puce_en_echelle_nest_pas_une_echelle_discrete": "The PCM1704UK is a Burr-Brown R-2R ladder in a package - a ladder converter, but a CHIP, not the discrete resistor networks of this maker's R-series. `family` is ti_burr_brown and `technology` is r2r, which is the one combination in the catalogue where those two fields disagree in spirit and are both correct. Kept apart from the R-series deliberately: a consumer choosing on `technology` alone would see no difference between a PCM1704 and eight hand-matched resistor groups.",
+  "_TROIS_plafonds_differents_pour_la_meme_entree_USB": "768 kHz in the headline (« DSP built in 32bit / 768K »), 192 kHz in the body (« which can support up to 32 Bit / 192KHz through USB / I2S input »), 384 kHz in the spec table and again in the input list (« Support up to 384K / 32 BIT through USB »). Three figures, three sections, one socket. `pcm_max_hz` is ABSENT on this record and inputs.usb is absent too - not unknown, absent, because the maker has published three answers and the catalogue's job is not to arbitrate between them. Only the S/PDIF figure is recorded, 96 kHz, which the body and the table agree on. First record in the catalogue where a device's headline number is omitted BECAUSE the maker said too much.",
+  "_fully_discrete_ne_decrit_PAS_le_convertisseur_ici": "« The NOS 19 is a fully discrete design. Applies the 2 Pieces Expensive high-end grade PCM1704UK » - two sentences, side by side, and the second contradicts the obvious reading of the first. The converter is a chip; « fully discrete » describes the analogue stages around it. Read alone, that first sentence would have put this device in the discrete-ladder family beside the R-series. It is the exact error the Nagra over-read was withdrawn for, and the only defence is reading the next line."
+}

@@ -1,0 +1,30 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.xduoo.net/product/mu-602",
+    "quote": "xDuoo's own page for the MU-602 on its English site, read 2026-11-25. Hero chip row: « PCM1793 24-bit / 192kHz Bass + Treble 2 x RCA ». Technical Data: « Input Interface  Optical and coaxial digital inputs »; « Headphone Output  Two RCA analog outputs »; « Sampling Rate  24-bit / 192kHz ». Key Features: « Optical and coaxial decoding reaches 24-bit/192kHz. » « PCM1793 conversion supports the compact digital front end. ». No digital filter is NAMED, no oversampling bypass and no non-oversampling mode is mentioned, and DoP is not mentioned - across this maker's whole catalogue DoP appears on one page only, the LINK10.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 192000,
+    "bits": 24,
+    "family": "ti_burr_brown",
+    "chip": "« PCM1793 »."
+  },
+  "inputs": {
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_la_source_est_le_site_ANGLAIS_dont_les_conditions_ont_ete_lues": "Every xDuoo record is sourced to xduoo.net, whose /terms page was read in full on 2026-11-25 and forbids nothing beyond misuse of the site itself: « Do not misuse the website, interfere with its operation or attempt unauthorized access to website or customer information. » The maker's Chinese site, xduoo.com, publishes no terms page at all AND publishes every specification as a JPEG image, so nothing is taken from it. See the brand file for both findings in full.",
+  "_pourquoi_native_dsd_nest_PAS_ecrit_ici": "The page carries a sentence of the form « DSD512 support enables native high-resolution music playback », and so do more than twenty other xduoo.net pages, word for word, including a passive R2R module and a portable player. It is generated template text. A claim made identically about twenty different products is a claim about none of them, so `native_dsd` is absent on every xDuoo record despite the word appearing on nearly all of them.",
+  "_LA_SEULE_page_xDuoo_qui_donne_un_plafond_a_loptique_et_au_coaxial": "« Optical and coaxial decoding reaches 24-bit/192kHz » - the sockets are named and the figure is theirs. One page out of some forty on this maker's site does this, and it is the one model that has no USB input at all, so there was nothing else the figure could have belonged to. Which is the point: this maker states a per-socket ceiling only where ambiguity is impossible. Both sockets get the same figure, not different ones. No DSD figure appears on the page, so `dsd_max` is absent."
+}

@@ -1,0 +1,35 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.prismsound.io/products/ada-128/",
+    "quote": "Prism Sound's own page for the Dream ADA-128, read 2026-11-25. There is no separate tech-specs URL: the tables sit inside collapsed toggles on the product page itself, invisible to a plain text read, and were taken from the page source. Line Output Module: « Supported sample rates - 44.1kHz, 48.0kHz, 88.2kHz, 96kHz, 176.4kHz, 192kHz / Pullup: 0.1%, 4.16%; pulldown: 0.1%, 4.0% »; « Wordlength - 32 bits »; « Verifile - Tag checking (signal integrity verification) »; « DSP functions - Amplitude calibration and trim »; « Output amplitude - 0dBFS = 24dBu to 3dBu in 1dB steps »; « Total harmonic distortion - -114dB (< 0.0002%) »; « Dynamic range - 123dB (residual at -60dBFS), 125dB with A-weighting filter »; « Note - Unless otherwise noted: specifications apply at fs = 48kHz and 18dBu line-up setting ». AES3 I/O Module: « Supported sample rates - 44.1kHz, 48.0kHz, 88.2kHz, 96kHz, 176.4kHz, 192kHz »; « Wordlength - 24 bits »; « Formats - AES3 (110ohm I/O impedance, professional Channel Status) / S/PDIF (75ohm I/O impedance, consumer Channel Status) / AES3id (110ohm I/O impedance, professional Channel Status) / Format is software-selectable per carrier ». Dante Host Module: « Wordlength - 32 bits ». MADI Host Module's spec table reads only « [Under development] ». Chassis: « CPU Module with: 1xGbE RJ45, 2xUSB host, 1xUSB device, 1xHDMI » and the page's own rear-panel prose, « 5. Computer connections are for firmware updates and future developments. » DSD, DoP and SACD appear nowhere.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 192000,
+    "bits": 32,
+    "dsd_max": "none",
+    "chip": "No part number is published.",
+    "device_settings": [
+      {
+        "setting": "I/O modules fitted",
+        "set_to": "unknown",
+        "why": "16 I/O module slots plus 4 host-or-I/O slots. What this chassis accepts is whatever is in them, and the record can only name the modules the maker documents."
+      }
+    ]
+  },
+  "inputs": {
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_conditions_de_Prism_Sound_aucune_clause_de_reutilisation": "Measured 2026-11-25. prismsound.io has NO terms-of-use page: /terms/, /terms-of-use/, /terms-and-conditions/, /legal/, /copyright/ and /disclaimer/ all 404, and the full 74-page sitemap lists only a privacy policy and one PDF. That PDF, « Audio Squadron Limited Terms & Conditions of Sale », is a 7-page image-only scan that was READ page by page: all 19 clauses, none forbidding the copying or reuse of content. Its nearest clauses do not reach website material - clause 14 disclaims warranties as to third-party IPR « in respect of the goods », clause 7's confidentiality binds Seller and Purchaser only and « expressly excludes public-domain information ». The only assertion of rights is the footer « (c) 2026 Audio Squadron Ltd. All rights reserved. » robots.txt on both hosts permits every product and spec path. So the sale terms were genuinely read and permit this; the website-use question has no document to answer it.",
+  "_le_fabricant_decline_lexactitude_de_ses_propres_chiffres": "Clause 6(b) of the sale terms, worth recording because no other maker in this catalogue states it: « The Seller shall use reasonable endeavours to ensure the accuracy of technical data or literature relating to the goods, but the Seller accepts no liability [...] for any error or omission in such technical data or literature. » And every spec page carries « In keeping with our policy of continual development, specifications are subject to amendment without notice. E&OE. » The figures are still the maker's published figures and still the best source there is - but this is the only brand that says in a contract that they may be wrong.",
+  "_trente_deux_bits_sur_le_module_analogique_et_vingt_quatre_sur_lAES": "« Wordlength - 32 bits » on the Line Output Module and the Dante Host Module; « Wordlength - 24 bits » on the AES3 I/O Module and the Pro Tools HDX module. Two depths inside one chassis, decided by which card the signal enters through. `bits` takes 32, the deepest the device handles, while inputs.aes_ebu takes 24 - and the gap is not an error but the AES3 standard's own limit. First record in the catalogue where the device depth exceeds every input depth for a documented reason.",
+  "_un_module_MADI_dont_le_tableau_dit_sous_developpement": "« [Under development] », printed where the spec table should be. And the prose above it gives a figure the table cannot confirm: « up to 64x64 channels at 192kHz » per card in the headline, against « 16x16 channels at 192kHz » per SFP module in a bullet, reconciled only by the footnote « irrespective of sample rate the maximum channel could per card is 64x64 channels » - « channel could » being the page's typo for channel count. Four SFPs at 16 channels each make the 64. Nothing about MADI is recorded: no interface key, no figure, because the maker says the specification does not exist yet.",
+  "_les_ports_USB_de_ce_chassis_ne_sont_PAS_audio": "« 2xUSB host, 1xUSB device, 1xHDMI » on the CPU Module, and the page says what they are for: « Computer connections are for firmware updates and future developments. » So a 2U converter with three USB sockets and an HDMI has no USB audio input and no HDMI audio input. Recorded because every other reading of that row is wrong, and because the HDMI trap has now appeared three times today - here, and as a video output on the Electrocompaniet ECM 2."
+}

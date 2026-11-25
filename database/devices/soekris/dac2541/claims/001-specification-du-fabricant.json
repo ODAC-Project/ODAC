@@ -3,7 +3,7 @@
     "kind": "datasheet",
     "url": "https://soekris.dk/dac2541.html",
     "quote": "Soekris Engineering's own page for the dac2541, read 2026-11-25. Self-description: « High End Discrete R-2R Sign Magnitude DAC / HeadAmp ». On the ladder: « It have the fantastic clean and natural sound of a 28 bit R-2R sign magnitude DAC, built with over two hundred tiny and precise thin film resistors. » - the grammar is the page's. « Resistor Precision 28 bit, 0.01% - 0.05% Resistors ». Inputs: « SPDIF / AES / Toslink Inputs Up to 24 bit / 192 Khz »; « USB Input PCM Up to 24 Bit / 384 Ksps »; « USB Input DSD Up to DoP-128 and DSD-256 ». Filters: « with a set of selectable advanced digital filters and a digital volume control. » Measurements: « THD @ -1 dB <0.004% »; « S/N 20 Khz Bandwith >126 dB unweighted » - the misspelling is the page's. The word NOS appears nowhere on the page.",
-    "read_on": "2026-11-24"
+    "read_on": "2026-11-25"
   },
   "source_names_subject": true,
   "submitted_by": "curator",

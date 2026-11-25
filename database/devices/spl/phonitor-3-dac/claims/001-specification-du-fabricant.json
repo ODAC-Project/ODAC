@@ -3,7 +3,7 @@
     "kind": "datasheet",
     "url": "https://spl.audio/de/spl-produkt/phonitor-3-dac/",
     "quote": "SPL's own page for the Phonitor 3 DAC, read 2026-11-25. The page is German-only. On USB: « Ueber USB wandelt der Phonitor 3 DAC PCM-Audio-Signale mit einer Aufloesung von 32 Bit und einer Abtastrate von bis zu 768 kHz sowie DSD-Signale mit einer Aufloesung von bis zu DSD256. » On the S/PDIF coaxial and optical inputs and on AES/EBU, each described in its own sentence: « mit Abtastraten von bis zu 192 kHz und einer Wortbreite von 16 Bit bis 24 Bit empfangen » and, for AES/EBU, « maximalen Abtastrate von 192 kHz und einer Wortbreite von 16 Bit bis 24 Bit ». On the converter: « Als Wandler-Chip im Digital/Analog-Wandler des Phonitor 3 DAC kommt ... der DAC768v2 ... der AKM AK4493 SEQ VELVETSOUND(TM) ». On DSD in the DAC768v2 section: « Auch Direct Stream Digital wird bis zu einer Aufloesung von DSD4 bzw. DSD256 unterstuetzt. » On the analogue stage: « Die 120V-Technologie arbeitet mit +/-60 V » and an analogue reconstruction filter « SLP120 (Super Low-Pass) », « ein analogen 'Super Low-Pass'-Filter mit 120V-Technologie ». spl.audio has no prohibition: the Impressum and the AGB were both READ and neither restricts copying, reproduction or extraction; the only rights line is the footer « (c) 2026 SPL electronics GmbH ».",
-    "read_on": "2026-11-24"
+    "read_on": "2026-11-25"
   },
   "source_names_subject": true,
   "submitted_by": "curator",

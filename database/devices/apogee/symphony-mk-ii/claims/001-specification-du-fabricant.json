@@ -3,7 +3,7 @@
     "kind": "datasheet",
     "url": "https://apogeedigital.com/product/symphony-mk-ii/",
     "quote": "Apogee Digital's own page for the Symphony Mk II, read 2026-11-25. The page states NO maximum sample rate and NO bit depth anywhere. Connectivity: « Connectivity options: Pro Tools HD, Dante, Thunderbolt, & SoundGrid ». D/A rows: « THD+N:-119dB @ 21 dBu (0.00014%) unweighted »; « Dynamic Range: 126 dB A weighted »; « Frequency Response at 44.1 kHz: dc to 20 kHz (+/- 0.05dB) ». An FAQ entry reads « The new 16x16 SE I/O module is the first Apogee product to feature the ESS 9822pro A/D chip », which names an A/D part; the page names no D/A chip. No DSD figure and no digital filter row.",
-    "read_on": "2026-11-24"
+    "read_on": "2026-11-25"
   },
   "source_names_subject": true,
   "submitted_by": "curator",

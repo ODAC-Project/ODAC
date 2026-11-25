@@ -3,7 +3,7 @@
     "kind": "datasheet",
     "url": "https://www.arcam.co.uk/product,streamers,st5.htm",
     "quote": "Arcam's own page for the ST5, read 2026-11-25. Overview: « Hi-Res Audio - up to 24 bit / 192 kHz ». « Supported Hi-res Bit depth: 16, 24 »; « Supported samples rates (kHz): 44.1, 48, 88.2, 96, 176.4, 192 » - the plural « samples » is the page's; « Supported Hi-res media: FLAC, WAS (LPCM), MQA, AAC, ALAC, AIFF, DSD (128) » - « WAS » is the page's, presumably WAV. « Digital Outputs: 1x Coaxial (RCA), 1x Optical (Toslink) » - OUTPUTS, and no digital input is listed. Converter: « an ESS ES9018 high resolution DAC with time domain jitter elimination ». The only filter word is the label « Frequency response (fi lter 1): 20Hz-20kHz +/- 0.05dB », where the broken word is the page's.",
-    "read_on": "2026-11-24"
+    "read_on": "2026-11-25"
   },
   "source_names_subject": true,
   "submitted_by": "curator",

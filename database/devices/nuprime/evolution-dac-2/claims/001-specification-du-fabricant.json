@@ -3,7 +3,7 @@
     "kind": "datasheet",
     "url": "https://nuprimeaudio.com/product/evolution-dac-2/",
     "quote": "NuPrime's own page for the Evolution DAC-2, read 2026-11-25, input list: « USB: Type B 2.0 Hi-Speed, Windows / Supports PCM 44.1KHz ~ 768KHz / DSD 512 and MQA. »; « Type B 2.0 Hi-Speed, Mac / Supports PCM 44.1KHz ~ 768KHz/24Bit and DOP 256. »; « COAXIAL 1: Supports PCM 44.1KHz ~ 384KHz / DOP 64, 128 and MQA. »; « OPTICAL 1: Supports PCM 44.1KHz ~ 192KHz / DOP 64 and MQA. »; « AES / EBU: Supports PCM 44.1KHz ~ 384KHz / DOP 128 and MQA. »; « IIS/DSD 1 & 2: Supports PCM 44.1KHz ~ 384KHz and DSD 256 data streams. »; « COAXIAL 2 / OPTICAL 2: Supports PCM 44.1KHz ~ 192KHz / DOP 64 and MQA. »; « EXTENSION: Supports PCM 44.1KHz ~ 192KHz/24Bit. » On DSD: « USB Supports DSD native playback by ASIO and DoP method. DSD is decoded natively with the same sample rate as the input source. » Converter: « NuPrime Evolution DAC-2 utilizes dual ESS Technology 32-bit audio DAC ESS9038Q2M ». On resampling: « NuPrime PSRC IC chip provides sample rate up/down conversion processing, from PCM 44.1kHz to PCM 768kHz and DSD64 to DSD512 (including PCM to/from DSD). » No digital filter, filter mode or NOS row appears.",
-    "read_on": "2026-11-24"
+    "read_on": "2026-11-25"
   },
   "source_names_subject": true,
   "submitted_by": "curator",

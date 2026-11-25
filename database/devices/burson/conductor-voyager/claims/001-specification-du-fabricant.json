@@ -3,7 +3,7 @@
     "kind": "datasheet",
     "url": "https://bursonaudio.com/products/conductor-voyager/",
     "quote": "Burson Audio's own page for the Conductor Voyager, read 2026-11-25. Inputs row: « 2 x XLR | 2 x RCA | USB | Optical Toslink | Bluetooth 5.0 | Microphone ». Rate rows: « PCM Support | PCM <= 768 kHz @ 16, 24 or 32 bits »; « Native DSD 64 / 128 / 256 / 512 »; « DSD over PCM | DoP64 / DoP128 / DoP256 / DoP512 »; « COAX & Toslink / SPDIF | Up to 24 bit 192 kHz ». Body text: « At the heart of the Conductor Voyager is the ESS9039PRO DAC »; « The ESS9039PRO DAC offers 24 filter and path settings »; « USB-C XMOS interface: Supports native DSD512 and 32-bit/786kHz PCM » - the page prints 786, not 768.",
-    "read_on": "2026-11-24"
+    "read_on": "2026-11-25"
   },
   "source_names_subject": true,
   "submitted_by": "curator",

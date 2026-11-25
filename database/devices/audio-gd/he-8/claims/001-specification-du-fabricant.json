@@ -1,0 +1,51 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "http://www.audio-gd.com/HE/HE-8/HE8EN.htm",
+    "quote": "Audio-gd's own pages for the HE-8, read 2026-11-25. « HE-8 For who got love on PCM1704UK to order Regenerative power supply ... Apply 4 pcs the most real like sound DA chip PCM1704UK Fully discrete real balanced current transmition design 2 pc ultra high frequency 90/98 MHz Accusilicon 318B femtosecond ». And, in a « Please note » block: « Please note: The PCM1704UK can not support DSD playback. User need conversion the DSD to PCM in the source device. » Spec row: « Support Sampling | USB / I2S mode: 44.1kHz - 384kHz /32Bit / Coaxial mode: 44.1kHz - 192kHz /24Bit / Optical mode: 44.1kHz - 192kHz /24Bit » - there is NO DSD row in the table, consistent with the note. Six inputs: AES, BNC coaxial, RCA coaxial, optical, HDMI-IIS, USB. The N0 / N1 / O2 / O4 / O8 mode block is present in the manual.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ti_burr_brown",
+    "technology": "r2r",
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "none",
+    "dsd_reconverted_to_pcm": false,
+    "correctable": true,
+    "chip": "« Apply 4 pcs the most real like sound DA chip PCM1704UK », with « 2 pc ultra high frequency 90/98 MHz Accusilicon 318B femtosecond » clocks.",
+    "device_settings": [
+      {
+        "setting": "OS / NOS mode",
+        "set_to": "N0 or N1 (non-oversampling)",
+        "why": "« N0 : New NOS mode. N1 : Basic NOS mode. O2 : 2X oversampling O4 : 4X oversampling O8 : 8X oversampling ». A chip-ladder DAC that the user can switch out of oversampling - which makes this record and its HE-27 sibling the only PCM1704 devices in the catalogue carrying `correctable`."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32
+    },
+    "i2s": {
+      "pcm_max_hz": 384000,
+      "bits": 32
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "aes_ebu": {},
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_conditions_NON_CONCLUANTES_chez_Audio_gd": "No terms page found on audio-gd.com, so no prohibition could be checked - which is NOT the same as finding no prohibition. See the R-1 MK3 record for the full measurement; the only assertion of rights anywhere is the footer « Copyright(C) 2004 www.audio-gd.com All Rights Reserved ».",
+  "_NOS_ici_veut_dire_NON_SUR_ECHANTILLONNE_et_cest_PROUVE": "109 pages of this site were searched for « New Old Stock » and « N.O.S. »: zero hits, and one page defines the term - « \"NOS\" stands for \"Non Oversampling\". » So the models carrying NOS in their name are non-oversampling designs, not valve stock.",
+  "_une_puce_en_echelle_nest_pas_une_echelle_discrete": "The PCM1704UK is a Burr-Brown R-2R ladder in a package - a ladder converter, but a CHIP, not the discrete resistor networks of this maker's R-series. `family` is ti_burr_brown and `technology` is r2r, which is the one combination in the catalogue where those two fields disagree in spirit and are both correct. Kept apart from the R-series deliberately: a consumer choosing on `technology` alone would see no difference between a PCM1704 and eight hand-matched resistor groups.",
+  "_le_fabricant_REFUSE_le_DSD_et_dit_quoi_faire_a_la_place": "« The PCM1704UK can not support DSD playback. User need conversion the DSD to PCM in the source device. » `dsd_max` takes the value none on the strongest evidence in the catalogue: not an absence from a spec sheet, but a maker stating the limitation and naming the workaround. And `dsd_reconverted_to_pcm` is FALSE, which matters more than it looks: this device does not silently convert DSD to PCM, it refuses the format and tells the owner to convert it upstream. Every other record in the catalogue that cannot take DSD is silent about it; this one tells a consumer's engine exactly what to do."
+}

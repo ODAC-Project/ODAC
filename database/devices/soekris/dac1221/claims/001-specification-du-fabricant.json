@@ -3,7 +3,7 @@
     "kind": "datasheet",
     "url": "https://soekris.dk/dac1221.html",
     "quote": "Soekris Engineering's own page for the dac1221, read 2026-11-25. Self-description: « Entry Level Discrete R-2R Sign Magnitude DAC ». On the ladder: « It have the fantastic clean and natural sound of a 26 bit R-2R sign magnitude DAC, built with two hundred tiny and very precise thin film resistors ». « Resistor Precision 26 bit, 0.02% - 0.05% Resistors ». Inputs: « SPDIF / Toslink Inputs Up to 24 bit / 192 Khz »; « USB Input PCM Up to 24 Bit / 384 Ksps »; « USB Input DSD Up to DoP-128 and DSD-256 ». Filters: « with a set of selectable advanced digital filters and a digital volume control. » Measurement: « THD @ -1 dB <0.008% ». The word NOS appears nowhere on the page, and there is no AES/EBU input.",
-    "read_on": "2026-11-24"
+    "read_on": "2026-11-25"
   },
   "source_names_subject": true,
   "submitted_by": "curator",

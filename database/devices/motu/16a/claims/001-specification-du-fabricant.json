@@ -3,7 +3,7 @@
     "kind": "datasheet",
     "url": "https://motu.com/products/16a",
     "quote": "MOTU's own page for the 16A, read 2026-11-25. Converter: « Renowned ESS Sabre32(TM) DAC technology delivers 125 dB dynamic range and extremely low harmonic distortion. » - no part number and no THD figure. Rates: « 256 channels of computer I/O (128 in and 128 out) at sample rates up to 96 kHz », stated for the Thunderbolt and USB4 connections, with no bit depth. ADAT: « Two optical banks provide 16 channels of ADAT optical at 48 kHz, 8 channels of S/MUX optical I/O at 96 kHz, with optional stereo TOSLink at rates up to 96kHz. »; « 2 x 8-channel ADAT optical ports ». Mixer: « 64-channel mixing with 32-bit floating point precision » - the mixer, not the converter. No DSD figure and no digital filter row.",
-    "read_on": "2026-11-24"
+    "read_on": "2026-11-25"
   },
   "source_names_subject": true,
   "submitted_by": "curator",

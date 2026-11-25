@@ -3,7 +3,7 @@
     "kind": "datasheet",
     "url": "https://aurender.com/home/a1/",
     "quote": "Aurender's own page for the A1 15th Anniversary, read 2026-11-25. Digital Inputs: « Coaxial/ Optical/ USB » = « 1x/ 1x/ 1x »; « AES-EBU IN » = « 1x »; « I2S IN » = « 1x »; « USB IN » = « 1x ». « DAC » = « AKM4499EX Quad (2x/CH) », and the prose « Features four AKM4499EX DAC chips ». Decoding spec: « PCM 768Khz/ DSD512 ». No digital filter, oversampling or NOS row appears unless quoted above, and the page attaches no sample rate to any digital input.",
-    "read_on": "2026-11-24"
+    "read_on": "2026-11-25"
   },
   "source_names_subject": true,
   "submitted_by": "curator",

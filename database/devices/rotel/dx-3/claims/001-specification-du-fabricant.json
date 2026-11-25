@@ -3,7 +3,7 @@
     "kind": "datasheet",
     "url": "https://www.rotel.com/product/dx-3",
     "quote": "Rotel's own page for the DX-3, read 2026-11-25. « PC-USB » / « USB Audio Class 2 (up to 32-bit/384kHz)* » with the footnote « *Driver Installation Required ». « Coax/Optical Digital Input Signals » / « SPDIF LPCM (Up to 24-bit/192kHz) ». DAC: « ESS ES9028PRO DAC (32-bit/768kHz) ». DSD: « Support DSD(up to 11.2 M) and DoP (up to 5.6 M) » - the page does not say which path is native. On filtering it says only « the analogue output filters are implemented externally », which is the analogue stage. The product is a headphone amplifier with a converter.",
-    "read_on": "2026-11-24"
+    "read_on": "2026-11-25"
   },
   "source_names_subject": true,
   "submitted_by": "curator",

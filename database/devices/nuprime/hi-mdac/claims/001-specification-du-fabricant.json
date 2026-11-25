@@ -3,7 +3,7 @@
     "kind": "datasheet",
     "url": "https://nuprimeaudio.com/product/hi-mdac/",
     "quote": "NuPrime's own page for the Hi-mDAC, read 2026-11-25 in full: « Input: 1 X USB (32-bit/384kHz & DSD256 decoding) »; « Output: 3.5mm analog or 3.5mm optical (PCM 192kHz, DoP64) »; « 32-bit/384kHz PCM and native DSD 256 decoding ». Converter: « Hi-mDAC utilizes a new chip CS43131 from Cirrus Logic. » Filters: « the CS43131 is designed with proprietary digital-interpolation filters that support five selectable digital filter responses. Filtering options include low group delay with pseudo-linear phase and a fast or slow roll-off. » Also « Asynchronous transfer mode for doubled jitter-reduction at data input and over-sampling filter stages ». The word NOS does not appear.",
-    "read_on": "2026-11-24"
+    "read_on": "2026-11-25"
   },
   "source_names_subject": true,
   "submitted_by": "curator",

@@ -1,0 +1,23 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.xduoo.net/product/mh-02",
+    "quote": "xDuoo's own page for the MH-02 on its English site, read 2026-11-25. Hero chip row: « CS43131 6J1 x 2 1300mW Class A ». Technical Data: « Input Interface  USB audio »; « Sampling Rate  PCM 384kHz / DSD256 »; « Output Power  1300mW ». Key Features: « CS43131 conversion handles high-resolution USB audio. ». No digital filter is NAMED, no oversampling bypass and no non-oversampling mode is mentioned, and DoP is not mentioned - across this maker's whole catalogue DoP appears on one page only, the LINK10.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 384000,
+    "dsd_max": "DSD256",
+    "family": "cirrus",
+    "chip": "« CS43131 », with two « 6J1 » valves."
+  },
+  "inputs": {
+    "usb": {}
+  },
+  "_la_source_est_le_site_ANGLAIS_dont_les_conditions_ont_ete_lues": "Every xDuoo record is sourced to xduoo.net, whose /terms page was read in full on 2026-11-25 and forbids nothing beyond misuse of the site itself: « Do not misuse the website, interfere with its operation or attempt unauthorized access to website or customer information. » The maker's Chinese site, xduoo.com, publishes no terms page at all AND publishes every specification as a JPEG image, so nothing is taken from it. See the brand file for both findings in full.",
+  "_pourquoi_native_dsd_nest_PAS_ecrit_ici": "The page carries a sentence of the form « DSD512 support enables native high-resolution music playback », and so do more than twenty other xduoo.net pages, word for word, including a passive R2R module and a portable player. It is generated template text. A claim made identically about twenty different products is a claim about none of them, so `native_dsd` is absent on every xDuoo record despite the word appearing on nearly all of them.",
+  "_une_seule_entree_numerique_donc_aucune_question_par_prise": "USB is the only digital input. So the device figure and the input figure are necessarily the same thing, and the per-socket question that makes most of this maker's pages ambiguous does not arise. Also noted: « PCM 384kHz / DSD256 » appears in the Technical Highlights and NOT in the hero chip row, which on every other page of this site carries it."
+}

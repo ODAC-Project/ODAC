@@ -1,0 +1,26 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.xduoo.net/product/cdm-10",
+    "quote": "xDuoo's own page for the CDM-10 on its English site, read 2026-11-25. Hero chip row: « Dual CS43198 JAN6418 x 2 1000mW PCM 384kHz / DSD256 ». Technical Data: « Input Interface  CD playback and USB audio »; « Sampling Rate  PCM 384kHz / DSD256 »; « Output Power  1000mW ». Key Features: « USB decoding supports PCM 384kHz, DSD256 and MQA. » « Two JAN6418 tubes add a selectable tube listening mode. ». No digital filter is NAMED, no oversampling bypass and no non-oversampling mode is mentioned, and DoP is not mentioned - across this maker's whole catalogue DoP appears on one page only, the LINK10.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 384000,
+    "dsd_max": "DSD256",
+    "family": "cirrus",
+    "chip": "« Dual CS43198 », with two « JAN6418 » valves."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "dsd_max": "DSD256"
+    }
+  },
+  "_la_source_est_le_site_ANGLAIS_dont_les_conditions_ont_ete_lues": "Every xDuoo record is sourced to xduoo.net, whose /terms page was read in full on 2026-11-25 and forbids nothing beyond misuse of the site itself: « Do not misuse the website, interfere with its operation or attempt unauthorized access to website or customer information. » The maker's Chinese site, xduoo.com, publishes no terms page at all AND publishes every specification as a JPEG image, so nothing is taken from it. See the brand file for both findings in full.",
+  "_pourquoi_native_dsd_nest_PAS_ecrit_ici": "The page carries a sentence of the form « DSD512 support enables native high-resolution music playback », and so do more than twenty other xduoo.net pages, word for word, including a passive R2R module and a portable player. It is generated template text. A claim made identically about twenty different products is a claim about none of them, so `native_dsd` is absent on every xDuoo record despite the word appearing on nearly all of them.",
+  "_un_chiffre_2x_4x_que_la_page_nexplique_jamais": "A Technical Highlights chip on this page reads « 2x / 4x » and its gloss is « Designed for practical everyday listening. » Nothing else on the page refers to it. It could be an oversampling ratio, it could be digital gain, it could be a disc read speed. It is NOT recorded as a filter or an oversampling setting, because recording it either way would be inventing the meaning of a number the maker left bare. Worth resolving from the manual: if it is oversampling, this device would be the first xDuoo with anything approaching a `correctable` state."
+}

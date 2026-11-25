@@ -3,7 +3,7 @@
     "kind": "datasheet",
     "url": "https://aurender.com/home/a1000/",
     "quote": "Aurender's own page for the A1000, read 2026-11-25. Digital Inputs: « COAX RCA, Optical/Toslink, USB Type B, ARC ». « DAC Chipset »: « AKM4490REQ Dual Mono ». « Analog Outputs Supported Format »: « Up to 384kHz/32bit PCM, DSD512 (Native) ». Digital Outputs: « COAX RCA, USB external DAC Support »; « USB Output Supported Format »: « Up to 768kHz/32bit PCM, DSD512 (Native), DSD256 (DoP) ». No digital filter, oversampling or NOS row appears unless quoted above, and the page attaches no sample rate to any digital input.",
-    "read_on": "2026-11-24"
+    "read_on": "2026-11-25"
   },
   "source_names_subject": true,
   "submitted_by": "curator",

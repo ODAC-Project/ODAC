@@ -1,0 +1,30 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://electrocompaniet.no/products/ecm-1-mkii-nettverksspiller",
+    "quote": "Electrocompaniet's own page for the ECM 1 MKII, read 2026-11-25, section « TEKNISKE SPESIFIKASJONER ECM 1 MK II »: « Upsampling rate - 192 kHz, 24 bit »; « Digital/Analog conversion - 192 kHz, 24 bit »; « Input sampling rate: »; « 2 x SPDIF Coax - 192 kHz, 24 bit »; « 2 x SPDIF TOSLink - 192 kHz, 24 bit »; « Network connection: - Wi-Fi or LAN »; « Internal drive: - Docking, self installation. 3.5\"/2.5\" - unlimited capacity. »; « Supported audio formats: - All popular formats including: WAV/WAVE, MP3, AAC+, Vorbis, ALAC, FLAC, APE, AIFF, WMA, up to 192kHZ/24bit, DSD, up to DSD 128 (5.6 MHz) »; « Supported control interfaces: - DLNA, UPnP, Android and iOS remote ». No USB audio input is listed. No converter chip, no filter, no DoP, no native DSD.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 192000,
+    "bits": 24,
+    "dsd_max": "DSD128"
+  },
+  "inputs": {
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_les_conditions_dElectrocompaniet_ont_ete_lues_et_une_correction": "electrocompaniet.no WAS read on 2026-11-25 and carries no clause on copying, reproducing or reusing site content. One correction to an earlier note: a page TITLED « Vilkar for bruk » (terms of use) does exist, at /policies/terms-of-service - but its body is the Norwegian Consumer Authority's standard distance-selling contract, as its own first line says: « Dette kjopet er regulert av de nedenstaende standard salgsbetingelser for forbrukerkjop av varer over Internett. » Its 14 sections were read end to end; none concerns content. The only assertion of rights is the footer « (c)2021 ELECTROCOMPANIET ». robots.txt is « User-agent: * / Allow: / ». So the earlier note's conclusion stands while its premise was wrong: there IS a page by that name, and it is not website terms.",
+  "_le_DSD128_est_ce_que_le_LECTEUR_joue_pas_ce_quune_entree_accepte": "« DSD, up to DSD 128 (5.6 MHz) » appears under « Supported formats » - the streamer's file-playback list - and NEVER in the D/A converter row. On this whole site that is the only DSD figure the maker ever prints, and it always sits there. So `dsd_max` is written on the DEVICE, because the device demonstrably converts DSD128 to analogue when it plays a file, and `inputs.dsd_max` is left absent on every socket, because no socket is given a DSD figure. The maker also states neither native DSD nor DoP anywhere on the site - the words do not appear - so both fields stay absent rather than guessed. This is the storage-versus-input distinction the iBasso report could not even attempt, answerable here only because the maker files the figure under a heading that names which one it means.",
+  "_trois_chiffres_qui_disent_trois_choses_et_saccordent": "« Upsampling rate - 192 kHz, 24 bit », « Digital/Analog conversion - 192 kHz, 24 bit » and the per-socket « Input sampling rate » rows all read 192/24 on this model. They are three different claims in three different sections - what the device resamples to, what it converts at, and what each socket accepts - and their agreement here is a fact about this device, not a reason to treat them as one figure. The ECD 2 prints the same three rows and its optical socket disagrees with the other two.",
+  "_un_lecteur_reseau_qui_porte_son_propre_disque": "« Internal drive: - Docking, self installation. 3.5\"/2.5\" - unlimited capacity. » A network player with a bay for a hard disk, which is why its DSD128 figure sits under supported FORMATS: most of what this device converts never crosses one of its inputs at all."
+}

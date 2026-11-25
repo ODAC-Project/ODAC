@@ -1,4 +1,7 @@
 {
   "id": "cocktail_audio",
-  "name": "Cocktail Audio"
+  "name": "Cocktail Audio",
+  "_the_domain_is_no_longer_the_makers": "Measured 2026-11-25. cocktailaudio.com was recorded as a TLS failure on an earlier run. It is not a TLS failure any more and it is not Cocktail Audio either: https://www.cocktailaudio.com/ redirects to https://cocktailaudio.com/ and serves a Korean discount-coupon page, whose title reads « 글룩 할인코드 코폰 11월 » - Klook discount codes, November. Not one link on it mentions a product, terms, legal or privacy. The domain has left the maker's hands. www.novatron.co.kr, the parent company, returned a browser connection error in the same session.",
+  "_why_this_is_recorded_rather_than_retried": "A dead maker domain is a different state from an unreachable one, and the difference matters to a catalogue whose every fact cites a URL. A record sourced to cocktailaudio.com would now point at a coupon site: the citation would resolve, return 200, and prove nothing. No record was ever written under this brand, so nothing in the base is affected - but the shape is worth naming, because the same thing will happen to a host the base DOES cite, and a 200 is not evidence that the page still says what it said. Nothing here is a judgement on Cocktail Audio's terms: the question was never asked, because there was nothing of the maker's to ask it of.",
+  "_added_on": "2026-11-25"
 }
