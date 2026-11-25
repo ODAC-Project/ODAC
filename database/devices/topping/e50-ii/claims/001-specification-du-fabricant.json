@@ -1,0 +1,63 @@
+{
+  "source": {
+    "kind": "manual",
+    "url": "https://dl.topping.audio/um/E50_II_V1.2_EN.pdf",
+    "quote": "TOPPING's own user manual for the E50 II (V1.2, English), downloaded 2026-11-25 from dl.topping.audio, reached through the Download tab of the product page at toppingaudio.com. Section « 10. Input range »: « USB IN | PCM 44.1kHz-768kHz/16bit-32bit | DSD DSD64-DSD512 (Native), DSD64-DSD256 (Dop) | PEQ 44.1kHz-192kHz/16bit-32bit »; « OPT/COAX IN (S/PDIF) | PCM 44.1kHz-192kHz/16bit-24bit | DSD DSD64 (Dop) | PEQ 44.1kHz-192kHz/16bit-24bit »; « OPT IN (ADAT) | PCM 44.1kHz-192kHz | PEQ 44.1kHz-192kHz »; « BT IN | AAC/SBC/APTX/APTX-Adaptive/APTX HD/LDAC | PEQ 44.1kHz-96kHz/16bit-24bit ». Section « 9. Attribute »: « Signal input USB/OPT/COAX/BT »; « Measured 15.5cm x 12.9cm x 4.1cm ». Rear panel: « 6. Optical input (Supports and automatically recognizes S/PDIF and ADAT protocols) ». On ADAT: « E50 II automatically detects S/PDIF and ADAT protocols from the optical input, with no manual switching required »; « Supports 44.1-192 kHz sample rates with automatic detection, no setup »; and a table « Relationship between ADAT sampling rate mode and ADAT input channel » giving « AdA1 » four channel pairs (1-2, 3-4, 5-6, 7-8), « AdA2 » two pairs, « AdA4 » one pair. PCM filter: « F-1 + PCM: Sharp Roll-off Filter »; « F-2 + PCM: Slow Roll-off Filter »; « F-3 + PCM: Short Delay Sharp Roll-off Filter (Default) »; « F-4 + PCM: Short Delay Slow Roll-off Filter »; « F-5 + PCM: Super Slow Roll-off Filter »; « F-6 + PCM: Low-dispersion Short Delay Filter ». DSD filter: « F-1 + DSD: 37kHz (Default) »; « F-2 + DSD: 65kHz », with the note « When the output amplitude is in high voltage mode, the DSD filter is fixed at F-1 and cannot be adjusted. » Decoding mode: « m-p: Preamp mode (volume adjustable) (Default) »; « m-d: DAC mode (volume not adjustable) ». Output amplitude: « U-L: Low (Default) »; « U-H: High ». The manual names no DAC chip. toppingaudio.com has no terms-of-use page at all.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "unknown",
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true,
+    "chip": "Not named anywhere in the manual.",
+    "device_settings": [
+      {
+        "setting": "PCM filter",
+        "set_to": "F-6: Low-dispersion Short Delay Filter",
+        "why": "Six named filters. F-6 is chosen: short delay is this maker's word for the minimum-phase family, which has no pre-ringing, and F-6 is the low-dispersion variant of it. F-3, the factory default, is also short delay but without the low-dispersion correction."
+      },
+      {
+        "setting": "DSD filter",
+        "set_to": "F-2: 65kHz",
+        "why": "Two DSD filters, given as cut-off frequencies: « F-1 + DSD: 37kHz (Default) » and « F-2 + DSD: 65kHz ». The wider one is preferred for the same reason RME's « Wild Bandwidth » setting is preferred elsewhere in this catalogue: a DSD stream's noise is out of band, and a filter that cuts at 37 kHz is removing signal as well. BUT SEE THE CONSTRAINT BELOW - this setting is not always available."
+      },
+      {
+        "setting": "Decoding mode",
+        "set_to": "m-d: DAC mode (volume not adjustable)",
+        "why": "« m-p: Preamp mode (volume adjustable) (Default) » against « m-d: DAC mode (volume not adjustable) ». DAC mode takes the volume control out of the path entirely, which is what you want when the device feeds an amplifier that has its own. First record in the catalogue where a setting removes the attenuator rather than improving it."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true,
+      "dop_possible": true
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true
+    }
+  },
+  "_pourquoi_ce_filtre_et_pas_un_autre": "The rule applied across every record that offers a filter choice, stated once here because this is the first device where the choice is genuinely arguable: prefer the family with NO PRE-RINGING - minimum phase, or what makers call short delay - because pre-ringing is energy the filter puts BEFORE the transient, which never existed in the recording, and because Auto has already chosen the rate and designed its own filter upstream. Among that family, prefer the variant the maker marks low-dispersion, since dispersion is the cost minimum phase pays for having no pre-ringing. That is how « hybrid phase » was chosen on the Rockna, « Short delay » on the Cambridge DacMagic 200M and « Incisive neutral (Ultimate reference) » on the Chord Hugo 2. It is ADVICE, not a fact: device_settings is the one field in this catalogue that recommends rather than records, and a listener may disagree with every word of it.",
+  "_une_TROISIEME_colonne_que_le_schema_ne_connait_pas": "Topping's « Input range » table has three columns per interface: PCM, DSD and PEQ. The third is the range over which the device's parametric equaliser WORKS, and it is lower than the PCM ceiling - on the DX1 II, 384 kHz of PCM against 192 kHz of PEQ. So a device may accept a rate at which its own EQ silently stops applying. No field holds it, and nothing else in 138 records publishes anything like it. Worth keeping in view for a Smart Upsampler: pushing a device above its PEQ range changes what the listener hears from their own corrections, which is a consequence of OUR choice of rate.",
+  "_UN_REGLAGE_QUI_VERROUILLE_UN_AUTRE": "« When the output amplitude is in high voltage mode, the DSD filter is fixed at F-1 and cannot be adjusted. » The manual says it twice. So U-H locks the DSD filter to the 37 kHz one, and the recommendation above - F-2, 65 kHz - is reachable ONLY with the output in low-voltage mode. device_settings is a LIST of independent entries and cannot express a dependency between two of them. First interaction of this kind met in 138 records, and it is a real trap: a catalogue that tells a listener to set U-H and F-2 is telling them to do something the device refuses.",
+  "_une_prise_optique_qui_parle_DEUX_protocoles": "« Optical input (Supports and automatically recognizes S/PDIF and ADAT protocols) », with its own row in the input table: « OPT IN (ADAT) | PCM 44.1kHz-192kHz ». ADAT is a MULTICHANNEL protocol over the same TOSLINK socket, and the manual tabulates how the channel count falls as the rate rises - « AdA1 » gives four pairs, « AdA2 » two, « AdA4 » one, which is ADAT's standard channel-multiplexing. The interface vocabulary has spdif_optical and no ADAT, and inputs.channels is a single integer where the maker publishes a function of the rate. Only record in the catalogue to raise either.",
+  "_le_bluetooth_est_decrit_par_ses_codecs_et_par_sa_plage_de_PEQ": "« BT IN | AAC/SBC/APTX/APTX-Adaptive/APTX HD/LDAC | PEQ 44.1kHz-96kHz/16bit-24bit ». No PCM column for Bluetooth - only the codecs and the PEQ range. So the only figure the maker gives for that input is the range over which its equaliser works, 96 kHz, which is not a ceiling on what the input accepts. No bluetooth block is written: iFi listed seven codecs with no figure and was treated the same way."
+}

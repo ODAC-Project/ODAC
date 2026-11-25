@@ -1,0 +1,52 @@
+{
+  "source": {
+    "kind": "manual",
+    "url": "https://dl.topping.audio/um/DX1_II_V1.2_EN.pdf",
+    "quote": "TOPPING's own user manual for the DX1 II (V1.2, English), downloaded 2026-11-25 from dl.topping.audio, reached through the Download tab of the product page at toppingaudio.com. Section « 12. Input range », a table with the columns « Interface / PCM / DSD / PEQ »: « USB IN UAC 2.0 | 44.1kHz-384kHz / 16bit-32bit | DSD64-DSD256 (Native), DSD64-DSD128 (DoP) | 44.1kHz-192kHz / 16bit-32bit »; « USB IN UAC 1.0 | 44.1kHz-48kHz / 16bit-24bit | - | 44.1kHz-48kHz / 16bit-24bit »; « OPT IN | 44.1kHz-192kHz / 16bit-24bit | DSD64 (DoP) (OPT d-2 mode only) | 44.1kHz-192kHz / 16bit-24bit »; « OPT OUT | 44.1kHz-192kHz / 16bit-24bit | - | 44.1kHz-192kHz / 16bit-24bit ». Section « 11. Attribute »: « Digital input USB/OPT (S/PDIF) »; « Analog input 3.5mm headset input (shared with headphone jack, with 2.5V bias voltage) »; « Digital output OPT (S/PDIF) »; « UAC 1.0 / 2.0 (switchable) ». Section « 5.10 PCM filter »: « F-1: Minimum Phase »; « F-2: Linear Phase Fast Roll-Off Apodizing »; « F-3: Linear Phase Fast Roll-Off »; « F-4: Linear Phase Fast Roll-Off Low Ripple »; « F-5: Linear Phase Slow Roll-Off (Default) »; « F-6: Minimum Phase Fast Roll-Off »; « F-7: Minimum Phase Slow Roll-Off »; « F-8: Minimum Phase Slow Roll-Off Low Dispersion ». Section « 13. Specifications », DAC parameters (Line Out / USB In @ 96kHz): « THD+N @1kHz (A-wt) <0.00009% » (RCA SE) and « <0.00007% » (4.4mm BAL); « SNR @1kHz (A-wt) 125dB » / « 128dB ». The manual names no DAC chip. toppingaudio.com has no terms-of-use page at all - 23 internal links, none legal, and a footer reading « (c) 2026 TOPPING Technology co., LTD. All rights reserved. » plus Chinese ICP registration numbers.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "unknown",
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD256",
+    "native_dsd": true,
+    "dop": true,
+    "chip": "Not named anywhere in the manual.",
+    "device_settings": [
+      {
+        "setting": "UAC",
+        "set_to": "2.0",
+        "why": "« UAC 1.0 / 2.0 (switchable) », and the input table rates the two as SEPARATE INTERFACES: UAC 2.0 takes 44.1-384 kHz and DSD, UAC 1.0 takes 44.1-48 kHz and no DSD at all. A factor of EIGHT on the rate, decided by a menu setting. UAC 1.0 exists for hosts with no driver; anything this engine runs on supports 2.0."
+      },
+      {
+        "setting": "PCM filter",
+        "set_to": "F-8: Minimum Phase Slow Roll-Off Low Dispersion",
+        "why": "Eight filters, all named. F-8 is chosen: minimum phase has no pre-ringing, and the maker marks this one low-dispersion, which is the cost minimum phase otherwise pays. F-5 is the factory default and is linear phase, so leaving the device alone leaves pre-ringing in the path. Note F-2, « Linear Phase Fast Roll-Off Apodizing » - the third apodising filter found in this catalogue and the first offered as one of eight."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "dsd_max": "DSD256",
+      "native_dsd_possible": true,
+      "dop_possible": true
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true
+    }
+  },
+  "_pourquoi_ce_filtre_et_pas_un_autre": "The rule applied across every record that offers a filter choice, stated once here because this is the first device where the choice is genuinely arguable: prefer the family with NO PRE-RINGING - minimum phase, or what makers call short delay - because pre-ringing is energy the filter puts BEFORE the transient, which never existed in the recording, and because Auto has already chosen the rate and designed its own filter upstream. Among that family, prefer the variant the maker marks low-dispersion, since dispersion is the cost minimum phase pays for having no pre-ringing. That is how « hybrid phase » was chosen on the Rockna, « Short delay » on the Cambridge DacMagic 200M and « Incisive neutral (Ultimate reference) » on the Chord Hugo 2. It is ADVICE, not a fact: device_settings is the one field in this catalogue that recommends rather than records, and a listener may disagree with every word of it.",
+  "_une_TROISIEME_colonne_que_le_schema_ne_connait_pas": "Topping's « Input range » table has three columns per interface: PCM, DSD and PEQ. The third is the range over which the device's parametric equaliser WORKS, and it is lower than the PCM ceiling - on the DX1 II, 384 kHz of PCM against 192 kHz of PEQ. So a device may accept a rate at which its own EQ silently stops applying. No field holds it, and nothing else in 138 records publishes anything like it. Worth keeping in view for a Smart Upsampler: pushing a device above its PEQ range changes what the listener hears from their own corrections, which is a consequence of OUR choice of rate.",
+  "_la_meilleure_table_par_entree_de_toute_la_base": "« Interface / PCM / DSD / PEQ », one row per interface, with the bit-depth RANGE and the DSD transport split out. It is better than Ferrum's six-input block and better than Chord's Hugo 2, because it also distinguishes two USB PROTOCOL MODES as separate rows and because it gives a third dimension nobody else publishes. And it is in a PDF manual that the website's own Specs tab leaves empty - the figures exist, Topping simply does not put them on the page.",
+  "_le_DoP_sur_loptique_ne_marche_que_dans_un_MODE": "« DSD64 (DoP) (OPT d-2 mode only) ». So DSD over the optical input exists but only when the optical compatibility setting is in position d-2 - the manual explains elsewhere that « Mode 1 and Mode 2 are used for compatibility with different optical signal sources ». inputs.dop_possible is true on that input and the condition cannot be written. Fourth kind of conditional ceiling on this device alone, after the UAC mode.",
+  "_les_noms_des_huit_filtres_sont_une_empreinte_et_PAS_une_preuve": "« Minimum Phase », « Linear Phase Fast Roll-Off Apodizing », « Linear Phase Fast Roll-Off Low Ripple », « Minimum Phase Slow Roll-Off Low Dispersion » - that is, word for word, the filter menu of a well-known converter family, and it would be easy to name the chip from it. family stays `unknown`. A filter list is evidence about the FILTER; reading a part number out of it is exactly the inference that put a wrong chip on the Gustard X30. It also answers a question left open yesterday: FiiO's K13 says « Supports 8 filter settings » and names none, and these are very probably those eight - which is a reason to go and read FiiO's manual, not a reason to copy this list there."
+}
