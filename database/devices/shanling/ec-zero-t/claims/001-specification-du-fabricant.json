@@ -1,0 +1,40 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://en.shanling.com/article/101228",
+    "quote": "Shanling's own announcement for the EC Zero T, read 2026-11-25, with its manual at /download/files/ECZeroT.pdf; the product page /product/475 is image-only and its sole text line is « Shop at Amazon.com ». Key Features: « -USB DAC Function supporting PCM 768 kHz / DSD512 »; Specifications: « USB DAC Supports: 768kHz/32bit, DSD512 »; « -Non-Oversampling / Oversampling Modes »; « -In-house developed R2R module, featuring 192 0.1% precision resistors »; « -Dual JAN6418 Tube Output & TPA6120 Headphone Amplifier »; « -Transistor / Tube Mode Output Switching »; « -Coaxial / Optical SPDIF Output »; « -USB-C Power input for External Power Mode ». The manual's « Menu Settings » table: item « PCM Filter », options « OS/NOS »; and separately an item « Tube Mode » with options « Off/On ».",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "family": "r2r_ladder",
+    "technology": "r2r",
+    "correctable": true,
+    "chip": "« In-house developed R2R module, featuring 192 0.1% precision resistors » - a discrete ladder, no part number, with « Dual JAN6418 Tube Output & TPA6120 Headphone Amplifier » after it. The valves are the OUTPUT stage, not the converter.",
+    "device_settings": [
+      {
+        "setting": "PCM Filter",
+        "set_to": "NOS",
+        "why": "The manual's menu table gives item « PCM Filter » with options « OS/NOS » - a two-position control, and selecting NOS takes the interpolation filter out of the path. That is the precondition `correctable` requires, stated as a menu item rather than inferred."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512"
+    }
+  },
+  "_la_source_est_une_annonce_ou_un_manuel_pas_la_page_produit": "Shanling's product pages are image-only - 12 to 38 sliced JPEGs with no text - so every figure here comes from the maker's own news announcement at /article/NNNNNN or from its manual PDF, both on en.shanling.com. No number was read off an image. Nothing is sourced to store.shanling.com, whose terms forbid reuse. See the brand file for the measurement and for the decision on « use=reference » that permits reading this host.",
+  "_ni_DoP_ni_natif_ne_sont_dits_pour_ce_modele": "The term DoP appears on no Shanling page or manual, and the word « native » only in the UA dongle manuals and in EM5's « DSD256 native, DSD512 software ». For this model neither is stated, so both fields are absent rather than guessed.",
+  "_le_cas_difficile_du_NOS_des_LAMPES_ET_un_mode": [
+    "This device has valves AND a non-oversampling mode, which is exactly the collision vocabulary/nos-means-two-things.json was written for: « -Dual JAN6418 Tube Output » beside « -Non-Oversampling / Oversampling Modes ». Nothing in the announcement separates them. The MANUAL does, and only the manual: « PCM Filter | OS/NOS » is one menu item and « Tube Mode | Off/On » is another. So NOS here is unambiguously non-oversampling - established from a menu table, not from three letters in marketing prose. Had the manual been missing, as it is for EH1 and EM5, this record could not carry `correctable` at all."
+  ],
+  "_le_coaxial_et_loptique_sont_des_SORTIES": "« -Coaxial / Optical SPDIF Output ». USB is the only digital input on this device, so the USB ceiling and the device ceiling coincide by construction - and the words coaxial and optical appear on the page belonging to the other direction. A harvester keying on those words would have given it two inputs it does not have."
+}

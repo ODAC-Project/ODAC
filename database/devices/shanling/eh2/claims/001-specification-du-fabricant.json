@@ -1,0 +1,33 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://en.shanling.com/article/101235",
+    "quote": "Shanling's own announcement for the EH2, read 2026-11-25; the product page /product/468 is 25 image slices. « Specification: »: « Hi-Res Support USB: 768 kHz/32 bit, DSD 512 »; « Inputs: USB-C, Coaxial, Optical, Bluetooth »; « Outputs: 6.35mm & 4.4mm Headphone output, RCA & 4.4mm Line Output ». Body: « In-House developed DAC module is a big step for our audio engineers, creating a modern 24bit R2R DAC that follows the heritage of our old high-end designs based around the legendary PCM1704 DACs, such as the Shanling CD-T300 and HDCD-H24. »; « The USB input was upgraded Hi-Fi level to XMOS XU316 module, next to which we slotted both the coaxial and optical SPDIF inputs. And as an extra bonus, Qualcomm QCC5125 brings in Bluetooth V5.2 compatibility »; « Offering up to 4.3W @ 32Ohm on its 4.4mm balanced output … while its single-ended 6.35mm output brings 1.3W @ 32Ohm »; « Additional circuit was added for the RCA & 4.4mm Line-out / Pre-out, based around OPA1612, offering the pure R2R output ». No per-socket figure is given for coaxial, optical or Bluetooth.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "family": "r2r_ladder",
+    "technology": "r2r",
+    "correctable": true,
+    "chip": "« a modern 24bit R2R DAC » developed in-house, explicitly in the lineage of « the legendary PCM1704 DACs » - a discrete ladder with no part number, 24 bits deep while the input accepts 32. USB receiver « XMOS XU316 », Bluetooth « Qualcomm QCC5125 », line stage « OPA1612 »."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512"
+    },
+    "spdif_coax": {},
+    "spdif_optical": {},
+    "bluetooth": {}
+  },
+  "_la_source_est_une_annonce_ou_un_manuel_pas_la_page_produit": "Shanling's product pages are image-only - 12 to 38 sliced JPEGs with no text - so every figure here comes from the maker's own news announcement at /article/NNNNNN or from its manual PDF, both on en.shanling.com. No number was read off an image. Nothing is sourced to store.shanling.com, whose terms forbid reuse. See the brand file for the measurement and for the decision on « use=reference » that permits reading this host.",
+  "_ni_DoP_ni_natif_ne_sont_dits_pour_ce_modele": "The term DoP appears on no Shanling page or manual, and the word « native » only in the UA dongle manuals and in EM5's « DSD256 native, DSD512 software ». For this model neither is stated, so both fields are absent rather than guessed.",
+  "_un_contournement_du_sur_echantillonnage_par_INTERRUPTEUR_PHYSIQUE": "From the manual, under a heading whose typo is the maker's - « Non-Ovsersamling Filter »: « [FILTER] switch on the rear of the device switches between OS (Oversampling) and NOS (NonOversampling) modes of the device. » A hardware switch on the back panel, with the rear-panel labels to match: « Filter Switch On » / « Filter Switch Off », « OS », « NOS ». Every other `correctable` device in this catalogue needs a menu; this one needs a finger. EH2 has no valves, so NOS is unambiguous. Note also the rear-panel label « SPDIF Optical Intput », the maker's own spelling."
+}

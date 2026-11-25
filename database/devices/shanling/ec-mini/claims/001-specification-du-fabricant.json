@@ -1,0 +1,24 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://en.shanling.com/article/101266",
+    "quote": "Shanling's own announcement for the EC Mini, read 2026-11-25, with its manual at /catlog/ECMini1.0.pdf; the product page /product/441 is 17 image slices. Verbatim: « Local Playback: MicroSD card slot & USB-C Input for USB Drives, Hi-Res support up to 32/384 & DSD256 »; « USB Input: USB-C connector for use as USB DAC »; « USB Output: USB-C Connector for use as a transport for external USB DACs »; « Battery: Two Built-in 18650 batteries, separate USB-C Charging Connector »; « DAC: 2x ESS ES9219 »; « Amplifier: 2 Ricore RT6863 Headphone amplifier + LTA8092 Line-Out »; « Bluetooth: Two-Way Bluetooth 5.0 »; « CD System: Philips CD Drive & HD860 Laser ». The manual, under « USB Driver Playback (USB-C or with matching adapter/cable) »: « 3. Support up to PCM 384kHz and DSD256. » And separately, with NO figure: « USB DAC Input / 1. Connect USB cable to the USB/DAC port. / 2. Switch the EC Mini to USB DAC Mode. »",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD256",
+    "family": "ess_sabre",
+    "chip": "« 2x ESS ES9219 », with « 2 Ricore RT6863 Headphone amplifier + LTA8092 Line-Out »."
+  },
+  "_la_source_est_une_annonce_ou_un_manuel_pas_la_page_produit": "Shanling's product pages are image-only, so every figure comes from the maker's own announcement at /article/NNNNNN or from its manual PDF, both on en.shanling.com. No number was read off an image, and nothing is sourced to store.shanling.com. See the brand file.",
+  "_ni_DoP_ni_natif_ne_sont_dits_pour_ce_modele": "DoP appears on no Shanling page or manual, and « native » only in the UA dongle manuals and in EM5. Neither is stated for this model, so both fields are absent rather than guessed.",
+  "_le_fabricant_etiquette_son_chiffre_Local_Playback_et_laisse_lentree_VIDE": [
+    "« Local Playback: MicroSD card slot & USB-C Input for USB Drives, Hi-Res support up to 32/384 & DSD256 » - the figure is explicitly bound to playback from storage. The line that describes the input, « USB Input: USB-C connector for use as USB DAC », carries no figure at all, and the manual repeats the split exactly: 384 kHz under « USB Driver Playback », nothing under « USB DAC Input ». So `pcm_max_hz` and `dsd_max` record what the device CONVERTS when it plays a file, `inputs` is EMPTY, and the distinction survives because the maker drew it. Most makers in this catalogue give one figure and leave the reader to guess which it is; iBasso gives none at all. This one is the model case."
+  ],
+  "_QUATRE_roles_pour_une_seule_forme_de_prise": "USB-C for storage, USB-C as DAC input, USB-C as digital output, and a separate USB-C for charging - four sockets of one shape, four jobs, on a portable CD player. Nothing but the maker's own labels distinguishes them, and `inputs` can only hold the one that takes audio in, whose ceiling is unpublished."
+}

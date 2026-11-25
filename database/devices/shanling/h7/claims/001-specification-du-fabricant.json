@@ -1,0 +1,36 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://en.shanling.com/article/101280",
+    "quote": "Shanling's own announcement for the H7, read 2026-11-25; the product page /product/427 is 38 image slices, the most of any page on the site. Verbatim: « Hi-Res Support：32 bit / 768 kHz, DSD 512, MQA 8x »; « DAC：AKM AK4499EX With AKM AK4191EQ » (bullet list: « New Flagship AK4499EX DAC chip from AKM, with its matching AK4191 Modulator »); « USB Input: XMOS XU316 »; « Digital Filters：6 Preset Filters »; « -Combined input for Coaxial and Optical SPDIF »; « -Xmos USB input supporting Hi-Res playback, including MQA »; « Storage： MicroSD Card Slot, up to 2TB »; « Audio Circuit: TPA6120A2 / OPA2211 / MUSES8920 »; « System： Open Android 10 »; « Output Connectors: 6.35/4.4/3.5mm & RCA ». Full single-ended and balanced output tables at three gain levels, and RCA figures, are on the page. The six filters are counted and not named; no NOS mode is mentioned.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "family": "akm",
+    "chip": "« AKM AK4499EX With AKM AK4191EQ » - a converter and its matching modulator as a pair, which the bullet list calls « New Flagship AK4499EX DAC chip from AKM, with its matching AK4191 Modulator ». USB receiver « XMOS XU316 ».",
+    "device_settings": [
+      {
+        "setting": "Digital filter",
+        "set_to": "unknown",
+        "why": "« Digital Filters：6 Preset Filters » - the same count without names as the H5."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {},
+    "spdif_coax": {},
+    "spdif_optical": {}
+  },
+  "_la_source_est_une_annonce_ou_un_manuel_pas_la_page_produit": "Shanling's product pages are image-only, so every figure comes from the maker's own announcement at /article/NNNNNN or from its manual PDF, both on en.shanling.com. No number was read off an image, and nothing is sourced to store.shanling.com. See the brand file.",
+  "_ni_DoP_ni_natif_ne_sont_dits_pour_ce_modele": "DoP appears on no Shanling page or manual, and « native » only in the UA dongle manuals and in EM5. Neither is stated for this model.",
+  "_UN_seul_chiffre_la_ou_son_frere_en_donne_deux": [
+    "« Hi-Res Support：32 bit / 768 kHz, DSD 512, MQA 8x », given once for the device - where the H5, from the same maker, the same range and the same year, splits the figure into a USB line and a MicroSD line. Same template, same page layout, and one of the two fills in the role and the other does not. So the H7's `inputs` entries record existence and nothing more. Worth stating because the two records will look equally complete in the built artefact."
+  ],
+  "_une_prise_COMBINEE_pour_le_coaxial_et_loptique": "« -Combined input for Coaxial and Optical SPDIF ». One socket carrying either format, as on the Prism Sound Titan's shared optical input - so the two keys in `inputs` are one hole in the chassis and cannot be used at the same time. The schema has no way to say it; this gloss is the only place it is said."
+}

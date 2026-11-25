@@ -1,0 +1,28 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://en.shanling.com/article/101237",
+    "quote": "Shanling's own announcement for the EH1, read 2026-11-25; the product page /product/464 is 17 image slices and the download page /download/121 offers no PDF, so this is the only source. From « Shanling EH1 Key Features »: « -Cirrus Logic CS43198 DAC »; « -Dual SGM8262 Headphone Amplifiers »; « -Up to 1015 mW @ 32 Ohm Output Power »; « -Treble (+-10dB) & Bass (+-6dB) Tone Control »; « -Hi-Res 32 bit / 768 kHz & DSD512 »; « -USB-C Digital Input »; « -6.35mm & 4.4mm Headphone Outputs »; « -RCA Output with switchable Line-out / Pre-out mode »; « -SPDIF Coaxial Digital Output »; « -Power by USB C or 5V DC Power ». Full output tables including « High Gain (DC Power): 1015mW@32Ohm » are on the page. No filter name or count, no NOS mode.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "family": "cirrus",
+    "chip": "« Cirrus Logic CS43198 DAC » with « Dual SGM8262 Headphone Amplifiers »."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512"
+    }
+  },
+  "_la_source_est_une_annonce_ou_un_manuel_pas_la_page_produit": "Shanling's product pages are image-only, so every figure comes from the maker's own announcement at /article/NNNNNN or from its manual PDF, both on en.shanling.com. No number was read off an image, and nothing is sourced to store.shanling.com. See the brand file.",
+  "_ni_DoP_ni_natif_ne_sont_dits_pour_ce_modele": "DoP appears on no Shanling page or manual, and « native » only in the UA dongle manuals and in EM5. Neither is stated for this model, so both fields are absent rather than guessed.",
+  "_un_chiffre_dappareil_qui_EST_le_chiffre_de_lentree_par_construction": "« -Hi-Res 32 bit / 768 kHz & DSD512 » is written device-level and the page never binds it to a socket. But this device has exactly ONE digital input, « -USB-C Digital Input », and its coaxial is an OUTPUT - « -SPDIF Coaxial Digital Output ». So the device figure and the USB figure coincide because there is nowhere else for the signal to come from, and inputs.usb carries it on that basis rather than on the maker's word. The reasoning is written down because the two look identical in the built artefact and were not established the same way - the same caution as the Electrocompaniet ECI 80D."
+}

@@ -1,0 +1,25 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://en.shanling.com/article/101261",
+    "quote": "Shanling's own announcement for the H2, read 2026-11-25, with its manual at /catlog/H2V1.1.pdf; the product page /product/445 is 24 image slices. Verbatim: « -USB DAC mode, utilizing XMOS XU208 chip, with full Hi-Res support »; « -Cirrus Logic CS43198 DAC & dedicated SG-Micro headphone amplifiers »; « -Local playback from MicroSD card, with full library browsing available through Eddict player app »; « -Bluetooth DAC mode, Bluetooth 5.0 with support of LDAC & AAC »; « -Up to 680 mW @ 32 Ohm Output power in balanced mode »; « -Low output impedance at 0.4 Ohm / 0.8 Ohm ». The manual says « H2 is a portable DAC & amplifier, offering a range of digital inputs » and lists them: « USB DAC - Bluetooth - MicroSD card Playback. » No PCM rate, no bit depth and no DSD figure appears anywhere, in the announcement or the manual.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "cirrus",
+    "chip": "« Cirrus Logic CS43198 DAC & dedicated SG-Micro headphone amplifiers », with « XMOS XU208 » as the USB receiver."
+  },
+  "inputs": {
+    "usb": {},
+    "bluetooth": {}
+  },
+  "_la_source_est_une_annonce_ou_un_manuel_pas_la_page_produit": "Shanling's product pages are image-only, so every figure comes from the maker's own announcement at /article/NNNNNN or from its manual PDF, both on en.shanling.com. No number was read off an image, and nothing is sourced to store.shanling.com. See the brand file.",
+  "_ni_DoP_ni_natif_ne_sont_dits_pour_ce_modele": "DoP appears on no Shanling page or manual, and « native » only in the UA dongle manuals and in EM5. Neither is stated for this model.",
+  "_full_Hi_Res_support_nest_pas_un_chiffre": [
+    "« -USB DAC mode, utilizing XMOS XU208 chip, with full Hi-Res support ». That is the entire statement about what this device accepts: an adjective. No rate, no depth, no DSD figure, in either document. So `pcm_max_hz` and `dsd_max` are ABSENT on a device whose USB receiver is named by part number - the maker tells you which chip does the receiving and not what it receives. « Full Hi-Res » is marketing vocabulary with no defined value, and promoting it to a number, even the obvious 384 kHz the XU208 is capable of, would be writing the chip's datasheet into the device's record."
+  ],
+  "_une_gamme_dentrees_qui_en_compte_deux": "The manual says « offering a range of digital inputs » and then lists « USB DAC - Bluetooth - MicroSD card Playback » - of which the third is storage. So the range is two. Recorded because the sentence promises more than the list delivers, and because this device has no optical and no coaxial input at all despite being a desktop-looking DAC."
+}

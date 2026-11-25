@@ -2,5 +2,6 @@
   "id": "cyrus",
   "name": "Cyrus Audio",
   "_legal_entity": "cyrusaudio.com has a goods-sale terms page and a separate copyright page reading « All materials on this website, unless otherwise stated, are Copyright 2017 of Cyrus Audio Ltd. » with the advice that « the copying of material protected by copyright law may require the permission of the copyright holders ». Both were READ: that is plain copyright language and advice, not a prohibition.",
-  "_added_on": "2026-11-25"
+  "_added_on": "2026-11-25",
+  "_merged_from_a_duplicate_file": "cyrus-audio.json carried the same display name and a different id, and was deleted on 2026-11-25. The three Cyrus records all carry brand « cyrus », so that is the file that survives. I created cyrus.json earlier the SAME DAY while writing those records, without noticing cyrus-audio.json already sat beside it - the same mistake as Cambridge Audio, made first and seen second. Keys carried over: none, it held nothing new. Found by a new guard in the verifier that refuses two brand files claiming one name - added the same day after I created a fourth such duplicate by accident, which is how these three came to light. They had passed every check since they were written: the mutant suite tests that a RECORD cites a brand that exists, and most brand files here are census entries with no records, so « cited by nobody » could never have been the guard."
 }

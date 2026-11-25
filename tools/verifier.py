@@ -74,6 +74,7 @@ def check_field(where, name, scope):
 
 
 brands, families, ifaces = set(), set(), set()
+_noms_de_marque = {}
 for name, bucket in (("brands", brands), ("chip-families", families),
                      ("interfaces", ifaces)):
     d = os.path.join(DB, name)
@@ -89,6 +90,22 @@ for name, bucket in (("brands", brands), ("chip-families", families),
         for where in find_nulls(entry, os.path.join(name, f)):
             errors.append("null at %s. Leave the key out, or write \"unknown\"" % where)
         bucket.add(entry.get("id") or f[:-5])
+        if name == "brands":
+            # TWO BRAND FILES FOR ONE MAKER pass every other check. On 2026-11-25 a
+            # script that could not find cambridge.json invented cambridge-audio.json
+            # beside it, with the same name and a different id, and nothing noticed:
+            # the mutant suite tests that a RECORD cites a brand that exists, not that
+            # a brand file is cited by anything, and most brand files here are census
+            # entries with no records at all - so "cited by nobody" cannot be the
+            # guard. A repeated display name can.
+            nom_affiche = (entry.get("name") or "").strip().lower()
+            if nom_affiche:
+                vu = _noms_de_marque.setdefault(nom_affiche, [])
+                vu.append(f)
+                if len(vu) > 1:
+                    errors.append("brands: %s all claim the name %r. One maker, one "
+                                  "file: merge them and delete the rest"
+                                  % (", ".join(vu), entry.get("name")))
 
 devices = os.path.join(DB, "devices")
 n_dev = n_claim = 0

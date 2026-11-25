@@ -1,0 +1,37 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://en.shanling.com/article/101206",
+    "quote": "Shanling's own announcement for the EC Play, read 2026-11-25, with its manual at /download/files/ECPlay.pdf; the product page /product/492 is image-only. Body text: « Enjoy its gapless playback through 3.5mm or 4.4mm headphone output, with Cirrus Logic CS43918 DAC and a pair of SGM8262 amplifiers ». Specification list: « DAC: Cirrus Logic CS43198 ». Body: « And for fans of High-Resolution files, the USB DAC Mode is ready for Music up to 384 kHz and DSD256. » Specification: « USB DAC Support: 384kHz/32-bit, DSD256 »; « Amplifier: 2 x SGM8262-2 »; « Bluetooth Version: 6.0 / Bluetooth Receiver: LDAC/AAC/SBC / Bluetooth Transmitter: SBC »; « Supported discs: CD/CD-RW/CD-R »; « Frequency Response: CD Playback: 20 Hz-20,000 Hz / USB DAC: 20 Hz-40,000 Hz ». The manual's « Menu Settings (CD Playback mode) »: item « PCM Filter: 0-4 », options « Fast Roll-Off/Slow Roll-Off/Low-latency Fast/Low-latency Slow/NOS ».",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD256",
+    "family": "cirrus",
+    "correctable": true,
+    "chip": "The maker names the converter TWICE with two different part numbers on one page: « Cirrus Logic CS43918 » in the body and « Cirrus Logic CS43198 » in the specification list. Neither is picked. CS43198 is a part that exists; CS43918 is very probably its digits transposed - but guessing which of a maker's two spellings is the typo is exactly the interpretation this catalogue must not make silently.",
+    "device_settings": [
+      {
+        "setting": "PCM Filter",
+        "set_to": "NOS",
+        "why": "« PCM Filter: 0-4 », options « Fast Roll-Off/Slow Roll-Off/Low-latency Fast/Low-latency Slow/NOS » - five positions, all five NAMED, the fifth being non-oversampling. EC Play has no valves, so NOS is unambiguous here. One of the very few records in the catalogue where a maker both names its filters and offers a way to leave them out."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "dsd_max": "DSD256"
+    },
+    "bluetooth": {}
+  },
+  "_la_source_est_une_annonce_ou_un_manuel_pas_la_page_produit": "Shanling's product pages are image-only - 12 to 38 sliced JPEGs with no text - so every figure here comes from the maker's own news announcement at /article/NNNNNN or from its manual PDF, both on en.shanling.com. No number was read off an image. Nothing is sourced to store.shanling.com, whose terms forbid reuse. See the brand file for the measurement and for the decision on « use=reference » that permits reading this host.",
+  "_ni_DoP_ni_natif_ne_sont_dits_pour_ce_modele": "The term DoP appears on no Shanling page or manual, and the word « native » only in the UA dongle manuals and in EM5's « DSD256 native, DSD512 software ». For this model neither is stated, so both fields are absent rather than guessed.",
+  "_une_reponse_en_frequence_PAR_MODE": "« Frequency Response: CD Playback: 20 Hz-20,000 Hz / USB DAC: 20 Hz-40,000 Hz ». The same device measured twice because it has two sources, and the figures differ by an octave - the CD path is bounded by the disc, the USB path by the converter. Nothing in the catalogue records a frequency response, and it is quoted here because it is the clearest statement a maker has made that a device is not one signal path but several. The manual's USB section, incidentally, tells the owner to « Make sure to set EC Zero as the active sound device on your computer » - copied from another model's manual."
+}

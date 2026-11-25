@@ -1,0 +1,29 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://en.shanling.com/article/101284",
+    "quote": "Shanling's own announcement for the EM7, read 2026-11-25. Its product page, /product/420, is 29 image slices with no text, and its manual at /catlog/EM7.pdf contains no sample-rate, bit-depth or DSD figure anywhere - grepped for 768, 384, 512 and DSD with zero hits. From the article's « Specification »: « Hi-Res Support: Up to PCM 32bit / 768 kHz & DSD512 »; « DAC: ESS ES9038Pro »; « Analog Section: OPA1611 based I/V conversion, OPA2211 based LPF, OPA2211+BD139+BD140 based Amplifier »; « Digital inputs: USB-B, Coaxial SPDIF & Optical, 2x USB port for USB drives, MicroSD card slot »; « Digital outputs: SPDIF Coaxial & Optical, USB Audio Output »; « Output power Balanced: Up to 15V / 7W @ 32 Ohm // 18V / 1W @ 300 Ohm »; « System: Based on Android 10, Closed and Customized ». The manual's rear-panel callouts: « USB for Connecting External Disk »; « USB for Digital Audio Output; USB for Connecting External Disk »; « USB DAC Input »; « Wired Network Connection »; « Digital Optical Input »; « Digital Coaxial Input ». No per-input ceiling, no filter name or count, no NOS mode.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "family": "ess_sabre",
+    "chip": "« ESS ES9038Pro », with « OPA1611 based I/V conversion » and « OPA2211 based LPF »."
+  },
+  "inputs": {
+    "usb": {},
+    "spdif_coax": {},
+    "spdif_optical": {}
+  },
+  "_la_source_est_une_annonce_ou_un_manuel_pas_la_page_produit": "Shanling's product pages are image-only - 12 to 38 sliced JPEGs with no text - so every figure here comes from the maker's own news announcement at /article/NNNNNN or from its manual PDF, both on en.shanling.com. No number was read off an image. Nothing is sourced to store.shanling.com, whose terms forbid reuse. See the brand file for the measurement and for the decision on « use=reference » that permits reading this host.",
+  "_ni_DoP_ni_natif_ne_sont_dits_pour_ce_modele": "The term DoP appears on no Shanling page or manual, and the word « native » only in the UA dongle manuals and in EM5's « DSD256 native, DSD512 software ». For this model neither is stated, so both fields are absent rather than guessed.",
+  "_QUATRE_roles_pour_le_mot_USB_sur_un_seul_appareil": [
+    "The manual separates them where the article's single « Digital inputs » row runs them together. « USB DAC Input » is the audio input. « USB for Connecting External Disk », twice, is storage. « USB for Digital Audio Output » is an OUTPUT. And the MicroSD slot is storage again. The article lists all of it as « Digital inputs: USB-B, Coaxial SPDIF & Optical, 2x USB port for USB drives, MicroSD card slot » - five things in one row of which two are not inputs at all. inputs holds three keys. This is the fifth device in the catalogue with both a USB audio input and a USB storage port, and the first where the maker also puts a USB audio OUTPUT on the same panel."
+  ],
+  "_le_chiffre_est_celui_de_lappareil_et_aucune_prise_nen_a": "« Hi-Res Support: Up to PCM 32bit / 768 kHz & DSD512 », given once, for the device. Not one of the three inputs carries a figure of its own - and optical almost never reaches 768 kHz, which is why nothing is inherited downward. The EH50, from the same maker two years later, proves the figures exist when someone writes them down."
+}

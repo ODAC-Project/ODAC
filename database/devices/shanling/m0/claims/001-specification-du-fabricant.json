@@ -1,0 +1,21 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://en.shanling.com/product/222",
+    "quote": "Shanling's own product page for the M0, read 2026-11-25 - one of only four Shanling product pages that carry specification TEXT rather than images. Under « M0 Specifications »: « Sampling rate : up to 384kHz / 32 bit, DSD 128 »; « DAC Model：ESS Sabre ES9218P »; « Output port : Headphone output ( 3.5 mm ) »; « Storage : 512GB TF card ( purchase separately ) »; « *Music Library limited to 20 000 files ». Immediately beside it a « Format Support » table, in part: « DSD / DSD64、DSD128（ .iso& . dsf& . dff ) »; « DXD / support 384 kHz / 32 bit »; « FLAC / compression levels 0 to 8 support up to 384 kHz / 24 bit »; « ALAC / 192 kHz / 24 bit »; « WAV / 384 kHz / 32 bit »; « AIFF/AIF / 192 kHz / 32 bit »; « APE / FAST supports up to 192 kHz / 24 bit、384 kHz / 16 bit »; « *No support ISO file in DST format ». The page states no USB DAC mode and no input ceiling, though the download index does offer /download/files/M0_USB_DAC_Driver.rar.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD128",
+    "family": "ess_sabre",
+    "chip": "« ESS Sabre ES9218P »."
+  },
+  "_la_source_est_une_annonce_ou_un_manuel_pas_la_page_produit": "Shanling's product pages are image-only, so every figure comes from the maker's own announcement at /article/NNNNNN or from its manual PDF, both on en.shanling.com. No number was read off an image, and nothing is sourced to store.shanling.com. See the brand file.",
+  "_ni_DoP_ni_natif_ne_sont_dits_pour_ce_modele": "DoP appears on no Shanling page or manual, and « native » only in the UA dongle manuals and in EM5. Neither is stated for this model.",
+  "_un_tableau_PAR_CODEC_prouve_quon_parle_de_fichiers": "The « Sampling rate : up to 384kHz / 32 bit, DSD 128 » line sits against a table giving a different ceiling for FLAC, ALAC, WAV, AIFF and APE - « APE / FAST supports up to 192 kHz / 24 bit、384 kHz / 16 bit » is unmistakably about decoding a file, not about a socket. A per-codec table settles the question no headline figure can: this whole block is playback. So `pcm_max_hz` records what the device converts and `inputs` is empty, even though a USB DAC driver exists in the download index - which proves a USB DAC MODE exists and publishes no ceiling for it."
+}

@@ -2,5 +2,6 @@
   "id": "geshelli",
   "name": "Geshelli Labs",
   "_legal_entity": "The footer of geshelli.com reads « Copyright (c) 2026 Geshelli Labs LLC. » No terms page is linked from the nav or the footer.",
-  "_added_on": "2026-11-25"
+  "_added_on": "2026-11-25",
+  "_merged_from_a_duplicate_file": "geshelli-labs.json carried the same display name and a different id, and was deleted on 2026-11-25. The two Geshelli records carry brand « geshelli », so that file survives. Keys carried over: none, it held nothing new. Found by a new guard in the verifier that refuses two brand files claiming one name - added the same day after I created a fourth such duplicate by accident, which is how these three came to light. They had passed every check since they were written: the mutant suite tests that a RECORD cites a brand that exists, and most brand files here are census entries with no records, so « cited by nobody » could never have been the guard."
 }

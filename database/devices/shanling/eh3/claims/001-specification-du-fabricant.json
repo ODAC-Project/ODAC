@@ -1,0 +1,30 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://en.shanling.com/article/101267",
+    "quote": "Shanling's own announcement for the EH3, read 2026-11-25, with its manual at /catlog/EH3.pdf; the product page /product/440 is 16 image slices. Verbatim, with its full surrounding sentence: « System includes the ability of independent local playback from USB Drive. Fully lossless playback directly on the DAC, without any need for a separate digital source or computer. Supporting all the major audio formats and Hi-Res files up to PCM 32/768 and DSD512. »; « For use as DAC, EH3 can be connected over USB, Optical, Coaxial or I2S HDMI. It can be also used as a pure amplifier thanks to a pair of RCA Analog inputs. »; « Utilizing flagship ESS ES9039SPRO 8-channel DAC with fully balanced amplifier based around four OPA1612. With in-house developed FPGA, KDS crystal oscillators and XMOS XU316 USB Chip »; « Offering up to 1 900 mW @ 32 Ohm // 205mW @ 300 Ohm in Single-Ended and 5 300 mW @ 32 Ohm // 700mW @ 300 Ohm in Balanced. »; « Connected over the high-quality I2S connection, using our new L8 cable, with All-to-DSD processing, making for the ultimate CD and MQA CD Playback. » The manual, under its own heading « USB Driver Playback »: « 1. It's recommended to use USB drivers formatted to FAT32. / 2. Drives up to 2TB are supported. / 3. Support up to PCM 768kHz and DSD512. » Its « USB DAC Mode » section that follows carries NO figure. Rear-panel labels: « Digital Coaxial Input », « Digital Optical Input », « USB DAC Input », « Digital IIS-LVDS Input », « Analog Input », plus a USB audio output and a USB external-storage port. The manual has no OS/NOS control.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "family": "ess_sabre",
+    "chip": "« flagship ESS ES9039SPRO 8-channel DAC » with « in-house developed FPGA, KDS crystal oscillators and XMOS XU316 USB Chip », and « four OPA1612 » in the output stage."
+  },
+  "inputs": {
+    "usb": {},
+    "spdif_coax": {},
+    "spdif_optical": {},
+    "i2s": {}
+  },
+  "_la_source_est_une_annonce_ou_un_manuel_pas_la_page_produit": "Shanling's product pages are image-only, so every figure comes from the maker's own announcement at /article/NNNNNN or from its manual PDF, both on en.shanling.com. No number was read off an image, and nothing is sourced to store.shanling.com. See the brand file.",
+  "_ni_DoP_ni_natif_ne_sont_dits_pour_ce_modele": "DoP appears on no Shanling page or manual, and « native » only in the UA dongle manuals and in EM5. Neither is stated for this model, so both fields are absent rather than guessed.",
+  "_les_DEUX_seules_mentions_de_768_decrivent_une_cle_USB": [
+    "« Hi-Res files up to PCM 32/768 and DSD512 » sits inside a sentence about « independent local playback from USB Drive », and the manual's identical figure sits under the heading « USB Driver Playback » between a note about FAT32 and one about 2 TB drives. The « USB DAC Mode » section that follows it has no number. So this device has FOUR digital inputs - USB, optical, coaxial, I2S over HDMI - and not one published ceiling for any of them, while the figure a harvester would grab describes a memory stick. The clearest instance of this trap on the whole site, and the reason the device figure is recorded while every `inputs` entry is left empty."
+  ],
+  "_All_to_DSD_est_du_traitement_interne_pas_un_format_dentree": "« Connected over the high-quality I2S connection, using our new L8 cable, with All-to-DSD processing, making for the ultimate CD and MQA CD Playback. » All-to-DSD converts everything arriving into DSD INSIDE the device - which is `pcm_reconverted_to_dsd`, the field the Musical Fidelity MX-DAC carries true. It is NOT written here, because the sentence binds it to one input and one source and the catalogue has no per-input form of that field. Recorded in words instead, with the warning that reads the other way too: this is not a DSD input capability, and a harvester seeing « DSD » beside « I2S » would have made it one."
+}

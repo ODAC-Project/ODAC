@@ -1,0 +1,37 @@
+{
+  "source": {
+    "kind": "manual",
+    "url": "https://en.shanling.com/download/files/UA7.pdf",
+    "quote": "Shanling's own manual for the UA7, UA7.pdf, read 2026-11-25 - the product page is image-only, so the manual is the source. Its numbered feature list: « 1. Dedicated Hi-Fi Audio DAC ESS Sabre ES9069Q. » and « 2. Dual JAN6418 Tubes. » « 3. Hi-Res PCM support up to 32bit / 768kHz. » « 4. Native DSD support up to DSD512. » Menu settings: FILTER.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "family": "ess_sabre",
+    "chip": "« ESS Sabre ES9069Q » in the manual and « ESS ES9069 DAC » in the announcement at /article/101216, with « Dual JAN6418 Tubes » in the output stage.",
+    "device_settings": [
+      {
+        "setting": "FILTER",
+        "set_to": "unknown",
+        "why": "Eight named ESS filters: « Minimum phase/ Linear phase apodizing fast roll-off/ Linear phase fast roll-off/ Linear phase fast roll-off low-ripple/ Linear phase slow roll-off/ Minimum phase fast roll-off/ Minimum phase slow roll-off/ Minimum phase slow roll-off low dispersion ». None of them is NOS, so there is no way to leave the filter out and `correctable` is not written."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true
+    }
+  },
+  "_la_source_est_une_annonce_ou_un_manuel_pas_la_page_produit": "Shanling's product pages are image-only, so every figure comes from the maker's own announcement at /article/NNNNNN or from its manual PDF, both on en.shanling.com. No number was read off an image, and nothing is sourced to store.shanling.com. See the brand file.",
+  "_le_mot_NATIF_vient_du_manuel_et_nest_pas_du_texte_type": "« Native DSD support up to DSDnnn » is the manual's own wording, in a numbered feature list, and it appears in every UA manual in the same form. It is NOT the boilerplate that had to be refused on xDuoo, where one sentence was repeated on twenty unrelated pages including a passive module: here it sits on a family of dongles whose only digital input is the USB-C port it describes, and the figure varies by model - DSD256 on the UA1 Plus and UA1s, DSD512 on the rest. A claim that varies with the product is a claim about the product. DoP is never mentioned for any UA model.",
+  "_des_LAMPES_et_AUCUN_mode_NOS_le_piege_a_lenvers": "« Dual JAN6418 Tubes » and a menu item « TUBE / Off/On » - and among its eight named filters there is no NOS entry at all. So this is the inverse of the EC Zero T: valves present, non-oversampling ABSENT, and the three letters never appear on the page. A text search for NOS across this brand would have found nothing here and been right; a search for « tube » would have found valves and proved nothing about the filter. vocabulary/nos-means-two-things.json predicted the collision and this is the case where only one of the two meanings is present."
+}

@@ -1,0 +1,27 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://en.shanling.com/product/225",
+    "quote": "Shanling's own product page for the M3s, read 2026-11-25 - one of four with text, and the heading above its table reads « M3 Specifications » on a page titled « M3s Portable Player ». Verbatim, including a row where two table cells have run together: « DSD playback:DSD256DAC: supported up to 384kHz--32bit » - that is a « DSD playback: DSD256 » row and a « DAC: supported up to 384kHz--32bit » row with no separator. Then « Sampling rate: 44.1kHz--384kHz ». Also: « D/A converter: AK4490×2 »; « Amplifier: AD8397×2 »; « Bluetooth: 4.1 with APT-X »; « External memory: supported up to 256G TF card »; « USB interface :Type-C（USB2.0） »; « Output: Single ended output (3.5 mm) balanced output (2.5 mm) ».",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD256",
+    "family": "akm",
+    "chip": "« AK4490×2 » with « AD8397×2 » amplifiers."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32
+    }
+  },
+  "_la_source_est_une_annonce_ou_un_manuel_pas_la_page_produit": "Shanling's product pages are image-only, so every figure comes from the maker's own announcement at /article/NNNNNN or from its manual PDF, both on en.shanling.com. No number was read off an image, and nothing is sourced to store.shanling.com. See the brand file.",
+  "_ni_DoP_ni_natif_ne_sont_dits_pour_ce_modele": "DoP appears on no Shanling page or manual, and « native » only in the UA dongle manuals and in EM5. Neither is stated for this model.",
+  "_deux_cellules_de_tableau_collees_en_une_seule_ligne": "« DSD playback:DSD256DAC: supported up to 384kHz--32bit ». Read as one string that is nonsense; read as two table cells it is « DSD playback: DSD256 » and « DAC: supported up to 384kHz--32bit », which is the same « DAC » row that means the USB input on the M1 and M2s pages. The split is quoted rather than silently repaired, and both halves are used: DSD256 as the device's playback ceiling, 384 kHz / 32 bit as the USB input's. An importer parsing this page by rows would have produced one value reading « DSD256DAC »."
+}

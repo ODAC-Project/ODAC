@@ -1,0 +1,29 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://en.shanling.com/product/224",
+    "quote": "Shanling's own product page for the M2s, read 2026-11-25 - one of four with text. THREE different rate statements appear on this one page. Main specifications: « Sampling rate : up to 384kHz / 32 bit, DSD 128 ». « Format Support » table, « DAC » row: « Supported up to 192KHz/32bit » with « windows(driver needed) » and « Mac OS ». « Format Support » table, « Hi-Res files » row: « Supporting up to DSD256,PCM up to 32bit/384KHz ». Also: « D/A converter:AK4490EQ »; « Low pass filtering : MUSES8920 »; « Rated output level: 2.2VRMS@10KOhm »; « USB / Type-C (USB 2.0) »; « External memory / Micro SD Card, supporting up to 256G ».",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "family": "akm",
+    "chip": "« AK4490EQ » with « MUSES8920 » low-pass."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 192000,
+      "bits": 32
+    }
+  },
+  "_la_source_est_une_annonce_ou_un_manuel_pas_la_page_produit": "Shanling's product pages are image-only, so every figure comes from the maker's own announcement at /article/NNNNNN or from its manual PDF, both on en.shanling.com. No number was read off an image, and nothing is sourced to store.shanling.com. See the brand file.",
+  "_ni_DoP_ni_natif_ne_sont_dits_pour_ce_modele": "DoP appears on no Shanling page or manual, and « native » only in the UA dongle manuals and in EM5. Neither is stated for this model.",
+  "_le_DSD_est_donne_DEUX_FOIS_avec_deux_valeurs_sur_la_meme_page": [
+    "Main specifications: « DSD 128 ». Format Support, Hi-Res files row: « Supporting up to DSD256 ». One page, one product, two ceilings an octave apart, and nothing to say which supersedes which. `dsd_max` is ABSENT on this record - not unknown, absent - because the maker has published two answers and the catalogue's job is not to arbitrate. The same choice as the Audio-gd NOS 19, whose USB figure was omitted because three values existed."
+  ],
+  "_lentree_USB_est_PLUS_BASSE_que_la_lecture_de_fichiers": "« DAC / Supported up to 192KHz/32bit » for the USB mode, against 384 kHz for playback in both the other two rows. So this player reads a 384 kHz file off its card and accepts only 192 kHz from a computer - the reverse of what a reader would assume, and exactly why inputs.usb takes 192000 while `pcm_max_hz` takes 384000. The H5 states the same asymmetry in the other direction, with its USB input twice its card's ceiling."
+}

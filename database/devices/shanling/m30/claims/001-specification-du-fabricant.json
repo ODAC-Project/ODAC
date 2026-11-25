@@ -1,0 +1,33 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://en.shanling.com/article/101313",
+    "quote": "Shanling's own announcement for the M30, read 2026-11-25; the product page /product/393 is image-only. Verbatim: « Digital inputs: Coax / Optical / 2x USB-A / USB-B / USB-C / LAN »; « USB DAC input: XMOS XUF208, up to PCM 32/768 & DSD512 »; « DAC Module: 2x AKM AK4497 + 2x Ti OPA1662 »; « Amplifier Module: 2x ADI ADA4610-2 + 4x Ti BUF634 »; « Tube Output Module: 2x Korg Nutube 6P1 »; « Output mode: Direct/Transistor/Tube »; « Modular Design: 5 Interchangeable Modules »; « Headphone outputs: Balanced 4-pin XLR, 4.4mm, 2.5mm, 3.5PRO / Single-ended 6.35mm, 3.5mm »; « Analog connectivity: RCA and XLR output, RCA input »; « Other functions: Over-the-Air Updates / DSD Upsampling / MQA ». No figure is given for the coaxial or optical inputs.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "family": "akm",
+    "chip": "« DAC Module: 2x AKM AK4497 + 2x Ti OPA1662 », with « Tube Output Module: 2x Korg Nutube 6P1 » and « Output mode: Direct/Transistor/Tube ». USB receiver « XMOS XUF208 ». The maker calls the whole design « Modular Design: 5 Interchangeable Modules », so the converter is replaceable - the same shape as xDuoo's DAC cards, and this `chip` describes what ships."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512"
+    },
+    "spdif_coax": {},
+    "spdif_optical": {}
+  },
+  "_la_source_est_une_annonce_ou_un_manuel_pas_la_page_produit": "Shanling's product pages are image-only, so every figure comes from the maker's own announcement at /article/NNNNNN or from its manual PDF, both on en.shanling.com. No number was read off an image, and nothing is sourced to store.shanling.com. See the brand file.",
+  "_ni_DoP_ni_natif_ne_sont_dits_pour_ce_modele": "DoP appears on no Shanling page or manual, and « native » only in the UA dongle manuals and in EM5. Neither is stated for this model.",
+  "_le_SEUL_M_dont_le_plafond_dentree_USB_est_etiquete": [
+    "« USB DAC input: XMOS XUF208, up to PCM 32/768 & DSD512 » - a separate line from the input list, naming the socket. Fourteen M-series models were read and this is the only one that does it; every other gives one unlabelled Hi-Res figure or none. So inputs.usb carries a real figure here on the maker's own word, while coaxial and optical carry none, and the « 2x USB-A » of the input list are storage."
+  ],
+  "_DSD_Upsampling_est_du_traitement_PAS_une_capacite_dentree": "« Other functions: Over-the-Air Updates / DSD Upsampling / MQA ». DSD Upsampling converts what arrives into DSD inside the device - which is `pcm_reconverted_to_dsd`, and it is NOT written here because the line is a feature list and does not say whether it is always on, optional, or which inputs it touches. Listed beside firmware updates, it is a menu item, not a signal-path statement. Second device today where this trap appeared, after the EH3's « All-to-DSD processing »."
+}

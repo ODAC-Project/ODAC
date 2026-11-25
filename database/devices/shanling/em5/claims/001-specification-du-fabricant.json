@@ -1,0 +1,33 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://en.shanling.com/article/101301",
+    "quote": "Shanling's own announcement for the EM5, read 2026-11-25; its product page /product/407 is 23 image slices and its download page /download/81 offers no PDF, so this is the only source. Under « Audio support: »: « PCM 32/384 »; « DSD256 native, DSD512 software »; « 8x MQA ». Also: « AKM AK4493 DAC »; « OPA2211 as low pass filter* »; « 3rd Generation FPGA »; « CPAF Filter technology »; « Digital input: USB, Coaxial, optical, LAN and external driver USB slot »; « Digital output: Coaxial & Optical »; « Output power: Single ended 6.35mm - 540mW @ 32Ohm / Balanced - 1620mW @ 32Ohm »; « *Note: Due to printing error, some units of EM5 show OPA1612 in their diagram. Actual component used is OPA2211 ». No filter count or filter names, and no NOS mode.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "family": "akm",
+    "chip": "« AKM AK4493 DAC » with a « 3rd Generation FPGA » and « OPA2211 as low pass filter » - and the maker's own correction attached: « Due to printing error, some units of EM5 show OPA1612 in their diagram. Actual component used is OPA2211 ».",
+    "device_settings": [
+      {
+        "setting": "CPAF Filter",
+        "set_to": "unknown",
+        "why": "« CPAF Filter technology » is named and nothing more: no count, no list, no explanation of what CPAF stands for. Named-but-opaque, which is a third shape beside the makers who give a count without names and those who give neither."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {},
+    "spdif_coax": {},
+    "spdif_optical": {}
+  },
+  "_la_source_est_une_annonce_ou_un_manuel_pas_la_page_produit": "Shanling's product pages are image-only - 12 to 38 sliced JPEGs with no text - so every figure here comes from the maker's own news announcement at /article/NNNNNN or from its manual PDF, both on en.shanling.com. No number was read off an image. Nothing is sourced to store.shanling.com, whose terms forbid reuse. See the brand file for the measurement and for the decision on « use=reference » that permits reading this host.",
+  "_le_DSD_NATIF_sarrete_PLUS_BAS_que_le_DSD": "« DSD256 native, DSD512 software ». Two ceilings for one format: DSD512 is reachable, but only DSD256 arrives natively and the rest comes through software. `dsd_max` is DSD512, what the device plays, and `native_dsd` is true - but the honest reading is that native stops at DSD256 and the schema has no field for a native ceiling distinct from the overall one. `inputs.dsd_max` exists; a `native_dsd_max` does not. This is the clearest argument for one, and the only page in Shanling's whole catalogue that would feed it. Note the maker's word is « software », not DoP - DoP appears nowhere on this site - so what the other 256 travels as is genuinely unstated."
+}

@@ -1,0 +1,30 @@
+{
+  "source": {
+    "kind": "manual",
+    "url": "https://en.shanling.com/catlog/ua5.pdf",
+    "quote": "Shanling's own manual for the UA5, ua5.pdf, read 2026-11-25 - the product page is image-only, so the manual is the source. Its numbered feature list: « 1. Two Audiophile grade ESS Sabre ES9038Q2M DACs. » « 2. Hi-Res PCM support up to 32bit / 768kHz. » « 3. Native DSD support up to DSD512. »",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "family": "ess_sabre",
+    "chip": "« Two Audiophile grade ESS Sabre ES9038Q2M DACs »."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true
+    }
+  },
+  "_la_source_est_une_annonce_ou_un_manuel_pas_la_page_produit": "Shanling's product pages are image-only, so every figure comes from the maker's own announcement at /article/NNNNNN or from its manual PDF, both on en.shanling.com. No number was read off an image, and nothing is sourced to store.shanling.com. See the brand file.",
+  "_le_mot_NATIF_vient_du_manuel_et_nest_pas_du_texte_type": "« Native DSD support up to DSDnnn » is the manual's own wording, in a numbered feature list, and it appears in every UA manual in the same form. It is NOT the boilerplate that had to be refused on xDuoo, where one sentence was repeated on twenty unrelated pages including a passive module: here it sits on a family of dongles whose only digital input is the USB-C port it describes, and the figure varies by model - DSD256 on the UA1 Plus and UA1s, DSD512 on the rest. A claim that varies with the product is a claim about the product. DoP is never mentioned for any UA model.",
+  "_pas_de_filtre_non_plus_et_une_sortie_coaxiale": "Like the UA4, searched in all three languages for a filter setting: none. And verbatim, « 11. Digital Coaxial output. » plus « 10. Dual power supply, able to switch between USB or battery power. » - the coaxial is an OUTPUT, so this dongle's only digital input remains its USB-C."
+}

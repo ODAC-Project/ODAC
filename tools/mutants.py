@@ -52,6 +52,22 @@ def unknown_brand(root):
     json.dump(i, open(p, "w", encoding="utf-8"), indent=2, ensure_ascii=False)
 
 
+def duplicate_brand_file(root):
+    # A SECOND FILE FOR ONE MAKER. This passed every check until 2026-11-25,
+    # when a script that could not find cambridge.json invented
+    # cambridge-audio.json beside it. The guard cannot be "a brand file nobody
+    # cites": most brand files here are census entries with no records at all.
+    # It is the repeated display name. Three real duplicates were sitting in the
+    # tree when the guard was added - cyrus, geshelli and jds - so this mutant
+    # protects a repair, not a hypothetical.
+    d = os.path.join(root, "brands")
+    src = os.path.join(d, sorted(f for f in os.listdir(d) if f.endswith(".json"))[0])
+    o = json.load(open(src, encoding="utf-8"))
+    o["id"] = (o.get("id") or "x") + "_bis"
+    json.dump(o, open(os.path.join(d, "zz-duplicate.json"), "w", encoding="utf-8"),
+              indent=2, ensure_ascii=False)
+
+
 def unknown_interface(root):
     p = claim_path(root)
     c = json.load(open(p, encoding="utf-8"))
@@ -157,6 +173,7 @@ MUTANTS = [
     ("a null value", put_null, "null at"),
     ("a fact smuggled into identity", fact_in_identity, "which are facts"),
     ("a brand that does not exist", unknown_brand, "is not in database/brands"),
+    ("two brand files for one maker", duplicate_brand_file, "all claim the name"),
     ("an interface that does not exist", unknown_interface, "is not in database/interfaces"),
     ("a claim that asserts nothing", empty_claim, "asserts nothing"),
     ("a file that is not JSON", broken_json, "not valid JSON"),

@@ -1,0 +1,19 @@
+{
+  "source": {
+    "kind": "manual",
+    "url": "https://en.shanling.com/catlog/EH2.pdf",
+    "quote": "Shanling's own MANUAL for the EH2, EH2.pdf, read 2026-11-25 - a separate document from the announcement. Its « Sampling Frequency Indicator / Showing current sampling frequency during playback » table, verbatim: « 44.1/48kHz - Blue »; « 64/88.2/96kHz - Green »; « 128/176.4/192kHz - Yellow »; « 352.8/384/705.6/768kHz - Purple »; « DSD64/128/256 - White »; « 44.1/48kHz (UAC 1.0) - Red ». The table stops at DSD256. Also: « UAC1.0/UAC2.0 Mode / Set the device to USB input mode, then press and hold the [GAIN] button for 2 seconds to switch to UAC1.0 mode. »",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "dsd_max": "DSD256"
+  },
+  "_la_source_est_une_annonce_ou_un_manuel_pas_la_page_produit": "Shanling's product pages are image-only - 12 to 38 sliced JPEGs with no text - so every figure here comes from the maker's own news announcement at /article/NNNNNN or from its manual PDF, both on en.shanling.com. No number was read off an image. Nothing is sourced to store.shanling.com, whose terms forbid reuse. See the brand file for the measurement and for the decision on « use=reference » that permits reading this host.",
+  "_le_manuel_contredit_lannonce_sur_le_DSD": [
+    "The announcement says « Hi-Res Support USB: 768 kHz/32 bit, DSD 512 »; this manual's indicator table stops at « DSD64/128/256 ». Two documents from one maker about one device, and the catalogue holds both: claim 001 carries DSD512 from the announcement, this one carries DSD256 from the manual, and `contested` shows them side by side. The weights differ - a datasheet outranks a manual, 70 to 65 - so the build will choose DSD512, which is the right default and NOT a finding. What a reader needs to know is that the device's own front panel has no light for DSD512."
+  ],
+  "_un_tableau_de_voyants_nest_pas_une_declaration_de_plafond": "This is a list of what the indicator DISPLAYS, not a « supports up to » sentence - the manual never makes one. It is treated as evidence about the ceiling because a device that cannot light a lamp for DSD512 most likely cannot receive it, but that is a reading of a UI table and it is weaker than a specification. Recorded as the rival value it is, not as a correction. The EH90's manual has the same shape and there its table is the ONLY rate evidence that exists - which is why it was not promoted to a ceiling at all."
+}

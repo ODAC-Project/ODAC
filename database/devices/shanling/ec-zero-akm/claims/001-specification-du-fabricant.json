@@ -1,0 +1,25 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://en.shanling.com/article/101217",
+    "quote": "Shanling's own announcement for the EC Zero AKM, read 2026-11-25, with its manual at /download/files/ECZero1.0.pdf; the product page /product/482 is 12 image slices. Verbatim: « -AKM AK4493S DAC »; « -Dual SGM8262-2 amplifiers »; « -Extended battery life up to 10 hours of continuous playback »; « -Same inputs/outputs, features, design, UI, accessory compatibility »; « You can find the full specification of EC Zero AKM on its product page. » The manual's « Menu Settings »: item « PCM Filter: 0-5 », options « Sharp Roll-Off/Slow Roll-Off/Short Delay Sharp/Short Delay Slow/Super Slow/Low Dispersion ». NO PCM rate, no bit depth and no DSD figure appears in the announcement or in the manual.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "akm",
+    "chip": "« AKM AK4493S DAC » with « Dual SGM8262-2 amplifiers ».",
+    "device_settings": [
+      {
+        "setting": "PCM Filter",
+        "set_to": "unknown",
+        "why": "« PCM Filter: 0-5 », options « Sharp Roll-Off/Slow Roll-Off/Short Delay Sharp/Short Delay Slow/Super Slow/Low Dispersion » - SIX filters, all six named, which is rare enough to be worth the record on its own. And there is NO NOS option, unlike its sibling the EC Zero T. That is a real difference between two models of one range, not an omission, so `correctable` is not written here."
+      }
+    ]
+  },
+  "_la_source_est_une_annonce_ou_un_manuel_pas_la_page_produit": "Shanling's product pages are image-only, so every figure comes from the maker's own announcement at /article/NNNNNN or from its manual PDF, both on en.shanling.com. No number was read off an image, and nothing is sourced to store.shanling.com. See the brand file.",
+  "_ni_DoP_ni_natif_ne_sont_dits_pour_ce_modele": "DoP appears on no Shanling page or manual, and « native » only in the UA dongle manuals and in EM5. Neither is stated for this model, so both fields are absent rather than guessed.",
+  "_la_specification_promise_est_sur_une_page_dimages": "« You can find the full specification of EC Zero AKM on its product page. » That page is twelve JPEGs. The whole problem of this brand in one sentence written by the maker: it knows where its specification is, it points the reader there, and there is nothing there to read. Six named filters and a converter part number are all this record can carry - no rate, no depth, no DSD - from a product whose announcement exists only to say that it is the same as another one."
+}

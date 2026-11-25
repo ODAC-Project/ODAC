@@ -25,7 +25,7 @@ re-converts DSD to PCM internally, the real depth of its ladder, the level
 offset between its PCM and DSD paths. **A probe can tell you what a device
 accepts. It can never tell you what the device does with it.**
 
-Of the 280 records here, **none is complete on what the device does inside** —
+Of the 324 records here, **none is complete on what the device does inside** —
 118 state a word length, 27 an analogue filter, 27 whether the DSD path is
 direct, 6 whether DSD is re-converted to PCM, 5 a level offset between the two
 paths, and 1 an internal bypass rate. The database began at 26 records and that
@@ -109,7 +109,7 @@ database so that nobody has to hammer GitHub.
 **Why they bother.** MozAIk Labs make Tune, a music server that has to choose a
 playback setting for your converter. It cannot do
 that well without knowing things no driver reports. They could have kept that
-knowledge private; a catalogue of 280 devices kept private is worth
+knowledge private; a catalogue of 324 devices kept private is worth
 very little, and the same catalogue open has a chance of covering the hardware
 people actually own.
 
@@ -127,8 +127,8 @@ database — not only Tune.
 
 ## Where it stands
 
-280 devices — 207 converters and 73 network players — 327 brands,
-9 chip families, 14 interfaces, 305 claims, 15 open doubts and 3 resolved. Every device record
+324 devices — 246 converters and 78 network players — 324 brands,
+9 chip families, 14 interfaces, 350 claims, 15 open doubts and 3 resolved. Every device record
 carries a `kind`, so a network player enters without reopening a converter.
 78 records are complete on what the device accepts;
 **none** on what it does inside. The database is seeded from the Tune Smart Upsampler

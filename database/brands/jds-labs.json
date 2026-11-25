@@ -2,5 +2,6 @@
   "id": "jds_labs",
   "name": "JDS Labs",
   "_refused": "jdslabs.com/support/terms/, section « Limited Right to Use »: « No materials may be copied, reproduced, modified, republished » without prior written consent, the materials « may not be used for any commercial purposes », and « The use of such materials is strictly prohibited. » NO DEVICE RECORD MAY BE WRITTEN under this brand until JDS Labs is asked and answers.",
-  "_added_on": "2026-11-25"
+  "_added_on": "2026-11-25",
+  "_merged_from_a_duplicate_file": "jds.json carried the same display name and a different id, and was deleted on 2026-11-25. Neither file is cited by any record - JDS Labs is in the register of refusals, so it has none and will have none. jds-labs.json survives because it is the one carrying the refusal and its quoted clause; jds.json held nothing but an id and a name. Keys carried over: none, it held nothing new. Found by a new guard in the verifier that refuses two brand files claiming one name - added the same day after I created a fourth such duplicate by accident, which is how these three came to light. They had passed every check since they were written: the mutant suite tests that a RECORD cites a brand that exists, and most brand files here are census entries with no records, so « cited by nobody » could never have been the guard."
 }

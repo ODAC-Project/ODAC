@@ -1,0 +1,39 @@
+{
+  "source": {
+    "kind": "manual",
+    "url": "https://en.shanling.com/download/files/EH90v1.0.pdf",
+    "quote": "Shanling's own manual for the EH90, EH90v1.0.pdf, read 2026-11-25. The product page /product/495 is 16 image slices, and the announcement /article/101202 carries no specification list at all - it says only « Visit the dedicated product page of EH90 to view all the details: LINK », which is the images. So the manual is the only text source. Rear panel, verbatim: « 1. Bluetooth Antenna / 2. WORD/CLK Input / 3. Digital AES/EBU Input / 4. Digital Coaxial Input / 5. Digital Optical Input / 6. USB Input / 7. Digital IIS-LVDS Input / 8. Digital HDMI-ARC Input / 9. Power Switch / 10. Power Connector / 11. RCA Analog Output / 12. Balanced Analog Output ». « Input Options / Press the [ / MENU ] wheel to access Input settings or press the [SOURCE] button to cycle between inputs: \"BT / COAXIAL / OPTICAL / AES EBU / USB / I2S / HDMI-ARC\" ». « Tone Filter / Available in settings, switch between OS (Oversampling) and NOS (Non-oversampling) data processing of DAC. Oversampling filter will process all audio at 352.8kHz. » Its sampling-frequency indicator table reads « 32/44.1/48kHz - Blue »; « 64/88.2/96kHz - Green »; « 128/176.4/192kHz - Yellow »; « 352.8/384/705.6/768kHz - Purple »; « DSD64/128/256/512 - White ». Settings menu: « Language / Gain / Tone Filter / Clock Input / IIS Input mode / Screen brightness / Screen-Off time / Light switch / Reset Settings / About ». The manual prints full IIS-LVDS pinout tables for several pin modes. From the announcement: « The high-end Shanling PRO R2R module was firstly introduced in our flagship SCD3.3 SACD player, later also adapted into the SM1.3R Streamer. »; « offering up to 5.2W @ 32Ohm »; « Launching this month and available at 1199 USD // 1299 Euro. » No « support up to » figure is declared anywhere, and no converter part number is given.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "r2r_ladder",
+    "technology": "r2r",
+    "correctable": true,
+    "chip": "« The high-end Shanling PRO R2R module », a discrete ladder with no part number, first used in the SCD3.3 SACD player and the SM1.3R streamer.",
+    "device_settings": [
+      {
+        "setting": "Tone Filter",
+        "set_to": "NOS",
+        "why": "« switch between OS (Oversampling) and NOS (Non-oversampling) data processing of DAC. Oversampling filter will process all audio at 352.8kHz. » The second sentence is rare and valuable: it says WHAT THE OVERSAMPLING PATH DOES. Almost every maker that offers a bypass describes only the bypass; this one states the rate everything is resampled to when the bypass is off, which is what an engine needs to decide whether to send 352.8 kHz itself or leave it alone."
+      }
+    ]
+  },
+  "inputs": {
+    "aes_ebu": {},
+    "spdif_coax": {},
+    "spdif_optical": {},
+    "usb": {},
+    "i2s": {},
+    "hdmi": {},
+    "bluetooth": {}
+  },
+  "_la_source_est_une_annonce_ou_un_manuel_pas_la_page_produit": "Shanling's product pages are image-only - 12 to 38 sliced JPEGs with no text - so every figure here comes from the maker's own news announcement at /article/NNNNNN or from its manual PDF, both on en.shanling.com. No number was read off an image. Nothing is sourced to store.shanling.com, whose terms forbid reuse. See the brand file for the measurement and for the decision on « use=reference » that permits reading this host.",
+  "_ni_DoP_ni_natif_ne_sont_dits_pour_ce_modele": "The term DoP appears on no Shanling page or manual, and the word « native » only in the UA dongle manuals and in EM5's « DSD256 native, DSD512 software ». For this model neither is stated, so both fields are absent rather than guessed.",
+  "_SEPT_entrees_numeriques_et_AUCUN_plafond_declare": [
+    "AES/EBU, coaxial, optical, USB, I2S over LVDS, HDMI-ARC and Bluetooth - the richest input set of any Shanling device and one of the richest in the catalogue. And not one of them has a published ceiling, nor does the device: the manual contains no « supports up to » sentence at all. Its indicator table shows lamps up to 768 kHz and DSD512, and that table is NOT promoted to a ceiling here - it says what the display can show, not what the socket accepts, and on the EH2 the same kind of table turned out to disagree with the maker's own announcement. So `pcm_max_hz` and `dsd_max` are ABSENT on a 1199-dollar converter with seven inputs. The most expensive silence in the base."
+  ],
+  "_lentree_dhorloge_et_lHDMI_ARC_ne_sont_pas_la_meme_chose": "« 2. WORD/CLK Input » is a timing reference and carries no audio: not recorded. « 8. Digital HDMI-ARC Input » IS an audio input - ARC carries sound back from a television - and it is recorded, which makes this the first record in the catalogue whose HDMI key means an input. On the Electrocompaniet ECM 2 and the Prism Sound ADA-128 the same word was a video output and a firmware port. Three HDMI rows in two days, three different meanings, and only the surrounding words tell them apart."
+}

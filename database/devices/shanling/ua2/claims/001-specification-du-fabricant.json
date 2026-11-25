@@ -1,0 +1,28 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://en.shanling.com/article/101311",
+    "quote": "Shanling's own announcement for the UA2, read 2026-11-25; the product page /product/396 is 14 image slices and the download page /download/84 offers no PDF, so this is the only source and there is no manual to give the native-DSD sentence its siblings carry. Verbatim: « -ESS ES9038Q2M DAC & Ricore RT6863 amplifier »; « -Hi-Res support up to PCM 32/768 and DSD512 »; « -3.5mm Single ended & 2.5mm Balanced output »; « -Special mode offering compatibility with Nintendo Switch ».",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "family": "ess_sabre",
+    "chip": "« ESS ES9038Q2M DAC & Ricore RT6863 amplifier »."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512"
+    }
+  },
+  "_la_source_est_une_annonce_ou_un_manuel_pas_la_page_produit": "Shanling's product pages are image-only, so every figure comes from the maker's own announcement at /article/NNNNNN or from its manual PDF, both on en.shanling.com. No number was read off an image, and nothing is sourced to store.shanling.com. See the brand file.",
+  "_ni_DoP_ni_natif_ne_sont_dits_pour_ce_modele": "DoP appears on no Shanling page or manual, and « native » only in the UA dongle manuals and in EM5. Neither is stated for this model.",
+  "_le_seul_UA_sans_manuel_donc_le_seul_sans_le_mot_natif": "Every other UA dongle's manual says « Native DSD support up to DSDnnn » in those words, and `native_dsd` is written on all of them. This one has no manual - /download/84 links nothing - so its announcement's « Hi-Res support up to PCM 32/768 and DSD512 » is all there is, and `native_dsd` is ABSENT. Ten dongles of one family, nine of which state their DSD transport and one of which does not, for no reason but a missing file. The figure is the same; the knowledge is not."
+}

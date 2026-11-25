@@ -1,0 +1,30 @@
+{
+  "source": {
+    "kind": "manual",
+    "url": "https://en.shanling.com/catlog/UA4.pdf",
+    "quote": "Shanling's own manual for the UA4, UA4.pdf, read 2026-11-25 - the product page is image-only, so the manual is the source. Its numbered feature list: « 1. Dedicated Hi-Fi Audio DAC ESS Sabre ES9069Q. » « 2. Hi-Res PCM support up to 32bit / 768kHz. » « 3. Native DSD support up to DSD512. »",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "family": "ess_sabre",
+    "chip": "« ESS Sabre ES9069Q »."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true
+    }
+  },
+  "_la_source_est_une_annonce_ou_un_manuel_pas_la_page_produit": "Shanling's product pages are image-only, so every figure comes from the maker's own announcement at /article/NNNNNN or from its manual PDF, both on en.shanling.com. No number was read off an image, and nothing is sourced to store.shanling.com. See the brand file.",
+  "_le_mot_NATIF_vient_du_manuel_et_nest_pas_du_texte_type": "« Native DSD support up to DSDnnn » is the manual's own wording, in a numbered feature list, and it appears in every UA manual in the same form. It is NOT the boilerplate that had to be refused on xDuoo, where one sentence was repeated on twenty unrelated pages including a passive module: here it sits on a family of dongles whose only digital input is the USB-C port it describes, and the figure varies by model - DSD256 on the UA1 Plus and UA1s, DSD512 on the rest. A claim that varies with the product is a claim about the product. DoP is never mentioned for any UA model.",
+  "_aucun_reglage_de_filtre_du_tout_et_cest_mesure": "The UA4 and UA5 manuals were searched for « filter » and for the Chinese 滤波 in all three languages: zero hits. So there is no filter menu on this device - absent, not unknown, and `device_settings` holds nothing. Worth stating because seven of the ten UA manuals DO have one, so silence here is a difference between products rather than a gap in the document. Also verbatim: « MQA Support / Device includes hardware MQA support, MQA icon will be displayed when playing MQA files. »"
+}

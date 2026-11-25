@@ -1,0 +1,40 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://en.shanling.com/article/101511",
+    "quote": "Shanling's own announcement « Introducing Shanling EH50 - Desktop DAC & HP Amp », read 2026-11-25. There is NO product page for this model: it is absent from the DAC/AMP catalogue and /product/506 through /product/512 all return 404, so this article is the only source. Under « Hi-Res Audio Support »: « USB: PCM 768 kHz / 32-bit & DSD512 » and « Optical / Coaxial: PCM 192 kHz / 32-bit ». « [Digital Inputs] USB / Optical SPDIF / Coaxial SPDIF / Bluetooth 6.0 ( LDAC / AAC / SBC) »; « [Headphone Outputs] 3.5mm Single-ended / 6.35mm Single-ended / 4.4mm Balanced »; « [Analog Outputs] XLR / RCA ». « The EH50 utilizes two 8-channel Cirrus Logic CS4308P DACs for detailed and highly controlled presentation ». Also: « Paired with a discrete headphone amplifier, offering over 6W @ 32 Ohm »; « Extensive 31-bands system is configurable from a computer or smartphone »; « MSRP at 409 USD / 449 EUR »; « Shipping to distributors in the first week of December ». No digital filter name or count, no oversampling bypass, no NOS mode, no I2S, and no Bluetooth ceiling appear anywhere.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "family": "cirrus",
+    "chip": "« two 8-channel Cirrus Logic CS4308P DACs ». CS4308P is as the maker printed it and is NOT a part number that could be corroborated; it is not corrected here, for the same reason the MHDT Orchid 69SE's « TDA541A » was left as printed."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 32
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 32
+    },
+    "bluetooth": {}
+  },
+  "_la_source_est_une_annonce_ou_un_manuel_pas_la_page_produit": "Shanling's product pages are image-only - 12 to 38 sliced JPEGs with no text - so every figure here comes from the maker's own news announcement at /article/NNNNNN or from its manual PDF, both on en.shanling.com. No number was read off an image. Nothing is sourced to store.shanling.com, whose terms forbid reuse. See the brand file for the measurement and for the decision on « use=reference » that permits reading this host.",
+  "_ni_DoP_ni_natif_ne_sont_dits_pour_ce_modele": "The term DoP appears on no Shanling page or manual, and the word « native » only in the UA dongle manuals and in EM5's « DSD256 native, DSD512 software ». For this model neither is stated, so both fields are absent rather than guessed.",
+  "_la_MEILLEURE_forme_par_entree_du_site_entier": [
+    "« USB: PCM 768 kHz / 32-bit & DSD512 » then « Optical / Coaxial: PCM 192 kHz / 32-bit » - two socket-labelled ceilings, four times apart in PCM rate, on a maker whose every other page gives one device figure or none. And note what the second line does NOT say: no DSD figure for optical or coaxial. So inputs.spdif_coax and inputs.spdif_optical carry a PCM ceiling and no dsd_max, which is the maker's own shape and not an omission on my part."
+  ],
+  "_la_page_qui_porte_le_plus_na_pas_de_fiche_produit": "This is the newest model in the range, announced the day before this harvest, and it is the only one whose specification is fully legible - because it exists ONLY as an announcement. Every model that HAS a product page has its figures locked inside pictures. The maker's best documentation is the documentation it has not yet converted into images."
+}
