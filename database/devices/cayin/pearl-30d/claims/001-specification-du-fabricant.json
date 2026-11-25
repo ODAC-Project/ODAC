@@ -1,0 +1,27 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://cayin.com/produkt/pearl-30d-dac/",
+    "quote": "Cayin's own page for the Pearl 30D, read 2026-11-25. The page is German and its formal specification sheet is an IMAGE (« technische-DATEN_pearl_30D.png »), not read. From the page's own text: « Eine Wandersektion ist mit einem TDA1307 und zwei TDA1547 Chips ausgestattet » - the typo « Wandersektion » for Wandlersektion is the page's - and « Die zweite Wandlersektion besteht aus 8 x ESS9039SPRO ». On rates: « Die Modern-Architektur unterstuetzt hochaufloesende PCM/DSD-Daten bis 768 kHz und DSD512. » On modes: two decoding architectures named « Classic » and « Modern », with an « Auto Mode » table mapping rates to architecture (for example « 96 / 192 / 384 / 768 kHz -> Modern »). On inputs: only « Jitter-Cleaner reduziert den Jitter von SPDIF- und IIS-Signalen » - no input table. The word NOS does not appear.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "unknown",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512",
+    "chip": "TWO conversion sections in one box: « ein TDA1307 und zwei TDA1547 Chips » - Philips parts from the 1990s - and « 8 x ESS9039SPRO ». The maker calls them « Classic » and « Modern » and lets the owner choose between them.",
+    "device_settings": [
+      {
+        "setting": "Decoding architecture",
+        "set_to": "Modern",
+        "why": "« Classic » runs the TDA1547 section, « Modern » the eight ESS9039SPRO, and an « Auto Mode » table switches by rate - « 96 / 192 / 384 / 768 kHz -> Modern ». Modern is the setting because it is the only one the maker's own table associates with high rates, and because the Classic section is built on parts rated for 16-bit material. A listener choosing Classic is choosing a sound, deliberately, and this catalogue has no business arguing with that - but Auto cannot plan around a converter it cannot identify."
+      }
+    ]
+  },
+  "_verification_des_conditions_faite": "cayin.com has no terms-of-use page; its « Rechtliches » menu offers an Impressum, a cookie policy, AGB, payment, shipping, withdrawal and data protection. The AGB WAS READ - they are sales terms for the webshop - and carry no clause on copying, reproducing or extracting site content. The footer reads « Copyright: Cayin Audio Distribution GmbH », the ordinary notice. Worth stating: HiBy, read the same hour, forbids it outright.",
+  "_UN_SEUL_APPAREIL_AVEC_DEUX_ETAGES_DE_CONVERSION_COMPLETS": "« Eine Wandersektion ist mit einem TDA1307 und zwei TDA1547 Chips ausgestattet » and « Die zweite Wandlersektion besteht aus 8 x ESS9039SPRO ». Two entire conversion stages in one chassis, a 1990s Philips ladder-era section and eight current ESS parts, selectable. Nothing in this schema can express it: `family`, `technology` and `chip` are each ONE value for the device, and this device has two of everything. family is left `unknown` rather than picking a side, the two sections are described in `chip`, and the choice lives in device_settings. First device in 180 records to break the assumption that a box has a converter.",
+  "_la_fiche_technique_est_une_image": "The page's formal data sheet is a PNG and was not read. What is recorded comes from the surrounding German prose. So the rates - « bis 768 kHz und DSD512 » - describe the Modern architecture and the Classic section's own ceiling is unknown, which on a device with two converters is a real gap rather than a detail."
+}

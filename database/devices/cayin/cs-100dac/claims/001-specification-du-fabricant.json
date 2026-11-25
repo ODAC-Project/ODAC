@@ -1,0 +1,39 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://cayin.com/produkt/cayin-cs-100dac_r%c3%b6hren-d-a_wandler/",
+    "quote": "Cayin's own page for the CS-100DAC, read 2026-11-25. The page is German. Specification rows: « DAC-Chipset: » « ES9038Pro (x2) »; « I2S: bis 32Bit/768kHz, DSD512 »; « USB: bis 32Bit/768kHz, DSD512 nativ, DoP256 »; « Roehrenbestueckung: » « 4 x 6922EH ». Description: « im nativen Modus bis zu 32 Bit / 768 kHz sowie DSD512 und DoP256 » and, listing the sockets, « USB-Audio, AES/EBU, BNC, Cinch, Toslink und I2S via Mini-HDMI » - with no rate given for AES/EBU, BNC, Cinch or Toslink. On filters: « Das gilt auch fuer die vielen unterschiedlichen Filter-Charakteristiken. » - many filter characteristics, no count and no names. The word NOS does not appear.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true,
+    "chip": "« ES9038Pro (x2) » (ESS). The « 4 x 6922EH » are OUTPUT TUBES - Cayin's signature - and not the converter."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true,
+      "dop_possible": true,
+      "dop_max": "DSD256"
+    },
+    "i2s": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512"
+    }
+  },
+  "_verification_des_conditions_faite": "cayin.com has no terms-of-use page; its « Rechtliches » menu offers an Impressum, a cookie policy, AGB, payment, shipping, withdrawal and data protection. The AGB WAS READ - they are sales terms for the webshop - and carry no clause on copying, reproducing or extracting site content. The footer reads « Copyright: Cayin Audio Distribution GmbH », the ordinary notice. Worth stating: HiBy, read the same hour, forbids it outright.",
+  "_deux_entrees_notees_sur_six": "« USB-Audio, AES/EBU, BNC, Cinch, Toslink und I2S via Mini-HDMI » - six sockets, and the specification rows rate exactly two of them, USB and I2S. AES/EBU, BNC, coaxial and optical get nothing. So four inputs exist on this device and this record says nothing about any of them, which is the honest outcome and not a gap to fill from the device figure.",
+  "_le_DoP_plafonne_une_marche_sous_le_natif_une_huitieme_fois": "« USB: bis 32Bit/768kHz, DSD512 nativ, DoP256 ». Eighth maker to publish both halves, after APL HiFi, Matrix, Cambridge, LUMIN, Topping, Burson and Rotel. inputs.dop_max, registered this afternoon, takes the DoP256. The field has been in the schema for a few hours and is already on nine records.",
+  "_des_tubes_qui_ne_sont_PAS_le_convertisseur": "« Roehrenbestueckung: 4 x 6922EH ». Cayin builds tube-output DACs, and the valve count is the first thing a reader notices. It is the analogue output stage. The converter is the pair of ES9038Pro named two rows above. vocabulary/nos-means-two-things.json exists because of pages like this one - though here the maker never writes NOS at all, so the ambiguity does not arise."
+}

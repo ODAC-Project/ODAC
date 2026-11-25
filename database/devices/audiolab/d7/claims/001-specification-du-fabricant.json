@@ -1,0 +1,34 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.audiolab.co.uk/products/d7",
+    "quote": "Audiolab's own page for the D7, read 2026-11-25 in a browser (the host returns 429 to automated fetchers, on three separate attempts over several hours), from the page's « Specifications » block: « Inputs 2 x SPDIF (Coax), 2 x SPDIF (Optical), 1 x PC USB (USB B), 1 x USB HDD (USB A), 1 x Bluetooth (aptX / aptX HD) »; « Sampling Frequency Optical/Coaxial: 44.1kHz-192kHz USB HDD: 44.1kHz-96kHz PC USB: 44.1kHz-768kHz (PCM) / DSD64, DSD128, DSD256, DSD512 »; « Max. Sampling Frequency USB HDD: 96KHz Optical,Coaxial: 192KHz PC USB: PCM768kHz, DSD512 »; « DAC D to A Converter ES9038Q2M »; « Description DAC Design Philosophy and Core Technology ES9038Q2M 32-bit DAC OLED Display Bluetooth 5.1 (aptX / aptX HD) streaming Dedicated Current-Feedback Headphone Amp »; « Output Level (0dBFS, 1kHz) 2.05Vrms (RCA), 4.1Vrms (XLR) »; « Total Harmonic Distortion (THD) < 0.001% (1KHz @ 0dBFS) »; « Signal-to-noise Ratio (S/N) > 115dB ». audiolab.co.uk has no terms-of-use page: its footer links Contact, Support, Warranty, Ethical Standards, PSTI Compliance, a Cookie Policy and a Privacy Policy, with « All Rights Reserved (c) 2026 Audiolab » - the ordinary notice and no prohibition.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "chip": "« ES9038Q2M » (ESS), given in its own « D to A Converter » row and again as « ES9038Q2M 32-bit DAC »."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "dsd_max": "DSD512"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000
+    }
+  },
+  "_la_page_donne_le_meme_tableau_DEUX_fois": "« Sampling Frequency » lists the three paths and « Max. Sampling Frequency » repeats them - « USB HDD: 96KHz Optical,Coaxial: 192KHz PC USB: PCM768kHz, DSD512 ». The two rows agree, which is worth saying after three days in which a page contradicting itself has been the commoner case (Cambridge by a factor of two, Pro-Ject on its filter count, Rotel's chip against its input).",
+  "_USB_HDD_est_du_stockage_et_pas_une_entree": "« 1 x USB HDD (USB A) » rated at « 44.1kHz-96kHz ». It reads exactly like an input ceiling and it is the rate at which the device plays files off a disk - the same trap as Hegel's « USB A 2.0 - USB Drives (10,000 songs) » and Bluesound's « USB IN Type A ... External Storage only ». No block is written for it, and the 96 kHz is NOT the USB ceiling: « PC USB » is the audio input and it reaches 768.",
+  "_aucune_profondeur_de_bits_par_entree": "« ES9038Q2M 32-bit DAC » gives the device 32 bits, and no input row states a word length. inputs.bits is absent on all three. Fourth British maker in two days to rate its inputs by frequency alone - Arcam, Rotel and Cambridge do give bit depths, so it is this page's choice rather than a national habit.",
+  "_la_liste_de_filtres_reste_hors_datteinte": "The M-DAC range made its name on selectable filters and the D7 inherits the line - a review quoted on this very page says the sound « can even be tailored to your own taste thanks to the filter selection ». A REVIEW, not the maker. The Specifications block names no filter and no filter count, so no device_settings entry is written. Third attempt at this brand in three days; the filter list has defeated all three."
+}
