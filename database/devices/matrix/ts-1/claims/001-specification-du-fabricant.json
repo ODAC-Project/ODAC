@@ -23,7 +23,8 @@
       "bits": 24,
       "dsd_max": "DSD512",
       "native_dsd_possible": true,
-      "dop_possible": true
+      "dop_possible": true,
+      "dop_max": "DSD256"
     },
     "spdif_coax": {
       "pcm_max_hz": 192000,
@@ -44,5 +45,6 @@
   },
   "_les_debits_dsd_sont_donnes_en_megahertz_et_sur_DEUX_bases": "Matrix lists DSD as frequencies, not names: « 2.82MHz, 3.07MHz, 5.64MHz, 6.14MHz, 11.29MHz, 12.29MHz, 22.58MHz, 24.58MHz ». The first of each pair is a multiple of 44.1 kHz and the second of 48 kHz - 2.82/3.07, 5.64/6.14, and so on. So this maker publishes the 48 kHz-base DSD rates explicitly, which APL HiFi had only mentioned (« Both 44.1kHz and 48kHz base frequencies are accepted for DSD ») and which dsd_max cannot express at all: its values are DSD64 through DSD1024, all 44.1-based. Second maker, and the first to enumerate them. The name recorded is the 44.1-based equivalent and the megahertz stay in the quote.",
   "_le_plafond_dsd_depend_du_transport_sur_la_meme_entree": "The USB row gives two DSD lists: one marked « (DoP) » stopping at 11.29 MHz, one marked « (Native) » going higher. So DSD arriving wrapped in PCM frames tops out two steps below DSD arriving native, THROUGH THE SAME SOCKET. inputs.dsd_max is a single value, so the native ceiling is recorded and inputs.dop_possible is left as the boolean it is. Same wound APL HiFi opened the same evening with « up to DSD128 in DoP format and up to DSD256 in NativeDSD format »: the ceiling belongs to the pair (input, transport), and the schema models the input alone.",
-  "_vingt_quatre_bits_partout_car_il_ny_a_pas_dIIS": "This is the one Matrix model in the batch with no IIS-LVDS row, and therefore the one whose device-level `bits` is 24 rather than 32: nothing on it reaches 32 bits. On its siblings the 32 comes from the proprietary link alone. A reader comparing device-level bit depths across this range would conclude the TS-1 is the weaker converter, when what it actually lacks is a socket."
+  "_vingt_quatre_bits_partout_car_il_ny_a_pas_dIIS": "This is the one Matrix model in the batch with no IIS-LVDS row, and therefore the one whose device-level `bits` is 24 rather than 32: nothing on it reaches 32 bits. On its siblings the 32 comes from the proprietary link alone. A reader comparing device-level bit depths across this range would conclude the TS-1 is the weaker converter, when what it actually lacks is a socket.",
+  "_dop_max_renseigne_2026_11_25": "inputs.dop_max was registered on 2026-11-25 and filled here from THIS claim's own quote, which already carried the figure: the source was never short of it, the schema was. No new source was consulted and nothing else in the record changed."
 }

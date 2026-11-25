@@ -1,0 +1,19 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.project-audio.com/en/product/uni-box-s3/",
+    "quote": "Pro-Ject Audio Systems' own page for the Uni Box S3, read 2026-11-25. Digital inputs: « RCA coax, 2 x Toslink, ARC, WiFi/BT ». DA-converter: « Cirrus Logic CS4344 24bit/192kHz ». No USB input, no DSD row and no filter row. The product is an integrated streaming amplifier.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "cirrus",
+    "pcm_max_hz": 192000,
+    "bits": 24,
+    "chip": "« Cirrus Logic CS4344 24bit/192kHz » - the same part as the DAC Box E."
+  },
+  "_verification_des_conditions_faite_et_propre": "project-audio.com has NO terms-of-use page: the footer links an Imprint, a Data protection declaration, software updates, contact, FAQ, warranty, dealers and downloads, and nothing named Terms. The Imprint and the Data protection declaration were both READ and neither restricts copying, reproduction or extraction of site content. The footer carries « (c) 2026 Pro-Ject Audio Systems a division of Audio Tuning Vertriebs GmbH », which is the ordinary copyright line. One restriction does exist on the data-protection page and it is scoped to security research, inside a Coordinated Vulnerability Disclosure policy: « You must not, for example, share, redistribute or fail to properly secure data retrieved from the systems or services » - about data obtained while reporting a vulnerability, not about published specifications. Recorded in full because three makers were refused the same day on clauses this specific.",
+  "_aucun_debit_par_entree_et_le_chiffre_vient_du_convertisseur": "« RCA coax, 2 x Toslink, ARC, WiFi/BT » with no rate attached to any of them. The only figure on the page is « CS4344 24bit/192kHz », which is what the CONVERTER does, not what a socket accepts. pcm_max_hz is recorded from it and no inputs block is written - the distinction the whole catalogue turns on, and here the maker leaves only the inner number."
+}

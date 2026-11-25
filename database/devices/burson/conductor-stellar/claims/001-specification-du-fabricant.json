@@ -1,0 +1,39 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://bursonaudio.com/products/conductor-stellar/",
+    "quote": "Burson Audio's own page for the Conductor Stellar, read 2026-11-25. Inputs row: « USB | Optical Toslink | Coaxial | Bluetooth 5.0 | Microphone ». Rate rows: « PCM Support | PCM <= 768 kHz @ 16, 24 or 32 bits »; « Native DSD 64 / 128 / 256 / 512 »; « DSD over PCM | DoP64 / DoP128 / DoP256 / DoP512 »; « COAX & Toslink / SPDIF | Up to 24 bit 192 kHz ». Body text: « The ESS9039PRO DAC, delivering exceptional resolution and dynamic range. »; « While it offers 24 filters and path settings, we've done the hard work for you. »; « USB-C XMOS Input Streams native DSD512 and 32-bit/768kHz PCM ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true,
+    "chip": "« The ESS9039PRO DAC », fed by a « USB-C XMOS Input »."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true,
+      "dop_possible": true
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_verification_des_conditions_tentee_et_NON_CONCLUANTE": "No terms-of-use, terms-of-service or legal-notice page was found on bursonaudio.com. The home page, the shop, four product pages and the return-and-warranty policy were all read and none links to one; the returns page restricts purchases and says nothing about site content. BUT the reader reports that the footer text was not visible in any extracted page, so a footer link may exist and have been missed. The check was therefore ATTEMPTED AND INCONCLUSIVE, not clean - which is a different thing from Pro-Ject, where the Imprint and the data-protection page were read and cleared. The facts are recorded, because the rule is to integrate unless explicitly forbidden and nothing forbidding was found; the quality of the check is recorded with them, because on 2026-11-25 three makers were refused on clauses that live exactly where this one could not look.",
+  "_un_fabricant_qui_dit_AVOIR_CHOISI_a_votre_place": "« While it offers 24 filters and path settings, we've done the hard work for you. » Read plainly: the chip's filter menu exists, the maker has picked one, and the owner is not offered the choice. That is a real and recordable position - most makers in this catalogue either expose the menu (Topping, Cambridge, Chord, iFi) or say nothing - and no device_settings entry is written BECAUSE there is no setting. The sentence also says, without meaning to, that whatever filter is in the path here is one the catalogue cannot name and cannot turn off."
+}

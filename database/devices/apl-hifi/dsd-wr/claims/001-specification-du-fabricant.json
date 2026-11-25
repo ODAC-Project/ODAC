@@ -32,7 +32,8 @@
       "bits": 32,
       "dsd_max": "DSD256",
       "native_dsd_possible": true,
-      "dop_possible": true
+      "dop_possible": true,
+      "dop_max": "DSD128"
     },
     "spdif_coax": {
       "pcm_max_hz": 192000,
@@ -50,5 +51,6 @@
   "_dtr_is_i2s_wearing_a_proprietary_name": "« Two Proprietary DTR inputs allowing connection to DTR-MR and DNP-SR » and « Proprietary DTR balanced I2S inputs for connecting our digital sources ». The maker says in its own words that its proprietary input IS I2S, balanced - so unlike MSB's Pro ISL, Nagra's NAGRA-LINK or Wadax's triple-AES link, this one has a key here. It still gets no block: the page gives it no rate and no bit depth, and the only inputs it accepts are two of the maker's own transports.",
   "_a_volume_control_that_does_not_throw_bits_away": "« Attenuator offering a non-decimating volume control with a 0.5dB step. » Volume is where bit depth usually dies, and a maker saying its attenuator does not decimate is saying the 32-bit input survives it. There is no field for it. Noted because the catalogue's whole purpose is to know what reaches the conversion stage, and a decimating volume control defeats everything upstream of it - this is the first page in the pass to address it at all.",
   "_what_was_refused_a_customer_review": "A customer review on the same page mentions « DF-Zero » and another says the DAC « always converts to DSD ». Reviews are not the maker. The second happens to agree with the maker's own sentence, which is exactly why it must not be used: a source that confirms what is already evidenced adds nothing and teaches the harvest to read comment threads as specification. Neither is recorded.",
-  "_quadruple_is_not_recorded": "« From the quadruple DSD processing rate » - quadruple of what the page never says. DSD256 is four times DSD64, so the reading is probably that, and probably is not a fact. The figures that ARE stated, DSD128 and DSD256, are recorded instead."
+  "_quadruple_is_not_recorded": "« From the quadruple DSD processing rate » - quadruple of what the page never says. DSD256 is four times DSD64, so the reading is probably that, and probably is not a fact. The figures that ARE stated, DSD128 and DSD256, are recorded instead.",
+  "_dop_max_renseigne_2026_11_25": "inputs.dop_max was registered on 2026-11-25 and filled here from THIS claim's own quote, which already carried the figure: the source was never short of it, the schema was. No new source was consulted and nothing else in the record changed."
 }

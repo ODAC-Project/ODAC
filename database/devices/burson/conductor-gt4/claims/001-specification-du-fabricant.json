@@ -1,0 +1,39 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://bursonaudio.com/products/conductor-gt4/",
+    "quote": "Burson Audio's own page for the Conductor GT4, read 2026-11-25. Inputs row: « 2 x XLR | 2 x RCA | USB | Optical Toslink | Bluetooth 5.0 | Microphone ». Rate rows: « PCM Support | PCM <= 768 kHz @ 16, 24 or 32 bits »; « Native DSD 64 / 128 / 256 / 512 »; « DSD over PCM | DoP64 / DoP128 / DoP256 / DoP512 »; « COAX & Toslink / SPDIF | Up to 24 bit 192 kHz ». The front-matter description reads « Dual ESS9038, 10W XLR Class-A » and the body « each DAC chip is independently powered and handles only one channel ». No chip is named in a specification row, and no filter, oversampling or NOS row appears anywhere on the page.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true,
+    "chip": "« Dual ESS9038 » from the product description, with « each DAC chip is independently powered and handles only one channel » - two converters in dual mono. The part is named only in the description, never in a specification row, and « ESS9038 » without a suffix does not distinguish an ES9038PRO from an ES9038Q2M."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true,
+      "dop_possible": true
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_verification_des_conditions_tentee_et_NON_CONCLUANTE": "No terms-of-use, terms-of-service or legal-notice page was found on bursonaudio.com. The home page, the shop, four product pages and the return-and-warranty policy were all read and none links to one; the returns page restricts purchases and says nothing about site content. BUT the reader reports that the footer text was not visible in any extracted page, so a footer link may exist and have been missed. The check was therefore ATTEMPTED AND INCONCLUSIVE, not clean - which is a different thing from Pro-Ject, where the Imprint and the data-protection page were read and cleared. The facts are recorded, because the rule is to integrate unless explicitly forbidden and nothing forbidding was found; the quality of the check is recorded with them, because on 2026-11-25 three makers were refused on clauses that live exactly where this one could not look.",
+  "_trois_appareils_un_seul_jeu_de_chiffres": "The Voyager, the Stellar and this one publish the identical four rate rows - 768 kHz, 32 bits, native DSD512, DoP512, 24/192 on S/PDIF - on three different converter configurations (ESS9039PRO, ESS9039PRO, dual ESS9038). Same observation as Matrix's three ESS generations and Bluesound's three models on one chip: the ceiling is set by the XMOS receiver and the firmware, and the converter choice shows up in the analogue measurements the schema does not hold."
+}

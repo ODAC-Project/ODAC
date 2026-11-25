@@ -1,0 +1,50 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://mytek.audio/shop/liberty-dac-ii-287",
+    "quote": "Mytek Digital's own storefront page for the Liberty DAC II, read 2026-11-25 (mytekdigital.com redirects to mytek.audio). « CONVERSION: » « Up to 384k, 32bit PCM, native DSD up to DSD256, DXD, ES9038 chipset, 127dB DR ». « DIGITAL INPUTS: » « USB2 Class2 (OSX, Linux driverless, all audio formats), AES/EBU (PCM up to 192k, up to DSD64 DOP), 2x S/PDIF (PCM up to 192k, up to DSD64 DOP), Toslink/ADAT 2x S/PDIF (PCM up to 192k, up to DSD64 DOP) ». The page also mentions a « digital volume control » and « MQA HI-RES DECODER » / « Built in certified hardware MQA decoder ». No filter, upsampling, oversampling or NOS row appears anywhere.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD256",
+    "native_dsd": true,
+    "dop": true,
+    "chip": "« ES9038 chipset » - the family named without the suffix, so an ES9038PRO and an ES9038Q2M are not distinguished."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "dsd_max": "DSD256",
+      "native_dsd_possible": true
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true
+    }
+  },
+  "_verification_des_conditions_tentee_et_NON_CONCLUANTE": "mytekdigital.com redirects (301) to mytek.audio, which is the maker's storefront - treating the redirect as the same company is an inference, stated here rather than hidden. That site shows no link to terms, legal or copyright pages; its only policy link is a return policy, which was not read. The reader says plainly: « I did not search further, so this does not prove that no terms page exists. » Attempted and inconclusive, like Burson's and unlike Pro-Ject's.",
+  "_une_ligne_dentrees_qui_fait_tout_le_travail_sauf_pour_lUSB": "Each of AES/EBU, S/PDIF and Toslink carries its own parenthesis - « PCM up to 192k, up to DSD64 DOP » - while USB gets « all audio formats » and no figure at all. The USB ceiling is therefore taken from the CONVERSION row, « Up to 384k, 32bit PCM, native DSD up to DSD256 », which is a statement about the device. That is normally the inference this catalogue refuses; it is made here because the maker rated every OTHER input explicitly and left USB to the device line, and because « all audio formats » on the input Mytek sells the product on can only mean the device figure. The reasoning is written out so it can be contested.",
+  "_Toslink_ADAT_une_deuxieme_fois_dans_la_journee": "« Toslink/ADAT 2x S/PDIF » - the optical socket speaks ADAT as well as S/PDIF, exactly as the Topping E50 II's does, read a few hours earlier. Two makers in one day, and the interface vocabulary still has no ADAT. Here the maker gives no channel count, so even inputs.channels would have nothing to hold.",
+  "_DXD_une_quatrieme_fois_et_toujours_range_avec_le_DSD": "« Up to 384k, 32bit PCM, native DSD up to DSD256, DXD » - DXD listed after the DSD figure, as if it were a third format. It is 24-bit PCM at 352.8 or 384 kHz and is already covered by pcm_max_hz. Fourth maker to name it, after McIntosh, Nagra and iFi, and the third to file it beside DSD rather than beside PCM."
+}

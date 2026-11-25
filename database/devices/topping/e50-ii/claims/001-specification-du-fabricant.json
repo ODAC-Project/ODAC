@@ -40,7 +40,8 @@
       "bits": 32,
       "dsd_max": "DSD512",
       "native_dsd_possible": true,
-      "dop_possible": true
+      "dop_possible": true,
+      "dop_max": "DSD256"
     },
     "spdif_coax": {
       "pcm_max_hz": 192000,
@@ -59,5 +60,6 @@
   "_une_TROISIEME_colonne_que_le_schema_ne_connait_pas": "Topping's « Input range » table has three columns per interface: PCM, DSD and PEQ. The third is the range over which the device's parametric equaliser WORKS, and it is lower than the PCM ceiling - on the DX1 II, 384 kHz of PCM against 192 kHz of PEQ. So a device may accept a rate at which its own EQ silently stops applying. No field holds it, and nothing else in 138 records publishes anything like it. Worth keeping in view for a Smart Upsampler: pushing a device above its PEQ range changes what the listener hears from their own corrections, which is a consequence of OUR choice of rate.",
   "_UN_REGLAGE_QUI_VERROUILLE_UN_AUTRE": "« When the output amplitude is in high voltage mode, the DSD filter is fixed at F-1 and cannot be adjusted. » The manual says it twice. So U-H locks the DSD filter to the 37 kHz one, and the recommendation above - F-2, 65 kHz - is reachable ONLY with the output in low-voltage mode. device_settings is a LIST of independent entries and cannot express a dependency between two of them. First interaction of this kind met in 138 records, and it is a real trap: a catalogue that tells a listener to set U-H and F-2 is telling them to do something the device refuses.",
   "_une_prise_optique_qui_parle_DEUX_protocoles": "« Optical input (Supports and automatically recognizes S/PDIF and ADAT protocols) », with its own row in the input table: « OPT IN (ADAT) | PCM 44.1kHz-192kHz ». ADAT is a MULTICHANNEL protocol over the same TOSLINK socket, and the manual tabulates how the channel count falls as the rate rises - « AdA1 » gives four pairs, « AdA2 » two, « AdA4 » one, which is ADAT's standard channel-multiplexing. The interface vocabulary has spdif_optical and no ADAT, and inputs.channels is a single integer where the maker publishes a function of the rate. Only record in the catalogue to raise either.",
-  "_le_bluetooth_est_decrit_par_ses_codecs_et_par_sa_plage_de_PEQ": "« BT IN | AAC/SBC/APTX/APTX-Adaptive/APTX HD/LDAC | PEQ 44.1kHz-96kHz/16bit-24bit ». No PCM column for Bluetooth - only the codecs and the PEQ range. So the only figure the maker gives for that input is the range over which its equaliser works, 96 kHz, which is not a ceiling on what the input accepts. No bluetooth block is written: iFi listed seven codecs with no figure and was treated the same way."
+  "_le_bluetooth_est_decrit_par_ses_codecs_et_par_sa_plage_de_PEQ": "« BT IN | AAC/SBC/APTX/APTX-Adaptive/APTX HD/LDAC | PEQ 44.1kHz-96kHz/16bit-24bit ». No PCM column for Bluetooth - only the codecs and the PEQ range. So the only figure the maker gives for that input is the range over which its equaliser works, 96 kHz, which is not a ceiling on what the input accepts. No bluetooth block is written: iFi listed seven codecs with no figure and was treated the same way.",
+  "_dop_max_renseigne_2026_11_25": "inputs.dop_max was registered on 2026-11-25 and filled here from THIS claim's own quote, which already carried the figure: the source was never short of it, the schema was. No new source was consulted and nothing else in the record changed."
 }

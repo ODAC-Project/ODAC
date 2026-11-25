@@ -1,0 +1,20 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://mytek.audio/shop/empire-streamer-dac-479",
+    "quote": "Mytek Digital's own storefront page for the Empire Streamer DAC, read 2026-11-25; the page's own title is « EMPIRE DAC STREAMER V2.0 ». Digital inputs: « Streamer, COAXIAL (X2), Optical, USB2, and Roon End Point, all w PCM DSD and MQA » - with no rate per input. Rates: « galvanic USB isolator for up to 32bit/768k and DSD512 playback ». Conversion: « a new dual mono hybrid 6 bit DAC design combining chipsets with external DSP and FPGA processing »; the page also speaks of « external DSP and FPGA processing » and « new DSP features ». No filter, upsampling, oversampling or NOS row.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "chip": "No part number: « a new dual mono hybrid 6 bit DAC design combining chipsets with external DSP and FPGA processing ». Three things at once - bought converter chips, an external DSP and an FPGA - and the page says « chipsets » without naming one."
+  },
+  "_verification_des_conditions_tentee_et_NON_CONCLUANTE": "mytekdigital.com redirects (301) to mytek.audio, which is the maker's storefront - treating the redirect as the same company is an inference, stated here rather than hidden. That site shows no link to terms, legal or copyright pages; its only policy link is a return policy, which was not read. The reader says plainly: « I did not search further, so this does not prove that no terms page exists. » Attempted and inconclusive, like Burson's and unlike Pro-Ject's.",
+  "_six_bits_est_probablement_une_coquille_et_nest_donc_PAS_un_fait": "« a new dual mono hybrid 6 bit DAC design ». Six bits would be a remarkable claim about a modulator and the page explains it nowhere. The reader who collected the row flagged it as likely a typo and unverified, and that flag is kept: nothing is written from it, not even into `chip` as an assertion - the phrase is quoted and labelled. A number that would be extraordinary if true deserves a second source before it enters a database, and this one has none.",
+  "_ni_famille_ni_technology_car_la_phrase_dit_TROIS_choses": "« combining chipsets with external DSP and FPGA processing » names bought silicon, an external DSP and an FPGA in one breath, and says which does the conversion nowhere. family is absent and technology is absent, so a consumer's cascade falls back to delta_sigma - probably right for « chipsets », and a fallback rather than a fact. Same shape as the Nagra correction made last night, where « a high-performance FPGA performs all internal calculations » had been read as the conversion stage and was withdrawn."
+}

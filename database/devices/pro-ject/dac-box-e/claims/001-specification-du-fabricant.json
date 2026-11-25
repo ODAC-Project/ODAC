@@ -1,0 +1,30 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.project-audio.com/en/product/dac-box-e/",
+    "quote": "Pro-Ject Audio Systems' own page for the DAC Box E, read 2026-11-25. Digital inputs: « 1x coaxial (S/PDIF), 1x optical (TOSlink(R)) ». Sampling rates: « 44.1 kHz, 48kHz, 96 kHz and 192 kHz (coaxial only) ». DAC: « CS4344. 24Bit/192kHz ». No USB input, no DSD row and no filter row anywhere on the page.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "cirrus",
+    "pcm_max_hz": 192000,
+    "bits": 24,
+    "chip": "« CS4344. 24Bit/192kHz » (Cirrus Logic)."
+  },
+  "inputs": {
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000,
+      "bits": 24
+    }
+  },
+  "_verification_des_conditions_faite_et_propre": "project-audio.com has NO terms-of-use page: the footer links an Imprint, a Data protection declaration, software updates, contact, FAQ, warranty, dealers and downloads, and nothing named Terms. The Imprint and the Data protection declaration were both READ and neither restricts copying, reproduction or extraction of site content. The footer carries « (c) 2026 Pro-Ject Audio Systems a division of Audio Tuning Vertriebs GmbH », which is the ordinary copyright line. One restriction does exist on the data-protection page and it is scoped to security research, inside a Coordinated Vulnerability Disclosure policy: « You must not, for example, share, redistribute or fail to properly secure data retrieved from the systems or services » - about data obtained while reporting a vulnerability, not about published specifications. Recorded in full because three makers were refused the same day on clauses this specific.",
+  "_une_parenthese_qui_vaut_un_tableau_par_entree": "« 44.1 kHz, 48kHz, 96 kHz and 192 kHz (coaxial only) ». Two words in brackets do the whole job: the list applies to both inputs except its last entry, which is coaxial alone. So optical stops at 96 kHz and coaxial reaches 192. It is the most economical per-input statement met in three days - and it would be invisible to any reading that took the list and ignored the parenthesis, which is exactly what an automated extraction does.",
+  "_le_seul_Pro_Ject_sans_USB": "Two inputs, no USB, no DSD, a Cirrus converter instead of the ESS that every other model in this batch uses. The entry-level box of the range, and the only one a computer cannot reach directly."
+}

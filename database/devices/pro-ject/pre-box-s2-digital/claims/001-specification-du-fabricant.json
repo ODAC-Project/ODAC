@@ -1,0 +1,40 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.project-audio.com/en/product/pre-box-s2-digital/",
+    "quote": "Pro-Ject Audio Systems' own page for the Pre Box S2 Digital, read 2026-11-25. Digital inputs: « 1x USB (B), 1x Co-axial (RCA), 1x Optical (TOSLink) ». Per input: USB « up to DSD512 (DSD1024), PCM up to 32b/768kHz »; Optical « PCM up to 24b/192kHz »; Coaxial « PCM up to 24b/192kHz ». DSD, feature list: « DSD64, DSD128, DSD256 & DSD512 (DoP, DSD512 native) ». DAC: « 2x ESS9038Q2M 32-bit ». Filters: the specification row reads « 7 different selectable on front » while the feature list reads « 8 selectable digital filter characteristics » plus « 1 proprietary optimum transient digital filter ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true,
+    "chip": "« 2x ESS9038Q2M 32-bit »."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true,
+      "dop_possible": true
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_verification_des_conditions_faite_et_propre": "project-audio.com has NO terms-of-use page: the footer links an Imprint, a Data protection declaration, software updates, contact, FAQ, warranty, dealers and downloads, and nothing named Terms. The Imprint and the Data protection declaration were both READ and neither restricts copying, reproduction or extraction of site content. The footer carries « (c) 2026 Pro-Ject Audio Systems a division of Audio Tuning Vertriebs GmbH », which is the ordinary copyright line. One restriction does exist on the data-protection page and it is scoped to security research, inside a Coordinated Vulnerability Disclosure policy: « You must not, for example, share, redistribute or fail to properly secure data retrieved from the systems or services » - about data obtained while reporting a vulnerability, not about published specifications. Recorded in full because three makers were refused the same day on clauses this specific.",
+  "_la_page_se_contredit_sur_le_NOMBRE_de_ses_filtres": "« 7 different selectable on front » in the specification table against « 8 selectable digital filter characteristics » in the feature list, on one page. A maker that cannot agree with itself on how many filters its product has, and neither figure names one. No device_settings entry is written. Second self-contradiction found in three days after the Cambridge CXN100 SE's factor-of-two on its own rate - and the same rule is applied: when a specification row and marketing copy disagree, the specification row is the one written, here by recording nothing at all since the disagreement is the whole content.",
+  "_DSD512_puis_DSD1024_entre_parentheses": "« up to DSD512 (DSD1024), PCM up to 32b/768kHz ». DSD512 is recorded. The parenthesis is unexplained - it may mean the chip is capable of DSD1024, or that a firmware reaches it, and the page says neither. Third time in two days that a maker's largest DSD figure sits beside a smaller one with nothing to say which the input accepts, after EMM Labs' « 16xDSD » and iFi's « DSD512 (DSD2048 with Remastering) ». Here the conservative figure is also the one the feature list repeats."
+}

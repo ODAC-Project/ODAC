@@ -1,0 +1,37 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.project-audio.com/en/product/dac-box-s2/",
+    "quote": "Pro-Ject Audio Systems' own page for the DAC Box S2 +, read 2026-11-25. Digital inputs: « 1x USB (B), 1x Co-axial (RCA), 1x Optical (TOSLink) ». Per input: USB « up to DSD256, PCM up to 32b/768kHz »; Coaxial « PCM up to 24 b /192 kHz »; Optical « PCM up to 24 b / 192 kHz ». DSD, feature list: « DSD64, DSD128 & DSD256(DSD over PCM) ». DAC: « 1x ESS9038Q2M 32-bit ». Filters: specification row « Filter settings » / « 5 different selectable on front »; feature list « 1 proprietary optimum transient digital filter ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD256",
+    "dop": true,
+    "chip": "« 1x ESS9038Q2M 32-bit »."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD256",
+      "dop_possible": true
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_verification_des_conditions_faite_et_propre": "project-audio.com has NO terms-of-use page: the footer links an Imprint, a Data protection declaration, software updates, contact, FAQ, warranty, dealers and downloads, and nothing named Terms. The Imprint and the Data protection declaration were both READ and neither restricts copying, reproduction or extraction of site content. The footer carries « (c) 2026 Pro-Ject Audio Systems a division of Audio Tuning Vertriebs GmbH », which is the ordinary copyright line. One restriction does exist on the data-protection page and it is scoped to security research, inside a Coordinated Vulnerability Disclosure policy: « You must not, for example, share, redistribute or fail to properly secure data retrieved from the systems or services » - about data obtained while reporting a vulnerability, not about published specifications. Recorded in full because three makers were refused the same day on clauses this specific.",
+  "_le_DSD_y_est_DoP_SEULEMENT_et_le_fabricant_le_dit": "« DSD64, DSD128 & DSD256(DSD over PCM) » - the parenthesis covers all three rates, so every DSD this device takes arrives wrapped in PCM frames. native_dsd is therefore NOT written, where its larger siblings the Pre Box S2 Digital and the RS2 pair all say « Native-DSD » in so many words. Same maker, same chip family, and the transport differs by model: the clearest statement in the catalogue that native DSD is a property of the USB receiver and the firmware, not of the converter."
+}

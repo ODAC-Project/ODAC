@@ -1,0 +1,34 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://bursonaudio.com/products/playmate-3/",
+    "quote": "Burson Audio's own page for the Playmate 3, read 2026-11-25. Inputs row: « USB | Toslink | 3.5 mm AUX headset with Mic » - no coaxial row, and no rate stated for Toslink. Rate rows: « PCM & DXD Support | PCM <= 768 kHz up to 32 bits »; « Native DSD 64 / 128 / 256 / 512 »; « DSD over PCM | DoP64 / DoP128 / DoP256 ». Body: « combines a high-performance ESS9039 DAC with 768kHz and DSD512 capability ». Measurements: « Channel Separation | 128 dB @ 1 kHz | 121 dB @ 20 kHz »; « THD+N | 0.0018% @ 1 kHz, 0 dBFS ». No filter, oversampling or NOS row.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true,
+    "chip": "« a high-performance ESS9039 DAC » - named in the body, without the suffix that would distinguish an ES9039PRO from an ES9039Q2M."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true,
+      "dop_possible": true,
+      "dop_max": "DSD256"
+    }
+  },
+  "_verification_des_conditions_tentee_et_NON_CONCLUANTE": "No terms-of-use, terms-of-service or legal-notice page was found on bursonaudio.com. The home page, the shop, four product pages and the return-and-warranty policy were all read and none links to one; the returns page restricts purchases and says nothing about site content. BUT the reader reports that the footer text was not visible in any extracted page, so a footer link may exist and have been missed. The check was therefore ATTEMPTED AND INCONCLUSIVE, not clean - which is a different thing from Pro-Ject, where the Imprint and the data-protection page were read and cleared. The facts are recorded, because the rule is to integrate unless explicitly forbidden and nothing forbidding was found; the quality of the check is recorded with them, because on 2026-11-25 three makers were refused on clauses that live exactly where this one could not look.",
+  "_le_DoP_plafonne_une_marche_sous_le_natif_et_SEULEMENT_ici": "« Native DSD 64 / 128 / 256 / 512 » against « DSD over PCM | DoP64 / DoP128 / DoP256 ». DoP stops at 256 where native reaches 512, on this model alone - the Voyager, the Stellar and the GT4 all list DoP512 on the same site with the same wording. So the difference is deliberate, not a template slip. inputs.dsd_max holds the native figure and the DoP ceiling is lost in a boolean, for the sixth time in three days after APL HiFi, Matrix, Cambridge, LUMIN and Topping. Six makers is no longer a wound in the schema; it is the schema being wrong.",
+  "_loptique_est_nommee_et_jamais_notee": "« USB | Toslink | 3.5 mm AUX headset with Mic » and the coax-and-Toslink rate row that the three Conductors carry is ABSENT from this page - there is no coaxial socket to share it with. So the Toslink input has no published ceiling at all and no spdif_optical block is written. The 3.5 mm AUX is an analogue input.",
+  "_dop_max_renseigne_2026_11_25": "inputs.dop_max was registered on 2026-11-25 and filled here from THIS claim's own quote, which already carried the figure: the source was never short of it, the schema was. No new source was consulted and nothing else in the record changed."
+}
