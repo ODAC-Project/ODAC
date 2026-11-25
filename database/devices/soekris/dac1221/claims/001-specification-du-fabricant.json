@@ -1,0 +1,39 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://soekris.dk/dac1221.html",
+    "quote": "Soekris Engineering's own page for the dac1221, read 2026-11-25. Self-description: « Entry Level Discrete R-2R Sign Magnitude DAC ». On the ladder: « It have the fantastic clean and natural sound of a 26 bit R-2R sign magnitude DAC, built with two hundred tiny and very precise thin film resistors ». « Resistor Precision 26 bit, 0.02% - 0.05% Resistors ». Inputs: « SPDIF / Toslink Inputs Up to 24 bit / 192 Khz »; « USB Input PCM Up to 24 Bit / 384 Ksps »; « USB Input DSD Up to DoP-128 and DSD-256 ». Filters: « with a set of selectable advanced digital filters and a digital volume control. » Measurement: « THD @ -1 dB <0.008% ». The word NOS appears nowhere on the page, and there is no AES/EBU input.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "r2r_ladder",
+    "technology": "r2r",
+    "pcm_max_hz": 384000,
+    "bits": 24,
+    "dsd_max": "DSD256",
+    "dop": true,
+    "chip": "« a 26 bit R-2R sign magnitude DAC, built with two hundred tiny and very precise thin film resistors », « Resistor Precision 26 bit, 0.02% - 0.05% Resistors »."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 24,
+      "dsd_max": "DSD256",
+      "dop_max": "DSD128"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_verification_des_conditions_faite": "soekris.dk links no terms page: the nav is Home, Products, Downloads, Ordering, About, Contact, and the footer reads « Copyright (c) 2023 Soekris Audio. » - the ordinary notice. About and Ordering were not opened, so a clause elsewhere is not formally excluded.",
+  "_le_mot_NOS_napparait_NULLE_PART_chez_ce_fabricant_et_cest_verifie": "A discrete R-2R ladder is where one expects to find non-oversampling, and the reader checked every Soekris page read: « NOS does not appear in any Soekris page read. Nothing says 'non-oversampling' or 'oversampling'. » So `correctable` is NOT written, although the field's own definition says corrections exist « only for devices doing direct DSD or NOS PCM » and this is exactly the kind of converter that usually qualifies. The maker says « a set of selectable advanced digital filters » instead, which implies filters are IN the path. Writing correctable here from the topology would be inferring a behaviour from a circuit - the error the Nagra record was corrected for.",
+  "_une_gamme_qui_se_classe_par_le_NOMBRE_DE_RESISTANCES": "26 bits and two hundred resistors here, 28 bits and over two hundred on the dac2541, 27 bits and over four hundred on the discontinued dac1541. Every published input figure across the three is IDENTICAL - 192 kHz on S/PDIF, 384 kHz and DSD256 on USB - and what separates them is entirely the ladder. So on this maker the fields this catalogue holds cannot tell the entry-level model from the flagship, and the fields that could do not exist."
+}

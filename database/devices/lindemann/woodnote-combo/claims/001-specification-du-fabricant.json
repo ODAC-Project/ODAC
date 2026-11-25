@@ -1,0 +1,27 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://lindemann-audio.de/woodnote-combo",
+    "quote": "Lindemann Audiotechnik's own page for the Woodnote COMBO, read 2026-11-25. The page is German. Rows: « Aufloesung PCM »: « 44,1 bis 384 kHz / 24 bit »; « Aufloesung DSD »: « DSD 64 bis DSD 256 »; under D/A-Wandler, « Aufloesung »: « 384 kHz / 24 bit und DSD 256 native », « Dynamikumfang »: « > 120 dB », « Frequenzgang »: « 1-50 kHz (-3 dB) »; « Re-Sampling »: « 180 dB Dynamik, 32 bit Aufloesung, bit-perfekt oder DSD »; « Eingaenge »: « RCA, TOSLINK, LAN, USB, HDMI eARC ». The product is a streaming amplifier, 2 x 50 W into 4 ohms. No DAC chip and no filter is named, and there is no Wi-Fi exception on this page.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "unknown",
+    "pcm_max_hz": 384000,
+    "bits": 24,
+    "dsd_max": "DSD256",
+    "native_dsd": true,
+    "chip": "Not named.",
+    "device_settings": [
+      {
+        "setting": "Re-Sampling",
+        "set_to": "bit-perfekt",
+        "why": "« bit-perfekt oder DSD », the same choice as the Woodnote SOLO and the same reason: the rate and the filter are chosen upstream."
+      }
+    ]
+  },
+  "_le_SOLO_a_une_exception_WLAN_et_le_COMBO_nen_a_pas": "The SOLO's PCM row reads « 44,1 bis 384 kHz / 24 bit (WLAN bis 192 kHz) » and this one « 44,1 bis 384 kHz / 24 bit », with no bracket - same maker, same template, same five inputs, one sentence shorter. Nothing is carried across: the absence of an exception is not a statement that none applies. It is recorded because a reader comparing the two pages will see the difference and should know it was noticed and left alone."
+}

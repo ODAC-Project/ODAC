@@ -43,7 +43,7 @@ newest minute.
 ## Ask for it compressed
 
 ```
-2 591 154 bytes raw   →   165 304 bytes gzipped   (94% off)
+2 677 596 bytes raw   →   170 476 bytes gzipped   (94% off)
 ```
 
 Those figures move with every build and are checked by `tools/build.py`, which

@@ -1,0 +1,29 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://geshelli.com/product/jnog3/",
+    "quote": "Geshelli Labs' own page for the JNOG3 [J3], read 2026-11-25. Converter rows: « DAC Chip * AK4499 »; « AKM4499/AKM4191 Chipset »; « TI DIX9211 SPDIF DIR Chip ». Inputs: « 24bit SPDIF PCM Interface up to 216Khz »; « 4 Independently Selectable Ports Available (2xTOSLINK, 2xCOAX) Front and Rear ». Optional Amanero USB board: « 32Bit PCM (44.1Khz to 768Khz) »; « DSD64 - DSD512 Compatible ». Measurements under « Outputs »: « THD+N < .000300% »; « SINAD < 111dB »; « SNR < 121dB ». No filter, oversampling or NOS row. Native DSD versus DoP is not stated.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "akm",
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "chip": "« AKM4499/AKM4191 Chipset » - the AK4191 digital front end feeding an AK4499, the same pairing SPL, Aurender and Cayin use. « TI DIX9211 » is the S/PDIF receiver, not the converter."
+  },
+  "inputs": {
+    "spdif_coax": {
+      "pcm_max_hz": 216000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 216000,
+      "bits": 24
+    }
+  },
+  "_DEUX_CENT_SEIZE_KILOHERTZ_est_un_chiffre_quon_ne_voit_nulle_part_ailleurs": "« 24bit SPDIF PCM Interface up to 216Khz ». Not 192, not 384: 216 kHz, which is no multiple of 44.1 or 48 and corresponds to no standard rate. It is the DIX9211 receiver's rated ceiling rather than a rate anyone sends, and the maker has published the part's limit where every other maker publishes the highest STANDARD rate below it. Recorded as printed, with this note, because a consumer reading 216000 and trying to send it will fail."
+}

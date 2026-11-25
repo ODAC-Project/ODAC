@@ -1,0 +1,7 @@
+{
+  "id": "soekris",
+  "name": "Soekris Engineering",
+  "_legal_entity": "The footer of soekris.dk reads « Copyright (c) 2023 Soekris Audio. » No terms page is linked.",
+  "_what_they_build": "Discrete R-2R sign-magnitude converters, sold both as finished units and as bare boards (the dam series). They state the RESISTOR COUNT and the resistor precision of each ladder, which almost nobody does - « over two hundred tiny and precise thin film resistors », « 28 bit, 0.01% - 0.05% Resistors ». That is the « real ladder depth » this catalogue's README says a probe can never report.",
+  "_added_on": "2026-11-25"
+}

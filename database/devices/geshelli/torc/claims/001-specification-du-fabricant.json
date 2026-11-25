@@ -1,0 +1,30 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://geshelli.com/product/torc/",
+    "quote": "Geshelli Labs' own page for the TORC, read 2026-11-25. The « DAC Module » is an OPTION the buyer chooses, and the page lists: « AD1862 R2R », « AKM AK4493S », « AKM AK4499EXEQ », « Burr Brown PCM1794 », « ESS Sabre ES9039Q2M », « ESS Sabre ES9026PRO », « ESS Sabre ES9039SPRO ». Inputs: « 2x Coaxial (192khz/24bit) PCM »; « 2x Toslink (192khz/24bit) PCM »; an optional USB board giving « 32Bit PCM (44.1Khz to 768Khz) » and « DSD64 - DSD512 (*Requires a DSD Compatible DAC Module - See: ...) »; an optional GIO board adding a « Digital AES Input ». On drivers: « Optional Windows Driver Available (Needed for High Speed DSD Interface) ». No filter, oversampling or NOS row, and no THD, SINAD or dynamic-range figure. geshelli.com links no terms page; the footer reads « Copyright (c) 2026 Geshelli Labs LLC. »",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "chip": "THE BUYER CHOOSES IT. Seven modules are offered: « AD1862 R2R », « AKM AK4493S », « AKM AK4499EXEQ », « Burr Brown PCM1794 », « ESS Sabre ES9039Q2M », « ESS Sabre ES9026PRO », « ESS Sabre ES9039SPRO » - a 1990s Philips-lineage ladder, two AKM, a Burr-Brown and three ESS."
+  },
+  "inputs": {
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_LE_CONVERTISSEUR_EST_UN_CHOIX_A_LACHAT_ET_LE_SCHEMA_NEN_TIENT_AUCUN": "Seven DAC modules, and the owner picks one. `family`, `technology` and `chip` are ONE value each; this device has seven possible answers and the record cannot name which is in the box in front of you. family and technology are left ABSENT rather than guessed - and the consequence is the usual one, a consumer's cascade falling back to delta_sigma, which would be flatly wrong for the AD1862 R2R option. Eighth maker in three days whose conversion stage is a module (after MSB, CH Precision, Wadax, Mola Mola, Schiit, Innuos, Primare) and the FIRST where the module is chosen at purchase from parts of different FAMILIES. vocabulary/inputs-can-be-separate-objects.json covers inputs that travel; this is the converter itself, and the file does not reach it.",
+  "_le_DSD_depend_du_module_choisi": "« DSD64 - DSD512 (*Requires a DSD Compatible DAC Module) ». So the device-level dsd_max of DSD512 is true only of some configurations, and the page does not say which of the seven qualify. Recorded with the asterisk kept in the quote, because the alternative - leaving dsd_max absent - would lose the only DSD figure the maker gives.",
+  "_lUSB_est_optionnel_donc_aucun_bloc_usb": "« Optional USB » with « 32Bit PCM (44.1Khz to 768Khz) ». The 768 kHz and 32 bits recorded at device level come from a board that may not be fitted, and no usb input block is written: a ceiling for a socket the buyer may not have is the MSB problem exactly. The two coaxial and two optical inputs ARE standard and are written."
+}

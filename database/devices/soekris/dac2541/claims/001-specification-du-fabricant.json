@@ -1,0 +1,44 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://soekris.dk/dac2541.html",
+    "quote": "Soekris Engineering's own page for the dac2541, read 2026-11-25. Self-description: « High End Discrete R-2R Sign Magnitude DAC / HeadAmp ». On the ladder: « It have the fantastic clean and natural sound of a 28 bit R-2R sign magnitude DAC, built with over two hundred tiny and precise thin film resistors. » - the grammar is the page's. « Resistor Precision 28 bit, 0.01% - 0.05% Resistors ». Inputs: « SPDIF / AES / Toslink Inputs Up to 24 bit / 192 Khz »; « USB Input PCM Up to 24 Bit / 384 Ksps »; « USB Input DSD Up to DoP-128 and DSD-256 ». Filters: « with a set of selectable advanced digital filters and a digital volume control. » Measurements: « THD @ -1 dB <0.004% »; « S/N 20 Khz Bandwith >126 dB unweighted » - the misspelling is the page's. The word NOS appears nowhere on the page.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "r2r_ladder",
+    "technology": "r2r",
+    "pcm_max_hz": 384000,
+    "bits": 24,
+    "dsd_max": "DSD256",
+    "dop": true,
+    "chip": "No part number and none possible: « a 28 bit R-2R sign magnitude DAC, built with over two hundred tiny and precise thin film resistors », with « Resistor Precision 28 bit, 0.01% - 0.05% Resistors »."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 24,
+      "dsd_max": "DSD256",
+      "dop_max": "DSD128"
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_verification_des_conditions_faite": "soekris.dk links no terms page: the nav is Home, Products, Downloads, Ordering, About, Contact, and the footer reads « Copyright (c) 2023 Soekris Audio. » - the ordinary notice. About and Ordering were not opened, so a clause elsewhere is not formally excluded.",
+  "_le_mot_NOS_napparait_NULLE_PART_chez_ce_fabricant_et_cest_verifie": "A discrete R-2R ladder is where one expects to find non-oversampling, and the reader checked every Soekris page read: « NOS does not appear in any Soekris page read. Nothing says 'non-oversampling' or 'oversampling'. » So `correctable` is NOT written, although the field's own definition says corrections exist « only for devices doing direct DSD or NOS PCM » and this is exactly the kind of converter that usually qualifies. The maker says « a set of selectable advanced digital filters » instead, which implies filters are IN the path. Writing correctable here from the topology would be inferring a behaviour from a circuit - the error the Nagra record was corrected for.",
+  "_LA_PROFONDEUR_REELLE_DE_LECHELLE_ENFIN_PUBLIEE": "« a 28 bit R-2R sign magnitude DAC, built with over two hundred tiny and precise thin film resistors » and « Resistor Precision 28 bit, 0.01% - 0.05% Resistors ». This catalogue's README opens by saying that software choosing a playback setting needs « the real depth of its ladder » and that a probe can never report it. Here is a maker publishing it: the bit count AND the resistor count AND the tolerance. No field holds any of the three - `bits` means what the input accepts, which is 24 here, and the ladder is 28. The two numbers are four bits apart on one page and only one of them has somewhere to go.",
+  "_DoP_128_contre_DSD_256_dans_une_seule_ligne": "« USB Input DSD Up to DoP-128 and DSD-256 ». One line, both halves, a factor of two - ninth maker to publish the split after APL HiFi, Matrix, Cambridge, LUMIN, Topping, Burson, Rotel, Cayin and NuPrime. inputs.dop_max takes the 128. The page does not say the DSD-256 path is NATIVE, only that it is not DoP, so native_dsd is left absent."
+}

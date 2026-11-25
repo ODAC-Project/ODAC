@@ -196,8 +196,17 @@ if os.path.exists(_doc):
     if _m:
         _dit = [int(re.sub(r"[^\d]", "", g)) for g in _m.groups()]
         if _dit != [len(raw), len(packed)]:
+            def _esp(n):
+                return "{:,}".format(n).replace(",", "\u2009")
             print("ERROR docs/CONSUMING.md: says %d raw and %d gzipped, "
                   "this build is %d and %d" % (_dit[0], _dit[1], len(raw), len(packed)))
+            # Print the corrected line ready to paste. A guard that only says "wrong"
+            # makes the author compose the replacement, which is where the next wrong
+            # figure comes from.
+            print("       replace that line with:")
+            print("       %s bytes raw   \u2192   %s bytes gzipped   (%.0f%% off)"
+                  % (_esp(len(raw)), _esp(len(packed)),
+                     100 - 100.0 * len(packed) / len(raw)))
             sys.exit(1)
     else:
         print("ERROR docs/CONSUMING.md: no size line to check against")

@@ -1,0 +1,28 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://lindemann-audio.de/woodnote-solo",
+    "quote": "Lindemann Audiotechnik's own page for the Woodnote SOLO, read 2026-11-25. The page is German. Self-description: « High-End Streaming-DAC ». Rows: « Aufloesung PCM »: « 44,1 bis 384 kHz / 24 bit (WLAN bis 192 kHz) »; « Aufloesung DSD »: « DSD 64 bis DSD 256 »; under D/A-Wandler, « Aufloesung »: « 384 kHz / 24 bit und DSD 256 native », « Dynamikumfang »: « > 130 dB », « Frequenzgang »: « 1-100 kHz (-3 dB) »; « Master-Clock »: « Ultra-Low-Jitter MEMS-Femto-Clock »; « Re-Sampling »: « 180 dB Dynamik, 32 bit Aufloesung, bit-perfekt oder DSD »; « Eingaenge »: « RCA, TOSLINK, LAN, USB, HDMI eARC 2.1 »; « Digitale Ausgaenge »: « RCA, TOSLINK ». Body text, not a specification row: « Im Digitalbereich erfolgt ein synchrones Re-Sampling und eine Delta-Sigma-Konversion in ein hochpraezises 1-bit-Signal (DSD). » No DAC chip is named and no filter is named. lindemann-audio.de's Impressum AND its AGB were both READ and neither restricts copying or reuse of site content; the only copyright line is a template credit in the footer.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "unknown",
+    "pcm_max_hz": 384000,
+    "bits": 24,
+    "dsd_max": "DSD256",
+    "native_dsd": true,
+    "chip": "Not named. The body says the digital section performs « ein synchrones Re-Sampling und eine Delta-Sigma-Konversion in ein hochpraezises 1-bit-Signal (DSD) », so the conversion stage is fed a 1-bit DSD stream the device makes itself.",
+    "device_settings": [
+      {
+        "setting": "Re-Sampling",
+        "set_to": "bit-perfekt",
+        "why": "« Re-Sampling: 180 dB Dynamik, 32 bit Aufloesung, bit-perfekt oder DSD » - the owner chooses between a bit-perfect path and conversion to DSD. Bit-perfect is the setting: Auto has already chosen the rate and the filter, and the device's own conversion to DSD would redo that work with a resampler we did not design. Note what the choice implies - on this device the PCM path can be left untouched, which the body text alone would not have told you."
+      }
+    ]
+  },
+  "_un_QUATRIEME_fabricant_qui_convertit_tout_en_DSD_et_le_seul_quon_puisse_en_empecher": "« eine Delta-Sigma-Konversion in ein hochpraezises 1-bit-Signal (DSD) » describes the signal path, and « Re-Sampling: bit-perfekt oder DSD » says the owner can turn it off. So pcm_reconverted_to_dsd is NOT written: on Nagra and APL HiFi it is unconditional and the field is true; here it is a setting, like FiiO's « All to DSD », and the field is a boolean that cannot say « only if you ask ». Fourth maker with this architecture in two days, third shape of the same question, and the field still holds only the first shape.",
+  "_un_plafond_par_entree_cache_dans_une_PARENTHESE": "« 44,1 bis 384 kHz / 24 bit (WLAN bis 192 kHz) ». Five inputs are listed - RCA, TOSLINK, LAN, USB, HDMI eARC - and the only per-input figure in the whole page is that bracket, which halves the ceiling over Wi-Fi. No inputs block is written, because a parenthesis naming ONE exception does not tell you what the other four accept. Third maker to carry a real figure in brackets after Pro-Ject's « (coaxial only) » and Grace's « (Toslink up to 96kHz) » - and the first where the exception is about the TRANSPORT rather than the socket."
+}
