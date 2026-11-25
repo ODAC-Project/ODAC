@@ -170,6 +170,20 @@ computed every one of them, so now it also **compares**: a count stated in
 `README.md` or in these docs, and every `used_on_records` in the registry, must
 equal what the data holds, or CI fails.
 
+That promise was wider than the guard until 25 November 2026, when a neighbouring
+project found `README.md` still saying `Seventeen records are complete on what the device
+accepts` — a figure from when the database held 26 records. Two holes, and
+they had to be closed together. The guard **did not compute the completeness
+counts at all**, which is the ordinary blind spot: a check that does not look
+where the figure lives. And the stale figures were **written as English words** —
+`Seventeen`, `twenty-seven` — while every pattern matched digits, so a spelled-out
+number was invisible by construction and adding the count would not have caught it.
+The completeness counts are now computed from `completeness.json`'s own field list,
+so the criterion lives in one place; and a spelled-out number in front of any noun
+this guard checks is refused outright, since it cannot be compared. The figures
+themselves were re-measured by two independent routes — from the claim files and
+from the built artefact — which agreed: 63 of 196 at level 2, 0 at level 3.
+
 The dated `_state_YYYY_MM_DD` narratives in `completeness.json` are deliberately
 **not** checked. They are history — they say what was true on a day, and they
 keep the trail of a number that has been wrong twice and had its denominator

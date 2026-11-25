@@ -269,6 +269,85 @@ for champ, e in sorted(registry.items()):
         errors.append("schemas/fields.json: %s says used_on_records %d, the data says %d"
                       % (champ, declare, compte_reel.get(champ, 0)))
 
+# --- completeness, counted from vocabulary/completeness.json's OWN field list ---
+# The figures that went stale were the completeness ones, and they went stale for
+# two reasons that have to be fixed together. First, nothing computed them: the
+# guard below covered devices, claims, brands, families, interfaces and doubts,
+# and not these - the classic blind spot, a guard that does not look where the
+# figure lives. Second, and worse, THE README WROTE THEM AS ENGLISH WORDS -
+# "Seventeen records are complete", "the other twenty-five" - and every pattern in
+# ATTENDU matches (\d+). A spelled-out number was invisible to this guard by
+# construction, so even adding the count would not have caught it. Both are closed
+# here: the counts are computed from the vocabulary's own list, so the criterion
+# lives in one place, and MOTS_NOMBRES below refuses a spelled-out number in front
+# of any noun this guard checks.
+#
+# PROVEN BY HAND, the way the registry guard next door was, because the mutants run
+# against a COPY and this check is skipped there (see count_drifts). Run against the
+# real repository on 2026-11-25, before the README was corrected, it printed:
+#
+#   ERROR : README.md:124: says 25 converters, the data says 136
+#   ERROR : README.md:127: "Seventeen records" is a figure spelled out; this guard
+#           compares digits, so write it in digits
+#   ERROR : README.md:106: "twenty-seven devices" is a figure spelled out; this
+#           guard compares digits, so write it in digits
+#
+# Three figures, and only the first was of a kind the old guard could ever have
+# caught. The other two had survived three days and several rewrites of the
+# paragraphs around them.
+#
+# And the completeness count itself was proven live on a COPY of the repository
+# with "63 records are complete" changed to 41:
+#
+#   ERROR : README.md:130: says 41 records complete at level 2, the data says 63
+def _complet(niveau, faits, entrees, niveaux):
+    for champ in niveaux.get(niveau, []):
+        if champ == "inputs":
+            if not entrees:
+                return False
+        elif "." in champ:
+            k = champ.split(".", 1)[1]
+            if not entrees or not all(k in v for v in entrees.values()):
+                return False
+        elif champ not in faits:
+            return False
+    return True
+
+
+_niveaux = {}
+_voc = os.path.join(DB, "vocabulary", "completeness.json")
+if os.path.exists(_voc):
+    _c = load(_voc) or {}
+    for _l in _c.get("levels", []):
+        _niveaux[_l.get("level")] = _l.get("fields", [])
+n_niv2 = n_niv3 = 0
+n_kind = {}
+for _marque in sorted(os.listdir(os.path.join(DB, "devices"))):
+    _dm = os.path.join(DB, "devices", _marque)
+    if not os.path.isdir(_dm):
+        continue
+    for _mod in sorted(os.listdir(_dm)):
+        _dossier = os.path.join(_dm, _mod)
+        if not os.path.isdir(_dossier):
+            continue
+        _faits, _entrees = {}, {}
+        _cl = os.path.join(_dossier, "claims")
+        if os.path.isdir(_cl):
+            for _f in sorted(os.listdir(_cl)):
+                if not _f.endswith(".json"):
+                    continue
+                _o = load(os.path.join(_cl, _f)) or {}
+                _faits.update(_o.get("facts") or {})
+                _entrees.update(_o.get("inputs") or {})
+        if _complet(2, _faits, _entrees, _niveaux):
+            n_niv2 += 1
+        if _complet(3, _faits, _entrees, _niveaux):
+            n_niv3 += 1
+        _id = load(os.path.join(_dossier, "identity.json")) or {}
+        _k = _id.get("kind")
+        if _k:
+            n_kind[_k] = n_kind.get(_k, 0) + 1
+
 ATTENDU = [
     (r"(\d+) devices", n_dev, "devices"),
     (r"(\d+) claims", n_claim, "claims"),
@@ -277,8 +356,32 @@ ATTENDU = [
     (r"(\d+) interfaces", len(ifaces), "interfaces"),
     (r"(\d+) open doubts", n_doubt_open, "open doubts"),
     (r"(\d+) resolved", n_doubt_resolved, "resolved doubts"),
+    # case-insensitive since 2026-11-25: « Of the 26 records » sat at the head of a
+    # sentence for three days and the pattern was anchored on a lower-case « of ».
     (r"of the (\d+) records", n_dev, "records"),
+    (r"(\d+) records are complete on what the device accepts", n_niv2,
+     "records complete at level 2"),
+    (r"(\d+) records are complete on what it does inside", n_niv3,
+     "records complete at level 3"),
+    (r"(\d+) converters", n_kind.get("dac", 0), "converters"),
+    (r"(\d+) network players", n_kind.get("network_player", 0), "network players"),
 ]
+
+# A spelled-out number in front of a checked noun is refused outright. It cannot be
+# compared - that is the point - so the only safe rule is that these figures are
+# written in digits. "Seventeen records are complete" survived three days and five
+# rewrites of the surrounding paragraph because no pattern could see it.
+# "one" and "two" are deliberately NOT in this list. Written out, they are almost
+# always quantifiers in a general statement rather than measurements - "two claims
+# that contradict each other can coexist" says what CAN happen, not how many there
+# are - and a guard that errors on correct prose is a guard someone switches off.
+# The cost is named: a real count that happens to be exactly one or two can still
+# go stale unseen. Every figure that actually went stale here was three or more.
+MOTS_NOMBRES = ("three four five six seven eight nine ten eleven twelve "
+                "thirteen fourteen fifteen sixteen seventeen eighteen nineteen twenty "
+                "thirty forty fifty sixty seventy eighty ninety hundred thousand").split()
+NOMS_SURVEILLES = ("devices", "claims", "brands", "chip families", "interfaces",
+                   "open doubts", "records", "converters", "network players")
 # ONLY against this repository's own database. The mutants run the verifier over a
 # COPY with one thing broken, and the documentation describes the real data - so
 # checking the docs there would make a mutant fail on this guard instead of the one
@@ -292,14 +395,35 @@ for doc in (("README.md", os.path.join("docs", "SCHEMA.md"),
     if not os.path.exists(chemin):
         continue
     texte = open(chemin, encoding="utf-8").read()
+    # A figure inside `inline code` is a QUOTATION, not an assertion. The
+    # documentation has to be able to quote a wrong number in order to explain it -
+    # this very guard's own paragraph in docs/SCHEMA.md quotes the stale
+    # "Seventeen records are complete" it was written to catch, and was failed by
+    # itself for doing so. Same principle as the `_state_YYYY_MM_DD` narratives in
+    # completeness.json, which are history and are deliberately not checked.
+    # Backticks are blanked rather than removed, so line numbers stay true.
+    # The span may wrap across lines, so newlines inside it are kept and everything
+    # else blanked: line numbers in the errors stay true.
+    texte = re.sub(r"`[^`]*`",
+                   lambda m: "".join("\n" if c == "\n" else " " for c in m.group(0)),
+                   texte)
     for pattern, vrai, quoi in ATTENDU:
-        for m in re.finditer(pattern, texte):
+        for m in re.finditer(pattern, texte, re.I):
             if int(m.group(1)) != vrai:
                 errors.append("%s:%d: says %s %s, the data says %d"
                               % (doc, texte.count("\n", 0, m.start()) + 1,
                                  m.group(1), quoi, vrai))
+    for mot in MOTS_NOMBRES:
+        for nom in NOMS_SURVEILLES:
+            for m in re.finditer(r"(?<![\w-])%s(?:-\w+)?\s+%s\b" % (mot, nom), texte, re.I):
+                errors.append("%s:%d: \"%s\" is a figure spelled out; this guard "
+                              "compares digits, so write it in digits"
+                              % (doc, texte.count("\n", 0, m.start()) + 1,
+                                 m.group(0)))
 
-print("devices    : %d" % n_dev)
+print("devices    : %d (%s)" % (n_dev, ", ".join("%s %d" % (k, v)
+                                                 for k, v in sorted(n_kind.items()))))
+print("complete   : %d at level 2, %d at level 3" % (n_niv2, n_niv3))
 print("claims     : %d" % n_claim)
 print("brands     : %d, chip families: %d, interfaces: %d"
       % (len(brands), len(families), len(ifaces)))

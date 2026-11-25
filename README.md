@@ -25,10 +25,13 @@ re-converts DSD to PCM internally, the real depth of its ladder, the level
 offset between its PCM and DSD paths. **A probe can tell you what a device
 accepts. It can never tell you what the device does with it.**
 
-Of the 26 records this database starts with, **none is complete on what the
-device does inside** — seven know the real ladder depth, one knows an internal
-bypass rate. That gap does not close by scraping. It closes with people who own
-the hardware.
+Of the 196 records here, **none is complete on what the device does inside** —
+118 state a word length, 27 an analogue filter, 27 whether the DSD path is
+direct, 6 whether DSD is re-converted to PCM, 5 a level offset between the two
+paths, and 1 an internal bypass rate. The database began at 26 records and that
+count has multiplied by seven without the level-3 figure moving off zero, which
+is the whole point of the sentence: **that gap does not close by scraping.** It
+closes with people who own the hardware.
 
 ## How to use it — do not clone this repository
 
@@ -103,7 +106,7 @@ database so that nobody has to hammer GitHub.
 **Why they bother.** MozAIk Labs make Tune, a music server that has to choose a
 playback setting for your converter. It cannot do
 that well without knowing things no driver reports. They could have kept that
-knowledge private; a catalogue of twenty-seven devices kept private is worth
+knowledge private; a catalogue of 196 devices kept private is worth
 very little, and the same catalogue open has a chance of covering the hardware
 people actually own.
 
@@ -121,9 +124,9 @@ database — not only Tune.
 
 ## Where it stands
 
-196 devices — 25 converters and the first network player — 318 brands,
+196 devices — 136 converters and 60 network players — 318 brands,
 9 chip families, 13 interfaces, 220 claims, 15 open doubts and 3 resolved. Every device record
-carries a `kind`, so the first network player enters without reopening the other
-twenty-five. Seventeen records are complete on what the device accepts;
+carries a `kind`, so a network player enters without reopening a converter.
+63 records are complete on what the device accepts;
 **none** on what it does inside. The database is seeded from the Tune Smart Upsampler
 catalogue, and the projection is checked: no field lost, no value changed.
