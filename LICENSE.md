@@ -2,28 +2,33 @@
 
 Two licences, because code and data are not the same thing.
 
-## Code — MIT
+## Code — Apache-2.0
 
 Applies to `tools/`, `schemas/`, `.github/`, and any script in this repository.
 
 Copyright (c) 2026 MozAIk Labs
 
-Permission is hereby granted, free of charge, to any person obtaining a copy of
-this software and associated documentation files (the "Software"), to deal in
-the Software without restriction, including without limitation the rights to
-use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
-the Software, and to permit persons to whom the Software is furnished to do so,
-subject to the following conditions:
+Licensed under the Apache License, Version 2.0:
+<https://www.apache.org/licenses/LICENSE-2.0>
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+**The licence text itself is not in this file.** Apache-2.0 ships as its own
+`LICENSE` file, and MozaikLabs places it in the public repository. Until it is
+there, this section states the decision and grants nothing: do not read it as a
+licence.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
-FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
-COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
-IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
-CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+> Changed on 25 November 2026. This file previously carried the **full text of
+> the MIT licence**, granted here. The decision is Apache-2.0, "comme oaat", so
+> that grant was removed rather than left standing beside a different one — two
+> contradictory grants in one repository is worse than either. Swapping the word
+> would not have been enough: MIT lived here as its own complete text, and
+> Apache-2.0 is not a word, it is a file. Look for the value, not the phrase.
+
+## Logo — neither licence
+
+The ODAC logo and name are **a trade mark, all rights reserved**. They are
+outside both licences above. Use requires agreement. A licence that makes the
+code and the data free to reuse says nothing about the mark, and conflating them
+is how a project loses the one thing it cannot re-issue.
 
 ## Data — CC BY-SA 4.0
 
@@ -38,8 +43,8 @@ so that what the community builds stays available to it.
 
 **Why a separate licence for the data.** In the European Union a database is
 protected by a *sui generis* right, distinct from copyright, covering the
-investment made in assembling it. A software licence such as MIT says nothing
-about that right. A database therefore needs a licence written for databases.
+investment made in assembling it. A software licence such as Apache-2.0 says
+nothing about that right. A database therefore needs a licence written for databases.
 
 **Attribution.** Credit "ODAC" with a link to this repository. If you present a
 browser or a picker built on this data, the attribution belongs where a user can

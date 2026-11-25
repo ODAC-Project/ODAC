@@ -43,13 +43,21 @@ newest minute.
 ## Ask for it compressed
 
 ```
-261 228 bytes raw   →   43 762 bytes gzipped   (83% off)
+2 591 154 bytes raw   →   165 304 bytes gzipped   (94% off)
 ```
 
-It is JSON Lines: highly repetitive, and it compresses by a factor of six. Send
+Those figures move with every build and are checked by `tools/build.py`, which
+refuses to finish if this block disagrees with the artefact it just wrote. It
+said `261 228 bytes raw` until 25 November 2026, when the artefact had already
+reached ten times that - and it was the figure a decision about the mirror had
+been taken on. The check lives in `build.py` rather than in the verifier because
+the verifier never builds and so has no size to compare: put the check where the
+figure lives.
+
+It is JSON Lines: highly repetitive, and it compresses by a factor of fifteen. Send
 `Accept-Encoding: gzip` and make sure your mirror is configured to honour it —
 a server that omits JSON from its compressible types serves this in the clear
-and nothing breaks, so nobody notices paying six times the bandwidth. This is
+and nothing breaks, so nobody notices paying fifteen times the bandwidth. This is
 the single largest lever on the cost of consuming the database, larger than
 anything in the schema.
 

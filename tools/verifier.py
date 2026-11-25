@@ -166,8 +166,20 @@ for brand_dir in sorted(os.listdir(devices)) if os.path.isdir(devices) else []:
                               "address, not evidence" % rel(cpath))
             if not src.get("kind"):
                 errors.append("%s: the source does not say what kind it is" % rel(cpath))
-            if not c.get("submitted_by"):
+            sb = c.get("submitted_by")
+            if not sb:
                 errors.append("%s: no submitted_by" % rel(cpath))
+            elif isinstance(sb, str) and "@" in sb:
+                # A CONTRIBUTOR IS A CHOSEN PSEUDONYM OR "anonymous", NEVER AN
+                # ADDRESS. Decided 25 November 2026: contributors sign in through
+                # the website's own accounts, not GitHub, and the licence consent
+                # is recorded there - so the pull request carries a name the
+                # contributor picked, and nothing that identifies them. An address
+                # in this field would be published in the artefact, mirrored, and
+                # kept in every old artefact the mirror holds. It is the one field
+                # where a mistake cannot be withdrawn.
+                errors.append("%s: submitted_by looks like an email address; it "
+                              "must be a chosen pseudonym or \"anonymous\"" % rel(cpath))
             if not (c.get("facts") or c.get("inputs")):
                 errors.append("%s: a claim that asserts nothing" % rel(cpath))
             for f in (c.get("facts") or {}):

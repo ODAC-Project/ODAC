@@ -64,7 +64,7 @@ two places to get it wrong.
   "source": { "kind": "measurement", "quote": "…the words carrying the fact…",
               "read_on": "2026-11-24" },
   "source_names_subject": true,
-  "submitted_by": "handle",
+  "submitted_by": "pseudonym",
   "submitted_on": "2026-11-24",
   "facts":  { "pcm_dsd_level_offset_db": -6.0 },
   "inputs": { "usb": { "pcm_max_hz": 1536000 } }

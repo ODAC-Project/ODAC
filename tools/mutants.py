@@ -130,9 +130,24 @@ def unregistered_field(root):
     json.dump(c, open(p, "w", encoding="utf-8"), indent=2, ensure_ascii=False)
 
 
+def submitted_by_is_an_address(root):
+    """Put an email address in submitted_by.
+
+    A contributor is a chosen pseudonym or "anonymous", never an address. This
+    field is published in the artefact, mirrored, and kept in every old artefact
+    the mirror holds - it is the one field where a mistake cannot be withdrawn.
+    """
+    p = claim_path(root)
+    c = json.load(open(p, encoding="utf-8"))
+    c["submitted_by"] = "someone@example.com"
+    json.dump(c, open(p, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
+
+
 MUTANTS = [
     ("a field nobody registered", unregistered_field, "not in schemas/fields.json"),
     ("a registry count that drifted", count_drifts, "used_on_records"),
+    ("a contributor named by their address", submitted_by_is_an_address,
+     "looks like an email address"),
     ("an id that is not its path", id_not_the_path, "The id IS the path"),
     ("an alias that does not say how it relates", untyped_alias, "must be {text, relation}"),
     ("an unreleased product name", forbidden_text, "must not be published"),

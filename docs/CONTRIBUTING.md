@@ -15,7 +15,7 @@ Create `database/devices/<brand>/<device>/claims/NNN-short-name.json`:
     "read_on": "2026-11-24"
   },
   "source_names_subject": true,
-  "submitted_by": "your-github-handle",
+  "submitted_by": "a-pseudonym-you-choose",
   "submitted_on": "2026-11-24",
   "facts": { "pcm_dsd_level_offset_db": -6.0 }
 }
@@ -32,7 +32,7 @@ Signed-off-by: Your Name <your@email>
 `git commit -s` adds it. It is the [Developer Certificate of
 Origin](https://developercertificate.org/): you state that you have the right to
 submit this work and that it may be published under this repository's licences —
-CC BY-SA 4.0 for the data, MIT for the code. **There is no contributor licence
+CC BY-SA 4.0 for the data, Apache-2.0 for the code, and the logo under neither. **There is no contributor licence
 agreement to sign.** Contributions made through the website's form record the
 same agreement with a checkbox, and the pull request it opens repeats it.
 

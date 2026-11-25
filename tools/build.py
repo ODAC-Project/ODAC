@@ -12,7 +12,7 @@ highest-weighted source wins, ties broken by the later submission. Every resolve
 value travels with the source that carries it, and a field claimed with two
 different values is listed in `contested` rather than silently flattened.
 """
-import datetime, gzip, hashlib, json, os, sys
+import re, datetime, gzip, hashlib, json, os, sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.join(HERE, "..")
@@ -179,3 +179,26 @@ print("dist/%s\n  %d entries, %d bytes, %d gzipped (%.0f%% off)"
          100 - 100.0 * len(packed) / len(raw)))
 print("fingerprint %s" % fingerprint)
 print("contested fields: %d" % contested_total)
+
+# THE SIZE GUARD LIVES HERE because this is the only tool that knows the size.
+# docs/CONSUMING.md prints the raw and compressed figures so a consumer can size a
+# download, and on 2026-11-25 it still said "261 228 bytes raw -> 43 762 bytes
+# gzipped" while the artefact had reached 2 591 154 - a factor of ten, and the
+# figure a decision about the mirror had been taken on. The verifier cannot catch
+# it: it reads the database and never builds, so it has no size to compare. The
+# lesson of the completeness count applied immediately: PUT THE CHECK WHERE THE
+# FIGURE LIVES.
+_doc = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
+                    "docs", "CONSUMING.md")
+if os.path.exists(_doc):
+    _t = open(_doc, encoding="utf-8").read()
+    _m = re.search(r"([\d  ,]+) bytes raw\s*(?:→|->)\s*([\d  ,]+) bytes gzipped", _t)
+    if _m:
+        _dit = [int(re.sub(r"[^\d]", "", g)) for g in _m.groups()]
+        if _dit != [len(raw), len(packed)]:
+            print("ERROR docs/CONSUMING.md: says %d raw and %d gzipped, "
+                  "this build is %d and %d" % (_dit[0], _dit[1], len(raw), len(packed)))
+            sys.exit(1)
+    else:
+        print("ERROR docs/CONSUMING.md: no size line to check against")
+        sys.exit(1)
