@@ -73,8 +73,29 @@ def check_field(where, name, scope):
                         % (where, key, entry.get("description", "")[:80]))
 
 
+def _noyau_de_marque(nom):
+    """Le nom d'un fabricant, reduit a ce qui l'identifie.
+
+    La garde sur le nom EXACT a trouve trois doublons le 2026-11-25 et en a
+    laisse trois autres passer, parce que leurs noms different: « Apogee
+    Digital » contre « Apogee Electronics », « MOTU » contre « MOTU (Mark of
+    the Unicorn) », « Pioneer » contre « Pioneer Electronics ». Un nom exact
+    repete est une certitude; un noyau repete est une forte presomption, donc
+    l'un est une erreur et l'autre un avertissement. Mesure au moment de
+    l'ajout: 3 collisions sur 324 fichiers, et les 3 etaient reelles.
+    """
+    s = (nom or "").lower()
+    s = re.sub(r"\(.*?\)", " ", s)
+    s = re.sub(r"\b(audio|electronics|technology|technologies|labs|laboratories|"
+               r"systems|system|digital|acoustics|sound|studio|inc|ltd|llc|gmbh|"
+               r"co|corp|company|the|and|of|international|group|design|designs)\b",
+               " ", s)
+    return re.sub(r"[^a-z0-9]", "", s)
+
+
 brands, families, ifaces = set(), set(), set()
 _noms_de_marque = {}
+_noyaux_de_marque = {}
 for name, bucket in (("brands", brands), ("chip-families", families),
                      ("interfaces", ifaces)):
     d = os.path.join(DB, name)
@@ -106,6 +127,38 @@ for name, bucket in (("brands", brands), ("chip-families", families),
                     errors.append("brands: %s all claim the name %r. One maker, one "
                                   "file: merge them and delete the rest"
                                   % (", ".join(vu), entry.get("name")))
+                noyau = _noyau_de_marque(entry.get("name"))
+                if len(noyau) >= 4:
+                    vus = _noyaux_de_marque.setdefault(noyau, [])
+                    # A WARNING PROTECTS NOTHING. This started as one, and the
+                    # mutant harness showed why that was useless: it requires a
+                    # non-zero exit, so a guard that only warns cannot be
+                    # tested, and an untested guard is a guard that will rot.
+                    # So it is an error WITH A DOCUMENTED WAY OUT: a brand file
+                    # that genuinely shares a normalised name with another
+                    # declares it in `_not_the_same_maker_as` and the error
+                    # stands down. That key is the escape hatch the warning's
+                    # own wording promised ("or say in one of the files why
+                    # they are different") and never provided.
+                    exempte = entry.get("_not_the_same_maker_as")
+                    vus.append({"fichier": f, "nom": entry.get("name"),
+                                "exempte": exempte})
+                    if len(vus) > 1:
+                        if any(v["exempte"] for v in vus):
+                            warnings.append(
+                                "brands: %s share a normalised name and one of "
+                                "them declares they are different makers — %s"
+                                % (" and ".join("%s (%r)" % (v["fichier"], v["nom"])
+                                                for v in vus),
+                                   next(v["exempte"] for v in vus if v["exempte"])))
+                        else:
+                            errors.append(
+                                "brands: %s are probably one maker under two "
+                                "names. Merge them — or, if they really are two "
+                                "makers, say so in \"_not_the_same_maker_as\" "
+                                "in one of the files and this will stand down"
+                                % " and ".join("%s (%r)" % (v["fichier"], v["nom"])
+                                               for v in vus))
 
 devices = os.path.join(DB, "devices")
 n_dev = n_claim = 0

@@ -1,0 +1,66 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "http://www.musician-audio.com/en/col.jsp?id=150",
+    "quote": "MUSICIAN Audio Technology's own page for the Taurus, read 2026-11-25 with curl. « Sampling Mode: Non-Oversampling NOS / Oversampling OS »; « Proprietary R2R+DSD architecture, true balanced 24Bit R2R+6Bit DSD (32 step FIR filter). »; « Each channel is equipped with an independent high-speed FPGA to control decoding through four sets of 0.005% R-2R network with low linearity error, high decoding speed and low digital noise. »; « Adopting ALTERA high efficiency chip. 0.005% precision resistor, low distortion, low noise power supply, FIFO buffer. »; « Proprietary USB audio solution based on the STM32 F46 Advanced AMR microcontroller. »; « The power supply adopts chopper rectification, customized MUSICIAN brand red shell capacitors, equipped with O-type 250W iron core transformer, multiple LT1763, LT3045 for 2 times regulator filtering, can effectively isolate the linear regulator for digital and analog part of the multi-stage power supply, w hich ensures that the DAC can provide low noise and stable power supply voltage. » - « w hich » is the maker's own spacing. Per input: « DSD / All inputs are DSD64 DoP, USB and I2S inputs are DSD1024. »; « PCM / All inputs are 24bits / 44.1K, 48K, 88.2K, 96K, 176.4K, 192KHz. / USB & I2S inputs are 1536KHz. ». « Digital Input / Coaxial, Optical, AES, USB, I2S-1, I2S-2 ». « Clock Output / 45.1584MHz ，49.152MHz ». « Analog Output / XLR balanced, RCA single-ended »; « Size / 420mm * 380mm * 95mm ».",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "r2r_ladder",
+    "technology": "r2r",
+    "pcm_max_hz": 1536000,
+    "bits": 24,
+    "dsd_max": "DSD1024",
+    "dop": true,
+    "correctable": true,
+    "chip": "« four sets of 0.005% R-2R network » per channel, each channel with « an independent high-speed FPGA to control decoding » - an ALTERA part. This is the most explicit statement on the site that the ladder is the converter and the FPGA only drives it: « equipped with an independent high-speed FPGA to CONTROL DECODING THROUGH four sets of 0.005% R-2R network ». USB receiver « STM32 F46 ».",
+    "device_settings": [
+      {
+        "setting": "Sampling Mode",
+        "set_to": "NOS (non-oversampling)",
+        "why": "« Sampling Mode: Non-Oversampling NOS / Oversampling OS », the OS path containing a « 32 step FIR filter »."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 1536000,
+      "dsd_max": "DSD1024"
+    },
+    "i2s": {
+      "pcm_max_hz": 1536000,
+      "dsd_max": "DSD1024"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    }
+  },
+  "_conditions_NON_CONCLUANTES_chez_MUSICIAN": "No terms page found on musician-audio.com, so no prohibition could be checked - which is NOT the same as finding no prohibition. Measured 2026-11-25: every footer link on both the English and Chinese sites was read (About Us, News, Contact Us, Technical Support, Related Downloads, After-sales Policy), EVERY live column page was enumerated (col.jsp ids 103, 104, 105, 106, 114, 115, 121, 123, 124, 125, 132, 134, 139, 142, 144, 147, 150, 157, 160, 163) and swept for copyright, reproduc, reprint, all rights, intellectual propert, without permission, 版权, 禁止, 转载 and 未经. The only hit on any page was the footer: « ©2026 musician copyright » in English, « ©2026 musician 版权所有 » in Chinese. /en/terms.jsp, /en/terms, /en/legal, /en/privacy and /en/tos all 404. robots.txt is 404 on both hosts, so no Content-Signal and no Claude group exist - because the file does not exist - and no X-Robots-Tag header is sent.",
+  "_le_domaine_musicianaudio_com_NEST_PAS_le_fabricant": "A trap that would have produced a false policy. musicianaudio.com is a GoDaddy PARKED domain - nameservers NS39/NS40.DOMAINCONTROL.COM, a 114-byte JavaScript redirect to /lander, and a sitemap containing that single URL. It nonetheless serves a plausible robots.txt with « LLM-Policy: /llms.txt », and that llms.txt reads « Disallow-Training: / ». THAT BELONGS TO THE PARKING SERVICE, NOT TO MUSICIAN, and recording it as the maker's policy would have invented a refusal out of a registrar's default page. The maker's own site is musician-audio.com, HTTP ONLY - no HTTPS listener on either host, so a fetcher that upgrades to HTTPS cannot reach it at all, and the server returns gzip regardless of Accept-Encoding. musicianhifi.com is also not the maker: it is a Hong Kong dealer.",
+  "_un_bloc_chinois_type_colle_sur_NEUF_pages_dont_des_ENCEINTES": "One Chinese block headed « Aquarius » is injected into the site template and appears IDENTICALLY on nine pages - Pegasus III, Aquarius, Taurus, Pisces III, Phoenix, Leo, Gemini and Knight I V2. Gemini is a Class-AB power amplifier and Knight I is a pair of LOUDSPEAKERS: neither contains a converter at all. So the block is template boilerplate and nothing in it may be attributed to any model, which matters because it carries both an NOS button legend and a « 每级滤波具32Bit输入解析度 » figure. It does settle the vocabulary question for this maker, though: « NOS:超取样开/关按键，指示灯灭为超取样；指示灯亮原采样率；» - NOS is an oversampling on/off button, indicator off means oversampling and lit means the original sample rate. Non-oversampling, not New Old Stock, corroborated by the English « Non-Oversampling NOS / Oversampling OS » lines on the product pages themselves.",
+  "_le_tableau_par_entree_de_MUSICIAN_le_plus_large_ecart_du_catalogue": "« 24bits / 44.1, 48, 88.2, 96, 176.4, 192KHz On All Input » and « 1536kHz On USB & I2S Input »; « DSD64-DoP On All Input » and « DSD1024 On USB & I2S Input ». EIGHT TIMES the PCM rate and sixteen times the DSD rate between the USB and I2S pair and every other socket - the widest per-input gap in the whole catalogue, and stated per socket by the maker rather than inferred. 1536 kHz is also the highest PCM ceiling the base holds, and DSD1024 the highest DSD. A consumer's engine that read a device figure of 1536 kHz and sent it down the AES socket would be eight times over.",
+  "_le_DoP_est_dit_et_le_NATIF_ne_lest_PAS": "« DSD64-DoP On All Input » names the transport explicitly, so `dop` is true. But « DSD1024 On USB & I2S Input » names none, and the only occurrence of the word native on the page is in the caveat « the audio source needs to be compatible with the native interface » - which is about the socket, not the DSD stream. So `native_dsd` is ABSENT: the maker has not said whether DSD1024 over USB arrives native or framed. On a discrete ladder with a separate 6-bit DSD path that is the one thing a reader would most want to know.",
+  "_le_FPGA_PILOTE_lechelle_il_ne_convertit_pas": "« Each channel is equipped with an independent high-speed FPGA to control decoding through four sets of 0.005% R-2R network ». `technology` is r2r and NOT fpga, and this sentence is why. The distinction cost a withdrawn claim earlier in this catalogue, on the Nagra HD DAC X, where an FPGA was read as the converter - and Rockna proved an FPGA can do all the digital while a discrete ladder converts. Here the maker writes the relationship out: the FPGA controls, the network converts.",
+  "_lhorloge_de_cet_appareil_est_une_SORTIE": "« Clock Output / 45.1584MHz ， 49.152MHz ». An output, not an input - this DAC can clock something else. Its sibling digital interfaces Phoenix, Leo and Pisces III have clock INPUTS at the same two frequencies. Nothing is recorded either way: a word clock carries no audio, and no BNC socket is mentioned anywhere on this maker's site."
+}

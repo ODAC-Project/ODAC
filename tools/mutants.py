@@ -68,6 +68,36 @@ def duplicate_brand_file(root):
               indent=2, ensure_ascii=False)
 
 
+PASSES = object()  # sentinel: this mutant must leave the verifier PASSING
+
+
+def near_duplicate_brand_name(root):
+    # THE SAME MAKER UNDER TWO NAMES. The exact-name guard caught three pairs
+    # on 2026-11-25 and left three behind: "Apogee Digital" against "Apogee
+    # Electronics", "MOTU" against "MOTU (Mark of the Unicorn)", "Pioneer"
+    # against "Pioneer Electronics". A normalised comparison catches those.
+    # The escape hatch is tested too, below.
+    d = os.path.join(root, "brands")
+    src = os.path.join(d, sorted(f for f in os.listdir(d) if f.endswith(".json"))[0])
+    o = json.load(open(src, encoding="utf-8"))
+    o["id"] = (o.get("id") or "x") + "_ter"
+    o["name"] = (o.get("name") or "X") + " Electronics"
+    json.dump(o, open(os.path.join(d, "zz-near-duplicate.json"), "w", encoding="utf-8"),
+              indent=2, ensure_ascii=False)
+
+
+def escape_hatch_that_does_not_work(root):
+    # The SAME mutant, but declaring itself a different maker. The guard must
+    # stand down, so the verifier must PASS - which means this mutant is
+    # expected to survive, and the suite asserts the opposite of usual. An
+    # escape hatch nobody tests is a hole, not a hatch.
+    near_duplicate_brand_name(root)
+    p = os.path.join(root, "brands", "zz-near-duplicate.json")
+    o = json.load(open(p, encoding="utf-8"))
+    o["_not_the_same_maker_as"] = "a deliberate test of the escape hatch"
+    json.dump(o, open(p, "w", encoding="utf-8"), indent=2, ensure_ascii=False)
+
+
 def unknown_interface(root):
     p = claim_path(root)
     c = json.load(open(p, encoding="utf-8"))
@@ -174,6 +204,9 @@ MUTANTS = [
     ("a fact smuggled into identity", fact_in_identity, "which are facts"),
     ("a brand that does not exist", unknown_brand, "is not in database/brands"),
     ("two brand files for one maker", duplicate_brand_file, "all claim the name"),
+    ("one maker under two names", near_duplicate_brand_name,
+     "probably one maker under two names"),
+    ("the escape hatch for two real makers", escape_hatch_that_does_not_work, PASSES),
     ("an interface that does not exist", unknown_interface, "is not in database/interfaces"),
     ("a claim that asserts nothing", empty_claim, "asserts nothing"),
     ("a file that is not JSON", broken_json, "not valid JSON"),
@@ -191,7 +224,16 @@ for label, mutate, expect in MUTANTS:
     # `expect` is a substring, or a callable when the point is HOW MANY times
     # the guard spoke - a guard that reports one leak out of three is wired up
     # and still unusable.
-    caught = r.returncode != 0 and (expect(out) if callable(expect) else expect in out)
+    if expect is PASSES:
+        # AN ESCAPE HATCH NOBODY TESTS IS A HOLE. Most mutants assert that the
+        # verifier REFUSES; this kind asserts that it accepts - that a declared
+        # exemption really does stand the guard down. Without it, the hatch
+        # could silently stop working and every exempted pair would start
+        # failing the build, or worse, a typo in the key name would make the
+        # exemption inert and nobody would know which way it had broken.
+        caught = r.returncode == 0
+    else:
+        caught = r.returncode != 0 and (expect(out) if callable(expect) else expect in out)
     print("  %-4s %s" % ("ok" if caught else "LIVE", label))
     if not caught:
         bad += 1

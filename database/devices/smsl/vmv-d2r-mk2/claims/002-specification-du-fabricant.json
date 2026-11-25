@@ -1,0 +1,81 @@
+{
+  "source": {
+    "kind": "manual",
+    "url": "https://www.smsl-audio.com/upload/portal/download/VMVD2RMK2Manual.pdf",
+    "quote": "SMSL's own MANUAL for the VMV D2R MK2, VMVD2RMK2Manual.pdf, read 2026-11-25 - the document that carries the per-socket table. Its product page at https://www.smsl-audio.com/portal/product/detail/id/745.html is quoted alongside for the Introduction text and carries NO specification table of its own.  Introduction tab, verbatim with the maker's own typos and missing spaces: « Step into a world of unparalleled acoustic purity with the VMV D2R MK2, a masterfully engineered desktop DAC designed for the most discerning audiophiles. At its heart beats the flagship ROHM BD34302EKV decoding chip and the cutting-edge XMOS XU-316 solution, unlocking native DSD512, PCM up to 768kHz, and full MQA/MQA-CD decoding with a breathtakingly low 0.00013% distortion. To guarantee this level of pristine playback, the device is fortified with a built-in ±5ppb 10MHz OCXO clock (with external clock support) and our self-developed CK-04 processing circuit to virtually eliminate jitter. »; « Embracing the modern digital lifestyle without compromising on traditional Hi-Fi standards, the JAS Hi-Res certified D2R MK2 offers effortless wireless streaming via Qualcomm's latest Bluetooth chip, supporting high-resolution formats like LDAC and aptX-HD. » - note that these page figures are device-level prose, not per-socket. The manual's Chinese feature lines: « 高音质设计，使用一片罗姆BD34302EKV解码芯片，失真度低至0.00013%（-117dB)；»; « USB、光纤、同轴、AES均支持 MQA 解码功能, 并且支持MQA-CD；»; « USB、I2S支持DSD输入，同轴、光纤、AES支持DOP64；»; « 内置±5ppb，10MHz OCXO晶振；» The manual's Chinese specification table (技术参数), verbatim: « 输入方式 USB/光纤/同轴/I2S/蓝牙/AES »; « MQA解码 USB / 光纤 / 同轴/AES »; for « USB/I2S »: « PCM 44.1~768kHz(32bit) », « DSD 2.8224~22.5792MHz(1bit) »; for « USB »: « DoP 2.8224~11.2896MHz(1bit) »; for « 光纤/同轴/AES »: « PCM 44.1~192kHz(24bit) », « DoP 2.8224MHz(1bit) »; « 蓝牙规格 版本5.4 ». Device-level: « 线路输出电平 平衡线路 5.0Vrms / 单端线路 2.5Vrms »; « THD+N 0.00013%（-117dB) »; « 消耗功率 <30W »; « 重量 3.25kg/7.17lbs ». The INPUTS menu, whose heading is printed « 平衡输入 » - apparently an error carried from the AES row: « USB TYPE C », « BLUETOOTH », « OPTICAL », « COAXIAL », « AES/EBU », « I2S(HDMI) ». There is NO USB Type-B on this model. The manual's PCM FILTER menu: « SHARP ROLL-OFF (快速滚降) » and « SLOW ROLL-OFF （慢速滚降) ». Its DSD FILTER menu: « 26k CUT-OFF », « 39k CUT-OFF », « 52k CUT-OFF », « 78k CUT-OFF », « 104k CUT-OFF », « 157k CUT-OFF ». The product page carries NO specification table in text - its tabs are only Introduction, Colour, Download and Purchase Link, and the lower half is marketing JPEGs, from which no figure was read.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "rohm",
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true,
+    "device_settings": [
+      {
+        "setting": "PCM FILTER",
+        "set_to": "SLOW ROLL-OFF (the maker's own « best sound » preset)",
+        "why": "Two named positions, « SHARP ROLL-OFF » and « SLOW ROLL-OFF », AND the manual prints what each of its two one-button presets sets them to: « DEFAULT： PCM FILTER: SHARP ROLL-OFF / DSD FILTER: 26kHz CUT-OFF » and « BEST SOUND： PCM FILTER: SLOW ROLL-OFF / DSD FILTER: 157kHz CUT-OFF ». A maker stating which of its own filter positions it considers best is unique in this catalogue - nine makers have published a count and withheld the names, and this one publishes the names AND its own preference."
+      },
+      {
+        "setting": "DSD FILTER",
+        "set_to": "157kHz CUT-OFF (the maker's own « best sound » preset)",
+        "why": "Six positions named by cut-off frequency, and the « BEST SOUND » preset selects the highest of them, 157 kHz - the least filtering. The « DEFAULT » preset selects the lowest, 26 kHz. So the maker ships the device filtered and offers a button that unfilters it."
+      },
+      {
+        "setting": "I2S MODE",
+        "set_to": "unknown",
+        "why": "« MODE1(PS Audio) » and « MODE2 », as on the D3R."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true,
+      "dop_possible": true,
+      "dop_max": "DSD256"
+    },
+    "i2s": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "bluetooth": {},
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    }
+  },
+  "_lhote_est_celui_de_SMSL_deja_degage": "VMV has no separate host: vmv-audio.com does not resolve, and every VMV product lives inside SMSL's own catalogue on www.smsl-audio.com, intermixed with SMSL-branded models in the same category listings. So the terms question was already answered by the 18 existing SMSL records and nothing new had to be read. For the record, the host links no terms, legal or copyright page; its footer carries the unlinked notice « (c) 2009 Foshan Shuangmusanlin technology Co., Ltd. All Rights Reserved. » and a second string « VMV Technology(HK) Company Limited register… », which is what makes VMV a trademark of the SMSL group rather than a separate maker. robots.txt is two lines - « User-agent: * » and « Disallow: » - with no Content-Signal and no Claude group.",
+  "_le_tableau_anglais_du_manuel_na_PAS_de_couche_texte": "A measured extraction failure worth recording. Each of these manuals carries its specification table twice, in Chinese (技术参数) and in English, and the ENGLISH one cannot be read: it is set in an « AcuminVariableConcept » Type-1C font subset with Custom encoding and no Unicode map, confirmed with pdffonts, so both default and -layout extraction return blank glyphs. The Chinese table extracts cleanly and carries the same figures, so every value in this record is quoted from it; the bracketed English labels are a translation and the values are verbatim. This is a different failure from the Shanling manuals, where -layout silently dropped the letter t and the default mode was clean - here no mode works, and the proof it is font-specific rather than tool-specific is that the VMV T2's English table in the same PDF family extracts perfectly.",
+  "_AUCUNE_position_de_contournement_nexiste_et_cest_mesure": "Grepped across all four VMV manuals for NOS, oversampl, bypass, 过采样, 非过采样 and 直通: zero hits. So `correctable` is not written, and that is a measurement rather than an absence of evidence. Worth stating because this is a ROHM device with a named filter menu - exactly the shape where a bypass would live if there were one - and because the catalogue's other ROHM record, xDuoo's TA-32, says nothing about filters at all.",
+  "_le_fabricant_dit_LAQUELLE_de_ses_positions_il_prefere": "« DEFAULT： PCM FILTER: SHARP ROLL-OFF / DSD FILTER: 26kHz CUT-OFF » against « BEST SOUND： PCM FILTER: SLOW ROLL-OFF / DSD FILTER: 157kHz CUT-OFF ». Two named presets, four named filter positions, and a maker willing to say which setting it thinks sounds best - behind a one-button « One-button best sound effect setting function ». For a catalogue whose purpose is to tell an engine what a device does to a signal, a published default AND a published preference is the most complete statement a filter menu has yet produced. Note what it implies: the device as shipped is NOT in the state its own maker prefers.",
+  "_une_prose_de_page_et_un_tableau_de_manuel_qui_disent_la_meme_chose_differemment": "The product page says « unlocking native DSD512, PCM up to 768kHz » as marketing prose, device-level and bound to no socket. The manual's table says the same numbers under « USB/I2S » and gives optical, coaxial and AES a quarter of the PCM rate. Both are the maker's; only one is usable. The page figure is quoted in the source so a reader meeting it first can see why it is not the whole story - and because an importer that read only the page would have given five sockets a 768 kHz ceiling.",
+  "_pourquoi_cette_revendication_cite_le_MANUEL_et_non_la_page": "Written first against the product page URL, which produced TWO claims on one device citing the SAME document - and two claims from one source are not two sources. The facts here come from the manual's Chinese specification table, which is where the per-socket figures live; the product page carries no table at all. So this claim is sourced to the manual, at the manual weight of 65, and the page's own device-level claim keeps its datasheet weight of 70. Where they agree - 768 kHz, DSD512 - nothing is contested; where only the manual speaks, as for every per-input ceiling, there is nothing to contest. Corrected the same hour, before any commit.",
+  "_pourquoi_cette_revendication_ne_porte_PAS_le_champ_chip": "It did, and the build showed why it should not. The product page's claim already establishes the converter as a ROHM BD34302EKV; this manual says the same thing in the maker's Chinese - « 使用一片罗姆BD34302EKV解码芯片 ». Two honest descriptions of ONE fact, and because `chip` is free text they are two different strings, so `contested` reported a disagreement where there is none. `contested` compares values, and on a free-text field any two wordings of the same fact look like a conflict - which makes the machinery noisy exactly where it is least useful. So this claim asserts only what the manual adds: the per-socket table. The chip text that was here, for the record: \"« 使用一片罗姆BD34302EKV解码芯片 » - ONE ROHM BD34302EKV, against the D3R's two. USB receiver « XMOS XU-316 », clock circuit « CK-04 », « 内置±5ppb，10MHz OCXO晶振 » with external clock support.\" … Note the contrast with musician/aquarius, where `chip` IS genuinely contested - 24BIT against 32 BIT - and there the two claims differ on the substance rather than on the phrasing. The lesson is not to exclude `chip` from contest detection, which would lose that finding; it is that a claim should assert what ITS source adds and nothing it merely repeats."
+}

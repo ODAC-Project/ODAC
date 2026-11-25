@@ -1,0 +1,34 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "http://www.musician-audio.com/en/col.jsp?id=124",
+    "quote": "MUSICIAN Audio Technology's own page for the Delphinus, read 2026-11-25 with curl. The page is headed « DELPHINUS R2R DAC / Digital Player » and the home page links it under TWO names, « Delphinus » and « MDP-2 ». Front-panel legend, verbatim: « g. FILTER: Fast/Slow ﬁlter selection. »; « h. OS/NOS: Lit for native sampling, unlit for oversampling. »; « Indicator Light Guide / a. Input Source Indicators: COAX, OPT, AES, USB, I2S. When a speciﬁc input source is selected, the corresponding indicator will illuminate. / b. Sampling rate indicator lights: 44.1K, 48K. These indicator lights indicate the sampling rate of the current input audio signal. (K: Sampling rate in kHz) / c. Multiplier Indicator Lights: 1X, 2X, 4X, 8X. The corresponding indicator shows the current audio signal's multiplication factor. / d.Audio Format Indicator: Lit for DSD, unlit for PCM. / e. PHASE Indicator: Lit for inverted phase, unlit for in-phase. / f. SWAP: Swaps left and right channels in I2S during DSD mode. » The ﬁ and ﬀ ligatures are the page's own, pasted from a PDF. ABSENT: no maximum PCM rate, no bit depth, no DSD maximum, no native or DoP statement, no per-input ceiling, no formal input or output list, no dimensions, no ladder bit depth. The page carries 19 JPEGs at 1110 x 1110 px, from which no figure was read.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "r2r_ladder",
+    "technology": "r2r",
+    "correctable": true,
+    "chip": "« DELPHINUS R2R DAC » is all the page says of the converter - no ladder depth, no resistor tolerance, no part number.",
+    "device_settings": [
+      {
+        "setting": "OS/NOS",
+        "set_to": "NOS (non-oversampling)",
+        "why": "« h. OS/NOS: Lit for native sampling, unlit for oversampling. » A front-panel indicator with two states, and the maker states the polarity - lit means native, which is the non-oversampled path. That is a selectable mode and the precondition `correctable` requires, established from the panel legend rather than from a spec line."
+      },
+      {
+        "setting": "FILTER",
+        "set_to": "unknown",
+        "why": "« g. FILTER: Fast/Slow ﬁlter selection. » A fast/slow digital filter choice, which NO OTHER MUSICIAN model offers - the others have the NOS mode and a fixed 32-step FIR. Two named positions, which is a complete list."
+      }
+    ]
+  },
+  "_conditions_NON_CONCLUANTES_chez_MUSICIAN": "No terms page found on musician-audio.com, so no prohibition could be checked - which is NOT the same as finding no prohibition. Measured 2026-11-25: every footer link on both the English and Chinese sites was read (About Us, News, Contact Us, Technical Support, Related Downloads, After-sales Policy), EVERY live column page was enumerated (col.jsp ids 103, 104, 105, 106, 114, 115, 121, 123, 124, 125, 132, 134, 139, 142, 144, 147, 150, 157, 160, 163) and swept for copyright, reproduc, reprint, all rights, intellectual propert, without permission, 版权, 禁止, 转载 and 未经. The only hit on any page was the footer: « ©2026 musician copyright » in English, « ©2026 musician 版权所有 » in Chinese. /en/terms.jsp, /en/terms, /en/legal, /en/privacy and /en/tos all 404. robots.txt is 404 on both hosts, so no Content-Signal and no Claude group exist - because the file does not exist - and no X-Robots-Tag header is sent.",
+  "_le_domaine_musicianaudio_com_NEST_PAS_le_fabricant": "A trap that would have produced a false policy. musicianaudio.com is a GoDaddy PARKED domain - nameservers NS39/NS40.DOMAINCONTROL.COM, a 114-byte JavaScript redirect to /lander, and a sitemap containing that single URL. It nonetheless serves a plausible robots.txt with « LLM-Policy: /llms.txt », and that llms.txt reads « Disallow-Training: / ». THAT BELONGS TO THE PARKING SERVICE, NOT TO MUSICIAN, and recording it as the maker's policy would have invented a refusal out of a registrar's default page. The maker's own site is musician-audio.com, HTTP ONLY - no HTTPS listener on either host, so a fetcher that upgrades to HTTPS cannot reach it at all, and the server returns gzip regardless of Accept-Encoding. musicianhifi.com is also not the maker: it is a Hong Kong dealer.",
+  "_le_SEUL_appareil_du_site_qui_donne_un_choix_de_PENTE_de_filtre": "« FILTER: Fast/Slow ﬁlter selection » alongside « OS/NOS ». Every other MUSICIAN DAC offers the NOS mode and, in the OS path, a fixed « 32 steps FIR Filters ». This one lets the owner choose the slope. Recorded because it makes Delphinus the only model in the range with two independent decisions to make about the digital path, and because a reader comparing the records will otherwise assume the range is uniform.",
+  "_une_fiche_SANS_AUCUN_debit_et_pourquoi_elle_existe_quand_meme": "No PCM rate, no bit depth, no DSD ceiling, no input list. What this record carries is the thing the page DOES state and that most pages do not: a selectable non-oversampling mode with its polarity, and a filter-slope choice with both positions named. For a catalogue whose purpose is to tell an engine when not to resample, that is worth more than a rate. The inputs can only be INFERRED from the indicator names - COAX, OPT, AES, USB, I2S - and `inputs` is therefore left EMPTY: an indicator list is not a socket list, and the page never states one.",
+  "_un_appareil_qui_porte_DEUX_noms": "The home page links this page as « Delphinus » and as « MDP-2 ». One device, two names, and the record is filed under the one the page's own heading uses. Recorded because a reader searching for MDP-2 will find nothing."
+}

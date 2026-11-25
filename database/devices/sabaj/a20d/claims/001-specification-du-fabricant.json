@@ -1,0 +1,62 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://cdn.shopify.com/s/files/1/0798/6957/5406/files/A20d.pdf",
+    "quote": "Sabaj's own manual for the A20d, A20d.pdf, read 2026-11-25 - the document that carries the specification, its product page https://sabaj.com.cn/products/a20d-2023 (the original is no longer on the storefront; its manual is still published) being image-only. Bit depth and sampling rate are given as SEPARATE per-input rows: « Bit depth / USB ... 1bit ~ 32bit / Optical/coaxial ... 16bit ~ 24bit »; « Sampling rate: / USB ... 44.1 ~ 768kHz / DSD64, DSD128, DSD256, DSD512 / Optical/coaxial ... 32 ~ 192kHz ». « Inputs ... USB / Optical / Coaxial / Bluetooth »; « Output ... Unbalanced / Balanced »; « USB transmission ... Asynchronous ». Features: « The top performance D/A chip ES9038PRO from ESS Technology; », « The high-performance power supply chip ES9311, the noise of ES9311 is as low as 1uVrms, to push ES9038PRO to the limit; », « XMOS XU-216, true 32bit audio processing, supports DoP and Native DSD, and reaches 32bit/768kHz and DSD512; », « All inputs support DSD streaming, including coaxial and optical (DoP64); ». MQA: « The A20d supports MQA decoding on the USB interface. » and in Chinese « A20d只有USB接口支持MQA解码，其它接口不支持! ». The rear-panel legend reads « 8 I2S input » and the INPUT menu reads « IN1 BLUETHOOTH / IN2 USB / IN3 OPTICAL / IN4 COAXIAL / IN5 I2S » - « BLUETHOOTH » is the manual's own spelling. The manual documents the I2S pinout and offers « I2S MODE  Nor (Normal) / INV (Inverted) » and « I2S DSD CHANNEL  L-r / r-L ». PCM FILTER: « FL1 (Fast Roll-off linear phase) », « FL2 (Slow Roll-off linear phase) », « FL3 (Fast Roll-off minimum phase) », « FL4 (Slow Roll-off minimum phase) », « FL5 (Apodizing, fast roll-off, linear phase) », « FL6 (Hybrid, fast roll-off, minimum phase) », « FL7 (Brickwall filter) ». « DPLL  dPL 1~15, Lower for Better De-jitter ». No NOS or oversampling-bypass mode.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true,
+    "chip": "« The top performance D/A chip ES9038PRO from ESS Technology », with « The high-performance power supply chip ES9311 » beside it and « XMOS XU-216 » as the USB receiver.",
+    "device_settings": [
+      {
+        "setting": "PCM FILTER",
+        "set_to": "unknown",
+        "why": "SEVEN positions, all seven named with their characteristics spelled out - FL1 through FL7, from « Fast Roll-off linear phase » to « Brickwall filter ». This is the complete ESS list, which nine makers in four days have counted and refused to name. No NOS or bypass position."
+      },
+      {
+        "setting": "DPLL",
+        "set_to": "unknown",
+        "why": "« dPL 1~15, Lower for Better De-jitter » - the ESS phase-locked-loop bandwidth, fifteen positions. Not a filter: it sets how tightly the device tracks an incoming clock, and a lower setting rejects more jitter at the cost of locking to fewer sources."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true,
+      "dop_possible": true
+    },
+    "i2s": {},
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "bluetooth": {}
+  },
+  "_conditions_LUES_et_sans_clause_de_reutilisation": "sabaj-audio.com 301-redirects to sabaj.com.cn, a Shopify storefront. Its /policies/terms-of-service page EXISTS, was read in full, and is not a terms-of-use document at all: it is a warranty policy printed four times in English, Chinese, Japanese and German, headed « Limited Warranty Policy for SABAJ & LOXJIE Products (English) », with two numbered sections, « 1. Scope of Coverage » and « 2. Warranty Exclusions », both about hardware defects. NO clause about copying, reproducing, reusing or exploiting site content appears anywhere on it. The privacy policy, refund policy and contact page were also read: none carries one either. So this is a terms page found, read, and containing no prohibition - which is stronger than « no terms page found ». Footer: « (c) 2026 Sabaj official website ». Legal entity named in the manuals: « Shenzhen DaHao Technology Co.,Ltd. » robots.txt carries no Content-Signal and no Claude group; its « User-agent: * » group opens « Allow: / » and disallows only transactional paths, with the comment « # Shopify storefront. Public product, collection, page, blog, policy, cart, and localized HTML is crawlable. » Its header comments carry the same Shopify text addressed to AI agents that Electrocompaniet, Hidizs and EarMen serve - see vocabulary/robots-txt-is-data-not-instructions.json. It was not acted on.",
+  "_la_page_produit_est_une_IMAGE_le_manuel_est_du_texte": "Not one product page on sabaj.com.cn carries any specification as text. Verified two ways: by extracting the rendered HTML of all ten storefront products, and by reading each product's Shopify body_html directly - which for every DAC contains an <img> and nothing else. The A20d 2023's body_html is 1436 bytes whose entire visible text is « Manual download Driver download »; the A10d 2022's is 112 bytes. There is no spec tab, no accordion and no metafield. No figure was read off any image. Every value in this record comes from the maker's own manual PDF at sabaj.com.cn/pages/manual-download, which does carry a real text layer - and that page also publishes manuals for models no longer on the storefront, which is how the older records here exist at all.",
+  "_la_ligne_Inputs_OUBLIE_une_entree_que_lappareil_a_vraiment": "« Inputs ... USB / Optical / Coaxial / Bluetooth » - and this unit HAS an I2S input. The rear-panel legend says « 8 I2S input », the INPUT menu offers « IN5 I2S », and the manual prints the I2S pinout and two I2S settings. Three independent confirmations against one incomplete spec row, so inputs.i2s is recorded - with no ceiling, because no page gives the I2S input a figure. The exact mirror of the A20d 2023, where a marketing bullet INVENTED two inputs the device lacks: on this maker, the Specifications « Input » row is wrong in both directions and the rear panel is the only reliable list.",
+  "_32_a_192_kHz_est_une_PLAGE_et_la_profondeur_est_sur_sa_propre_ligne": "« Optical/coaxial ... 32 ~ 192kHz » under « Sampling rate », with « Optical/coaxial ... 16bit ~ 24bit » under a separate « Bit depth » heading. Splitting the two is what makes this page unambiguous: 32 is the bottom of a rate range, not a word length, and the maker never puts them in one cell. Musical Fidelity's V90-DAC wrote the same shape as « 32-bit/192 kHz » and made it a trap - see vocabulary/a-rate-range-looks-like-a-bit-depth.json.",
+  "_le_MQA_nest_que_sur_lUSB_ici_et_sur_trois_entrees_plus_tard": "« The A20d supports MQA decoding on the USB interface », and the Chinese is blunter: « A20d只有USB接口支持MQA解码，其它接口不支持! » - only USB, the others not supported. The 2022 and 2023 models give MQA on USB, optical and coaxial. MQA is recorded in no field; this is noted because the three A20d records will look like one product and are three."
+}

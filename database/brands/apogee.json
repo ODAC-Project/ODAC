@@ -1,6 +1,7 @@
 {
   "id": "apogee",
-  "name": "Apogee Digital",
+  "name": "Apogee Electronics",
   "_legal_entity": "The footer of apogeedigital.com reads « (c) Copyright - Apogee Electronics Corp. All Rights Reserved. »",
-  "_added_on": "2026-11-25"
+  "_added_on": "2026-11-25",
+  "_merged_from_a_duplicate_under_another_name": "apogee-electronics.json named the same maker differently and was deleted on 2026-11-25. One company: Apogee Electronics, which traded as Apogee Digital for part of its history and whose site is still apogeedigital.com. The three records under this brand carry « apogee », so that file survives - and its NAME is corrected to the current one, which is the one a reader will look for. The surviving name was changed from 'Apogee Digital' to 'Apogee Electronics'. Keys carried over: none, it held nothing new. Found by an extension of the duplicate-brand guard: the first version compared names EXACTLY and caught three pairs, then left three more because their names differ. The second version compares a NORMALISED name - parentheses dropped, and the words audio, electronics, technology, labs, systems, digital and a dozen others removed - and an exact repeat is an error while a normalised repeat is a warning, because the first is a certainty and the second a presumption. Measured when added: 3 collisions across 324 files, all 3 real."
 }

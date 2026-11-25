@@ -1,0 +1,65 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "http://www.musician-audio.com/en/col.jsp?id=103",
+    "quote": "MUSICIAN Audio Technology's own page for the Pegasus, read 2026-11-25 with curl, the site being HTTP-only. « Sampling Mode: Non-Oversampling NOS / Oversampling OS »; « True balanced 24BIT R2R + 6BIT DSD (32 steps FIR Filters) »; « Pegasus has it's own upscaling function in the internal, which supports up to 16 times. »; « Proprietary R2R + DSD Architecture »; « Proprietary USB Audio Solution via STM32F446 Advanced AMR Based MCU »; « Digital Signal Processing via FPGA ». Per input: « DSD / DSD64-DoP On All Input / DSD1024 On USB & I2S Input »; « PCM / 24bits / 44.1, 48, 88.2, 96, 176.4, 192KHz On All Input / 1536kHz On USB & I2S Input »; « DSD1024, PCM1536 Supports On USB & I2S Input (the audio source needs to be compatible with the native interface) ». « Digital Input / Coaxial * 1 via RCA / Optical * 1 / USB * 1 / AES/EBU * 1 / I2S via HDMI LVDS * 1 ». « Analog Output / RCA : 2.2Vrms / XLR : 3.55Vrms »; « Frequency Response: 10Hz~60KHz »; « THD+N: 0.002% »; « S/N Ratio: 123dB(A-weighted) »; « Dynamic Range: >120dB »; « Power Consumption: ≤20W ». No converter chip part number appears anywhere on the site - swept for ES9, AK4, PCM17, PCM18, CS43, AD19, sabre and burr with zero hits.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "r2r_ladder",
+    "technology": "r2r",
+    "pcm_max_hz": 1536000,
+    "bits": 24,
+    "dsd_max": "DSD1024",
+    "dop": true,
+    "correctable": true,
+    "chip": "« True balanced 24BIT R2R + 6BIT DSD (32 steps FIR Filters) » - a discrete ladder for PCM and a separate 6-bit path for DSD, with no part number because the ladder IS the converter. The only semiconductors named are the USB receiver, « STM32F446 Advanced AMR Based MCU », and an FPGA for « Digital Signal Processing » - neither converts.",
+    "device_settings": [
+      {
+        "setting": "Sampling Mode",
+        "set_to": "NOS (non-oversampling)",
+        "why": "« Sampling Mode: Non-Oversampling NOS / Oversampling OS » - stated as a specification line, user-selectable. And the maker says what the OS path contains: « 32 steps FIR Filters ». So selecting NOS removes a named 32-step FIR from the signal path, which is the precondition `correctable` requires, with the filter it removes identified."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 1536000,
+      "dsd_max": "DSD1024"
+    },
+    "i2s": {
+      "pcm_max_hz": 1536000,
+      "dsd_max": "DSD1024"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    }
+  },
+  "_conditions_NON_CONCLUANTES_chez_MUSICIAN": "No terms page found on musician-audio.com, so no prohibition could be checked - which is NOT the same as finding no prohibition. Measured 2026-11-25: every footer link on both the English and Chinese sites was read (About Us, News, Contact Us, Technical Support, Related Downloads, After-sales Policy), EVERY live column page was enumerated (col.jsp ids 103, 104, 105, 106, 114, 115, 121, 123, 124, 125, 132, 134, 139, 142, 144, 147, 150, 157, 160, 163) and swept for copyright, reproduc, reprint, all rights, intellectual propert, without permission, 版权, 禁止, 转载 and 未经. The only hit on any page was the footer: « ©2026 musician copyright » in English, « ©2026 musician 版权所有 » in Chinese. /en/terms.jsp, /en/terms, /en/legal, /en/privacy and /en/tos all 404. robots.txt is 404 on both hosts, so no Content-Signal and no Claude group exist - because the file does not exist - and no X-Robots-Tag header is sent.",
+  "_le_domaine_musicianaudio_com_NEST_PAS_le_fabricant": "A trap that would have produced a false policy. musicianaudio.com is a GoDaddy PARKED domain - nameservers NS39/NS40.DOMAINCONTROL.COM, a 114-byte JavaScript redirect to /lander, and a sitemap containing that single URL. It nonetheless serves a plausible robots.txt with « LLM-Policy: /llms.txt », and that llms.txt reads « Disallow-Training: / ». THAT BELONGS TO THE PARKING SERVICE, NOT TO MUSICIAN, and recording it as the maker's policy would have invented a refusal out of a registrar's default page. The maker's own site is musician-audio.com, HTTP ONLY - no HTTPS listener on either host, so a fetcher that upgrades to HTTPS cannot reach it at all, and the server returns gzip regardless of Accept-Encoding. musicianhifi.com is also not the maker: it is a Hong Kong dealer.",
+  "_le_tableau_par_entree_de_MUSICIAN_le_plus_large_ecart_du_catalogue": "« 24bits / 44.1, 48, 88.2, 96, 176.4, 192KHz On All Input » and « 1536kHz On USB & I2S Input »; « DSD64-DoP On All Input » and « DSD1024 On USB & I2S Input ». EIGHT TIMES the PCM rate and sixteen times the DSD rate between the USB and I2S pair and every other socket - the widest per-input gap in the whole catalogue, and stated per socket by the maker rather than inferred. 1536 kHz is also the highest PCM ceiling the base holds, and DSD1024 the highest DSD. A consumer's engine that read a device figure of 1536 kHz and sent it down the AES socket would be eight times over.",
+  "_le_DoP_est_dit_et_le_NATIF_ne_lest_PAS": "« DSD64-DoP On All Input » names the transport explicitly, so `dop` is true. But « DSD1024 On USB & I2S Input » names none, and the only occurrence of the word native on the page is in the caveat « the audio source needs to be compatible with the native interface » - which is about the socket, not the DSD stream. So `native_dsd` is ABSENT: the maker has not said whether DSD1024 over USB arrives native or framed. On a discrete ladder with a separate 6-bit DSD path that is the one thing a reader would most want to know.",
+  "_une_fonction_de_SUR_ECHANTILLONNAGE_INTERNE_jusqua_16_fois": "« Pegasus has it's own upscaling function in the internal, which supports up to 16 times. » The device can upsample on its own, up to 16x - which is the opposite side of the same coin as its NOS mode, and the two together make this one of the few records where a reader can see BOTH what the device does by default and how to stop it. The catalogue has no field for an internal upsampling ratio; `device_settings` holds the NOS mode and this gloss holds the other half. Note what it means for a consumer: sending this device a high rate and sending it a low rate with upscaling on are two different signal paths, and only the NOS position is a third.",
+  "_la_seule_page_du_site_qui_nomme_le_CONNECTEUR_de_lI2S": "« I2S via HDMI LVDS * 1 ». Every other MUSICIAN page lists « I2S » or « I2S-1, I2S-2 » and never says what the socket is. It matters because I2S over HDMI has no single pin standard - the Aquarius and Taurus both offer a pin-mode switch for exactly that reason - so a reader with an I2S source needs the connector and the pinout, and this is the one page that gives half of it."
+}

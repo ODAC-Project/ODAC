@@ -1,0 +1,74 @@
+{
+  "source": {
+    "kind": "manual",
+    "url": "https://www.smsl-audio.com/upload/portal/download/VMVD1RManual.pdf",
+    "quote": "SMSL's own MANUAL for the VMV D1R, VMVD1RManual.pdf, read 2026-11-25 - the document that carries the per-socket table. Its product page at https://www.smsl-audio.com/portal/product/detail/id/964.html is quoted alongside for the Introduction text and carries NO specification table of its own.  Introduction tab, verbatim with the maker's own typos and missing spaces: « High sound quality design, using a ROHM BD34302EKV decoding chip,THD+N as low as 0.00017%(-115 dB); »; « USB, optical and coaxial all support MQA decoding function and MQA-CD;USB and iPs support Native DSD input, and coaxial and optical supportDOP64; »; « XMOS XU-316,32-bit USB solution, supports DoP and native DSD, PCMsupports up to 768kHz, and DSD supports DSD512; »; « The self-developed CK-O3 clock processing circuit greatly reduces the clockjitter; »; « Support external clock input, standard 10MHz clock or atomic clock input; » - « iPs » is the site's rendering of I2S and « CK-O3 » uses a letter O where the manual prints CK-03. The manual's Chinese feature lines: « 高音质设计，使用一片罗姆BD34302EKV解码芯片，失真度低至0.00017%（-115dB)；»; « USB、光纤、同轴均支持 MQA 解码功能, 并且支持MQA-CD；»; « USB、I2S支持DSD输入，同轴、光纤支持DOP64；» The manual's Chinese specification table (技术参数), verbatim: « 输入方式 USB/光纤/同轴/I2S/蓝牙 »; « MQA解码 USB / 光纤 / 同轴 »; for « USB/I2S »: « PCM 44.1~768kHz(32bit) », « DSD 2.8224~22.5792MHz(1bit) »; for « USB »: « DoP 2.8224~11.2896MHz(1bit) »; for « 光纤/同轴 »: « PCM 44.1~192kHz(24bit) », « DoP 2.8224MHz(1bit) ». Device-level: « 动态范围 124dB / 123dB »; « 消耗功率 <15W »; « 待机功耗 <0.5W »; « 重量 1.48kg/3.26lbs ». The INPUTS menu: « USB », « BLUETOOTH », « OPTICAL », « COAXIAL », « I2S(HDMI) » - there is NO AES/EBU on this model, and the input list and the MQA row both stop at USB, optical, coaxial, I2S and Bluetooth. The manual's PCM FILTER menu: « SHARP ROLL-OFF (快速滚降) » and « SLOW ROLL-OFF （慢速滚降) ». Its DSD FILTER menu: « 低截止频率 », « 中截止频率 », « 高截止频率 » - THREE positions, printed in Chinese only, as low, mid and high cut-off frequency, with NO English labels and NO kHz figures. The six-value 26k to 157k list of the bigger models is absent here. The product page carries NO specification table in text - its tabs are only Introduction, Colour, Download and Purchase Link, and the lower half is marketing JPEGs, from which no figure was read.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "rohm",
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true,
+    "chip": "« 使用一片罗姆BD34302EKV解码芯片 » - one ROHM BD34302EKV. USB receiver « XMOS XU-316 », clock circuit « CK-03 » (the product page renders it « CK-O3 » with a letter O). External 10 MHz or atomic clock input supported, but there is no built-in OCXO row as on the two larger models.",
+    "device_settings": [
+      {
+        "setting": "PCM FILTER",
+        "set_to": "unknown",
+        "why": "Two named positions, « SHARP ROLL-OFF » and « SLOW ROLL-OFF », as on its siblings."
+      },
+      {
+        "setting": "DSD FILTER",
+        "set_to": "unknown",
+        "why": "THREE positions where the D3R and D2R MK2 have six, and named only in Chinese as low, mid and high cut-off - no kHz figure for any of them. So the same menu is both shorter and less specified on the cheaper model, which is a difference between products rather than a gap in the document."
+      },
+      {
+        "setting": "I2S MODE",
+        "set_to": "unknown",
+        "why": "« NORMAL (普通，PS AUDIO格式) » and « REVERSED (反转，DATA和LRCK反转) » - named differently from the D3R's and D2R MK2's « MODE1(PS Audio) / MODE2 », and more informatively: this one says what is reversed."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true,
+      "dop_possible": true,
+      "dop_max": "DSD256"
+    },
+    "i2s": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "bluetooth": {}
+  },
+  "_lhote_est_celui_de_SMSL_deja_degage": "VMV has no separate host: vmv-audio.com does not resolve, and every VMV product lives inside SMSL's own catalogue on www.smsl-audio.com, intermixed with SMSL-branded models in the same category listings. So the terms question was already answered by the 18 existing SMSL records and nothing new had to be read. For the record, the host links no terms, legal or copyright page; its footer carries the unlinked notice « (c) 2009 Foshan Shuangmusanlin technology Co., Ltd. All Rights Reserved. » and a second string « VMV Technology(HK) Company Limited register… », which is what makes VMV a trademark of the SMSL group rather than a separate maker. robots.txt is two lines - « User-agent: * » and « Disallow: » - with no Content-Signal and no Claude group.",
+  "_le_tableau_anglais_du_manuel_na_PAS_de_couche_texte": "A measured extraction failure worth recording. Each of these manuals carries its specification table twice, in Chinese (技术参数) and in English, and the ENGLISH one cannot be read: it is set in an « AcuminVariableConcept » Type-1C font subset with Custom encoding and no Unicode map, confirmed with pdffonts, so both default and -layout extraction return blank glyphs. The Chinese table extracts cleanly and carries the same figures, so every value in this record is quoted from it; the bracketed English labels are a translation and the values are verbatim. This is a different failure from the Shanling manuals, where -layout silently dropped the letter t and the default mode was clean - here no mode works, and the proof it is font-specific rather than tool-specific is that the VMV T2's English table in the same PDF family extracts perfectly.",
+  "_AUCUNE_position_de_contournement_nexiste_et_cest_mesure": "Grepped across all four VMV manuals for NOS, oversampl, bypass, 过采样, 非过采样 and 直通: zero hits. So `correctable` is not written, and that is a measurement rather than an absence of evidence. Worth stating because this is a ROHM device with a named filter menu - exactly the shape where a bypass would live if there were one - and because the catalogue's other ROHM record, xDuoo's TA-32, says nothing about filters at all.",
+  "_le_meme_menu_DSD_a_trois_positions_au_lieu_de_six_et_sans_chiffres": "« 低截止频率 / 中截止频率 / 高截止频率 » against the D3R's « 26k / 39k / 52k / 78k / 104k / 157k CUT-OFF ». Three positions instead of six, and described by an adjective instead of a frequency. Same maker, same converter part, same month - so this is what the cheaper model actually offers, not what its manual forgot to print. A reader comparing the two records will see the difference only here, since `device_settings` holds the reasoning and not a count.",
+  "_pas_dAES_et_cest_le_tableau_qui_le_dit_deux_fois": "The input row reads « USB/光纤/同轴/I2S/蓝牙 » and the MQA row « USB / 光纤 / 同轴 » - no AES in either, where both larger models list it in both. The rear-panel parts list confirms it: seven coaxial, eight optical, nine Bluetooth antenna, ten I2S, eleven clock, twelve USB. So `inputs` has no aes_ebu key, and its absence is established three ways rather than inferred from one.",
+  "_pourquoi_cette_revendication_cite_le_MANUEL_et_non_la_page": "Written first against the product page URL, which produced TWO claims on one device citing the SAME document - and two claims from one source are not two sources. The facts here come from the manual's Chinese specification table, which is where the per-socket figures live; the product page carries no table at all. So this claim is sourced to the manual, at the manual weight of 65, and the page's own device-level claim keeps its datasheet weight of 70. Where they agree - 768 kHz, DSD512 - nothing is contested; where only the manual speaks, as for every per-input ceiling, there is nothing to contest. Corrected the same hour, before any commit."
+}

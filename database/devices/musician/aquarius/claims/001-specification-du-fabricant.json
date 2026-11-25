@@ -1,0 +1,66 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "http://www.musician-audio.com/en/col.jsp?id=134",
+    "quote": "MUSICIAN Audio Technology's own PRODUCT page for the Aquarius, read 2026-11-25 with curl. « Sampling Mode: Non-Oversampling NOS / Oversampling OS »; « Technical Highlights / Proprietary R2R + DSD Architecture / True balanced 24BIT R2R + 6BIT DSD (32 steps FIR Filters) / Adopt 0.005% precision resistance Constant temperature twin crystal oscillator design »; « Proprietary USB Audio Solution via STM32F446 Advanced AMR Based MCU »; « Digital Signal Processing via FPGA »; « Licensed Thesycon USB Driver For Windows Platform ». Per input: « DSD / DSD64-DoP On All Input / DSD1024 On USB & I2S Input »; « PCM / 24bits / 44.1, 48, 88.2, 96, 176.4, 192KHz On All Input / 1536kHz On USB & I2S Input ». « Digital Input / USB * 1 ， AES/EBU * 1 ， Optical * 1 ， Coaxial * 1 ，I2S* 2 » - TWO I2S inputs, and the connector type is not stated on this page. « Analog Output / RCA * 1 ， XLR * 1 »; « Unit Size: 330*300*60mm »; « Unite Weight: 5.8KG »; « Note: Aquarius no power cord is provided ». Also « O-type single crystal copper transformer », « FIFO Buffer », « Driverless On Mac & Linux ».",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "r2r_ladder",
+    "technology": "r2r",
+    "pcm_max_hz": 1536000,
+    "bits": 24,
+    "dsd_max": "DSD1024",
+    "dop": true,
+    "correctable": true,
+    "chip": "« True balanced 24BIT R2R + 6BIT DSD (32 steps FIR Filters) », with « 0.005% precision resistance » and a « Constant temperature twin crystal oscillator design ». No part number: the ladder is the converter.",
+    "device_settings": [
+      {
+        "setting": "Sampling Mode",
+        "set_to": "NOS (non-oversampling)",
+        "why": "« Sampling Mode: Non-Oversampling NOS / Oversampling OS », with the OS path's filter named as « 32 steps FIR Filters ». The English page gives no switch legend; the Chinese block on the page does describe an NOS button but also appears on loudspeakers, so it is not used here."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 1536000,
+      "dsd_max": "DSD1024"
+    },
+    "i2s": {
+      "pcm_max_hz": 1536000,
+      "dsd_max": "DSD1024"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    }
+  },
+  "_conditions_NON_CONCLUANTES_chez_MUSICIAN": "No terms page found on musician-audio.com, so no prohibition could be checked - which is NOT the same as finding no prohibition. Measured 2026-11-25: every footer link on both the English and Chinese sites was read (About Us, News, Contact Us, Technical Support, Related Downloads, After-sales Policy), EVERY live column page was enumerated (col.jsp ids 103, 104, 105, 106, 114, 115, 121, 123, 124, 125, 132, 134, 139, 142, 144, 147, 150, 157, 160, 163) and swept for copyright, reproduc, reprint, all rights, intellectual propert, without permission, 版权, 禁止, 转载 and 未经. The only hit on any page was the footer: « ©2026 musician copyright » in English, « ©2026 musician 版权所有 » in Chinese. /en/terms.jsp, /en/terms, /en/legal, /en/privacy and /en/tos all 404. robots.txt is 404 on both hosts, so no Content-Signal and no Claude group exist - because the file does not exist - and no X-Robots-Tag header is sent.",
+  "_le_domaine_musicianaudio_com_NEST_PAS_le_fabricant": "A trap that would have produced a false policy. musicianaudio.com is a GoDaddy PARKED domain - nameservers NS39/NS40.DOMAINCONTROL.COM, a 114-byte JavaScript redirect to /lander, and a sitemap containing that single URL. It nonetheless serves a plausible robots.txt with « LLM-Policy: /llms.txt », and that llms.txt reads « Disallow-Training: / ». THAT BELONGS TO THE PARKING SERVICE, NOT TO MUSICIAN, and recording it as the maker's policy would have invented a refusal out of a registrar's default page. The maker's own site is musician-audio.com, HTTP ONLY - no HTTPS listener on either host, so a fetcher that upgrades to HTTPS cannot reach it at all, and the server returns gzip regardless of Accept-Encoding. musicianhifi.com is also not the maker: it is a Hong Kong dealer.",
+  "_un_bloc_chinois_type_colle_sur_NEUF_pages_dont_des_ENCEINTES": "One Chinese block headed « Aquarius » is injected into the site template and appears IDENTICALLY on nine pages - Pegasus III, Aquarius, Taurus, Pisces III, Phoenix, Leo, Gemini and Knight I V2. Gemini is a Class-AB power amplifier and Knight I is a pair of LOUDSPEAKERS: neither contains a converter at all. So the block is template boilerplate and nothing in it may be attributed to any model, which matters because it carries both an NOS button legend and a « 每级滤波具32Bit输入解析度 » figure. It does settle the vocabulary question for this maker, though: « NOS:超取样开/关按键，指示灯灭为超取样；指示灯亮原采样率；» - NOS is an oversampling on/off button, indicator off means oversampling and lit means the original sample rate. Non-oversampling, not New Old Stock, corroborated by the English « Non-Oversampling NOS / Oversampling OS » lines on the product pages themselves.",
+  "_le_tableau_par_entree_de_MUSICIAN_le_plus_large_ecart_du_catalogue": "« 24bits / 44.1, 48, 88.2, 96, 176.4, 192KHz On All Input » and « 1536kHz On USB & I2S Input »; « DSD64-DoP On All Input » and « DSD1024 On USB & I2S Input ». EIGHT TIMES the PCM rate and sixteen times the DSD rate between the USB and I2S pair and every other socket - the widest per-input gap in the whole catalogue, and stated per socket by the maker rather than inferred. 1536 kHz is also the highest PCM ceiling the base holds, and DSD1024 the highest DSD. A consumer's engine that read a device figure of 1536 kHz and sent it down the AES socket would be eight times over.",
+  "_le_DoP_est_dit_et_le_NATIF_ne_lest_PAS": "« DSD64-DoP On All Input » names the transport explicitly, so `dop` is true. But « DSD1024 On USB & I2S Input » names none, and the only occurrence of the word native on the page is in the caveat « the audio source needs to be compatible with the native interface » - which is about the socket, not the DSD stream. So `native_dsd` is ABSENT: the maker has not said whether DSD1024 over USB arrives native or framed. On a discrete ladder with a separate 6-bit DSD path that is the one thing a reader would most want to know.",
+  "_DEUX_entrees_I2S_et_une_seule_cle": "« I2S* 2 » - two separate I2S sockets, which the schema holds as one `i2s` key. The Taurus lists them as « I2S-1, I2S-2 » and the original Pegasus has one. Recorded because a reader with two I2S sources will care and the built artefact cannot say it.",
+  "_cette_revendication_est_la_MOITIE_dun_desaccord_sur_la_PROFONDEUR_DE_LECHELLE": "The product page says the ladder is « True balanced 24BIT R2R + 6BIT DSD ». The maker's own About Us page says 32 BIT of the same architecture. Two pages of one site, both the maker's, and they differ by eight bits on the thing that defines the device. Claim 002 carries the other half; `contested` shows both, and at equal source weight nothing in the catalogue can choose between them. Not resolved here. Note that the ladder's depth is NOT what the inputs accept - every input is rated 24 bits - so the disagreement is about the conversion, not about what may be sent."
+}

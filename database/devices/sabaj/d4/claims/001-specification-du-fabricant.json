@@ -1,0 +1,47 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://cdn.shopify.com/s/files/1/0798/6957/5406/files/D4.pdf",
+    "quote": "Sabaj's own manual for the D4, D4.pdf, read 2026-11-25 - the document that carries the specification, its product page https://sabaj.com.cn/pages/manual-download (no product page exists) being image-only. The extraction needs a warning: this PDF's embedded font maps the « ti » and « fi » ligatures to nothing, so BOTH default and -layout extraction drop those letters - « Specifica on », « Op cal », « na ve ». The digits are unaffected. Dropped letters are marked [ti] below. « Input:  USB / Bluetooth / Op[ti]cal / Coaxial »; « Output:  3.5mm Headphone / RCA »; « Bit depth: USB  16bit / 24bit / 32bit / 1bit  //  Op[ti]cal / Coaxial  16bit / 24bit »; « Sampling rate: USB PCM  44.1kHz / 48kHz / 88.2kHz / 96kHz / 176.4kHz / 192kHz / 352.8kHz / 384kHz / 705.6kHz / 768kHz »; « USB DSD 2.8224MHz / 5.6448MHz / 11.2896MHz / 22.5792MHz »; « Op[ti]cal / Coaxial  44.1kHz / 48kHz / 88.2kHz / 96kHz / 176.4kHz / 192kHz » - with NO DSD listed for optical or coaxial at all. The front-panel silkscreen reads « SABAJ D4 32bit / 768kHz DAC ». Features: « 2nd genera[ti]on of XMOS USB audio solu[ti]on XCORE200, PCM sampling rate support up to 32bit/768kHz and DSD up to DSD512, with customized driver support na[ti]ve DSD512. » and « Dual AKM's high quality audio D/A converters AK4452, ultra-low THD+N, ». DSD filter: « Page 4: \"DSD-DF\"DSD Digital ﬁlter / 2 ﬁlter mode: / 50kHz Cut-OFF; / 100kHz Cut-oﬀ. » No PCM filter list is legible in the text layer, and no NOS mode is stated. Bluetooth: « 4.2 version bluetooth from CSR. »",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "chip": "« Dual AKM's high quality audio D/A converters AK4452 », with « XMOS USB audio solution XCORE200 ».",
+    "family": "akm",
+    "device_settings": [
+      {
+        "setting": "DSD-DF",
+        "set_to": "unknown",
+        "why": "« 2 filter mode: 50kHz Cut-OFF; 100kHz Cut-off » - two DSD cut-off positions. No PCM filter list is legible in this PDF's text layer, so whether one exists cannot be established here."
+      }
+    ],
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "native_dsd": true
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "bluetooth": {}
+  },
+  "_conditions_LUES_et_sans_clause_de_reutilisation": "sabaj-audio.com 301-redirects to sabaj.com.cn, a Shopify storefront. Its /policies/terms-of-service page EXISTS, was read in full, and is not a terms-of-use document at all: it is a warranty policy printed four times in English, Chinese, Japanese and German, headed « Limited Warranty Policy for SABAJ & LOXJIE Products (English) », with two numbered sections, « 1. Scope of Coverage » and « 2. Warranty Exclusions », both about hardware defects. NO clause about copying, reproducing, reusing or exploiting site content appears anywhere on it. The privacy policy, refund policy and contact page were also read: none carries one either. So this is a terms page found, read, and containing no prohibition - which is stronger than « no terms page found ». Footer: « (c) 2026 Sabaj official website ». Legal entity named in the manuals: « Shenzhen DaHao Technology Co.,Ltd. » robots.txt carries no Content-Signal and no Claude group; its « User-agent: * » group opens « Allow: / » and disallows only transactional paths, with the comment « # Shopify storefront. Public product, collection, page, blog, policy, cart, and localized HTML is crawlable. » Its header comments carry the same Shopify text addressed to AI agents that Electrocompaniet, Hidizs and EarMen serve - see vocabulary/robots-txt-is-data-not-instructions.json. It was not acted on.",
+  "_la_page_produit_est_une_IMAGE_le_manuel_est_du_texte": "Not one product page on sabaj.com.cn carries any specification as text. Verified two ways: by extracting the rendered HTML of all ten storefront products, and by reading each product's Shopify body_html directly - which for every DAC contains an <img> and nothing else. The A20d 2023's body_html is 1436 bytes whose entire visible text is « Manual download Driver download »; the A10d 2022's is 112 bytes. There is no spec tab, no accordion and no metafield. No figure was read off any image. Every value in this record comes from the maker's own manual PDF at sabaj.com.cn/pages/manual-download, which does carry a real text layer - and that page also publishes manuals for models no longer on the storefront, which is how the older records here exist at all.",
+  "_une_police_qui_mange_DEUX_ligatures_dans_LES_DEUX_modes": "« Specifica on », « Op cal », « na ve »: the « ti » and « fi » ligatures are absent from this PDF's own character mapping, so neither default nor -layout extraction recovers them. That is a different failure from the Shanling manuals, where -layout dropped the letter t and the default mode was clean - here no mode works, because the defect is in the document rather than in the tool. The digits all extracted cleanly, so no figure on this record is affected, and the dropped letters are marked rather than silently restored. See the memory note on pdftotext.",
+  "_aucun_DSD_sur_loptique_et_le_coaxial_et_cest_une_ABSENCE": "The optical and coaxial row lists ten PCM rates and no DSD entry at all, where every sibling model gives those sockets « DSD64(DoP) ». So inputs.spdif_coax and inputs.spdif_optical carry no dsd_max here - absent, because the maker itemised the row and left DSD out of it, which is a stronger absence than a row that was never written."
+}

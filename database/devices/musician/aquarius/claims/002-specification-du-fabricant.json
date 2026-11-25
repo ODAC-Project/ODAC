@@ -1,0 +1,16 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "http://www.musician-audio.com/en/col.jsp?id=106",
+    "quote": "MUSICIAN Audio Technology's own ABOUT US page, read 2026-11-25 - a different document from the Aquarius product page, describing the company's architecture in general: « Adopt self-created R2R + DSD architecture, the truly balanced 32 BIT R2R + 6BIT DSD (32 order FIR filter) and other independent design schemes. » The page also establishes the maker: « MUSICIAN Audio Technology Company was formally established in 2020. »",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "chip": "« the truly balanced 32 BIT R2R + 6BIT DSD (32 order FIR filter) » - THIRTY-TWO bits, against the Aquarius product page's « 24BIT R2R ». Same maker, same architecture, two figures."
+  },
+  "_conditions_NON_CONCLUANTES_chez_MUSICIAN": "No terms page found on musician-audio.com, so no prohibition could be checked - which is NOT the same as finding no prohibition. Measured 2026-11-25: every footer link on both the English and Chinese sites was read (About Us, News, Contact Us, Technical Support, Related Downloads, After-sales Policy), EVERY live column page was enumerated (col.jsp ids 103, 104, 105, 106, 114, 115, 121, 123, 124, 125, 132, 134, 139, 142, 144, 147, 150, 157, 160, 163) and swept for copyright, reproduc, reprint, all rights, intellectual propert, without permission, 版权, 禁止, 转载 and 未经. The only hit on any page was the footer: « ©2026 musician copyright » in English, « ©2026 musician 版权所有 » in Chinese. /en/terms.jsp, /en/terms, /en/legal, /en/privacy and /en/tos all 404. robots.txt is 404 on both hosts, so no Content-Signal and no Claude group exist - because the file does not exist - and no X-Robots-Tag header is sent.",
+  "_lautre_moitie_du_desaccord_et_pourquoi_une_page_ENTREPRISE_compte": "This is a company-level page, not a product page, and it describes « self-created R2R + DSD architecture » generally rather than the Aquarius specifically - so one could argue it does not name this subject at all. It is recorded against the Aquarius because the Aquarius is the model whose own page makes the rival claim, and because a reader who finds 32 BIT on the maker's site deserves to see why the record says 24. The Chinese template block adds a third figure of its own, « 每级滤波具32Bit输入解析度 » - 32 bits of input resolution PER FILTER STAGE - which is about the filter and not the ladder, and is not recorded anywhere because that block also sits on a pair of loudspeakers."
+}

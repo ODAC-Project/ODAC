@@ -1,0 +1,58 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://cdn.shopify.com/s/files/1/0798/6957/5406/files/D5.pdf",
+    "quote": "Sabaj's own manual for the D5, D5.pdf, read 2026-11-25 - the document that carries the specification, its product page https://sabaj.com.cn/pages/manual-download (no product page exists) being image-only. « Input ... USB / Optical / Coaxial / I2S »; « Output ... Line (SE, XLR) / Headphones (SE, XLR) »; « Bit depth ... USB  1bit， 16 ~ 32bit / Optical / Coaxial  1bit， 16 ~ 32bit »; « Sampling rate ... USB/I2S  PCM  44.1 ~ 768kHz / DSD 2.8224 ~ 22.5792MHz / Optical / Coaxial  PCM  44.1 ~ 192kHz / DSD DSD64(DoP) ». Features: « The top performance D/A chip ES9038PRO from ESS Technology. », « XMOS XU-208, true 32bit audio processing, support DoP and Native DSD, and reaches 32bit/768kHz and DSD512. », « All inputs support DSD streaming, including coaxial and optical (DoP64). » Filters: « 5. FILTER » with « FAST LINEAR », « SLOW LINEAR », « APODIZING », « FAST MINIMUM », « SLOW MINIMUM », « FAST HYBRID », « BRICKWALL », and the maker's own note « 1. This unit has built-in 7 kinds of PCM digital filter, these filters are only valid when playback PCM music. » I2S: « I2S MODE  I2S NORMAL / I2S INVERTED », « I2S DSD L/R  NORMAL / SWAPPED », the full pinout printed, and « 3. I2S input is connected by ordinary HDMI cable, and no special cable is required. » No Bluetooth on this model, and no NOS or oversampling-bypass mode.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "chip": "« The top performance D/A chip ES9038PRO from ESS Technology », with « XMOS XU-208 ».",
+    "family": "ess_sabre",
+    "device_settings": [
+      {
+        "setting": "FILTER",
+        "set_to": "unknown",
+        "why": "Seven positions, all named, AND the maker states their scope: « these filters are only valid when playback PCM music ». That sentence is worth more than the list - it says the menu does not touch DSD, which on most pages a reader has to assume. No NOS or bypass position."
+      }
+    ],
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true
+    },
+    "i2s": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 32,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 32,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    }
+  },
+  "_conditions_LUES_et_sans_clause_de_reutilisation": "sabaj-audio.com 301-redirects to sabaj.com.cn, a Shopify storefront. Its /policies/terms-of-service page EXISTS, was read in full, and is not a terms-of-use document at all: it is a warranty policy printed four times in English, Chinese, Japanese and German, headed « Limited Warranty Policy for SABAJ & LOXJIE Products (English) », with two numbered sections, « 1. Scope of Coverage » and « 2. Warranty Exclusions », both about hardware defects. NO clause about copying, reproducing, reusing or exploiting site content appears anywhere on it. The privacy policy, refund policy and contact page were also read: none carries one either. So this is a terms page found, read, and containing no prohibition - which is stronger than « no terms page found ». Footer: « (c) 2026 Sabaj official website ». Legal entity named in the manuals: « Shenzhen DaHao Technology Co.,Ltd. » robots.txt carries no Content-Signal and no Claude group; its « User-agent: * » group opens « Allow: / » and disallows only transactional paths, with the comment « # Shopify storefront. Public product, collection, page, blog, policy, cart, and localized HTML is crawlable. » Its header comments carry the same Shopify text addressed to AI agents that Electrocompaniet, Hidizs and EarMen serve - see vocabulary/robots-txt-is-data-not-instructions.json. It was not acted on.",
+  "_la_page_produit_est_une_IMAGE_le_manuel_est_du_texte": "Not one product page on sabaj.com.cn carries any specification as text. Verified two ways: by extracting the rendered HTML of all ten storefront products, and by reading each product's Shopify body_html directly - which for every DAC contains an <img> and nothing else. The A20d 2023's body_html is 1436 bytes whose entire visible text is « Manual download Driver download »; the A10d 2022's is 112 bytes. There is no spec tab, no accordion and no metafield. No figure was read off any image. Every value in this record comes from the maker's own manual PDF at sabaj.com.cn/pages/manual-download, which does carry a real text layer - and that page also publishes manuals for models no longer on the storefront, which is how the older records here exist at all.",
+  "_le_SEUL_Sabaj_qui_donne_un_chiffre_a_son_entree_I2S": "« Sampling rate ... USB/I2S  PCM  44.1 ~ 768kHz / DSD 2.8224 ~ 22.5792MHz ». The maker groups I2S WITH USB, which is the only I2S figure it publishes for any model - the A20d original has an I2S input with no ceiling at all. And it tells the owner what cable to use: « I2S input is connected by ordinary HDMI cable, and no special cable is required », which matters because I2S over HDMI has no single pin standard and this manual prints the pinout.",
+  "_une_profondeur_de_32_bits_annoncee_sur_un_SPDIF": "« Bit depth ... Optical / Coaxial  1bit， 16 ~ 32bit » - the same depth as USB, on sockets whose standard carries 24. Unusual, and NOT corrected: it is recorded as the maker printed it, while every sibling model rates the same sockets at 16~24 bits. A reader should treat it as the one figure on this record most likely to be a slip, and it is quoted so they can."
+}

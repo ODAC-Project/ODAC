@@ -1,4 +1,5 @@
 {
   "id": "pioneer",
-  "name": "Pioneer"
+  "name": "Pioneer",
+  "_merged_from_a_duplicate_under_another_name": "pioneer-electronics.json named the same maker differently and was deleted on 2026-11-25. One company under two census entries, neither with any record. « Pioneer » survives as the shorter canonical form. Note this pair had NO records at all, so no claim was ever at risk - which is also why nothing would have surfaced it except a guard that looks at the brand files themselves. The surviving name was changed from 'Pioneer' to 'Pioneer'. Keys carried over: none, it held nothing new. Found by an extension of the duplicate-brand guard: the first version compared names EXACTLY and caught three pairs, then left three more because their names differ. The second version compares a NORMALISED name - parentheses dropped, and the words audio, electronics, technology, labs, systems, digital and a dozen others removed - and an exact repeat is an error while a normalised repeat is a warning, because the first is a certainty and the second a presumption. Measured when added: 3 collisions across 324 files, all 3 real."
 }

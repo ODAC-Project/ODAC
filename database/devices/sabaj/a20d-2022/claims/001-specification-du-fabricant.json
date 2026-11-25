@@ -1,0 +1,66 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://cdn.shopify.com/s/files/1/0798/6957/5406/files/2022_A20D.pdf",
+    "quote": "Sabaj's own manual for the A20d 2022, 2022_A20D.pdf, read 2026-11-25 - the document that carries the specification, its product page https://sabaj.com.cn/products/a20d-2022 being image-only. « Input ... USB/Optical/Coaxial/Bluetooth »; « Sampling Rate and Bit Depth: USB PCM 44.1~768kHz(32bit) / USB DSD 2.8224~22.5792MHz(1bit) / Optical / Coaxial 44.1~192kHz(24bit) / DoP DoP256(USB),DoP64(Optical / Coaxial) »; « MQA decoder ... USB / Optical / Coaxial »; « MQA-CD decoder ... Optical / Coaxial ». Features: « ESS technology high-end digital-analog chip ES9038PRO; » and « The second-generation XMOS solution supports DoP256 and native DSD512, and PCM supports up to 32bit/768kHz; ». And the SPDIF MODE section, verbatim: « This setting is only valid for optical fiber and coaxial interfaces that use SPDIF protocol; NORMAL - NORMAL mode, only use digital receiving chip to process SPDIF signal, used in most occasions, PCM supports 44.1-192KHZ, DOP supports DSD64. PROCESSOR - PROCESSOR mode, in this mode, the machine uses the XMOS processor to process the optical fiber coaxial signal, so that it can have powerful computing power and can handle MQA. » PCM FILTER: « Fast Linear », « Slow Linear », « Fast Minimum », « Apodizing », « Fast Hybrid », « Brickwall ». DSD FILTER: « DSD has a total of 4 digital filtering methods. Its function is to filter out the clutter outside the audio by means of digital operation. » then « 47kHz Cutoff », « 50kHz Cutoff », « 60kHz Cutoff », « 70kHz Cutoff ». Inputs menu: « USB AUDIO / OPTICAL / COAXIAL / BLUETOOTH ». Outputs menu: « XLR+RCA / HPA / XLR / RCA » - outputs, not inputs.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true,
+    "chip": "« ESS technology high-end digital-analog chip ES9038PRO », with « The second-generation XMOS solution » as the USB receiver.",
+    "device_settings": [
+      {
+        "setting": "PCM FILTER",
+        "set_to": "unknown",
+        "why": "Six positions, all named: Fast Linear, Slow Linear, Fast Minimum, Apodizing, Fast Hybrid, Brickwall. Note there is no « Slow Minimum » here, where the A20d original and the D5 both have one - so this is a six-position subset of the usual ESS seven. No NOS or bypass."
+      },
+      {
+        "setting": "DSD FILTER",
+        "set_to": "unknown",
+        "why": "Four positions named by cut-off: 47, 50, 60 and 70 kHz. The maker explains what they do: « Its function is to filter out the clutter outside the audio by means of digital operation » - digital, not analogue, unlike the VMV range's analogue DSD cut-offs."
+      },
+      {
+        "setting": "SPDIF MODE",
+        "set_to": "NORMAL",
+        "why": "« NORMAL mode, only use digital receiving chip to process SPDIF signal [...] PCM supports 44.1-192KHZ, DOP supports DSD64. » against « PROCESSOR mode, in this mode, the machine uses the XMOS processor to process the optical fiber coaxial signal, so that it can have powerful computing power and can handle MQA. » A setting that changes WHICH CHIP receives the S/PDIF input. The published per-socket ceiling belongs to NORMAL mode; what PROCESSOR mode accepts is not stated."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true,
+      "dop_possible": true,
+      "dop_max": "DSD256"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "bluetooth": {}
+  },
+  "_conditions_LUES_et_sans_clause_de_reutilisation": "sabaj-audio.com 301-redirects to sabaj.com.cn, a Shopify storefront. Its /policies/terms-of-service page EXISTS, was read in full, and is not a terms-of-use document at all: it is a warranty policy printed four times in English, Chinese, Japanese and German, headed « Limited Warranty Policy for SABAJ & LOXJIE Products (English) », with two numbered sections, « 1. Scope of Coverage » and « 2. Warranty Exclusions », both about hardware defects. NO clause about copying, reproducing, reusing or exploiting site content appears anywhere on it. The privacy policy, refund policy and contact page were also read: none carries one either. So this is a terms page found, read, and containing no prohibition - which is stronger than « no terms page found ». Footer: « (c) 2026 Sabaj official website ». Legal entity named in the manuals: « Shenzhen DaHao Technology Co.,Ltd. » robots.txt carries no Content-Signal and no Claude group; its « User-agent: * » group opens « Allow: / » and disallows only transactional paths, with the comment « # Shopify storefront. Public product, collection, page, blog, policy, cart, and localized HTML is crawlable. » Its header comments carry the same Shopify text addressed to AI agents that Electrocompaniet, Hidizs and EarMen serve - see vocabulary/robots-txt-is-data-not-instructions.json. It was not acted on.",
+  "_la_page_produit_est_une_IMAGE_le_manuel_est_du_texte": "Not one product page on sabaj.com.cn carries any specification as text. Verified two ways: by extracting the rendered HTML of all ten storefront products, and by reading each product's Shopify body_html directly - which for every DAC contains an <img> and nothing else. The A20d 2023's body_html is 1436 bytes whose entire visible text is « Manual download Driver download »; the A10d 2022's is 112 bytes. There is no spec tab, no accordion and no metafield. No figure was read off any image. Every value in this record comes from the maker's own manual PDF at sabaj.com.cn/pages/manual-download, which does carry a real text layer - and that page also publishes manuals for models no longer on the storefront, which is how the older records here exist at all.",
+  "_le_plafond_SPDIF_est_donne_DEUX_FOIS_et_la_seconde_fois_il_depend_dun_MODE": "The Specifications table says optical and coaxial reach « 44.1~192kHz(24bit) » with « DoP64 ». The SPDIF MODE section says « PCM supports 44.1-192KHZ, DOP supports DSD64 » - the same numbers, but bound to NORMAL mode only, and with no bit depth (« 44.1-192KHZ » there is a rate range). So the recorded per-socket ceiling is the NORMAL-mode ceiling, and the device has a second mode whose ceiling the maker never states. The two figures agree, which is why this is worth saying: they agree because one of them is incomplete.",
+  "_le_natif_est_dit_ici_et_pas_sur_le_modele_SUIVANT": "« supports DoP256 and native DSD512 » - both transports named, in one sentence, so `native_dsd` and `dop` are both true. Its own successor, the A20d 2023, never uses the word native. A maker losing a fact between two generations of one product is worth recording, because a reader will assume the newer record is the better documented one."
+}

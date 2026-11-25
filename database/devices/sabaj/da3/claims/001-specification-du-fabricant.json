@@ -1,0 +1,35 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://cdn.shopify.com/s/files/1/0798/6957/5406/files/DA3.pdf",
+    "quote": "Sabaj's own manual for the DA3, DA3.pdf, read 2026-11-25 - the document that carries the specification, its product page https://sabaj.com.cn/products/da3 being image-only. Its product page's body_html is EMPTY - zero bytes - so the page carries no description at all, neither text nor image. The manual's full Specification block, verbatim: « Dynamic range: 125dB »; « THD: 0.0004% »; « SNR: 118dB »; « Bit depth: 16bit, 24bit, 32bit, 1bit »; « Sampling rate: 44.1kHz, 48kHz, 88.2kHz, 96kHz, 176.4kHz, 192kHz, 352.8kHz, 384kHz, 705.6kHz, 768kHz, DSD64, DSD128, DSD256, DSD512 »; « Consumption power: 0.8W ». There is NO « Input: » row in this block at all. The parts legend reads « USB (type-C) / Display / Volume/menu down / Volume/menu up / 5 Power on/off or menu botton / 6 Balanced output / 7 3.5mm Unbalanced output » - « botton » is the manual's spelling. Filter, where the fi ligature prints as Þ: « ③ \"FILTER\" is digital Þlter mode, it gets FLT1: Fast rolloff (Default), FLT2: Slow rolloff, FLT3: Minimum phase. » NO converter chip part number appears anywhere in this manual, and NEITHER « native » NOR « DoP » appears anywhere in it.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "chip": "No part number appears anywhere in this manual - unusual for this maker, which names the converter on every other model.",
+    "device_settings": [
+      {
+        "setting": "FILTER",
+        "set_to": "unknown",
+        "why": "« FLT1: Fast rolloff (Default), FLT2: Slow rolloff, FLT3: Minimum phase » - three positions, all named, and the maker says which is the DEFAULT. A published default is rarer than a published list and it tells a reader what the device does out of the box."
+      }
+    ],
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512"
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512"
+    }
+  },
+  "_conditions_LUES_et_sans_clause_de_reutilisation": "sabaj-audio.com 301-redirects to sabaj.com.cn, a Shopify storefront. Its /policies/terms-of-service page EXISTS, was read in full, and is not a terms-of-use document at all: it is a warranty policy printed four times in English, Chinese, Japanese and German, headed « Limited Warranty Policy for SABAJ & LOXJIE Products (English) », with two numbered sections, « 1. Scope of Coverage » and « 2. Warranty Exclusions », both about hardware defects. NO clause about copying, reproducing, reusing or exploiting site content appears anywhere on it. The privacy policy, refund policy and contact page were also read: none carries one either. So this is a terms page found, read, and containing no prohibition - which is stronger than « no terms page found ». Footer: « (c) 2026 Sabaj official website ». Legal entity named in the manuals: « Shenzhen DaHao Technology Co.,Ltd. » robots.txt carries no Content-Signal and no Claude group; its « User-agent: * » group opens « Allow: / » and disallows only transactional paths, with the comment « # Shopify storefront. Public product, collection, page, blog, policy, cart, and localized HTML is crawlable. » Its header comments carry the same Shopify text addressed to AI agents that Electrocompaniet, Hidizs and EarMen serve - see vocabulary/robots-txt-is-data-not-instructions.json. It was not acted on.",
+  "_la_page_produit_est_une_IMAGE_le_manuel_est_du_texte": "Not one product page on sabaj.com.cn carries any specification as text. Verified two ways: by extracting the rendered HTML of all ten storefront products, and by reading each product's Shopify body_html directly - which for every DAC contains an <img> and nothing else. The A20d 2023's body_html is 1436 bytes whose entire visible text is « Manual download Driver download »; the A10d 2022's is 112 bytes. There is no spec tab, no accordion and no metafield. No figure was read off any image. Every value in this record comes from the maker's own manual PDF at sabaj.com.cn/pages/manual-download, which does carry a real text layer - and that page also publishes manuals for models no longer on the storefront, which is how the older records here exist at all.",
+  "_une_fiche_sans_ligne_dentree_et_une_seule_prise": "The Specification block has no « Input: » row, so the figures are device-level - and the parts legend shows exactly one digital socket, a USB-C, with two analogue outputs. So the device figure and the input figure coincide because there is nowhere else for a signal to arrive, which is the same reasoning as the Shanling EH1 and the Electrocompaniet ECI 80D. Written down because the three records look identical in the artefact and were not established the same way.",
+  "_ni_natif_ni_DoP_et_aucune_puce_nommee": "Neither word appears in the manual, and no converter part number does either - on a maker that names the chip on every other model. Three fields absent on one record for want of one sentence."
+}
