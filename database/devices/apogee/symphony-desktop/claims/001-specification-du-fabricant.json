@@ -1,0 +1,25 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://apogeedigital.com/product/apogee-symphony-desktop/",
+    "quote": "Apogee Digital's own page for the Symphony Desktop, read 2026-11-25. « Up to 24bit/192kHz digital audio ». « Digital I/O: 2 x Optical Toslink (ADAT,S/PDIF) » - with no ADAT channel count. D/A rows: « Rel. THD+N : -114dB »; « Dyn Range: 129dB (A-weighted) »; « Freq resp 10Hz -20 Khz: > +/- 0.05dB (@44.1Khz) ». No DAC chip is named, no DSD figure appears, and no digital filter row exists. apogeedigital.com has NO terms-of-use page: the footer links a « Webstore & Privacy Policy » which was READ and covers sweepstakes, returns, warranty, privacy, idea submissions and Proposition 65, with no clause on copying or reusing site content; the only rights text is the footer « (c) Copyright - Apogee Electronics Corp. All Rights Reserved. »",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "unknown",
+    "pcm_max_hz": 192000,
+    "bits": 24,
+    "chip": "Not named. The page gives the D/A path's measured performance instead - « Rel. THD+N : -114dB » and « Dyn Range: 129dB (A-weighted) » - which is more than most consumer records carry and tells you nothing about the silicon."
+  },
+  "inputs": {
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_le_segment_pro_publie_des_MESURES_et_oublie_les_plafonds": "Second professional maker in the catalogue after MOTU, and the pattern holds: a measured THD+N and a measured dynamic range for the D/A path specifically, no DSD figure anywhere, and no digital filter. Neither measurement has a field here - the schema holds what a device ACCEPTS and nothing about how well it converts - so both live in the quote. Of about eighty makers read, the ones that publish D/A measurements are almost all in this segment, and three of them (Benchmark, Okto, Antelope) forbid their reuse.",
+  "_une_prise_optique_qui_parle_ADAT_une_QUATRIEME_fois": "« 2 x Optical Toslink (ADAT,S/PDIF) ». Fourth maker in two days after Topping, Mytek and MOTU, and no channel count given. The interface vocabulary still has one key, spdif_optical, for a socket that carries two protocols with different channel capacities - and in this segment it is the normal case, not the exception."
+}

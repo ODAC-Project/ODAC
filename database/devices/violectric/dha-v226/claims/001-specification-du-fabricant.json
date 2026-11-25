@@ -1,0 +1,26 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.violectric.de/produkte/kopfhoererverstaerker/violectric-dha-v226",
+    "quote": "Violectric's own page for the DHA V226, read 2026-11-25. The page is German-only. « Die hochaufloesende Wandlereinheit nimmt ueber USB-C digitales Audio mit bis zu 32 Bit bei 384 kHz sowie DSD 256 entgegen. » Features list: « 1 digitaler Eingang, USB-C, mit bis 32 Bit und bis 384 kHz fuer PCM Signale, DSD 64 - 256 ». One digital input only - no coaxial, no optical, no AES/EBU. The converter is NOT named; the only wording is the heading « Eingebauter Digital-Analog-Converter der Spitzenklasse ». Native versus DoP is not stated. No digital filter, oversampling or NOS.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "unknown",
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD256",
+    "chip": "Not named. « Eingebauter Digital-Analog-Converter der Spitzenklasse » is a claim about quality and not about a part - and the brand's own V590(2) PRO names an ES9026 PRO, which is a reason to ASK rather than to assume."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "dsd_max": "DSD256"
+    }
+  },
+  "_un_seul_connecteur_donc_aucune_ambiguite": "One digital input, « USB-C », and the device figure and the input figure are necessarily the same number. The third record in the catalogue in that happy position, after the iFi ZEN DAC Signature V2 and the Schiit Vestri - and the only kind of device where a global ceiling can be placed on an input without inferring anything."
+}

@@ -1,0 +1,40 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.violectric.de/produkte/kopfhoererverstaerker/violectric-dha-v5902-pro",
+    "quote": "Violectric's own page for the DHA V590(2) PRO, read 2026-11-25. The page is German-only. Features list: « 4 digitale Eingaenge / AES/EBU, Opto, Coax mit bis 24 Bit und bis 192 kHz / USB mit bis 32 Bit und bis 384 kHz fuer PCM Signale, DSD 64 - 256 », repeated in prose as « 4 digitale Eingaenge, AES/EBU, Opto, Coax mit bis 24 Bit und 192 kHz, USB mit bis 32 Bit und 384 kHz fuer PCM Signale, DSD 64 - 256 ». On transport: « Dabei koennen Formate bis zu 384 kHz und DoP umgesetzt werden. » Converter: « von ESS-Tech ES9026 PRO Wandlern in die analoge Welt uebersetzt ». No digital filter, oversampling or NOS is stated. The page says « USB-C » in one sentence about streaming while listing the input as « USB-B »; both appear. The Impressum and the AGB of violectric.de were both READ and carry no prohibition; the footer reads « (c) 2026 cma audio GmbH. Alle Rechte vorbehalten. »",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD256",
+    "dop": true,
+    "chip": "« ESS-Tech ES9026 PRO Wandlern » - plural, so more than one, and the page does not say how many. The same part MOTU names in its UltraLite-mk5, read the same day."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "dsd_max": "DSD256"
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_le_DSD_est_annonce_sans_dire_SUR_QUELLE_entree": "« DSD 64 - 256 » sits at the end of the USB clause - « USB mit bis 32 Bit und bis 384 kHz fuer PCM Signale, DSD 64 - 256 » - so it reads as a USB figure, and inputs.dsd_max is written there alone. The AES/EBU, optical and coaxial inputs get a rate and a word length and no DSD, and nothing is written for them. The sentence is ambiguous enough to be worth flagging: a different reading would make DSD256 true of all four.",
+  "_une_prise_nommee_de_deux_facons_sur_une_page": "« USB-B » in the input list and « USB-C » in a sentence about connecting a streamer. Both are on the page and they are different connectors. Nothing turns on it here - usb is one key either way - but it is the kind of internal disagreement that matters on a page where the connector decides the ceiling, as it did on the Cambridge and Topping USB-class rows."
+}

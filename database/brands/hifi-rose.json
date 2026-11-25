@@ -1,0 +1,8 @@
+{
+  "id": "hifi_rose",
+  "name": "HiFi ROSE",
+  "_legal_entity": "The footer of hifirose.com names « Citech Co., Ltd. », Seoul, and « HiFi ROSE AMERICA, INC. », Irvine, California.",
+  "_no_terms_page": "The footer links « Terms & Conditions », « Return & Refund Policy », « Privacy Policy » and « Legal » - and ALL FOUR point at « # », a dead anchor. So the site advertises four legal pages and publishes none. Recorded because it is a fourth kind of answer to the terms question, beside « no page », « a page that forbids » and Arcam's « a page that defers »: a page that is promised and does not exist.",
+  "_why_no_record": "Its product pages render in a browser (the fetcher gets 9 characters) and carry 16 images and 646 characters of text, with not one sample rate, bit depth or DSD figure anywhere in the DOM. Twelve models listed - rw800, rs451, rs151, rd160, ra280, rs130, rs520, ra180, rs250, rs150, rs201e, rsa780e - and nothing quotable about any of them. Same wall as Topping, Gustard, Shanling, xDuoo and Denafrips.",
+  "_added_on": "2026-11-25"
+}

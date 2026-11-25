@@ -1,0 +1,25 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://apogeedigital.com/product/apogee-duet-3/",
+    "quote": "Apogee Digital's own page for the Duet 3, read 2026-11-25. « Up to 24 bit / 192kHz recording ». Under the heading « D/A CONVERSION »: « Rel. THD + N : -110dB »; « Dyn. Range: 125dB (A-weighted) ». The A/D path is given separately: « Rel. THD + N: -103dB »; « Dyn. Range: 119dB (A-weighted) ». No digital I/O beyond USB-C is listed - no ADAT, no S/PDIF. No DAC chip, no DSD figure, no digital filter row.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "unknown",
+    "pcm_max_hz": 192000,
+    "bits": 24,
+    "chip": "Not named. Measured instead: « Rel. THD + N : -110dB » and « Dyn. Range: 125dB (A-weighted) » for the D/A path alone."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_le_segment_pro_publie_des_MESURES_et_oublie_les_plafonds": "Second professional maker in the catalogue after MOTU, and the pattern holds: a measured THD+N and a measured dynamic range for the D/A path specifically, no DSD figure anywhere, and no digital filter. Neither measurement has a field here - the schema holds what a device ACCEPTS and nothing about how well it converts - so both live in the quote. Of about eighty makers read, the ones that publish D/A measurements are almost all in this segment, and three of them (Benchmark, Okto, Antelope) forbid their reuse.",
+  "_la_conversion_A_N_et_la_conversion_N_A_mesurees_SEPAREMENT": "« D/A CONVERSION » and the A/D rows given as two distinct blocks, six decibels apart on dynamic range. Consumer pages give one SNR for the product, if any. This catalogue is about the D/A direction only, so the A/D figures are quoted and nothing is taken from them - and the separation is worth marking, because a single « 125 dB » on a consumer page may be either one."
+}

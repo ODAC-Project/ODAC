@@ -1,0 +1,18 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://apogeedigital.com/product/symphony-mk-ii/",
+    "quote": "Apogee Digital's own page for the Symphony Mk II, read 2026-11-25. The page states NO maximum sample rate and NO bit depth anywhere. Connectivity: « Connectivity options: Pro Tools HD, Dante, Thunderbolt, & SoundGrid ». D/A rows: « THD+N:-119dB @ 21 dBu (0.00014%) unweighted »; « Dynamic Range: 126 dB A weighted »; « Frequency Response at 44.1 kHz: dc to 20 kHz (+/- 0.05dB) ». An FAQ entry reads « The new 16x16 SE I/O module is the first Apogee product to feature the ESS 9822pro A/D chip », which names an A/D part; the page names no D/A chip. No DSD figure and no digital filter row.",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "unknown",
+    "chip": "No D/A part is named. The only part number on the page, « the ESS 9822pro A/D chip », is explicitly the ANALOGUE-TO-DIGITAL converter of one optional module, and taking it for this device's D/A stage would be wrong twice over - wrong direction, wrong product."
+  },
+  "_le_segment_pro_publie_des_MESURES_et_oublie_les_plafonds": "Second professional maker in the catalogue after MOTU, and the pattern holds: a measured THD+N and a measured dynamic range for the D/A path specifically, no DSD figure anywhere, and no digital filter. Neither measurement has a field here - the schema holds what a device ACCEPTS and nothing about how well it converts - so both live in the quote. Of about eighty makers read, the ones that publish D/A measurements are almost all in this segment, and three of them (Benchmark, Okto, Antelope) forbid their reuse.",
+  "_une_fiche_sans_le_moindre_plafond_et_avec_trois_mesures": "Not one sample rate or bit depth on the page of Apogee's flagship, and « THD+N:-119dB @ 21 dBu (0.00014%) unweighted » given to five significant figures. The inversion in its purest form: this record knows how well the device converts and nothing about what it will accept. pcm_max_hz is absent and will resolve through a brand that holds no figure either.",
+  "_le_seul_numero_de_piece_de_la_page_est_un_CONVERTISSEUR_A_N": "« the first Apogee product to feature the ESS 9822pro A/D chip ». An A/D part, in an FAQ, about an optional I/O module. Three reasons not to write it into `chip`, and the sentence is quoted in full so that a later contributor meets all three at once rather than finding « ESS 9822pro » in a search and filing it."
+}

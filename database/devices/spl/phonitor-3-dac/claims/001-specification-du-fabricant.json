@@ -1,0 +1,40 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://spl.audio/de/spl-produkt/phonitor-3-dac/",
+    "quote": "SPL's own page for the Phonitor 3 DAC, read 2026-11-25. The page is German-only. On USB: « Ueber USB wandelt der Phonitor 3 DAC PCM-Audio-Signale mit einer Aufloesung von 32 Bit und einer Abtastrate von bis zu 768 kHz sowie DSD-Signale mit einer Aufloesung von bis zu DSD256. » On the S/PDIF coaxial and optical inputs and on AES/EBU, each described in its own sentence: « mit Abtastraten von bis zu 192 kHz und einer Wortbreite von 16 Bit bis 24 Bit empfangen » and, for AES/EBU, « maximalen Abtastrate von 192 kHz und einer Wortbreite von 16 Bit bis 24 Bit ». On the converter: « Als Wandler-Chip im Digital/Analog-Wandler des Phonitor 3 DAC kommt ... der DAC768v2 ... der AKM AK4493 SEQ VELVETSOUND(TM) ». On DSD in the DAC768v2 section: « Auch Direct Stream Digital wird bis zu einer Aufloesung von DSD4 bzw. DSD256 unterstuetzt. » On the analogue stage: « Die 120V-Technologie arbeitet mit +/-60 V » and an analogue reconstruction filter « SLP120 (Super Low-Pass) », « ein analogen 'Super Low-Pass'-Filter mit 120V-Technologie ». spl.audio has no prohibition: the Impressum and the AGB were both READ and neither restricts copying, reproduction or extraction; the only rights line is the footer « (c) 2026 SPL electronics GmbH ».",
+    "read_on": "2026-11-24"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-24",
+  "facts": {
+    "family": "akm",
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD256",
+    "chip": "« der AKM AK4493 SEQ VELVETSOUND » (Asahi Kasei), inside a module SPL calls the « DAC768v2 ». The « 120V-Technologie » working at « +/-60 V » and the « SLP120 (Super Low-Pass) » filter are the ANALOGUE output stage and its reconstruction filter - SPL's whole selling point, and not the converter."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD256"
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_une_page_en_prose_qui_vaut_un_tableau": "SPL publishes no specification table at all: each input gets its own German sentence, and the sentences carry a rate AND a word-length range apiece. Four inputs fully rated, in prose, by a maker with one DAC in its catalogue. The figures are no less usable for it - and an automated extraction looking for a table would come away with nothing.",
+  "_le_filtre_nomme_sur_cette_page_est_ANALOGIQUE": "« SLP120 (Super Low-Pass) », « ein analogen 'Super Low-Pass'-Filter mit 120V-Technologie ». The word « Filter » appears, it has a name, and it is the analogue reconstruction stage after the converter - not a digital filter the owner selects. No device_settings entry. This is the trap the Rotel records met twice (« precisely tuned output filter circuits ») and the one a search for the word « filter » would fall into every time.",
+  "_le_DoP_nest_PAS_inscrit_et_la_raison_tient_a_la_methode": "A model-extracted summary of the unread part of this page reports « USB (B), DSD over PCM (DoP) » with rates. It is NOT recorded. A summary is not a quotation, and the verbatim text of this page says « DSD-Signale » and « Direct Stream Digital » without ever naming the transport. The same rule cost wiim/pro-plus its input ceilings on 2026-11-24; applying it here costs one boolean."
+}
