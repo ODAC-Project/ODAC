@@ -32,8 +32,15 @@ is how a project loses the one thing it cannot re-issue.
 
 ## Data — CC BY-SA 4.0
 
-Applies to everything under `database/`: manufacturer, device and interface
-information, and the evidence attached to it.
+Applies to the facts recorded under `database/`: manufacturer, device,
+chip-family and interface information, and the structure that links them.
+
+It does not apply to the text quoted in `source.quote` fields. These are short
+excerpts from third-party documents (datasheets, manuals, web pages), cited as
+evidence under the right of quotation. They remain the property of their
+authors and are not licensed by this project, under CC BY-SA 4.0 or any other
+licence. Anyone who reuses them does so under the quotation rules that apply
+to them.
 
 Licensed under the Creative Commons Attribution-ShareAlike 4.0 International
 License: <https://creativecommons.org/licenses/by-sa/4.0/legalcode.en>

@@ -86,12 +86,13 @@ measured list of what is knowingly missing — is in
 
 Following OPRA's split, and for the same reason:
 
-- **Code** (`tools/`, `schemas/`, CI): **Apache-2.0**. The `LICENSE` file is
-  placed by MozaikLabs; until it is there, nothing here grants anything.
+- **Code** (`tools/`, `schemas/`, CI): **Apache-2.0**, see `LICENSE`.
 - **Data** (`database/`): **CC BY-SA 4.0**. Commercial use is allowed;
   derivative databases stay available to the community. A code licence does not
   cover the *sui generis* database right in Europe, which is why the data needs
-  its own.
+  its own. The licence covers the facts, not the text quoted in `source.quote`
+  fields: those are short excerpts cited as evidence, and they remain their
+  authors' property (see `LICENSE.md`).
 - **Logo and name**: neither licence. A trade mark, all rights reserved, use by
   agreement.
 
