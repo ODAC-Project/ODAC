@@ -308,6 +308,28 @@ for brand_dir in sorted(os.listdir(devices)) if os.path.isdir(devices) else []:
                            " ".join(frag.split())[:70]))
             if not src.get("kind"):
                 errors.append("%s: the source does not say what kind it is" % rel(cpath))
+            # A CONTRIBUTION CANNOT PREDATE THE PAGE IT QUOTES. Written
+            # 2026-11-25, after the defect it describes had been repaired rather
+            # than before - which is the only order that works. `ecrire_lot.py`
+            # carried `"submitted_on": "2026-11-24"` HARDCODED, one line below a
+            # comment explaining that a frozen `read_on` had already stamped 146
+            # claims with a false date. The same defect, directly beneath its own
+            # correction, and it stamped 211 of 374 claims - 56% of the corpus -
+            # as submitted the day BEFORE their source was read. Both fields are
+            # computed now, so this guard will never fire on the generator's
+            # output; it exists for contributions that arrive by hand or by pull
+            # request, where a typed date is the likeliest thing to be wrong.
+            #
+            # It is written AFTER the 211 were corrected, deliberately. A guard
+            # added before the repair would have put the verifier in the red on
+            # existing data, and a red verifier that everyone learns to ignore is
+            # worse than no guard at all.
+            sur, rdr = c.get("submitted_on"), src.get("read_on")
+            if sur and rdr and str(sur) < str(rdr):
+                errors.append("%s: submitted_on %s precedes the source's read_on "
+                              "%s. A contribution cannot be older than the page "
+                              "it quotes: fix whichever of the two is wrong"
+                              % (rel(cpath), sur, rdr))
             sb = c.get("submitted_by")
             if not sb:
                 errors.append("%s: no submitted_by" % rel(cpath))

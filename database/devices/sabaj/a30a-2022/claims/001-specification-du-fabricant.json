@@ -7,7 +7,7 @@
   },
   "source_names_subject": true,
   "submitted_by": "curator",
-  "submitted_on": "2026-11-24",
+  "submitted_on": "2026-11-25",
   "facts": {
     "chip": "No D/A part number is named. The manual names a « DSP chip », an « ST high-power amplifier chip » and « The second generation XMOS solution » for USB - none of which is the converter.",
     "pcm_max_hz": 768000,

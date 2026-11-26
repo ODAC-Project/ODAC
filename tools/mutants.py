@@ -98,6 +98,20 @@ def escape_hatch_that_does_not_work(root):
     json.dump(o, open(p, "w", encoding="utf-8"), indent=2, ensure_ascii=False)
 
 
+def contribution_older_than_its_source(root):
+    # A CLAIM DATED BEFORE THE PAGE IT QUOTES. This was not hypothetical: a
+    # hardcoded "submitted_on" in the batch writer stamped 211 of 374 claims -
+    # 56% of the corpus - with the day before their source was read, one line
+    # below a comment explaining that a frozen read_on had already done the same
+    # thing to 146 of them. The guard was written only after those 211 were
+    # repaired, so that it has never been red on real data.
+    p = claim_path(root)
+    c = json.load(open(p, encoding="utf-8"))
+    c["submitted_on"] = "2020-01-01"
+    c.setdefault("source", {})["read_on"] = "2026-11-25"
+    json.dump(c, open(p, "w", encoding="utf-8"), indent=2, ensure_ascii=False)
+
+
 def unknown_interface(root):
     p = claim_path(root)
     c = json.load(open(p, encoding="utf-8"))
@@ -318,6 +332,8 @@ MUTANTS = [
     ("one maker under two names", near_duplicate_brand_name,
      "probably one maker under two names"),
     ("the escape hatch for two real makers", escape_hatch_that_does_not_work, PASSES),
+    ("a contribution older than its source", contribution_older_than_its_source,
+     "precedes the source's read_on"),
     ("an interface that does not exist", unknown_interface, "is not in database/interfaces"),
     ("a claim that asserts nothing", empty_claim, "asserts nothing"),
     ("a file that is not JSON", broken_json, "not valid JSON"),
