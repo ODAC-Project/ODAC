@@ -1,0 +1,60 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://dl.topping.audio/um/dx5_ii.pdf",
+    "quote": "Topping's own manual for the DX5 II, dx5_ii.pdf, 62 pages carrying Chinese, English, Japanese and Taiwanese in one file; the English section is used. « 2.Attribute » gives « Signal input   USB/BT/OPT/COAX », « Display 2inch LCD », « Standby power consumption <1.3W », « Power consumption <6W ». « 3.Input range », whose column assignment was verified with pdftotext -bbox coordinate dumps on page 23 rather than with -layout: for « USB IN », « PCM   44.1kHz-768kHz/16bit-32bit » and « DSD   DSD64-DSD512 (Native) , DSD64-DSD256 (DoP) » and « PEQ   44.1kHz-192kHz/16bit-32bit »; for « COAX/OPT IN », « PCM   44.1kHz-192kHz/16bit-24bit » and « PEQ   44.1kHz-192kHz/16bit-24bit » - with NO DSD line; for « BT IN », « AAC/SBC/APTX/APTX HD/APTX-Adaptive/LDAC » and « PEQ   44.1kHz-96kHz/16bit-24bit ». « 2-2 UAC » gives « UAC2.0 (Default), UAC1.0 » with no reduced ceiling published. « 2-5 Spdif mode » gives « Mode 1 (Default), Mode 2 » and explains « This setting is used to improve compatibility of the SPDIF inputs (Optical and Coaxial) to accommodate different sources. » « 4-2 Crossfeed »: « Crossfeed works with all input and output interfaces (44.1kHz-48kHz/24bit-32bit). »",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-25",
+  "facts": {
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true,
+    "device_settings": [
+      {
+        "setting": "PCM filter",
+        "set_to": "F-8: Minimum Phase Slow Roll-Off Low Dispersion",
+        "why": "Eight filters, all named, the full ESS menu: « F-1：Minimum Phase (Default) », then Linear Phase Fast Roll-Off Apodizing, Linear Phase Fast Roll-Off, Linear Phase Fast Roll-Off Low Ripple, Linear Phase Slow Roll-Off, Minimum Phase Fast Roll-Off, Minimum Phase Slow Roll-Off, and « F-8：Minimum Phase Slow Roll-Off Low Dispersion ». F-8 is chosen for the same reason as on the DX1 II: minimum phase has no pre-ringing and low dispersion is the correction for its cost. NO NOS or bypass position exists among the eight."
+      },
+      {
+        "setting": "UAC",
+        "set_to": "2.0",
+        "why": "« UAC2.0 (Default), UAC1.0 ». The setting exists, and unlike the DX1 II's manual this one publishes NO reduced ceiling for UAC 1.0 - so what the device accepts in that mode is unstated here, where its sibling states 44.1-48 kHz and no DSD."
+      },
+      {
+        "setting": "Spdif mode",
+        "set_to": "Mode 1",
+        "why": "« Mode 1 (Default), Mode 2 [...] used to improve compatibility of the SPDIF inputs (Optical and Coaxial) to accommodate different sources. The two modes are alternative options. » Unlike the DX1 II, whose Mode 1 is stated not to support DoP64, this manual attaches no capability difference to either mode."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true,
+      "dop_possible": true,
+      "dop_max": "DSD256"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "bluetooth": {}
+  },
+  "_conditions_NON_CONCLUANTES_sur_les_DEUX_hotes_de_Topping": "Measured 2026-11-25, and the two hosts are two separate situations that are NOT merged. On www.toppingaudio.com - to which tpdz.net, www.tpdz.net, topping.audio and www.topping.audio all 301 redirect - the full 328-entry sitemap was pulled and /terms, /terms-of-use, /terms-of-service, /legal, /privacy, /privacy-policy and /copyright all return 404. The only legal-ish page is /warranty-terms, read in full, whose single reservation is « *TOPPING company reserves the final interpretation and amendment for the above terms » - about the warranty, not about content. Footer: « (c) 2026 TOPPING Technology co., LTD. All rights reserved. » On dl.topping.audio, the manual host, there is no terms page and no copyright footer at all: its index is an unconfigured web-panel placeholder titled « 恭喜，站点创建成功！ ». So: no terms page found on either, which is not permission. robots.txt on the product host is one « User-agent: * » group, « Allow: / » with three /api/ disallows, no Content-Signal and no Claude group; the download host has no robots.txt (404). The /api/ paths serve the site's spec data and were NOT fetched.",
+  "_les_tableaux_de_specifications_des_pages_produit_sont_des_IMAGES": "Verified mechanically rather than assumed. The site is a SvelteKit application that embeds each product's spec block in the page payload under a field named `specs:`, and that field was parsed on seven product pages: it contains only figure, div and img elements, with ZERO characters of text - 2 998 chars and 12 images on the D50 III, 1 240 and 5 on the D90 III SABRE, and so on. The images are served from upload.toppingaudio.com. No number was read off any of them. Every figure in this record comes from the maker's own manual PDF.",
+  "_AUCUN_numero_de_puce_nexiste_dans_le_texte_que_Topping_publie": "All nine text-bearing Topping manuals were grepped for ES9, AK4, CS43, PCM17, « DAC chip » and « chipset »: zero matches. Converter part numbers and counts exist only inside the product pages' spec IMAGES, so `chip` and `family` are ABSENT on this record - not unknown, absent, because the maker publishes no text that states them. That is a deliberate refusal to fill a field from a picture.",
+  "_neuf_manuels_sur_quatre_vingt_sept_portent_du_texte": "The maker's complete manual catalogue was enumerated - seven pages of /supports?tab=manual cross-checked against the Chinese list, 62 entries resolving to 87 distinct files - and extracted in DEFAULT pdftotext mode, never -layout. Only nine files carry a text layer, all of them recent and under /um/; everything under /usermanual/ and the older /um/ files are pure rasters with no embedded fonts at all, where pdftotext returns nothing but page breaks. The word « Specifications » survives intact in all nine, with no dropped letter and no missing ligature. Of the nine, five contain a converter. So of Topping's whole range, only the DX1 II, DX5 II, DX9 Discrete, D900 and E50 II have any text route at all.",
+  "_le_rang_SPDIF_na_AUCUNE_ligne_DSD_et_cest_une_absence": "« COAX/OPT IN » carries a PCM line and a PEQ line and nothing else. Its siblings the DX9 Discrete and the D900 both print « DSD64 (DoP) » on that row; the E50 II does too. Here the row was itemised and DSD left out of it, which is a stronger absence than a row never written - so inputs.spdif_coax and inputs.spdif_optical carry no dsd_max and no dop_possible. Fourth record today where a maker's own itemised row omits DSD on S/PDIF while a sibling model states it.",
+  "_le_defaut_de_filtre_differe_de_celui_du_DX1_II_sur_une_liste_IDENTIQUE": "Eight filters, the same eight names in the same order as the DX1 II - and the default is F-1 here against F-5 there. Same maker, same menu, same part family, two different factory settings. For an engine that cares what a device does before anyone touches it, the default matters as much as the list, and this pair is the proof that it cannot be inferred from the list."
+}

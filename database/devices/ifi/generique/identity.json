@@ -3,5 +3,5 @@
   "kind": "dac",
   "brand": "ifi",
   "model": "unknown",
-  "_corrected": "Renommee le 23/11/2026, de 'ifi_idsd' a 'ifi_generique'. La cle nommait un modele que la fiche ne revendique pas : son `model` est \"unknown\", donc c'est le fourre-tout de la marque. Rien ne lisait la cle - le moteur lit le champ - mais quiconque ouvrait ce fichier y lisait une precision qui n'existe pas. Le suffixe _generique est celui que portaient deja les autres fourre-tout."
+  "_corrected": "Renamed on 2026-11-23, from 'ifi_idsd' to 'ifi_generique'. The key named a model the record does not claim: its `model` is \"unknown\", so this is the brand's catch-all. Nothing read the key - the engine reads the field - but anyone opening the file read a precision that does not exist. The _generique suffix is the one the other catch-alls already carried."
 }

@@ -1,0 +1,36 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://api.en.auneaudio.com/storage/v1/object/public/downloads/resources/1771982477698_S10N_S10_Pro_User_Manual.pdf",
+    "quote": "Aune's own manual for the S10N / S10 Pro, read 2026-11-25; its product page's specification block is images only. A network player whose resolution table is about OUTPUTS, and the manual labels it so. Verbatim under « ResolutionSupport(Max) »: « Coaxial/AESdigitalout  384k/32bitDoP128 », « Opticaldigitalout  192k/24bitDoP64 », « HDMI-IIS(forlocalplaybackonly)  768k/32bitDSD512 », « RCAlineout  768k/32bitDSD512 ». Under « Interface »: « Digitaloutput  RCAcoaxial/AES/optical/HDMI-IIS* », « Analogoutput  RCAlineout(variable)/balancedXLR », « Clockinput  10Mclockin », « Wireless  2.4GBluetooth,2.4GWiFi ». The two USB ports are storage: « The two USB ports support hard disk drives andUSBflashdrives. » Its real sources: « SwitchbetweenBluetoothreceiving/streamingreceiving/standardinput », with « Streaming  Playbacksupport(max)  192k/24bit » and « Bluetooth  Resolutionsupport(max)  96k/24bit ». What it plays from storage: « DSD  DSD64/128/256/512 », « WAV  768kHz/32bit(MAX) ». Filters, seven, with aune's codes: « LF  fastroll-off, linearphasefilter », « LS  slowroll-off, linearphasefilter », « MF  fastroll-off, minimumphasefilter », « MS  slowroll-off, minimumphasefilter », « LA  apodizing,fastroll-off,l inearphasefilter », « HF  hybrid,fastroll-off, minimumphasefilter », « LB  brickwallfilter ». No converter part number: « It usesthededicatedprocessorandFPGA; supports PCM768k and DSD512. »",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-25",
+  "facts": {
+    "bits": 32,
+    "chip": "None is named: « It usesthededicatedprocessorandFPGA; supports PCM768k and DSD512. »",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512",
+    "device_settings": [
+      {
+        "setting": "Filter mode",
+        "set_to": "unknown",
+        "why": "SEVEN filters, all named and each given aune's own two-letter code - LF, LS, MF, MS, LA, HF, LB. The same seven as the X8 XVIII's list, which is this maker's house menu. No OFF or bypass position."
+      }
+    ]
+  },
+  "inputs": {
+    "bluetooth": {
+      "pcm_max_hz": 96000,
+      "bits": 24
+    }
+  },
+  "_conditions_une_clause_existe_mais_elle_porte_sur_lAPPLICATION": "Measured 2026-11-25, and the scope decides it. On en.auneaudio.com, where the products and the manuals are, NO terms page exists: the footer carries no legal link and /terms, /privacy, /legal, /about and their /page/ variants all 404. Footer: « (c) 2026 Aune Audio. All rights reserved. » with two Chinese filing numbers. On www.auneaudio.com, the maker's Chinese single-page site, there IS a reuse-forbidding clause - « You may not reproduce, modify, distribute, or otherwise use these contents without our explicit written permission » - but its own preamble scopes it: « Welcome to the Aune Control App [...] This service agreement [...] regarding the use of the App », and the clause's subject is « The App and all its content ». The privacy page is App-scoped too. So this is the Shanling shape inverted - an application agreement instead of a store's - and the product host publishes nothing. Records are written because nothing forbidding covers the pages they cite, and the App clause is recorded here so a reader can take the stricter view if they disagree.",
+  "_tous_les_blocs_de_specifications_des_pages_produit_sont_des_IMAGES": "Checked on the S18 EVO, S9c Pro, Yuki, Yuki SE, X1s GT, X5s 8th, S10N/S10 Pro, ARU1 and X8 XVIII: each page's `specs_html` field contains nothing but img tags. No number was read off any of them; every figure here comes from the text of the maker's own manual PDF, linked from en.auneaudio.com/downloads.",
+  "_les_PDF_dAune_perdent_leurs_espaces_entre_les_mots": "An extraction fact that changes how these quotes look. Aune's PDFs lose most inter-word spaces in extraction - « UserManual », « upto32bit/768k » - and they are quoted EXACTLY as extracted, with no space put back by hand. Sanity checks passed on « Specifications », « Bluetooth » and « filter ». In the S18 EVO manual the ffi ligature is dropped, « aune's o cial website » where the document reads official, and that too is left as extracted. Third distinct extraction failure met today, after pdftotext -layout eating every « t » in Shanling's manuals and a Type-1C font with no Unicode map making VMV's English tables unreadable.",
+  "_le_mot_NOS_napparait_sur_aucune_page_ni_dans_aucun_manuel_Aune": "So the non-oversampling against New-Old-Stock ambiguity never arose for this maker, and no Aune model in the current range is described as having a valve output stage. No model claims an oversampling-bypass or a filter-OFF position either: every filter menu here is a choice among filters, never a way to leave them out. `correctable` is written on no Aune record.",
+  "_son_I2S_est_une_SORTIE_et_le_fabricant_ajoute_une_condition": "« HDMI-IIS(forlocalplaybackonly)  768k/32bitDSD512 », listed under « Digitaloutput » alongside coaxial, AES and optical. So the I2S socket points outward AND only works when the device plays its own files - two restrictions in one row. Every other I2S entry in this base is an input; this is the first that is not, and a harvester keying on « HDMI-IIS » plus « 768k » would have given this device the highest-rate I2S input in the catalogue.",
+  "_un_lecteur_reseau_SANS_AUCUNE_entree_USB_audio": "« The two USB ports support hard disk drives andUSBflashdrives » - storage, both of them. Its sources are local files, streaming at « 192k/24bit » and Bluetooth at « 96k/24bit », and only the last is a socket with a figure the schema can hold. So `inputs` carries one key on a device with four digital connectors, and that is the honest shape."
+}

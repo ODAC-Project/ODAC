@@ -14,7 +14,7 @@
     "dop": true,
     "dsd_direct": true,
     "analog_filter": "simple",
-    "device_settings": "Activer le mode DSD Direct et regler le filtre DSD sur 50 kHz.",
+    "device_settings": "Turn on DSD Direct and set the DSD filter to 50 kHz.",
     "correctable": true,
     "modulator_order": 7,
     "technology": "delta_sigma"
@@ -24,5 +24,5 @@
     "_modulator_order": "Stated explicitly because the family no longer supplies one. Seven is the catalogue's default for multi-element switching arrays and the safe assumption here.",
     "_technology": "Stated here because this record has no chip family and the engine would otherwise assume it. It is safe to state: the reference's author says the ADI-2 exists with three different converter chips and names AKM and ESS among them, and every candidate is a delta-sigma part. So the TECHNOLOGY is known even though the FAMILY is not - which is exactly the case the family being optional exists for."
   },
-  "_note": "Lot repris du catalogue JSON d'origine. Sa preuve est la chaîne `source` de la fiche : à éclater en preuves par champ au fur et à mesure, car une seule citation pour dix faits est le défaut connu de ce lot. `notes` porte les gloses que la fiche d'origine attachait à tel ou tel champ."
+  "_note": "Batch carried over from the original JSON catalogue. Its evidence is the record's `source` string: to be broken out into per-field evidence over time, since one quotation for ten facts is this batch's known defect. `notes` carries the glosses the original record attached to individual fields."
 }

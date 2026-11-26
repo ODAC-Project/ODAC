@@ -1,0 +1,51 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://e1dashz.wixsite.com/index/9038s",
+    "quote": "E1DA's own page for the #9039S, read 2026-11-25. Note the URL says 9038s and the page carries THREE models - #9039S, then #9038SG3, then #9038SG1-2; the navigation labels it « #903*S ». « Status: production ». Materials: « sandblasted/anodized aluminum/ES9039Q2M/AD8397/OPA1612 ». The input line: « Input: USB-C tighter grip version, PCM up to 32b/384kHz DSD256 ». Output: « balanced output 2.5mm jack A&K pinout » with « Don't try unbalanced adapters! You can kill the DAC. » On the DSD transport, verbatim: « USB audio bridge CT7601 doesn't support native DSD in a sync mode, DoP64-128 only. » On filters: « Tweak_9039.exe app for Windows can control the type of 8 interpolation filters(for 9039S DAC1 only is active) ». On an undocumented mode: « some of the numbers(for instance 11) turn the DAC in NoOS mode or something like that », which the maker says « isn't documented in the datasheet but investigated in the Archimago's review ». Defaults: « default parameters: 2nd = 3; 3nd = 13; IDAC_NUM = 0; CLK_GEAR = 0; DPLL_BW = 1; Filter = Min phase. » The control app uses « the USB HID interface which isn't supported by ios ».",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-25",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD256",
+    "dop": true,
+    "chip": "« ES9039Q2M », one, with an « AD8397/OPA1612 » composite output stage and a « CT7601 » USB bridge.",
+    "device_settings": [
+      {
+        "setting": "Filter",
+        "set_to": "Min phase (the maker's own default)",
+        "why": "« 8 interpolation filters(for 9039S DAC1 only is active) », counted and not named, with the default stated outright: « Filter = Min phase ». A published count without names is the tenth of its kind this week; a published DEFAULT is rare and worth more, because it says what the device does before anyone touches it."
+      },
+      {
+        "setting": "IDAC_NUM",
+        "set_to": "0 (the maker's default; 11 reportedly gives a NoOS mode)",
+        "why": "« some of the numbers(for instance 11) turn the DAC in NoOS mode or something like that. The mod isn't documented in the datasheet but investigated in the Archimago's review. » This is the nearest thing to an oversampling bypass anywhere on this maker's site, and `correctable` is NOT written from it: the maker hedges twice in one sentence - « or something like that », « isn't documented » - and cites a third party's review rather than its own datasheet. An undocumented register value found by a reviewer is not a supported mode."
+      },
+      {
+        "setting": "CLK_GEAR",
+        "set_to": "0 (49 MHz master clock)",
+        "why": "« CLK_GEAR reg switching the MCLK frequency, default value = 0 i.e. \"49MHz\", set it to 1 to get \"24MHz\" MCLK to minimize harmonics but 1db increasing the noise performance. » A user-selectable master clock with the trade-off stated in dB - rarer than a filter menu, and no field can hold it."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "dsd_max": "DSD256",
+      "dop_possible": true,
+      "dop_max": "DSD128"
+    }
+  },
+  "_conditions_NON_CONCLUANTES_chez_E1DA": "No terms page found, so no prohibition could be checked - NOT the same as finding no prohibition. Measured 2026-11-25: terms, terms-of-use, terms-and-conditions, legal, privacy, privacy-policy, tos, copyright and disclaimer all 404 under /index/; no legal link in any navigation or footer; and a sweep of every page's text for « all rights reserved », « copyright », « reproduc », « redistribut », « terms of use » and « permission » returned nothing. The footer on every page carries two lines: « (c) 2025 E1DA » and « (c) 2126 E1DA Future is here ;) ». robots.txt is Wix boilerplate, permissive, with no Content-Signal and no Claude group.",
+  "_lhote_est_bien_celui_du_fabricant_et_il_ny_en_a_quun": "E1DA's own site is a free Wix site at e1dashz.wixsite.com, and the identification matters because e1da.com is a parked domain for sale, e1da.net is an unrelated Australian IT company, and some twenty other candidates have no DNS. It is the maker's own: the ABOUT US page is written in the first person - « It's me, Ivan Khlyupin, Russian engineer lives in China for 14 years » - and it hosts his own firmware, drivers and Tweak apps. Its BUY page sends buyers to an AliExpress store, so E1DA runs no shop host of its own and there is no shop-scoped terms question to untangle. Nothing here comes from a retailer or a review, although the maker links several.",
+  "_un_piege_dextraction_propre_a_Wix": "Wix splits running text across inline spans, and a first extraction pass broke words mid-word - « standard un/balanced », « The tut/orial ». The reader re-extracted removing inline tags WITHOUT inserting whitespace and verified against known words. Every figure here is text, not OCR, with no letter missing and nothing restored by hand. Same family as the pdftotext -layout failure met on another maker's manuals today: a silent mangling that leaves plausible output.",
+  "_les_courbes_sont_des_images_et_na_pas_ete_lues": "Every THD, FFT, dynamic-range and frequency-response PLOT in this page's « Tech appendix » is an image. No number was read off any of them; the figures recorded here come from the page's text, and where a plot caption is itself text it is quoted as a caption rather than as a measurement.",
+  "_le_transport_du_DSD_depend_du_MICROLOGICIEL_et_cest_unique": "« USB audio bridge CT7601 doesn't support native DSD in a sync mode, DoP64-128 only. » So what this device accepts depends on which firmware is flashed: asynchronous firmware gives DSD256, synchronous firmware gives DoP only and only DoP64 to DoP128. `dop` is true and `inputs.dop_max` takes DSD128 from the maker's own sentence; `native_dsd` is left ABSENT, because native DSD exists on one firmware and not the other and the catalogue has no way to say « depends on the firmware ». First record in the base whose transport is a software state rather than a hardware fact, and the second device today whose capability depends on a per-unit or per-configuration choice, after the Audio-gd NOS-1704's order-time receiver chip.",
+  "_une_page_pour_TROIS_modeles": "The URL is /index/9038s and the page carries #9039S, #9038SG3 and #9038SG1-2 one after another, with the navigation calling it « #903*S ». Three records share this URL, each quoting its own block. Recorded because a reader following the link will land on a page whose top model is not the one they looked up."
+}

@@ -8,7 +8,7 @@
     "pcm_max_hz": "unknown",
     "bits": "unknown",
     "bits_above_hz": [],
-    "_this_is_a_policy": "Ce qu'il faut supposer quand l'appareil n'a rien dit, pas une mesure. Une fiche qui connaît son vrai chiffre l'emporte."
+    "_this_is_a_policy": "What to assume when the device has said nothing - not a measurement. A record that knows its own real figure wins."
   },
   "note": "OAAT, Open Advanced Audio Transport — an open specification, published separately. No ceiling is recorded here because this catalogue does not know it: that is a question for the specification, not something to infer."
 }

@@ -27,5 +27,5 @@
     "chip": "A discrete resistor ladder built by the maker."
   },
   "notes": {},
-  "_note": "Lot repris du catalogue JSON d'origine. Sa preuve est la chaîne `source` de la fiche : à éclater en preuves par champ au fur et à mesure, car une seule citation pour dix faits est le défaut connu de ce lot. `notes` porte les gloses que la fiche d'origine attachait à tel ou tel champ."
+  "_note": "Batch carried over from the original JSON catalogue. Its evidence is the record's `source` string: to be broken out into per-field evidence over time, since one quotation for ten facts is this batch's known defect. `notes` carries the glosses the original record attached to individual fields."
 }

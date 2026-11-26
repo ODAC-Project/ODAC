@@ -1,0 +1,33 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://bryston.com/digital-audio/bda3/",
+    "quote": "Bryston's own BDA-3 page, read 2026-11-25 with curl. Its feature list: « 6 different inputs, including 2 USB, AES/EBU, S/PDIF RCA, S/PDIF BNC, and Toslink »; « PCM support up to 384 kHz / 32 bit »; « DSD support up to DSD-256 (x4) »; « User selectable upsampling for some inputs ». Its specification table gives only analog rows: « Frequency Response: 20Hz - 20kHz: ±0.1dB »; « Voltage Output: XLR: 4V | RCA: 2V ».",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-25",
+  "facts": {
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD256",
+    "chip": "No part number anywhere on the page, and no family either: no ESS, AKM, ROHM, Burr-Brown, Cirrus or Sabre string appears. Bryston's own words about the conversion stage are confined to the rate bullets.",
+    "device_settings": [
+      {
+        "setting": "Upsampling",
+        "set_to": "unknown",
+        "why": "« User selectable upsampling for some inputs ». Neither the rates nor the inputs are named, and « some » is the maker's own hedge - so this cannot be turned into a value, and it cannot be assumed off. It is the one setting on this device that would move a measurement, and the Owner's Manual is where the input list would be."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {},
+    "aes_ebu": {},
+    "spdif_coax": {},
+    "spdif_optical": {}
+  },
+  "_SIX_ENTREES_ANNONCEES_CINQ_NOMMEES": "« 6 different inputs, including 2 USB, AES/EBU, S/PDIF RCA, S/PDIF BNC, and Toslink » - and the list that follows « including » names FIVE kinds on seven sockets, not six. The missing kind is HDMI, which appears on this page only inside a quoted Stereophile review (« enables inexpensive HDMI-equipped disc players to function as premium source components ») and never in Bryston's own words. A third party's sentence is not the maker stating a socket, so NO hdmi input is written. S/PDIF RCA and S/PDIF BNC are both spdif_coax here: our interface vocabulary names the electrical interface, not the connector, and two sockets of one kind is not two interfaces.",
+  "_AUCUN_PLAFOND_PAR_ENTREE_ET_LUPSAMPLING_EST_LA_RAISON_DE_NE_PAS_DEVINER": "The four input blocks are EMPTY. Bryston states 384 kHz / 32 bit and DSD-256 once, for the device, and says in the next bullet that upsampling is « selectable for some inputs » - which is a direct statement that the sockets do not behave alike. Copying the device ceiling onto Toslink, which no consumer optical receiver carries past 96 kHz, would have been the exact error that database/vocabulary/why-the-optical-default-stays-low.json exists to prevent.",
+  "_la_table_de_specification_NE_COUVRE_PAS_LE_NUMERIQUE": "Worth recording because it looks like an omission on our side: the page HAS a specification table, and it holds frequency response, THD+N and output voltage only. Every digital figure on this page lives in the marketing bullet list above it. So there is no fuller table to go back for - the bullets are the specification."
+}

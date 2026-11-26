@@ -8,7 +8,7 @@
     "pcm_max_hz": 192000,
     "bits": 24,
     "bits_above_hz": [],
-    "_this_is_a_policy": "Ce qu'il faut supposer quand l'appareil n'a rien dit, pas une mesure. Une fiche qui connaît son vrai chiffre l'emporte."
+    "_this_is_a_policy": "What to assume when the device has said nothing - not a measurement. A record that knows its own real figure wins."
   },
   "note": "Conservative, and highly variable: the figure depends on the HDMI version at both ends as much as on the converter."
 }

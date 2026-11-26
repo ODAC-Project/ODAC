@@ -5,5 +5,7 @@
     "0x32bb",
     "0xc502"
   ],
-  "usb_vendor_ids_source": "Linux kernel USB audio quirk tables, sound/usb/quirks.c (d2636407bf8c, 2026-11-12) and sound/usb/quirks-table.h (e7c66b3e249e, 2026-11-04)"
+  "usb_vendor_ids_source": "Linux kernel USB audio quirk tables, sound/usb/quirks.c (d2636407bf8c, 2026-11-12) and sound/usb/quirks-table.h (e7c66b3e249e, 2026-11-04)",
+  "_refused": "Refuse. LA DECISION ET SA CLAUSE SONT AU REGISTRE, pas ici : database/vocabulary/sources-and-redistribution.json, _REGISTER_OF_REFUSALS.hiby. Cette cle n'est qu'un relais, ajoute le 25/11 au soir, et elle ne recopie pas la clause pour qu'il n'y ait qu'un seul domicile a la decision. POURQUOI CE RELAIS EXISTE : le registre vit dans le vocabulaire, et quelqu'un qui cherche si une marque est recoltable regarde son fichier de marque. Les deux couches avaient divergE sur NEUF des vingt-six marques refusees, dont Okto Research - et c'est exactement par ce trou que deux fiches Okto ont ete ecrites le meme soir contre un refus commite deux heures plus tot. Une garde du verificateur refuse maintenant toute fiche sous une marque portant cette cle.",
+  "_refused_relais_ajoute_le": "2026-11-25"
 }

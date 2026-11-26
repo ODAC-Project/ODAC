@@ -189,6 +189,109 @@ def submitted_by_is_an_address(root):
     json.dump(c, open(p, "w", encoding="utf-8"), ensure_ascii=False, indent=2)
 
 
+def quote_fragment_too_long(root):
+    """Stretch one quoted fragment past the ceiling.
+
+    THE FIRST VERSION OF THIS GUARD MEASURED THE WHOLE `quote` FIELD, which is
+    39% our own connective prose. It would have refused 231 records that were
+    never at fault, and it would still have passed a 2 000-character panel
+    hidden inside a longer account. This mutant is written on the fragment for
+    that reason: it puts a single 399-character take inside guillemets in a
+    field that is otherwise short, which is precisely the shape the field-length
+    version could not see.
+    """
+    p = claim_path(root)
+    c = json.load(open(p, encoding="utf-8"))
+    c["source"]["quote"] = "The maker's page says \u00ab %s \u00bb" % ("word " * 80).strip()
+    json.dump(c, open(p, "w", encoding="utf-8"), indent=2, ensure_ascii=False)
+
+
+def _deux_fiches_dune_meme_marque(root):
+    """Find two devices of one brand: (identity path of A, model name of B)."""
+    dev = os.path.join(root, "devices")
+    for b in sorted(os.listdir(dev)):
+        bp = os.path.join(dev, b)
+        if not os.path.isdir(bp):
+            continue
+        noms = []
+        for d in sorted(os.listdir(bp)):
+            ip = os.path.join(bp, d, "identity.json")
+            if os.path.exists(ip):
+                noms.append((ip, json.load(open(ip, encoding="utf-8"))))
+        reels = [(ip, i) for ip, i in noms
+                 if str(i.get("model", "")).strip().lower() not in ("generique", "unknown")]
+        if len(reels) >= 2:
+            return reels[0][0], reels[1][1]["model"]
+    raise AssertionError("no brand with two non-generic records")
+
+
+def neighbour_with_its_own_record(root):
+    """Alias a device to another device that HAS a record, typed neighbour.
+
+    Done twice by hand in one batch on 2026-11-25 (bryston/bda-3 and
+    bryston/bda-3-14 aliased each other) and nothing saw it: aliases live in
+    identity, where the evidence rule does not reach, and the duplicate-brand
+    guard reads brand files. Either name then resolved to whichever file was
+    read first, asserting one product's figures for the other.
+    """
+    ip, autre_modele = _deux_fiches_dune_meme_marque(root)
+    i = json.load(open(ip, encoding="utf-8"))
+    i.setdefault("aliases", []).append({"text": autre_modele, "relation": "neighbour"})
+    json.dump(i, open(ip, "w", encoding="utf-8"), indent=2, ensure_ascii=False)
+
+
+def a_generic_record_may_name_its_neighbours(root):
+    """The SAME alias on a generic record, which must still be accepted.
+
+    This is the main case, not a loophole: chord/generique carries one USB
+    identity across several products and names Qutest and Dave as neighbours ON
+    PURPOSE - the record exists to say that the identity does not resolve to a
+    product. If the exemption silently stopped working, every such record would
+    start failing the build; if a typo made it inert, nobody would know which
+    way it had broken. So it gets its own mutant, asserting a PASS.
+    """
+    ip, autre_modele = _deux_fiches_dune_meme_marque(root)
+    i = json.load(open(ip, encoding="utf-8"))
+    i["model"] = "unknown"
+    i.setdefault("aliases", []).append({"text": autre_modele, "relation": "neighbour"})
+    json.dump(i, open(ip, "w", encoding="utf-8"), indent=2, ensure_ascii=False)
+
+
+def record_under_a_refused_brand(root):
+    """Write a device under a brand whose file carries _refused.
+
+    Done for real on 2026-11-25: two Okto Research records written against a
+    refusal commited two hours earlier, verdict DISCARDED, the register entry
+    naming the very input row that had been thrown away. It was possible because
+    the check made beforehand looked for _refused in database/brands/*.json and
+    found seventeen, while the register in the vocabulary held twenty-six - nine
+    of them with a silent brand file, Okto among them. The remote is public and
+    empty, so the first push would have published them.
+    """
+    bdir = os.path.join(root, "brands")
+    cible = None
+    for f in sorted(os.listdir(bdir)):
+        if not f.endswith(".json"):
+            continue
+        e = json.load(open(os.path.join(bdir, f), encoding="utf-8"))
+        if any(k.startswith("_refused") for k in e):
+            cible = e.get("id") or f[:-5]
+            break
+    assert cible, "no refused brand in the data"
+    d = os.path.join(root, "devices", cible.replace("_", "-"), "essai", "claims")
+    os.makedirs(d)
+    json.dump({"id": "%s/essai" % cible.replace("_", "-"), "kind": "dac",
+               "brand": cible, "model": "Essai"},
+              open(os.path.join(d, "..", "identity.json"), "w", encoding="utf-8"),
+              indent=2, ensure_ascii=False)
+    json.dump({"source": {"kind": "datasheet", "url": "https://exemple.test",
+                          "quote": "\u00ab 192 kHz \u00bb", "read_on": "2026-11-25"},
+               "source_names_subject": True, "submitted_by": "curator",
+               "submitted_on": "2026-11-25", "facts": {"bits": 24}},
+              open(os.path.join(d, "001-essai.json"), "w", encoding="utf-8"),
+              indent=2, ensure_ascii=False)
+
+
 MUTANTS = [
     ("a field nobody registered", unregistered_field, "not in schemas/fields.json"),
     ("a registry count that drifted", count_drifts, "used_on_records"),
@@ -196,13 +299,21 @@ MUTANTS = [
      "looks like an email address"),
     ("an id that is not its path", id_not_the_path, "The id IS the path"),
     ("an alias that does not say how it relates", untyped_alias, "must be {text, relation}"),
+    ("a neighbour that has its own record", neighbour_with_its_own_record,
+     "has its own record"),
+    ("a generic record naming its neighbours", a_generic_record_may_name_its_neighbours,
+     PASSES),
     ("an unreleased product name", forbidden_text, "must not be published"),
     ("two leaks in one file, both named", two_leaks_in_one_file,
      lambda out: out.count("must not be published") >= 2),
     ("a claim with no quoted evidence", drop_quote, "not evidence"),
+    ("a verbatim fragment past the ceiling", quote_fragment_too_long,
+     "ceiling for one quoted fragment"),
     ("a null value", put_null, "null at"),
     ("a fact smuggled into identity", fact_in_identity, "which are facts"),
     ("a brand that does not exist", unknown_brand, "is not in database/brands"),
+    ("a record under a refused brand", record_under_a_refused_brand,
+     "a brand that is REFUSED"),
     ("two brand files for one maker", duplicate_brand_file, "all claim the name"),
     ("one maker under two names", near_duplicate_brand_name,
      "probably one maker under two names"),

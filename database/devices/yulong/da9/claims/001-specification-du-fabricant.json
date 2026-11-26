@@ -1,0 +1,59 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "http://www.yulongaudio.com/pd.jsp?fromColId=106&id=29",
+    "quote": "Yulong's own page for the DA9, read 2026-11-25 over plain HTTP, the host having no usable HTTPS. « ● DoP64 and DoP128 support over SPDIF/Optical/AES », « ● PCM 384KHz 24bit over SPDIF/Optical/AES », « ● DoP64, DoP128, Native DSD64/128/256 and PCM 16-32bit, 32-384KHz over USB ». And: « It is worth mentioning that DSD128 and PCM384K are supported through ALL digital inputs of DA9. » On the converter: « The state of the art AK4497 DAC chip supplemented by full balance line preamp and Class A, JFET input balanced headphone amplifier »; receiver « SA8804 »; « USB input is carefully implemented on XMOS U8 »; « DSD256 is supported via USB by customized Thyscon driver » - the typo for Thesycon is the maker's. Filters: « Working together with 3 filter modes, you might find lots of interesting combinations to bring your favorite music to a brand new level of enjoyment. » Plus the same three sound modes as the Aquila.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-25",
+  "facts": {
+    "family": "akm",
+    "bits": 32,
+    "dsd_max": "DSD256",
+    "native_dsd": true,
+    "dop": true,
+    "chip": "« The state of the art AK4497 DAC chip », one, with an « SA8804 » receiver and « XMOS U8 » for USB.",
+    "pcm_max_hz": 384000,
+    "device_settings": [
+      {
+        "setting": "Digital filter",
+        "set_to": "unknown",
+        "why": "« 3 filter modes », counted and unnamed, with three separately described sound modes alongside them that are not filters."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "dsd_max": "DSD256",
+      "native_dsd_possible": true,
+      "dop_possible": true,
+      "dop_max": "DSD128"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 384000,
+      "bits": 24,
+      "dop_possible": true,
+      "dop_max": "DSD128"
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 384000,
+      "bits": 24,
+      "dop_possible": true,
+      "dop_max": "DSD128"
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 384000,
+      "bits": 24,
+      "dop_possible": true,
+      "dop_max": "DSD128"
+    }
+  },
+  "_conditions_NON_CONCLUANTES_chez_Yulong": "No terms page found on yulongaudio.com, so no prohibition could be checked - NOT the same as finding none. Measured 2026-11-25: the site has exactly five sections, About Us, Products, News, Support and Contact Us, identical on the English and Chinese trees, and none is legal; no terms, legal, copyright-policy or privacy page is linked from any nav or footer. robots.txt returns 404 with the body « File not found », so no Content-Signal and no Claude group exist because the file does not. Footer on every page: « Copyright (c) 2003-2017 All Rights Reserved Shenzhen Yu Long Yun Electronics Co., Ltd. » - note the end date, nine years stale.",
+  "_HTTPS_est_inutilisable_sur_cet_hote": "yulongaudio.com, www.yulongaudio.com and daartaudio.com all fail TLS with « no alternative certificate subject name matches target host name », so the site is reachable only over plain HTTP and every URL in this record is http://. yulong-audio.com, en.yulongaudio.com, daart.audio, yulongaudio.cn and da-art.com do not resolve. Second maker today unreachable to any tool that upgrades to HTTPS, after MUSICIAN Audio Technology.",
+  "_la_moitie_du_catalogue_nexiste_quen_images_et_il_ny_a_AUCUN_manuel": "Yulong's site splits cleanly: the older models carry real specification TEXT in the page body, and every newer model's product detail is nothing but JPEGs - 42 characters of whitespace as the only text. And the Support page offers DRIVERS ONLY, no manuals at all, so for the image-only models there is no text fallback anywhere on the maker's site. The Chinese tree was checked as a fallback and is the same images. Nine models are therefore absent from the base for want of text: Aquila III, Aurora, DA1, DA11, D39, DA2, ASURA, A39 and DP1. No number was read off any image.",
+  "_le_DSD_natif_vient_dun_PILOTE_et_le_fabricant_le_dit": "« DSD256 is supported via USB by customized Thyscon driver » - the native DSD ceiling depends on installing the maker's own Windows driver, which is why it is stated beside the chip rather than in the input list. Recorded because it means the figure is not a property of the socket alone: on a host with no driver, what this input accepts is different and unstated. Second device today whose capability depends on software, after the E1DA 9039S's firmware."
+}

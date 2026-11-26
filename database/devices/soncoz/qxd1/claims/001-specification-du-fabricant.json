@@ -1,0 +1,48 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://soncoz.com/DACS/QXD1.html",
+    "quote": "Soncoz's own product page for the QXD1, read 2026-11-25; the manual's own title is « LA-QXD1 / FULLY BALANCED DAC / User Manual V1.0 / Jan. 2020 » and the website's operating text still says « Short press the \"Mute\" button LA-QXD1 will mute output », so the two names are one product. Page states « Launch Date ： 2019-12-10 ». Rear-panel list: « 3.    Coaxial input: 24-bit / 192kHz », « 4 .    Coaxial output: 24-bit / 192kHz », « 5.    USB-B input: 32-bit / 768kHz PCM / DSD512(Native) », « 6.    Toslink input: 24-bit / 192kHzv » - the trailing v is the maker's typo - « 7.    Power in: USB-C ». The page's spec table gives « Signal Input  USB-B / Optical / Coaxial », so there is no AES/EBU and no I2S. Headline bullets: « 1. Support DSD512 32bit 768kHZ », « 4. SABRE32 Reference DAC », « 5. Multi-core RISC Architecture XMOS », « 6. 7 Filter Modes Switching ». From the maker's FAQ: « Q15: Does the QXD1 support DoP?    A15: No. When playing DSD sources, the DSD audio stream goes directly into the DAC chip without transcoding. »; « Q16: What receiver chip does the QXD1 use?    A16: It doesn't use a separate receiver chip. The SPDIF signal is processed by the receiver circuit and goes directly into the DAC. »; « Q18: Does the QXD1 have ASRC?    A18: Yes, the clock is asynchronous. »; « Q9: ... I/V Circuit: OPA1612 * 2; LPF Circuit: RT6863 * 2. »",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-25",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": false,
+    "chip": "No part number is published: « SABRE32 Reference DAC » names the family only, and the manual names no converter at all. What IS named: « I/V Circuit: OPA1612 * 2; LPF Circuit: RT6863 * 2 » and the crystal frequencies « 24 MHz; 45.1584 MHz; 49.152 MHz; 100 MHz ».",
+    "device_settings": [
+      {
+        "setting": "Filter mode",
+        "set_to": "unknown",
+        "why": "SEVEN positions, all seven NAMED by the front-panel indicator list: « Apodizing fast roll-off filter ( APOD ) mode indicator ( Default ) », « Brick wall filter ( BRIC ) », « Minimum phase fast roll-off filter ( FAM ) », « Linear phase fast roll-off filter ( FAL ) », « Hybrid fast roll-off filter ( HYER ) », « Minimum phase slow roll-off filter ( SLM ) », « Linear phase slow roll-off filter ( SLL ) ». The default is published - APOD - and so is something rarer: « The filter mode of each input channel can be adjusted separately, and it will be protected even if the power goes off in memory. » A filter setting PER INPUT, which no other record in this base has. No OFF or bypass position exists among the seven, and the strings NOS, non-oversampling, oversampling and bypass appear nowhere on the page or in the manual."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true,
+      "dop_possible": false
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_conditions_NON_CONCLUANTES_chez_Soncoz": "No terms page found on soncoz.com, so no prohibition could be checked - NOT the same as finding none. Measured 2026-11-25: the only legal page in the navigation is SUPPORT → PRIVACY POLICY, and terms.html, legal.html, support/terms.html, company/terms.html, support/legal.html and copyright.html all 404. The sitemap also lists support/policies_service.html, which is an UNFINISHED TEMPLATE whose body is the site-builder's Chinese placeholder - 「请输入要描述的内容进行内容的补充」, please enter the content to describe. The privacy policy was read in full: « Applicable to: soncoz.com and all subdomains », and it covers personal data only, with no clause about copying or reusing content. The warranty page was read too in case a reuse clause hid there; its one reservation is « S ONCOZ(R) reserves the rights to interpret the above warranty . » robots.txt returns 404 with the body « File not found », so no Content-Signal and no Claude group exist. Footer: « Copyright (c) 2026 SONCOZ Technology. All rights reserved. » Product pages, specifications, FAQ and the shop are all on the one host, so there is no shop-scope split.",
+  "_le_DoP_est_REFUSE_explicitement_et_avec_sa_RAISON": "« Q15: Does the QXD1 support DoP?    A15: No. When playing DSD sources, the DSD audio stream goes directly into the DAC chip without transcoding. » `dop` is FALSE, and this is the clearest such statement in the base: not an absence, not an inference from silence, but a maker answering the question and explaining the mechanism. Three records now carry dop false - the Prism Sound Callia, whose « ASIO native DSD format is not currently supported » runs the other way, the ADA-8XR, which does native DSD over SDIF and never DoP, and this one. All three said so themselves.",
+  "_un_ASRC_avoue_et_aucun_moyen_de_le_contourner": "« Q18: Does the QXD1 have ASRC?    A18: Yes, the clock is asynchronous. » So the device resamples, the maker says so when asked, and nothing on the page or in the manual offers a way to defeat it - no bypass, no synchronous mode, and none of the seven filters is an OFF position. `correctable` is therefore not written, and the reason is recorded rather than left to be inferred from a missing setting. Contrast Yulong's Aquila II, whose synchronous mode exists precisely to bypass its own ASRC.",
+  "_une_fiche_technique_dans_une_FAQ": "Four of this record's most useful facts come from the maker's FAQ page rather than from the product page or the manual: that DoP is refused, that there is no separate S/PDIF receiver chip, that the clock is asynchronous, and which op-amps are in the I/V and low-pass stages. None of it is on the specification table. Worth recording as a harvesting lesson: a maker's FAQ can be the only place a mechanism is stated, and no previous harvest in this base had looked at one."
+}

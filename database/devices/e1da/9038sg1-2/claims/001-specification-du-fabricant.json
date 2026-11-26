@@ -1,0 +1,29 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://e1dashz.wixsite.com/index/9038s",
+    "quote": "E1DA's own page for the #9038SG1-2, also labelled #9038S, read 2026-11-25 on the shared /index/9038s page. « Status: obsolete ». Materials: « sandblasted/anodized aluminum/ES9038Q2M/AD8397 ». The input line: « Input: USB-C, PCM up to 24b/192kHz ». Output: « balanced output 2.5mm jack A&K pinout » with « No adaptors allowed! You can kill the DAC. » Operating modes, verbatim: « 1) Normal Mode », « 2) Performance Mode - ... THD performance optimized for Fs 44.1-48kHz but PLL lock slower and the first-second signal is muted. », « 3) SE Mode- ... 2nd harmonic artificially increased to emulate SE tube behavior. » and « the latest #9038S Gen2 has 4rth operation mode \"IEM\" with limited max output power at -15dbfs level ». The FAQ states: « #9038S is an uncompromising top-performance DAC+HPA and has no DSP, no BT interface. » DSD IS NOT MENTIONED ANYWHERE in this complete specification block.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-25",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 192000,
+    "bits": 24,
+    "chip": "« ES9038Q2M », one, with an « AD8397 » output stage."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_conditions_NON_CONCLUANTES_chez_E1DA": "No terms page found, so no prohibition could be checked - NOT the same as finding no prohibition. Measured 2026-11-25: terms, terms-of-use, terms-and-conditions, legal, privacy, privacy-policy, tos, copyright and disclaimer all 404 under /index/; no legal link in any navigation or footer; and a sweep of every page's text for « all rights reserved », « copyright », « reproduc », « redistribut », « terms of use » and « permission » returned nothing. The footer on every page carries two lines: « (c) 2025 E1DA » and « (c) 2126 E1DA Future is here ;) ». robots.txt is Wix boilerplate, permissive, with no Content-Signal and no Claude group.",
+  "_lhote_est_bien_celui_du_fabricant_et_il_ny_en_a_quun": "E1DA's own site is a free Wix site at e1dashz.wixsite.com, and the identification matters because e1da.com is a parked domain for sale, e1da.net is an unrelated Australian IT company, and some twenty other candidates have no DNS. It is the maker's own: the ABOUT US page is written in the first person - « It's me, Ivan Khlyupin, Russian engineer lives in China for 14 years » - and it hosts his own firmware, drivers and Tweak apps. Its BUY page sends buyers to an AliExpress store, so E1DA runs no shop host of its own and there is no shop-scoped terms question to untangle. Nothing here comes from a retailer or a review, although the maker links several.",
+  "_un_piege_dextraction_propre_a_Wix": "Wix splits running text across inline spans, and a first extraction pass broke words mid-word - « standard un/balanced », « The tut/orial ». The reader re-extracted removing inline tags WITHOUT inserting whitespace and verified against known words. Every figure here is text, not OCR, with no letter missing and nothing restored by hand. Same family as the pdftotext -layout failure met on another maker's manuals today: a silent mangling that leaves plausible output.",
+  "_les_courbes_sont_des_images_et_na_pas_ete_lues": "Every THD, FFT, dynamic-range and frequency-response PLOT in this page's « Tech appendix » is an image. No number was read off any of them; the figures recorded here come from the page's text, and where a plot caption is itself text it is quoted as a caption rather than as a measurement.",
+  "_le_DSD_est_TOTALEMENT_absent_et_je_necris_PAS_none": "A complete specification block, itemised down to output impedance measured with a named instrument, and the word DSD appears nowhere in it. The temptation is `dsd_max` set to none, as the Audient and Prism Sound professional interfaces carry. It is NOT written, and the reason is the same one that left Musical Fidelity's V90-DAC absent: this is a consumer dongle whose own maker states DSD on the input line of three other models, and this one is marked « Status: obsolete ». Silence on an older model from a maker who says DSD elsewhere is more probably a product of its date than a statement about the device. Audient's silence was categorical - ADAT interfaces do not do DSD - and this one is not.",
+  "_trois_modes_qui_ne_sont_PAS_des_filtres": "Normal, Performance, SE and - on the Gen2 - IEM. The SE mode « 2nd harmonic artificially increased to emulate SE tube behavior » is deliberate distortion, the IEM mode is a power limit, and Performance mode trades PLL lock time for THD. None is a reconstruction or interpolation filter, so `device_settings` holds none of them and `correctable` is not written. The FAQ confirms the device has no DSP at all. A harvester counting menu items would have reported four filters on a device that publishes none."
+}

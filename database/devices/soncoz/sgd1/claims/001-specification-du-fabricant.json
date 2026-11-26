@@ -1,0 +1,54 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://soncoz.com/DACS/SGD1.html",
+    "quote": "Soncoz's own product page for the SGD1, read 2026-11-25. The page is built with a JavaScript site builder and serves no readable HTML to a plain fetch - 50 kB containing only the title - so its content was recovered from the page's own embedded JSON and the ambiguous parts verified by rendering the page in a browser. Rear-panel list: « 3.    AES input: 24-bit / 192kHz DSD64 », « 4 .    Coaxial output: 24-bit / 192kHz DSD64 », « 5.   USB-C input: 32-bit / 768kHz PCM / up to DSD512 (Native) », « 6.    USB-B input: 32-bit / 768kHz PCM/up to DSD512(Native): When both USB-C and USB-B are plugged in, USB-B is default, User can switch between USB-B and USB-C freely with the knob or the remote control », « 7.    Optical input: 24-bit / 192kHz DSD64 », « 8.    Coaxial input: 24-bit / 192kHz DSD64 ». Input channels: « Press the knob once and turn the knob that will switch between the 6 kinds of input channels. From left to right : USB-B / USB-C / Bluetooth / AES / Optical / Coaxial ». Filters: « Long press the knob and turn the knob that will switch between the 7 kinds of filter modes. From left to right:  APOD / BRIC / FAM / FAL / HYER / SLM / SLL ». Headline bullets: « 1. Support DSD512 32bit / 768KHz », « 2. SABRE32 Reference DAC », « 3. Multi-core RISC Architecture XMOS ».",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-25",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "chip": "No part number is published anywhere in Soncoz's text - only « SABRE32 Reference DAC », which names the family and not the part, and « Multi-core RISC Architecture XMOS » for the USB stage. `family` is ess_sabre on that phrase; `chip` carries no number.",
+    "device_settings": [
+      {
+        "setting": "Filter mode",
+        "set_to": "unknown",
+        "why": "SEVEN positions, all seven NAMED by the front-panel indicator list: « Apodizing fast roll-off filter ( APOD ) mode indicator ( Default ) », « Brick wall filter ( BRIC ) », « Minimum phase fast roll-off filter ( FAM ) », « Linear phase fast roll-off filter ( FAL ) », « Hybrid fast roll-off filter ( HYER ) », « Minimum phase slow roll-off filter ( SLM ) », « Linear phase slow roll-off filter ( SLL ) ». The default is published - APOD - and so is something rarer: « The filter mode of each input channel can be adjusted separately, and it will be protected even if the power goes off in memory. » A filter setting PER INPUT, which no other record in this base has. No OFF or bypass position exists among the seven, and the strings NOS, non-oversampling, oversampling and bypass appear nowhere on the page or in the manual."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64"
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64"
+    },
+    "bluetooth": {}
+  },
+  "_conditions_NON_CONCLUANTES_chez_Soncoz": "No terms page found on soncoz.com, so no prohibition could be checked - NOT the same as finding none. Measured 2026-11-25: the only legal page in the navigation is SUPPORT → PRIVACY POLICY, and terms.html, legal.html, support/terms.html, company/terms.html, support/legal.html and copyright.html all 404. The sitemap also lists support/policies_service.html, which is an UNFINISHED TEMPLATE whose body is the site-builder's Chinese placeholder - 「请输入要描述的内容进行内容的补充」, please enter the content to describe. The privacy policy was read in full: « Applicable to: soncoz.com and all subdomains », and it covers personal data only, with no clause about copying or reusing content. The warranty page was read too in case a reuse clause hid there; its one reservation is « S ONCOZ(R) reserves the rights to interpret the above warranty . » robots.txt returns 404 with the body « File not found », so no Content-Signal and no Claude group exist. Footer: « Copyright (c) 2026 SONCOZ Technology. All rights reserved. » Product pages, specifications, FAQ and the shop are all on the one host, so there is no shop-scope split.",
+  "_le_SEUL_fabricant_qui_separe_AES_optique_et_coaxial_UN_PAR_UN": "« 3. AES input: 24-bit / 192kHz DSD64 », « 7. Optical input: 24-bit / 192kHz DSD64 », « 8. Coaxial input: 24-bit / 192kHz DSD64 » - three separate numbered items, each with its own figure. Every other maker in this base that has all three gives them ONE combined row: Musetec, Topping, Shanling, the Audio-gd range, Aune. The figures happen to be identical here, which is precisely why it matters - the maker took the trouble to say so socket by socket rather than leave a reader to assume it.",
+  "_DEUX_ports_USB_audio_et_le_fabricant_dit_lequel_gagne": "« When both USB-C and USB-B are plugged in, USB-B is default, User can switch between USB-B and USB-C freely with the knob or the remote control ». Both are audio inputs at the same ceiling, and the maker publishes the precedence rule. Second device today with two USB audio ports, after Topping's D900 - which also publishes its rule, « the system will prioritize and use the one that was connected first ». Two makers, two different rules, both written down.",
+  "_cette_revendication_est_la_MOITIE_dun_desaccord_sur_le_DSD_en_SPDIF": "This page gives « DSD64 » on the AES, optical and coaxial inputs. The maker's own MANUAL, V2.0 of May 2022, gives the same three sockets as « 24-bit/192kHz » with NO DSD at all. Claim 002 carries that half. `contested` will show both with their weights - a product page ranks as a datasheet at 70 and a manual at 65 - so the build will choose DSD64, which is the right default and not a finding. What a reader needs to know is that the maker's manual does not confirm it."
+}

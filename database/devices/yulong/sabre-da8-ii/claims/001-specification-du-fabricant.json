@@ -1,0 +1,49 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "http://www.yulongaudio.com/pd.jsp?fromColId=106&id=32",
+    "quote": "Yulong's own page for the SABRE DA8 II, read 2026-11-25 over plain HTTP, the host having no usable HTTPS. Under « Technical Specifications： »: « · USB Input format support: PCM 16-32bit,  44.1Khz、 48Khz、88.2Khz、96Khz、176.4Khz、192Khz、352.8Khz、384Khz、DSD64, DSD128 - On Windows DSD256, DSD512 ». And: « · Inputs: Optical、Coaxial、AES/EBU: 16-24Bit, 44.1-192KHZ。 » - « 44.1-192KHZ » is a rate range read with « 16-24Bit ». A shorter device-level claim appears in the bulleted « Specification： » block on the same page: « ●   USB supports 32bit, 384KHz PCM signal, DSD support ». On the converter: « DA8 II  includes ESS9018 as DAC chip, AD797*5 for voltage reference and low pass filter. OPA1632*2 for buffer and preamplifier output. » On USB: « USB input uses customized Combo384 chip which co-designed by Italian Amanero and Yulong.  It supports DSD and PCM for formats up to 32Bit/384KHz under Mac OS X, Linux and Windows. » Filters: « ●   5 different filter mode » and « User friendly interface provides control for 5 different filter mode and inverse phase to produce different styles. » Plus « ●   Jitter eliminator switch » and « ●   Filter, phase, jitter control switch. » Neither « native » nor « DoP » is used anywhere on this page.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-25",
+  "facts": {
+    "family": "ess_sabre",
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "chip": "« ESS9018 as DAC chip », one, with « AD797*5 » for the reference and low-pass and « OPA1632*2 » for buffering. USB: « customized Combo384 chip which co-designed by Italian Amanero and Yulong ».",
+    "pcm_max_hz": 384000,
+    "device_settings": [
+      {
+        "setting": "Filter mode",
+        "set_to": "unknown",
+        "why": "« 5 different filter mode », counted and unnamed, with « inverse phase » and a « Jitter eliminator switch » offered alongside."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "dsd_max": "DSD512"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_conditions_NON_CONCLUANTES_chez_Yulong": "No terms page found on yulongaudio.com, so no prohibition could be checked - NOT the same as finding none. Measured 2026-11-25: the site has exactly five sections, About Us, Products, News, Support and Contact Us, identical on the English and Chinese trees, and none is legal; no terms, legal, copyright-policy or privacy page is linked from any nav or footer. robots.txt returns 404 with the body « File not found », so no Content-Signal and no Claude group exist because the file does not. Footer on every page: « Copyright (c) 2003-2017 All Rights Reserved Shenzhen Yu Long Yun Electronics Co., Ltd. » - note the end date, nine years stale.",
+  "_HTTPS_est_inutilisable_sur_cet_hote": "yulongaudio.com, www.yulongaudio.com and daartaudio.com all fail TLS with « no alternative certificate subject name matches target host name », so the site is reachable only over plain HTTP and every URL in this record is http://. yulong-audio.com, en.yulongaudio.com, daart.audio, yulongaudio.cn and da-art.com do not resolve. Second maker today unreachable to any tool that upgrades to HTTPS, after MUSICIAN Audio Technology.",
+  "_la_moitie_du_catalogue_nexiste_quen_images_et_il_ny_a_AUCUN_manuel": "Yulong's site splits cleanly: the older models carry real specification TEXT in the page body, and every newer model's product detail is nothing but JPEGs - 42 characters of whitespace as the only text. And the Support page offers DRIVERS ONLY, no manuals at all, so for the image-only models there is no text fallback anywhere on the maker's site. The Chinese tree was checked as a fallback and is the same images. Nine models are therefore absent from the base for want of text: Aquila III, Aurora, DA1, DA11, D39, DA2, ASURA, A39 and DP1. No number was read off any image.",
+  "_le_plafond_DSD_depend_du_SYSTEME_DEXPLOITATION": "« DSD64, DSD128 - On Windows DSD256, DSD512 ». The same socket takes two steps more DSD on Windows than elsewhere, stated on the input line itself. `dsd_max` takes DSD512, what the device accepts at its best, and the condition lives here - there is no field for an operating system. Third shape of the same lesson today: the E1DA 9039S's transport depends on its firmware, the DA9's native DSD on a driver, and this one's DSD ceiling on the host's operating system. A per-input ceiling is not always a property of the hardware.",
+  "_les_contournements_de_cette_page_ne_sont_PAS_du_sur_echantillonnage": "« Signals of high quality can be by-passed to obtain better performance » refers to the jitter eliminator and the DPLL - the full sentence runs from « Multi-stage digital buffer and shaping circuit » through « switchable jitter eliminator ». And « Under pure DAC mode direct connect to power amplifier [...] It bypasses the volume control circuit » is the volume stage. Neither is an interpolation bypass, so `correctable` is not written. The word bypass appears twice on this page and means something else both times."
+}

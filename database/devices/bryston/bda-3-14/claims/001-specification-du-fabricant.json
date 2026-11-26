@@ -1,0 +1,33 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://bryston.com/digital-audio/bda-314/",
+    "quote": "Bryston's own BDA-3.14 page, read 2026-11-25 with curl. Its introduction: « We've merged our BDP and BDA platforms into this one new product that starts with our BDA-3 and adds a high quality streamer internally connected with I²S - the most accurate digital interconnection method currently available »; « Additionally, 10 other inputs are available to make the BDA-3.14 your high resolution digital hub ». Its feature list: « Built in streamer features up to 192kHz / 24 bit playback. »; « Connect a USB or NAS drive for local library playback. »; « 6 different inputs including 2 USB, AES/EBU, S/PDIF RCA, S/PDIF BNC, and Toslink »; « PCM support up to 384 kHz / 32 bit »; « DSD support up to DSD-256 (x4) »; « User selectable upsampling for some inputs ».",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-25",
+  "facts": {
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD256",
+    "chip": "No part number and no family on the page, as on the BDA-3. Bryston says only that the unit « starts with our BDA-3 ».",
+    "device_settings": [
+      {
+        "setting": "Upsampling",
+        "set_to": "unknown",
+        "why": "« User selectable upsampling for some inputs », the same unnamed setting as on the BDA-3: no rates, no input list, and « some » is the maker's hedge."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {},
+    "aes_ebu": {},
+    "spdif_coax": {},
+    "spdif_optical": {}
+  },
+  "_SIX_OU_DIX_LA_PAGE_SE_CONTREDIT": "One page, two counts: « Additionally, 10 other inputs are available » in the prose, « 6 different inputs including 2 USB, AES/EBU, S/PDIF RCA, S/PDIF BNC, and Toslink » in the bullets below it. Both are Bryston's own words and they cannot both be a socket count. Ten is reachable only by counting sockets rather than kinds and adding the network and drive paths; six is not reachable by any reading of the list that follows it, which names five. NEITHER number is recorded. Only the four interfaces the maker names are written, and the contradiction is left visible here because a reader comparing this record to the page will meet it.",
+  "_le_I2S_EST_INTERNE_DONC_PAS_UNE_ENTREE": "« a high quality streamer internally connected with I²S » - the I2S link is between two boards inside one case. No i2s input is written: our i2s interface means a socket an owner can plug into, and recording this one would tell a consumer's engine to offer a connector that does not exist on the chassis. This is the first internal-I2S case in the catalogue.",
+  "_le_STREAMER_PLAFONNE_PLUS_BAS_QUE_LE_CONVERTISSEUR": "« Built in streamer features up to 192kHz / 24 bit playback » against « PCM support up to 384 kHz / 32 bit » for the device. The network path is HALF the rate and eight bits shallower than the converter behind it - stated by the maker, on the same list, two lines apart. No network input is recorded all the same, because Bryston names no protocol: our net-* interfaces are AirPlay, Chromecast, DLNA, Squeezelite, OAAT and transparent, and the page says only « streamer » and « Connect a USB or NAS drive ». `kind` stays dac rather than network_player for the same reason - what is documented is a converter with a renderer bolted in, not a renderer. THE 192 kHz / 24 bit FIGURE IS THEREFORE IN THIS NOTE AND IN NO FIELD, and that is the gap to close: an owner streaming to this unit is capped at 192 and nothing machine-readable here says so."
+}

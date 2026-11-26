@@ -1,0 +1,69 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "http://mu-sound.com/files/MH-DA006_EN.pdf",
+    "quote": "Musetec's own manual for the MH-DA006, MH-DA006_EN.pdf, read 2026-11-25; the « Speciﬁcations » table on page 12, quoted with the document's own spacing: « DAC Chips   Es9039pro*2 ». « USB Port   P CM 44.1K~768K 24/32bit » and « DSD 64~ DSD1024 ». « S/P DIF Input   CO AX 1 / CO AX2 / AE S / OPT » with « P CM44.1K~192K 16~24bit » and « DOP 64x ». « I2S input   P CM 44.1K~768K 24/32bit », « DSD 64~ DSD1024 », « DOP 64~256 ». « Analog Output   RCA: 2.8Vrms / X LR: 5.6Vrms ». The rear-panel list on page 4: « (5) USB input », « (6) Optical S/PDIF input », « (7) COAX1 S/PDIF input », « (8) COAX2 S/PDIF input », « (9) A ES/EBU input », « (10) IIS-H LVDS IIS signal input », « (11) IIS-E CMOS IIS signal input ». Filters, page 8: « DAC ﬁlter mode can be changed by press the FILT key of the remote controller. There are 6 ﬁlter modes. » And from the maker's own page DA006_detail.html: « The maximum rate that the USB interface can support is DSD1024 and PCM768. » and « 13. Digital coaxial * 2, AES / EBU * 1, optical * 1, support PCM 192K or DOP64. » and « 17. Use ESS ES9039pro DAC chips. »",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-25",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD1024",
+    "dop": true,
+    "chip": "« DAC Chips   Es9039pro*2 » in the manual's table - the part and the count. The maker's own page says « Use ESS ES9039pro DAC chips », plural, without a number, so the count comes from the table alone. An FPGA is credited separately: « 16. FPGA reorders the input digital signal. »",
+    "device_settings": [
+      {
+        "setting": "PCM Filter",
+        "set_to": "unknown",
+        "why": "SIX positions, all six NAMED, from the remote's FILT key: « Lin Phase Fast / Linear Phase Fast Roll-oﬀ », « Lin Phase Slow », « Min Phase Fast », « Min Phase Slow », « Min Phase » and « Lin Phase APO / Linear Phase Apodizing ». The manual says « There are 6 ﬁlter modes » and the settings menu confirms « Total of 6 digital ﬁlter modes can be selected. » No OFF or bypass position exists among the six."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD1024"
+    },
+    "i2s": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD1024",
+      "dop_possible": true,
+      "dop_max": "DSD256"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    }
+  },
+  "_conditions_NON_CONCLUANTES_chez_Musetec": "No terms page found on mu-sound.com, so no prohibition could be checked - NOT the same as finding none. Measured 2026-11-25: the whole navigation was checked, HOME / ABOUT US / PRODUCTS / SUPPORT / CONTACT and their _cn twins, and no legal, terms, copyright or privacy link exists; terms.html, legal.html, copyright.html, terms-of-use.html, privacy.html, tos.html and disclaimer.html all 404. robots.txt returns 404, so no Content-Signal and no Claude group exist because the file does not. Footer on every page: « Copyright (c) 2023   MUSETEC Audio   All rights reserved ». The site is plain HTTP; HTTPS is not served.",
+  "_lksaudio_com_NEST_PAS_ce_fabricant": "A host trap worth recording. Musetec traded as L.K.S Audio until 2019 - its own About page says « Initially used to be called L.K.S Audio, with MH-DA002/DA003/DA004/DA005 [...] Since 2019, the new brand MUSETEC has been launched » - but lksaudio.com is a DIFFERENT company: « LAIKESI », a Chinese factory for mixers, professional amplifiers, microphones and speakers. It was not used. And its robots.txt does carry an explicit group naming ClaudeBot, Claude-SearchBot, Claude-User and anthropic-ai whose directives end « Allow: / » - a permission that governs the wrong company and is irrelevant here. Second time today a plausible domain turned out to belong to someone else, after MUSICIAN's parked musicianaudio.com.",
+  "_les_ligatures_de_ces_PDF_sont_PRESENTES_et_non_perdues": "Worth stating because today has produced three different extraction failures. These manuals were extracted in DEFAULT pdftotext mode and their ligatures come through as single Unicode characters - the documents print « Speciﬁcations », « Roll-oﬀ », « diﬀerent », « ﬁrmware » - and they are left exactly as extracted rather than normalised. What IS lost is word spacing, « PCM44.1K~192K », which is the PDFs' own kerning. So nothing is missing here, unlike Shanling's manuals where -layout ate every « t », Sabaj's D4 where the document itself has no mapping for ti and fi, and VMV's English tables which have no text layer at all.",
+  "_le_SPDIF_est_donne_en_UN_SEUL_rang_groupe_par_le_fabricant": "Every Musetec specification table gives one combined row for its S/PDIF family - « COAX 1 / COAX2 / AE S / OPT » here, « COAX / BNC / AES / OPT » on the older models - so the maker states coaxial, AES/EBU and optical JOINTLY and never separately. The same figure is therefore written to each of those keys in `inputs`, which is the maker's own grouping and not an inference; no separate figure was invented for any one of them.",
+  "_aucun_mode_NOS_et_le_mot_bypass_veut_dire_autre_chose": "The string NOS appears nowhere in Musetec's pages or manuals, so the non-oversampling against New-Old-Stock ambiguity never arose, and no model states an oversampling bypass or a filter-OFF position. The only « bypass » wording on this maker's site is « power supply bypass filters », which are capacitors, and the volume « BYP » key on the DA004 and DA005 remotes. `correctable` is written on no Musetec record. « Native DSD » is never stated in words either, for any model - DoP is, as « DOP 64x » and « DOP 64~256 ».",
+  "_DSD1024_et_PCM768_et_le_fabricant_dit_que_cest_une_ENTREE": "« The maximum rate that the USB interface can support is DSD1024 and PCM768. » The surrounding sentence matters: DSD1024 is what the socket ACCEPTS, not a rate the device upsamples to internally. Three devices today published a figure that turned out to be an internal rate - xDuoo's CDM-10 « 2x / 4x », Sabaj's A20d SOUND COLOR at 5.6 and 11.2 MHz, E1DA's PowerDAC PWM at 384 kHz - and this one is the opposite case, where the maker's own sentence settles it. DSD1024 ties the MUSICIAN range for the highest DSD ceiling in the base.",
+  "_un_BT_serigraphie_sur_le_panneau_et_nulle_part_ailleurs": "The rear-panel ARTWORK on page 2 of this manual carries the silkscreen string « BT » among its labels - « COAX2  OUTPUT-RIGHT  IIS-E  OUTPUT-LEFT  BT  USB  OPT  COAX1  AES/EBU  IIS-H  AC IN » - and Bluetooth appears nowhere in the numbered rear-panel list, nowhere in the input-channel table and nowhere in the website's feature list. No bluetooth key is written to `inputs`. Its smaller sibling the MH-DA006MINI DOES have Bluetooth, named in three places, which is probably why the artwork was reused.",
+  "_DEUX_entrees_I2S_de_normes_electriques_DIFFERENTES": "« (10) IIS-H LVDS IIS signal input » and « (11) IIS-E CMOS IIS signal input » - two I2S sockets, one differential and one single-ended logic, which the schema holds as one `i2s` key. The maker's page adds that « the IIS-H port pin assignment is adjustable », the same problem VMV and Sabaj solve with a pin-mode menu: I2S over a multi-pin connector has no single standard."
+}

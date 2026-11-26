@@ -1,0 +1,32 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://e1dashz.wixsite.com/index/9038d",
+    "quote": "E1DA's own page for the #9038D, read 2026-11-25. The specification block is headed « Specifications(TBD): » - the maker's own to-be-determined marker on the whole block. « Status: production ». Materials line: « sandblasted/black anodized aluminum/laser mark/ES9038Q2M/OPA1622/OPA1602 ». The input line, which carries the ceiling: « Input: USB-C, PCM up to 32b/384kHz, DSD256 ». Then « USB bridge Comtrue CT7601CR custom FW ». Output: « standard unbalanced output 3.5mm jack, HW volume control .5db/step ». Power: « USB +5V rail no internal battery, 95mA idle current ». A variant is noted inline: « Note: 9038D6K 6000uF 105mA idle current ». Plot captions name a filter: « Frequency response PCM384 Slow Lin. Phase filter 10-40000Hz at -0.2db ». And a warning: « Warning: 9038D contains a high-sensitive I/V stage that may cause audible noise when your phone uses LTE 4G, 5g. » Neither « native » nor « DoP » appears on this page, and no resampling or internal rate is mentioned.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-25",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD256",
+    "chip": "« ES9038Q2M », one, with « OPA1622/OPA1602 » op-amps and a « Comtrue CT7601CR custom FW » USB bridge."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "dsd_max": "DSD256"
+    }
+  },
+  "_conditions_NON_CONCLUANTES_chez_E1DA": "No terms page found, so no prohibition could be checked - NOT the same as finding no prohibition. Measured 2026-11-25: terms, terms-of-use, terms-and-conditions, legal, privacy, privacy-policy, tos, copyright and disclaimer all 404 under /index/; no legal link in any navigation or footer; and a sweep of every page's text for « all rights reserved », « copyright », « reproduc », « redistribut », « terms of use » and « permission » returned nothing. The footer on every page carries two lines: « (c) 2025 E1DA » and « (c) 2126 E1DA Future is here ;) ». robots.txt is Wix boilerplate, permissive, with no Content-Signal and no Claude group.",
+  "_lhote_est_bien_celui_du_fabricant_et_il_ny_en_a_quun": "E1DA's own site is a free Wix site at e1dashz.wixsite.com, and the identification matters because e1da.com is a parked domain for sale, e1da.net is an unrelated Australian IT company, and some twenty other candidates have no DNS. It is the maker's own: the ABOUT US page is written in the first person - « It's me, Ivan Khlyupin, Russian engineer lives in China for 14 years » - and it hosts his own firmware, drivers and Tweak apps. Its BUY page sends buyers to an AliExpress store, so E1DA runs no shop host of its own and there is no shop-scoped terms question to untangle. Nothing here comes from a retailer or a review, although the maker links several.",
+  "_un_piege_dextraction_propre_a_Wix": "Wix splits running text across inline spans, and a first extraction pass broke words mid-word - « standard un/balanced », « The tut/orial ». The reader re-extracted removing inline tags WITHOUT inserting whitespace and verified against known words. Every figure here is text, not OCR, with no letter missing and nothing restored by hand. Same family as the pdftotext -layout failure met on another maker's manuals today: a silent mangling that leaves plausible output.",
+  "_les_courbes_sont_des_images_et_na_pas_ete_lues": "Every THD, FFT, dynamic-range and frequency-response PLOT in this page's « Tech appendix » is an image. No number was read off any of them; the figures recorded here come from the page's text, and where a plot caption is itself text it is quoted as a caption rather than as a measurement.",
+  "_le_plafond_est_ECRIT_SUR_la_ligne_dentree": "« Input: USB-C, PCM up to 32b/384kHz, DSD256 ». The figure sits on the input line itself, and USB-C is the only digital input this device has - no coaxial, optical, AES/EBU, I2S or network socket exists. So the device figure and the per-socket figure are the same thing and there is nothing to merge. That shape holds for five of E1DA's six converters, which makes this maker the opposite of every multi-input brand in the catalogue: the per-input question simply does not arise, and the one model that HAS several inputs, the HiFiTOY, is precisely the one that fails to give figures for them.",
+  "_un_marqueur_TBD_pose_par_le_fabricant_sur_tout_le_bloc": "The heading reads « Specifications(TBD): ». The maker marks its own specification block as to be determined, on a device whose status line says « production ». Nothing in the schema can express that, and it is worth a reader knowing: these figures are the maker's, published, and labelled provisional by the maker itself.",
+  "_deux_variantes_dans_un_seul_bloc_et_je_nen_fais_pas_deux_fiches": "The block carries inline « Note: » lines for a 9038D6K variant with different figures - 6000 uF against 4000, 105 mA against 95, and in the measurements « 126db(A) » against « 125db(A) typical » and « a typical SINAD 118-120db+ » against « 117db typical ». Two variants in one specification block, not a contradiction. Only the base model is recorded; the 6K's figures are quoted in the source so a reader who owns one can see them, and no second record is invented from a note."
+}

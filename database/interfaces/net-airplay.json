@@ -8,7 +8,7 @@
     "pcm_max_hz": 44100,
     "bits": 16,
     "bits_above_hz": [],
-    "_this_is_a_policy": "Ce qu'il faut supposer quand l'appareil n'a rien dit, pas une mesure. Une fiche qui connaît son vrai chiffre l'emporte."
+    "_this_is_a_policy": "What to assume when the device has said nothing - not a measurement. A record that knows its own real figure wins."
   },
   "note": "A HARD ceiling, and the one network protocol that changes Auto's answer rather than constraining it: AirPlay carries 44.1 kHz / 16-bit lossless and nothing more. Upsampling into it is work thrown away - whatever the module computes is resampled back down before it leaves. Auto should say so plainly instead of computing a setting the transport will undo. Figures for AirPlay 1; reports differ on whether AirPlay 2 reaches 48 kHz, and the difference does not change the conclusion."
 }

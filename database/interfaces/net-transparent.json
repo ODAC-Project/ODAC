@@ -8,7 +8,7 @@
     "pcm_max_hz": "unknown",
     "bits": "unknown",
     "bits_above_hz": [],
-    "_this_is_a_policy": "Ce qu'il faut supposer quand l'appareil n'a rien dit, pas une mesure. Une fiche qui connaît son vrai chiffre l'emporte."
+    "_this_is_a_policy": "What to assume when the device has said nothing - not a measurement. A record that knows its own real figure wins."
   },
   "note": "Third-party protocols that impose no ceiling of their own and pass whatever the endpoint accepts: Roon RAAT, Ravenna and AES67. The limit is the device and the link, not the protocol. For studio-derived designs this is the HIGH-capability input: Merging's NADAC takes 384 kHz and DSD256 here while its AES input stops at 96 kHz."
 }

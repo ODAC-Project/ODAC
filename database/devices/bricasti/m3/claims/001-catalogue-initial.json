@@ -20,5 +20,5 @@
   "notes": {
     "_optical_matters": "This is the record that proves the optical default right. Six makers checked on 2026-11-20 put their optical input at 192 kHz, which was an argument for raising the catalogue's conservative 96 kHz assumption. Bricasti's datasheet says 44.1 to 96 kHz. One counter-example in seven is exactly the case the default exists for, and its failure mode is a device that does not lock and a zone that plays nothing - not a rate step nobody notices."
   },
-  "_note": "Lot repris du catalogue JSON d'origine. Sa preuve est la chaîne `source` de la fiche : à éclater en preuves par champ au fur et à mesure, car une seule citation pour dix faits est le défaut connu de ce lot. `notes` porte les gloses que la fiche d'origine attachait à tel ou tel champ."
+  "_note": "Batch carried over from the original JSON catalogue. Its evidence is the record's `source` string: to be broken out into per-field evidence over time, since one quotation for ten facts is this batch's known defect. `notes` carries the glosses the original record attached to individual fields."
 }

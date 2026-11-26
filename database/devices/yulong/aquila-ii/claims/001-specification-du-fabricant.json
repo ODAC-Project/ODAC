@@ -1,0 +1,65 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "http://www.yulongaudio.com/pd.jsp?fromColId=106&id=45",
+    "quote": "Yulong's own page for the DA-ART Aquila II, read 2026-11-25; the page title marks it « Discontinued ». Under « 5. Technical Specification », the per-socket figures - and they depend on a processing mode: « USB Audio / PCM:   upto 32Bit/768kHz / DSD:   DoP64, DoP128, Native   DSD64/128/256/512 ». Then « Synchronous Mode (Coaxial, AES, Optical) / PCM: upto 24Bit/384kHz / DSD: DoP64 and DoP128 ». Then « Asynchronous Mode (Coaxial, AES, Optical) / PCM: upto 24Bit/192kHz / DSD: DoP64 ». A key-features bullet says instead: « All inputs interfaces support DoP64 and DoP128, USB input interfacesupports Native DSD64/128/256/512 additionally. » On the converter: « It is designed around the ESS flagship ES9038Pro 32-bit DAC chipset offering768kHz and DSD512 decoding capability. » USB receiver: « Widely recognized XMOS XU208 solution with customized (with license) Thesycon driver ». Filters: « Choices of 3 digital filters to fine tune your system for different music genres and personal preference. » On the two modes: « Synchronous mode: this is a fully FPGA based digital processing. We have bypassed the ASRC circuit within the ES9038Pro DAC and execute dynamic frequency distribution in different sampling frequency range. » and « Asynchronous SRCmode: input signal will be optimized by FPGA and then process by the ESS internal digital processing circuit. The built-in ASRC function will up-sample the signal to a higher sampling frequency ». Typos as printed.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-25",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true,
+    "chip": "« the ESS flagship ES9038Pro 32-bit DAC chipset », one, with an « XMOS XU208 » USB receiver.",
+    "device_settings": [
+      {
+        "setting": "Synchronous / Asynchronous SRC mode",
+        "set_to": "Synchronous",
+        "why": "« Synchronous mode [...] We have bypassed the ASRC circuit within the ES9038Pro DAC and execute dynamic frequency distribution in different sampling frequency range. All processing are conducted at original sampling frequency ». Against « Asynchronous SRCmode: [...] The built-in ASRC function will up-sample the signal to a higher sampling frequency ». So one mode resamples everything and the other does not - « at original sampling frequency » is as close as this maker comes to saying the signal passes through. `correctable` is NOT written: bypassing the ASRC is not the same as bypassing the interpolation filter, and the page never says there is no filter. Three filters remain selectable in both modes."
+      },
+      {
+        "setting": "Digital filter",
+        "set_to": "unknown",
+        "why": "« Choices of 3 digital filters » - a count, no names. Eleventh maker this week to do it."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true,
+      "dop_possible": true,
+      "dop_max": "DSD512"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 384000,
+      "bits": 24,
+      "dop_possible": true,
+      "dop_max": "DSD128"
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 384000,
+      "bits": 24,
+      "dop_possible": true,
+      "dop_max": "DSD128"
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 384000,
+      "bits": 24,
+      "dop_possible": true,
+      "dop_max": "DSD128"
+    }
+  },
+  "_conditions_NON_CONCLUANTES_chez_Yulong": "No terms page found on yulongaudio.com, so no prohibition could be checked - NOT the same as finding none. Measured 2026-11-25: the site has exactly five sections, About Us, Products, News, Support and Contact Us, identical on the English and Chinese trees, and none is legal; no terms, legal, copyright-policy or privacy page is linked from any nav or footer. robots.txt returns 404 with the body « File not found », so no Content-Signal and no Claude group exist because the file does not. Footer on every page: « Copyright (c) 2003-2017 All Rights Reserved Shenzhen Yu Long Yun Electronics Co., Ltd. » - note the end date, nine years stale.",
+  "_HTTPS_est_inutilisable_sur_cet_hote": "yulongaudio.com, www.yulongaudio.com and daartaudio.com all fail TLS with « no alternative certificate subject name matches target host name », so the site is reachable only over plain HTTP and every URL in this record is http://. yulong-audio.com, en.yulongaudio.com, daart.audio, yulongaudio.cn and da-art.com do not resolve. Second maker today unreachable to any tool that upgrades to HTTPS, after MUSICIAN Audio Technology.",
+  "_la_moitie_du_catalogue_nexiste_quen_images_et_il_ny_a_AUCUN_manuel": "Yulong's site splits cleanly: the older models carry real specification TEXT in the page body, and every newer model's product detail is nothing but JPEGs - 42 characters of whitespace as the only text. And the Support page offers DRIVERS ONLY, no manuals at all, so for the image-only models there is no text fallback anywhere on the maker's site. The Chinese tree was checked as a fallback and is the same images. Nine models are therefore absent from the base for want of text: Aquila III, Aurora, DA1, DA11, D39, DA2, ASURA, A39 and DP1. No number was read off any image.",
+  "_le_plafond_de_ses_prises_SPDIF_depend_dun_MODE_de_traitement": "« Synchronous Mode (Coaxial, AES, Optical) / PCM: upto 24Bit/384kHz / DSD: DoP64 and DoP128 » against « Asynchronous Mode (Coaxial, AES, Optical) / PCM: upto 24Bit/192kHz / DSD: DoP64 ». The same three sockets accept twice the rate and twice the DSD in one mode than in the other - and the mode is also what decides whether the device resamples. `inputs` carries the HIGHER figures, the synchronous ones, because that is the mode in which the signal is not resampled and therefore the mode an upsampling engine would choose; the asynchronous figures are quoted so a reader can see the cost of the other setting. First record in the base whose per-input ceiling is a function of a user setting - the Audio-gd Master 11 Singularity's was a function of the RATE, which is the mirror of it.",
+  "_le_tableau_et_la_puce_marketing_ne_saccordent_pas_sur_le_DoP": "The key-features bullet says « All inputs interfaces support DoP64 and DoP128 ». The specification table restricts the S/PDIF trio to DoP64 in asynchronous mode. Features against table, unreconciled on the maker's own page. The table is followed here because it is the formal document and because it distinguishes the two modes the bullet ignores - and the bullet is quoted so the choice is visible."
+}

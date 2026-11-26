@@ -1,0 +1,66 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://dl.topping.audio/um/d900.pdf",
+    "quote": "Topping's own manual for the D900, d900.pdf, read 2026-11-25 - the product page's specification block is images only, so the manual is the source. « 2. Attribute » gives « Signal input   USB-B/USB-C/BT/OPT1/OPT2/COAX1/COAX2/AES/IIS », « Power input   100-240VAC 50Hz/60Hz », « Display 2inch LCD », « Standby power consumption <1W », « Power consumption <10W ». « 3. Input range », column assignment verified with pdftotext -bbox on page 21: for « USB IN », « PCM   44.1kHz-768kHz/16bit-32bit », « DSD   DSD64-DSD512 (Native) , DSD64-DSD256 (DoP) », « PEQ   44.1kHz-192kHz/16bit-32bit »; for « IIS IN », « PCM   44.1kHz-768kHz/16bit-32bit » and « DSD   DSD64-DSD512 (Native) , DSD64-DSD256 (DoP) » AND NO PEQ ROW; for « COAX/OPT/AES IN », « PCM   44.1kHz-192kHz/16bit-24bit », « DSD   DSD64 (DoP) », « PEQ   44.1kHz-192kHz/16bit-24bit ». « 5-2 DSD bypass »: « Enabled, Disabled (Default) » with « DSD Bypass Supported Formats: USB Input: DSD64–DSD256 (Native / DoP) » and nothing else. « 2-3 USB select »: « USB-B: Only effective for USB-B port. USB-C: Only effective for USB-C port. Auto: ... If both ports are connected, the system will prioritize and use the one that was connected first. (Default) » « 2-4 UAC »: « UAC2.0 (Default), UAC1.0 » with « Note: UAC 1.0 doesn't support the crossfeed function. » « 2-9 DSD MUTE »: « Active high (Default), Active low, Off ». The setup menu is fully enumerated from 1-1 to 5-9 and contains no PCM filter item - yet the home-screen description lists « Filter mode » among the fields the Normal page displays.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-25",
+  "facts": {
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true,
+      "dop_possible": true,
+      "dop_max": "DSD256"
+    },
+    "i2s": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true,
+      "dop_possible": true,
+      "dop_max": "DSD256"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "bluetooth": {}
+  },
+  "_conditions_NON_CONCLUANTES_sur_les_DEUX_hotes_de_Topping": "Measured 2026-11-25, and the two hosts are two separate situations that are NOT merged. On www.toppingaudio.com - to which tpdz.net, www.tpdz.net, topping.audio and www.topping.audio all 301 redirect - the full 328-entry sitemap was pulled and /terms, /terms-of-use, /terms-of-service, /legal, /privacy, /privacy-policy and /copyright all return 404. The only legal-ish page is /warranty-terms, read in full, whose single reservation is « *TOPPING company reserves the final interpretation and amendment for the above terms » - about the warranty, not about content. Footer: « (c) 2026 TOPPING Technology co., LTD. All rights reserved. » On dl.topping.audio, the manual host, there is no terms page and no copyright footer at all: its index is an unconfigured web-panel placeholder titled « 恭喜，站点创建成功！ ». So: no terms page found on either, which is not permission. robots.txt on the product host is one « User-agent: * » group, « Allow: / » with three /api/ disallows, no Content-Signal and no Claude group; the download host has no robots.txt (404). The /api/ paths serve the site's spec data and were NOT fetched.",
+  "_les_tableaux_de_specifications_des_pages_produit_sont_des_IMAGES": "Verified mechanically rather than assumed. The site is a SvelteKit application that embeds each product's spec block in the page payload under a field named `specs:`, and that field was parsed on seven product pages: it contains only figure, div and img elements, with ZERO characters of text - 2 998 chars and 12 images on the D50 III, 1 240 and 5 on the D90 III SABRE, and so on. The images are served from upload.toppingaudio.com. No number was read off any of them. Every figure in this record comes from the maker's own manual PDF.",
+  "_AUCUN_numero_de_puce_nexiste_dans_le_texte_que_Topping_publie": "All nine text-bearing Topping manuals were grepped for ES9, AK4, CS43, PCM17, « DAC chip » and « chipset »: zero matches. Converter part numbers and counts exist only inside the product pages' spec IMAGES, so `chip` and `family` are ABSENT on this record - not unknown, absent, because the maker publishes no text that states them. That is a deliberate refusal to fill a field from a picture.",
+  "_neuf_manuels_sur_quatre_vingt_sept_portent_du_texte": "The maker's complete manual catalogue was enumerated - seven pages of /supports?tab=manual cross-checked against the Chinese list, 62 entries resolving to 87 distinct files - and extracted in DEFAULT pdftotext mode, never -layout. Only nine files carry a text layer, all of them recent and under /um/; everything under /usermanual/ and the older /um/ files are pure rasters with no embedded fonts at all, where pdftotext returns nothing but page breaks. The word « Specifications » survives intact in all nine, with no dropped letter and no missing ligature. Of the nine, five contain a converter. So of Topping's whole range, only the DX1 II, DX5 II, DX9 Discrete, D900 and E50 II have any text route at all.",
+  "_DEUX_ports_USB_qui_sont_TOUS_DEUX_des_entrees_audio": "« Signal input   USB-B/USB-C/... » and « 2-3 USB select » with three positions - USB-B only, USB-C only, or Auto, which picks whichever was connected first. Neither port is storage and neither is charging-only: both carry audio, and the « 3. Input range » table rates them jointly as one « USB IN » row. The schema holds one `usb` key, which is right here because the maker gives one ceiling - but a reader with both ports in use should know the device chooses between them rather than mixing.",
+  "_un_appareil_qui_AFFICHE_un_mode_de_filtre_quil_ne_documente_jamais": "The setup menu is enumerated exhaustively, 1-1 through 5-9, and contains no PCM filter item. And yet the manual's own description of the home screen lists « Filter mode » among the fields shown on the Normal page. So the device displays a filter mode whose menu, names and count appear nowhere in its manual. `device_settings` carries no filter, and this is the loose end: the setting exists on the screen and not in the document.",
+  "_le_rang_IIS_na_pas_de_ligne_PEQ_et_cest_VERIFIE": "Every other input group on this page carries three rows - PCM, DSD and PEQ. The « IIS IN » block has PCM and DSD only. That was checked with coordinate dumps rather than assumed from an extractor's silence: on page 21 there is no word in the PEQ column between the IIS DSD line and the next row. So the device's parametric equaliser is not stated to work over I2S, which no field can hold and which matters to anyone feeding it from a transport.",
+  "_le_contournement_DSD_ne_couvre_QUE_lUSB_ici": "« DSD Bypass Supported Formats: USB Input: DSD64–DSD256 (Native / DoP) » - and that is the whole list, verified by coordinate dump on page 35: no I2S row, no S/PDIF row, no Bluetooth row, where the DX9 Discrete's equivalent table has three. And as on that model, the bypass figure of DSD256 contradicts the input-range figure of DSD512 for native DSD. Both quoted; neither resolved."
+}

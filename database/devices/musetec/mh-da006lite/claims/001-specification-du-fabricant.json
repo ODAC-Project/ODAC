@@ -1,0 +1,51 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "http://mu-sound.com/DA006Lite_detail.html",
+    "quote": "Musetec's own product page for the MH-DA006Lite, read 2026-11-25 - and the source is the HTML rather than the manual because MH-DA006Lite_EN.pdf HAS NO TEXT LAYER: pdftotext in default mode returns 13 bytes, twelve form-feeds and zero characters, and pdffonts lists no fonts at all. From the page: « The USB interface can support a maximum bit rate of DSD1024 and PCM768. » and the numbered features: « 10. Built-in high-performance USB digital interface, supporting a maximum format of PCM768K and DSD1024. », « 12. 2 digital coaxial ports, 1 AES/EBU port, and 1 optical port, supporting PCM 192K or DOP64. », « 13. IIS-H differential I2S digital source input, supporting PCM768K and DSD1024, among which the sequence of the IIS-H port is adjustable. », « 14. I2S digital source input, supporting a maximum of PCM768K and DSD1024. », « 15. FPGA reorganizes the input audio data. », « 16. Adopts two ES9039pro DAC chips from ESS. », « 17. Single-ended output: 2.8Vrms; Balanced output: 5.6Vrms. », « 18. Total Harmonic Distortion + Noise (THD+N): 127dB. » The page also says « it also adopts two ES9039pro chips ». No digital-filter list is published for this model in text, and no bit depth is given for any socket.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-25",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD1024",
+    "dop": true,
+    "chip": "« Adopts two ES9039pro DAC chips from ESS », restated as « it also adopts two ES9039pro chips » - part and count both in text, which is more than the manual could give since it has no text at all."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "dsd_max": "DSD1024"
+    },
+    "i2s": {
+      "pcm_max_hz": 768000,
+      "dsd_max": "DSD1024"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    }
+  },
+  "_conditions_NON_CONCLUANTES_chez_Musetec": "No terms page found on mu-sound.com, so no prohibition could be checked - NOT the same as finding none. Measured 2026-11-25: the whole navigation was checked, HOME / ABOUT US / PRODUCTS / SUPPORT / CONTACT and their _cn twins, and no legal, terms, copyright or privacy link exists; terms.html, legal.html, copyright.html, terms-of-use.html, privacy.html, tos.html and disclaimer.html all 404. robots.txt returns 404, so no Content-Signal and no Claude group exist because the file does not. Footer on every page: « Copyright (c) 2023   MUSETEC Audio   All rights reserved ». The site is plain HTTP; HTTPS is not served.",
+  "_lksaudio_com_NEST_PAS_ce_fabricant": "A host trap worth recording. Musetec traded as L.K.S Audio until 2019 - its own About page says « Initially used to be called L.K.S Audio, with MH-DA002/DA003/DA004/DA005 [...] Since 2019, the new brand MUSETEC has been launched » - but lksaudio.com is a DIFFERENT company: « LAIKESI », a Chinese factory for mixers, professional amplifiers, microphones and speakers. It was not used. And its robots.txt does carry an explicit group naming ClaudeBot, Claude-SearchBot, Claude-User and anthropic-ai whose directives end « Allow: / » - a permission that governs the wrong company and is irrelevant here. Second time today a plausible domain turned out to belong to someone else, after MUSICIAN's parked musicianaudio.com.",
+  "_aucun_mode_NOS_et_le_mot_bypass_veut_dire_autre_chose": "The string NOS appears nowhere in Musetec's pages or manuals, so the non-oversampling against New-Old-Stock ambiguity never arose, and no model states an oversampling bypass or a filter-OFF position. The only « bypass » wording on this maker's site is « power supply bypass filters », which are capacitors, and the volume « BYP » key on the DA004 and DA005 remotes. `correctable` is written on no Musetec record. « Native DSD » is never stated in words either, for any model - DoP is, as « DOP 64x » and « DOP 64~256 ».",
+  "_le_manuel_na_pas_de_couche_texte_mais_la_page_HTML_en_a": "MH-DA006Lite_EN.pdf is an image, confirmed twice - pdftotext returns twelve form-feeds and no characters, pdffonts lists no embedded font. So nothing was read from it. And nothing is lost, because the same maker publishes the specification as HTML on the product page, which is where every figure here comes from. The inverse of VMV, where the manual carried the table and the product page was pictures - and the reason a harvest must look at both.",
+  "_aucune_profondeur_de_bits_et_aucune_liste_de_filtres": "The HTML features give rates and DSD ceilings and never a bit depth, so `bits` is ABSENT on this record where its siblings carry 32 from their manual tables. And no filter list is published for this model in text, where the DA006 and DA006MINI manuals both name six. Both absences are consequences of the manual being an image: the HTML is a feature list, not a specification table."
+}

@@ -192,12 +192,21 @@ _doc = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
                     "docs", "CONSUMING.md")
 if os.path.exists(_doc):
     _t = open(_doc, encoding="utf-8").read()
-    _m = re.search(r"([\d  ,]+) bytes raw\s*(?:→|->)\s*([\d  ,]+) bytes gzipped", _t)
+    _m = re.search(r"([\d\s  ,]+?) bytes raw\s*(?:→|->)\s*([\d\s  ,]+?) bytes gzipped", _t)
     if _m:
         _dit = [int(re.sub(r"[^\d]", "", g)) for g in _m.groups()]
         if _dit != [len(raw), len(packed)]:
+            # A GUARD THAT SUGGESTS A LINE IT CANNOT THEN READ. The replacement
+            # line was printed with THIN SPACES (U+2009) while the regex above
+            # accepted only ordinary ones, so pasting this guard's own
+            # suggestion verbatim turned the next run into "no size line to
+            # check against" - the guard disabling itself with its own output.
+            # Found 2026-11-25 by doing exactly that. Two fixes, because either
+            # alone would leave the trap half-set: the suggestion now uses an
+            # ordinary space, and the regex accepts thin and non-breaking ones
+            # in case a line was already written that way.
             def _esp(n):
-                return "{:,}".format(n).replace(",", "\u2009")
+                return "{:,}".format(n).replace(",", " ")
             print("ERROR docs/CONSUMING.md: says %d raw and %d gzipped, "
                   "this build is %d and %d" % (_dit[0], _dit[1], len(raw), len(packed)))
             # Print the corrected line ready to paste. A guard that only says "wrong"
@@ -210,4 +219,28 @@ if os.path.exists(_doc):
             sys.exit(1)
     else:
         print("ERROR docs/CONSUMING.md: no size line to check against")
+        sys.exit(1)
+    # AND THE COMPRESSION FACTOR, WHICH DRIFTED BECAUSE IT WAS A WORD.
+    # The byte line above has been guarded since the day it was found stale. The
+    # sentence four lines below it said "it compresses by a factor of fifteen"
+    # and nothing checked it, because a guard that compares digits cannot read
+    # an English numeral - the same reason the verifier refuses spelled-out
+    # figures before its guarded nouns. Measured 2026-11-25: fifteen against a
+    # real 16.5, and a teammate reading a third document found "six" there,
+    # true when the artefact was 261 kB. One fact, three values, two documents.
+    # The factor also IMPROVES as the artefact grows, so it will drift again on
+    # its own - which makes it exactly the kind of figure that must be computed
+    # rather than written.
+    _fac = len(raw) / float(len(packed))
+    _mf = re.search(r"compresses by a factor of\s+(\d+(?:[.,]\d+)?)", _t)
+    if not _mf:
+        print("ERROR docs/CONSUMING.md: the compression factor is not written in "
+              "digits, so nothing can check it. Write it as a figure:")
+        print("       it compresses by a factor of %.1f" % _fac)
+        sys.exit(1)
+    _ditf = float(_mf.group(1).replace(",", "."))
+    if abs(_ditf - _fac) > 0.1:
+        print("ERROR docs/CONSUMING.md: says it compresses by a factor of %s, "
+              "this build compresses by %.1f" % (_mf.group(1), _fac))
+        print("       replace that figure with: %.1f" % _fac)
         sys.exit(1)

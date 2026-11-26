@@ -1,0 +1,61 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "http://mu-sound.com/files/MH-DA004.pdf",
+    "quote": "Musetec's own manual for the MH-DA004, MH-DA004.pdf, read 2026-11-25 - and it is the ONLY surviving maker-published specification for this model, which is no longer on products.html and whose detail page returns 404. The « 技术规格TechnicalSpeciﬁcations » table on page 9, with the document's own spacing: « 型号 Model   L.K.S Audio MH-DA004 »; « 解码⽅案 DAC Chips   SABRE32 Reference ES9038pro   双芯⽚ 2chips »; « USB端⼝ USB Port   PCM 44.1K~384K 24/32bit   Amanero » and « DSD64~DSD512 »; « S/PDIF输⼊ S/PDIFInput   COAX / BNC / AES / OPT » with « PCM44.1K~192K 16~24bit » and « DOP 64x »; « I2S 输⼊ I2Sinput   PCM 44.1K~768K 24/32bit », « DSD64~DSD1024 », « DOP 64~256 ». The input-select list on the display reads « COAX1/COAX2/AES/OPT/I2S-E/I2S-H/USB ».",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-25",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD1024",
+    "dop": true,
+    "chip": "« SABRE32 Reference ES9038pro » with the note « 双芯⽚ / 2chips » - part and count both in the table. The USB stage is named « Amanero »."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "dsd_max": "DSD512"
+    },
+    "i2s": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD1024",
+      "dop_possible": true,
+      "dop_max": "DSD256"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    }
+  },
+  "_conditions_NON_CONCLUANTES_chez_Musetec": "No terms page found on mu-sound.com, so no prohibition could be checked - NOT the same as finding none. Measured 2026-11-25: the whole navigation was checked, HOME / ABOUT US / PRODUCTS / SUPPORT / CONTACT and their _cn twins, and no legal, terms, copyright or privacy link exists; terms.html, legal.html, copyright.html, terms-of-use.html, privacy.html, tos.html and disclaimer.html all 404. robots.txt returns 404, so no Content-Signal and no Claude group exist because the file does not. Footer on every page: « Copyright (c) 2023   MUSETEC Audio   All rights reserved ». The site is plain HTTP; HTTPS is not served.",
+  "_lksaudio_com_NEST_PAS_ce_fabricant": "A host trap worth recording. Musetec traded as L.K.S Audio until 2019 - its own About page says « Initially used to be called L.K.S Audio, with MH-DA002/DA003/DA004/DA005 [...] Since 2019, the new brand MUSETEC has been launched » - but lksaudio.com is a DIFFERENT company: « LAIKESI », a Chinese factory for mixers, professional amplifiers, microphones and speakers. It was not used. And its robots.txt does carry an explicit group naming ClaudeBot, Claude-SearchBot, Claude-User and anthropic-ai whose directives end « Allow: / » - a permission that governs the wrong company and is irrelevant here. Second time today a plausible domain turned out to belong to someone else, after MUSICIAN's parked musicianaudio.com.",
+  "_les_ligatures_de_ces_PDF_sont_PRESENTES_et_non_perdues": "Worth stating because today has produced three different extraction failures. These manuals were extracted in DEFAULT pdftotext mode and their ligatures come through as single Unicode characters - the documents print « Speciﬁcations », « Roll-oﬀ », « diﬀerent », « ﬁrmware » - and they are left exactly as extracted rather than normalised. What IS lost is word spacing, « PCM44.1K~192K », which is the PDFs' own kerning. So nothing is missing here, unlike Shanling's manuals where -layout ate every « t », Sabaj's D4 where the document itself has no mapping for ti and fi, and VMV's English tables which have no text layer at all.",
+  "_le_SPDIF_est_donne_en_UN_SEUL_rang_groupe_par_le_fabricant": "Every Musetec specification table gives one combined row for its S/PDIF family - « COAX 1 / COAX2 / AE S / OPT » here, « COAX / BNC / AES / OPT » on the older models - so the maker states coaxial, AES/EBU and optical JOINTLY and never separately. The same figure is therefore written to each of those keys in `inputs`, which is the maker's own grouping and not an inference; no separate figure was invented for any one of them.",
+  "_aucun_mode_NOS_et_le_mot_bypass_veut_dire_autre_chose": "The string NOS appears nowhere in Musetec's pages or manuals, so the non-oversampling against New-Old-Stock ambiguity never arose, and no model states an oversampling bypass or a filter-OFF position. The only « bypass » wording on this maker's site is « power supply bypass filters », which are capacitors, and the volume « BYP » key on the DA004 and DA005 remotes. `correctable` is written on no Musetec record. « Native DSD » is never stated in words either, for any model - DoP is, as « DOP 64x » and « DOP 64~256 ».",
+  "_la_seule_fiche_du_catalogue_sous_une_marque_qui_a_CHANGE_DE_NOM": "The specification table's own model row reads « L.K.S Audio MH-DA004 » and its copyright page « (c)L.K.SDigitalAudio2017 », while the maker is now Musetec - « Initially used to be called L.K.S Audio [...] Since 2019, the new brand MUSETEC has been launched. » The record sits under `musetec` because that is the company, and the old name is quoted so an owner searching for L.K.S finds it. Beware lksaudio.com, which belongs to someone else entirely.",
+  "_ce_modele_a_bien_un_BNC": "Unlike the MH-DA005, whose spec row names a BNC it does not have, this one's rear-panel list includes it - which is what shows the DA005's row to be carried over rather than merely unillustrated."
+}

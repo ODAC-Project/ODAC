@@ -2,7 +2,7 @@
   "source": {
     "kind": "datasheet",
     "url": "https://en.shanling.com/article/101279",
-    "quote": "Shanling's own announcement for the EC3, read 2026-11-25, with its manual at /catlog/EC3.pdf; the product page /product/425 is 19 image slices. Verbatim: « Built around well proven Philips CD80 drive mechanism and HD850 laser head, as a top-loading CD player with a transparent cover. Offering digital outputs in form of coaxial and optical SPDIF, for easy connection to external DACs or receivers. It also packs its own audio circuit, utilizing ESS ES9219C DAC and LTA8092 op-amp through headphone output or RCA »; « Allowing it to act as a Bluetooth DAC or serving as a Hi-Res music player by connecting any USB drive with audio files ». The manual's only figure sits under its heading « USB Driver Playback »: « 3. Support up to PCM 384kHz and DSD256. »",
+    "quote": "Shanling's own announcement for the EC3, read 2026-11-25, with its manual at /catlog/EC3.pdf; the product page /product/425 is 19 image slices. Verbatim: « utilizing ESS ES9219C DAC and LTA8092 op-amp »; « Allowing it to act as a Bluetooth DAC or serving as a Hi-Res music player by connecting any USB drive with audio files ». The manual's only figure sits under its heading « USB Driver Playback »: « 3. Support up to PCM 384kHz and DSD256. »",
     "read_on": "2026-11-25"
   },
   "source_names_subject": true,

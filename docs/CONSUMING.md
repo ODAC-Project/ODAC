@@ -43,7 +43,7 @@ newest minute.
 ## Ask for it compressed
 
 ```
-4 791 614 bytes raw   →   282 205 bytes gzipped   (94% off)
+5 548 535 bytes raw   →   330 834 bytes gzipped   (94% off)
 ```
 
 Those figures move with every build and are checked by `tools/build.py`, which
@@ -54,7 +54,7 @@ been taken on. The check lives in `build.py` rather than in the verifier because
 the verifier never builds and so has no size to compare: put the check where the
 figure lives.
 
-It is JSON Lines: highly repetitive, and it compresses by a factor of fifteen. Send
+It is JSON Lines: highly repetitive, and it compresses by a factor of 16.8. Send
 `Accept-Encoding: gzip` and make sure your mirror is configured to honour it —
 a server that omits JSON from its compressible types serves this in the clear
 and nothing breaks, so nobody notices paying fifteen times the bandwidth. This is

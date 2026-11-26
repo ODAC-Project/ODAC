@@ -1,0 +1,54 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://api.en.auneaudio.com/storage/v1/object/public/downloads/resources/1772508951277_S18_EVO_User_Manual.pdf",
+    "quote": "Aune's own manual for the S18 EVO, read 2026-11-25; its product page's specification block is images only. Per-socket, verbatim under « Speciﬁcations » with the ﬁ ligature as the document prints it: « Input: / USB: 32bit/768k DSD512 (MAX) / Coaxial/AES/Optical: 24bit/192k(MAX) / BT: 24bit/192k (MAX) ». On the converter: « employs dual AK4497 DAC chips from AKM ». Sockets on the rear: « Coaxial input », « AES Input », « USB input », « Optical input », « Bluetooth antenna interface », and « External clock input (10MHz) » - the 10 MHz BNC is a clock reference, not an audio input. Filter modes, verbatim: « D:Filter mode / M1: Standard mode / M2: Pure mode », and in the Introduction « It supports two tuning modes: Standard mode and Pure mode. » Also: « When using USB input, it can play MQA ﬁles and can automatically detect an external 10MHz clock input. » Native versus DoP is not stated.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-25",
+  "facts": {
+    "bits": 32,
+    "chip": "« dual AK4497 DAC chips from AKM » - two.",
+    "family": "akm",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512",
+    "device_settings": [
+      {
+        "setting": "Filter mode",
+        "set_to": "unknown",
+        "why": "TWO positions and both named - « M1: Standard mode » and « M2: Pure mode ». The names say nothing about what the filters DO, which is a different kind of opacity from a count without names: here the list is complete and the labels are marketing. Neither is a bypass."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "bluetooth": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_conditions_une_clause_existe_mais_elle_porte_sur_lAPPLICATION": "Measured 2026-11-25, and the scope decides it. On en.auneaudio.com, where the products and the manuals are, NO terms page exists: the footer carries no legal link and /terms, /privacy, /legal, /about and their /page/ variants all 404. Footer: « (c) 2026 Aune Audio. All rights reserved. » with two Chinese filing numbers. On www.auneaudio.com, the maker's Chinese single-page site, there IS a reuse-forbidding clause - « You may not reproduce, modify, distribute, or otherwise use these contents without our explicit written permission » - but its own preamble scopes it: « Welcome to the Aune Control App [...] This service agreement [...] regarding the use of the App », and the clause's subject is « The App and all its content ». The privacy page is App-scoped too. So this is the Shanling shape inverted - an application agreement instead of a store's - and the product host publishes nothing. Records are written because nothing forbidding covers the pages they cite, and the App clause is recorded here so a reader can take the stricter view if they disagree.",
+  "_tous_les_blocs_de_specifications_des_pages_produit_sont_des_IMAGES": "Checked on the S18 EVO, S9c Pro, Yuki, Yuki SE, X1s GT, X5s 8th, S10N/S10 Pro, ARU1 and X8 XVIII: each page's `specs_html` field contains nothing but img tags. No number was read off any of them; every figure here comes from the text of the maker's own manual PDF, linked from en.auneaudio.com/downloads.",
+  "_les_PDF_dAune_perdent_leurs_espaces_entre_les_mots": "An extraction fact that changes how these quotes look. Aune's PDFs lose most inter-word spaces in extraction - « UserManual », « upto32bit/768k » - and they are quoted EXACTLY as extracted, with no space put back by hand. Sanity checks passed on « Specifications », « Bluetooth » and « filter ». In the S18 EVO manual the ffi ligature is dropped, « aune's o cial website » where the document reads official, and that too is left as extracted. Third distinct extraction failure met today, after pdftotext -layout eating every « t » in Shanling's manuals and a Type-1C font with no Unicode map making VMV's English tables unreadable.",
+  "_le_mot_NOS_napparait_sur_aucune_page_ni_dans_aucun_manuel_Aune": "So the non-oversampling against New-Old-Stock ambiguity never arose for this maker, and no Aune model in the current range is described as having a valve output stage. No model claims an oversampling-bypass or a filter-OFF position either: every filter menu here is a choice among filters, never a way to leave them out. `correctable` is written on no Aune record.",
+  "_le_bluetooth_a_un_plafond_CHIFFRE_et_cest_rare": "« BT: 24bit/192k (MAX) » - a numeric ceiling for the Bluetooth input, where almost every record in this base describes Bluetooth by its codecs alone. inputs.bluetooth therefore carries real figures here. Note its sibling the S9c Pro, sharing much of this spec text, gives « 24bit/96k (MAX) » instead - half the rate, on two chassis documented from the same template.",
+  "_une_entree_dhorloge_a_10_MHz_qui_ne_porte_aucun_audio": "« External clock input (10MHz) », and the Introduction adds that the device « can automatically detect an external 10MHz clock input ». A timing reference, recorded nowhere - the same decision as on the Audio-gd range, the Prism Sound interfaces and the Shanling EH90."
+}

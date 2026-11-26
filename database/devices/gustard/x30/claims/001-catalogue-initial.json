@@ -21,5 +21,5 @@
   "notes": {
     "_modulator_order": "Overrides the ESS family's order 5, and the catalogue's own rule says why: order 5 is for \"ESS chips earlier than the ES9039\". The X30 runs four ES9039SPRO, so it is not one of them. This is the rule working rather than an exception to it - and it is independently confirmed by the author recommending a SEVENTH-order modulator for this device, which is what the record's own evidence already said and what made its old AKM filing look plausible."
   },
-  "_note": "Lot repris du catalogue JSON d'origine. Sa preuve est la chaîne `source` de la fiche : à éclater en preuves par champ au fur et à mesure, car une seule citation pour dix faits est le défaut connu de ce lot. `notes` porte les gloses que la fiche d'origine attachait à tel ou tel champ."
+  "_note": "Batch carried over from the original JSON catalogue. Its evidence is the record's `source` string: to be broken out into per-field evidence over time, since one quotation for ten facts is this batch's known defect. `notes` carries the glosses the original record attached to individual fields."
 }

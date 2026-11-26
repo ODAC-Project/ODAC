@@ -1,5 +1,5 @@
 {
   "id": "unknown",
   "name": "Marque inconnue",
-  "_why": "La valeur existe dans les fiches fourre-tout ; la marque doit donc exister comme ligne, sinon « inconnue » ne serait qu'un trou."
+  "_why": "The value exists on the catch-all records, so the brand must exist as a row - otherwise « unknown » would be nothing but a hole."
 }

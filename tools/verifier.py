@@ -17,6 +17,68 @@ IDENTITY_KEYS = {"id", "kind", "brand", "model", "aliases", "usb", "superseded_b
 ALIAS_RELATIONS = {"spelling", "edition", "neighbour"}
 KINDS = {"dac", "network_player"}
 
+# A QUOTE FIELD IS NOT A BLOCK OF SOMEONE ELSE'S TEXT. It is a curator's account
+# of a page, with fragments of the maker's own words set inside guillemets, and
+# ONLY THOSE FRAGMENTS ARE SOMEONE ELSE'S. Measured 2026-11-25 over the 370
+# records: 258 180 characters of `quote`, of which 158 065 sit inside guillemets
+# and 100 115 - 39% - are our own connective prose.
+#
+# THIS GUARD WAS FIRST WRITTEN ON THE FIELD, and that was the wrong object. On
+# the field the corpus looks like it has drifted from its own rule: median 599
+# characters, 231 records past 500, the longest 2 817. On the fragment - the unit
+# that copyright actually attaches to - it has not drifted at all: 3 008
+# fragments, median 39 characters, against the 70 of the worked example in
+# docs/CONTRIBUTING.md (first written here as 88, remeasured). The field-length version would have failed 231 records
+# that were never at fault, and would still have let a single 2 000-character
+# panel through inside a longer account. The ceiling is on ONE FRAGMENT, because
+# one fragment is one taking.
+#
+# It does not settle the licence question, and nothing about length can: citing
+# is not licensing. See database/vocabulary/sources-and-redistribution.json.
+QUOTED = re.compile(r"\u00ab\s*(.*?)\s*\u00bb", re.S)
+QUOTE_FRAGMENT_MAX = 300
+
+# A NEIGHBOUR ALIAS MUST NOT NAME A DEVICE THAT HAS ITS OWN RECORD. The three
+# relations do different work: a SPELLING is this same object written another
+# way, an EDITION is a variant no fact yet separates, and a NEIGHBOUR is a
+# DIFFERENT PRODUCT resolved here only because nothing else holds it. So the
+# moment that product gets a record, the alias stops being a fallback and
+# becomes a misdirection: a matcher reading it resolves the other product's
+# name to THIS record and asserts this record's figures for it.
+#
+# Written 2026-11-25 after doing it twice in one batch. bryston/bda-3 listed
+# « BDA-3.14 » as a neighbour and bryston/bda-3-14 listed « BDA-3 », while both
+# records existed - so either name resolved to whichever file was read first,
+# and the BDA-3's figures omit the streamer's 192 kHz ceiling entirely. No
+# existing check could see it: aliases live in identity, where the evidence rule
+# does not reach, and the duplicate-brand guard looks at brand files.
+#
+# THE EXEMPTION IS NOT AN ESCAPE HATCH BUT THE MAIN CASE for generic identities.
+# chord/generique carries one USB id across several products and names Qutest and
+# Dave as neighbours ON PURPOSE: the point of that record is to say the id does
+# not identify a product, and the neighbours are what it does not resolve to.
+# A record whose model is "generique" or "unknown" is therefore passed over.
+GENERIC_MODELS = {"generique", "unknown"}
+
+# NO DEVICE RECORD UNDER A BRAND THAT HAS BEEN REFUSED. Written 2026-11-25 in
+# the evening, after writing two of them.
+#
+# The decision lives in database/vocabulary/sources-and-redistribution.json,
+# under _REGISTER_OF_REFUSALS, and that file is the authority. But a brand file
+# is where anyone asks "may I harvest this maker?", and THE TWO LAYERS HAD
+# DRIFTED: 26 brands in the register, 17 carrying a `_refused` key, NINE silent -
+# Okto Research among them. Its terms had been read at /tc.htm and refused at
+# 14:53, verdict DISCARDED, the entry naming the very input row that was thrown
+# away; two records were written against it at 16:56 by someone who had checked
+# for `_refused` in database/brands/*.json and found nothing. The remote is
+# public and empty, so the first push would have published them.
+#
+# The guard therefore reads the layer a harvester actually reads, and the nine
+# silent files were given a relay key the same evening. It needs no mapping
+# between register keys and brand ids - a mapping would be the fragile part, and
+# a guard that has to guess which file a register entry means is a guard that
+# will one day guess wrong.
+
 
 def load(path):
     try:
@@ -234,6 +296,16 @@ for brand_dir in sorted(os.listdir(devices)) if os.path.isdir(devices) else []:
                 errors.append("%s: a claim with no quoted evidence. A source that "
                               "does not quote the words carrying the fact is an "
                               "address, not evidence" % rel(cpath))
+            for frag in QUOTED.findall(src.get("quote") or ""):
+                if len(frag) > QUOTE_FRAGMENT_MAX:
+                    errors.append(
+                        "%s: a quoted fragment of %d characters, past the %d "
+                        "ceiling for one quoted fragment. Evidence is the words "
+                        "carrying the fact, not the panel around them. Keep the "
+                        "line that states the figure and drop the rest: "
+                        "\u00ab %s\u2026 \u00bb"
+                        % (rel(cpath), len(frag), QUOTE_FRAGMENT_MAX,
+                           " ".join(frag.split())[:70]))
             if not src.get("kind"):
                 errors.append("%s: the source does not say what kind it is" % rel(cpath))
             sb = c.get("submitted_by")
@@ -310,6 +382,78 @@ for root, _, files in os.walk(DB):
 # completeness.json. Those are history - they say what was true on a day and keep
 # the trail of a number that has been wrong twice. A dated statement is allowed
 # to be out of date; that is what the date is for. An UNDATED count is not.
+# A NEIGHBOUR THAT HAS ITS OWN RECORD. Needs every identity in hand, so it runs
+# as its own pass rather than inside the loop above. See GENERIC_MODELS.
+_par_modele = {}
+_identites = []
+for _b in sorted(os.listdir(devices)) if os.path.isdir(devices) else []:
+    _bp = os.path.join(devices, _b)
+    if not os.path.isdir(_bp):
+        continue
+    for _d in sorted(os.listdir(_bp)):
+        _ip = os.path.join(_bp, _d, "identity.json")
+        if not os.path.exists(_ip):
+            continue
+        _i = load(_ip) or {}
+        if not isinstance(_i, dict) or not _i.get("id"):
+            continue
+        _identites.append((_ip, _i))
+        _m = str(_i.get("model", "")).strip().lower()
+        if _m:
+            _par_modele.setdefault(_m, []).append(_i["id"])
+for _ip, _i in _identites:
+    if str(_i.get("model", "")).strip().lower() in GENERIC_MODELS:
+        continue
+    for _al in (_i.get("aliases") or []):
+        if not isinstance(_al, dict) or _al.get("relation") != "neighbour":
+            continue
+        _cible = [x for x in _par_modele.get(str(_al.get("text", "")).strip().lower(), [])
+                  if x != _i["id"]]
+        if _cible:
+            errors.append(
+                "%s: alias %r is typed neighbour, but %s has its own record. A "
+                "neighbour resolves a product nothing else holds; once it has a "
+                "record the alias sends that product's name to THIS one and "
+                "asserts this record's figures for it. Drop the alias and put "
+                "the relation in a note, or make the model generic"
+                % (rel(_ip), _al.get("text"), ", ".join(sorted(_cible))))
+
+# LA JOINTURE EST LE CHAMP `brand`, PAS LE NOM DU DOSSIER. Une premiere version
+# de cette garde devinait l'identifiant de marque depuis le nom du repertoire en
+# remplacant les tirets par des soulignes, ce qui marche pour holo-audio et casse
+# ailleurs. Le champ `brand` d'identity.json EST l'identifiant, et le
+# verificateur le valide deja plus haut contre database/brands.
+_refusees = {}
+_bdir = os.path.join(DB, "brands")
+for _f in sorted(os.listdir(_bdir)) if os.path.isdir(_bdir) else []:
+    if not _f.endswith(".json"):
+        continue
+    _e = load(os.path.join(_bdir, _f)) or {}
+    if isinstance(_e, dict) and any(k.startswith("_refused") for k in _e):
+        _refusees[_e.get("id") or _f[:-5]] = _f
+
+_sous_refus = {}
+for _b in sorted(os.listdir(devices)) if os.path.isdir(devices) else []:
+    _bp = os.path.join(devices, _b)
+    if not os.path.isdir(_bp):
+        continue
+    for _d in sorted(os.listdir(_bp)):
+        _ip = os.path.join(_bp, _d, "identity.json")
+        if not os.path.exists(_ip):
+            continue
+        _i = load(_ip) or {}
+        _m = _i.get("brand")
+        if _m in _refusees:
+            _sous_refus.setdefault(_m, []).append("%s/%s" % (_b, _d))
+for _m, _l in sorted(_sous_refus.items()):
+    errors.append(
+        "%d record(s) under %r, a brand that is REFUSED. brands/%s carries a "
+        "_refused key, and the decision itself is in _REGISTER_OF_REFUSALS in "
+        "database/vocabulary/sources-and-redistribution.json. A refused maker's "
+        "pages may not be the source of a record: withdraw the record(s), or "
+        "withdraw the refusal with the evidence that lifts it. Records: %s"
+        % (len(_l), _m, _refusees[_m], ", ".join(_l)))
+
 n_doubt_open = n_doubt_resolved = 0
 for brand_dir in sorted(os.listdir(devices)) if os.path.isdir(devices) else []:
     bpath = os.path.join(devices, brand_dir)

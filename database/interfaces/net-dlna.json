@@ -8,7 +8,7 @@
     "pcm_max_hz": "unknown",
     "bits": "unknown",
     "bits_above_hz": [],
-    "_this_is_a_policy": "Ce qu'il faut supposer quand l'appareil n'a rien dit, pas une mesure. Une fiche qui connaît son vrai chiffre l'emporte."
+    "_this_is_a_policy": "What to assume when the device has said nothing - not a measurement. A record that knows its own real figure wins."
   },
   "note": "Passes what the renderer accepts, so it imposes no ceiling of its own. But it cannot report buffer occupancy - only drop-outs, after the fact - so a zone on it is budgeted blind unless its link is measured."
 }

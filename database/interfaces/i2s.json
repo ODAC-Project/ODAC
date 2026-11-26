@@ -8,7 +8,7 @@
     "pcm_max_hz": "unknown",
     "bits": "unknown",
     "bits_above_hz": "unknown",
-    "_this_is_a_policy": "Ce qu'il faut supposer quand l'appareil n'a rien dit, pas une mesure. Une fiche qui connaît son vrai chiffre l'emporte.",
+    "_this_is_a_policy": "What to assume when the device has said nothing - not a measurement. A record that knows its own real figure wins.",
     "_bits_above_hz": "Nobody claims a step here and nobody has measured one. Unlike the S/PDIF family, whose subframe width is fixed by the frame format, an I2S link's word width is a wiring and firmware matter, so an absent key would assert more than is known."
   },
   "note": "A board-level bus brought out on a connector, with no agreed pinout between makers. Usually carries the device's full capability. Asserts nothing."

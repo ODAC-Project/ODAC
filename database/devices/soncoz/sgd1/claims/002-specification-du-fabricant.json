@@ -1,0 +1,33 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://soncoz.com/support/downloads.html",
+    "quote": "Soncoz's own MANUAL for the SGD1 - header « SGD1 / User Manual V2.0 / May. 2022 », reached from the downloads page as SGD1_User Manual-EN.zip - read 2026-11-25. Its « 01 OVERVIEW / Rear Panel » list: « 3 AES input: 24-bit/192kHz », « 4 Coaxial output: 24-bit/192kHz », « 5 USB-C input: 32-bit/768kHz PCM/up to DSD512(Native) », « 6 USB-B input: 32-bit/768kHz PCM/up to DSD512(Native) », « 7 Toslink input: 24-bit/192kHz », « 8 Coaxial input: 24-bit/192kHz ». The three S/PDIF-family rows carry NO DSD figure, where the product page adds DSD64 to each. The manual also calls input 7 « Toslink » where the page calls it « Optical », and its input-channel list reads « From left to right : USB-B/USB-C/Bluetooth/AES/Toslink/Coaxial ».",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-25",
+  "facts": {
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "native_dsd": true
+  },
+  "inputs": {
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_conditions_NON_CONCLUANTES_chez_Soncoz": "No terms page found on soncoz.com, so no prohibition could be checked - NOT the same as finding none. Measured 2026-11-25: the only legal page in the navigation is SUPPORT → PRIVACY POLICY, and terms.html, legal.html, support/terms.html, company/terms.html, support/legal.html and copyright.html all 404. The sitemap also lists support/policies_service.html, which is an UNFINISHED TEMPLATE whose body is the site-builder's Chinese placeholder - 「请输入要描述的内容进行内容的补充」, please enter the content to describe. The privacy policy was read in full: « Applicable to: soncoz.com and all subdomains », and it covers personal data only, with no clause about copying or reusing content. The warranty page was read too in case a reuse clause hid there; its one reservation is « S ONCOZ(R) reserves the rights to interpret the above warranty . » robots.txt returns 404 with the body « File not found », so no Content-Signal and no Claude group exist. Footer: « Copyright (c) 2026 SONCOZ Technology. All rights reserved. » Product pages, specifications, FAQ and the shop are all on the one host, so there is no shop-scope split.",
+  "_lautre_moitie_du_desaccord": "The manual's rear-panel list gives the AES, Toslink and coaxial inputs as « 24-bit/192kHz » and stops there; the product page gives the same three as « 24-bit / 192kHz DSD64 ». Two documents from one maker about one device, one adding a DSD capability the other omits - and neither is a correction of the other, since the manual is from May 2022 and the page is current. Claim 001 carries the page's half. Nothing is resolved here: a reader asking whether to send DoP64 to this device's AES input will see that its maker has said both yes and nothing."
+}

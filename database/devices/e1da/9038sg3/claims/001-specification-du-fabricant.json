@@ -1,0 +1,36 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://e1dashz.wixsite.com/index/9038s",
+    "quote": "E1DA's own page for the #9038SG3, read 2026-11-25, on the shared /index/9038s page. THIS MODEL HAS NO « Specifications: » BLOCK AT ALL - only prose, which is itself the result. Verbatim: « The first thing is another USB audio bridge with HW Volume(UAC2->ES9038), 32/384, and DSD256 support. » And: « I don't know another portable DAC with DSD256 support for Android, only DSD128. » On the frequency response: « Due to PCM384 and DSD the frequency response is extended up to 100kHz(10-100000Hz +0.1/-0.3db). » On the filter: « The Nyquist filter is a linear phase slow roll-off. » And on the firmware's rate-dependent behaviour: « The current Firmware(FW V1.0) configured to work as G2 \"Performance mode\" for PCM 44.1-192kHz to make a most clean THD harmonics distribution, and as G2 \"Normal mode\" for PCM384kHz and DSD ». Gallery captions, which are text: « AES17 Dynamic Range 32/384 123db(A) / S/N -123db(A) ». Plus « Disclaimer regarding Apple inc products: Some of Apple products may have a problem with 9038SG3. » Neither « native » nor « DoP » appears for this model.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-25",
+  "facts": {
+    "family": "ess_sabre",
+    "pcm_max_hz": 384000,
+    "dsd_max": "DSD256",
+    "chip": "« ES9038 » in the bridge description and « ES9038Q2M » in the app text, one.",
+    "device_settings": [
+      {
+        "setting": "Nyquist filter",
+        "set_to": "linear phase slow roll-off",
+        "why": "« The Nyquist filter is a linear phase slow roll-off. » Named outright, as a statement of what the device DOES rather than a menu of what it could do - which is the shape this catalogue most wants and almost never gets. The maker adds a recommendation against its own setting: « For legacy 44.1kHz I would like to recommend a sharper filter(see Tweak app) to make exact 0db at 20kHz but the slow one sounds a bit more comfortable to me. »"
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "dsd_max": "DSD256"
+    }
+  },
+  "_conditions_NON_CONCLUANTES_chez_E1DA": "No terms page found, so no prohibition could be checked - NOT the same as finding no prohibition. Measured 2026-11-25: terms, terms-of-use, terms-and-conditions, legal, privacy, privacy-policy, tos, copyright and disclaimer all 404 under /index/; no legal link in any navigation or footer; and a sweep of every page's text for « all rights reserved », « copyright », « reproduc », « redistribut », « terms of use » and « permission » returned nothing. The footer on every page carries two lines: « (c) 2025 E1DA » and « (c) 2126 E1DA Future is here ;) ». robots.txt is Wix boilerplate, permissive, with no Content-Signal and no Claude group.",
+  "_lhote_est_bien_celui_du_fabricant_et_il_ny_en_a_quun": "E1DA's own site is a free Wix site at e1dashz.wixsite.com, and the identification matters because e1da.com is a parked domain for sale, e1da.net is an unrelated Australian IT company, and some twenty other candidates have no DNS. It is the maker's own: the ABOUT US page is written in the first person - « It's me, Ivan Khlyupin, Russian engineer lives in China for 14 years » - and it hosts his own firmware, drivers and Tweak apps. Its BUY page sends buyers to an AliExpress store, so E1DA runs no shop host of its own and there is no shop-scoped terms question to untangle. Nothing here comes from a retailer or a review, although the maker links several.",
+  "_un_piege_dextraction_propre_a_Wix": "Wix splits running text across inline spans, and a first extraction pass broke words mid-word - « standard un/balanced », « The tut/orial ». The reader re-extracted removing inline tags WITHOUT inserting whitespace and verified against known words. Every figure here is text, not OCR, with no letter missing and nothing restored by hand. Same family as the pdftotext -layout failure met on another maker's manuals today: a silent mangling that leaves plausible output.",
+  "_les_courbes_sont_des_images_et_na_pas_ete_lues": "Every THD, FFT, dynamic-range and frequency-response PLOT in this page's « Tech appendix » is an image. No number was read off any of them; the figures recorded here come from the page's text, and where a plot caption is itself text it is quoted as a caption rather than as a measurement.",
+  "_un_micrologiciel_qui_change_de_MODE_selon_le_DEBIT_recu": "« configured to work as G2 \"Performance mode\" for PCM 44.1-192kHz [...] and as G2 \"Normal mode\" for PCM384kHz and DSD to provide the best Dynamic Range(123db(A), Performance mode has 1db less) ». The device behaves differently depending on what it is sent, automatically, with the dB cost stated both ways. For an engine deciding what rate to send, that is exactly the kind of fact this base exists for - and it points the opposite way to the usual advice: sending 384 kHz here moves the device into its lower-distortion mode, not out of it. No field can hold a rate-dependent mode, so it lives here. Third device today whose behaviour depends on the rate it receives, after the Audio-gd Master 11 Singularity and the Prism Sound Callia - and the only one where the switch is to the device's advantage.",
+  "_une_fiche_sans_bloc_de_specifications": "No « Specifications: » heading exists for this model; every figure above was written in running prose between sentences about standby mode and LTE buzzing. Recorded because the absence is the finding: a model documented only in paragraphs, on a page whose two sibling models have proper blocks."
+}

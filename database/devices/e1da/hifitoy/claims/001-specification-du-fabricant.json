@@ -1,0 +1,31 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://e1dashz.wixsite.com/index/hifitoy",
+    "quote": "E1DA's own page for the HiFiTOY, read 2026-11-25. « Status: proto », « Retail cost: TBD($150) », « The preliminary release date is undefined yet. » Power: « 230VAC/110VAC regulated LLC SMPS with the custom controller ». The inputs line, given as ONE combined row: « Inputs: USB, PCM up to 24b/192kHz, SPDIF optical or analog from the same 3.5mm jack, Bluetooth APTX stream ». Outputs: « banana jacks, SPDIF 3.5mm jack for coworking with multiple HiFiTOY's Bi/Tri-amping ». « Output impedance: TBD ». Prose calls it a « Fully Digital Amplifier(FDA or Power DAC) » and names its DSP function: « DSP controllable by iOS/Android app for extensive Bi/Tri-Amping crossover filtering/phase alignment ». Maker's own claims: « Output power: 125W@4Ohm@1kHz@THD=1% » and « DR AES17 105db unweighted(TBD) ». NO converter or modulator part number is given anywhere, and DSD IS NOT MENTIONED.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-25",
+  "facts": {
+    "pcm_max_hz": 192000,
+    "bits": 24,
+    "chip": "None is named. The page calls the device a « Fully Digital Amplifier(FDA or Power DAC) » and names no DAC or modulator part - unlike its sibling the PowerDAC V2, which names a TAS5558. Absent, not guessed."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {},
+    "bluetooth": {}
+  },
+  "_conditions_NON_CONCLUANTES_chez_E1DA": "No terms page found, so no prohibition could be checked - NOT the same as finding no prohibition. Measured 2026-11-25: terms, terms-of-use, terms-and-conditions, legal, privacy, privacy-policy, tos, copyright and disclaimer all 404 under /index/; no legal link in any navigation or footer; and a sweep of every page's text for « all rights reserved », « copyright », « reproduc », « redistribut », « terms of use » and « permission » returned nothing. The footer on every page carries two lines: « (c) 2025 E1DA » and « (c) 2126 E1DA Future is here ;) ». robots.txt is Wix boilerplate, permissive, with no Content-Signal and no Claude group.",
+  "_lhote_est_bien_celui_du_fabricant_et_il_ny_en_a_quun": "E1DA's own site is a free Wix site at e1dashz.wixsite.com, and the identification matters because e1da.com is a parked domain for sale, e1da.net is an unrelated Australian IT company, and some twenty other candidates have no DNS. It is the maker's own: the ABOUT US page is written in the first person - « It's me, Ivan Khlyupin, Russian engineer lives in China for 14 years » - and it hosts his own firmware, drivers and Tweak apps. Its BUY page sends buyers to an AliExpress store, so E1DA runs no shop host of its own and there is no shop-scoped terms question to untangle. Nothing here comes from a retailer or a review, although the maker links several.",
+  "_un_piege_dextraction_propre_a_Wix": "Wix splits running text across inline spans, and a first extraction pass broke words mid-word - « standard un/balanced », « The tut/orial ». The reader re-extracted removing inline tags WITHOUT inserting whitespace and verified against known words. Every figure here is text, not OCR, with no letter missing and nothing restored by hand. Same family as the pdftotext -layout failure met on another maker's manuals today: a silent mangling that leaves plausible output.",
+  "_le_SEUL_E1DA_a_plusieurs_entrees_et_le_seul_sans_chiffres_par_prise": "« Inputs: USB, PCM up to 24b/192kHz, SPDIF optical or analog from the same 3.5mm jack, Bluetooth APTX stream » - ONE combined row. The « PCM up to 24b/192kHz » sits immediately after USB, then the sentence runs on into SPDIF and Bluetooth without restating any ceiling. So inputs.usb carries the figure and the optical and Bluetooth entries record existence only. Propagating the USB number across would be exactly the merge this catalogue refuses - and the irony is worth naming: five of E1DA's six converters have a single input with its ceiling written on the line, and the one device with three inputs is the one that gives figures for none of them.",
+  "_une_prise_optique_qui_partage_son_jack_avec_une_entree_ANALOGIQUE": "« SPDIF optical or analog from the same 3.5mm jack ». One socket, two roles, one of them not digital at all - and separately, under Outputs, a « SPDIF 3.5mm jack » which is an output. Three 3.5 mm jacks on one chassis doing three different things, distinguished only by which row they sit in.",
+  "_un_prototype_et_la_fiche_le_dit": "« Status: proto », « Retail cost: TBD($150) », « The preliminary release date is undefined yet », and « Output impedance: TBD » with « DR AES17 105db unweighted(TBD) ». Recorded because a reader must know these figures describe something that may never ship - the schema has no state for a product that does not exist yet, and E1DA marks three different things TBD on one page.",
+  "_des_filtres_de_CROISEMENT_qui_ne_sont_pas_des_filtres_de_reconstruction": "« extensive Bi/Tri-Amping crossover filtering/phase alignment ». Crossovers and phase alignment are deliberate shaping for multi-amplifier systems, not the interpolation filter this catalogue records. Nothing is written to `device_settings`, and no reconstruction filter is named or counted on this page."
+}

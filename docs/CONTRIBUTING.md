@@ -40,6 +40,19 @@ same agreement with a checkbox, and the pull request it opens repeats it.
 
 - **A claim with no `quote`.** A source that does not quote the words carrying
   the fact is an address, not evidence.
+- **A quoted fragment longer than 300 characters.** Evidence is the words
+  carrying the fact, not the panel around them. The worked example above is 70
+  characters and the median in this database is 39. A `quote` field may be long
+  — it is your account of a page, and most of it is your own words — but no
+  single run of text inside `« »` may pass 300. Keep the line that states the
+  figure and drop the rest. This is a quotation rule, not a licensing one:
+  citing is not licensing, however short the quote.
+- **A `neighbour` alias naming a device that has its own record.** A neighbour
+  resolves a product nothing else in the database holds. Once that product has
+  a record, the alias sends its name to the wrong one and asserts the wrong
+  figures for it. Put the relation in a note instead. Records whose `model` is
+  `generique` or `unknown` are exempt, because saying what an identity does
+  *not* resolve to is the whole point of them.
 - **`null` anywhere.** Leave the key out if nobody filled it in; write
   `"unknown"` if the question was asked and nobody knows. They are different
   facts about where to spend effort.

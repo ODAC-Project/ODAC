@@ -1,0 +1,18 @@
+{
+  "id": "bryston/bda-3-14",
+  "kind": "dac",
+  "brand": "bryston",
+  "model": "BDA-3.14",
+  "aliases": [
+    {
+      "text": "BDA-314",
+      "relation": "spelling"
+    },
+    {
+      "text": "BDA 3.14",
+      "relation": "spelling"
+    }
+  ],
+  "_aliases_typed": "Typed 2026-11-25. BDA-314 is Bryston's own URL spelling (/digital-audio/bda-314/) and BDA 3.14 the spaced form - both SPELLINGS of this product. BDA-3 was first listed as a neighbour here and has been removed for the reason given on bryston/bda-3: it has its own record, so an alias pointing at it from here would resolve one product's name to the other's figures. Bryston's own sentence - « starts with our BDA-3 and adds a high quality streamer » - is a statement about lineage, and lineage is not identity.",
+  "_the_kinship_with_the_other_model": "Bryston says of the BDA-3.14: « We've merged our BDP and BDA platforms into this one new product that starts with our BDA-3 and adds a high quality streamer internally connected with I²S ». So the two share a converter section and differ by a network path capped at 192 kHz / 24 bit against the converter's 384 kHz / 32 bit. They are TWO RECORDS and neither aliases the other. Nothing in this catalogue yet expresses « built from », and this is the first pair that would want it - noted rather than invented."
+}

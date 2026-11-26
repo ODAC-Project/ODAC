@@ -1,0 +1,45 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "http://www.yulongaudio.com/pd.jsp?fromColId=106&id=41",
+    "quote": "Yulong's own page for the DA-ART Canary II, read 2026-11-25 over plain HTTP, the host having no usable HTTPS. Under « Technical Specifications ： », identical on the English and Chinese pages: « USB Audio / PCM:   upto   32Bit/384kHz / DSD:   DoP64,   DoP128, Native DSD64/128/256 /512 » and « S/PDIF (Coaxial, AES, Optical) / PCM: upto 24Bit/192kHz / DSD: DoP64 and DoP128 ». The English key-features bullet says instead « Design around ES9038Q2M DAC with Class-leading 32Bit/768kHz and DSD512 decoding », and the Chinese bullet says 「● USB 支持 DSD512 ， PCM768KHz 同轴光纤支持 dop128」. On the converter: « The Canary II employs the latest ES9038Q2M DAC chipset and XMOS XU208 solution » and « we replaced the low-cost MCU with our powerful FPGA and Femtoclock PLL for synchronization ». The connectivity lists omit AES although the spec row heading names it - English: « Choice of 6.35mm headphone output and RCA preamp output »; Chinese: 「●丰富接口 USB 、 Optical 、Coaxial、line in、line out、6.35耳机接口」, which also shows an analogue line in. The Chinese page adds 「支持 DSD512 NATIVE」 and 「抖动低至峰值 200fs」. No filter count and no filter names appear on this model's page, unlike its siblings.",
+    "read_on": "2026-11-25"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-25",
+  "facts": {
+    "family": "ess_sabre",
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true,
+    "chip": "« the latest ES9038Q2M DAC chipset », one, with « XMOS XU208 » and « our powerful FPGA and Femtoclock PLL »."
+  },
+  "inputs": {
+    "usb": {
+      "bits": 32,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true,
+      "dop_possible": true,
+      "dop_max": "DSD128"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dop_possible": true,
+      "dop_max": "DSD128"
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dop_possible": true,
+      "dop_max": "DSD128"
+    }
+  },
+  "_conditions_NON_CONCLUANTES_chez_Yulong": "No terms page found on yulongaudio.com, so no prohibition could be checked - NOT the same as finding none. Measured 2026-11-25: the site has exactly five sections, About Us, Products, News, Support and Contact Us, identical on the English and Chinese trees, and none is legal; no terms, legal, copyright-policy or privacy page is linked from any nav or footer. robots.txt returns 404 with the body « File not found », so no Content-Signal and no Claude group exist because the file does not. Footer on every page: « Copyright (c) 2003-2017 All Rights Reserved Shenzhen Yu Long Yun Electronics Co., Ltd. » - note the end date, nine years stale.",
+  "_HTTPS_est_inutilisable_sur_cet_hote": "yulongaudio.com, www.yulongaudio.com and daartaudio.com all fail TLS with « no alternative certificate subject name matches target host name », so the site is reachable only over plain HTTP and every URL in this record is http://. yulong-audio.com, en.yulongaudio.com, daart.audio, yulongaudio.cn and da-art.com do not resolve. Second maker today unreachable to any tool that upgrades to HTTPS, after MUSICIAN Audio Technology.",
+  "_la_moitie_du_catalogue_nexiste_quen_images_et_il_ny_a_AUCUN_manuel": "Yulong's site splits cleanly: the older models carry real specification TEXT in the page body, and every newer model's product detail is nothing but JPEGs - 42 characters of whitespace as the only text. And the Support page offers DRIVERS ONLY, no manuals at all, so for the image-only models there is no text fallback anywhere on the maker's site. The Chinese tree was checked as a fallback and is the same images. Nine models are therefore absent from the base for want of text: Aquila III, Aurora, DA1, DA11, D39, DA2, ASURA, A39 and DP1. No number was read off any image.",
+  "_TROIS_chiffres_pour_le_MEME_plafond_USB_donc_je_nen_ecris_AUCUN": "The specification table says « PCM:   upto   32Bit/384kHz ». The English features bullet says « 32Bit/768kHz ». The Chinese features bullet says 「PCM768KHz」. Three figures for one socket, all on the maker's own pages, two of them agreeing with each other against the formal table. `pcm_max_hz` is ABSENT on this record and inputs.usb carries no pcm_max_hz either - not unknown, absent, because the maker has published two different answers and the catalogue's job is not to arbitrate between a maker and itself. The bit depth and the DSD figure, on which all three agree, are recorded. Same decision as the Audio-gd NOS 19, whose USB figure was omitted for the same reason.",
+  "_lAES_est_dans_len_tete_du_rang_et_dans_aucune_liste_de_prises": "The spec table's row reads « S/PDIF (Coaxial, AES, Optical) », and neither language's connectivity list mentions AES: the Chinese one reads 「USB 、 Optical 、Coaxial、line in、line out、6.35耳机接口」. So inputs holds no aes_ebu key - the row heading is a template covering the maker's range rather than a statement about this chassis, and the socket lists are two independent witnesses against it. Note the Chinese list also shows a « line in », which is analogue and not recorded either."
+}
