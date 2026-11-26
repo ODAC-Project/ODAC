@@ -58,6 +58,10 @@ same agreement with a checkbox, and the pull request it opens repeats it.
   facts about where to spend effort.
 - **A file that is not valid JSON**, or a device with no `identity.json`.
 - **A brand or interface that does not exist** in `database/`.
+- **A `dist/` that is not the build of `database/`.** Merging to `main` is
+  publishing: odac.tune.audio and every consumer read `main/dist/latest.json`.
+  Run `python3 tools/build.py` and commit `dist/` with your change. CI compares
+  fingerprints, not dates, so rebuilding an unchanged database is never needed.
 
 ## What a human will ask you
 

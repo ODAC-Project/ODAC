@@ -1,6 +1,8 @@
 # How to consume the database
 
-The database is built into `dist/` by CI after every merge. **Consume the built
+The database is built into `dist/`, committed with every change, and CI refuses
+a merge whose `dist/` is not the build of `database/`: what is on `main` is what
+is published. **Consume the built
 artefact, not the tree**: one file parses faster than a thousand, and it keeps
 traffic off GitHub.
 
