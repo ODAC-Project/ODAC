@@ -1,0 +1,39 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.smsl-audio.com/portal/product/detail/id/882.html",
+    "quote": "SMSL's own page for the PS200, read 2026-11-27 with curl, « Introduction » bullets: « ESS new generation of high-end analog-to-digital conversion chips ES9039Q2M; »; « Brand-new 3rd generation XMOS XU-316, PCM support up to 32bit/768kHz, DSD Support to DSD512; »; « Input ports (excluding Bluetooth) support MQA and DSD, Coaxial and Optical support DoP64; »; « UAC1/2 mode switching, UAC1 can easily connect to SONY PS5, Nintendo SWITCH, etc; »",
+    "read_on": "2026-11-27"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-27",
+  "facts": {
+    "family": "ess_sabre",
+    "chip": "ESS ES9039Q2M, XMOS XU-316 on USB. The page calls it « analog-to-digital conversion chips », a slip for digital-to-analogue.",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512",
+    "dop": true
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512"
+    },
+    "spdif_coax": {
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "spdif_optical": {
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "bluetooth": {}
+  },
+  "_the_ceiling_is_the_XMOS_bullet": "The rate and DSD ceilings come from the bullet naming the XMOS USB receiver, so they are written on usb only. No other input is given a PCM rate: the page states none.",
+  "_optical_has_DoP64_and_no_rate": "Optical and coaxial get DoP64 from the maker's own clause and no PCM ceiling, because none is stated: copying 768 kHz onto optical is the error vocabulary/why-the-optical-default-stays-low.json exists to prevent.",
+  "_UAC1_mode_lowers_the_ceiling": "« UAC1/2 mode switching »: the recorded ceiling is the UAC2 one; the page gives none for UAC1."
+}

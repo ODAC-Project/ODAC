@@ -1,0 +1,43 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.smsl-audio.com/portal/product/detail/id/799.html",
+    "quote": "SMSL's own page for the C200, read 2026-11-27 with curl, « Introduction » bullets: « ESS Technology high-end D/A chip ES9038Q2M; »; « The 2nd generation XMOS solution supports DoP64 and native DSD512, and PCM supports up to 32bit/768kHz; »; « Input ports (except Bluetooth) support DSD transmission, coaxial and optical supports DoP64; »; « Qualcomm latest Bluetooth chip supports LDAC 24bit/96kHz, APTX/HD, SBC, AAC; »",
+    "read_on": "2026-11-27"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-27",
+  "facts": {
+    "family": "ess_sabre",
+    "chip": "ESS ES9038Q2M (« ESS Technology high-end D/A chip ES9038Q2M »).",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true,
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "spdif_coax": {
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "spdif_optical": {
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "bluetooth": {}
+  },
+  "_the_ceiling_is_the_XMOS_bullet": "The rate and DSD ceilings come from the bullet naming the XMOS USB receiver, so they are written on usb only. No other input is given a PCM rate: the page states none.",
+  "_optical_has_DoP64_and_no_rate": "Optical and coaxial get DoP64 from the maker's own clause and no PCM ceiling, because none is stated: copying 768 kHz onto optical is the error vocabulary/why-the-optical-default-stays-low.json exists to prevent.",
+  "_DoP64_ON_USB_IS_WHAT_THE_PAGE_SAYS": "« supports DoP64 and native DSD512 » on USB, where the DO100 and SU-6 pages - same chip family, same bullet otherwise word for word - say « DoP256 ». It may be a typo on this page; it is recorded as written, because the alternative is correcting a maker from its sister product, which is the inference this catalogue refuses. A consumer told DoP64 on USB will send native DSD instead, which this page says works to DSD512."
+}

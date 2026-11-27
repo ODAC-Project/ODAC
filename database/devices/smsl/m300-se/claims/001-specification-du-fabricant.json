@@ -1,0 +1,27 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.smsl-audio.com/portal/product/detail/id/830.html",
+    "quote": "SMSL's own page for the M300 SE, read 2026-11-27 with curl, « Introduction » bullets: « Cirrus Logic's latest audio decoder chip CS43131, with carefully designed circuitry, achieves an unprecedented 0.00013% (-117dB) distortion performance! »; « The new third generation XMOS XU-316, PCM support up to 32bit /768kHz, DSD support up to DSD256. »; « Bluetooth 5.0 digital audio input, external antenna, farther transmission distance. »",
+    "read_on": "2026-11-27"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-27",
+  "facts": {
+    "family": "cirrus",
+    "chip": "Cirrus Logic CS43131 (« Cirrus Logic's latest audio decoder chip CS43131 »), XMOS XU-316 on USB.",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD256"
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD256"
+    },
+    "bluetooth": {}
+  },
+  "_the_ceiling_is_the_XMOS_bullet": "The rate and DSD ceilings come from the bullet naming the XMOS USB receiver, so they are written on usb only. No other input is given a PCM rate: the page states none.",
+  "_inputs_named": "Only USB (through the XMOS bullet) and Bluetooth are named on the page."
+}

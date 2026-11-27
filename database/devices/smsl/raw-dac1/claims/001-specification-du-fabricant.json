@@ -1,0 +1,42 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.smsl-audio.com/portal/product/detail/id/896.html",
+    "quote": "SMSL's own page for the RAW-DAC1, read 2026-11-27 with curl, « Introduction » bullets: « Using AK4191+AK4499EX to play the full performance of Chips, the distortion is as low as 0.00006%(-124dB); »; « XMOS XU-316, true 32bit USB processing, supports DoP and Native DSD, and PCM reach up to 768kHz and DSD512; »; « USB, Optical and Coaxial support DSD transmission, Coaxial, Optical support DOP64; »; « The latest Bluetooth supports LDAC, APTX/HD, SBC, AAC; »",
+    "read_on": "2026-11-27"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-27",
+  "facts": {
+    "family": "akm",
+    "chip": "AKM AK4499EX converter with an AK4191EQ modulator (« Using AK4191+AK4499EX »), XMOS XU-316 on USB.",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true,
+      "dop_possible": true
+    },
+    "spdif_coax": {
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "spdif_optical": {
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "bluetooth": {}
+  },
+  "_the_ceiling_is_the_XMOS_bullet": "The rate and DSD ceilings come from the bullet naming the XMOS USB receiver, so they are written on usb only. No other input is given a PCM rate: the page states none.",
+  "_optical_has_DoP64_and_no_rate": "Optical and coaxial get DoP64 from the maker's own clause and no PCM ceiling, because none is stated: copying 768 kHz onto optical is the error vocabulary/why-the-optical-default-stays-low.json exists to prevent.",
+  "_a_split_AKM_pair": "AK4191EQ is AKM's separate delta-sigma modulator and AK4499EX the switched-resistor output stage it drives. family akm covers both; what the split means for DSD (whether DSD bypasses the AK4191's modulator) is not stated on the page."
+}

@@ -1,0 +1,26 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.smsl-audio.com/portal/product/detail/id/813.html",
+    "quote": "SMSL's own page for the D12, read 2026-11-27 with curl, « Introduction » bullets: « The latest XMOS XU-316 solution supports sampling rate up to 32bit/768KHz and DSD512 ; »; « One pieces of AKM's new AK4493S chip, and carefully adjusted it to an unprecedented 0.00015% ; »",
+    "read_on": "2026-11-27"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-27",
+  "facts": {
+    "family": "akm",
+    "chip": "AKM AK4493S (« One pieces of AKM's new AK4493S chip »), XMOS XU-316 on USB.",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512"
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512"
+    }
+  },
+  "_the_ceiling_is_the_XMOS_bullet": "The rate and DSD ceilings come from the bullet naming the XMOS USB receiver, so they are written on usb only. No other input is given a PCM rate: the page states none.",
+  "_USB_only": "No input but USB is named. Whether DSD512 is native or DoP is not said."
+}

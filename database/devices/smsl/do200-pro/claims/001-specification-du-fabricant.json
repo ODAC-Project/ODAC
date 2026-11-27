@@ -1,0 +1,27 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.smsl-audio.com/portal/product/detail/id/869.html",
+    "quote": "SMSL's own page for the DO200 Pro, read 2026-11-27 with curl, « Introduction » bullets: « Using 12 pieces of Cirrus Logic's latest audio decoding chip CS43131 and carefully designed circuits, its performance reaches an unprecedented level of 0.00006 (-123dB) non-weighting distortion; »; « The brand-new third-generation XMOS XU-316, supports PCM up to 32bit/768kHz and DSD up to DSD256; »; « There are two modes to choose from: USB 1.1 and USB 2.0; »; « Bluetooth 5.1 digital audio input, external antenna, longer transmission distance; »",
+    "read_on": "2026-11-27"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-27",
+  "facts": {
+    "family": "cirrus",
+    "chip": "Twelve Cirrus Logic CS43131 (« Using 12 pieces of Cirrus Logic's latest audio decoding chip CS43131 »), XMOS XU-316 on USB.",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD256"
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD256"
+    },
+    "bluetooth": {}
+  },
+  "_the_ceiling_is_the_XMOS_bullet": "The rate and DSD ceilings come from the bullet naming the XMOS USB receiver, so they are written on usb only. No other input is given a PCM rate: the page states none.",
+  "_USB_1_1_mode_lowers_the_ceiling": "« There are two modes to choose from: USB 1.1 and USB 2.0 ». The 768 kHz ceiling is the USB 2.0 figure; USB Audio Class 1 typically stops at 96 kHz, and the page gives no figure for the 1.1 mode. A device left in USB 1.1 mode will not reach the ceiling recorded here."
+}
