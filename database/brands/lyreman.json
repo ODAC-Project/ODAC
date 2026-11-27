@@ -1,0 +1,8 @@
+{
+  "id": "lyreman",
+  "name": "Lyreman",
+  "_refused": "Read 2026-11-27 and refused. www.lyreman.cn/explore-support/terms-of-service, read in headless Chrome because the site renders by script, SECTION 2 - GENERAL CONDITIONS: « You agree not to reproduce, duplicate, copy, sell, resell or exploit any portion of the Service, use of the Service, or access to the Service or any contact on the website through which the Service is provided, without express written permission by us. » And SECTION 12 - PROHIBITED USES, independently sufficient: « you are prohibited from using the site or its content: (a) for any unlawful purpose; [...] (i) to spam, phish, pharm, pretext, spider, cra[wl] » (the rendered text is cut there). The preamble binds « all users of the site, including without limitation users who are browsers » and says « Our store is hosted on Shopify Inc. » - the stock Shopify template, the same shape as Hidizs, EarMen and Denafrips, with the product pages on the same host. robots.txt is permissive (« User-agent: * / Allow: / »), which grants nothing against the clause. NO PRODUCT PAGE WAS OPENED and no record will exist under this brand.",
+  "_where_the_site_is": "lyreman.com is a parked domain offered for sale (it redirects to domains.atom.com); the maker's site is www.lyreman.cn, linked nowhere in the search results and found by probing the name. Its home page lists the X021, DAC-2, H471, CD1 and several players.",
+  "_it_can_be_lifted": "Conditioned on « express written permission by us ». support@lyreman.cn is the address the terms give. On the letter list.",
+  "_added_on": "2026-11-27"
+}

@@ -1,0 +1,21 @@
+{
+  "id": "cengrand/dsdac-1-0",
+  "kind": "dac",
+  "brand": "cengrand",
+  "model": "DSDAC 1.0",
+  "aliases": [
+    {
+      "text": "DSDAC1.0",
+      "relation": "spelling"
+    },
+    {
+      "text": "DSDAC 1.0 Super Clock",
+      "relation": "edition"
+    },
+    {
+      "text": "DSDAC 1.0 SuperClock",
+      "relation": "edition"
+    }
+  ],
+  "_two_editions_one_page": "The maker publishes the standard model and the Super Clock model on ONE page, « DSDAC 1.0 （standard model / Super clock model） », with ONE parameter list, and states the difference as a clock with « RMS jitter is as low as 100fs » and « Some advance component are used ». Nothing this catalogue records separates them, so the Super Clock is an EDITION alias of this record, not a record of its own. The Deluxe model has its own page, its own output levels and a pre-amp mode, and has its own record: cengrand/dsdac-1-0-deluxe."
+}

@@ -1,0 +1,16 @@
+{
+  "id": "cengrand/dsdac-1-0-deluxe",
+  "kind": "dac",
+  "brand": "cengrand",
+  "model": "DSDAC 1.0 Deluxe",
+  "aliases": [
+    {
+      "text": "DSDAC 1.0 deluxe model",
+      "relation": "spelling"
+    },
+    {
+      "text": "DSDAC1.0 Deluxe",
+      "relation": "spelling"
+    }
+  ]
+}

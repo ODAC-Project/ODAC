@@ -1,0 +1,28 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.trasam.cn/products/mp10/",
+    "quote": "TRASAM's own page for the MP10 « 旗舰数码流媒体播放解码器 », read 2026-11-27 with curl. Feature list: « Android 14系统：可安装网易云/QQ音乐/酷狗/汽水等主流音乐APP »; « 4×ESS 9039Q2M：4颗旗舰级芯片并联，音质更纯净 »; « 第三代XMOS 16核：USB处理能力顶级，PCM 768K/DSD512 »; « SRC绕过：全局绕过SRC，保证原始音质 ». Specification table: « DAC » « ESS 9039Q2M × 4（4颗并联） »; « 接口配置 » « 数字输入：USB电脑/同轴/光纤/TYPE-C/U盘 | 数字输出：IIS/USB 3.0/HDMI/同轴/光纤/蓝牙发射 | 模拟输出：XLR + RCA ».",
+    "read_on": "2026-11-27"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-27",
+  "facts": {
+    "family": "ess_sabre",
+    "chip": "Four ESS ES9039Q2M in parallel; a third-generation XMOS 16-core part handles USB.",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512"
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "dsd_max": "DSD512"
+    },
+    "spdif_coax": {},
+    "spdif_optical": {}
+  },
+  "_a_player_first_so_network_player": "Android 14, a 6-inch touch screen, installable music apps and an M.2 drive bay: the maker calls it « 数播播放器 », a digital player. kind is network_player, and it ALSO takes a computer over USB (« USB电脑 ») as a DAC.",
+  "_the_USB_ceiling_is_the_computer_input": "« 第三代XMOS 16核：USB处理能力顶级，PCM 768K/DSD512 » is the XMOS line, and the XMOS part is what serves the USB computer input. TYPE-C is listed beside it as a separate digital input with no rate; it may be a second USB port or a phone input, and is not written.",
+  "_android_SRC_bypassed": "« 全局绕过SRC，保证原始音质 »: the device claims to bypass Android's resampler globally. Android's audio stack resamples to a fixed rate by default, so this is the claim that matters most for a network player of this kind, and it is the maker's claim, unmeasured here."
+}

@@ -1,0 +1,35 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.trasam.cn/products/ds8/",
+    "quote": "TRASAM's own page for the DS8 « 旗舰流媒体WIFI解码器 », read 2026-11-27 with curl. Specification table: « DAC配置 » « ESS9039PRO × 4（并联） »; « USB处理 » « PCM 768K/DSD512/MQA全展开 »; « 网络输入 » « PCM 768K / DSD512 »; « 接口配置 » « 数字输入：USB-B/HDMI IIS/光纤/同轴/AES | 输出：XLR×2组 + RCA×2组（同步） ». Feature list: « DSD512硬解 + MQA全展开 + PCM 768kHz，高清格式通吃 »; « 全格式流媒体：Roon串流/AirPlay/Tidal connect/UPNP-DLNA/HQPlay NAA/Squeezelite ». FAQ on the I2S socket: « 机背的IIS是HDMI物理接口，但走的是IIS信号，只能接数播/播放器，而且两端的线序必须一致才能用。 »",
+    "read_on": "2026-11-27"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-27",
+  "facts": {
+    "family": "ess_sabre",
+    "chip": "Four ESS ES9039PRO in parallel (« ESS9039PRO × 4（并联） »).",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512"
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "dsd_max": "DSD512"
+    },
+    "i2s": {},
+    "spdif_optical": {},
+    "spdif_coax": {},
+    "aes_ebu": {},
+    "net_dlna": {},
+    "net_airplay": {},
+    "net_squeezelite": {},
+    "net_transparent": {}
+  },
+  "_THE_NETWORK_CEILING_HAS_NO_PROTOCOL": "« 网络输入 » « PCM 768K / DSD512 » rates « the network input » as one thing, while the feature list names six protocols that cannot all carry it - AirPlay carries 44.1 kHz / 16 bit. So the figure is NOT written on any network block: putting 768 kHz on net_airplay would be false, and choosing net_dlna or net_transparent (Roon) for it would be our attribution, not the maker's. The blocks are empty and the figure lives here. HQPlayer NAA and Tidal Connect have no key in the vocabulary.",
+  "_only_USB_is_rated": "The S/PDIF, AES and I2S sockets are listed in « 数字输入 » with no rate anywhere on the page, so their blocks are empty rather than filled from the USB line. The page says DSD512 is decoded in hardware (« DSD512硬解 ») and does not say native or DoP.",
+  "_the_HDMI_socket_carries_I2S": "« 机背的IIS是HDMI物理接口，但走的是IIS信号 »: an HDMI connector carrying I2S, for a player only, with pin order that must match. Recorded as i2s, as 20 other records here do for I2S over HDMI; the same FAQ says a television cannot use it.",
+  "_two_editions_same_name": "The page offers two internal output modules at one price - « 人声胆味版（泰坦版） » with an all-FET class-A module and « 古典加强版 » with a transistor module - the same box and the same digital side. Nothing recorded here distinguishes them."
+}

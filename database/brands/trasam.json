@@ -1,0 +1,10 @@
+{
+  "id": "trasam",
+  "name": "TRASAM",
+  "_terms_read_and_they_do_not_forbid_it": "www.trasam.cn (广州全想音响有限公司, Guangzhou TRASAM) read 2026-11-27 with curl. robots.txt holds a single Sitemap line - no group, no Disallow, no Content-Signal. No terms page: /terms, /terms-of-use, /privacy, /legal, /disclaimer and /copyright all return 404, and the page sitemap lists only home, go, listen, products, odm, support, contact, about and reviews. The about, support and products pages were swept for 版权, 转载, 禁止, 未经, 复制, 授权 and 知识产权: the only hit is the footer « © 2026 广州全想音响有限公司 版权所有 », a copyright line and not a prohibition (the other hits are « 复制群号 » and « 复制微信 », buttons that copy a group number).",
+  "_the_domain_was_found_by_probing": "No search result named the maker's site; trasam.cn was found by probing the brand name and redirects to www.trasam.cn, whose pages carry the TRASAM logo and the « 全想音响 » company name.",
+  "_models_on_the_retailer_lists_that_the_maker_does_not_publish": "DS5 and DAC3, which circulate at retailers, are not on www.trasam.cn: its product sitemap lists 17 products and neither is among them. No record is written for either, because the maker's site is the only source this batch uses.",
+  "_models_read_and_not_recorded": "M7PLUS and M7BT are integrated amplifiers (« 桌面功放 »), the M7PLUS with an ES9039Q2M inside; an amplifier with a DAC is not recorded here as a converter.",
+  "_specification_language": "Every page is in Chinese, and every quote is kept in the maker's words as vocabulary/quoted-source-text-keeps-its-language.json requires.",
+  "_added_on": "2026-11-27"
+}

@@ -1,0 +1,12 @@
+{
+  "id": "trasam/dac4plus",
+  "kind": "dac",
+  "brand": "trasam",
+  "model": "DAC4PLUS",
+  "aliases": [
+    {
+      "text": "DAC4 PLUS",
+      "relation": "spelling"
+    }
+  ]
+}

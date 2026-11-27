@@ -1,0 +1,50 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://en.cen-grand.com/product/135.html",
+    "quote": "Cen.Grand's own English page for the 9i-92SA III DAC / headphone amplifier / pre-amp, read 2026-11-27 with curl. USB: « XMOS second generation XU208 + FPGA digital processing module , isolation technology is used to isolate noise from the computer. Support for NativeDSD512 and PCM384 input. » Converter and S/PDIF: « AK4118+ dual ESS 9038Pro DAC chip. The SPDIF receiver has three interfaces: coaxial, optical, and AES, support PCM 24bit/192KHz and DOP (DSD64) inputs. » « Two ESS 9038Pro DAC chip are used and one for each channel. » Summary rows: « Maximum audio support specifications: Spdif input ----- PCM192 » and « USB input ----- DSD512 PCM384 ». Volume: « The volume control chip is PGA2311 which controlled by MCU and the volume range is -70db~0db. »",
+    "read_on": "2026-11-27"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-27",
+  "facts": {
+    "family": "ess_sabre",
+    "chip": "Two ESS ES9038PRO, one per channel (« Two ESS 9038Pro DAC chip are used and one for each channel »); AK4118 S/PDIF receiver; XMOS XU208 plus an FPGA module on USB.",
+    "pcm_max_hz": 384000,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    }
+  },
+  "_the_SPDIF_sentence_names_all_three_sockets": "« The SPDIF receiver has three interfaces: coaxial, optical, and AES, support PCM 24bit/192KHz and DOP (DSD64) inputs. » Optical is named in the sentence that carries the ceiling, so its 192 kHz / 24 bit is the maker's figure, not a device ceiling copied down.",
+  "_no_USB_word_length": "USB is rated « NativeDSD512 and PCM384 » with no bit depth, so inputs.usb.bits is absent; whether USB also takes DoP is not stated either.",
+  "_a_DAC_that_is_also_a_headphone_amp": "The maker titles it « DAC/headphone Amp/Pre Amp » and describes it as « a DAC which with coaxial, optical, AES and other digital input interfaces ». The analogue RCA/XLR inputs feed the pre-amp and are not recorded."
+}

@@ -1,0 +1,39 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.kecesaudio.com/Euphony.html",
+    "quote": "KECES's own page for the Euphony Digital to Analog Converter, read 2026-11-27 with curl. Specs: « Optical and Coax, PCM support up to 192kHz/24-bit. DSD support up to DSD64. »; « USB, PCM support up to 384kHz/32-bit. DSD support up to DSD256. »; « Streaming Protocol » « DLNA, SpotifyConnect, TIDAL Connect »; « Bluetooth 5.1 »; network « 10/100M Ethernet ». Features: « Its I/V conversion stage is built entirely with discrete components, avoiding the sonic limitations commonly associated »; « The core digital processing architecture has been carefully selected and meticulously tuned ».",
+    "read_on": "2026-11-27"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-27",
+  "facts": {
+    "chip": "Not named. The page says only that « The core digital processing architecture has been carefully selected », and that the I/V stage is discrete - which describes what follows a current-output converter, not the converter itself.",
+    "pcm_max_hz": 384000,
+    "dsd_max": "DSD256"
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "dsd_max": "DSD256"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64"
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64"
+    },
+    "net_dlna": {},
+    "bluetooth": {}
+  },
+  "_no_DoP_or_native_word": "« DSD support up to DSD256 » on USB and « up to DSD64 » on optical and coaxial, with no mention of DoP or native. So dsd_max is written per input and native_dsd_possible, dop_possible and the device-level native_dsd and dop are all absent: on S/PDIF it can only be DoP in practice, but the maker did not say so.",
+  "_family_left_absent": "No converter part and no technology statement. family is ABSENT rather than guessed; the discrete I/V stage suggests a current-output part but does not name one.",
+  "_network_and_bluetooth_blocks_are_empty": "The streaming protocols and Bluetooth 5.1 are listed without any rate, so net_dlna and bluetooth are written as empty blocks: the inputs exist, their ceilings are not stated. Spotify Connect and TIDAL Connect have no key in the interface vocabulary.",
+  "_a_DAC_with_a_streamer_inside": "The maker calls it a « Digital to Analog Converter » that « fully integrates network streaming functionality within its chassis ». kind is dac on the maker's own name for it."
+}

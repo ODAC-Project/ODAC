@@ -1,0 +1,12 @@
+{
+  "id": "trasam/ds7plus",
+  "kind": "dac",
+  "brand": "trasam",
+  "model": "DS7PLUS",
+  "aliases": [
+    {
+      "text": "DS7 PLUS",
+      "relation": "spelling"
+    }
+  ]
+}
