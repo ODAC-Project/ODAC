@@ -1,0 +1,16 @@
+{
+  "id": "audiophonics/evo-sabre",
+  "kind": "dac",
+  "brand": "audiophonics",
+  "model": "EVO-SABRE",
+  "aliases": [
+    {
+      "text": "EVO-SABRE PACK",
+      "relation": "edition"
+    },
+    {
+      "text": "EVO SABRE",
+      "relation": "spelling"
+    }
+  ]
+}

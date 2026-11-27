@@ -1,0 +1,34 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.audiophonics.fr/fr/modules-dac-et-interfaces/audiophonics-dac-i-sabre-es9038q2m-raspberry-pi-i2s-spdif-pcm-dsd-alimentation-usb-c-p-12795.html",
+    "quote": "Audiophonics' own product page, read 2026-11-27, for its Raspberry Pi DAC board. Specification table: « Up to 32 bit 768KHz (Max 384 pour RPI) »; « DSD 64/128/256/512 DOP Auto Switch (Max DSD 128 pour RPI) ». The text gives per input: SPDIF « PCM jusqu'à 24/192 et DSD 128 DOP »; I2S « PCM 32Bit/768k et DSD 512 DOP ». Inputs: I2S on the Raspberry Pi GPIO, a second I2S header, one S/PDIF. Output: one stereo RCA at « 1.54V Vrms ».",
+    "read_on": "2026-11-27"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-27",
+  "facts": {
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD512",
+    "dop": true,
+    "family": "ess_sabre",
+    "chip": "ESS ES9038Q2M (successor of the I-Sabre 9028)."
+  },
+  "inputs": {
+    "i2s": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dop_max": "DSD512"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dop_max": "DSD128"
+    }
+  },
+  "_maker_terms": "See brands/audiophonics.json: the maker's terms forbid reproduction; recorded on the project owner's decision of 2026-11-27, pending written permission.",
+  "_THE_RASPBERRY_PI_CAPS_IT_LOWER": "The board's I2S takes 768 kHz and DSD512 over DoP, but fed by a Raspberry Pi the maker caps it at 384 kHz and DSD128 (« Max 384 pour RPI », « Max DSD 128 pour RPI »), and at 24/192 with the generic RPI-DAC driver. The i2s block carries the board's ceiling; the usual host is the lower one.",
+  "_DSD_IS_DOP_ONLY": "Every DSD figure on the page is « DOP »: dop true, native_dsd not written."
+}
