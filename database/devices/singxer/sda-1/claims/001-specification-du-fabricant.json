@@ -1,0 +1,56 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://download.s21i.co99.net/7097607/0/0/ABUIABA9GAAgtJTZ5gUonJfjmwY.pdf",
+    "quote": "Singxer's own handbook SDA-1解码器用户手册_20180130.pdf (the file name, as listed on the downloads page), read 2026-11-27 with pdftotext. Product introduction: « 采用AKM第三代旗舰DAC作为数模转换的主芯片，AK4118作为数字音频输入接收芯片 » and « PCM最高支持384Khz,DSD采用原生直解技术，最高支持DSD512。 ». Per-input table: « [其中USB和I2S支持全部采样率,S/PDIF和AES最高支持192KHz] »; DSD rows « 11.2 MHz (DSD256) - DoP,native » and « 22.5792 MHz (DSD512) - native », with « [其中USB和I2S支持全部DSD格式,S/PDIF和AES支持DSD64 DOP模式]，其中DSD512在USB模式下需要使用我们提供的驱动，且DSD输出采用NATIVE模式。 »; word length « 位宽：最高32 bit over USB and I2S » and « 最高24 bit over S/PDIF ». Output levels: « PCM：RCA单端输出为2V RMS，XLR平衡输出为4V RMS » and « DSD：RCA单端输出为1.34V RMS，XLR平衡输出为2.68V RMS ».",
+    "read_on": "2026-11-27"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-27",
+  "facts": {
+    "family": "akm",
+    "chip": "« AKM第三代旗舰DAC » - an AKM third-generation flagship converter, with no part number; AK4118 as the S/PDIF receiver, an XMOS xCORE-200 for USB and a Xilinx FPGA for clocking and stream handling.",
+    "pcm_max_hz": 384000,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true,
+      "dop_possible": true,
+      "dop_max": "DSD256"
+    },
+    "i2s": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true,
+      "dop_possible": true,
+      "dop_max": "DSD256"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    }
+  },
+  "_the_one_Singxer_manual_with_a_per_input_table": "Rates, DSD transport and word length are each given per input group: USB and I2S « 全部采样率 » (all rates to 384 kHz), 32 bit, every DSD format with DSD512 native only; S/PDIF and AES 192 kHz, 24 bit, « DSD64 DOP模式 ». DoP stops at DSD256 because the DSD512 row reads « native » alone. The S/PDIF word length is stated for S/PDIF and applied to AES, which the same bracket groups with it for rate and DSD.",
+  "_no_optical_input": "The rear panel lists « 平衡数字信号输入 » (AES), « 单端数字信号输入COAX/BNC », I2S over HDMI and USB - no optical socket, so no spdif_optical block. COAX and BNC are both spdif_coax.",
+  "_family_from_a_vendor_name_not_a_part": "family akm rests on « AKM第三代旗舰DAC », the vendor named without the part. That is enough for the family, which is a vendor's architecture; it is not enough for chip, which says so.",
+  "_PCM_AND_DSD_OUTPUT_LEVELS_DIFFER_AND_NO_OFFSET_IS_WRITTEN": "The manual gives PCM at 2 V RMS RCA / 4 V XLR and DSD at 1.34 V / 2.68 V. Arithmetic puts PCM about 3.5 dB above DSD. pcm_dsd_level_offset_db is NOT written from it, because the manual does not say what DSD signal level its 1.34 V refers to - a 0 dB DSD reference is conventionally half modulation, and whether Singxer's figure is at that reference or at full modulation changes the answer by 6 dB. The two voltages are the maker's; the offset needs the reference or a measurement.",
+  "_display_is_not_mentioned_here": "Unlike the later SDA handbooks, this one states the rates as a table of what each input « 支持 » (supports), not as a display range."
+}

@@ -1,0 +1,58 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://ferrum.audio/wandla-hp-headphone-amplifier-2/",
+    "quote": "Ferrum's own page for the WANDLA HP « DAC/PREAMP with Headphone AMPLIFIER », read 2026-11-27 with curl. Digital inputs: « USB-C (up to 768 kHz / 32 bit, DSD 512, DoP 256) »; « I2S (up to 768 kHz / 32bit, DSD 512, DoP 256), User-selectable I²S pinout via firmware, compatible with PS Audio and other I²S standards. »; « ARC (up to 192 kHz / 24 bit), TV input with CEC »; « AES/EBU (up to 192 kHz / 24 bit, DoP 64) »; « Coaxial S/PDIF (up to 192 kHz / 24 bit, DoP 64) »; « Optical S/PDIF (up to 96 kHz / 24 bit) ». « DAC chip: ESS Sabre ES9038PRO »; « DAC resolution: 768 kHz / 32 bit, DSD 512 »; « MQA: decoder and renderer (on all digital inputs) ».",
+    "read_on": "2026-11-27"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-27",
+  "facts": {
+    "family": "ess_sabre",
+    "chip": "ESS ES9038PRO with Ferrum's in-house I/V converter (« The ESS Sabre ES9038PRO combined with Ferrum's advanced new current-to-voltage (I/V) converter »).",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512",
+    "dop": true
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512",
+      "dop_possible": true,
+      "dop_max": "DSD256"
+    },
+    "i2s": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512",
+      "dop_possible": true,
+      "dop_max": "DSD256"
+    },
+    "hdmi": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000,
+      "bits": 24
+    }
+  },
+  "_optical_rated_flat_96_here": "Unlike the WANDLA and ERCO pages, this one gives optical a flat « up to 96 kHz / 24 bit » with no « should work » clause and no DoP. Recorded as stated.",
+  "_ARC_is_hdmi": "ARC from a television, recorded as hdmi as on ferrum/wandla."
+}

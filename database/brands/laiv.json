@@ -1,4 +1,6 @@
 {
   "id": "laiv",
-  "name": "LAiV Audio"
+  "name": "LAiV Audio",
+  "_terms_FORBID_reuse_and_the_existing_record_is_frozen": "www.laiv.audio/terms-and-conditions read 2026-11-27 with curl. Under « INTELLECTUAL PROPERTY », « 1. Copyright »: « You are not permitted to modify, copy, distribute, transmit, reproduce, publish, or create derivative works in any form from the products and images contained within this website without first obtaining a licensing arrangement. » and « You may not use or appear to be affiliated with this website or its content for any commercial purpose without written permission or a license from the Company. » By the standing rule that is a refusal: no claim may be taken from laiv.audio. BUT laiv/harmony already exists, built from the 2026-11-20 import, so this is the T+A / Accuphase / exaSound case of the register: the record stays at import weight and is frozen, and this file deliberately carries no `_refused` key - that key would make the verifier demand the record's withdrawal, which is the owner's decision and not a harvest's. One doubt for that decision: claim 001 of laiv/harmony cites « manual 4.4 », and the Denafrips entry holds that « A manual is the maker's content however it was obtained ». robots.txt is Wix's stock file.",
+  "_terms_read_on": "2026-11-27"
 }

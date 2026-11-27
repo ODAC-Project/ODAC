@@ -1,0 +1,36 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://download.s21i.co99.net/7097607/0/0/ABUIABA9GAAgkvj-uQYomJ3-kgM.pdf",
+    "quote": "Singxer's own handbook Singxer SDA-6 PRO2 handbook_V11.pdf (the file name, as listed on the downloads page), read 2026-11-27 with pdftotext. « Input source selection, in order: USB, I2S, OPT, COAX, AES, BNC;single press INPUT to cycle through input sources;all input interfaces support DSD, with OPT, COAX, AES, BNC supporting DSD DOP. » « Sampling rate display: PCM is 44.1K-768K, DSD is 2.82M-49.1M, corresponding to DSD64-DSD1024 respectively. » « There are 6 types of digital filters in PCM and DSD modes, namely SHARP/SLOW/SHORT SHARP/SHORT SLOW/NOS/ LOW-DISPERSION.In Native DSD mode, there is only one type: NOS;at which point the volume is not controllable and displays as MAX. » and « The I2S input uses a pass-through mode and does not support PLL and external clocks. »",
+    "read_on": "2026-11-27"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-27",
+  "facts": {
+    "chip": "Not named anywhere in the handbook.",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD1024",
+    "dop": true
+  },
+  "inputs": {
+    "usb": {},
+    "i2s": {},
+    "spdif_optical": {
+      "dop_possible": true
+    },
+    "spdif_coax": {
+      "dop_possible": true
+    },
+    "aes_ebu": {
+      "dop_possible": true
+    }
+  },
+  "_the_ceiling_is_a_DISPLAY_range": "The handbook gives the range the front display shows in place of a specification, and it is recorded as the device ceiling only. No input gets a PCM rate: the handbook never says which inputs reach 768 kHz.",
+  "_BNC_is_spdif_coax": "COAX and BNC are both S/PDIF on a 75-ohm connector and share the spdif_coax block.",
+  "_family_absent": "No converter part and no vendor are named in the handbook, so family is absent rather than guessed.",
+  "_native_DSD_is_a_MODE_and_the_inputs_are_not_split": "This handbook says « all input interfaces support DSD, with OPT, COAX, AES, BNC supporting DSD DOP » - and, unlike the SDA-2 and SDA-6 handbooks, does NOT say that USB and I2S take native DSD. A « DSD MODE » option in the second-level menu and the phrase « In Native DSD mode » show a native path exists, which is why native_dsd is absent at device level rather than false, and the USB and I2S blocks are empty rather than copied from the SDA-6. DSD1024 comes from the display range alone.",
+  "_I2S_is_pass_through": "« The I2S input uses a pass-through mode and does not support PLL and external clocks. » The PLL and external clock apply to the S/PDIF family and, for the 10 MHz reference, to USB.",
+  "_NOS_only_in_native_DSD": "Six filters « in PCM and DSD modes », NOS among them, and only NOS « In Native DSD mode », where volume is fixed at MAX. NOS here is non-oversampling. No device_settings entry: the converter is unnamed."
+}

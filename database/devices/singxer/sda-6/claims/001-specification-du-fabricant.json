@@ -1,0 +1,41 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://download.s21i.co99.net/7097607/0/0/ABUIABA9GAAgv6u5_QUo1unUqwE.pdf",
+    "quote": "Singxer's own handbook Singxer SDA-6 handbook_V10.pdf (the file name, as listed on the downloads page), read 2026-11-27 with pdftotext. « Input source selection: By single-pressing INPUT button you can switch different input source, in order USB, I2S, OPT, COAX,AES and BNC. All input interfaces accept DSD signal, USB and I2S accept both DSD native and DSD DOP signal, while OPT, COAX ,AES and BNC only accept DSD DOP signal. » « Sample rate display: PCM is from 44.1Khz up to 768Khz, DSD is from 2.82Mhz up to 24.57Mhz, known as DSD64 up to DSD512 » « Digital Filters: There are 6 digital filters in PCM mode, SHARP/SLOW/SHORT SHARP/SHORT SLOW/NOS/ LOW-DISPERSION; In DSD mode, the SDA-6 uses only NOS (no oversampling) as the digital filter. »",
+    "read_on": "2026-11-27"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-27",
+  "facts": {
+    "chip": "Not named anywhere in the handbook.",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512",
+    "dop": true,
+    "native_dsd": true
+  },
+  "inputs": {
+    "usb": {
+      "native_dsd_possible": true,
+      "dop_possible": true
+    },
+    "i2s": {
+      "native_dsd_possible": true,
+      "dop_possible": true
+    },
+    "spdif_optical": {
+      "dop_possible": true
+    },
+    "spdif_coax": {
+      "dop_possible": true
+    },
+    "aes_ebu": {
+      "dop_possible": true
+    }
+  },
+  "_the_ceiling_is_a_DISPLAY_range": "The handbook gives the range the front display shows in place of a specification, and it is recorded as the device ceiling only. No input gets a PCM rate: the handbook never says which inputs reach 768 kHz.",
+  "_BNC_is_spdif_coax": "COAX and BNC are both S/PDIF on a 75-ohm connector and share the spdif_coax block.",
+  "_family_absent": "No converter part and no vendor are named in the handbook, so family is absent rather than guessed.",
+  "_DSD_transport_per_input_is_stated": "Native and DoP on USB and I2S, DoP only on OPT, COAX, AES and BNC, stated input by input. native_dsd_possible is omitted, not false, on the S/PDIF family."
+}

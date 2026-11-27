@@ -189,6 +189,55 @@
       "what_was_discarded": "The SHD, DDRC and nanoDIGI range, and specifically whether these processors' fixed internal sample rate can be defeated - the most consequential thing a room-correction device can tell an upsampling engine. Nothing was opened.",
       "_it_names_data_sheets": "Unique in this register: the copyright clause itemises « data compilations, DATA SHEETS » among the protected content. Most clauses here forbid reproducing « content » and leave a reader to decide whether a specification table is content. This one says it is.",
       "_it_can_be_lifted": "All three clauses are conditioned on written consent. On the letter list."
+    },
+    "fosi_audio": {
+      "name": "Fosi Audio",
+      "read_on": "2026-11-27",
+      "where": "https://fosiaudio.com/policies/terms-of-service, Sections 2 and 12, read with curl",
+      "clause": "You agree not to reproduce, duplicate, copy, sell, resell or exploit any portion of the Service, use of the Service, or access to the Service or any contact on the website through which the service is provided, without express written permission by us.",
+      "second_clause": "you are prohibited from using the site or its content: (a) for any unlawful purpose; [...] (i) to spam, phish, pharm, pretext, spider, crawl, or scrape",
+      "what_was_discarded": "Nothing was opened: the terms were read before any product page.",
+      "_no_scope_escape": "Stock Shopify template on the host that also serves the product pages, binding users « who are browsers ».",
+      "_it_can_be_lifted": "Conditioned on « express written permission by us ». On the letter list."
+    },
+    "aiyima": {
+      "name": "AIYIMA",
+      "read_on": "2026-11-27",
+      "where": "https://www.aiyima.com/policies/terms-of-service, Sections 2 and 12, read with curl",
+      "clause": "You agree not to reproduce, duplicate, copy, sell, resell or exploit any portion of the Service, use of the Service, or access to the Service or any contact on the website through which the service is provided, without express written permission by us.",
+      "second_clause": "you are prohibited from using the site or its content: (a) for any unlawful purpose; [...] (i) to spam, phish, pharm, pretext, spider, crawl, or scrape",
+      "what_was_discarded": "Nothing was opened: the terms were read before any product page.",
+      "_no_scope_escape": "Stock Shopify template on the host that also serves the product pages, binding users « who are browsers ».",
+      "_it_can_be_lifted": "Conditioned on « express written permission by us ». On the letter list."
+    },
+    "khadas": {
+      "name": "Khadas",
+      "read_on": "2026-11-27",
+      "where": "https://www.khadas.com/terms-of-use, read with curl",
+      "clause": "This website contains material which is owned by or licensed to us. This material includes, but is not limited to, the design, layout, look, appearance and graphics. Reproduction is prohibited other than in accordance with the copyright notice, which forms part of these terms and conditions.",
+      "second_clause": "Unauthorized use of this website may give rise to a claim for damages and/or be a criminal offense.",
+      "what_was_discarded": "Nothing was opened. The Tone-series DACs were the target.",
+      "_a_borderline_clause_read_strictly": "The listed material is « design, layout, look, appearance and graphics », which on its face is the page and not its facts. But the list is « not limited to », the verb is « Reproduction is prohibited », and the standing rule refuses an explicit prohibition on reproduction - which this is. The same UK boilerplate refused Solid State Logic.",
+      "_it_can_be_lifted": "By the copyright notice the clause defers to, or by asking. On the letter list."
+    },
+    "hifiman": {
+      "name": "HIFIMAN",
+      "read_on": "2026-11-27",
+      "where": "https://hifiman.com/terms, read with curl",
+      "clause": "The written content displayed on this website is owned by its respective author and may not be reproduced in whole or in part without the express written permission of the author.",
+      "what_was_discarded": "Nothing was opened. The site lists a « DAC & Amplifiers » range.",
+      "_it_names_the_written_content": "Not a template and not a footer: the clause names the WRITTEN content, which is where a specification row lives, and « in whole or in part ».",
+      "_it_can_be_lifted": "Conditioned on « the express written permission of the author ». On the letter list."
+    },
+    "laiv": {
+      "name": "LAiV Audio",
+      "read_on": "2026-11-27",
+      "where": "https://www.laiv.audio/terms-and-conditions, « INTELLECTUAL PROPERTY », « 1. Copyright », read with curl",
+      "clause": "You are not permitted to modify, copy, distribute, transmit, reproduce, publish, or create derivative works in any form from the products and images contained within this website without first obtaining a licensing arrangement.",
+      "second_clause": "You may not use or appear to be affiliated with this website or its content for any commercial purpose without written permission or a license from the Company.",
+      "what_was_discarded": "Nothing was opened: the terms were read before any product page.",
+      "_an_existing_record_and_the_T_A_shape": "laiv/harmony exists from the 2026-11-20 import, and stays - the shape of _THREE_BRANDS_WHOSE_EXISTING_RECORDS_CAN_NEVER_BE_IMPROVED. Its claim 001 cites « manual 4.4 », which by the Denafrips reasoning is the maker's content; whether that withdraws the claim is left to the project owner and said so in brands/laiv.json.",
+      "_it_can_be_lifted": "« the Company welcomes business partners to explore collaboration opportunities with us. Contact us at info@laiv.audio ». On the letter list."
     }
   },
   "_topping_fully_characterised_2026_11_25": "Worth writing down in full, because Topping has about thirty models and every obvious route to them fails. ONE: the website's Specs tab renders EMPTY - not slow, not JavaScript-gated, empty - verified on the D900 and the D90 III SABRE in a real browser, by clicking the tab and by loading ?tab=specs directly with five seconds' wait; document.body.innerText comes back at about 350 characters containing no rate, no DSD and no THD. TWO: the Download tab does give a manual per model, on a separate host (dl.topping.audio) with unguessable filenames - d90iii_sabre.pdf for the page slug d90-iii-sabre, and D70_Pro_OCTO_V1.2.pdf behind a page slug Topping itself misspells d70-pro-otco-user-manual - so each PDF must be found through its own download page. THREE, and this is the wall: of eight manuals downloaded, SIX HAVE NO TEXT LAYER AT ALL. pdftotext returns exactly one character per page, which is what a PDF made of page images returns. Only DX1_II_V1.2_EN.pdf and E50_II_V1.2_EN.pdf carry text, and their filenames say why - they are the newest products and the only ones with a separate English manual. FOUR: the six image-only manuals probed (D50 III, D90 III SABRE) have no English section whatever; they run Chinese then Japanese. SO THE FIGURES EXIST ONLY AS PHOTOGRAPHED CHINESE TABLES, and reading them would stack a visual transcription on top of a translation. That was declined, for the same reason Denafrips's single specification image was declined the same night: a number read off a picture at speed, with no second reader, is how a wrong figure enters a database that has spent two days refusing inferences far safer than that. The route, if these thirty models are wanted, is to ask Topping for the English manuals or a data sheet. NOTE ON PERMISSION: toppingaudio.com has NO terms-of-use page - 23 internal links, none legal, and a footer reading « (c) 2026 TOPPING Technology co., LTD. All rights reserved. » with Chinese ICP registration numbers. That is the ordinary copyright footer, so nothing here was refused on licence grounds. The two records written are the whole of what Topping publishes in a form that can be quoted."
