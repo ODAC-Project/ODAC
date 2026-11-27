@@ -21,6 +21,21 @@ Create `database/devices/<brand>/<device>/claims/NNN-short-name.json`:
 }
 ```
 
+## Before you open the pull request
+
+Two commands, from the repository root:
+
+```
+python3 tools/verifier.py --fix
+python3 tools/build.py --fix
+```
+
+`--fix` rewrites the figures your contribution moved — device and claim counts
+in the README and SCHEMA, the per-field counts in `schemas/fields.json`, the
+artefact size in CONSUMING — and lists what it changed. Commit those files and
+`dist/` with your record. Every other rule still fails and still needs you; CI
+runs both tools without `--fix`, so a figure left stale is caught there.
+
 ## Signing off
 
 Every commit in a pull request carries a sign-off line:

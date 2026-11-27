@@ -10,9 +10,21 @@ around the thirtieth contribution.
 """
 import json, os, re, sys
 
-DB = sys.argv[1] if len(sys.argv) > 1 else os.path.join(
+# --fix REWRITES THE COUNTERS INSTEAD OF REPORTING THEM. Added 2026-11-27 after
+# adding six records took longer to recount than to read: every new device moved
+# eight figures in four files (README, SCHEMA, CONSUMING, fields.json), each one
+# reported by this guard with the right value beside it, and each one then typed
+# in by hand. A figure the machine already knows should not be retyped by a
+# person - that is where the next wrong figure comes from. So `--fix` writes the
+# value the guard computed, in place, and says what it changed. CI never passes
+# --fix: there the guard stays a guard, and a stale figure still fails the build.
+# Only COUNTS are rewritten. A spelled-out number is still refused, and every
+# other rule still fails, because those need a human to decide.
+FIX = "--fix" in sys.argv[1:]
+_ARGS = [a for a in sys.argv[1:] if a != "--fix"]
+DB = _ARGS[0] if _ARGS else os.path.join(
     os.path.dirname(os.path.abspath(__file__)), "..", "database")
-errors, warnings = [], []
+errors, warnings, fixed = [], [], []
 IDENTITY_KEYS = {"id", "kind", "brand", "model", "aliases", "usb", "superseded_by"}
 ALIAS_RELATIONS = {"spelling", "edition", "neighbour"}
 KINDS = {"dac", "network_player"}
@@ -511,11 +523,29 @@ for brand_dir in sorted(os.listdir(devices)) if os.path.isdir(devices) else []:
                     if not k.startswith("_"):
                         kk = "inputs." + k
                         compte_reel[kk] = compte_reel.get(kk, 0) + 1
+_registre_a_corriger = []
 for champ, e in sorted(registry.items()):
     declare = e.get("used_on_records")
     if declare is not None and declare != compte_reel.get(champ, 0):
-        errors.append("schemas/fields.json: %s says used_on_records %d, the data says %d"
-                      % (champ, declare, compte_reel.get(champ, 0)))
+        if FIX:
+            _registre_a_corriger.append((champ, declare, compte_reel.get(champ, 0)))
+        else:
+            errors.append("schemas/fields.json: %s says used_on_records %d, the data says %d"
+                          % (champ, declare, compte_reel.get(champ, 0)))
+if _registre_a_corriger:
+    # Edited as TEXT, one key at a time, so the file keeps its layout and its
+    # commentary keys; re-dumping the JSON would rewrite every line of it.
+    _rt = open(REGISTRY, encoding="utf-8").read()
+    for champ, avant, apres in _registre_a_corriger:
+        _cle = re.search(r'"%s"\s*:\s*\{' % re.escape(champ), _rt)
+        _val = _cle and re.compile(r'"used_on_records"\s*:\s*%d\b' % avant).search(_rt, _cle.end())
+        if not _val:
+            errors.append("schemas/fields.json: %s says used_on_records %d, the data says %d"
+                          " (--fix could not place it)" % (champ, avant, apres))
+            continue
+        _rt = _rt[:_val.start()] + '"used_on_records": %d' % apres + _rt[_val.end():]
+        fixed.append("schemas/fields.json: %s used_on_records %d -> %d" % (champ, avant, apres))
+    open(REGISTRY, "w", encoding="utf-8").write(_rt)
 
 # --- completeness, counted from vocabulary/completeness.json's OWN field list ---
 # The figures that went stale were the completeness ones, and they went stale for
@@ -655,12 +685,25 @@ for doc in (("README.md", os.path.join("docs", "SCHEMA.md"),
     texte = re.sub(r"`[^`]*`",
                    lambda m: "".join("\n" if c == "\n" else " " for c in m.group(0)),
                    texte)
+    _a_ecrire = []
     for pattern, vrai, quoi in ATTENDU:
         for m in re.finditer(pattern, texte, re.I):
             if int(m.group(1)) != vrai:
+                if FIX:
+                    # Offsets are those of the ORIGINAL file: the backtick
+                    # blanking above keeps every character in place.
+                    _a_ecrire.append((m.start(1), m.end(1), str(vrai), quoi, m.group(1)))
+                    continue
                 errors.append("%s:%d: says %s %s, the data says %d"
                               % (doc, texte.count("\n", 0, m.start()) + 1,
                                  m.group(1), quoi, vrai))
+    if _a_ecrire:
+        _orig = open(chemin, encoding="utf-8").read()
+        for debut, fin, val, quoi, avant in sorted(_a_ecrire, reverse=True):
+            _orig = _orig[:debut] + val + _orig[fin:]
+            fixed.append("%s:%d: %s %s -> %s" % (doc, _orig.count("\n", 0, debut) + 1,
+                                                 quoi, avant, val))
+        open(chemin, "w", encoding="utf-8").write(_orig)
     for mot in MOTS_NOMBRES:
         for nom in NOMS_SURVEILLES:
             for m in re.finditer(r"(?<![\w-])%s(?:-\w+)?\s+%s\b" % (mot, nom), texte, re.I):
@@ -686,6 +729,8 @@ unaccounted = len(registry) - used - planned - deprecated
 print("fields     : %d registered, %d in use, %d planned, %d deprecated%s"
       % (len(registry), used, planned, deprecated,
          (", %d IN NO BUCKET" % unaccounted) if unaccounted else ""))
+for f in fixed:
+    print("fixed      :", f)
 for w in warnings:
     print("warning    :", w)
 for e in errors:
