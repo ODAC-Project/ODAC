@@ -1,4 +1,9 @@
 {
   "id": "smsl",
-  "name": "SMSL"
+  "name": "SMSL",
+  "_terms_read_and_they_do_not_forbid_it": "www.smsl-audio.com read 2026-11-27 with curl. robots.txt is « User-agent: * » with an empty « Disallow: » - everything allowed, no Content-Signal, no AI group. The site links no terms, legal or privacy page from its menu or footer (Products, Support, About Us, News, Store), and the footer reads « © 2009 Foshan Shuangmusanlin technology Co., Ltd. All Rights Reserved. » - a copyright line, not a prohibition. The SMSL records written before 2026-11-27 cite this same host; they stand on this check. The two store links in the menu, SMSL.Shop and HiFi-Express.com, are separate hosts whose terms were not read and which nothing here cites.",
+  "_how_SMSL_pages_state_their_figures": "Every product page carries a bullet list under « Introduction » and nothing else in text: no specification table. The rate ceilings sit in the bullet naming the XMOS USB receiver, which is why every record here puts them on the usb input and nowhere else, and the DSD transport of the S/PDIF inputs sits in a separate bullet of the form « coaxial and optical support DoP64 ». Inputs a page never names get no block, even where the device surely has them: the page is the evidence, not the rear panel.",
+  "_models_read_and_not_recorded": "SU-3 (id 960) names an AK4496 and states no rate at all; DP5 (601), SD-9 (751) and N100 (907) are players or streamers that output digital audio and name no converter. SAP-, SH-, HO-, H- and P-series pages are amplifiers. PL-series are CD players or transports.",
+  "_LIN_LIN_LIN_is_an_SMSL_line": "M20, DS200 and DS300 are published on SMSL's own site under the model prefix « LIN.LIN.LIN ». No separate maker is named, so they are recorded under smsl with the prefix kept in the model name.",
+  "_terms_read_on": "2026-11-27"
 }

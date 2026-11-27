@@ -1,0 +1,41 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.smsl-audio.com/portal/product/detail/id/815.html",
+    "quote": "SMSL's own page for the DO300, read 2026-11-27 with curl, « Introduction » bullets: « New 3rd generation XMOS XU-316, PCM support up to 32bit/768kHz, DSD support to DSD512; »; « The new generation flagship DAC chip ES9039MSPRO of USA ESS has built-in MQA hard decoding; »; « USB, optical fiber, coaxial , AES, I2S support DSD transmission, coaxial and optical fiber support DOP64; »; « Qualcomm high-end Bluetooth chip, support LDAC (24bit/96kHz), APTX/HD, SBC, AAC; »",
+    "read_on": "2026-11-27"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-27",
+  "facts": {
+    "family": "ess_sabre",
+    "chip": "ESS ES9039MSPRO (« The new generation flagship DAC chip ES9039MSPRO of USA ESS »), XMOS XU-316 on USB.",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512",
+    "dop": true
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512"
+    },
+    "spdif_coax": {
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "spdif_optical": {
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "aes_ebu": {},
+    "i2s": {},
+    "bluetooth": {}
+  },
+  "_the_ceiling_is_the_XMOS_bullet": "The rate and DSD ceilings come from the bullet naming the XMOS USB receiver, so they are written on usb only. No other input is given a PCM rate: the page states none.",
+  "_optical_has_DoP64_and_no_rate": "Optical and coaxial get DoP64 from the maker's own clause and no PCM ceiling, because none is stated: copying 768 kHz onto optical is the error vocabulary/why-the-optical-default-stays-low.json exists to prevent.",
+  "_AES_and_I2S_carry_DSD_at_an_unstated_rate": "« USB, optical fiber, coaxial , AES, I2S support DSD transmission, coaxial and optical fiber support DOP64 »: AES and I2S are said to carry DSD and are NOT in the DoP64 clause. Their blocks are empty - DSD on them is stated, how and how much is not, and no field says « carries DSD » without saying one of those."
+}

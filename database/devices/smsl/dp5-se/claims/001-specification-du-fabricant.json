@@ -1,0 +1,22 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.smsl-audio.com/portal/product/detail/id/876.html",
+    "quote": "SMSL's own page for the DP5 SE, read 2026-11-27 with curl, « Introduction » bullets: « ES9039Q2M D/A Chip, Ultra-high dynamic range of 126dB, Ultra-low THD+N(0.00009%). »; « Supports streaming playback of DLNA and Airplay. »; « With USB DAC function which can play music from computer by USBjack. »; « Bluetooth with transmiting and receiving function and supports APTX format. »",
+    "read_on": "2026-11-27"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-27",
+  "facts": {
+    "family": "ess_sabre",
+    "chip": "ESS ES9039Q2M (« ES9039Q2M D/A Chip »)."
+  },
+  "inputs": {
+    "usb": {},
+    "net_dlna": {},
+    "net_airplay": {},
+    "bluetooth": {}
+  },
+  "_a_player_with_a_DAC_and_no_rate": "A network player (« Network music streamer ») with its own converter and a USB DAC input, and no sample rate anywhere on the page - the format list (« DSD , WAV , APE , FLAC ») is about files it plays, not a ceiling. Recorded for the converter and the inputs; every block is empty."
+}
