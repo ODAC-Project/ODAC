@@ -1,4 +1,7 @@
 {
   "id": "fosi_audio",
-  "name": "Fosi Audio"
+  "name": "Fosi Audio",
+  "_refused": "Read 2026-11-27 and refused. https://fosiaudio.com/policies/terms-of-service, Section 2: « You agree not to reproduce, duplicate, copy, sell, resell or exploit any portion of the Service, use of the Service, or access to the Service or any contact on the website through which the service is provided, without express written permission by us. » Section 12, independently sufficient: « you are prohibited from using the site or its content: (a) for any unlawful purpose; [...] (i) to spam, phish, pharm, pretext, spider, crawl, or scrape » « This website is operated by Fosi Audio. » The template is Shopify's, served on the same host as the product pages, so there is no separate specification host to fall back on. No product page was opened and no record will exist under this brand.",
+  "_it_can_be_lifted": "Conditioned on « express written permission by us ». On the letter list.",
+  "_refused_on": "2026-11-27"
 }

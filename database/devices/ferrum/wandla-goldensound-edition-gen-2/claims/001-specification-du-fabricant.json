@@ -1,0 +1,60 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://ferrum.audio/wandla-goldensound-edition-gen-2/",
+    "quote": "Ferrum's own page for the WANDLA GoldenSound Edition Gen 2, read 2026-11-27 with curl. Digital inputs: « USB Type-C (up to PCM 768 kHz / 32 bit, DSD 512, DoP 256) »; « I2S (up to PCM 768 kHz / 32 bit, DSD 512, DoP 256), PS Audio® compatible »; « ARC (up to PCM 192 kHz / 24 bit), TV input with CEC »; « AES (up to PCM 192 kHz / 24 bit, DoP 64) »; « Coaxial S/PDIF (up to PCM 192 kHz / 24 bit, DoP 64) »; « Optical S/PDIF (up to PCM 96 kHz / 24 bit*) » with « *may work up to PCM 192 kHz and DoP 64 – depending of customer optical cable and transmitter ». « DAC chip: ESS Sabre ES9038PRO »; « DAC resolution: 768 kHz / 32 bit, DSD 512 ». On the DSP: « Higher immunity to intersample overs even in bypass mode at full output level »; « You can now choose your tube sound signature by choosing one of five popular tube designs (EL34, KT88, 300B, 2A3 and 7062) ».",
+    "read_on": "2026-11-27"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-27",
+  "facts": {
+    "family": "ess_sabre",
+    "chip": "ESS ES9038PRO (« DAC chip: ESS Sabre ES9038PRO »), after Ferrum's own DSP running the GoldenSound effects and the DDF filters.",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512",
+    "dop": true
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512",
+      "dop_possible": true,
+      "dop_max": "DSD256"
+    },
+    "i2s": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512",
+      "dop_possible": true,
+      "dop_max": "DSD256"
+    },
+    "hdmi": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000,
+      "bits": 24
+    }
+  },
+  "_ARC_is_hdmi": "« ARC (up to PCM 192 kHz / 24 bit), TV input with CEC » is HDMI Audio Return Channel from a television, written as hdmi, as ferrum/wandla does.",
+  "_optical_the_asterisk": "« up to PCM 96 kHz / 24 bit* », the asterisk saying 192 kHz and DoP64 « may work » depending on the cable. 96000 recorded, no DoP on optical, the conservative branch as on ferrum/wandla.",
+  "_the_DSP_effects_change_the_signal": "Impact+, Tube Mode (five tube « signatures ») and Spatial Enhancement are DSP applied to the signal before conversion; the page also speaks of a « bypass mode ». Nothing is written into device_settings because the page does not say whether bypass is the default or what it bypasses exactly - but a measurement of this unit means little unless the effects are known to be off.",
+  "_filter_count_again_inconsistent": "« WANDLA has three ESS digital filters to choose as standard and [...] two digital filters created for Ferrum by renowned filter-maker Signalyst », while the specification block reads « Four proprietary Signalyst filters ». The same contradiction ferrum/wandla records; no filter list is written."
+}

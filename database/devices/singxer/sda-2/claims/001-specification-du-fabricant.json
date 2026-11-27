@@ -1,0 +1,41 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://download.s21i.co99.net/7097607/0/0/ABUIABA9GAAg14z96wUoyIP41gY.pdf",
+    "quote": "Singxer's own « Singxer SDA‐2 All‐In‐One DAC User Handbook » (Singxer SDA-2 handbook_V2.pdf), read 2026-11-27 with pdftotext. « Input source selection: By single‐pressing INPUT button you can switch different input source, in order, USB, I2S, OPT, COAX and AES; All input interfaces accept DSD signal, USB and I2S accept both DSD native and DSD DOP signal, while OPT, COAX and AES only accept DSD DOP signal. » « Sample rate display: PCM is from 44.1Khz up to 384Khz, DSD is from 2.82Mhz up to 24.57Mhz, known as DSD64 up to DSD512 » « Digital Filters: There are 6 digital filters in PCM mode, SHARP, SLOW, S‐sharp, S‐slow, NOS or Low‐dispersion; In DSD mode, the SDA‐2 uses only NOS (no oversampling) as the digital filter. »",
+    "read_on": "2026-11-27"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-27",
+  "facts": {
+    "chip": "Not named anywhere in the handbook.",
+    "pcm_max_hz": 384000,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true
+  },
+  "inputs": {
+    "usb": {
+      "native_dsd_possible": true,
+      "dop_possible": true
+    },
+    "i2s": {
+      "native_dsd_possible": true,
+      "dop_possible": true
+    },
+    "spdif_optical": {
+      "dop_possible": true
+    },
+    "spdif_coax": {
+      "dop_possible": true
+    },
+    "aes_ebu": {
+      "dop_possible": true
+    }
+  },
+  "_the_ceiling_is_a_DISPLAY_range": "« Sample rate display: PCM is from 44.1Khz up to 384Khz, DSD [...] DSD64 up to DSD512 » is the range the front panel shows, which the handbook gives in place of a specification. It is recorded as the device ceiling and NOT copied onto any input: the handbook never says which inputs reach 384 kHz, and an optical input at 384 kHz would be extraordinary.",
+  "_DSD_transport_per_input_is_stated": "Native and DoP on USB and I2S, DoP only on OPT, COAX and AES - stated input by input, so those flags are written. native_dsd_possible is NOT set false on the S/PDIF inputs, only omitted, because « only accept DSD DOP » is the maker saying what they accept; the false would be ours.",
+  "_NOS_in_DSD_mode_and_selectable_in_PCM": "« In DSD mode, the SDA‐2 uses only NOS (no oversampling) » and NOS is one of six PCM filters. Here NOS means non-oversampling, not New Old Stock (vocabulary/nos-means-two-things.json). Without a named converter the record cannot say what the NOS position does inside the chip, so correctable and device_settings are not written.",
+  "_family_absent": "No converter part and no vendor are named, so family is absent rather than guessed."
+}

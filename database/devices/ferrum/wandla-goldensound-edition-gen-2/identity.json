@@ -1,0 +1,17 @@
+{
+  "id": "ferrum/wandla-goldensound-edition-gen-2",
+  "kind": "dac",
+  "brand": "ferrum",
+  "model": "WANDLA GoldenSound Edition Gen 2",
+  "aliases": [
+    {
+      "text": "WANDLA GoldenSound Gen 2",
+      "relation": "spelling"
+    },
+    {
+      "text": "WANDLA GSE Gen 2",
+      "relation": "spelling"
+    }
+  ],
+  "_not_the_plain_WANDLA": "ferrum/wandla is the standard WANDLA and keeps its own record. This edition shares its digital ceilings on the maker's own page but adds DSP effects (Impact+, Tube Mode, Spatial Enhancement) that change the signal, which is reason enough for a record of its own."
+}

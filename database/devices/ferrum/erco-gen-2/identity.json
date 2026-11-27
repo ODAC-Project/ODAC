@@ -1,0 +1,13 @@
+{
+  "id": "ferrum/erco-gen-2",
+  "kind": "dac",
+  "brand": "ferrum",
+  "model": "ERCO Gen 2",
+  "aliases": [
+    {
+      "text": "ERCO",
+      "relation": "edition"
+    }
+  ],
+  "_the_first_generation_has_no_page": "Ferrum's product list carries only « ERCO Gen 2 – Headphone DAC/AMP ». The first ERCO has no page left on the maker's site, so it has no record; it is aliased here as an EDITION because nothing this catalogue holds separates the two - but the Gen 2 page itself says the I/V stage and the filter were changed and the « maximum resolution is now PCM 768 kHz and DSD 512 », so the first generation's ceilings were lower and a matcher resolving « ERCO » here will overstate them. Remove the alias the day the first generation gets a record of its own."
+}

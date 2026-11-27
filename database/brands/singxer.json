@@ -1,4 +1,8 @@
 {
   "id": "singxer",
-  "name": "Singxer"
+  "name": "Singxer",
+  "_terms_read_and_they_do_not_forbid_it": "singxer.com (广州声仕电子有限公司, Guangzhou Singxer Electronic Co., Ltd.) read 2026-11-27; the site is built on a hosted page builder that renders by script, so it was read in headless Chrome after curl returned only a shell. robots.txt does not exist (404). The menu has Home, Products, About us, Contact us, Distributors and downloads; there is no terms, legal or privacy page, and the footer reads « © 2026 广州声仕电子有限公司 版权所有 » - a copyright line, not a prohibition. Every figure here is from the maker's own PDF handbooks listed on its « 下载 downloads » page (col.jsp?id=108) and served from the builder's download host, download.s21i.co99.net/7097607/.",
+  "_what_the_manuals_do_and_do_not_say": "The handbooks are operating guides. They state the inputs, which carry DSD natively and which only as DoP, and the range of rates the front display shows; three of the four name NO converter part at all, so family is absent on those three. The display range is read as the accepted range because the manuals present it as what the unit plays, not as a separate specification - each record says so.",
+  "_models_not_recorded": "SU-1, SU-2 and SU-6 are USB-to-I2S/S/PDIF digital interfaces with no conversion; SA-1, SA-2 and SA-90 are amplifiers. Only the SDA-series are converters.",
+  "_added_on": "2026-11-27"
 }

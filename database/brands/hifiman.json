@@ -1,4 +1,6 @@
 {
   "id": "hifiman",
-  "name": "HIFIMAN"
+  "name": "HIFIMAN",
+  "_refused": "Read 2026-11-27 and refused. hifiman.com/terms: « The written content displayed on this website is owned by its respective author and may not be reproduced in whole or in part without the express written permission of the author. » robots.txt disallows only /account/ and /api/, which grants nothing against the clause. No product page was opened and no record will exist under this brand.",
+  "_refused_on": "2026-11-27"
 }

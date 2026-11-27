@@ -1,4 +1,7 @@
 {
   "id": "ferrum",
-  "name": "Ferrum Audio"
+  "name": "Ferrum Audio",
+  "_terms_read_and_they_do_not_forbid_it": "ferrum.audio/terms-conditions/ read 2026-11-27 with curl. It is an online-shop sales contract under Polish consumer law: who the seller is, how orders, payment, delivery, withdrawal and complaints work. Swept for copyright, intellectual, trademark, reproduc, content, scrap and crawl: the only « content » clause is « Buyers are prohibited from supplying unlawful content when using the Online Shop », which governs what a buyer submits, not what the site publishes. No clause on copying, reusing or extracting the site's content. robots.txt (WordPress/WooCommerce) disallows only log, transient and upload folders, add-to-cart and wp-admin - no Content-Signal and no AI group. The WANDLA record of 2026-11-24 was written before this check; it stands on it now.",
+  "_models_read_and_not_recorded": "BROEN is a « network streaming transport » with no conversion stage; OOR is a headphone amplifier and HYPSOS a power supply. « WANDLA GoldenSound Edition Converting Plugin Gen 2 » is a firmware upgrade for an existing WANDLA, not a device.",
+  "_added_on": "2026-11-27"
 }

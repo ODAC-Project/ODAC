@@ -1,0 +1,41 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://ferrum.audio/erco-2/",
+    "quote": "Ferrum's own page for the ERCO Gen 2 headphone DAC/amp, read 2026-11-27 with curl. Specifications: « DAC chip: ESS Sabre ES9028PRO »; « DAC resolution: PCM up to 768k @32bit; DSD up to 512 ( 22.6 MHz / 24.6 MHz ) »; « Digital inputs: USB-C (MQA, up to PCM 32-bit/ 768kHz, DSD512, DoP256 ); S/PDIF coaxial (MQA, up to PCM 24-bit/192 kHz, DoP64); S/PDIF optical (MQA, up to PCM 24-bit/96 kHz guaranteed, should work up to PCM 24-bit/192 kHz and DoP64 – depends of user’s optical cable and transmitter) ». On the filter: « SERCE’s DSP engine provides oversampling using DDF preferred HQ Apodizing digital filter ».",
+    "read_on": "2026-11-27"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-27",
+  "facts": {
+    "family": "ess_sabre",
+    "chip": "ESS ES9028PRO (« DAC chip: ESS Sabre ES9028PRO »), behind Ferrum's own SERCE DSP doing the oversampling and an in-house I/V stage.",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512",
+    "dop": true
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512",
+      "dop_possible": true,
+      "dop_max": "DSD256"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 96000,
+      "bits": 24
+    }
+  },
+  "_optical_96_guaranteed_and_the_rest_conditional": "« up to PCM 24-bit/96 kHz guaranteed, should work up to PCM 24-bit/192 kHz and DoP64 – depends of user’s optical cable and transmitter ». The same wording, and the same choice, as ferrum/wandla: 96000 is the guaranteed figure and the one recorded, and DoP64 on optical is left OUT for the same reason - the maker conditions it on the cable. Coaxial gets DoP64 unconditionally.",
+  "_usb_DSD512_native_by_subtraction": "USB is rated « DSD512, DoP256 »: two DSD figures, one marked DoP. dsd_max DSD512 and dop_max DSD256 hold exactly that. native_dsd_possible is NOT written: the page never says « native », and DSD512 above a DoP256 ceiling implies a non-DoP path without naming it.",
+  "_the_oversampling_is_Ferrums_not_the_chips": "« SERCE’s DSP engine provides oversampling using DDF preferred HQ Apodizing digital filter » - the oversampling filter runs in Ferrum's own DSP ahead of the ESS part. No bypass or NOS position is stated, so correctable is not written."
+}

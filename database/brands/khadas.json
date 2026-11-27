@@ -4,5 +4,7 @@
   "usb_vendor_ids": [
     "0x3353"
   ],
-  "usb_vendor_ids_source": "Linux kernel USB audio quirk tables, sound/usb/quirks.c (d2636407bf8c, 2026-11-12) and sound/usb/quirks-table.h (e7c66b3e249e, 2026-11-04)"
+  "usb_vendor_ids_source": "Linux kernel USB audio quirk tables, sound/usb/quirks.c (d2636407bf8c, 2026-11-12) and sound/usb/quirks-table.h (e7c66b3e249e, 2026-11-04)",
+  "_refused": "Read 2026-11-27 and refused. www.khadas.com/terms-of-use: « This material includes, but is not limited to, the design, layout, look, appearance and graphics. Reproduction is prohibited other than in accordance with the copyright notice, which forms part of these terms and conditions. » and « Unauthorized use of this website may give rise to a claim for damages and/or be a criminal offense. » robots.txt is Wix's stock file (« User-agent: * / Allow: / »), which grants nothing against the clause. No product page was opened and no record will exist under this brand. The USB vendor id above stays: it comes from the Linux kernel, not from this site.",
+  "_refused_on": "2026-11-27"
 }
