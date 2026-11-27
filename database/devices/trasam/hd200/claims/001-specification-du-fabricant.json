@@ -1,0 +1,36 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.trasam.cn/products/hd200/",
+    "quote": "TRASAM's own page for the HD200 « 四DAC桌面解码耳放前级一体机 », read 2026-11-27 with curl. Specification table: « DAC配置 » « ES9039Q2M × 4 »; « USB界面 » « XMOS XU316 16核 »; « USB解码 » « PCM 768kHz/32bit · DSD512 · MQA »; « 光纤/同轴 » « 最高192kHz/24bit »; « 蓝牙 » « 高通QCC3084 · 蓝牙5.4 · LDAC/aptX HD/aptX LL/AAC/SBC »; « 接口配置 » « 数字输入：USB-B/光纤/同轴/蓝牙 | 模拟输入：RCA×1 | 输出：4.4mm平衡/3.5mm单端/XLR/RCA ». And « RCA 模拟输入为纯模拟直通，不经过 AD/DA 转换，因此不会做数字处理。 »",
+    "read_on": "2026-11-27"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-27",
+  "facts": {
+    "family": "ess_sabre",
+    "chip": "Four ESS ES9039Q2M in parallel, XMOS XU316 on USB, Qualcomm QCC3084 for Bluetooth.",
+    "pcm_max_hz": 768000,
+    "dsd_max": "DSD512"
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dsd_max": "DSD512"
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "bluetooth": {}
+  },
+  "_optical_and_coax_share_one_stated_row": "« 光纤/同轴 » « 最高192kHz/24bit » is one row naming both sockets, so 192 kHz on optical is the maker's figure. Nothing on the page says whether DSD reaches them.",
+  "_the_analogue_input_bypasses_the_converter": "« RCA 模拟输入为纯模拟直通，不经过 AD/DA 转换 » - the RCA input is a pure analogue path, never digitised. Recorded because it means the converter is not in the chain for that source, which is the opposite of what many desktop units do.",
+  "_USB_native_or_DoP_unstated": "« PCM 768kHz/32bit · DSD512 · MQA » with no native or DoP word, so neither flag is written."
+}

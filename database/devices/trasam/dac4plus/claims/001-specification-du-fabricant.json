@@ -1,0 +1,22 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.trasam.cn/products/dac4plus/",
+    "quote": "TRASAM's own page for the DAC4PLUS « 解码器 », read 2026-11-27 with curl. Core features: « ESS9028PRO 双核DAC芯片 »; « USB / 光纤 / 同轴三路输入 »; « RCA + 3.5mm耳机双路输出 »; « 支持DSD64/128 ». Details: « 采用 ESS9028PRO 双核DAC芯片，信噪比115dB以上，支持 DSD64/128 高清格式。 »",
+    "read_on": "2026-11-27"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-27",
+  "facts": {
+    "family": "ess_sabre",
+    "chip": "ESS ES9028PRO, described as « 双核 » (dual-core); the page does not say whether that means one part or two.",
+    "dsd_max": "DSD128"
+  },
+  "inputs": {
+    "usb": {},
+    "spdif_optical": {},
+    "spdif_coax": {}
+  },
+  "_thin_and_why_it_is_still_written": "The page states a converter part, a DSD ceiling and three inputs - and no PCM rate, no word length and no per-input figure. That is thin, but unlike the xDuoo pages set aside as too thin it does carry behaviour: DSD128 is a ceiling a consumer can act on. pcm_max_hz is absent."
+}

@@ -1,0 +1,61 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://en.cen-grand.com/product/145.html",
+    "quote": "Cen.Grand's own English page for the DSDAC 1.0 (standard model / Super clock model), read 2026-11-27 with curl. On the conversion stage: « It does not use conventional chips for DA conversion but FPGA and discrete components for digital processing . » and « The clock of DSDAC1.0 can be sent to shift register directly without frequency divider ». On what it does to the signal: « DSDAC1.0 can increase the frequency of all input data including PCM or dsd64 to dsd1024. If the input data is higher than the dsd128, you can also output it directly without increasing. » On DSD transport: « DSDAC1.0 has two ways to input DSD source code: one is to input dsd64 via SPDIF in DOP mode , and the other is to input dsd512 via USB in native mode. » and « The XU208 scheme of XMOS inside DSDAC1.0 has ground isolation function ». Functional parameters: « SPDIF sampling rate: PCM 192 kHz / dop64 (AES, optical fiber, coaxial, BNC ) »; « USB sampling rate: pcm384 / dsd512 (native) »; « Output level: 5.0V RMS (XLR), 2.5V RMS (RCA) ». On the two editions: « The clock system of super clock model has higher performance, RMS jitter is as low as 100fs ».",
+    "read_on": "2026-11-27"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-27",
+  "facts": {
+    "technology": "discrete_dsd",
+    "family": "discrete_dsd",
+    "chip": "No converter chip, by the maker's own statement: « It does not use conventional chips for DA conversion but FPGA and discrete components ». An FPGA upsamples to DSD and a shift register clocked straight from the femtosecond oscillator feeds the analogue stage. The XMOS XU208 named on the page is the USB receiver, not the converter.",
+    "pcm_max_hz": 384000,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true,
+    "pcm_reconverted_to_dsd": true,
+    "dsd_reconverted_to_pcm": false,
+    "dsd_direct": "to_be_measured",
+    "device_settings": [
+      {
+        "setting": "DSD upsampling",
+        "set_to": "unknown",
+        "why": "« If the input data is higher than the dsd128, you can also output it directly without increasing. » So above DSD128 the upsampling is a CHOICE and at or below it the page offers none. The page does not say where the choice is made or what it is called, so no value is written, and a measurement of DSD256 or DSD512 on this device means nothing until it is known which way it was set."
+      }
+    ]
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    }
+  },
+  "_DISCRETE_DSD_ON_THE_MAKERS_OWN_WORDS": "technology and family are discrete_dsd, and the record says exactly why, because the emm-labs/da2i and nagra/hd-dac-x notes set the bar. Nagra's « A high-performance FPGA performs all internal calculations » was withdrawn as a technology because it speaks of PROCESSING and names no conversion stage. This page names the conversion stage negatively and positively: no « conventional chips for DA conversion », and a clock sent « to shift register directly » whose performance « is directly reflected in the analog output ». A shift register feeding the analogue stage at a DSD rate is what a discrete DSD converter is. The Chinese page (www.cen-grand.com/product/121.html) says it more plainly still: the clock goes straight to « DA转换环节的移位寄存器 », the shift register OF THE DA CONVERSION STAGE.",
+  "_PCM_BECOMES_DSD_AND_DSD64_IS_REMADE": "« DSDAC1.0 can increase the frequency of all input data including PCM or dsd64 to dsd1024 ». pcm_reconverted_to_dsd is true: a converter whose only conversion stage is a DSD shift register has no PCM path, and the maker says PCM is raised to DSD. The maker's verb is « can », not « does »; it is read here as describing the device's function rather than an option, because no PCM path is described anywhere and the option the page DOES describe is a different one - letting DSD above DSD128 through unchanged. dsd_reconverted_to_pcm is false for the same reason it is false on nagra/hd-dac-x: a machine that turns everything into DSD does not turn DSD back into PCM.",
+  "_dsd_direct_is_a_live_question_not_a_family_default": "The discrete_dsd family says dsd_direct true, and that would be wrong here at the rates most people send. DSD64 is UPSAMPLED - the whole point of the design, « Its high-precision DSD frequency raising algorithm solves the playback problem of dsd64 » on the sister page - so it does not reach the shift register as sent. Above DSD128 the maker says the upsampling CAN be skipped. So the answer depends on the rate and on a setting the page does not name: to_be_measured, which overrides the family for this device. The family's modulator_order of 7 is the family's default and is NOT stated by Cen.Grand; the page describes its upsampler only as « a complex mathematical problem ».",
+  "_SPDIF_IS_DOP64_ON_ALL_FOUR_AND_OPTICAL_IS_STATED": "« PCM 192 kHz / dop64 (AES, optical fiber, coaxial, BNC ) » names the four sockets the ceiling applies to, optical included, so 192 kHz on optical is the maker's figure and not a copy of a device-level ceiling. BNC and coaxial are both spdif_coax: the vocabulary names the electrical interface, not the connector. DSD reaches those four only as DoP64.",
+  "_USB_native_and_DoP_unstated": "USB is rated « pcm384 / dsd512 (native) » with a custom XMOS driver: « We have customized the special driver from XMOS to enable DSDAC1.0 to receive the source code of dsd512 in native mode. » Whether USB also takes DoP is not said, so dop_possible is absent on USB rather than guessed. No word length is given for any input.",
+  "_why_this_record_exists_and_where_it_was_identified": "The model and its exact name were identified from a retailer's listing (« CEN.GRAND DSDAC 1.0 SUPERCLOCK »), and EVERY fact here is from the maker's own page. The retailer's page was not used as a source."
+}

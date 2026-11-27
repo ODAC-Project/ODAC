@@ -1,0 +1,28 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.trasam.cn/products/ds7plus/",
+    "quote": "TRASAM's own page for the DS7PLUS « 高端流媒体解码器 », read 2026-11-27 with curl. Specification table: « DAC配置 » « ES9039SPRO × 2 + XM OS XU316 16核 »; « 接口配置 » « 数字输入：USB/光纤/同轴/HDMI IIS/AES | 模拟输出：XLR + RCA各1组 ». Feature list: « MQA全展开 + DSD512：母带级MQA展开与DSD512硬解 »; « 高通QCC3084：蓝牙5.4，LDAC/aptX HD全格式无线 »; « Roon ready：顶级串流支持，融入Roon生态系统 ».",
+    "read_on": "2026-11-27"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-27",
+  "facts": {
+    "family": "ess_sabre",
+    "chip": "Two ESS ES9039SPRO, with an XMOS XU316 as the USB interface and a Qualcomm QCC3084 for Bluetooth.",
+    "dsd_max": "DSD512"
+  },
+  "inputs": {
+    "usb": {},
+    "spdif_optical": {},
+    "spdif_coax": {},
+    "i2s": {},
+    "aes_ebu": {},
+    "bluetooth": {},
+    "net_transparent": {}
+  },
+  "_NO_PCM_RATE_ANYWHERE": "The page states DSD512 and MQA and never a PCM sample rate - not in the table, the feature list or the FAQ. pcm_max_hz is ABSENT. The DS8 page beside it says 768 kHz for its own USB, and that is a fact about the DS8.",
+  "_DSD512_is_not_attached_to_an_input": "« DSD512硬解 » is stated for the device. In practice that is the USB path, but the page does not say which input, so dsd_max is written at device level only and every input block is empty.",
+  "_Roon_ready_is_net_transparent": "« Roon ready » is the one network capability the page names; Roon's RAAT is one of the protocols net_transparent covers. No rate is stated, so the block is empty."
+}

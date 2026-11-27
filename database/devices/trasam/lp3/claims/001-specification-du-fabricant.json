@@ -1,0 +1,25 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.trasam.cn/products/lp3/",
+    "quote": "TRASAM's own page for the LP3 « 多功能音频解码器 », read 2026-11-27 with curl. Specification table: « DAC配置 » « ES9039Q2M × 8 + 第三代XMOS XU316 16核 »; « 接口配置 » « 数字输入：USB-B/光纤/同轴/HDMI IIS/蓝牙 | 模拟输出：XLR + RCA ». Feature list: « MQA全展开 + DSD512：高清格式通吃，母带文件不打折 »; « 纯解码器（非播放器）：不读U盘/硬盘、无流媒体、无WiFi、无RCA模拟输入 ». Details: « 内置 高通QCC3084蓝牙5.4 ，支持LDAC/APTX-HD/APTX/AAC/SBC/LE Audio全格式 ».",
+    "read_on": "2026-11-27"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-27",
+  "facts": {
+    "family": "ess_sabre",
+    "chip": "Eight ESS ES9039Q2M in parallel, with an XMOS XU316 USB interface and a Qualcomm QCC3084 for Bluetooth.",
+    "dsd_max": "DSD512"
+  },
+  "inputs": {
+    "usb": {},
+    "spdif_optical": {},
+    "spdif_coax": {},
+    "i2s": {},
+    "bluetooth": {}
+  },
+  "_NO_PCM_RATE_ANYWHERE": "DSD512 and MQA are stated; no PCM sample rate appears on the page. pcm_max_hz is absent, and dsd_max is written at device level because the page does not tie it to an input.",
+  "_no_network_by_the_makers_own_words": "« 无流媒体、无WiFi » - no streaming, no Wi-Fi - so no network block, and the comparison table's « 蓝牙5.4 » under « WiFi/蓝牙 » is Bluetooth only."
+}

@@ -1,0 +1,48 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://en.cen-grand.com/product/146.html",
+    "quote": "Cen.Grand's own English page for the DSDAC 1.0 (deluxe model), read 2026-11-27 with curl. « DSDAC 1.0 deluxe model is a new product which was developed on the basis of the standard model by optimizing the clock system and making major modifications to the circuit. »; « Its high-precision DSD frequency raising algorithm solves the playback problem of dsd64 perfectly. »; « The clock of DSDAC1.0 can be sent to shift register directly without frequency divider ». DSD transport: « one is to input dsd64 via SPDIF in DOP mode , and the other is to input dsd512 via USB in native mode. » Functional parameters: « SPDIF sampling rate: PCM 192 kHz / dop64 (AES, optical fiber, coaxial, BNC ) »; « USB sampling rate: pcm384 / dsd512 (native) »; « Output level: 6.2V RMS (XLR), 3.51V RMS (RCA) ». Pre-amp: « Deluxe model can also be used as a Pre-Amp. It can be provide maximaum 5db gain for the input signal. In Pre-Amp mode the funtion of DAC would be terminated . »",
+    "read_on": "2026-11-27"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-27",
+  "facts": {
+    "family": "unknown",
+    "chip": "No part number. The page describes the same DSD architecture as the standard model's - a « high-precision DSD frequency raising algorithm » and a clock sent « to shift register directly » - but does not repeat the standard page's sentence that no conventional DA chip is used. XMOS XU208 is the USB receiver.",
+    "pcm_max_hz": 384000,
+    "dsd_max": "DSD512",
+    "native_dsd": true,
+    "dop": true
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "dsd_max": "DSD512",
+      "native_dsd_possible": true
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    }
+  },
+  "_NOT_PROMOTED_FROM_THE_SISTER_PAGE": "technology, pcm_reconverted_to_dsd and dsd_reconverted_to_pcm are stated on cengrand/dsdac-1-0 and NOT here, deliberately. This page says the Deluxe was built « on the basis of the standard model » with « major modifications to the circuit », and it never repeats the two sentences those fields rest on: « It does not use conventional chips for DA conversion » and « increase the frequency of all input data including PCM ». The rule set on emm-labs/da2i against meitner/ma3i applies - a shared feature list is not shared evidence - so family is \"unknown\", which makes a consumer take the conservative branch, rather than absent, which would let the cascade call it delta-sigma. A reader who accepts « on the basis of the standard model » as covering the conversion stage can promote all three from the standard model's claim; the evidence for doing so is quoted here.",
+  "_SPDIF_IS_DOP64_ON_ALL_FOUR_AND_OPTICAL_IS_STATED": "Same parameter line as the standard model: « PCM 192 kHz / dop64 (AES, optical fiber, coaxial, BNC ) » names optical among the four, so its 192 kHz is the maker's own. BNC is spdif_coax.",
+  "_two_inputs_this_record_does_not_hold": "Cen.Grand's GLD 1.0 page (en.cen-grand.com/product/169.html) shows « the POW receiver module installed inside the DSDAC1.0 DAC, along with the POW panel on the rear » and « an HDMI-I2S input interface », and recommends « a DAC with POW input, such as the DSDAC1.0 Deluxe Model ». POW is the maker's own optical data-plus-clock link and has no key in the interface vocabulary; the HDMI-I2S socket is not mentioned on THIS page and no rate is given for either. Neither is written as an input block.",
+  "_preamp_mode_switches_the_DAC_off": "« In Pre-Amp mode the funtion of DAC would be terminated . » An analogue mode, not a digital setting; recorded because a consumer finding no lock on this device might be looking at it."
+}

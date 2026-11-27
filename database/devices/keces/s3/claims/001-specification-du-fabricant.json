@@ -1,0 +1,46 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.kecesaudio.com/S3.html",
+    "quote": "KECES's own page for the S3 DAC Headphone Amplifier & Preamplifier, read 2026-11-27 with curl; the Features and Specs tabs are both in the served HTML. Features: « High-performance DAC-ESS ES9026PRO. »; « USB DAC: PCM 32 bit/384kHz and DSD DSD64(DoP)/DSD128 (DoP) DSD64/DSD128/DSD256 (ASIO Native). »; « COAXIAL/OPTICAL DAC: PCM 24 bit/192kHz and DSD DSD64(DoP). » Specs, Digital Input: COAXIAL « PCM support up to 16-24Bit /44.1kHz、48kHz、88.2kHz、96kHz、176.4kHz、192kHz. DSD support up to DSD64 (DoP). »; OPTICAL, the same words; USB « PCM support up to 16-32Bit/44.1kHz、48kHz、88.2kHz、96kHz、176.4kHz、192kHz、352.8kHz、384kHz. DSD support up to DSD64(DoP)/DSD128 (DoP) DSD64/DSD128/DSD256 (ASIO Native) ».",
+    "read_on": "2026-11-27"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-27",
+  "facts": {
+    "family": "ess_sabre",
+    "chip": "ESS ES9026PRO (« High-performance DAC-ESS ES9026PRO. »).",
+    "pcm_max_hz": 384000,
+    "dsd_max": "DSD256",
+    "native_dsd": true,
+    "dop": true
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "dsd_max": "DSD256",
+      "native_dsd_possible": true,
+      "dop_possible": true,
+      "dop_max": "DSD128"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD64",
+      "dop_possible": true,
+      "dop_max": "DSD64"
+    }
+  },
+  "_per_input_on_the_makers_own_table": "The Specs tab rates each digital input on its own row, optical included, so every block here is the maker's figure for that socket. USB states the native and DoP ceilings separately - DSD256 native « (ASIO Native) », DSD128 over DoP - which is exactly what inputs.dsd_max and inputs.dop_max were registered to hold.",
+  "_native_DSD_needs_ASIO": "« (ASIO Native) »: native DSD256 is stated through ASIO, i.e. with the maker's Windows driver (the page links « Windows USB drivers - Download here »). On a host without that driver path the USB DSD ceiling may be the DoP one; the page does not say.",
+  "_analogue_inputs_are_a_preamp": "XLR and RCA analogue inputs (« Input/Output Gain: 0dB ») feed the preamplifier and are not recorded."
+}
