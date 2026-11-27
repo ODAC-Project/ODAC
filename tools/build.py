@@ -196,6 +196,11 @@ print("contested fields: %d" % contested_total)
 # it: it reads the database and never builds, so it has no size to compare. The
 # lesson of the completeness count applied immediately: PUT THE CHECK WHERE THE
 # FIGURE LIVES.
+# --fix: write the size line and the factor this build measured, instead of
+# stopping. Same reasoning as the verifier's --fix: the guard already prints the
+# exact replacement, so a person retyping it adds nothing but the chance of a typo.
+# CI runs without it, so a stale figure still fails there.
+FIX = "--fix" in sys.argv[1:]
 _doc = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
                     "docs", "CONSUMING.md")
 if os.path.exists(_doc):
@@ -215,6 +220,22 @@ if os.path.exists(_doc):
             # in case a line was already written that way.
             def _esp(n):
                 return "{:,}".format(n).replace(",", " ")
+            if FIX:
+                # The first group may begin with the whitespace or newline that
+                # precedes the figure (\s is in the class): start at its first
+                # digit, or the rewrite would swallow the line break above it.
+                _d = _m.start(1) + re.search(r"\d", _m.group(1)).start()
+                _fin_ligne = _t.find("\n", _m.end())
+                _fin_ligne = len(_t) if _fin_ligne < 0 else _fin_ligne
+                _reste = re.sub(r"\(\d+% off\)", "(%.0f%% off)"
+                                % (100 - 100.0 * len(packed) / len(raw)),
+                                _t[_m.end():_fin_ligne], count=1)
+                _t = (_t[:_d] + "%s bytes raw   \u2192   %s bytes gzipped"
+                      % (_esp(len(raw)), _esp(len(packed))) + _reste + _t[_fin_ligne:])
+                open(_doc, "w", encoding="utf-8").write(_t)
+                print("fixed docs/CONSUMING.md: size line -> %d raw, %d gzipped"
+                      % (len(raw), len(packed)))
+        if _dit != [len(raw), len(packed)] and not FIX:
             print("ERROR docs/CONSUMING.md: says %d raw and %d gzipped, "
                   "this build is %d and %d" % (_dit[0], _dit[1], len(raw), len(packed)))
             # Print the corrected line ready to paste. A guard that only says "wrong"
@@ -247,7 +268,11 @@ if os.path.exists(_doc):
         print("       it compresses by a factor of %.1f" % _fac)
         sys.exit(1)
     _ditf = float(_mf.group(1).replace(",", "."))
-    if abs(_ditf - _fac) > 0.1:
+    if abs(_ditf - _fac) > 0.1 and FIX:
+        _t = _t[:_mf.start(1)] + "%.1f" % _fac + _t[_mf.end(1):]
+        open(_doc, "w", encoding="utf-8").write(_t)
+        print("fixed docs/CONSUMING.md: compression factor %s -> %.1f" % (_mf.group(1), _fac))
+    elif abs(_ditf - _fac) > 0.1:
         print("ERROR docs/CONSUMING.md: says it compresses by a factor of %s, "
               "this build compresses by %.1f" % (_mf.group(1), _fac))
         print("       replace that figure with: %.1f" % _fac)
