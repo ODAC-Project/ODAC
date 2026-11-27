@@ -1,0 +1,25 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.audiophonics.fr/fr/modules-dac-et-interfaces/audiophonics-i-sabre-lte-dac-es9023-i2s-pour-raspberry-pi-2-3-4-p-11215.html",
+    "quote": "Audiophonics' own product page, read 2026-11-27, for a Raspberry Pi DAC board. Converter « ES9023 »; rates « 24bit 192 kHz »; input I2S on the Raspberry Pi GPIO (and an XHP header); output RCA; a footprint for an optional TCXO clock. Driver: « Hifiberry DAC ».",
+    "read_on": "2026-11-27"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-27",
+  "facts": {
+    "pcm_max_hz": 192000,
+    "bits": 24,
+    "family": "ess_sabre",
+    "chip": "ESS ES9023."
+  },
+  "inputs": {
+    "i2s": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_maker_terms": "See brands/audiophonics.json: the maker's terms forbid reproduction; recorded on the project owner's decision of 2026-11-27, pending written permission.",
+  "_no_DSD": "No DSD on the page; dsd_max is left out (see vocabulary/dsd-max-has-no-word-for-none.json)."
+}

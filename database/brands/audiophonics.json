@@ -1,4 +1,6 @@
 {
   "id": "audiophonics",
-  "name": "Audiophonics"
+  "name": "Audiophonics",
+  "_terms_FORBID_reproduction_and_the_owner_overrode_it": "audiophonics.fr read 2026-11-27. robots.txt disallows only cart, account and search paths. Its Conditions générales de vente, article 12 « PROPRIETE INTELLECTUELLE », read: « Toute reproduction totale ou partielle de ce contenu est strictement interdite ». By this repository's standing rule (vocabulary/sources-and-redistribution.json) a clause naming REPRODUCTION is a refusal, the same shape as Simaudio's. DECISION 2026-11-27 by Rémi, project owner: Audiophonics MAKES the products recorded under this brand, and its own-brand DACs are recorded anyway, while a written permission is requested from Audiophonics by email the same day. To keep the overlap with the clause as small as possible, each claim states the facts in the curator's words and quotes only the specification values themselves. If Audiophonics refuses, these records are removed and the brand joins the register of refusals.",
+  "_only_own_brand_products": "Audiophonics is also a RETAILER of many other brands. Nothing here is taken from its catalogue of other makers' products: those come from each maker's own pages, one device at a time. The DigiPi boards (WM8804 digital interfaces, no conversion) have no record."
 }

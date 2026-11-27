@@ -1,0 +1,29 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.audiophonics.fr/fr/modules-dac/audiophonics-dac-sabre-es9018k2m-i2s-spdif-vers-rca-32bit-384khz-dsd256-p-15975.html",
+    "quote": "Audiophonics' own product page, read 2026-11-27, for a bare DAC module. « Puce DAC | ESS ES9018K2M »; « PCM jusqu'à 32bit 384kHz »; « DSD jusqu'au DSD256 »; inputs « 1x I2S (XH 2.54mm 6 pôles) » and « 1x SPDIF sur pastilles à souder », chosen by a jumper; output RCA « 2Vrms ».",
+    "read_on": "2026-11-27"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-27",
+  "facts": {
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD256",
+    "family": "ess_sabre",
+    "chip": "ESS ES9018K2M, JRC4580D output op-amp."
+  },
+  "inputs": {
+    "i2s": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "dsd_max": "DSD256"
+    },
+    "spdif_coax": {}
+  },
+  "_maker_terms": "See brands/audiophonics.json: the maker's terms forbid reproduction; recorded on the project owner's decision of 2026-11-27, pending written permission.",
+  "_the_ceilings_are_the_i2s_ones": "The page gives one rate line for the board. S/PDIF cannot carry 384 kHz, so the figures are written on the I2S input only and the S/PDIF block is left empty.",
+  "_a_buyer_reports_192": "A customer review on the same page says the board, left unprogrammed, stops at 192 kHz. A review is not the maker; noted, not recorded."
+}

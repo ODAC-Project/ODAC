@@ -1,0 +1,44 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.audiophonics.fr/fr/modules-dac-et-interfaces/audiophonics-evo-sabre-dac-symetrique-2x-es9038q2m-usb-gpio-raspberry-pi-spdif-bluetooth-xlr-rca-p-14562.html",
+    "quote": "Audiophonics' own product page, read 2026-11-27, for the EVO-SABRE DAC module. « Puce DAC | 2x ESS ES9038Q2M » in « Symétrique » (dual mono). Inputs: S/PDIF coaxial and optical, Bluetooth, « USB-B (XMOS) » with « XMOS U208 », I2S on the Raspberry Pi GPIO. Rates per input: « USB : 768kHz / DOP256 »; « RPI I2S : 384kHz / DOP128 »; « SPDIF : 192kHz / DOP64 ». Outputs: RCA « 2V RMS » and XLR « 4V RMS ». Logic: « Altera Max ».",
+    "read_on": "2026-11-27"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-27",
+  "facts": {
+    "pcm_max_hz": 768000,
+    "bits": 32,
+    "dsd_max": "DSD256",
+    "dop": true,
+    "family": "ess_sabre",
+    "chip": "Two ESS ES9038Q2M, one per channel (dual mono, balanced), behind an XMOS XU208 USB receiver."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 768000,
+      "bits": 32,
+      "dop_max": "DSD256"
+    },
+    "i2s": {
+      "pcm_max_hz": 384000,
+      "dop_max": "DSD128"
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dop_max": "DSD64"
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dop_max": "DSD64"
+    },
+    "bluetooth": {}
+  },
+  "_maker_terms": "See brands/audiophonics.json: the maker's terms forbid reproduction; recorded on the project owner's decision of 2026-11-27, pending written permission.",
+  "_THE_PAGE_CONTRADICTS_ITSELF_ON_SPDIF_DSD": "The specification table says « SPDIF : 192kHz / DOP64 »; the prose above it says the S/PDIF inputs accept « DSD 128 DOP ». The table is kept, being the lower and the more specific; the conflict is written here rather than resolved by guessing.",
+  "_one_record_for_module_and_packs": "Audiophonics also sells the same module as « EVO-SABRE PACK » (with case, Raspberry Pi and supply, listed as a network player) and in a RaspDAC variant. Same converter and inputs: recorded once, the packs as editions."
+}

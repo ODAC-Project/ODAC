@@ -1,0 +1,30 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.audiophonics.fr/fr/modules-dac/audiophonics-dac1796-module-dac-cs8416-pcm1796-24bit-192khz-p-4993.html",
+    "quote": "Audiophonics' own product page, read 2026-11-27, for a DAC board to build into a case. S/PDIF reception « Cirrus Logic CS8416 »; « Décodage jusqu'a 24Bit 192KHz par Burr-Brown PCM1796 »; version 1.1 has « 2 entrées SPDIF , une optique TOSLINK et une Coaxiale »; « Filtre par défaut : \"Sharp\" (non modifiable) »; three OP275 output op-amps.",
+    "read_on": "2026-11-27"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-27",
+  "facts": {
+    "pcm_max_hz": 192000,
+    "bits": 24,
+    "family": "ti_burr_brown",
+    "chip": "Burr-Brown PCM1796 fed by a Cirrus CS8416 receiver."
+  },
+  "inputs": {
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_maker_terms": "See brands/audiophonics.json: the maker's terms forbid reproduction; recorded on the project owner's decision of 2026-11-27, pending written permission.",
+  "_fixed_filter": "The digital filter is the PCM1796's sharp roll-off and cannot be changed (« non modifiable »).",
+  "_no_DSD": "No DSD on the page."
+}

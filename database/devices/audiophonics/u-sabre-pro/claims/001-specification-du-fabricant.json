@@ -1,0 +1,28 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "https://www.audiophonics.fr/fr/dac-sans-volume/audiophonics-u-sabre-pro-dac-usb-32bit384khz-sa9227-es9018k2m-otg-tcxo-p-16739.html",
+    "quote": "Audiophonics' own product page, read 2026-11-27. USB-powered DAC: converter « ESS Sabre ES9018K2M », USB receiver « SAVIAUDIO SA9227 », rates « 32bit / 384kHz / DSD64 », and the text says the DSD64 is native (« DSD64 natif »). Outputs: 3.5 mm jack and a mini-Toslink optical output (« 24bit/96kHz »). No other input than USB.",
+    "read_on": "2026-11-27"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-27",
+  "facts": {
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD64",
+    "native_dsd": true,
+    "family": "ess_sabre",
+    "chip": "ESS ES9018K2M, behind a SaviAudio SA9227 USB receiver."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "dsd_max": "DSD64"
+    }
+  },
+  "_maker_terms": "See brands/audiophonics.json: the maker's terms forbid reproduction; recorded on the project owner's decision of 2026-11-27, pending written permission.",
+  "_the_optical_socket_is_an_OUTPUT": "The mini-Toslink is a digital output (24/96), not an input, so no spdif_optical block is written."
+}
