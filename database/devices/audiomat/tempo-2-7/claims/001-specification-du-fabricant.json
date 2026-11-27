@@ -1,0 +1,39 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "http://www.audiomat.fr/Tempo-2-7~~174-0",
+    "read_on": "2026-11-27",
+    "quote": "Audiomat's own « Fiche technique » for the Tempo 2.7, listed by the maker under « Historique », read 2026-11-27 with curl. « Standard sur toutes les entrées | 24 bits / 192 kHz »; « Entrées digitales | RCA / Toslink / XLR / USB »; « Démodulateur | CS8416 »; « Filtre/Oversampling 8x/Convertisseur | PCM1794 »; « Filtre numérique a -130 db , Oversampling 8x , Conversion 24 bits/192 kHz »; « Sorties analogiques | RCA Unbalanced »; « Tension des sorties | 2,7 V »; « Filtrage numérique du septième ordre passif. »; « Schéma sans aucune contre-réaction. »; « Condensateur chimique | 105 000 μF »."
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-27",
+  "facts": {
+    "pcm_max_hz": 192000,
+    "bits": 24,
+    "family": "ti_burr_brown",
+    "chip": "Texas Instruments / Burr-Brown PCM1794 (« Filtre/Oversampling 8x/Convertisseur | PCM1794 »), fed by a Cirrus CS8416 receiver."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_DISCONTINUED": "Listed by the maker under « Historique », not under « Convertisseurs ». Kept because owners still use it.",
+  "_NO_DSD_ANYWHERE": "The page names no DSD rate on any input. dsd_max is left out rather than written as none: the schema has no word for « no DSD » (see vocabulary/dsd-max-has-no-word-for-none.json).",
+  "_SEVENTH_ORDER_PASSIVE_FILTER_IS_ANALOGUE": "The maker writes « Filtrage numérique du septième ordre passif » under « Analogique », with « selfs blindées » and mica capacitors: a passive LC filter is analogue whatever the word « numérique » says. Recorded in words; analog_filter is not graded from a maker's description.",
+  "_XLR_DIGITAL_INPUT_WRITTEN_AS_AES_EBU": "« RCA / Toslink / XLR / USB » with « Standard sur toutes les entrées | 24 bits / 192 kHz »: each input carries that ceiling, the XLR one written aes_ebu."
+}

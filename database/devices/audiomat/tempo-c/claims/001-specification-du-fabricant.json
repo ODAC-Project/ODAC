@@ -1,0 +1,45 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "http://www.audiomat.fr/Tempo-C~~187-0",
+    "read_on": "2026-11-27",
+    "quote": "Audiomat's own « Fiche technique » for the Tempo C, read 2026-11-27 with curl. « Entrées SPDIF | Standard : Toslink , RCA & XLR | Résolution : 16-bits à 24-bits | Fréquence : 44kHz à 192kHz »; « Entrée USB | USB 2.0 High Speed , Classe 2 compatible , asynchrone | PCM Résolution : 16 à 32-bits | Fréquence : 44kHz à 384kHz | DSD Fréquence : 2.8Mhz , 5.6Mhz »; « Entrée Ethernet | UPnPTM AV 2.0 / DLNA | PCM Résolution 16 à 24-bits | Fréquence : 44kHz à 384kHz | DSD audio Fréquence : 2.8Mhz , 5.6Mhz »; « Convertisseur AKM AK4495 »; « RCA unblanced 2.6Vrms »; « Filtrage passif par 4 selfs blindées et condensateurs au polypropylène »."
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-27",
+  "facts": {
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD128",
+    "family": "akm",
+    "chip": "AKM AK4495 (« Convertisseur AKM AK4495 »)."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "dsd_max": "DSD128"
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "net_dlna": {
+      "pcm_max_hz": 384000,
+      "bits": 24,
+      "dsd_max": "DSD128"
+    }
+  },
+  "_ETHERNET_IS_STANDARD_HERE": "Unlike the Maestro 3, the Tempo C lists « Entrée Ethernet » with no « option », so the network input gets its block: 24 bits, 384 kHz, DSD 2.8/5.6 MHz.",
+  "_XLR_DIGITAL_INPUT_WRITTEN_AS_AES_EBU": "« Standard : Toslink , RCA & XLR » under « Entrées SPDIF »: the XLR socket is written aes_ebu with the S/PDIF group's ceiling.",
+  "_unbalanced_only": "Only an RCA analogue output is listed (« RCA unblanced 2.6Vrms »)."
+}

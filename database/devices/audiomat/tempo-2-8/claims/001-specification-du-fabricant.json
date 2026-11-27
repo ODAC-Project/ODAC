@@ -1,0 +1,44 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "http://www.audiomat.fr/Tempo-2-8~~183-0",
+    "read_on": "2026-11-27",
+    "quote": "Audiomat's own « Fiche technique » for the Tempo 2.8, read 2026-11-27 with curl. « Entrées SPDIF | Standard : Toslink , RCA & XLR | Résolution : 16-bits à 24-bits | Fréquence : 44kHz à 192kHz »; « Entrée USB | USB 2.0 High Speed , Classe 2 compatible , asynchrone | PCM Résolution : 16 à 32-bits | Fréquence : 44kHz à 384kHz | DSD Fréquence : 2.8Mhz , 5.6Mhz »; « Entrée Ethernet | UPnPTM AV 2.0 / DLNA | PCM Résolution 16 à 24-bits | Fréquence : 44kHz à 192kHz (384kHz en Wav) »; « Convertisseur AKM AK4495S »; « RCA unblanced 2.8Vrms »; « Filtrage passif par 8 selfs blindées et condensateurs au polypropylène »; « Boîtier alimentation | séparé »."
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-27",
+  "facts": {
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD128",
+    "family": "akm",
+    "chip": "AKM AK4495S (« Convertisseur AKM AK4495S »)."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "dsd_max": "DSD128"
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "net_dlna": {
+      "pcm_max_hz": 192000,
+      "bits": 24,
+      "dsd_max": "DSD128"
+    }
+  },
+  "_NETWORK_CEILING_DEPENDS_ON_THE_FILE_FORMAT": "« Fréquence : 44kHz à 192kHz (384kHz en Wav) ». The network input passes 384 kHz in WAV only, so its pcm_max_hz is written 192000: a consumer sending 352.8/384 kHz FLAC over UPnP would exceed what the maker states. The WAV exception is kept here in words.",
+  "_XLR_DIGITAL_INPUT_WRITTEN_AS_AES_EBU": "« Standard : Toslink , RCA & XLR » under « Entrées SPDIF »: the XLR socket is written aes_ebu with the S/PDIF group's ceiling."
+}

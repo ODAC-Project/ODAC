@@ -1,0 +1,41 @@
+{
+  "source": {
+    "kind": "datasheet",
+    "url": "http://www.audiomat.fr/Maestro-3~~175-0",
+    "quote": "Audiomat's own « Fiche technique » for the Maestro 3, read 2026-11-27 with curl. Digital stage: « SPDIF inputs | 2 x Toslink , RCA & XLR inputs | Resolution up to 24 bits, sampling rate up to 192 kHz »; « Démodulateur | WM8805 »; « USB input | USB 2.0 High Speed, Class 2 compatible, asynchronous | PCM resolution up to 32 bits | sampling rate up to 384 kHz | DSD 2.8 MHz, 5.6 MHz »; « Ethernet input | (en option) | UPnPTM AV 2.0 / DLNA ». Converter: « Référence DAC | AKM4495 »; « Digital filter | Standart and Short Delay »; « Reply filter | Sharp and Slow Roll Off »; « DSD converter | 2.8 MHz , 5.6 MHz Native ». Analogue stage: « RCA unbalanced 2.8 Vrms »; « XLR balanced 5.6 Vrms »; « Passif Analog Filtrer ‘’LRC‘’ »; « Filtrage analogique du cinquième ordre passif ». Supply: « Transformateurs faible induction | 2 x 100 VA (contre | 2 x 350 VA pour le modèle référence) ».",
+    "read_on": "2026-11-27"
+  },
+  "source_names_subject": true,
+  "submitted_by": "curator",
+  "submitted_on": "2026-11-27",
+  "facts": {
+    "pcm_max_hz": 384000,
+    "bits": 32,
+    "dsd_max": "DSD128",
+    "family": "akm",
+    "chip": "AKM AK4495, which the maker writes « AKM4495 » under « Référence DAC ». The SPDIF receiver is a Cirrus/Wolfson WM8805 (« Démodulateur | WM8805 »)."
+  },
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 32,
+      "dsd_max": "DSD128"
+    },
+    "spdif_optical": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "spdif_coax": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    },
+    "aes_ebu": {
+      "pcm_max_hz": 192000,
+      "bits": 24
+    }
+  },
+  "_DSD_RATES_NAMED_IN_MEGAHERTZ": "« DSD 2.8 MHz, 5.6 MHz » is DSD64 and DSD128; dsd_max is DSD128. The page never says whether USB DSD arrives native or as DoP, so native_dsd and dop are left out. « DSD converter | 2.8 MHz , 5.6 MHz Native » describes the conversion stage, not the USB transport.",
+  "_XLR_DIGITAL_INPUT_WRITTEN_AS_AES_EBU": "« 2 x Toslink , RCA & XLR inputs » under « SPDIF inputs »: the XLR socket is the balanced AES/EBU-style digital input, so it is written aes_ebu with the same 24-bit / 192 kHz ceiling the maker gives for the whole S/PDIF group. Two Toslink sockets are one interface.",
+  "_ETHERNET_IS_AN_OPTION_SO_NO_BLOCK": "« Ethernet input | (en option) » with « Resolution up to 24 bits, sampling rate up to 192 kHz » and DSD 2.8/5.6 MHz. A ceiling for a board the buyer may not have is not written as an input block (same rule as the Geshelli TORC); the figures are kept here.",
+  "_FILTERS_ARE_SELECTABLE": "Two filter choices are listed, « Standart and Short Delay » and « Sharp and Slow Roll Off » - the AK4495's own filter set. The page does not say how they are selected or which is the default, so no device_settings entry is written."
+}
