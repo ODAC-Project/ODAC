@@ -59,6 +59,14 @@ for f in sorted(os.listdir(vocab)):
     if f.endswith(".json"):
         emit("vocabulary", f[:-5], read(os.path.join(vocab, f)))
 
+# The field registry ships as vocabulary too, under `field-registry`. It lives in
+# schemas/ because the verifier enforces it, but a consumer needs it just as
+# much: it is the only place that says each field's TYPE, its level and whether
+# a probe can establish it. Until 2026-11-26 the FRONT had to read it from the
+# repository tree, apart from the artefact it otherwise lives on - the exact
+# split the paragraph above exists to forbid.
+emit("vocabulary", "field-registry", read(os.path.join(ROOT, "schemas", "fields.json")))
+
 devices = os.path.join(DB, "devices")
 for brand in sorted(os.listdir(devices)):
     bpath = os.path.join(devices, brand)

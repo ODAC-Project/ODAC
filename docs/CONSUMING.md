@@ -10,9 +10,17 @@ traffic off GitHub.
 
 - **Commercial products**: mirror or cache the artefact on your own
   infrastructure. Do not point your installed base at GitHub.
-- **Open source, non-commercial, personal use**: fetch it from the MozAIk Labs
-  mirror, served behind a CDN. *(URL to be announced — the mirror is part of the
-  transactional side and is not live yet.)*
+- **Open source, non-commercial, personal use**: fetch it from the mirror at
+  **`https://odac.tune.audio`**:
+  - `GET https://odac.tune.audio/latest.json`: the pointer (below).
+    `Cache-Control: max-age=300, must-revalidate`; its `ETag` is the
+    fingerprint, and `If-None-Match` gets a `304` with an empty body.
+  - `GET https://odac.tune.audio/artifacts/<name>`: the artefact, served
+    gzipped when you accept it, `immutable` for a year. Old artefacts stay
+    there after newer builds.
+
+  The mirror is a server, not a CDN. It republishes a new build within ten
+  minutes of its merge to `main`.
 - **GitHub directly**: only when you genuinely need the last commit — iterative
   development, debugging, reviewing data that has just landed.
 
@@ -26,7 +34,12 @@ Alongside the artefact, CI publishes a small pointer:
 ```
 
 Poll the pointer — a few hundred bytes, short cache — and download the artefact
-**only when the fingerprint differs** from the one you hold. That is zero
+**only when the fingerprint differs** from the one you hold.
+
+**Resolve `url` against the pointer's own address**, as a browser resolves a
+relative link. On GitHub it is a bare file name next to `latest.json` in
+`dist/`; on the mirror it is `artifacts/<name>`. Both resolve correctly that
+way, and a client that glues `url` onto a fixed base will break on one of them. That is zero
 staleness and almost zero bandwidth, which is better than a mirror that
 republishes on a timer and hopes.
 
@@ -45,7 +58,7 @@ newest minute.
 ## Ask for it compressed
 
 ```
-5 548 535 bytes raw   →   330 834 bytes gzipped   (94% off)
+5 563 117 bytes raw   →   334 911 bytes gzipped   (94% off)
 ```
 
 Those figures move with every build and are checked by `tools/build.py`, which
@@ -56,7 +69,7 @@ been taken on. The check lives in `build.py` rather than in the verifier because
 the verifier never builds and so has no size to compare: put the check where the
 figure lives.
 
-It is JSON Lines: highly repetitive, and it compresses by a factor of 16.8. Send
+It is JSON Lines: highly repetitive, and it compresses by a factor of 16.6. Send
 `Accept-Encoding: gzip` and make sure your mirror is configured to honour it —
 a server that omits JSON from its compressible types serves this in the clear
 and nothing breaks, so nobody notices paying fifteen times the bandwidth. This is
@@ -80,7 +93,9 @@ The `vocabulary` entries are the part you have to read rather than index.
 predicates they test - the order is the whole content of the classification, so
 it is data and not our code. `completeness` defines the four levels, `matching`
 the shape of a correspondence between what your own system reports and a record
-here, `fields` what a claim may assert. A vocabulary entry's `data` is usually an
+here, `fields` what each field means, and `field-registry` (the content of
+`schemas/fields.json`) every field a claim may assert, with its type, its level
+and whether a probe can establish it. A vocabulary entry's `data` is usually an
 object and is **sometimes a bare string**: four of them are a single paragraph,
 and a consumer that assumes an object will break on those.
 
