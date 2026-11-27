@@ -1,4 +1,7 @@
-name: database
+# BDD: merging to main IS publishing. The FRONT (odac.tune.audio) reads
+# main/dist/latest.json every 10 minutes, so dist/ must always be the build
+# of database/ - this workflow refuses a merge where it is not.
+name: BDD
 
 on:
   pull_request:
@@ -19,5 +22,17 @@ jobs:
       # fail. A guard nobody has seen fire is a guard nobody knows is wired up.
       - name: Prove the guards fire
         run: python3 tools/mutants.py
-      - name: Build the published artefact
-        run: python3 tools/build.py
+      # The committed dist/ is what every consumer downloads. Rebuild it and
+      # compare FINGERPRINTS (the version is the build date, so it moves by
+      # itself): a database change merged without its artefact would never
+      # reach anyone, and the FRONT would keep serving the old one silently.
+      - name: Build the published artefact, and check dist/ is that build
+        run: |
+          committed=$(python3 -c "import json;print(json.load(open('dist/latest.json'))['fingerprint'])")
+          python3 tools/build.py
+          built=$(python3 -c "import json;print(json.load(open('dist/latest.json'))['fingerprint'])")
+          if [ "$committed" != "$built" ]; then
+            echo "::error file=dist/latest.json::dist/ is stale: committed $committed, database builds $built. Run python3 tools/build.py and commit dist/."
+            exit 1
+          fi
+          echo "dist/ matches the database: $built"
