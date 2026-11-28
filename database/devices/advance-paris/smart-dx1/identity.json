@@ -1,0 +1,18 @@
+{
+  "id": "advance-paris/smart-dx1",
+  "kind": "dac",
+  "brand": "advance-paris",
+  "model": "Smart DX1",
+  "aliases": [
+    {
+      "text": "DX1",
+      "relation": "spelling"
+    }
+  ],
+  "usb": [
+    {
+      "vid": "0x152a",
+      "pid": "0x86b0"
+    }
+  ]
+}
