@@ -1,0 +1,23 @@
+{
+  "source": {
+    "kind": "probe",
+    "title": "USB descriptors read from the owner's unit with UsbTreeView 4.8.0 (Windows 11, Microsoft usbaudio2 driver), bcdDevice 0x06C7",
+    "quote": "Device descriptor of my own Smart DX1, read 2026-11-27: « idVendor : 0x152A (Thesycon Systemsoftware & Consulting GmbH) », « idProduct : 0x86B0 », « bcdDevice : 0x06C7 », « iManufacturer : \"ADVANCE PARIS\" », « iProduct : \"Smart DX1\" ». One USB Audio 2.0 streaming interface with three alternate settings: alt 1 « bmFormats : 0x00000001 (PCM) », « bSubslotSize : 0x04 (4 bytes) », « bBitResolution : 0x18 (24 bits) »; alt 2 PCM at « 0x10 (16 bits) »; alt 3 « bmFormats : 0x80000000 (TYPE_I_RAW_DATA) », « bBitResolution : 0x20 (32 bits) ». All three are stereo (« bNrChannels : 0x02 (2 channels) ») on an « Isochronous SyncType=Asynchronous » OUT endpoint with an explicit feedback endpoint; the 24- and 32-bit settings declare « wMaxPacketSize : 0x0188 » at « bInterval : 0x01 (1 microframe -> 0.125 ms) ». Windows' sound panel, on the same unit and driver, lists 16 and 24 bits at 44100, 48000, 88200, 96000, 176400, 192000, 352800 and 384000 Hz, and nothing above.",
+    "read_on": "2026-11-27"
+  },
+  "source_names_subject": true,
+  "submitted_by": "reivax",
+  "submitted_on": "2026-11-27",
+  "inputs": {
+    "usb": {
+      "pcm_max_hz": 384000,
+      "bits": 24,
+      "channels": 2,
+      "native_dsd_possible": true,
+      "dsd_max": "DSD256"
+    }
+  },
+  "_why_384_and_not_768": "Three retailers state 768 kHz for this model. The descriptor rules it out on the USB input, independently of the host driver: 0x0188 is 392 bytes per 125 µs microframe, i.e. 49 stereo frames of 4-byte subslots, a ceiling of about 392 kHz. 768 kHz would need 0x0300 or more. Windows' own list stopping at 384000 Hz agrees. Nothing here says anything about the S/PDIF inputs.",
+  "_why_bits_is_24": "The PCM setting declares 24 valid bits in a 4-byte slot. The only 32-bit setting is TYPE_I_RAW_DATA, which is the native DSD path, not a 32-bit PCM path.",
+  "_dsd_max_is_derived": "native_dsd_possible rests on the TYPE_I_RAW_DATA alternate setting. dsd_max is DERIVED from the same packet size, not read as a named rate: native DSD in 32-bit raw words needs 352.8 kHz of word rate for DSD256 (fits under ~392 kHz) and 705.6 kHz for DSD512 (does not). Retailers' « DSD 2.8, 5.6 and 11.2 » agrees. Whether DoP is accepted cannot be seen in a descriptor, so dop_possible is left out. Using the raw path on Windows needs a vendor (Thesycon/ASIO) driver; Microsoft's usbaudio2 does not expose it."
+}
